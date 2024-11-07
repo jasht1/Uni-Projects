@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"type":"file","file":"Projects/Uni Projects/Complete/Control Systems/dynamic system modelling.md","id":"51cd5744a103ecc4","x":480,"y":-880,"width":620,"height":1420},
+		{"type":"file","file":"Projects/Uni Projects/Complete/Control Systems/analysis system model.md","id":"b482179301dc99c0","x":1400,"y":-880,"width":1040,"height":1040},
+		{"type":"file","file":"Projects/Uni Projects/Complete/Control Systems/Control System terminology.md","id":"f0ab3b763c667ac8","x":-760,"y":-880,"width":1100,"height":1540},
+		{"type":"file","file":"Projects/Uni Projects/Complete/Control Systems/transfer function.md","id":"424dc7ed85be2c28","x":2581,"y":-880,"width":819,"height":1040},
+		{"type":"file","file":"Projects/Uni Projects/Complete/Control Systems/Open vs closed loop systems.md","id":"e3cc55690cbc76ca","x":1400,"y":320,"width":1040,"height":800},
+		{"type":"file","file":"Projects/Uni Projects/Complete/Control Systems/Bode plot.md","id":"63249bd6e3364182","x":3600,"y":-880,"width":540,"height":360},
+		{"id":"c7de05b6a2258e15","type":"file","file":"Knowledge/Mathematics/Algebra/Linear Algebra.md","x":2581,"y":320,"width":819,"height":1103},
+		{"id":"e0cafada68741089","type":"file","file":"Projects/Uni Projects/Complete/Control Systems/Lecture notes/Ctrl sys Lecture raw notes.md","x":-2320,"y":-1439,"width":400,"height":2658},
+		{"id":"806a5ea1788b30ef","x":-69,"y":415,"width":250,"height":60,"type":"text","text":"rightarrow"}
+	],
+	"edges":[
+		{"id":"5202a145f9c9ee19","fromNode":"51cd5744a103ecc4","fromSide":"right","toNode":"b482179301dc99c0","toSide":"left"},
+		{"id":"9c99b205d3178973","fromNode":"b482179301dc99c0","fromSide":"right","toNode":"424dc7ed85be2c28","toSide":"left"},
+		{"id":"0c52f30389a60fba","fromNode":"b482179301dc99c0","fromSide":"bottom","toNode":"e3cc55690cbc76ca","toSide":"top"},
+		{"id":"86ec968ffb493e63","fromNode":"424dc7ed85be2c28","fromSide":"right","toNode":"63249bd6e3364182","toSide":"left"},
+		{"id":"1ce6a018beb3b50f","fromNode":"424dc7ed85be2c28","fromSide":"bottom","toNode":"c7de05b6a2258e15","toSide":"top"}
+	]
+}

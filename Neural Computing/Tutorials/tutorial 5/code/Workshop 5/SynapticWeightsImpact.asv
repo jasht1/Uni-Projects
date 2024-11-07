@@ -1,0 +1,98 @@
+% Simulation parameters
+dt = 0.1;                % Time step (ms)
+T = 500;                 % Total time (ms)
+time = 0:dt:T;           % Time vector
+n_neurons = 3;           % Number of neurons
+
+% LIF neuron parameters
+V_rest = -65;            % Resting membrane potential (mV)
+V_th = -50;              % Threshold for spike (mV)
+V_reset = -70;           % Reset voltage after spike (mV)
+tau_m = 8;              % Membrane time constant (ms)
+R_m = 3;                 % Membrane resistance (MOhms)
+
+% Refractory period parameters
+tau_ref = 2;             % Refractory period (ms)
+refractory = zeros(n_neurons, 1);  % Tracks refractory state
+
+% Synaptic weights (user can modify this matrix)
+% Example 1: Fully excitatory network
+% w = [0 0.1 0.2; 0.1 0 0.3; 0.2 0.3 0];
+
+% Example 2: Inhibitory influence from neuron 3 on neurons 1 and 2
+% w = [0 0.1 -0.2; 0.1 0 -0.3; -0.2 -0.3 0];
+
+% Example 3: Mixed excitatory and inhibitory network
+%w = [0 0.2 -0.3; 0.1 0 -0.4; 0.3 -0.2 0];
+
+% Example 4: Spiking too frequently
+% w = [0 -1 1; 1 0 1; 1 1 0];
+
+% External input (for stimulation) - keep fixed or vary for more dynamic behavior
+I_ext = [5 6 5];          % External current to each neuron (nA)
+
+% Initialize variables
+V = V_rest * ones(n_neurons, length(time));  % Membrane potential for each neuron
+spike_times = cell(n_neurons, 1);            % Store spike times
+
+for t = 2:length(time)
+    for i = 1:n_neurons
+        if refractory(i) > 0
+            % If in refractory period, keep voltage at reset and reduce refractory time
+            V(i, t) = V_reset;
+            refractory(i) = refractory(i) - dt;
+        else
+            % Compute the synaptic input from other neurons
+            I_syn = 0;
+            for j = 1:n_neurons
+                if j ~= i && ~isempty(spike_times{j})
+                    % Check if neuron j has spiked recently
+                    last_spike_time = spike_times{j}(end);
+                    if time(t) - last_spike_time <= dt
+                        % Instantaneous synaptic input
+                        I_syn = I_syn + w(i, j);
+                    end
+                end
+            end
+
+            % Update membrane potential according to the LIF equation
+            dV = (-(V(i, t-1) - V_rest) + R_m * (I_ext(i) + I_syn)) * (dt / tau_m);
+            V(i, t) = V(i, t-1) + dV;
+
+            % Check if the neuron fires a spike
+            if V(i, t) >= V_th
+                V(i, t) = 30;  % Spike (for visualization purposes)
+                spike_times{i}(end+1) = time(t);  % Record spike time
+                refractory(i) = tau_ref;          % Enter refractory period
+                V(i, t+1) = V_reset;             % Reset after spike
+            end
+        end
+    end
+end
+
+% Plot the membrane potentials
+figure;
+for i = 1:n_neurons
+    subplot(n_neurons, 1, i);
+    plot(time, V(i, :));
+    title(['Neuron ', num2str(i), ' Membrane Potential']);
+    xlabel('Time (ms)');
+    ylabel('Voltage (mV)');
+    ylim([-80 40]);  % Set limits to visualize spikes clearly
+end
+
+% Plot spike raster (spike times)
+figure;
+hold on;
+for i = 1:n_neurons
+    for spike = 1:length(spike_times{i})
+        plot([spike_times{i}(spike) spike_times{i}(spike)], [i-0.4 i+0.4], 'k');
+    end
+end
+title('Spike Raster Plot');
+xlabel('Time (ms)');
+ylabel('Neuron Index');
+yticks(1:n_neurons);
+ylim([0.5 n_neurons + 0.5]);
+hold off;
+

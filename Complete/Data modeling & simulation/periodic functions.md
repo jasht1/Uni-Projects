@@ -1,0 +1,1 @@
+A function $f(x)$ is said to be periodic with period $p$ if $f(x+p)=f(x)$ for all $x$ in the domain of $f$. This means that the function will repeat itself every $p$ units.

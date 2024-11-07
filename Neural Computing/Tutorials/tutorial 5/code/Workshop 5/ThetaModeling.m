@@ -1,0 +1,94 @@
+% Simulation parameters
+dt = 0.01;               % Time step (ms)
+T = 2000;                % Total time (ms)
+time = 0:dt:T;           % Time vector
+n_neurons = 40;          % Number of neurons (10 excitatory, 10 inhibitory)
+
+% LIF neuron parameters
+V_rest = -65;            % Resting membrane potential (mV)
+V_th = -50;              % Threshold for spike (mV)
+V_reset = -70;           % Reset voltage after spike (mV)
+tau_m = 50;              % Membrane time constant (ms)
+R_m = 10;                 % Membrane resistance (MOhms)
+
+% Refractory period parameters
+tau_ref = 2;             % Refractory period (ms)
+refractory = zeros(n_neurons, 1);  % Tracks refractory state
+
+% Synaptic weights for larger network
+w = zeros(n_neurons, n_neurons);
+
+
+n=n_neurons/2;
+% Set positive intra-cluster weights (for neurons 1-10 and 11-20)
+w(1:n, 1:10) = 3.0 * (rand(n) - 0.5);  % Excitatory cluster 1
+w(11:20, 11:20) = 3.0 * (rand(n) - 0.5);  % Inhibitory cluster 2
+
+% Set negative inter-cluster weights
+w(1:10, 11:20) = -0.9 * (rand(n, n));  % Inhibition from cluster 2 to cluster 1
+w(11:20, 1:10) = -0.8 * (rand(n, n));  % Inhibition from cluster 1 to cluster 2
+
+% Synaptic time constant for exponential decay
+tau_syn = 50;            % Synaptic decay time constant (ms)
+I_synaptic = zeros(n_neurons, length(time));  % Track synaptic currents
+
+% External input: Ensure proper initialization for both excitatory and inhibitory neurons
+I_ext = zeros(n_neurons, length(time));  % Initialize I_ext to match the number of neurons and time steps
+theta_frequency = 5;  % Theta frequency (5 Hz)
+I_ext(1:10, :) = repmat(80 * sin(2 * pi * theta_frequency * time / 1000), n, 1);  % In-phase (excitatory neurons)
+I_ext(11:20, :) = repmat(80 * sin(2 * pi * theta_frequency * time / 1000 + pi), n, 1);  % Anti-phase (inhibitory neurons)
+
+% Noise level
+sigma_noise = 0.03;  % Moderate noise for variability
+
+% Initialize variables
+V = V_rest * ones(n_neurons, length(time));  % Membrane potential for each neuron
+spike_times = cell(n_neurons, 1);            % Store spike times
+spike_train = zeros(n_neurons, length(time)); % Store spike occurrences for synchrony
+
+% Simulation loop
+for t = 2:length(time)
+    for i = 1:n_neurons
+        if refractory(i) > 0
+            V(i, t) = V_reset;
+            refractory(i) = refractory(i) - dt;
+        else
+            I_synaptic(i, t) = I_synaptic(i, t-1) * exp(-dt / tau_syn);
+            for j = 1:n_neurons
+                if j ~= i && ~isempty(spike_times{j})
+                    last_spike_time = spike_times{j}(end);
+                    if time(t) - last_spike_time <= dt
+                        I_synaptic(i, t) = I_synaptic(i, t) + w(i, j);
+                    end
+                end
+            end
+            I_noise = sigma_noise * randn(1);
+            I_total = I_ext(i, t) + I_synaptic(i, t) + I_noise;
+            dV = (-(V(i, t-1) - V_rest) + R_m * I_total) * (dt / tau_m);
+            V(i, t) = V(i, t-1) + dV;
+            if V(i, t) >= V_th
+                V(i, t) = 30;
+                spike_times{i}(end+1) = time(t);
+                spike_train(i, t) = 1;
+                refractory(i) = tau_ref;
+                V(i, t+1) = V_reset;
+            end
+        end
+    end
+end
+
+% Power Spectrum for larger network:
+mean_membrane_potential = mean(V, 1);  % Mean potential across all neurons
+Y = fft(mean_membrane_potential);
+P2 = abs(Y / length(time));
+P1 = P2(1:floor(length(time)/2) + 1);
+P1(2:end-1) = 2 * P1(2:end-1);
+f = Fs * (0:(floor(length(time)/2))) / length(time);
+
+% Plot the power spectrum
+figure;
+plot(f, P1);
+title('Power Spectrum of Larger Network Activity');
+xlabel('Frequency (Hz)');
+ylabel('Power');
+xlim([2 8]);  % Focus on frequencies up to 50 Hz

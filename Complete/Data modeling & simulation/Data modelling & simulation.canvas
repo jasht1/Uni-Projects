@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"type":"file","file":"Projects/Uni Projects/Complete/Data modeling & simulation/Constraining functions.md","id":"a64cca68dbc187c4","x":-412,"y":-104,"width":400,"height":764},
+		{"type":"file","file":"Knowledge/Mathematics/Statistics/Euler/Euler's method.md","id":"725ebb4735b58e6d","x":40,"y":-104,"width":400,"height":400},
+		{"type":"file","file":"Knowledge/Mathematics/Statistics/Fourier/Fourier series.md","id":"e710c276b39d857d","x":480,"y":-104,"width":1240,"height":2224},
+		{"type":"file","file":"Knowledge/Mathematics/Calculus/Systems of differential equations.md","id":"120abe138d768d1d","x":2160,"y":-104,"width":743,"height":503},
+		{"type":"file","file":"Knowledge/Mathematics/Algebra/Linear Algebra/Eigenvalues & Eigenvectors.md","id":"45a5c0aa561aa9ed","x":2160,"y":560,"width":743,"height":1051}
+	],
+	"edges":[
+		{"id":"8249db71c269eec8","fromNode":"120abe138d768d1d","fromSide":"bottom","toNode":"45a5c0aa561aa9ed","toSide":"top"}
+	]
+}

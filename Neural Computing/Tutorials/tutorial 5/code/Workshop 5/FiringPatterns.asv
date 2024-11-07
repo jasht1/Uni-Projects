@@ -1,0 +1,13 @@
+% External input settings for different firing patterns
+% Adjusting external inputs to induce different patterns in different neurons/clusters
+% Cluster 1: Regular firing with minimal noise (constant input over time)
+% Cluster 2: Irregular firing and bursting with oscillating input over time
+I_ext = zeros(n_neurons, length(time));  % Initialize external input matrix
+
+% Cluster 1 neurons (1-3) get constant external input over time
+I_ext(1:3, :) = repmat([7 7 7]', 1, length(time));  % Constant input for regular spiking neurons
+
+% Cluster 2 neurons (4-6) get oscillating external input (for burst firing)
+I_ext(4, :) = 10 * sin(2 * pi * 0.01 * time);  % Oscillating input for neuron 4
+I_ext(5, :) = 10 * sin(2 * pi * 0.01 * time);  % Oscillating input for neuron 5
+I_ext(6, :) = 10 * sin(2 * pi * 0.01 * time);  % Oscillating input for neuron 6

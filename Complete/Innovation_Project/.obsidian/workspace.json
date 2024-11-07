@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "1922a091ea535342",
+    "type": "split",
+    "children": [
+      {
+        "id": "0b2e6d4442e139f5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7b6091ebce6be3ec",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7ab009a43a7d4653",
+    "type": "split",
+    "children": [
+      {
+        "id": "dfaa81cef27419e9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d6de95a0e9782b41",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6ac2d9df1902d540",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b4defaf7e12e9173",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "db415013dac8bfd4",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9b85a99ae3b6b82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "685449ecfc8733ff",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "832f5630b0b2b300",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "81bba81ea5c9cd72",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c90af42032c77ef7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "d6de95a0e9782b41",
+  "lastOpenFiles": [
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/water 839abb1c2cec490191677f5cfd33bc1d.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/food waste fa94d819358f4eb6b564c0c1e06195ab.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/fayres 2e4a7e2abe9e4364bb4c0425c88ba00d.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Cleaning 006ee0f7a995435a92d1b1bb50507f76.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Drinks (bottles and kegs etc) 9d8ac9c596b2437fa0334eb1e52648d7.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/sewage d90be48a1057476b915cafc01211eb30.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/printing a0b9a1b6198b416badff076321ea7eff.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/food 84b2639b146f46ddab2a30428080fc5c.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Air f5a0f1be9cb846379791e9e0bff66fd6.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/non recyclable waste cfe052b2351b4c44b1218af416ad5bd0.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0_all.csv",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/music cac5bcdb1de2428d8d1ea39ec017cd63.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Gas 4517c6da6d8e496ebb81a9f2753529af.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/heating (manufactured) 370fcb6dd9884ee1b554ef2f9f2a6fbf.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/black water 5e6908a4c650486289a00e886003c9d7.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Heat c5b17c1710704494b142621a4f2e1192.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Cooling (natural) a3be8502fe224799bd3ee13ccb03bd2e.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Sound 8fdd2ded59734e8e9dacde65d6f1b384.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Light d217a8a1dde24ee3b4b13f8a9140148b.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Heat (natural) 139b886042a4492582bccee7eeca7e9a.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/drinks 7c2bc21edc964f81b7dbf6c68fcf5453.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Electricity eedaf2540b4946c9967609ab201b577f.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/lighting 354837c67c674c12bd0e1508a9f0bcb2.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Kitchen c349f9f8571d4dc4a1462c5fdaa711fb.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/cooling (manufactured) af03e23096ca44049805a933503178ea.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/Water c714676e1cf0404d935c031258df2d34.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0/grey water bdbe6f2d6b5f450195c8d3d1cf442298.md",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0.csv",
+    "Engine shed as a system/Engine shed as a system table 31b44999c4324dc28a4f78d5893d7ef0",
+    "Engine shed as a system"
+  ]
+}
