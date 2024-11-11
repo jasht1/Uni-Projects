@@ -17,7 +17,8 @@ Email: 27047440@students.lincoln.ac.uk
 ## Brief
 ![[Energy Systems and Conversion - EGR3030 - Coursework Brief.pdf]]
 
+
 ## Lab
-![[Energy Systems and Conversion Refrigeration Lab]]
+![[Refrigeration Lab - Energy Systems and Conversion Coursework]]
 ## Questions
-![[Energy Systems and Conversion Refrigeration Questions]]
+![[Refrigeration Questions - Energy Systems and Conversion Coursework]]

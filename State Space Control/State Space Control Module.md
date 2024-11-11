@@ -2,7 +2,7 @@
 
 ## Important Dates
 
-[[2024-12-18|18th December]]: ([[State Space Control Coursework]])
+[[2024-12-16|16th December]]: ([[State Space Control Coursework]])
 
 ## 
 
