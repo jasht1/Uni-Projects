@@ -18,10 +18,10 @@ When stimulated:
 Weight matrix has the strength and by sign type of every connection between neurons.
 
 $$\begin{matrix}
-0 &  n_{1} \to n_{2} & ...  &  n_{1} \to n_{n}  \\
-n_{2} \to n_{1} & 0 & ...  &  n_{2} \to n_{n} \\ 
-...  & ... & 0 & ... \\ 
-n_{n}\to n_{1} & n_{n} \to n_{2} & ... & 0
+0 &  n_{1} \to n_{2} & \dots  &  n_{1} \to n_{n}  \\
+n_{2} \to n_{1} & 0 & \dots  &  n_{2} \to n_{n} \\ 
+\vdots  & \vdots & 0 & \ddots \\ 
+n_{n}\to n_{1} & n_{n} \to n_{2} & \ddots & 0
 \end{matrix}$$
 
 ##

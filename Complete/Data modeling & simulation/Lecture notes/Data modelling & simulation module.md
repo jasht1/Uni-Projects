@@ -1,6 +1,6 @@
 # Data modelling & simulation module
 ## 
-[[transfer function]]
+[[Projects/Uni Projects/Complete/Control Systems/transfer function]]
 	[[Function Terminology]]
 	[[Systems of differential equations]]
 		[[Matrices]]

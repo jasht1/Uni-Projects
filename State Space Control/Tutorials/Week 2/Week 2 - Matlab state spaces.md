@@ -6,8 +6,9 @@
 # Exercises
 
 ## Matlab code
-[[week2.m]]
-[[week2.slx]]
+![[week2.m]]
+
+![[week2.slx]]
 
 ## Executive Summary
 %%[[2024-10-04]] @ 17:40%%
@@ -30,3 +31,8 @@ While much of what is possible in Matlab can be done using different tools both 
 [[phase space]]
 
 ##
+![[Week 2 - Matlab state spaces - Q6.svg]]
+
+![[Week 2 - Matlab state spaces - Q8.png]]
+
+![[Week 2 - Matlab state spaces - Q9.png]]

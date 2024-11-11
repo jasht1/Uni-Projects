@@ -5,7 +5,7 @@
 	[[Complex numbers]]
 	[[Closed loop]]
 		[[Open vs closed loop systems]]
-	[[transfer function]]
+	[[Projects/Uni Projects/Complete/Control Systems/transfer function]]
 	[[periodic functions]]
 	[[S plane]]
 	[[Design specification documents]]

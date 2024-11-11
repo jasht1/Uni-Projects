@@ -4,8 +4,8 @@
 Transfer functions utilise the [[S plane|complex domain]] as to reduce the complexity of common operations that would otherwise require [[convolution]].
 
 ## Poles & Zeros
-#definition **Zeros** are the frequencies (values of s) for which the *numerator* of the [[transfer function]] becomes 0.
-#definition **Poles** are the frequencies (values of s) for which the *denominator* of the [[transfer function]] becomes 0.
+#definition **Zeros** are the frequencies (values of s) for which the *numerator* of the [[Projects/Uni Projects/Complete/Control Systems/transfer function]] becomes 0.
+#definition **Poles** are the frequencies (values of s) for which the *denominator* of the [[Projects/Uni Projects/Complete/Control Systems/transfer function]] becomes 0.
 [Explainer video (Neso Academy)](https://www.youtube.com/watch?v=AZ7_MvANy_Q&t=2s)
 ### MATLAB command
 ``` MATLAB
@@ -21,7 +21,7 @@ pzmap (G)
 ### Standard responses
 ##### Impulse response
 #definition **Impulse response** #WIP ...denoted by: $h(t)$ 
-given by the [[Laplace transform#Inverse laplace transform|Inverse laplace transform]] of the [[transfer function]] $H(s)$.
+given by the [[Laplace transform#Inverse laplace transform|Inverse laplace transform]] of the [[Projects/Uni Projects/Complete/Control Systems/transfer function]] $H(s)$.
 Laplace transform of a impulse response is $1$$$ R(s) = 1$$
 Equivalent to differentiating
 ##### step response

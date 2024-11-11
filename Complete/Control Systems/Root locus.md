@@ -1,1 +1,1 @@
-#definition **Root locus** is a graphical representation of the possible locations of its [[Open vs closed loop systems#Closed Loop Systems|closed loop]] [[transfer function#Poles & Zeros|poles]] on the [[S plane]]
+#definition **Root locus** is a graphical representation of the possible locations of its [[Open vs closed loop systems#Closed Loop Systems|closed loop]] [[Projects/Uni Projects/Complete/Control Systems/transfer function#Poles & Zeros|poles]] on the [[S plane]]
