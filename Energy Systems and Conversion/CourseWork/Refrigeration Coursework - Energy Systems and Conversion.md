@@ -1,6 +1,7 @@
 
 # Refrigeration Coursework
 
+[Working Repository](https://github.com/jasht1/Uni-Projects/tree/master/Energy%20Systems%20and%20Conversion/CourseWork)
 ## Submission Details
 Institution: University of Lincoln
 Course: Mechatronics BEng
@@ -15,10 +16,10 @@ Email: 27047440@students.lincoln.ac.uk
 ## Executive Summary
 
 ## Brief
-![[Energy Systems and Conversion - EGR3030 - Coursework Brief.pdf]]
+![[Brief - Energy Systems and Conversion Coursework.pdf]]
 
 
 ## Lab
-![[Refrigeration Lab - Energy Systems and Conversion Coursework]]
+![[Lab Notes - Energy Systems and Conversion Coursework]]
 ## Questions
-![[Refrigeration Questions - Energy Systems and Conversion Coursework]]
+![[Questions - Energy Systems and Conversion Coursework]]
