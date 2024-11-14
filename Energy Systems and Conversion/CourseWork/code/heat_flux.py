@@ -12,19 +12,12 @@ def get_lab_readings() -> pd.DataFrame:
 
 lab_readings = get_lab_readings()
 
-lab_readings.loc['condenser water mass flow rate (g/s)',
-                'evaporator water mass flow rate (g/s)',
-                'evaporation chamber temperature (C) ',
-                'evaporating coil inlet temperature (C) ',
-                'evaporating coil outlet temperature (C)',
-                'condensing chamber temperature (C) ',
-                'condensing coil inlet temperature (C) ',
-                'condensing coil outlet temperature (C)',
-                'compressor discharge temperature (C) ', 
-                'condenser pressure (kPa)',
-                'evaporator pressure (kPa)']
+data = pd.DataFrame({
+    'evaporating coil temperature difference (K)': lab_readings['evaporating coil inlet temperature (C)'] - lab_readings['evaporating coil outlet temperature (C)'],
+    'condensing coil temperature difference (K)': lab_readings['condensing coil inlet temperature (C)'] - lab_readings['condensing coil outlet temperature (C)']
+})
 
-data = lab_readings[
+lab_readings[
                 'evaporating coil inlet temperature (C) ',
                 'evaporating coil outlet temperature (C)',
                 'condensing coil inlet temperature (C) ',

@@ -1,4 +1,4 @@
-condenser water mass flow rate (g/s),evaporator water mass flow rate (g/s),evaporation chamber temperature (C) ,evaporating coil inlet temperature (C) ,evaporating coil outlet temperature (C),condensing chamber temperature (C) ,condensing coil inlet temperature (C) ,condensing coil outlet temperature (C),compressor discharge temperature (C) ,condenser pressure (kPa),evaporator pressure (kPa)
+condenser water mass flow rate (g/s),evaporator water mass flow rate (g/s),evaporation chamber temperature (C),evaporating coil inlet temperature (C),evaporating coil outlet temperature (C),condensing chamber temperature (C),condensing coil inlet temperature (C),condensing coil outlet temperature (C),compressor discharge temperature (C),condenser pressure (kPa),evaporator pressure (kPa)
 2,10,18,21,18,48,48,21,68,160,-67
 4,10,13,21,18,45,35,21,69,138,-67
 6,10,12,21,18,41,30,21,68,125,-67
