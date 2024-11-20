@@ -2,7 +2,6 @@
 ### a) Calculate the heat transferred in the evaporator and condenser (in Watts) for each of the water flow rates above 
 [10 marks]
 
-
 > [!NOTE] Ambiguity
 > It should be noted that when being used as an approximation of internal energy heat is measured in joules ($J$) and so the heat transferred would be too. However it is fair to assume this question intends to ask for the heat transfer rate and not it's quantity.
 
@@ -17,6 +16,19 @@ then one would have to measure the energy change of the refrigerant and coolant 
 %% *Add Figure with coils highlighted* %%
 
 %% The energy change of the fluid in the coils is a sum of the latent and sensible heat *no it's not there's no state change in the coils* %%
+
+In this case the following measures have been recorded:
+
+| #WIP          | Symbol      | Description |
+| ------------- | ----------- | ----------- |
+| **Condenser** |             |             |
+|               | $\dot{m}_c$ |             |
+|               |             |             |
+|               |             |             |
+
+The mass flow rates are readings taken from rotameters placed before the coils in the R634 demonstration unit. The coils in the evaporator and condenser both have thermometers measuring the fluid temperature as it enters and leaves the respective coil the difference between these readings is considered the temperature change.
+
+#### Method 1 %% - Decide on a name %%
 
 The energy change of the water across the coils can be found as the product of its specific heat capacity $c$, the change in temperature $\Delta T$, and the mass flow rate $\dot m$. 
 
@@ -40,10 +52,12 @@ While specific heat capacity $c$ dose vary by temperature and pressure both of w
 	array([4.1813595])
 	```
 
-The mass flow rates are readings taken from rotameters placed before the coils in the R634 demonstration unit, 
-
 %% Diagram with Rotometers highlighted %%
 
+#### Method 2 - PYroMat
+
+
+#### Method 3 - CoolProp
 
 
 ### b) Appropriately tabulate your results. 
@@ -52,6 +66,12 @@ The mass flow rates are readings taken from rotameters placed before the coils i
 ## Question 2
 ### a) For each flow rate in your table, determine the COP of the system. 
 [10 marks]
+
+#### Background
+[[coefficient of performance (COP)]] 
+
+
+
 ### b) Plot the COP against the saturation or condensing temperature. 
 [10 marks]
 ## Question 3

@@ -11,7 +11,7 @@
 
 #### Coursework 25%
 
-First Coursework: Week 11 [[2024-12-12]]
+First Coursework: Week 11 [[2024-11-28]]
 Second Coursework: Week 16 [[2025-01-16]]
 
 #### Exams 75%

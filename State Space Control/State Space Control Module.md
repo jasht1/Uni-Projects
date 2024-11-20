@@ -13,5 +13,5 @@
 | 3    | [[Week 3]]                                                                 |            |                                  | 0          |
 | 4    |                                                                            |            |                                  | 30         |
 | 5    |                                                                            |            |                                  | 30         |
-| 6    | [[Projects/Uni Projects/State Space Control/Lecture Notes/Week 6\|Week 6]] | 80         |                                  | 10         |
+| 6    | [[Projects/Uni Projects/State Space Control/Notes/Week 6\|Week 6]] | 80         |                                  | 10         |
 
