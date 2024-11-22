@@ -9,11 +9,16 @@ dt = 0.1;                    % Time step (ms)
 t = 0:dt:1000;               % Time vector (ms)
 
 % LIF Neuron parameters
+b = 0.02 % nA
+a = 2  % nS
+g_sra = 1e-6;
+tau_sra = 200e-3;
+R_m = 1000e6; % membrane resistance (\Ohm)
 Cm = 0.01;                      % Membrane capacitance (uF/cm^2)
 gL = 0.002;                  % Further reduce leak conductance (mS/cm^2)
-EL = -70;                    % Resting potential (mV)
-Vth = -55;                   % Threshold potential (mV)
-Vreset = -70;                % Reset potential (mV)
+EL = -75;                    % Resting potential (mV)
+Vth = -50;                   % Threshold potential (mV)
+Vreset = -80;                % Reset potential (mV)
 tau_m = Cm / gL;             % Membrane time constant (ms)
 V = EL * ones(size(t));      % Initialize membrane potential
 refractory_period = 2;        % Refractory period duration (ms)
@@ -38,11 +43,14 @@ for i = 2:length(t)
         % If in refractory period, hold the membrane potential at reset value
         V(i) = Vreset;
         refractory_counter = refractory_counter - dt;
+        I_sra =
     else
         % Update membrane potential using Euler method
-        dV = (-(V(i-1) - EL) + I_input(i-1)) / tau_m * dt;
+        dV = (-(V(i-1) - EL)/R_m + I_input(i-1) - I_sra ) / tau_m * dt;
         V(i) = V(i-1) + dV;
-
+        
+        
+        
         % Check if the membrane potential reaches the threshold
         if V(i) >= Vth
             V(i) = 50;                 % Set spike value for visualization

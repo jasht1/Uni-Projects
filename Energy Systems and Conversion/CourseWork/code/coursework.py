@@ -30,3 +30,6 @@ def get_lab_readings() -> pd.DataFrame:
 
     return lab_readings
 
+lab_readings = get_lab_readings()
+low_e_flow = lab_readings[lab_readings['m/t e'] == 0.01].sort_values(by='m/t c')
+high_e_flow = lab_readings[lab_readings['m/t e'] == 0.02].sort_values(by='m/t c')
