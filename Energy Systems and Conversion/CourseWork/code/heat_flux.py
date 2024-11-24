@@ -4,10 +4,7 @@ for Refrigeration coursework in "Energy Systems and Conversion" module
 By Joseph Ashton
 """
 
-import pyromat as pm
 import pandas as pd
-import matplotlib.pyplot as plt
-from CoolProp.CoolProp import PropsSI 
 
 ## Method 1 - $q = \dot{m} c_{p} \detla T$
 
@@ -29,6 +26,8 @@ def method_1(lab_readings): # Method 1 - $q = \dot{m} c_{p} \detla T$
 ## Method 2
 
 def method_2(lab_readings): # Method 2 PYroMat for heat transfer rate
+
+    import pyromat as pm
 
     """
     utilising pyromat multi phase property model based on:
@@ -54,6 +53,8 @@ def method_2(lab_readings): # Method 2 PYroMat for heat transfer rate
 ## Method 3
 
 def method_3(lab_readings): # Method 3 CoolProp for heat transfer rate 
+
+    from CoolProp.CoolProp import PropsSI 
 
     # specific internal energy change of the fluid across the coolant coils (J)
     de_e = PropsSI('H', 'T', lab_readings['T2'].values, 'P', 101325, 'H2O') - PropsSI('H', 'T', lab_readings['T1'].values, 'P', 101325, 'H2O') # evaporator coil 
@@ -86,15 +87,10 @@ def method_3(lab_readings): # Method 3 CoolProp for heat transfer rate
 # # for i in range(len(dQ_c)):
 
 ### Plot
-def plot_dQ(dQ_c,dQ_e):
-    plt.plot(dQ_c)
-    plt.plot(dQ_c)
-
-    plt.plot(dQ_e*-1)
-    plt.plot(dQ_e*-1)
-    plt.show()
 
 def compare_methods(lab_readings):
+    import matplotlib.pyplot as plt
+
     data = pd.DataFrame({
         "condenser flow rate (g/s)" : lab_readings['m/t c']*1000
     })
