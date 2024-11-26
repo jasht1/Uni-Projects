@@ -26,7 +26,7 @@
 
 ## Readings
 
-[[Lab Readings - Energy Systems Coursework.csv]]
+[[Lab Readings - Energy Systems and Conversion Coursework.csv]]
 
 ```dataviewjs
 const path = "Lab Readings - Energy Systems Coursework.csv";

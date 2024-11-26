@@ -15,7 +15,7 @@ Module Leader: Aliyu Aliyu, AAliyu@lincoln.ac.uk
 Contribution to Final Module Mark: 25 
 Coursework Title: Coursework 1
  
-![[Main Body]]
+![[Report - Energy Systems and Conversion Coursework]]
 
 # Annexes
 ## Brief

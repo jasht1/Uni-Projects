@@ -97,22 +97,35 @@ def plot_PH(lab_readings):
     ph_plt.grid()
     ph_plt.show()
 
-## To test the above funcitons uncomment the 3 lines below and run the script
-import coursework as cw
-lab_readings = cw.low_e_flow
-# import coursework.lab_readings as lab_readings
-# plot_copVmfr(lab_readings)
-# cop = method_1(lab_readings)
-# plot_PH(lab_readings)
 
-T_evap = lab_readings["T5"].values
-P_evap = lab_readings["p e"].values
-T_comp = lab_readings["T7"].values
-P_comp = lab_readings["p c"].values
+def test(function = "all", dataset = "low_e_flow"):
+    import coursework as cw
+    lab_readings = getattr(cw, dataset)
 
-eta_com = isentropic_efficiency(T_evap,P_evap,T_comp,P_comp)
+    # import coursework.lab_readings as lab_readings
 
-print (eta_com)
-# print(cop)
+    if function == "all" or "method_1":
+        cop = method_1(lab_readings)
+        print (cop)
+        print ("sucess")
 
+    if function == "all" or "plot_copVmfr":
+        plot_copVmfr(lab_readings)
+        print ("sucess")
 
+    if function == "all" or "eta_com":
+        T_evap = lab_readings["T5"].values
+        P_evap = lab_readings["p e"].values
+        T_comp = lab_readings["T7"].values
+        P_comp = lab_readings["p c"].values
+
+        eta_com = isentropic_efficiency(T_evap,P_evap,T_comp,P_comp)
+        print (eta_com)
+        print ("sucess")
+
+    if function == "all" or "plot_PH":
+        plot_PH(lab_readings)
+        print ("sucess")
+
+## To test the above funcitons uncomment the line below and run the script
+test("plot_PH")

@@ -12,7 +12,7 @@ def get_lab_readings() -> pd.DataFrame:
 
     lab_readings_path = os.path.join(
         os.path.dirname(__file__), '..', 
-        'Lab Readings - Energy Systems Coursework.csv')
+        'Lab Readings - Energy Systems and Conversion Coursework.csv')
 
     lab_readings = pd.read_csv(lab_readings_path)
 

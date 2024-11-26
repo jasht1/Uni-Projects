@@ -10,16 +10,7 @@ $P_{\text{elec}}$ : Input electrical power ($kW$)
 
 Being a critical measure of energy efficiency there are strict and standardised methodologies for testing and calculating COP[^1.0]. On top of this manufacturer COP claims are often verified by 3rd party organisations via various certification schemes[^1.1] like KEYMARK[^1.2], Qlable and Eurovent[^1.3]. This is necessary as for COP values to be a useful in communicating system performance they must be comparable, like for like with other known values.
 
-The measures available in this experiment are not sufficient to determine of electrical input power or the heating capacity of the condenser as such any approximation of COP will not be comparable with values taken in accordance with the standards and should not be taken as an example of how to calculate a Heat Pump's COP. 
-The COP's calculated and discussed from this point onwards apply only within a system who's boundaries are defined: 
-- Input: work done to refrigerant by the compressor
-- Output: heat transferred to the coolant by the condenser
-
-Making COP a measure of:
-$$COP = \frac{Q _\text{Coolant} }{W_{\text{compression}}}$$
-Where:
-$Q _\text{Coolant}$ : heat transferred to the coolant by the condenser
-$W_{\text{compression}}$ : work done to refrigerant by the compressor
+The measures available in this experiment are not sufficient to determine of electrical input power or the heating capacity of the condenser as such any approximation of COP will not be comparable with values for heat pumps taken in accordance with the standards. The COP's calculated and discussed from this point onwards apply only to the refrigeration cycle itself, and should only be compared with values based on the same system boundaries.
 
 [^1.0]: Heating systems and water based cooling systems in buildings. Method for calculation of system energy requirements and system efficiencies. Part 4-2. Space heating generation systems, heat pump systems, BS EN 14511‐3, 2018.
 	[Download](http://libgen.li/ads.php?md5=4ce494840861f0e960bfb21a1088a59b)
@@ -31,7 +22,53 @@ $W_{\text{compression}}$ : work done to refrigerant by the compressor
 #### Methodology
 %%[[2024-11-24]] @ 13:44%%
 
+This methodology defines the system boundaries at: 
+- Input: work done to refrigerant by the compressor
+- Output: work done by the refrigerant in the condenser
 
+Making COP a measure of:
+$$COP = \frac{Q _\text{condensation} }{W_{\text{compression}}}$$
+Where:
+$Q _\text{condensation}$ : Energy released by the refrigerant in the condenser
+$W_{\text{compression}}$ : work done to refrigerant by the compressor
+
+If the condenser is assumed to be be perfectly insulated the 
+Where the COP of the refrigeration cycle is: $$COP = \frac{h_{2} - h_{3}}{h_{2} - h_{1}}$$
+```python title="cop.py"
+def method_1(lab_readings):
+
+    from CoolProp.CoolProp import PropsSI 
+
+    material = 'SES36'
+
+    P_initial = lab_readings['p e'].values
+    T_initial = lab_readings['T5'].values
+
+    H_initial = PropsSI('H', 'T', T_initial, 'P|gas', P_initial, material)
+
+    P_final = lab_readings['p c'].values
+    T_final = lab_readings['T7'].values
+
+    H_final = PropsSI('H', 'T', T_final, 'P|gas', P_final, material)
+
+    dH_compression = H_initial - H_final
+
+    P_initial = lab_readings['p c'].values
+    T_initial = lab_readings['T6'].values
+
+    H_initial = PropsSI('H', 'T', T_initial, 'P|gas', P_initial, material)
+
+    P_final = P_initial
+    T_final = T_initial
+
+    H_final = PropsSI('H', 'T', T_final, 'P|liquid', P_final, material)
+
+    dH_condensation = H_initial - H_final
+
+    cop = abs(dH_condensation/dH_compression)
+
+    return cop
+```
 
 %% 
 #### Removed Sections
@@ -45,7 +82,7 @@ $h_\text{in}$ : enthalpy corresponding to the inlet pressure & temperature in ($
 $h_\text{out}$ : enthalpy corresponding to the inlet pressure & temperature in ($kJ/k$)
 
 ##### Approximating Compressor Power
-%%[[2024-11-22]] @ 13:45%%
+[[2024-11-22]] @ 13:45  
 
 As the input electrical power $P_{\text{elec}}$ has not been measured directly an approximation will have to be made this is not ideal and will be a major source of uncertainty.
 
