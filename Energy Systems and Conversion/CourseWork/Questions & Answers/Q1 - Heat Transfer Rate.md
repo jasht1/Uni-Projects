@@ -15,16 +15,23 @@ then one would have to measure the energy change of the refrigerant and coolant 
 
 %% *Add Figure with coils highlighted* %%
 
-%% The energy change of the fluid in the coils is a sum of the latent and sensible heat *no it's not there's no state change in the coils* %%
+%% The energy change of the fluid in the coils is a sum of the latent and sensible heat *! no it's not there's no state change in the coils* %%
 
 In this case the following measures have been recorded:
 
-| #WIP          | Symbol      | Description |
-| ------------- | ----------- | ----------- |
-| **Condenser** |             |             |
-|               | $\dot{m}_c$ |             |
-|               |             |             |
-|               |             |             |
+| Symbol        | Label   | Description                                                                              |
+| ------------- | ------- | ---------------------------------------------------------------------------------------- |
+| $\dot{m}_c$   | `m/t_c` | **Mass flow rate** of the water in the heat transfer coils of the **condenser**.         |
+| $\dot m_{e}$  | `m/t_e` | **Mass flow rate** of the water in the heat transfer coils of the **evaporator**.        |
+| $T_{e^{in}}$  | `T1`    | **Temperature** of the water **entering** the heat transfer coils of the **evaporator**. |
+| $T_{e^{out}}$ | `T2`    | **Temperature** of the water **leaving** the heat transfer coils of the **evaporator**.  |
+| $T_{c^{out}}$ | `T3`    | **Temperature** of the water **leaving** the heat transfer coils of the **condenser**.   |
+| $T_{c^{in}}$  | `T4`    | **Temperature** of the water **entering** the heat transfer coils of the **condenser**.  |
+| $T_{E}$       | `T5`    | **Temperature** of the evaporation chamber                                               |
+| $T_{C}$       | `T6`    | **Temperature** of the condensing chamber                                                |
+| $p_{E}$       | `p_e`   | **Pressure** of the evaporation chamber                                                  |
+| $p_{C}$       | `p_c`   | **Temperature** of the evaporation chamber                                               |
+| $T_{sh}$      | `T7`    | **Temperature** of the refrigerant leaving the compressor                                |
 
 The mass flow rates are readings taken from rotameters placed before the coils in the R634 demonstration unit. The coils in the evaporator and condenser both have thermometers measuring the fluid temperature as it enters and leaves the respective coil the difference between these readings is considered the temperature change.
 
@@ -43,13 +50,13 @@ While specific heat capacity $c$ dose vary by temperature and pressure both of w
 	>>> import pyromat as pm
 	>>> water = pm.get("mp.H2O")
 	>>> water.cp(p=1, T=283.15) - water.cp(p=1.5, T=323.15)
-	array([0.01393411])
+	array([0.01393411]) # The variation in c_p
 	```
 [^3]: “About | PYroMat.” [Online]. Available: http://www.pyromat.org/about.html. [Accessed: 13-Nov-2024].
 	```python
 	>>> import pyromat as pm
 	>>> pm.get("mp.H2O").cp(T=298.15,p=1.01325)
-	array([4.1813595])
+	array([4.1813595]) # c_p @ STP
 	```
 
 %% Diagram with Rotometers highlighted %%

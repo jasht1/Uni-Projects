@@ -53,25 +53,66 @@ def plot_copVmfr(lab_readings):
 
     plt.show()
 
+def isentropic_efficiency(T_in,P_in,T_out,P_out):
+    import CoolProp.CoolProp as CP
+
+    h_in = CP.PropsSI('H', 'T', T_in, 'P|gas', P_in, "SES36")
+    S_in =  CP.PropsSI('S', 'T', T_in, 'P|gas', P_in, "SES36")
+
+    h_out_max = CP.PropsSI('H', 'S', S_in, 'P|gas', P_out, "SES36")
+    h_out_actual = CP.PropsSI('H', 'T', T_out, 'P|gas', P_out, "SES36")
+
+    return (h_out_max-h_in)/(h_out_actual-h_in)
+
 def plot_PH(lab_readings):
+    import CoolProp.CoolProp as CP
     from CoolProp.Plots import PropertyPlot
     from CoolProp.Plots import SimpleCompressionCycle
-    # import matplotlib.pyplot as plt
+    import matplotlib.pyplot as plt
+
+    T_evap = lab_readings["T5"].values
+    P_evap = lab_readings["p e"].values
+    T_comp = lab_readings["T7"].values
+    P_comp = lab_readings["p c"].values
+
+    eta_com = isentropic_efficiency(T_evap,P_evap,T_comp,P_comp)
 
     ph_plt = PropertyPlot('SES36', 'PH', unit_system='KSI')
 
     ph_plt.xlabel("h [kJ/kg]")
     ph_plt.ylabel("P [kPa]")
 
-    cycle = SimpleCompressionCycle('SES36', 'PH', unit_system='KSI')
+    ph_plt.calc_isolines(CP.iQ, num=11)
 
+    cycle = SimpleCompressionCycle("SES36", "PH", unit_system="KSI")
+
+    for entry in zip(T_evap,P_evap,T_comp,P_comp, eta_com):
+        cycle.simple_solve(*entry)
+
+        sc = cycle.get_state_changes()
+        ph_plt.draw_process(sc, line_opts={"label": f"flow rate", "lw": 1.5})
+
+    # ph_plt.legend(loc="upper left")
+    ph_plt.title("Refrigeration Cycles on P-h Diagram")
+    ph_plt.grid()
+    ph_plt.show()
 
 ## To test the above funcitons uncomment the 3 lines below and run the script
 import coursework as cw
 lab_readings = cw.low_e_flow
 # import coursework.lab_readings as lab_readings
-plot_copVmfr(lab_readings)
+# plot_copVmfr(lab_readings)
 # cop = method_1(lab_readings)
+# plot_PH(lab_readings)
+
+T_evap = lab_readings["T5"].values
+P_evap = lab_readings["p e"].values
+T_comp = lab_readings["T7"].values
+P_comp = lab_readings["p c"].values
+
+eta_com = isentropic_efficiency(T_evap,P_evap,T_comp,P_comp)
+
+print (eta_com)
 # print(cop)
 
 

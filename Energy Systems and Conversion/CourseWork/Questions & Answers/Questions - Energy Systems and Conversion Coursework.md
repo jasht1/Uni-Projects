@@ -7,16 +7,9 @@
 
 ---
 
-## Question 3
-### a) Plot the pressure vs temperature for the evaporator and condenser at the different water flow rates. 
-[10 marks]
-### b) Discuss the trend and any other observations. 
-[10 marks]
-## Question 4
-### a) Plot the evaporator and condenser heat transferred against temperature 
-[10 marks]
-### b) Discuss the trend and any other observations. 
-[10 marks]
+![[Q3 - PvT]]
+
+![[Q4 - dQvT]]
 ## Question 5
 ### Explain what happens if the water supplied into the unit is cooled or warmed below and above those used in tasks 1-4 above? How will the heat transferred, and COP be affected? 
 [5 marks]

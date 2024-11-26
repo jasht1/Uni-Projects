@@ -66,26 +66,6 @@ def method_3(lab_readings): # Method 3 CoolProp for heat transfer rate
 
     return (dQ_c,dQ_e)
 
-# # heat flux (W/m^2)
-# a_e = 0.068 # evaporator coil surface area in m^2
-# a_c = 0.066 # condenser coil surface area in m^2
-#
-# q_e = dQ_e/a_e
-# q_c = dQ_c/a_c
-
-## Figures
-
-### Table
-# comparison = [dQ_c2,dQ_c1,dQ_e2,dQ_e1]
-# for i in range(3):
-#     print(comparison[i])
-#
-# # comparison = [np.subtract(dQ_c,dQ_c1),np.subtract(dQ_e,dQ_e1)]
-# comparison = [dQ_c2-dQ_c1,dQ_e2-dQ_e1]
-# print(comparison[0])
-# print(comparison[1])
-# # for i in range(len(dQ_c)):
-
 ### Plot
 
 def compare_methods(lab_readings):
@@ -106,3 +86,7 @@ def compare_methods(lab_readings):
     plt.title("Condenser coil flow rate against energy transfer rate in evaporator coil")
 
     plt.show()
+
+# import coursework
+# print(compare_methods(coursework.high_e_flow))
+# print(compare_methods(coursework.low_e_flow))

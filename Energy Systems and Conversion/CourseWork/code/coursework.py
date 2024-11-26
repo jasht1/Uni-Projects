@@ -1,3 +1,9 @@
+"""
+Imports experimental data
+for Refrigeration coursework in "Energy Systems and Conversion" module
+By Joseph Ashton
+"""
+
 import os
 import pandas as pd
 # import matplotlib.pyplot as plt

@@ -55,8 +55,12 @@ dv.table(headers, data);
 ## Additional Resources
 %%[[2024-11-11]] @ 23:33%%
 
-[Demonstration unit manual](https://blackboard.lincoln.ac.uk/ultra/courses/_200912_1/outline/file/_9801625_1)
+### Demonstration unit Manual
+[Blackboard Link](https://blackboard.lincoln.ac.uk/ultra/courses/_200912_1/outline/file/_9801625_1)
+[[R634 refrigeration cycle demonstration unit manual.pdf|Local file]]
 
+### Demonstration Unit Diagram
+![[R634 Demonstration Unit Diagram (colour) - Energy Systems and Conversion Coursework.png]]
 ## Notes
 
 ### Condenser flow rate oscillatory behaviour
