@@ -4,7 +4,6 @@ for Refrigeration coursework in "Energy Systems and Conversion" module
 By Joseph Ashton
 """
 
-import pandas as pd
 
 ## Method 1 - $q = \dot{m} c_{p} \detla T$
 
@@ -71,22 +70,36 @@ def method_3(lab_readings): # Method 3 CoolProp for heat transfer rate
 def compare_methods(lab_readings):
     import matplotlib.pyplot as plt
 
-    data = pd.DataFrame({
-        "condenser flow rate (g/s)" : lab_readings['m/t c']*1000
-    })
-    data['dQ_c-m1'], data['dQ_e-m1'] = method_1(lab_readings)
-    data['dQ_c-m2'], data['dQ_e-m2'] = method_2(lab_readings)
-    data['dQ_c-m3'], data['dQ_e-m3'] = method_3(lab_readings)
+    
+    mfr_c = lab_readings['m/t c'].values*1000
+    mfr_e = lab_readings['m/t e'].values*1000
 
-    data.plot(x="condenser flow rate (g/s)", y=["dQ_c-m1","dQ_c-m2","dQ_c-m3"])
-    plt.ylabel("condenser coil energy transfer rate (W)")
-    plt.title("Condenser coil flow rate against energy transfer rate")
-    data.plot(x="condenser flow rate (g/s)", y=["dQ_e-m1","dQ_e-m2","dQ_e-m3"])
+    dQ_c_m1, dQ_e_m1 = method_1(lab_readings)
+    dQ_c_m2, dQ_e_m2 = method_2(lab_readings)
+    dQ_c_m3, dQ_e_m3 = method_3(lab_readings)
+
+    fig, axis = plt.subplots(1,2)
+
+    plt.sca(axis[0])
+    plt.scatter(mfr_e, dQ_e_m1)
+    plt.scatter(mfr_e, dQ_e_m2)
+    plt.scatter(mfr_e, dQ_e_m3)
+    plt.title("evaporator coil flow rate against energy transfer rate")                      
+    plt.xlabel("evaporator flow rate (g/s)")                                   
     plt.ylabel("evaporator coil energy transfer rate (W)")
-    plt.title("Condenser coil flow rate against energy transfer rate in evaporator coil")
+
+    plt.sca(axis[1])
+    plt.scatter(mfr_c, dQ_c_m1)
+    plt.scatter(mfr_c, dQ_c_m2)
+    plt.scatter(mfr_c, dQ_c_m3)
+    plt.title("condenser coil flow rate against energy transfer rate")                      
+    plt.xlabel("condenser flow rate (g/s)")                                   
+    plt.ylabel("condenser coil energy transfer rate (W)")                                   
 
     plt.show()
 
-# import coursework
+import coursework
+lab_readings = coursework.lab_readings.sort_values(by="m/t c")
+# print(compare_methods(lab_readings))
 # print(compare_methods(coursework.high_e_flow))
 # print(compare_methods(coursework.low_e_flow))

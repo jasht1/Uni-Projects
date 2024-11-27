@@ -81,5 +81,5 @@ def plot_PvdT(lab_readings):
     plt.show()
 
 import coursework
-plot_PdT(coursework.lab_readings)
+plot_PvT(coursework.lab_readings)
 plot_PvdT(coursework.lab_readings)

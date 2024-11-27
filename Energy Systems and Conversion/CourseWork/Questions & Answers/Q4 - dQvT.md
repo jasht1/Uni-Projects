@@ -8,3 +8,5 @@
 ### b) Discuss the trend and any other observations. 
 [10 marks]
 
+There are no clear trends are displayed between heat transfer rate in either the evaporator or condenser.
+
