@@ -24,7 +24,7 @@ def plot_PH(lab_readings):
     ph_plt.calc_isolines(CP.iQ)
 
     cycle = SimpleCompressionCycle("SES36", "PH", unit_system="KSI")
-
+    cycle.set_axis_limits([0, 500, 0, 3500])
     colours = plt.cm.viridis((flow_rate-flow_rate.min())/(flow_rate.max()-flow_rate.min()))
 
     for i, entry in enumerate(zip(T_evap,P_evap,T_cond,P_cond, eta_com, colours)):
@@ -37,8 +37,12 @@ def plot_PH(lab_readings):
     ph_plt.title("Refrigeration Cycles on P-h Diagram")
     ph_plt.grid()
     # sm = plt.cm.ScalarMappable(cmap="viridis")
+    # sm = plt.cm.viridis(flow_rate)
     # sm.set_array([])
     # cbar = plt.colorbar(sm,ax=ph_plt.axis)
-    # cbar.set_label("Flow Rate")
+    cbar = plt.colorbar(flow_rate, ax=ph_plt.axis)
+    cbar.set_label("Flow Rate (g/s)")
     ph_plt.show()
 
+import coursework
+plot_PH(coursework.all_readings)
