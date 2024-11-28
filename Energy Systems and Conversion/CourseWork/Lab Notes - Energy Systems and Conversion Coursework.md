@@ -29,14 +29,18 @@
 [[Lab Readings - Energy Systems and Conversion Coursework.csv]]
 
 ```dataviewjs
-const path = "Lab Readings - Energy Systems Coursework.csv";
-const csvFile = await dv.io.load(path);
+const FilePath = dv.current().file.path;
+const CurrentPath = FilePath.substring(0, FilePath.lastIndexOf('/'));
+const RelativePath = '/attachments/SpreadSheets/Lab Readings - Energy Systems and Conversion Coursework.csv';
+const Path = CurrentPath + RelativePath;
+const csvFile = await dv.io.load(Path);
 const rows = csvFile.split("\n").map(row => row.split(","));
 const headers = rows[0];
 const data = rows.slice(1);
 
 dv.table(headers, data);
 ```
+
 
 ### Limited width table
 

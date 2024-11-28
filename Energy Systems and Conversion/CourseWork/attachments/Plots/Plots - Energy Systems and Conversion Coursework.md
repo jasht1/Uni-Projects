@@ -3,6 +3,14 @@
 
 ### Refrigeration Cycles
 
+#### Linear
+![[Refrigeration_Cycle_Plots_(wo compression, linear).svg]]
+
+#### Log
+![[Refrigeration_Cycle_Plots_(wo compression, log).svg]]
+
+![[Refrigeration_Cycle_Plots_(wo compression, zoom out).svg]]
+
 ### Pairwise Pearson Correlation maps
 
 #### Readings

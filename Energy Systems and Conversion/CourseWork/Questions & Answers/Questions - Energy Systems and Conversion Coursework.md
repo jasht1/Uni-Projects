@@ -1,25 +1,32 @@
+>[!SUMMARY] Table of Contents
+>- [[## Q1 - Heat Transfer Rate]]
+>- [[## Q2 - COP]]
+>- [[## Q3 - PvT]]
+>- [[## Q4 - dQvT]]
+>- [[## Q5 - Vary inlet water temp]]
+>- [[## Q6 - Water as a refrigerant]]
 
-![[Q1 - Heat Transfer Rate]]
-
----
-
-![[Q2 - COP]]
-
----
-
-![[Q3 - PvT]]
-
----
-
-![[Q4 - dQvT]]
+## ![[Q1 - Heat Transfer Rate]]
 
 ---
 
-![[Q5 - Vary inlet water temp]]
+## ![[Q2 - COP]]
 
 ---
 
-![[Q6 - Water as a refrigerant]]
+## ![[Q3 - PvT]]
+
+---
+
+## ![[Q4 - dQvT]]
+
+---
+
+## ![[Q5 - Vary inlet water temp]]
+
+---
+
+## ![[Q6 - Water as a refrigerant]]
 
 ---
 

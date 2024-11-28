@@ -21,14 +21,17 @@ Coursework Title: Coursework 1
 ## Brief
 ![[Brief - Energy Systems and Conversion Coursework.pdf]]
 
-
 ## Lab Notes
 ![[Lab Notes - Energy Systems and Conversion Coursework]]
+
 ## Questions
 ![[Questions - Energy Systems and Conversion Coursework]]
 
 ## Plots
+![[Plots - Energy Systems and Conversion Coursework]]
 
 ## Spreadsheets
+![[SpreadSheets - Energy Systems and Conversion Coursework]]
 
 ## Code
+![[Code - Energy Systems and Conversion Coursework]]

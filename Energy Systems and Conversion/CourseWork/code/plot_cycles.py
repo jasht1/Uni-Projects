@@ -36,11 +36,8 @@ def plot_PH(lab_readings):
 
     ph_plt.title("Refrigeration Cycles on P-h Diagram")
     ph_plt.grid()
-    # sm = plt.cm.ScalarMappable(cmap="viridis")
-    # sm = plt.cm.viridis(flow_rate)
-    # sm.set_array([])
-    # cbar = plt.colorbar(sm,ax=ph_plt.axis)
-    cbar = plt.colorbar(flow_rate, ax=ph_plt.axis)
+    sm = plt.cm.ScalarMappable(norm=plt.Normalize(vmin=2, vmax=12), cmap="viridis")
+    cbar = plt.colorbar(sm,ax=ph_plt.axis)
     cbar.set_label("Flow Rate (g/s)")
     ph_plt.show()
 

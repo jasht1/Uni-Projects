@@ -7,23 +7,10 @@ To test the methods: uncomment the lines at the bottom of the script
 """
 
 def method_1(lab_readings):
-
     from CoolProp.CoolProp import PropsSI 
-
     material = 'SES36'
 
-    P_initial = lab_readings['p e'].values
-    T_initial = lab_readings['T5'].values
-
-    H_initial = PropsSI('H', 'T', T_initial, 'P|gas', P_initial, material)
-
-    P_final = lab_readings['p c'].values
-    T_final = lab_readings['T7'].values
-
-    H_final = PropsSI('H', 'T', T_final, 'P|gas', P_final, material)
-
-    dH_compression = H_initial - H_final
-
+    # Condenser enthalpy change
     P_initial = lab_readings['p c'].values
     T_initial = lab_readings['T6'].values
 
@@ -35,6 +22,19 @@ def method_1(lab_readings):
     H_final = PropsSI('H', 'T', T_final, 'P|liquid', P_final, material)
 
     dH_condensation = H_initial - H_final
+
+    # Compressor ethalpy change
+    P_initial = lab_readings['p e'].values
+    T_initial = lab_readings['T5'].values
+
+    H_initial = PropsSI('H', 'T', T_initial, 'P|gas', P_initial, material)
+
+    P_final = lab_readings['p c'].values
+    T_final = lab_readings['T7'].values
+
+    H_final = PropsSI('H', 'T', T_final, 'P|gas', P_final, material)
+
+    dH_compression = H_initial - H_final
 
     cop = abs(dH_condensation/dH_compression)
 

@@ -4,24 +4,27 @@ for Refrigeration coursework in "Energy Systems and Conversion" module
 By Joseph Ashton
 """
 
+import matplotlib.pyplot as plt
+
+
+def PvT_graph(title, pressure, temperature, flow_rate):
+    scatter = plt.scatter(
+        temperature, # x-axis: Temperature
+        pressure/1000 - 101.325, # y-axis: Pressure
+        c=flow_rate*1000, # Colors based on flow rate
+    )
+
+    cbar = plt.colorbar(scatter)
+    cbar.set_label("Flow Rate (g/s)")
+
+    plt.xlabel("Temperature (K)")
+    plt.ylabel("Pressure (kPa)")
+    plt.title(title)
+
 def plot_PvT(lab_readings):
-    import matplotlib.pyplot as plt
-
-    def PvT_graph(title, pressure, temperature, flow_rate):
-        scatter = plt.scatter(
-            temperature, # x-axis: Temperature
-            pressure/1000 - 101.325, # y-axis: Pressure
-            c=flow_rate*1000, # Colors based on flow rate
-        )
-
-        cbar = plt.colorbar(scatter)
-        cbar.set_label("Flow Rate (g/s)")
-
-        plt.xlabel("Temperature (K)")
-        plt.ylabel("Pressure (kPa)")
-        plt.title(f"{title} Pressure vs. Temperature (Colored by Flow Rate)")
 
     fig, axis = plt.subplots(1,2)
+    plt.suptitle("Pressure vs. Temperature (Colored by Flow Rate)")
 
     plt.sca(axis[0])
     PvT_graph(
@@ -41,26 +44,10 @@ def plot_PvT(lab_readings):
 
     plt.show()
 
-
-
 def plot_PvdT(lab_readings):
-    import matplotlib.pyplot as plt
-
-    def PvT_graph(title, pressure, temperature, flow_rate):
-        scatter = plt.scatter(
-            temperature, # x-axis: Temperature
-            pressure/1000 - 101.325, # y-axis: Pressure
-            c=flow_rate*1000, # Colors based on flow rate
-        )
-
-        cbar = plt.colorbar(scatter)
-        cbar.set_label("Flow Rate (g/s)")
-
-        plt.xlabel("Temperature (K)")
-        plt.ylabel("Pressure (kPa)")
-        plt.title(f"{title} Pressure vs. Temperature (Colored by Flow Rate)")
 
     fig, axis = plt.subplots(1,2)
+    plt.suptitle("Pressure vs. Temperature (Colored by Flow Rate)")
 
     plt.sca(axis[0])
     PvT_graph(
@@ -82,4 +69,4 @@ def plot_PvdT(lab_readings):
 
 import coursework
 plot_PvT(coursework.lab_readings)
-plot_PvdT(coursework.lab_readings)
+# plot_PvdT(coursework.lab_readings)

@@ -35,6 +35,8 @@ In this case the following measures have been recorded:
 
 The mass flow rates are readings taken from rotameters placed before the coils in the R634 demonstration unit. The coils in the evaporator and condenser both have thermometers measuring the fluid temperature as it enters and leaves the respective coil the difference between these readings is considered the temperature change.
 
+%% Diagram with Rotometers highlighted %%
+
 #### Method 1 %% - Decide on a name %%
 
 The energy change of the water across the coils can be found as the product of its specific heat capacity $c$, the change in temperature $\Delta T$, and the mass flow rate $\dot m$. 
@@ -59,13 +61,81 @@ While specific heat capacity $c$ dose vary by temperature and pressure both of w
 	array([4.1813595]) # c_p @ STP
 	```
 
-%% Diagram with Rotometers highlighted %%
+This was implemented pragmatically in python with the function seen below:
+
+```python title=heat_flux.py
+def method_1(lab_readings): # Method 1 - $q = \dot{m} c_{p} \detla T$
+
+    c_p = 4181.3  # constant pressure specific heat capacity of water @ 101325 Pa, 298.15 K
+
+    # temperature change of the fluid in the coolant coils (K)
+    dT_e = lab_readings['T2'].values - lab_readings['T1'].values  # evaporator coil
+    dT_c = lab_readings['T3'].values - lab_readings['T4'].values  # condenser coil
+
+    # energy transfer (W) product of mass flow rate, temperature change & specific heat capacity
+    dQ_e = c_p*dT_e*lab_readings['m/t e'].values
+    dQ_c = c_p*dT_c*lab_readings['m/t c'].values
+
+    return (dQ_e,dQ_c)
+```
+
+> [!INFO] The full file `heat_flux.py` can be found in the annexes and [here in the working repository](https://github.com/jasht1/Uni-Projects/blob/master/Energy%20Systems%20and%20Conversion/CourseWork/code/heat_flux.py)
 
 #### Method 2 - PYroMat
 
 
+```python title=heat_flux.py
+def method_2(lab_readings): # Method 2 PYroMat for heat transfer rate
+
+    import pyromat as pm
+
+    """
+    utilising pyromat multi phase property model based on:
+      - T. Petrova, “Revised release on the iapws formulation 1995 for the
+        thermodynamic properties of ordinary water substance for general
+        and scientific use,” tech. rep., 2014. 
+    For more information see http://pyromat.org/pdf/handbook.pdf#chapter.7
+    """
+
+    water = pm.get("mp.H2O")  # fetches multiphase thermodynamic property model
+
+    # specific internal energy change of the fluid across the coolant coils (kJ)
+    de_e = water.e(T=lab_readings['T2'].values) - water.e(T=lab_readings['T1'].values) # evaporator coil 
+    de_c = water.e(T=lab_readings['T3'].values) - water.e(T=lab_readings['T4'].values) # condenser coil  
+
+    # energy transfer rate (W) product of energy change and mass flow rate
+    dQ_e = de_e*lab_readings['m/t e'].values*1000
+    dQ_c = de_c*lab_readings['m/t c'].values*1000
+
+    return (dQ_e,dQ_c)
+```
+
+> [!INFO] The full file `heat_flux.py` can be found in the annexes and [here in the working repository](https://github.com/jasht1/Uni-Projects/blob/master/Energy%20Systems%20and%20Conversion/CourseWork/code/heat_flux.py)
+
+
 #### Method 3 - CoolProp
+
+```python title=heat_flux.py
+def method_3(lab_readings): # Method 3 CoolProp for heat transfer rate 
+
+    from CoolProp.CoolProp import PropsSI 
+
+    # specific internal energy change of the fluid across the coolant coils (J)
+    de_e = PropsSI('H', 'T', lab_readings['T2'].values, 'P', 101325, 'H2O') - PropsSI('H', 'T', lab_readings['T1'].values, 'P', 101325, 'H2O') # evaporator coil 
+    de_c = PropsSI('H', 'T', lab_readings['T3'].values, 'P', 101325, 'H2O') - PropsSI('H', 'T', lab_readings['T4'].values, 'P', 101325, 'H2O') # condenser coil  
+
+    # energy transfer rate (W), product of energy change and mass flow rate
+    dQ_e = de_e*lab_readings['m/t e'].values
+    dQ_c = de_c*lab_readings['m/t c'].values
+
+    return (dQ_e,dQ_c)
+```
+
+> [!INFO] The full file `heat_flux.py` can be found in the annexes and [here in the working repository](https://github.com/jasht1/Uni-Projects/blob/master/Energy%20Systems%20and%20Conversion/CourseWork/code/heat_flux.py)
 
 
 ### b) Appropriately tabulate your results. 
 [10 marks]
+
+> [!INFO] All key values calculated are tabulated in `All Data.csv` which can be found in the annex and [here in the working repository](https://github.com/jasht1/Uni-Projects/blob/master/Energy%20Systems%20and%20Conversion/CourseWork/attachments/SpreadSheets/All%20Data.csv)
+
