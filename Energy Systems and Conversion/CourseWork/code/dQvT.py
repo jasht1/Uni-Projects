@@ -16,7 +16,7 @@ def plot_dQvT(lab_readings):
         plt.xlabel("Temperature (K)")
         plt.ylabel("Heat Transfer rate (W)")
     
-    dQ_c, dQ_e = find_dQ(lab_readings)
+    dQ_e, dQ_c = find_dQ(lab_readings)
 
     fig, axis = plt.subplots(1,2)
 
@@ -54,85 +54,99 @@ def plot_x_y_colourbar(x_title, x, y_title, y, c_title, c, subchart_titles = ["E
     plt.show()
 
 def plot_dQvdT(lab_readings):
-    import matplotlib.pyplot as plt
-
-    # def dQvdT_graph(title,T, dQ):
-    #
-    #     plt.scatter( T, dQ)
-    #     plt.title(f"{title} Heat transfer rate against Temperature change")
-    #     plt.xlabel("Temperature Change across coil ($\degree$ C)")
-    #     plt.ylabel("Heat Transfer rate (W)")
-    # 
-    # dQ_c, dQ_e = find_dQ(lab_readings)
-    #
-    # fig, axis = plt.subplots(1,2)
-    #
-    # plt.sca(axis[0])
-    # dQvdT_graph(
-    #     "Evaporator", 
-    #     lab_readings["T5"]-lab_readings["T1"], 
-    #     dQ_e
-    # )
-    #
-    # plt.sca(axis[1])
-    # dQvdT_graph(
-    #     "Condenser", 
-    #     lab_readings["T6"]-lab_readings["T4"], 
-    #     dQ_c
-    # )
-    #
-    # plt.show()
-
     mfr_c = lab_readings['m/t c'].values*1000
     mfr_e = lab_readings['m/t e'].values*1000
 
-    dQ_c_m3, dQ_e_m3 = find_dQ(lab_readings)
+    dQ_e, dQ_c = find_dQ(lab_readings)
 
     # temperature change of the fluid in the coolant coils (K)
     dT_e = lab_readings['T2'].values - lab_readings['T1'].values  # evaporator coil
     dT_c = lab_readings['T3'].values - lab_readings['T4'].values  # condenser coil
 
     plot_x_y_colourbar(
-        "Temperature change across coil ($\degree$ C)",[dT_e,dT_c], 
-        "Coil energy transfer rate (W)",[dQ_e_m3,dQ_c_m3],
+        "Temperature change across coil ($\degree$ K)",[dT_e,dT_c], 
+        "Coil energy transfer rate (W)",[dQ_e,dQ_c],
         "Flow rate (g/s)",[mfr_e,mfr_c]
     )
 
 def plot_dQ_v_mfr(lab_readings):
-    import matplotlib.pyplot as plt
-
-    
     mfr_c = lab_readings['m/t c'].values*1000
     mfr_e = lab_readings['m/t e'].values*1000
 
-    dQ_c_m3, dQ_e_m3 = find_dQ(lab_readings)
+    dQ_e, dQ_c = find_dQ(lab_readings)
 
     # temperature change of the fluid in the coolant coils (K)
     dT_e = lab_readings['T2'].values - lab_readings['T1'].values  # evaporator coil
     dT_c = lab_readings['T3'].values - lab_readings['T4'].values  # condenser coil
 
-    fig, axis = plt.subplots(1,2)
+    plot_x_y_colourbar(
+        "Flow rate (g/s)",[mfr_e,mfr_c],
+        "Coil energy transfer rate (W)",[dQ_e,dQ_c],
+        "Temperature change across coil ($\degree$ K)",[dT_e,dT_c], 
+    )
 
-    plt.sca(axis[0])
-    scatter = plt.scatter(mfr_e, dQ_e_m3,c=dT_e)
-    cbar = plt.colorbar(scatter)
-    cbar.set_label("Temperature Change across coil ($\degree$ C)")
-    plt.title("evaporator coil flow rate against energy transfer rate")                      
-    plt.xlabel("evaporator flow rate (g/s)")                                   
-    plt.ylabel("evaporator coil energy transfer rate (W)")
+def plot_Tcoolant_v_Tchamber(lab_readings):
 
-    plt.sca(axis[1])
-    scatter = plt.scatter(mfr_c, dQ_c_m3,c=dT_c)
-    cbar = plt.colorbar(scatter)
-    cbar.set_label("Temperature Change across coil ($\degree$ C)")
-    plt.title("condenser coil flow rate against energy transfer rate")                      
-    plt.xlabel("condenser flow rate (g/s)")                                   
-    plt.ylabel("condenser coil energy transfer rate (W)")                                   
+    Tcoolant = [
+        (lab_readings['T1']+lab_readings['T2'])/2,
+        (lab_readings['T4']+lab_readings['T3'])/2
+    ]
+    Tchamber = [
+        lab_readings['T5'],
+        lab_readings['T6']
+    ]
+    mfr = [
+        lab_readings['m/t e'],
+        lab_readings['m/t c']*1000
+    ]
+    plot_x_y_colourbar(
+        "Average water temperature ($\degree$ K)",Tcoolant,
+        "Chamber temperature ($\degree$ K)", Tchamber,
+        "Flow rate (g/s)",mfr
+    )
 
-    plt.show()
+def plot_Tgradient_v_mfr(lab_readings):
+
+    Tgradient = [
+        ((lab_readings['T1']+lab_readings['T2'])/2)-lab_readings['T5'],
+        ((lab_readings['T4']+lab_readings['T3'])/2)-lab_readings['T6']
+    ]
+    mfr = [
+        lab_readings['m/t e'],
+        lab_readings['m/t c']*1000
+    ]
+
+    dQ = find_dQ(lab_readings)
+
+    plot_x_y_colourbar(
+        "Flow rate (g/s)",mfr,
+        "Temperature gradient ($\degree$ K)",Tgradient,
+        "Coil energy transfer rate (W)",dQ,
+    )
+def plot_dQ_v_Tgradient(lab_readings):
+
+    Tgradient = [
+        ((lab_readings['T1']+lab_readings['T2'])/2)-lab_readings['T5'],
+        ((lab_readings['T4']+lab_readings['T3'])/2)-lab_readings['T6']
+    ]
+    mfr = [
+        lab_readings['m/t e'],
+        lab_readings['m/t c']*1000
+    ]
+
+    dQ = find_dQ(lab_readings)
+
+    plot_x_y_colourbar(
+        "Temperature gradient ($\degree$ K)",Tgradient,
+        "Coil energy transfer rate (W)",dQ,
+        "Flow rate (g/s)",mfr,
+    )
+
 
 import coursework
 lab_readings = coursework.lab_readings.sort_values(by="m/t c")
 # plot_dQvT(coursework.lab_readings)
-plot_dQvdT(lab_readings)
-# plot_dQ_v_mfr(lab_readings)
+# plot_dQvdT(lab_readings)
+plot_dQ_v_mfr(lab_readings)
+# plot_Tcoolant_v_Tchamber(lab_readings)
+# plot_Tgradient_v_mfr(lab_readings)

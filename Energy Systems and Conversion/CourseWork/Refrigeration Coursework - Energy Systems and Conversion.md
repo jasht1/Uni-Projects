@@ -14,7 +14,7 @@ Module: Energy Systems and Conversion - EGR3030
 Module Leader: Aliyu Aliyu, AAliyu@lincoln.ac.uk
 Contribution to Final Module Mark: 25 
 Coursework Title: Coursework 1
- 
+
 ![[Report - Energy Systems and Conversion Coursework]]
 
 # Annexes
@@ -26,3 +26,9 @@ Coursework Title: Coursework 1
 ![[Lab Notes - Energy Systems and Conversion Coursework]]
 ## Questions
 ![[Questions - Energy Systems and Conversion Coursework]]
+
+## Plots
+
+## Spreadsheets
+
+## Code

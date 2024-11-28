@@ -19,7 +19,7 @@ def method_1(lab_readings): # Method 1 - $q = \dot{m} c_{p} \detla T$
     dQ_e = c_p*dT_e*lab_readings['m/t e'].values
     dQ_c = c_p*dT_c*lab_readings['m/t c'].values
 
-    return (dQ_c,dQ_e)
+    return (dQ_e,dQ_c)
 
 
 ## Method 2
@@ -46,7 +46,7 @@ def method_2(lab_readings): # Method 2 PYroMat for heat transfer rate
     dQ_e = de_e*lab_readings['m/t e'].values*1000
     dQ_c = de_c*lab_readings['m/t c'].values*1000
 
-    return (dQ_c,dQ_e)
+    return (dQ_e,dQ_c)
 
 
 ## Method 3
@@ -63,7 +63,7 @@ def method_3(lab_readings): # Method 3 CoolProp for heat transfer rate
     dQ_e = de_e*lab_readings['m/t e'].values
     dQ_c = de_c*lab_readings['m/t c'].values
 
-    return (dQ_c,dQ_e)
+    return (dQ_e,dQ_c)
 
 ### Plot
 
@@ -74,9 +74,9 @@ def compare_methods(lab_readings):
     mfr_c = lab_readings['m/t c'].values*1000
     mfr_e = lab_readings['m/t e'].values*1000
 
-    dQ_c_m1, dQ_e_m1 = method_1(lab_readings)
-    dQ_c_m2, dQ_e_m2 = method_2(lab_readings)
-    dQ_c_m3, dQ_e_m3 = method_3(lab_readings)
+    dQ_e_m1, dQ_c_m1 = method_1(lab_readings)
+    dQ_e_m2, dQ_c_m2 = method_2(lab_readings)
+    dQ_e_m3, dQ_c_m3 = method_3(lab_readings)
 
     fig, axis = plt.subplots(1,2)
 
@@ -98,8 +98,8 @@ def compare_methods(lab_readings):
 
     plt.show()
 
-import coursework
-lab_readings = coursework.lab_readings.sort_values(by="m/t c")
+# import coursework
+# lab_readings = coursework.lab_readings.sort_values(by="m/t c")
 # print(compare_methods(lab_readings))
 # print(compare_methods(coursework.high_e_flow))
 # print(compare_methods(coursework.low_e_flow))
