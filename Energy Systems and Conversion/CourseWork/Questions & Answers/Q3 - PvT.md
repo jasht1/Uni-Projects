@@ -22,5 +22,3 @@ In the condenser clear trends can be seen. The pressure and temperature display 
 ![[PdivT_v_mfr-(fit).svg]]
 
 %%Calculate p values%%
-
-The relationship with just 

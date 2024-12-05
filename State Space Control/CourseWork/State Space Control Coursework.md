@@ -27,19 +27,27 @@ Due [[2024-12-05|5th December]]
 
 #### Constituent forces
 
-%%
 ##### Weight
 $$F_{w_{\text{b}}} = w_{\text{b}}g$$
 $$F_{w_{\text{w}}} = w_{\text{w}}g$$
-%%
+##### Tire
+$$F_{k_{t}} = k_{t}(x_{b} - x_{w})$$
+##### Spring
+$$F_{k_{s}} = k_{s}(x_{b} - x_{w})$$
+##### Damper
+$$F_{b_{s}} = b_{s}(\dot{x}_{b} - \dot{x}_{w})$$
+## 
 
-####
+#### Implementation
+- MLB & Simulink
 
-#### References
-https://www.mathworks.com/help/robust/gs/tuning-control-system-with-multiple-valued-plant-parameters-using-control-system-tuner.html
+### Simulations
 
-https://www.researchgate.net/publication/361381452_Design_of_Virtual_Reference_Feedforward_Controller_for_an_Active_Suspension_System
+- Passive suspension
+- Simple tuning
+- Advanced tuning
 
-https://www.researchgate.net/publication/352565005_Artificial_Neural_Network_Prediction_of_the_Optimal_Setup_Parameters_of_a_Seven_Degrees_of_Freedom_Mathematical_Model_of_a_Race_Car_IndyCar_Case_Study
+#### Performance
 
+#### Stability
 

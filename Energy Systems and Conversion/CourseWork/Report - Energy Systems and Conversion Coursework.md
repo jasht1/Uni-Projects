@@ -1,16 +1,57 @@
 
 ## Abstract
 
-%%Table of Contents%%
+This report discusses a practical demonstration of a refrigeration cycle using the R634 Demonstration unit. It focuses on the impact of flow rate of coolant in the condenser.
+
+This report dose not explicitly address the questions in the brief but in the annexes there are specific answers to each question posed.
+
+>[!SUMMARY] Table of Contents
+>    - [[Report - Energy Systems and Conversion Coursework#Abstract|Abstract]]
+>        - [[Report - Energy Systems and Conversion Coursework#Symbols|Symbols]]
+>    - [[Report - Energy Systems and Conversion Coursework#Introduction|Introduction]]
+>        - [[Report - Energy Systems and Conversion Coursework#Background|Background]]
+>            - [[Report - Energy Systems and Conversion Coursework#Carnot Cycle|Carnot Cycle]]
+>            - [[Report - Energy Systems and Conversion Coursework#R634 Demonstration unit|R634 Demonstration unit]]
+>                - [[Report - Energy Systems and Conversion Coursework#The role of water|The role of water]]
+>            - [[Report - Energy Systems and Conversion Coursework#Coefficient of Performance COP|Coefficient of Performance COP]]
+>        - [[Report - Energy Systems and Conversion Coursework#Aims|Aims]]
+>    - [[Report - Energy Systems and Conversion Coursework#Methodology|Methodology]]
+>        - [[Report - Energy Systems and Conversion Coursework#Experimental Methodology|Experimental Methodology]]
+>        - [[Report - Energy Systems and Conversion Coursework#Analytical Methodology |Analytical Methodology ]]
+>            - [[Report - Energy Systems and Conversion Coursework#State Variables|State Variables]]
+>                - [[Report - Energy Systems and Conversion Coursework#Reservoir heat transfer rate |Reservoir heat transfer rate ]]
+>                    - [[Report - Energy Systems and Conversion Coursework#Method 1 - Control |Method 1 - Control ]]
+>                    - [[Report - Energy Systems and Conversion Coursework#Method 2 - PYroMat|Method 2 - PYroMat]]
+>                    - [[Report - Energy Systems and Conversion Coursework#Method 3 - CoolProp|Method 3 - CoolProp]]
+>            - [[Report - Energy Systems and Conversion Coursework#Efficiency Metrics|Efficiency Metrics]]
+>                - [[Report - Energy Systems and Conversion Coursework#COP|COP]]
+>                - [[Report - Energy Systems and Conversion Coursework#Isentropic Compressor Efficiency|Isentropic Compressor Efficiency]]
+>            - [[Report - Energy Systems and Conversion Coursework#Carnot cycle plots|Carnot cycle plots]]
+>    - [[Report - Energy Systems and Conversion Coursework#Results|Results]]
+>    - [[Report - Energy Systems and Conversion Coursework#References|References]]
+
 
 ### Symbols
 %%[[2024-11-26]] @ 14:00%%
 
 ![[Table of Symbols]]
 
-
 ## Introduction
 ### Background
+
+#### Carnot Cycle
+
+The Carnot cycle is an idealised thermodynamic cycle that can be used to estimate the behaviour of the refrigeration cycles used in chillers and heat pumps.
+
+#### R634 Demonstration unit
+
+##### The role of water
+The water supplied to the unit is used as a thermal reservoir to absorb and release thermal energy predictably, that is to say without changing temperature. Naturally when water absorbs / releases energy in the condenser / evaporator respectively it dose change temperature but, by the fact that it is flowing, the system reaches a steady state with a constant and predictable temperature gradient. This average temperature at steady state is the effective temperature of the thermal reservoir.
+In the experiment detailed in this report, the flow rate has been used as an independent variable to affect the system. This works by changing the effective temperature of the thermal reservoir and thus effecting the the rate at which it absorbs and emits energy.
+If the temperature of the water supplied to the unit is change it will have a similar effect, varying the effective temperature of the thermal reservoirs i.e. the heat exchange coils in the evaporator and condenser.
+
+> [!NOTE] Disambiguation
+> In the R634 demonstration unit water is used to transfer heat to and from the evaporator and condenser respectively, and as such it can be seen as playing different roles depending on if it is interoperated as demonstrating a chiller or a heat pump. Throughout this report it is referred to as coolant as a linguistic compromise. At points you may prefer to translate this in your head to "heat source" "thermal transfer medium".
 
 #### Coefficient of Performance COP
 Coefficient of performance ($COP$) is a measure of efficiency typically associated with heat pumps and heating systems as a whole. In the case of Heat Pumps COP is the ratio of the useful heating power at the condenser per unit of electrical input power. [^1.4] $$COP = \frac{P \text{f} _{\text{Cond}}}{P_{\text{elec}}}$$
@@ -42,7 +83,7 @@ The main independent variable is condenser flow rate ($\dot m_c$) with evaporato
 
 The condenser flow rate ($\dot m_c$) was tested at regular intervals between $2 \ \text{g/s}$ to $12 \ \text{g/s}$ at a low and a high evaporator flow rate ($\dot m_c$), being $10 \ \text{g/s}$ and $20 \ \text{g/s}$ respectively.
 
-The mass flow rates determined by readings taken from rotameters placed before the coils in the R634 demonstration unit. The coils in the evaporator and condenser both have thermometers measuring the fluid temperature as it enters and leaves the respective coil the difference between these readings is considered the temperature change.
+The mass flow rates determined by readings taken from rotameters placed before the coils in the R634 demonstration unit. The coils in the evaporator and condenser both have thermometers measuring the fluid temperature as it enters and leaves the respective coil as well as thermometers measuring the ambient temperature of the phase change chamber.
 
 ![[R634 Demonstration Unit Diagram (SVG) - Energy Systems and Conversion Coursework.svg]]
 
@@ -55,7 +96,127 @@ The tests was carried out as follows:
 
 ### Analytical Methodology 
 
-#### Efficiency
+#### State Variables
+
+##### Reservoir heat transfer rate 
+
+The rate of heat transfer in the evaporator and condenser can be said to be equal to the change in energy of the fluid between the input and output of their respective coils if the systems are assumed to be perfectly insulated. In practice this is of course not the case as the system will inevitably loose energy to and gain energy from the environment by means of conduction, radiation and sound.
+
+As this is a fairly straightforward value to compute it was taken as an opportunity to compare several methodologies. 
+
+There are many means of identifying fluid properties ranging in their ease and accuracy. In this module we are taught to seek out property tables which can be impractical at scale and prone to human error. As such I set out to understand the alternatives, of the options I found 2 stood out Pyromat and CoolProp. 
+
+> [!Info] See [[Finding fluid properties]] in the annexes or [here in my module repo](https://github.com/jasht1/Uni-Projects/blob/master/Energy%20Systems%20and%20Conversion/Misc%20Notes/Finding%20fluid%20properties.md) for more details 
+
+###### Method 1 - Control 
+
+The energy change of the water across the coils can be found as the product of its specific heat capacity $c$, the change in temperature $\Delta T$, and the mass flow rate $\dot m$. 
+
+$$\Large Q = c \dot m \Delta T $$
+
+While specific heat capacity $c$ dose vary by temperature and pressure both of which will vary along the length of the coil and by the setting of the control valve, this will be ignored as the variation is negligible at less than $\pm 0.01 \ kJ / kg \cdot \! \degree \! K$. [^1] [^2] Therefore a value of $4.1813 \ kJ / kg \cdot \! \degree \! K$ will be used corresponding to the constant pressure specific heat capacity $c_{p}$ at a standard temperature and pressure of $298.15 \degree K$ and $101.33 \ kPa$ respectively. [^3]
+
+[^1]: “Water - Properties vs. Temperature and Pressure.” [Online]. Available: https://www.engineeringtoolbox.com/water-properties-d_1258.html. [Accessed: 13-Nov-2024].
+
+[^2]: “About | PYroMat.” [Online]. Available: http://www.pyromat.org/about.html. [Accessed: 13-Nov-2024].
+	```python
+	>>> import pyromat as pm
+	>>> water = pm.get("mp.H2O")
+	>>> water.cp(p=1, T=283.15) - water.cp(p=1.5, T=323.15)
+	array([0.01393411]) # The variation in c_p
+	```
+[^3]: “About | PYroMat.” [Online]. Available: http://www.pyromat.org/about.html. [Accessed: 13-Nov-2024].
+	```python
+	>>> import pyromat as pm
+	>>> pm.get("mp.H2O").cp(T=298.15,p=1.01325)
+	array([4.1813595]) # c_p @ STP
+	```
+
+This was implemented pragmatically in python with the function seen below:
+
+```python title=heat_flux.py
+def method_1(lab_readings): # Method 1 - $q = \dot{m} c_{p} \detla T$
+
+    c_p = 4181.3  # constant pressure specific heat capacity of water @ 101325 Pa, 298.15 K
+
+    # temperature change of the fluid in the coolant coils (K)
+    dT_e = lab_readings['T2'].values - lab_readings['T1'].values  # evaporator coil
+    dT_c = lab_readings['T3'].values - lab_readings['T4'].values  # condenser coil
+
+    # energy transfer (W) product of mass flow rate, temperature change & specific heat capacity
+    dQ_e = c_p*dT_e*lab_readings['m/t e'].values
+    dQ_c = c_p*dT_c*lab_readings['m/t c'].values
+
+    return (dQ_e,dQ_c)
+```
+
+> [!INFO] The full file `heat_flux.py` can be found in the annexes and [here in the working repository](https://github.com/jasht1/Uni-Projects/blob/master/Energy%20Systems%20and%20Conversion/CourseWork/code/heat_flux.py)
+
+###### Method 2 - PYroMat
+
+PYroMat[^dQ.4] is a intuitive and lightweight python library, It's simple to make thermodynamic property queries and perfect for quick and scrappy use in the console. I could recommend 90% of the time.
+
+[^dQ.4]: “Home | PYroMat.” [Online]. Available: http://pyromat.org/. [Accessed: 15-Nov-2024].
+
+The function below utilises PYroMat's multi phase property model based on:
+
+> T. Petrova, “Revised release on the iapws formulation 1995 for the thermodynamic properties of ordinary water substance for general and scientific use,” tech. rep., 2014.[^dQ.5]
+
+[^dQ.5]: T. Petrova, “Revised release on the iapws formulation 1995 for the thermodynamic properties of ordinary water substance for general and scientific use,” tech. rep., 2014.
+
+For more information see http://pyromat.org/pdf/handbook.pdf#chapter.7 [^dQ.6]
+
+[^dQ.6]: "Chapter 7 Multi-phase substance models | PYroMat Handbook." [Online]. Available: http://pyromat.org/pdf/handbook.pdf#chapter.7. [Accessed: 15-Nov-2024].
+
+```python title=heat_flux.py
+def method_2(lab_readings): # Method 2 PYroMat for heat transfer rate
+    import pyromat as pm
+
+    water = pm.get("mp.H2O")  # fetches multiphase thermodynamic property model
+
+    # specific internal energy change of the fluid across the coolant coils (kJ)
+    de_e = water.e(T=lab_readings['T2'].values) - water.e(T=lab_readings['T1'].values) # evaporator coil 
+    de_c = water.e(T=lab_readings['T3'].values) - water.e(T=lab_readings['T4'].values) # condenser coil  
+
+    # energy transfer rate (W) product of energy change and mass flow rate
+    dQ_e = de_e*lab_readings['m/t e'].values*1000
+    dQ_c = de_c*lab_readings['m/t c'].values*1000
+
+    return (dQ_e,dQ_c)
+```
+
+> [!INFO] The full file `heat_flux.py` can be found in the annexes and [here in the working repository](https://github.com/jasht1/Uni-Projects/blob/master/Energy%20Systems%20and%20Conversion/CourseWork/code/heat_flux.py)
+
+
+###### Method 3 - CoolProp
+
+CoolProp[^dQ.7] is a free open source C++ implementation of REFPROP[^dQ.8] the NIST's thermodynamic property calculator. It has both high and low level functionality. It also has wrappers for anything your likely to want to use even excel. For the sake of consistency this report will only use Python.
+
+[^dQ.7]:“Welcome to CoolProp — CoolProp 6.6.0 documentation.” [Online]. Available: http://www.coolprop.org/. [Accessed: 28-Nov-2024].
+
+[^dQ.8]: “REFPROP,” 18-Apr-2013. [Online]. Available: https://www.nist.gov/srd/refprop. [Accessed: 28-Nov-2024].
+
+CoolProp is slightly more involved and less convenient for quick queries but is far more capable.
+
+```python title=heat_flux.py
+def method_3(lab_readings): # Method 3 CoolProp for heat transfer rate 
+
+    from CoolProp.CoolProp import PropsSI 
+
+    # specific internal energy change of the fluid across the coolant coils (J)
+    de_e = PropsSI('H', 'T', lab_readings['T2'].values, 'P', 101325, 'H2O') - PropsSI('H', 'T', lab_readings['T1'].values, 'P', 101325, 'H2O') # evaporator coil 
+    de_c = PropsSI('H', 'T', lab_readings['T3'].values, 'P', 101325, 'H2O') - PropsSI('H', 'T', lab_readings['T4'].values, 'P', 101325, 'H2O') # condenser coil  
+
+    # energy transfer rate (W), product of energy change and mass flow rate
+    dQ_e = de_e*lab_readings['m/t e'].values
+    dQ_c = de_c*lab_readings['m/t c'].values
+
+    return (dQ_e,dQ_c)
+```
+
+> [!INFO] The full file `heat_flux.py` can be found in the annexes and [here in the working repository](https://github.com/jasht1/Uni-Projects/blob/master/Energy%20Systems%20and%20Conversion/CourseWork/code/heat_flux.py)
+
+#### Efficiency Metrics
 
 ##### COP
 As discussed in the [[#Background#Coefficient of Performance COP]] section COP depends heavily on the system boundaries chosen. This methodology defines the system boundaries at: 
@@ -148,6 +309,7 @@ def isentropic_efficiency(T_in, P_in, T_out, P_out):
 ```
 
 > [!INFO] The full file `cop.py` can be found in the annexes and [here in the working repository](https://github.com/jasht1/Uni-Projects/blob/master/Energy%20Systems%20and%20Conversion/CourseWork/code/cop.py)
+
 
 ## Results
 

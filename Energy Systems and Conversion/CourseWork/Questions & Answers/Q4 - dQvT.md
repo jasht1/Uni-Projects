@@ -8,7 +8,7 @@
 ### b) Discuss the trend and any other observations. 
 [10 marks]
 
-On first inspection, the trends between heat transfer rate and phase change chamber temperature are not obvious in either the evaporator or condenser as they are not particularly strong, with Pearson pairwise correlations of close to -0.5. Specifically the -0.52 and -0.49 for the evaporator and condenser respectively. This is to say the data suggests a weak negative correlation between the heat transfer rate and the temperature of the phase change chamber.
+On first inspection, the trends between heat transfer rate and phase change chamber temperature are not obvious in either the evaporator or condenser as they are not particularly strong, with Pearson pairwise correlations of close to -0.5. Specifically -0.52 and -0.49 for the evaporator and condenser respectively. This is to say the data suggests a weak negative correlation between the heat transfer rate and the temperature of the phase change chamber.
 
 %%
 It is tempting to provide the explanation that the te

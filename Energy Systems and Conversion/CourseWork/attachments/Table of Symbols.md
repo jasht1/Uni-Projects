@@ -12,7 +12,7 @@
 | $T_{E}$       | `T5`    | **Temperature** of the evaporation chamber                                               |
 | $T_{C}$       | `T6`    | **Temperature** of the condensing chamber                                                |
 | $p_{E}$       | `p_e`   | **Pressure** of the evaporation chamber                                                  |
-| $p_{C}$       | `p_c`   | **Pressure** of the condensing chamber                                               |
+| $p_{C}$       | `p_c`   | **Pressure** of the condensing chamber                                                   |
 | $T_{sh}$      | `T7`    | **Temperature** of the refrigerant leaving the compressor                                |
 
 ###### Calculated variables 

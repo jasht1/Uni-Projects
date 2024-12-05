@@ -12,7 +12,7 @@ Institution: University of Lincoln
 Course: Mechatronics BEng
 Module: Energy Systems and Conversion - EGR3030
 Module Leader: Aliyu Aliyu, AAliyu@lincoln.ac.uk
-Contribution to Final Module Mark: 25 
+Contribution to Final Module Mark: 25% 
 Coursework Title: Coursework 1
 
 ![[Report - Energy Systems and Conversion Coursework]]
@@ -32,6 +32,8 @@ Coursework Title: Coursework 1
 
 ## Spreadsheets
 ![[SpreadSheets - Energy Systems and Conversion Coursework]]
+
+![[Finding fluid properties]]
 
 ## Code
 ![[Code - Energy Systems and Conversion Coursework]]

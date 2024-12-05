@@ -5,7 +5,7 @@
 > [!NOTE] Ambiguity
 > It should be noted that when being used as an approximation of internal energy heat is measured in joules ($J$) and so the heat transferred would be too. However it is fair to assume this question intends to ask for the heat transfer rate and not it's quantity.
 
-The rate of heat transfer in the evaporator and condenser can be said to be equal to the change in energy of the fluid between the input and output of their respective coils *(highlighted in figure _n_ below)* if the systems are assumed to be perfectly insulated. In practice this is of course not the case as the system will inevitably loose energy to and gain energy from the environment by means of conduction, radiation and sound. If this is to be considered, with the aim of distinguishing between:
+The rate of heat transfer in the evaporator and condenser can be said to be equal to the change in energy of the fluid between the input and output of their respective coils if the systems are assumed to be perfectly insulated. In practice this is of course not the case as the system will inevitably loose energy to and gain energy from the environment by means of conduction, radiation and sound. If this is to be considered, with the aim of distinguishing between:
 1. energy transferred within the evaporator/condenser from refrigerant to coolant and,
 2. energy transfer of the evaporator/condenser to and from the environment,
 
