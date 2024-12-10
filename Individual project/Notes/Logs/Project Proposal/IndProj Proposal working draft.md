@@ -140,8 +140,7 @@ A suitable model for the interaction must be developed to interoperate the resul
 The raw data must be scrutinised for validity & viability, where systematic or recording errors are found the datasets will be corrected or rejected as appropriate.
 
 The raw data is recorded in the from of photodiode voltage versus the scanner position, this must be converted to force displacement curves. This involves accounting for things like; 
-- calibration of the equipment,
-- elasticity of the cantilever, 
+- spring constant of the cantilever, 
 - relative displacement of the probe,
 - point of contact with the cell membrane, 
 
@@ -164,8 +163,8 @@ Once the curves can be effectively plotted their features must be identified and
 %%
 
 The the linear regions of the curves, produced in the [[#Data Processing]] stage, are investigated using an appropriate contact model, as found in the [[#Research]] stage. This will be to to determine young's modulus, first of the graphs, then the cells, then healthy vs diseased. When dealing with nano scale data this can require accounting for or overcoming complexities like;[^5]
-- dielectric attraction / repulsion,
-- hydrophilic repulsion & surface tension,
+%% - dielectric attraction / repulsion, %%
+%% - hydrophilic repulsion & surface tension, %%
 - viscosity of the fluids in the cell,
 - contamination of the probe tip,
 - out of plane relative motion.

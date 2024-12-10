@@ -36,7 +36,9 @@ $$F_{k_{t}} = k_{t}(x_{b} - x_{w})$$
 $$F_{k_{s}} = k_{s}(x_{b} - x_{w})$$
 ##### Damper
 $$F_{b_{s}} = b_{s}(\dot{x}_{b} - \dot{x}_{w})$$
-## 
+
+#### State Equations
+
 
 #### Implementation
 - MLB & Simulink

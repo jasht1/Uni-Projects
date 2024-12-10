@@ -32,8 +32,7 @@ Grid forming inverter control system
 #### P5: Engineering and Medical Applications of Electrospun Materials: Integrating Machine Learning and Artificial Intelligence
 %%[[2024-09-14]] @ 14:48%%
 
-wtf is this on about? What dose AI have to Electrospun Materials? 
-
+what is this on about? What dose AI have to Electrospun Materials? 
 
 > [!QUOTE] Suggested Projects
 > 1.	Electrospun Polymeric Bone Scaffolds with Bioactive Bone Regeneration
@@ -75,18 +74,20 @@ https://link.springer.com/article/10.1007/s12195-0
 
 Yes! This might be exactly what I'm looking for!
 
-I do think Grid forming inverters are a huge area of potential, and would be so valuable in a world without stable large electrical grids. This would be an opportunity to get a firm grasp on the underlying concepts with a bunch of tabletop experimentation!
-
-
 > [!QUOTE] Breif
 > In order to test a symmetrical component filter a good quality three-phase waveform is required. Three-phase voltage waveforms in buildings, even when reduced to low voltage using a transformer tend to be unequal (due to unbalanced loads) and distorted (due to the presence of non-linear loads).
+
+I do think Grid forming inverters are a huge area of potential, and would be so valuable in a world without stable large electrical grids. This would be an opportunity to get a firm grasp on the underlying concepts with a bunch of tabletop experimentation!
 
 ##### Recommended Background reading
 [Wildi, T.: Electrical Machines, Drives and Power Systems](https://archive.org/details/electrical-power-technology-wildi-theodore/page/81/mode/2up)
 
 [Mancini, R.: Op Amps for Everyone: Design Reference](https://web.mit.edu/6.101/www/reference/op_amps_everyone.pdf)
 
-#### Detecting unbalanced loads on a motor
+#### P25 Detecting unbalanced loads on a motor
+
+> [!QUOTE] Brief
+> Motors running with unbalanced loads may fail due to a variety of mechanical or electrical problems. Being able to detect unbalance and act on this could increase motor life.
 
 An unbalanced load on a 3 phase motor will appear as reactive power.
 Unbalanced loads will likely cause harmonic behaviour, this will distort the observable ractive power in relation to the actual load.
@@ -104,9 +105,7 @@ Interesting research problem.
 
 #### P37: Drone/Robotic Empowered Communication Systems
 
-That's cool, the drones can fly out over the sensors to receive lower power signals than would otherwise be necessary. They could also play a role in recharging the sensor stations if they dock there.
-
-
 > [!QUOTE] Breif
 > Short Description: There has been an increasing interest in the exploitation of mobility and mobile robots (MRs) to improve the communication performance of wireless sensor networks (WSNs), e.g. routing, energy balancing, and improving security. MRs can also be used as data ferries to collect data from sensor networks. This is a suitable solution to reduce the energy consumption of the WSN when the sensing nodes are located far from the fusion center (FC), and the sensors are powered by batteries. 
 
+That's cool, the drones can fly out over the sensors to receive lower power signals than would otherwise be necessary. They could also play a role in recharging the sensor stations if they dock there.
