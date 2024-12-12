@@ -1,4 +1,5 @@
 #### References
+https://www.mathworks.com/help/mpc/ug/admm-based-mpc-control-for-quarter-car-suspension.html
 https://www.mathworks.com/help/robust/gs/tuning-control-system-with-multiple-valued-plant-parameters-using-control-system-tuner.html
 
 https://www.researchgate.net/publication/361381452_Design_of_Virtual_Reference_Feedforward_Controller_for_an_Active_Suspension_System
