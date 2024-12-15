@@ -21,7 +21,7 @@ $$y = \begin{bmatrix} 1.5 & 0.625 \end{bmatrix} x$$
 ### Numerical method
 %%[[2024-11-01]] @ 09:42%%
 
-The poles%% Make note for poles and link to it [[Projects/Uni Projects/Complete/Control Systems/transfer function#Poles & Zeros]]%% of the [[State Space Representation#State Vector]] are found as the [[eigenvalue]]s of the [[State Space Representation#State Equations|A matrix]] in this case:
+The poles%% Make note for poles and link to it [[Projects/Uni Projects/Complete/Control Systems/transfer function#Poles & Zeros]]%% of the [[Knowledge/Engineering/Modeling/State Space/State Space Representation#State Vector]] are found as the [[eigenvalue]]s of the [[Knowledge/Engineering/Modeling/State Space/State Space Representation#State Equations|A matrix]] in this case:
 $$A = \begin{bmatrix} -4 & -1.5 \\ 4 & 0 \end{bmatrix}$$
 
 Using the form $det(sI-A) = 0$ to find the [[eigenvector]],

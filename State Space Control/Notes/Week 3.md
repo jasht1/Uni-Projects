@@ -7,8 +7,8 @@ https://www.youtube.com/watch?v=hpeKrMG-WP0
 
 [Selecting State Variables](https://www.youtube.com/watch?v=RdAZNUfWDpQ&t=300s)
 
-![[State Space Representation#State Space Representation#Key Concepts]]
-![[State Space Representation#Equations]]
+![[Knowledge/Engineering/Modeling/State Space/State Space Representation#State Space Representation#Key Concepts]]
+![[Knowledge/Engineering/Modeling/State Space/State Space Representation#Equations]]
 
 https://www.youtube.com/watch?v=dG6MSsdojLg&list=PLnoV7VLMKHHLva80JlEaK3xpIvmOjcZeS&pp=iAQB
 

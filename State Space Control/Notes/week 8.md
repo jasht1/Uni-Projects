@@ -6,6 +6,6 @@ Further to feeding back a single output variable, we can feedback the computed v
 
 Given that we can already determine state equations that associate the states of the systems with it's dynamics, aswell as a control matrix that modifies the behaviour of the system using these states. We can use feedback of these states in our control system.
 
-The closed loop dynamics of the system are given by the [[State Space Representation#Input Equation|input]] & [[State Space Representation#Output Equation|output]] equation equations: $$ \dot x = Ax+Bu$$
+The closed loop dynamics of the system are given by the [[Knowledge/Engineering/Modeling/State Space/State Space Representation#Input Equation|input]] & [[Knowledge/Engineering/Modeling/State Space/State Space Representation#Output Equation|output]] equation equations: $$ \dot x = Ax+Bu$$
 
 7

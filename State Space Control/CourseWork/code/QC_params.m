@@ -1,13 +1,13 @@
 
 %% Physical Paramiters
-m_b = 150;      % $\text{kg}$
-m_w = 11;       % $\text{kg}$
-b_s = 690;      % $\text{N} \! \cdot \! \text{m}^{-1} \! \cdot \! \text{s}$
-k_s = 6936;     % $\text{N} \! \cdot \! \text{m}^{-1}$
-k_t = 28712;    % $\text{N} \! \cdot \! \text{m}^{-1}$
+m_b = 150;      % (kg)
+m_w = 11;       % (kg)
+b_s = 690;      % (N/m/s)
+k_s = 6936;     % (N/m)
+k_t = 28712;    % (N/m)
 
-if ~exist('k_f_s', 'var')
-  k_f_s = zeros(1, 4); % make suspension passive if coeficients not defined
+if ~exist('f_s', 'var') % make suspension passive if coeficients not defined
+  f_s = 0;
 end
 
 %% State Space Representation
@@ -18,9 +18,14 @@ A = [
   k_s/m_w b_s/m_w (k_t-k_s)/m_w -b_s/m_w;
   ];
 
-B = [0 0 0 k_t/m_w;k_f_s]';
+B = [
+  0 0;
+  0 f_s/m_b;
+  0 0;
+  k_t/m_w -f_s/m_w
+  ];
 
-C = [0 -1 0 0];
+C = eye(4);
 D = 0;
 
 plant = ss(A,B,C,D);

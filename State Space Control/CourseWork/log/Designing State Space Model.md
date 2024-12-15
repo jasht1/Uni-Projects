@@ -1,35 +1,3 @@
-Due [[2024-12-05|5th December]]
-
-# State Space Control Coursework
-
-## Introduction
-%%[[2024-12-14]] @ 18:29%%
-
-### Aims
-%%[[2024-12-14]] @ 18:34%%
-
-The aim of this project is to tune an active vehicle suspension using a mathematical model to improve ride quality and control. The vehicle will have independent suspension utilising an actuator in addition to the passive linear spring and damper at each wheel.
-
-| Notation     | Quantity | Units                                                     |
-| ------------ | -------- | --------------------------------------------------------- |
-| $m_\text{b}$ | 150      | $\text{kg}$                                               |
-| $m_\text{w}$ | 11       | $\text{kg}$                                               |
-| $b_{s}$      | 690      | $\text{N} \! \cdot \! \text{m}^{-1} \! \cdot \! \text{s}$ |
-| $k_{s}$      | 6936     | $\text{N} \! \cdot \! \text{m}^{-1}$                      |
-| $k_{t}$      | 28712    | $\text{N} \! \cdot \! \text{m}^{-1}$                      |
-
-## Background
-%%[[2024-11-01]] @ 00:08%%
-
-![[Knowledge/Engineering/Modeling/State Space/State Space Representation]]
-
-## Constructing a model
-
-As this is an independent suspension each wheel can be be assumed to behave similarly, and thus useful results can be found by only a quarter of the car and a single wheel.
-
-## System Dynamics
-
-A state space representation will be used to model the behaviour of the system where the state variables will be the displacement and velocity of the car body and wheel.
 
 ### Constituent forces
 
@@ -53,7 +21,7 @@ $$\Large F_{b_{s}} = b_{s}(\dot x_{w} - \dot x_{b})$$
 
 $$\Large F_{f_{s}} = f_{s}(k_{1}x_{b}+k_{2}\dot{x}_{b}+k_{3}x_{w}+k_{4}\dot{x}_{w})$$
 
-#### Equations of Motion
+### Equations of Motion
 
 %%[[2024-12-10]] @ 21:23%%
 
@@ -67,7 +35,7 @@ $$\Large a_{\text{b}} = \frac{F_{f_{s}} + F_{k_{s}} + F_{b_{s}} }{m_{\text{b}}}$
 
 $$\Large a_{\text{w}} = \frac{F_{k_{t}} - F_{f_{s}} -F_{k_{s}} - F_{b_{s}}}{m_{\text{w}}}$$
 
-#### State Equations
+### State Matrices 
 
 %%[[2024-12-11]] @ 19:31%%
 
@@ -123,18 +91,3 @@ B = \begin{bmatrix}
 	\frac{k_{t}}{m_{\text{w}}} & -\frac{f_{s}}{m_{\text{w}}}
 \end{bmatrix}
 $$
-
-## Implementation
-
-### 
-- MLB & Simulink
-
-### Simulations
-
-- Passive suspension
-- Simple tuning
-- Advanced tuning
-
-#### Performance
-
-#### Stability
