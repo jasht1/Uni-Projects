@@ -1,7 +1,7 @@
 
 ## Issues
 
-### Unexpected Model Results
+### Unexpected Model Results #bug-report 
 %%[[2024-12-14]] @ 17:39%%
 
 What i'm seeing when I simulate the model is a an exponentially growing curve.
@@ -64,3 +64,10 @@ eig(A) =
 ```
 
 Clearly there is an error in the [[Designing State Space Model#State Matrices]]. 
+
+### Unexpected Model Results #Solution
+%%[[2024-12-15]] @ 18:30%%
+
+Found the problem! given that the $x_{\text{w}}$ component of $F_{k_{t}}$ is -ve as I stated in: ![[Designing State Space Model#Tire]]
+And that $F_{k_{t}}$ is a +ve component of $a_{\text{w}}$ as I stated in: ![[Designing State Space Model#Wheel Acceleration]]
+Then it should be negative in A(3,3), where I stated it as positive in: ![[Designing State Space Model#State Matrices]] and entered it as such in [[QC_params.m]]. This has now been corrected.

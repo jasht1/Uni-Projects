@@ -113,7 +113,7 @@ A = \begin{bmatrix}
 	0  & 1 & 0 & 0 \\
 	-\frac{k_{s}}{m_{\text{b}}} & -\frac{b_{s}}{m_{\text{b}}} & \frac{k_{s}}{m_{\text{b}}} & \frac{b_{s}}{m_{\text{b}}} \\
 	0 & 0 & 0 & 1 \\
-	\frac{k_{s}}{m_{\text{w}}} & \frac{b_{s}}{m_{\text{w}}} & \frac{k_{t}-k_{s}}{m_{\text{w}}} & -\frac{b_{s}}{m_{\text{w}}}
+	\frac{k_{s}}{m_{\text{w}}} & \frac{b_{s}}{m_{\text{w}}} & \frac{-k_{s}-k_{t}}{m_{\text{w}}} & -\frac{b_{s}}{m_{\text{w}}}
 \end{bmatrix}
 \qquad
 B = \begin{bmatrix}

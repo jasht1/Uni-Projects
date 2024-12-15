@@ -15,7 +15,7 @@ A = [
   0 1 0 0;
   -k_s/m_b -b_s/m_b k_s/m_b b_s/m_b;
   0 0 0 1;
-  k_s/m_w b_s/m_w (k_t-k_s)/m_w -b_s/m_w;
+  k_s/m_w b_s/m_w (-k_s-k_t)/m_w -b_s/m_w;
   ];
 
 B = [
