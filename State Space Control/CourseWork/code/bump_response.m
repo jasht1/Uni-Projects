@@ -33,9 +33,10 @@ title("Response of Passive Suspension to {bump_height}m Disturbance")
 plot(road, "DisplayName", "Road Disturbance");
 hold on
 plot(y(:,1), "DisplayName", "car body position");
-plot(y(:,2), "DisplayName", "car body acceleration");
+plot(y(:,2), "DisplayName", "car body velocity");
 plot(y(:,3), "DisplayName", "car wheel position");
-plot(y(:,4), "DisplayName", "car wheel acceleration");
+plot(y(:,4), "DisplayName", "car wheel velocity");
+plot(y(:,5), "DisplayName", "car body acceleration");
 hold off
 legend
 ylabel("Meters")

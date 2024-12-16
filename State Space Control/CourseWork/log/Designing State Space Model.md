@@ -1,9 +1,30 @@
+### Givens
+%%[[2024-12-16]] @ 12:46%%
+
+The following are known values for the system that the model will be based off:
+
+| Description                    | Notation     | Quantity | Units                                                     |
+| ------------------------------ | ------------ | -------- | --------------------------------------------------------- |
+| Quarter Car Mass               | $m_\text{b}$ | 150      | $\text{kg}$                                               |
+| Wheel Mass                     | $m_\text{w}$ | 11       | $\text{kg}$                                               |
+| Suspension Damping Constant    | $b_{s}$      | 690      | $\text{N} \! \cdot \! \text{m}^{-1} \! \cdot \! \text{s}$ |
+| Suspension Spring Constant     | $k_{s}$      | 6936     | $\text{N} \! \cdot \! \text{m}^{-1}$                      |
+| Tire Effective Spring Constant | $k_{t}$      | 28712    | $\text{N} \! \cdot \! \text{m}^{-1}$                      |
+
+### Assumptions and Approximations
+%%[[2024-12-16]] @ 01:01%%
+
+As this is an independent suspension each wheel can be be assumed to behave similarly, and thus useful results can be found by only a quarter of the car and a single wheel.
+
+Only linear vertical motion of the system will modelled under the assumption motion & rotation in other axis will be effectively constrained. The car body and wheel will be approximated as point masses within this single dimension with all forces acting in line with the centres of mass. 
+
+Factors such as air resistance will be ignored, only the forces directly mentioned and their implicit consequences such as inertia from newton's second law will be in effect.
 
 ### Constituent forces
 
 %%[[2024-12-04]] @ 20:50%%
 
-In order to determine the equations of motion the following constituent forces need to be understood.
+In order to determine the equations of motion the following constituent forces are considered.
 
 ##### Tire
 
@@ -81,7 +102,7 @@ A = \begin{bmatrix}
 	0  & 1 & 0 & 0 \\
 	-\frac{k_{s}}{m_{\text{b}}} & -\frac{b_{s}}{m_{\text{b}}} & \frac{k_{s}}{m_{\text{b}}} & \frac{b_{s}}{m_{\text{b}}} \\
 	0 & 0 & 0 & 1 \\
-	\frac{k_{s}}{m_{\text{w}}} & \frac{b_{s}}{m_{\text{w}}} & \frac{k_{t}-k_{s}}{m_{\text{w}}} & -\frac{b_{s}}{m_{\text{w}}}
+	\frac{k_{s}}{m_{\text{w}}} & \frac{b_{s}}{m_{\text{w}}} & \frac{-k_{s}-k_{t}}{m_{\text{w}}} & -\frac{b_{s}}{m_{\text{w}}}
 \end{bmatrix}
 \qquad
 B = \begin{bmatrix}
