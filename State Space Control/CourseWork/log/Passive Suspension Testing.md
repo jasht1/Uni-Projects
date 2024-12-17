@@ -23,8 +23,8 @@ ans =
 ```
 
 From these an intuition can be gained as to how the system responds and how prone it is to settle to steady state. 
-The real component indicates the damping of the system; if it is positive the system is positively reinforcing and any disturbance will grow indefinitely, if it is negative it contributes negative feedback and the system will trend towards a steady state.
-The imaginary component 
+The real component indicates the linear damping of the system; if it is positive the system is positively reinforcing and any disturbance will grow indefinitely, if it is negative it contributes negative feedback and the system will trend towards a steady state.
+The imaginary component indicates oscillatory behaviour, it indicates the frequency(s) the system will tend to oscillate at when disturbed.
 
 
 ![[passive_suspension-pole_zero.svg]]
