@@ -20,15 +20,15 @@ A = [
 
 B = [
   0 0 0 k_t/m_w; % road displacment
-  % 0 f_s/m_b 0 -f_s/m_w % actuator signal
+  0 f_s/m_b 0 -f_s/m_w % actuator signal
   ]';
 
 C = [
-  % 1 0 0 0; % x_b
+  1 0 0 0; % x_b
   0 1 0 0; % v_b
-  % -k_s/m_b -b_s/m_b k_s/m_b b_s/m_b; % a_b
-  % 0 0 1 0; % x_w
-  % 0 0 0 1; % v_w
+  -k_s/m_b -b_s/m_b k_s/m_b b_s/m_b; % a_b
+  0 0 1 0; % x_w
+  0 0 0 1; % v_w
   % k_s/m_w b_s/m_w (-k_s-k_t)/m_w -b_s/m_w; % a_w
   ];
 

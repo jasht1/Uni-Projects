@@ -20,6 +20,8 @@ Only linear vertical motion of the system will modelled under the assumption mot
 
 Factors such as air resistance will be ignored, only the forces directly mentioned and their implicit consequences such as inertia from newton's second law will be in effect.
 
+The model will assume the system starts in a steady state and is already under compression. It will assume the wheel never looses contact with the road and thus a restoring force equal to the effective elasticity of the tire is always in effect. 
+
 ### Constituent forces
 
 %%[[2024-12-04]] @ 20:50%%
