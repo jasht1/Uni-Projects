@@ -1,5 +1,6 @@
 
 QC_params
+plant = ss(A,B,C,D);
 
 %% Simulation Paramaters
 
@@ -14,7 +15,12 @@ bump_height = 0.05; % bump magnitude (m)
 bump_len = 0.5; % duration of the disturbance (s)
 
 bump = bump_height*sin(linspace(0,pi,bump_len/t)); % bump array (m)
-road = cat(2,bump,zeros(1,(T_sim-bump_len)/t)); % road displacment array (m)
+
+if exist('bump', 'var')
+  road = cat(2,bump,zeros(1,(T_sim-bump_len)/t)); % road displacment array (m)
+else
+  road = zeros(1,length(T));
+end
 
 % actuator
 
@@ -22,16 +28,10 @@ if ~exist('u_f_s', 'var')
   u_f_s = zeros(1, T_sim/t); % make suspension passive if coeficients not defined
 end
 
-%% initial conditions
-
-if ~exist('initial_conditions', 'var')
-  initial_conditions = zeros(1, length(A));
-end
-
 %% Simulation
 
 U = cat(1,road,u_f_s);
-y = lsim(plant,U,T,initial_conditions);
+y = lsim(plant,U,T,IC);
 
 %% Plot
 

@@ -4,7 +4,7 @@
 ### Unexpected Model Results #bug-report 
 %%[[2024-12-14]] @ 17:39%%
 
-What i'm seeing when I simulate the model is a an exponentially growing curve.
+What I'm seeing when I simulate the model is a an exponentially growing curve.
 
 Currently my parameters are as follows:
 
@@ -72,4 +72,4 @@ Found the problem! given that the $x_{\text{w}}$ component of $F_{k_{t}}$ is -ve
 And that $F_{k_{t}}$ is a +ve component of $a_{\text{w}}$ as I stated in: ![[Designing State Space Model#Wheel Acceleration]]
 Then it should be negative in A(4,3), where I stated it as positive in: ![[Designing State Space Model#State Matrices]] and entered it as such in [[QC_params.m]]. This has now been corrected.
 
-![[passive_suspension-bump_response.svg]]
+![[passive_suspension-bump_response-x_b.svg]]

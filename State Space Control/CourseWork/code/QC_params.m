@@ -6,11 +6,19 @@ b_s = 690;      % (N/m/s)
 k_s = 6936;     % (N/m)
 k_t = 28712;    % (N/m)
 
+%% Controler Paramiters
+
 if ~exist('f_s', 'var') % make suspension passive if coeficients not defined
   f_s = 0;
 end
 
-%% State Space Representation
+%% Initial Conditions
+
+if ~exist('IC', 'var')
+  IC = zeros(1, 4);
+end
+
+%% State Space Matricies
 A = [
   0 1 0 0; % v_b
   -k_s/m_b -b_s/m_b k_s/m_b b_s/m_b; % a_b
@@ -32,6 +40,5 @@ C = [
   % k_s/m_w b_s/m_w (-k_s-k_t)/m_w -b_s/m_w; % a_w
   ];
 
-D = 0;
+D = zeros(height(C),width(B));
 
-plant = ss(A,B,C,D);
