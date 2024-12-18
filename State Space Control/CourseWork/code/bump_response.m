@@ -1,7 +1,4 @@
 
-QC_params
-plant = ss(A,B,C,D);
-
 %% Simulation Paramaters
 
 % time
@@ -19,6 +16,7 @@ bump = bump_height*sin(linspace(0,pi,bump_len/t)); % bump array (m)
 if exist('bump', 'var')
   road = cat(2,bump,zeros(1,(T_sim-bump_len)/t)); % road displacment array (m)
 else
+  bump_height = 0
   road = zeros(1,length(T));
 end
 
@@ -29,6 +27,9 @@ if ~exist('u_f_s', 'var')
 end
 
 %% Simulation
+
+QC_params
+plant = ss(A,B,C,D);
 
 U = cat(1,road,u_f_s);
 y = lsim(plant,U,T,IC);

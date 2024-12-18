@@ -31,13 +31,18 @@ Faster oscillations with less damping combine to make a more energetic system, i
 ![[passive_suspension-pole_zero.svg]]
 
 The radial gird lines in the figure above indicate lines of constant damping ratio and the blue crosses are the poles of the passive suspension system.%%  A controller and actuator provides a means for affecting the system behaviour and thus move these poles.  %%
-The mechanical properties of the spring, damper & tire in the passive suspension determine these poles and cause natural modes of oscillation that can be visualised in the Nyquist plot below. 
+The mechanical properties of the spring, damper & tire in the passive suspension determine these poles and cause natural modes of oscillation. These present slightly differently differently in each state variable as can be visualised in the Nyquist plots below. 
 
 ![[passive_suspension-nyquist.svg]]
+
+The wheel position displays two fairly distinguishable elliptical modes this is to be expected as it is connected by two springs of quite different elasticity. In contrast the car body position displays a more homogenised oscillation that can be interpreted as the superposition of 1) the natural frequency of the car body mass & suspension spring as it is deformed by 2) the wheel mass and tire elasticity. 
+The velocities are of course derivatives of the resonance of the position variables, displaying the same behaviour but as a rate of change. An intuition can be gleamed for visualising how the potential energy shifts from the car body mass to the tire and back by following around the "fish shape" in the resonance of the car body velocity. This effect is far more substantial than it's equivalent in the wheel's velocity as the car body has significantly more mass and thus deflects less.
 
 ### Bump tests
 
 The behaviour of the system is simulated to observe the response to a bump in the road. The bump in the simulation below is 5 cm half sinusoid with a duration of half a second.
+
+The simulations where created using the [[bump_response.m]] script that can be found [here](https://github.com/jasht1/Uni-Projects/blob/master/State%20Space%20Control/CourseWork/code/bump_response.m) in the working directory.
 
 ![[passive_suspension-bump_response.svg]]
 
@@ -46,4 +51,14 @@ The passive suspension dose slightly reduce the impulse but results in a larger 
 ![[passive_suspension-bump_response-x_b.svg]]
 
 ![[passive_suspension-bump_response-all_props.svg]]
+
+### Initial Condition tests
+%%[[2024-12-18]] @ 15:08%%
+
+The system is simulated with an initial velocity in the body and then in the wheel to compare how it recovers from a disturbance in each case.
+The simulations where created using the [[initial_velocity_response.m]] script that can be found [here](https://github.com/jasht1/Uni-Projects/blob/master/State%20Space%20Control/CourseWork/code/initial_velocity_response.m) in the working directory.
+
+![[passive_suspension-V_i_response.svg]] *Figure n* ^figure-n
+
+The system recovers from disturbances to the wheel much faster than a similar disturbance to the body as can be seen in [[#^figure-n|figure n]]. However this is to be expected as at the same velocity the car body represents far more inertia and thus more energy for the system to dissipate.
 
