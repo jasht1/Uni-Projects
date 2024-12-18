@@ -50,7 +50,7 @@ The passive suspension dose slightly reduce the impulse but results in a larger 
 
 ![[passive_suspension-bump_response-x_b.svg]]
 
-![[passive_suspension-bump_response-all_props.svg]]
+%% ![[passive_suspension-bump_response-all_props.svg]] %%
 
 ### Initial Condition tests
 %%[[2024-12-18]] @ 15:08%%

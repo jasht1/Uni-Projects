@@ -6,12 +6,6 @@ b_s = 690;      % (N/m/s)
 k_s = 6936;     % (N/m)
 k_t = 28712;    % (N/m)
 
-%% Controler Paramiters
-
-if ~exist('f_s', 'var') % make suspension passive if coeficients not defined
-  f_s = 0;
-end
-
 %% Initial Conditions
 
 if ~exist('IC', 'var')
@@ -26,10 +20,16 @@ A = [
   k_s/m_w b_s/m_w (-k_s-k_t)/m_w -b_s/m_w; % a_w
   ];
 
-B = [
-  0 0 0 k_t/m_w; % road displacment
-  0 f_s/m_b 0 -f_s/m_w % actuator signal
-  ]';
+if ~exist('fs', 'var') % make suspension passive if coeficients not defined
+  B = [
+    0 0 0 k_t/m_w; % road displacment
+    0 fs/m_b 0 -fs/m_w % actuator signal
+    ]';
+else
+  B = [
+    0 0 0 k_t/m_w; % road displacment
+    ]';
+end
 
 C = [
   1 0 0 0; % x_b

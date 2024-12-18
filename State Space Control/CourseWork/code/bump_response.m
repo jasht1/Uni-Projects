@@ -22,8 +22,8 @@ end
 
 % actuator
 
-if ~exist('u_f_s', 'var')
-  u_f_s = zeros(1, T_sim/t); % make suspension passive if coeficients not defined
+if ~exist('u_fs', 'var')
+  u_fs = zeros(1, T_sim/t); % make suspension passive if coeficients not defined
 end
 
 %% Simulation
@@ -31,7 +31,7 @@ end
 QC_params
 plant = ss(A,B,C,D);
 
-U = cat(1,road,u_f_s);
+U = cat(1,road,u_fs);
 y = lsim(plant,U,T,IC);
 
 %% Plot
