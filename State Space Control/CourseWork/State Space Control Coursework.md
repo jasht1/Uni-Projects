@@ -23,10 +23,11 @@ A state space representation will be used to model the behaviour of the system w
 
 ## Implementation
 
+![[Comparison of Methods#Comparison of Simulink and Matlab implementation]]
+
 ![[Matlab Active Suspension Implementation#Active Suspension Implementation]]
 
 
 ![[Passive Suspension Testing]]
 
 ![[Active Suspension Testing]]
-
