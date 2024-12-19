@@ -40,7 +40,7 @@ The velocities are of course derivatives of the resonance of the position variab
 
 ### Bump tests
 
-The behaviour of the system is simulated to observe the response to a bump in the road. The bump in the simulation below is 5 cm half sinusoid with a duration of half a second.
+The behaviour of the system is simulated to observe the response to a bump in the road. The bump in the simulation below is a 5 cm tall half sinusoid with a duration of half a second.
 
 The simulations where created using the [[bump_response.m]] script that can be found [here](https://github.com/jasht1/Uni-Projects/blob/master/State%20Space%20Control/CourseWork/code/bump_response.m) in the working directory.
 
@@ -58,7 +58,8 @@ The passive suspension dose slightly reduce the impulse but results in a larger 
 The system is simulated with an initial velocity in the body and then in the wheel to compare how it recovers from a disturbance in each case.
 The simulations where created using the [[initial_velocity_response.m]] script that can be found [here](https://github.com/jasht1/Uni-Projects/blob/master/State%20Space%20Control/CourseWork/code/initial_velocity_response.m) in the working directory.
 
-![[passive_suspension-V_i_response.svg]] *Figure n* ^figure-n
+> [!note] *Figure n* ^figure-n
+> ![[passive_suspension-V_i_response.svg]]
 
 The system recovers from disturbances to the wheel much faster than a similar disturbance to the body as can be seen in [[#^figure-n|figure n]]. However this is to be expected as at the same velocity the car body represents far more inertia and thus more energy for the system to dissipate.
 

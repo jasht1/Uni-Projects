@@ -128,7 +128,8 @@ end
 ### Incorrect B matrix being generated #fix_log 
 %%[[2024-12-19]] @ 01:26%%
 
-First of all I had a "not" `~` present when I shouldn't have, and secondly it turns out stating the name of a script is different to calling `run` on that script. I assumed it was just a short hand but apparently just using it's name doesn't run it in the same workspace and while you can access all the globals from the script your importing all the variables in the current script are out of scope. 
+First of all I had a "not" `~` present when I shouldn't have, and secondly it turns out stating the name of a script is different to calling `run` on that script. 
 
 `QC_params;` $\neq$ `run QC_params;` 
 
+I assumed it was just a short hand but apparently just using it's name doesn't run it in the same workspace and while you can access all the globals from the script your importing, all the variables in the current script are out of scope. 
