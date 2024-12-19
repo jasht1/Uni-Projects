@@ -20,7 +20,7 @@ A = [
   k_s/m_w b_s/m_w (-k_s-k_t)/m_w -b_s/m_w; % a_w
   ];
 
-if ~exist('fs', 'var') % make suspension passive if coeficients not defined
+if exist('fs', 'var') % make suspension passive if coeficients not defined
   B = [
     0 0 0 k_t/m_w; % road displacment
     0 fs/m_b 0 -fs/m_w % actuator signal

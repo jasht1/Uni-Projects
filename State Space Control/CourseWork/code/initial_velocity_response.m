@@ -2,8 +2,8 @@
 %% Simulation Parameters
 
 % Time
-t = 0.025; % Time increment (s)
-T_sim = 3; % Simulation length (s)
+T_sim = 0.5; % Simulation length (s)
+t = T_sim/200; % Time increment (s)
 T = (0:t:T_sim-t); % Time array
 
 % Road disturbance
@@ -17,11 +17,16 @@ end
 % Initial conditions
 V_i = 0.5; % Initial velocity (m/s)
 
-% model paramiters
-QC_params
-plant = ss(A, B, C, D);
+%% model paramiters
+% type = "Passive";
+% QC_params
+% plant = ss(A, B, C, D);
 
-U = cat(1, road, u_f_s);
+type = "Active";
+tune_active_suspension
+plant = minreal(ss(tuned_suspension));
+
+U = road;
 
 %% Simulation and Plotting
 
@@ -56,7 +61,7 @@ for scenario = scenarios
     };
   
   hold on
-  title("Response of Passive Suspension to " + description + " of " + V_i + " m/s");
+  title("Response of " +type+ " Suspension to " + description + " of " + V_i + " m/s");
   for i = 1:length(plot_series)
     plot(T, plot_series{i}.data, 'DisplayName', plot_series{i}.label);
   end
@@ -65,4 +70,4 @@ for scenario = scenarios
   grid on;
   hold off
 end
-legend('Location', 'southoutside');
+legend('Location', 'southoutside','NumColumns', 3);

@@ -9,7 +9,7 @@ s = tf('s');
 controller = kp + kd * s;
 
 %% Setup New passive_suspension
-QC_params;
+run QC_params;
 
 passive_suspension = ss(A, B, C, D);
 
