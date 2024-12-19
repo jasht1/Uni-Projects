@@ -28,21 +28,23 @@ end
 
 %% Simulation
 
-QC_params
-plant = ss(A,B,C,D);
+% QC_params
+% plant = ss(A,B,C,D);
+tune_active_suspension
+plant = tuned_suspension;
 
-U = cat(1,road,u_fs);
-y = lsim(plant,U,T,IC);
+U = road;
+y = lsim(plant,U,T);
 
 %% Plot
 
 plot_series = {
   struct('data', road,      'label', 'Road Disturbance (m)'),
-  struct('data', y(:,4),    'label', 'Wheel Displacement (m)'),
-  struct('data', y(:,5),    'label', 'Wheel Velocity (m/s)'),
+  % struct('data', y(:,4),    'label', 'Wheel Displacement (m)'),
+  % struct('data', y(:,5),    'label', 'Wheel Velocity (m/s)'),
   struct('data', y(:,1),    'label', 'Body Displacement (m)'),
-  struct('data', y(:,2),    'label', 'Body Velocity (m/s)'),
-  struct('data', y(:,3),    'label', 'Body Acceleration (m/s^2)'),
+  % struct('data', y(:,2),    'label', 'Body Velocity (m/s)'),
+  % struct('data', y(:,3),    'label', 'Body Acceleration (m/s^2)'),
   % struct('data', y(:,6),    'label', 'Wheel Acceleration (m/s^2)'),
   };
 
