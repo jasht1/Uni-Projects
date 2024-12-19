@@ -5,40 +5,15 @@
 A [[#State Space Representation]] is a standardised means of modelling complex MIMO dynamic systems using only linear equations in the time domain.
 Below are explanations of all of the relevant terms and concepts referred to in this report.
 
-##### State Space
-%%[[2024-10-21]] @ 17:52%%
-
-The [[#State Space]] is an $n$ dimensional manifold with a dimension $n$ for every [[#State Variable]] needed to describe the system. 
-
-##### State Variable
-%%[[2024-10-21]] @ 17:58%%
-
-[[#State Variable]]s $x_{n}$ are any measures of the systems internal dynamics necessary to determine the system state by first order transfer functions. 
-%% They are the means by which energy is stored by the system. It is good practice to use the minimum number of of state variables. https://www.youtube.com/watch?v=RdAZNUfWDpQ %%
-##### State Vector
-%%[[2024-10-21]] @ 17:49%%
-
-The [[#State Vector]] $x$ is an $n$ dimensional vector that represents the overall state of the system as a point in the [[#State Space]] based on the values of all of the [[#State Variable]]s. 
-
-##### Input Vector
-%%[[2024-10-21]] @ 18:05%%
-
-The [[#Input Vector]] $u$ is a vector that represents the external inputs affecting the system. 
-
-##### State Equations
-%%[[2024-10-21]] @ 21:45%%
-
-The sets of linear equations in matrix form $A$ & $B$ that transform the [[#State Vector]] $x$ and [[#Input Vector]] $u$ respectively to their resulting effect on the system dynamic $\dot x$. 
-
-##### Output Vector
-%%[[2024-10-21]] @ 22:00%%
-
-The [[#Output Vector]] $y$ is an $n$ dimensional vector that represents the outputs of interest of the system. 
-
-##### Output Equations
-%%[[2024-10-21]] @ 22:02%%
-
-The sets of linear equations in matrix form $C$ & $D$ that transform the [[#State Vector]] $x$ and [[#Input Vector]] $u$ respectively to their resulting effect on the system outputs $y$. 
+| Term             | Description                                                                                                                                                                                       |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| State Space      | The [[#State Space]] is an $n$ dimensional manifold with a dimension $n$ for every [[#State Variable]] needed to describe the system.                                                             |
+| State Variable   | [[#State Variable]]s $x_{n}$ are any measures of the systems internal dynamics necessary to determine the system state by first order transfer functions.                                         |
+| State Vector     | The [[#State Vector]] $x$ is an $n$ dimensional vector that represents the overall state of the system as a point in the [[#State Space]] based on the values of all of the [[#State Variable]]s. |
+| Input Vector     | The [[#Input Vector]] $u$ is a vector that represents the external inputs affecting the system.                                                                                                   |
+| State Equations  | The sets of linear equations in matrix form $A$ & $B$ that transform the [[#State Vector]] $x$ and [[#Input Vector]] $u$ respectively to their resulting effect on the system dynamic $\dot x$.   |
+| Output Vector    | The [[#Output Vector]] $y$ is an $n$ dimensional vector that represents the outputs of interest of the system.                                                                                    |
+| Output Equations | The sets of linear equations in matrix form $C$ & $D$ that transform the [[#State Vector]] $x$ and [[#Input Vector]] $u$ respectively to their resulting effect on the system outputs $y$.        |
 
 ##### Input Equation
 %%[[2024-10-21]] @ 17:48%%

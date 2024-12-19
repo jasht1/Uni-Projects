@@ -1,8 +1,4 @@
 
-## Comparison of Simulink and Matlab implementation
-
-### Matlab Implementation
-
 ## Passive Suspension Performance
 %%[[2024-12-16]] @ 16:07%%
 
@@ -12,14 +8,14 @@
 The poles of the system can be used to judge it's stability. The poles can be found as the eigenvalues of the feed forward transfer function and Matlab has built in methods `eig` or `pole` which can be used identify them. 
 
 ```matlab
->> pole(plant) 
+>> pole(passive_suspension) 
 
 ans =
 
- -32.1112 +44.9092i
- -32.1112 -44.9092i
-  -1.5525 + 6.0982i
-  -1.5525 - 6.0982i
+ -32.1112  +44.9092i
+ -32.1112  -44.9092i
+  -1.5525  + 6.0982i
+  -1.5525  - 6.0982i
 ```
 
 From these an intuition can be gained of the systems inherent stability and and of its modes of natural resonance. In this case they indicate 2 modes of damped oscillation.

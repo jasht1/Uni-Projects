@@ -12,15 +12,11 @@ The aim of this project is to tune an active vehicle suspension using a mathemat
 %%[[2024-11-01]] @ 00:08%%
 
 ![[State Space Background]]
+
 ## Constructing a model
 
+![[Designing State Space Model]]
 
-
-![[Designing State Space Model#Constituent forces]]
-
-![[Designing State Space Model#Equations of Motion]]
-
-![[Designing State Space Model#State Matrices]]
 ## System Dynamics
 
 A state space representation will be used to model the behaviour of the system where the state variables will be the displacement and velocity of the car body and wheel.
@@ -36,6 +32,7 @@ A state space representation will be used to model the behaviour of the system w
 - Simple tuning
 - Advanced tuning
 
-#### Performance
+![[Passive Suspension Testing]]
 
-#### Stability
+![[Active Suspension Testing]]
+
