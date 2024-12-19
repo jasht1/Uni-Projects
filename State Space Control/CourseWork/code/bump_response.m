@@ -28,59 +28,62 @@ end
 
 %% Simulation
 
-% QC_params
-% plant = ss(A,B,C,D);
-tune_active_suspension
-plant = tuned_suspension;
+type = "Passive";
+QC_params
+plant = ss(A,B,C,D);
 
-U = road;
+% type = "Active";
+% tune_active_suspension
+% plant = tuned_suspension;
+
+U = [road; u_fs];
 y = lsim(plant,U,T);
 
 %% Plot
 
 plot_series = {
   struct('data', road,      'label', 'Road Disturbance (m)'),
-  % struct('data', y(:,4),    'label', 'Wheel Displacement (m)'),
-  % struct('data', y(:,5),    'label', 'Wheel Velocity (m/s)'),
+  struct('data', y(:,4),    'label', 'Wheel Displacement (m)'),
+  struct('data', y(:,5),    'label', 'Wheel Velocity (m/s)'),
   struct('data', y(:,1),    'label', 'Body Displacement (m)'),
-  % struct('data', y(:,2),    'label', 'Body Velocity (m/s)'),
-  % struct('data', y(:,3),    'label', 'Body Acceleration (m/s^2)'),
+  struct('data', y(:,2),    'label', 'Body Velocity (m/s)'),
+  struct('data', y(:,3),    'label', 'Body Acceleration (m/s^2)'),
   % struct('data', y(:,6),    'label', 'Wheel Acceleration (m/s^2)'),
   };
 
 %%% all on the same chart
-figure
-hold on
-title("Response of Passive Suspension to " + bump_height + "m Disturbance")
-for i = 1:length(plot_series)
-  plot(T, plot_series{i}.data, 'DisplayName', plot_series{i}.label);
-  ylabel(plot_series{i}.label);
-  xlabel('Time (seconds)');
-  legend;
-  grid on;
-end
-ylabel("Meters")
-xlabel("Time (seconds)")
-hold off
-
-%%% subplots for each
 % figure
-%
-% sgtitle("Response of Passive Suspension to " + bump_height + "m Disturbance");
-%
-% tiledlayout(length(plot_series),1,"TileSpacing","compact", 'Padding', 'compact');
+% hold on
+% title("Response of " +type+ " Suspension to " + bump_height + "m Disturbance")
 % for i = 1:length(plot_series)
-%   nexttile
-%   plot(T, plot_series{i}.data);
+%   plot(T, plot_series{i}.data, 'DisplayName', plot_series{i}.label);
 %   ylabel(plot_series{i}.label);
+%   xlabel('Time (seconds)');
+%   legend;
 %   grid on;
 % end
-% xlabel('Time (seconds)');
+% ylabel("Meters")
+% xlabel("Time (seconds)")
+% hold off
+
+%%% subplots for each
+figure
+
+sgtitle("Response of " +type+ " Suspension to " + bump_height + "m Disturbance");
+
+tiledlayout(length(plot_series),1,"TileSpacing","compact", 'Padding', 'compact');
+for i = 1:length(plot_series)
+  nexttile
+  plot(T, plot_series{i}.data);
+  ylabel(plot_series{i}.label);
+  grid on;
+end
+xlabel('Time (seconds)');
 
 %%% new figure for each
 % for i = 1:length(plot_series)
 %   figure
-%   title("Response of Passive Suspension to " + bump_height + "m Disturbance")
+%   title("Response of " +type+ " Suspension to " + bump_height + "m Disturbance")
 %   plot(T, plot_series{i}.data);
 %   ylabel(plot_series{i}.label);
 %   xlabel('Time (seconds)');

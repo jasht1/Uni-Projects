@@ -1,5 +1,3 @@
-Active suspension implementation
-
 ## Log
 ### Plan for Active suspension Implementation
 %%[[2024-12-18]] @ 19:37%%
@@ -133,3 +131,68 @@ First of all I had a "not" `~` present when I shouldn't have, and secondly it tu
 `QC_params;` $\neq$ `run QC_params;` 
 
 I assumed it was just a short hand but apparently just using it's name doesn't run it in the same workspace and while you can access all the globals from the script your importing, all the variables in the current script are out of scope. 
+
+### Controller out to Plant in array miss match #bug-report  
+%%[[2024-12-19]] @ 02:36%%
+
+all of a sudden I'm getting the following error,
+
+```
+Error using DynamicSystem/systune
+StepTracking goal: The "Input" and "Output" name lists resolve to signals of different lengths (2 vs. 1).
+
+Error in tune_active_suspension (line 11)
+[tuned_suspension, performance] = systune(active_suspension, goals);
+```
+
+It seems as though it has to do with how I'm constructing the `active_suspension` but that hasn't changed: `active_suspension = feedback(passive_suspension, controller, 1,1);` and I'm explicitly specifying to use only the first Input?
+
+### Controller out to Plant in array miss match #fix_log 
+%%[[2024-12-19]] @ 02:38%%
+
+It seems as though before I fixed the previous bug despite the "not" implying the contrary the `B` matrix was forming without an actuator input and I was tuning the system by applying my PID controller to the road displacement input. If so this is going to be particularly frustrating as once I fix this I will have to regenerate all the graphs in [[Active Suspension Testing]].
+
+Now that the `B` matrix in the `passive_suspension` is forming as:
+
+```
+  B = 
+             u1        u2
+   x1         0         0
+   x2         0  0.006667
+   x3         0         0
+   x4      2610  -0.09091
+```
+
+I was under the impression that the `feedback` method was just occludes the specified input but now of course the `active_suspension` also has 2 inputs.
+
+```
+  B = 
+           r(1)      r(2)
+   x1         0         0
+   x2         0  0.006667
+   x3         0         0
+   x4      2610  -0.09091
+   x5         0         0
+   x6         0         0
+```
+
+%%[[2024-12-19]] @ 02:50%%
+
+I'm concerned that the following line is not doing what I intend it to:
+
+`{matlab}active_suspension = feedback(passive_suspension, controller, 1,1);`
+
+I intend it do define a new system where my `controller` applies it's output to the `fs` input of the `passive_suspension`. 
+
+Firstly, the `fs` input is the second not the first according to the `B` array above so it needs to be:
+
+`{matlab}active_suspension = feedback(passive_suspension, controller, 2,1);`
+
+But apart form that it seems alright based on [the docs](https://www.mathworks.com/help/control/ref/inputoutputmodel.feedback.html#mw_21da8013-8ed9-4c60-8ad7-1a2691b14ae6).
+
+%%[[2024-12-19]] @ 02:57%%
+
+And having realised that the input is not occluded I need to fix my labels accordingly:
+
+`active_suspension.InputName = {'r','fs'};`
+

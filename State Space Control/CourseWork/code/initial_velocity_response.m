@@ -2,7 +2,7 @@
 %% Simulation Parameters
 
 % Time
-T_sim = 0.5; % Simulation length (s)
+T_sim = 5; % Simulation length (s)
 t = T_sim/200; % Time increment (s)
 T = (0:t:T_sim-t); % Time array
 
@@ -18,15 +18,15 @@ end
 V_i = 0.5; % Initial velocity (m/s)
 
 %% model paramiters
-% type = "Passive";
-% QC_params
-% plant = ss(A, B, C, D);
+type = "Passive";
+QC_params
+plant = ss(A, B, C, D);
 
-type = "Active";
-tune_active_suspension
-plant = minreal(ss(tuned_suspension));
+% type = "Active";
+% tune_active_suspension
+% plant = minreal(ss(tuned_suspension));
 
-U = road;
+U = [road; zeros(1, T_sim/t)];
 
 %% Simulation and Plotting
 
@@ -60,6 +60,7 @@ for scenario = scenarios
     struct('data', y(:,3),    'label', 'Body Acceleration (m/s^2)')
     };
   
+  rms(y(:,3))
   hold on
   title("Response of " +type+ " Suspension to " + description + " of " + V_i + " m/s");
   for i = 1:length(plot_series)

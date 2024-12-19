@@ -13,7 +13,7 @@ run QC_params;
 
 passive_suspension = ss(A, B, C, D);
 
-active_suspension = feedback(passive_suspension, controller, 1,1);
+active_suspension = feedback(passive_suspension, controller, 2,1);
 
-active_suspension.InputName = {'r'};
+active_suspension.InputName = {'r','fs'};
 active_suspension.OutputName = {'x_b','v_b','a_b','x_w','v_w'};
