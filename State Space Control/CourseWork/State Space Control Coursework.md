@@ -23,14 +23,8 @@ A state space representation will be used to model the behaviour of the system w
 
 ## Implementation
 
-### 
-- MLB & Simulink
+![[Matlab Active Suspension Implementation#Active Suspension Implementation]]
 
-### Simulations
-
-- Passive suspension
-- Simple tuning
-- Advanced tuning
 
 ![[Passive Suspension Testing]]
 

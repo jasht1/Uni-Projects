@@ -1,6 +1,10 @@
 ## Active Suspension Performance
 
+Where the [[Passive Suspension Testing]] section focused more on introducing and explaining of terms measures and intuitions. The performance of the active suspension system will be discussed largely in contrast with the baseline performance of the passive suspension system. 
+All of the same tests have been performed with the MATLAB implementation of the active suspension utilising the actuator and a PD controller. The controller takes in the car body displacement state variable referred to previously as $x_b$ / `x_b` as it's input, which may be collected in the real system with a ride height sensor. PD refers to proportional and derivative as the controller takes the form `{matlab}controller = kp + kd * s;` where `kp` is a proportional gain and `kd` is a derivative gain on the car body position. The output of this controller is fed into the actuator input of the state space system where it applies it's force against the wheel and body.
+
 ### Stability
+%%[[2024-12-19]] @ 04:36%%
 
 ```matlab
 >> pole(tuned_suspension)
@@ -17,7 +21,7 @@ The active suspension eliminates one of the modes of resonance that was present 
 
 ![[active_suspension-pole_zero.svg]]
 
-Comparing the [[#^active-suspension-nyquist|Nyquist plots]] below with those of the Passive Suspension shows how the controller has effected the natural modes of resonance in the system. The modes of the body position and acceleration are substantially smaller in both their real and imaginary components whereas those of the wheel are larger. The system still has to absorb and dissipate the same amount of energy but the active suspension shifts much of the systems energy into the wheel mass%%  causing it to resonate more while the car body resonates less %%.
+Comparing the [[#^active-suspension-nyquist|Nyquist plots]] below with those of the Passive Suspension shows how the controller has effected the natural modes of resonance in the system. The modes of the body position and acceleration are substantially smaller in both their real and imaginary components whereas those of the wheel are larger. The system still has to absorb and dissipate the same amount of energy but the active suspension shifts much of the systems energy into the wheel mass%% causing it to resonate more while the car body resonates less %%.
 
 > [!figure] Figure : Active Suspension Nyquist Diagrams ^active-suspension-nyquist
 > ![[active_suspension-nyquist.svg]]

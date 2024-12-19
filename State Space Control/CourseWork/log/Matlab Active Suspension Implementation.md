@@ -1,3 +1,10 @@
+
+### Active Suspension Implementation
+%%[[2024-12-19]] @ 05:12%%
+
+This section covers the implementation of the active suspension utilising the actuator and a PD controller in MATLAB. 
+The controller takes in the car body displacement state variable referred to previously as $x_b$ / `x_b` as it's input, which may be collected in the real system with a ride height sensor. PD refers to proportional and derivative as the controller takes the form `{matlab}controller = kp + kd * s;` where `kp` is a proportional gain and `kd` is a derivative gain on the car body position. The output of this controller is fed into the actuator input of the state space system where it applies it's force against the wheel and body.
+
 ## Log
 ### Plan for Active suspension Implementation
 %%[[2024-12-18]] @ 19:37%%
