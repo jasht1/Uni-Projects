@@ -40,6 +40,8 @@ The system consist of a block sliding on a flat frictional surface connected hor
 ### Constituent Forces
 %%[[2024-12-23]] @ 19:38%%
 
+Aside from the time varying input force $f(t)$, the following forces act on the system;
+
 The spring would exert a force linearly proportional to the displacement of the block, as follows:
 
 $$F_{s} = k_{s} x_{b}$$
@@ -61,10 +63,13 @@ $\dot x_{b}$ : is the velocity of the block.
 ### Equations of motion
 %%[[2024-12-23]] @ 19:54%%
 
-According to Newton's second law the acceleration of the bodies can be found by dividing the net force on the body by it's mass. $$a = \frac{F}{m}$$
+According to Newton's second law the acceleration of the bodies can be found by dividing the net force on the body by it's mass. 
+
+$$a = \frac{F}{m}$$
 
 Thus the acceleration of the block can be given by the following:
-$$\ddot{\text{x}}_{b} = \frac{F_{s} + F_{f}}{m_{b}} = \frac{-\mu}{m_{b}} \dot x _{b} + \frac{k_{s}}{m_{b}} x_{b}$$
+
+$$\ddot{\text{x}}_{b} = \frac{F_{s} + F_{f} + f(t)}{m_{b}} = \frac{-\mu}{m_{b}} \dot x _{b} + \frac{k_{s}}{m_{b}} x_{b} + \frac{f(t)}{m_{b}}$$
 
 ### State Equations
 %%[[2024-12-23]] @ 19:44%%
@@ -79,16 +84,104 @@ $$\Large \text{x} =
 \end{align*}
 \end{bmatrix}$$
 
-And the input equation will take the form: 
+And the [[State Space Representation#Input Equation|input equation]] will take the form: 
 
 $$\Large \dot{\text{x}} = Ax +Bu$$
 
 Where:
 
-- $\dot x$ is the [[derivative]] of the [[State Space Representation#State Vector|State Vector]]
-- $x$ is the [[State Space Representation#State Vector|State Vector]]
-- $u$ is the [[State Space Representation#Input Vector|input Vector]]
-- $A$ is a matrix of first order coefficients that relate the [[State Space Representation#State Variable|State Variable]]s to their effect on the system dynamic.
-- $B$ is a matrix of first order coefficients that relate the system inputs to their effect on the system dynamic.
+- $\dot x$ is the [[derivative]] of the [[State Space Representation#State Vector|State Vector]],
+- $x$ is the [[State Space Representation#State Vector|State Vector]],
+- $u$ is the [[State Space Representation#Input Vector|input Vector]],
+- $A$ & $B$ are the [[State Space Representation#State Equations|input matrices]]:
+	- $A$ is a matrix of first order coefficients that relate the [[State Space Representation#State Variable|State Variable]]s to their effect on the system dynamic.
+	- $B$ is a matrix of first order coefficients that relate the system inputs to their effect on the system dynamic.
 
-and thus $A$ will be:
+and thus $A$ & $B$ will be:
+
+$$\Large
+A = \begin{bmatrix}
+	0 & 1 \\ 
+	\frac{k_{s}}{m_{b}} & \frac{-\mu}{m_{b}}
+\end{bmatrix}
+\qquad
+B = \begin{bmatrix}
+	0 \\ \frac{1}{m_{\text{b}}} \\
+\end{bmatrix}$$
+
+
+The [[State Space Representation#Output Equation|output equation]] gives the output of the system at time $t$.
+
+$$\Large y = Cx + Du$$
+
+Where:
+- $y(t)$ is the [[State Space Representation#Output Vector|output vector]],
+- $x(t)$ is the [[State Space Representation#State Vector|state vector]],
+- $u(t)$ is the [[State Space Representation#Input Vector|input vector]],
+- $C$ & $D$ are the [[State Space Representation#Output Equations|output matrices]]:
+	- $C$ is a matrix of first order coefficients that relate the current system state to their impact on the system outputs.
+	- $D$ is a matrix of firs order coefficients that relate the inputs to the system to their effect on the system outputs.
+
+and assuming the state variable of interest is the block's position $x_{b}$ then the output matrices $C$ & $D$ will be:
+
+$$\Large
+C = \begin{bmatrix}
+	1 & 0 \\ 
+\end{bmatrix}
+\qquad
+D = \begin{bmatrix}
+	0
+\end{bmatrix}$$
+
+## Assume that friction coefficient $\mu = 0.1 \ N \! \cdot \! m/s$ and spring stiffness $k_{s} = 200 \ N/m$. Calculate the poles of the system and plot them on the s-plane. Is the system stable?
+%%[[2024-12-24]] @ 01:05%%
+
+```matlab
+>> k_s = 200;
+>> mu = 0.1;
+
+>> A = [0, 1;-k_s/m_b, -mu/m_b];
+>> B = [0; 1/m_b];
+>> C = [1, 0];
+>> D = 0;
+
+>> sys = ss(A,B,C,D)
+
+sys =
+
+  A =
+         x1    x2
+   x1     0     1
+   x2  -200  -0.1
+
+  B =
+       u1
+   x1   0
+   x2   1
+
+  C =
+       x1  x2
+   y1   1   0
+
+  D =
+       u1
+   y1   0
+
+Continuous-time state-space model.
+>> pole(sys)
+
+ans =
+
+  -0.0500 +14.1420i
+  -0.0500 -14.1420i
+
+>> pzplot(sys)
+
+*see "Pole Zero Plot" below*
+```
+
+> [!FIGURE] Pole Zero Plot ^q1d-pzplot
+> ![[Q1d_pzplot.svg]]
+
+The system **is stable** as the real component of the poles lay on the left of the y axis indicating a negative feedback that allows the system to settle to a steady state.
+
