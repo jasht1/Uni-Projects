@@ -42,9 +42,9 @@ The system consist of a block sliding on a flat frictional surface connected hor
 
 Aside from the time varying input force $f(t)$, the following forces act on the system;
 
-The spring would exert a force linearly proportional to the displacement of the block, as follows:
+The spring would exert a force inversely proportional to the displacement of the block, as follows:
 
-$$F_{s} = k_{s} x_{b}$$
+$$F_{s} = -k_{s} x_{b}$$
 
 Where:
 $F_{s}$ : is the force exerted ($N$),
@@ -69,7 +69,7 @@ $$a = \frac{F}{m}$$
 
 Thus the acceleration of the block can be given by the following:
 
-$$\ddot{\text{x}}_{b} = \frac{F_{s} + F_{f} + f(t)}{m_{b}} = \frac{-\mu}{m_{b}} \dot x _{b} + \frac{k_{s}}{m_{b}} x_{b} + \frac{f(t)}{m_{b}}$$
+$$\ddot{\text{x}}_{b} = \frac{F_{s} + F_{f} + f(t)}{m_{b}} = \frac{-\mu}{m_{b}} \dot x _{b} + \frac{-k_{s}}{m_{b}} x_{b} + \frac{f(t)}{m_{b}}$$
 
 ### State Equations
 %%[[2024-12-23]] @ 19:44%%
@@ -102,7 +102,7 @@ and thus $A$ & $B$ will be:
 $$\Large
 A = \begin{bmatrix}
 	0 & 1 \\ 
-	\frac{k_{s}}{m_{b}} & \frac{-\mu}{m_{b}}
+	\frac{-k_{s}}{m_{b}} & \frac{-\mu}{m_{b}}
 \end{bmatrix}
 \qquad
 B = \begin{bmatrix}
@@ -168,6 +168,7 @@ sys =
    y1   0
 
 Continuous-time state-space model.
+
 >> pole(sys)
 
 ans =
@@ -185,3 +186,102 @@ ans =
 
 The system **is stable** as the real component of the poles lay on the left of the y axis indicating a negative feedback that allows the system to settle to a steady state.
 
+# Question 2
+
+## (a) You are given the following model for a Magnetically Suspended Ball (shown in [[EGR3032M Sample TCA Questions.pdf#page=2&selection=12,0,13,42|Figure 2]]).
+%%[[2024-12-24]] @ 14:45%%
+
+Where the state vector $\text x$ is comprised of:
+
+$$\Large \text{x} = 
+\begin{bmatrix} 
+
+	x_{1} := h \\
+	x_{2} := i \\
+
+\end{bmatrix} \quad
+\begin{matrix} \begin{align}
+& \leftarrow \text{displacment (m)}\\ 
+& \leftarrow \text{current (A)}
+\end{align}\end{matrix}$$
+
+And the input vector $u$ is the input voltage ($V$):
+
+$$\Large u = \begin{bmatrix} v(t) \end{bmatrix}$$
+
+The $A$, $B$, $C$ & $D$ matrices are:
+
+$$\Large
+A = \begin{bmatrix}
+	980 & -2.8 \\ 
+	0 & -100
+\end{bmatrix}
+\qquad
+B = \begin{bmatrix}
+	0 \\ 100 \\
+\end{bmatrix}
+\qquad
+C = \begin{bmatrix}
+	1  & 0 \\ 
+\end{bmatrix}
+\qquad
+D = \begin{bmatrix}
+	0 \\
+\end{bmatrix}$$
+
+### (i) Check the open-loop stability of the system
+%%[[2024-12-24]] @ 14:54%%
+
+The system stability can be judged by the poles of the system, the poles are found as the [[eigenvalue]]s of the $A$ matrix given by:
+
+$$\Large \text {det} (A-\lambda I)=0$$
+
+Where:
+- $\text {det}$ : refers to the [[Determinant]], which gives the factor by which area is scaled when a [[linear transformation]] is applied.
+  The determinant of a 2D transformation like this one can be found as:
+
+$$\text {det} \left(\left[ \begin{array}{cc} a &b \\ c &d \end{array}\right]\right)=ad-bc$$
+
+- $A$ : [[linear transformation|transformation matrix]]
+- $\lambda$ : [[Eigenvalues & Eigenvectors#Eigenvalues|Eigenvalue]]
+- $I$ : is the Identity matrix, a matrix of width and height = to number of dimensions and with 0s in all spots but the diagonal which contain 1s like so:
+
+$$\left[\begin{array}{cc} 1 &0 \\ 0 &1 \end{array}\right],\left[\begin{array}{cc} 1 &0 &0 \\ 0 &1 &0 \\ 0 &0 &1\end{array}\right], \text{ ect } \dots$$
+
+So in this case, the steps are as follows:
+
+1. Factor in the variables and simplify
+
+$$\text {det} \left(
+\begin{bmatrix}
+	980 & -2.8 \\ 
+	0 & -100
+\end{bmatrix}
+-
+\begin{bmatrix} 
+	\lambda & 0 \\
+	0 & \lambda \\ 
+\end{bmatrix} 
+\right)=0$$
+
+$$\text {det} \left(
+\begin{bmatrix}
+	980 - \lambda & -2.8 \\ 
+	0 & -100 - \lambda  \\
+\end{bmatrix}\right) = 0$$
+
+2. Apply the determinant and simplify
+
+$$(980 - \lambda)(-100 - \lambda) - (-2.8)(0) = 0$$
+
+$$(980 - \lambda)(100 + \lambda)= 0$$
+
+3. Identify the values of $\lambda$ that solve for $0$
+
+$$\Large \lambda = \quad 980, \quad \text{or} \quad -100$$
+
+4. Identify any positive real solutions
+
+$$\text {In this case 980 is positive and real indicating an unstable system.}$$
+
+### (ii) Show whether the system is controllable.
