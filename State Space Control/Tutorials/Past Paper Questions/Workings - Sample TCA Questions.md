@@ -300,14 +300,13 @@ $$\text {In this case 980 is positive and real indicating an unstable system.}$$
 ### (ii) Show whether the system is controllable.
 %%[[2024-12-31]] @ 02:35%%
 
-For a system to be 'controllable' any real output of the system must be reachable from any other by a finite set of real inputs in a finite time, this can be judged by it's controllability matrix $C_{M}$:
+For a system to be 'controllable' any real output of the system must be reachable from any other by a finite set of real inputs in a finite time. We must prove that with the inputs available every state in the system can be influenced uniquely, as if this is the case then there must exist some linear combination of inputs that can affect every change to the system. This can be judged by it's controllability matrix $C_{M}$:
 
 $$\Large C_{M} := \begin{bmatrix} B & AB & A^{2}B & \cdots & A^{n-1}B \end{bmatrix}$$
 
-The controllability matrix $C_{M}$ indicates how inputs propagate through the system. Each term represents the impact of a further time step 
+The controllability matrix $C_{M}$ indicates how inputs propagate through the system accounting for higher order dynamics. Each term represents the impact of a further time step, and we need only consider as many time steps as there are states to be exhaustive.
 
-The system can be said to be completely controllable if the controllability matrix $C_{M}$ is of the same [[rank]] $n$ as there are states $\text{x}_{n}$ in the state space $\text{x}$.
-
+The [[rank]] of a matrix indicates number of linearly independent rows & columns, thus: The system can be said to be completely controllable if the controllability matrix $C_{M}$ is of the same [[rank]] $n$ as there are states $\text{x}_{n}$ in the state space $\text{x}$.
 
 In this case the the system $(A,B)$ is 2nd order, i.e. 2 states in the state space, so $C_{M}$ will take the form: $C_{M} := \begin{bmatrix} B & AB \end{bmatrix}$
 
