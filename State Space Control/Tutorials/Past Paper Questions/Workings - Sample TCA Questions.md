@@ -240,13 +240,26 @@ Where:
 - $\text {det}$ : refers to the [[Determinant]], which gives the factor by which area is scaled when a [[linear transformation]] is applied.
   The determinant of a 2D transformation like this one can be found as:
 
-$$\text {det} \left(\left[ \begin{array}{cc} a &b \\ c &d \end{array}\right]\right)=ad-bc$$
+$$\text{det} \left( \begin{bmatrix} 
+	a & b \\
+	c &d  \\
+\end{bmatrix}\right)
+= ad - bc$$
 
 - $A$ : [[linear transformation|transformation matrix]]
 - $\lambda$ : [[Eigenvalues & Eigenvectors#Eigenvalues|Eigenvalue]]
 - $I$ : is the Identity matrix, a matrix of width and height = to number of dimensions and with 0s in all spots but the diagonal which contain 1s like so:
 
-$$\left[\begin{array}{cc} 1 &0 \\ 0 &1 \end{array}\right],\left[\begin{array}{cc} 1 &0 &0 \\ 0 &1 &0 \\ 0 &0 &1\end{array}\right], \text{ ect } \dots$$
+$$\begin{bmatrix} 
+	1 &0 \\ 
+	0 &1 \\ 
+\end{bmatrix},
+\begin{bmatrix} 
+	1 &0 &0 \\ 
+	0 &1 &0 \\ 
+	0 &0 &1 \\ 
+\end{bmatrix}, 
+\text{ ect } \dots$$
 
 So in this case, the steps are as follows:
 
@@ -285,3 +298,50 @@ $$\Large \lambda = \quad 980, \quad \text{or} \quad -100$$
 $$\text {In this case 980 is positive and real indicating an unstable system.}$$
 
 ### (ii) Show whether the system is controllable.
+%%[[2024-12-31]] @ 02:35%%
+
+For a system to be 'controllable' any real output of the system must be reachable from any other by a finite set of real inputs in a finite time, this can be judged by it's controllability matrix $C_{M}$:
+
+$$\Large C_{M} := \begin{bmatrix} B & AB & A^{2}B & \cdots & A^{n-1}B \end{bmatrix}$$
+
+The system can be said to be completely controllable if the controllability matrix $C_{M}$ is of the same [[rank]] $n$ as there are states $\text{x}_{n}$ in the state space $\text{x}$.
+By taking the [[Determinant]] of controllability matrix $det(C_{M})$ 
+
+In this case the the system $(A,B)$ is 2nd order, i.e. 2 states in the state space, so $C_{M}$ will take the form: $C_{M} := \begin{bmatrix} B & AB \end{bmatrix}$
+
+Factoring in the values for $A$ & $B$:
+
+$$C_{M} := \begin{bmatrix}
+	\begin{bmatrix}
+		0 \\ 100 \\
+	\end{bmatrix} 
+	& 
+	\begin{bmatrix}
+		980 & -2.8 \\ 
+		0 & -100
+	\end{bmatrix}
+	\begin{bmatrix}
+		0 \\ 100 \\
+	\end{bmatrix}
+\end{bmatrix}$$
+
+And simplifying:
+
+$$C_{M} := \begin{bmatrix}
+	\begin{bmatrix}
+		0 \\ 100 \\
+	\end{bmatrix} 
+	& 
+	\begin{bmatrix}
+		980 \times 0 & -2.8 \times 100 \\ 
+		0 \times 0 & -100 \times 100
+	\end{bmatrix}
+\end{bmatrix}$$
+
+Gives the controllability matrix $C_{M}$ as:
+
+$$C_{M} := \begin{bmatrix}
+		0 & -280 \\ 
+		100 & -10000 \\ 
+\end{bmatrix}$$
+
