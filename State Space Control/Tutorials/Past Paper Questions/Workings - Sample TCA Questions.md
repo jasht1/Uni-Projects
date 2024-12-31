@@ -304,8 +304,10 @@ For a system to be 'controllable' any real output of the system must be reachabl
 
 $$\Large C_{M} := \begin{bmatrix} B & AB & A^{2}B & \cdots & A^{n-1}B \end{bmatrix}$$
 
+The controllability matrix $C_{M}$ indicates how inputs propagate through the system. Each term represents the impact of a further time step 
+
 The system can be said to be completely controllable if the controllability matrix $C_{M}$ is of the same [[rank]] $n$ as there are states $\text{x}_{n}$ in the state space $\text{x}$.
-By taking the [[Determinant]] of controllability matrix $det(C_{M})$ 
+
 
 In this case the the system $(A,B)$ is 2nd order, i.e. 2 states in the state space, so $C_{M}$ will take the form: $C_{M} := \begin{bmatrix} B & AB \end{bmatrix}$
 
@@ -345,3 +347,11 @@ $$C_{M} := \begin{bmatrix}
 		100 & -10000 \\ 
 \end{bmatrix}$$
 
+As the system only has a single input the resulting $C_{M}$ was square so the [[rank]] of $C_{M}$ can be determined by taking the [[Determinant]] of controllability matrix $det(C_{M})$:
+
+$$det \left(\begin{bmatrix}
+		0 & -280 \\ 
+		100 & -10000 \\ 
+\end{bmatrix}\right) = (0 \times -10000) - (-280 \times 100) = 28000$$
+
+As $det(C_{M}) \neq 0$ $C_{M}$ must be full rank thus the system is controllable.
