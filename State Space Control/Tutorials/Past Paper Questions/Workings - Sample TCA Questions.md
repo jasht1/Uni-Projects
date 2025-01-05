@@ -361,10 +361,123 @@ As $det(C_{M}) \neq 0$ $C_{M}$ must be full rank thus the system is controllable
 
 [[Nise's Control Systems Engineering - Norman S_ Nise.pdf#page=671&selection=351,0,353,6|Nise's Control Systems Engineering - 12.2 Controller Design, page 671]]
 
-The [[characteristic equation]] indicates the location of the system poles as found in [[#(i) Check the open-loop stability of the system]] along with features of the systems behaviour. Through the use of a regulator the [[characteristic equation]] can be moved to achieve different system behaviours. The regulator will consist of feedback $-K$ applied to the [[State Space Representation#State Vector|state vector]] $\text{x}$ and applied to the [[State Space Representation#Input Vector|input vector]] $u$.
+The [[characteristic equation]] indicates the location of the system poles as found in [[#(i) Check the open-loop stability of the system]] along with features of the systems behaviour. Through the use of a regulator the [[characteristic equation]] can be moved to achieve different system behaviours. The regulator will consist of feedback $-K$ applied to the [[State Space Representation#State Vector|state vector]] $\text{x}$ and applied as the [[State Space Representation#Input Vector|input vector]] $u$.
 
-$$\dot{\text{x}} = A \text{x} +Bu \quad \to \quad  \dot{\text{x}} = A \text{x} +B (u-K \text{x})$$
+$$\dot{\text{x}} = A \text{x} +Bu \quad \to \quad  \dot{\text{x}} = A \text{x} +B (-K \text{x})$$
+
+Which can be rearranged and stated as:
+
+$$\Large \dot{\text{x}} = (A - K B)\text{x}$$
 
 This is of course based on the assumption that all the [[State Space Representation#State Variable|state variables]] are visible to the controller, in practice sensors for ball height and current would be necessary.
 
-To find the correct values for gain $K$ to move the [[characteristic equation]] to  $s^{2} + 150s + 9000 = 0$ 
+%%[[2025-01-05]] @ 17:31%%
+
+To find the correct values for gain $K$ to move the [[characteristic equation]] to  $s^{2} + 150s + 9000 = 0$ the following equation must be satisfied:
+
+$$\Large \text {det} (s I -(A - K B)) = s^{2} + 150s + 9000 = 0$$
+
+As:
+- $\text {det} (s I -(A - K B))$ : gives the [[characteristic equation]] of the system.
+- $s^{2} + 150s + 9000$ : is the target [[characteristic equation]].
+
+Both must be equal to 0 and therefore to each other.
+
+1. Substituting in the values for $A$ & $B$ in matrix from the left hand side becomes:
+
+$$\text{LHS} = \text {det} \left(
+	\begin{bmatrix} 
+		s & 0 \\ 
+		0 & s \\ 
+	\end{bmatrix}
+	-\left(
+		\begin{bmatrix}
+			980 & -2.8 \\ 
+			0 & -100 \\ 
+		\end{bmatrix}
+		-
+		\begin{bmatrix}
+			k_{1} & k_{2} \\ 
+		\end{bmatrix}
+		\begin{bmatrix}
+			0 \\
+			-100 \\
+		\end{bmatrix} 
+	\right)
+\right)
+$$
+
+2. This simplifies to:
+
+%% Workings
+
+$$\text {det} \left(
+	\begin{bmatrix} 
+		s & 0 \\ 
+		0 & s \\ 
+	\end{bmatrix}
+	-\left(
+		\begin{bmatrix}
+			980 & -2.8 \\ 
+			0 & -100 \\ 
+		\end{bmatrix}
+		-
+		\begin{bmatrix}
+			0 & 0 \\
+			-100k_{1} & -100k_{2} \\
+		\end{bmatrix} 
+	\right)
+\right)
+$$
+
+$$\text {det} \left(
+	\begin{bmatrix} 
+		s & 0 \\ 
+		0 & s \\ 
+	\end{bmatrix}
+	-
+	\begin{bmatrix}
+		980 & -2.8 \\ 
+		-100k_{1} & -100-100k_{2} \\ 
+	\end{bmatrix}
+\right)
+$$
+
+$$\text {det} \left(
+	\begin{bmatrix} 
+		s - 980 & 0+2.8 \\ 
+		0+100k_{1} & s+100+100k_{2} \\ 
+	\end{bmatrix}
+\right)
+$$
+
+%%
+
+$$\text{LHS} = \text {det} \left(
+	\begin{bmatrix} 
+		s - 980 & 2.8 \\ 
+		100k_{1} & s+100+100k_{2} \\ 
+	\end{bmatrix}
+\right)$$
+
+3. Making the determinant:
+
+$$\text{LHS} = (s-980)(s+100+100k_{2}) - (2.8)(100k_{1})$$
+
+4. Expanding the brackets and substituting back into the equation terms can be cancelled out:
+
+%% Workings
+
+$$(s-980)(s+100+100k_{2}) - (2.8)(100k_{1})$$
+
+$$s^{2} +100s +100k_{2}s -980s -98000k_{2} -98000 -280k_{1}$$
+
+$$s^{2} +100k_{2}s -880s -280k_{1} -98000k_{2} -98000$$
+
+$$(-280)k_{1} +(100s -98000)k_{2} +s^{2} -880s -98000$$
+
+$$s^{2} +(-880 +100k_{2})s + (-98000 -280k_{1} -98000k_{2})$$
+
+%%
+
+$$\cancel{s^{2}} +(-880 +100k_{2})s + (-98000 -280k_{1} -98000k_{2}) = \cancel{s^{2}} + 150s + 9000$$
