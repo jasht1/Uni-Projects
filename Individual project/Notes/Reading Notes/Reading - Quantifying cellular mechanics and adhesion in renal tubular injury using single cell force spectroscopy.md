@@ -19,7 +19,10 @@ Tublar injury involves:
 - de-novo (novel gene expression) of fibroblastic markers
 
 ### Elasticity
-Elasticity is defined as the ability of a cell to resist an applied force or stress and return to its original configuration when the stress is removed. If the cell is assumed as linear elastic material, the elasticity can be expressed quantitatively by modulus, such as [[Young's modulus]].
+> Elasticity is defined as the ability of a cell to resist an applied force or stress and return to its original configuration when the stress is removed.
+
+[[Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy.pdf#page=2&selection=33,39,35,50|Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy, page 2]]
+
 
 ### SCFS
 AFM-single cell force spectroscopy (SCFS) measures cell adhesion.
@@ -27,8 +30,10 @@ AFM-single cell force spectroscopy (SCFS) measures cell adhesion.
 ### fibrosis
 a condition where collagenous scar tissue builds up and stiffens, impairing organ function.
 
-###
+### 
 pro-fibrotic cytokine TGF-β1
+
+
 
 ## Data Anaylis
 JPK Data analysis software was used. To signify statistical differences data were evaluated using a paired t-test. Data are expressed as mean in the text and as median and interquartile range at the graphs. Number of experiments are represented with 'n'. P b 0.05 was taken to indicate statistical significance
@@ -44,3 +49,4 @@ TREs where sharp steps of force that are preceded by a ramp in force are classif
 %% add example diagram of j vs t events %%
 
 ![[Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy.pdf#page=5&annotation=64R|Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy, page 5]]
+

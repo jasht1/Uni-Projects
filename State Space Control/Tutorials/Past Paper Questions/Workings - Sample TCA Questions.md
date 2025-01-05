@@ -232,7 +232,7 @@ D = \begin{bmatrix}
 ### (i) Check the open-loop stability of the system
 %%[[2024-12-24]] @ 14:54%%
 
-The system stability can be judged by the poles of the system, the poles are found as the [[eigenvalue]]s of the $A$ matrix given by:
+The system stability can be judged by the poles of the system, the poles are found as the [[eigenvalue]]s of the $A$ matrix given by the [[characteristic equation]]:
 
 $$\Large \text {det} (A-\lambda I)=0$$
 
@@ -300,7 +300,7 @@ $$\text {In this case 980 is positive and real indicating an unstable system.}$$
 ### (ii) Show whether the system is controllable.
 %%[[2024-12-31]] @ 02:35%%
 
-For a system to be 'controllable' any real output of the system must be reachable from any other by a finite set of real inputs in a finite time. We must prove that with the inputs available every state in the system can be influenced uniquely, as if this is the case then there must exist some linear combination of inputs that can affect every change to the system. This can be judged by it's controllability matrix $C_{M}$:
+For a system to be 'controllable' any real output of the system must be reachable from any other by a finite set of real inputs in a finite time. It must be proved that the available inputs can influence every state in the system uniquely, as if this is the case then there must exist some linear combination of inputs that can affect every change to the system. This can be judged by it's controllability matrix $C_{M}$:
 
 $$\Large C_{M} := \begin{bmatrix} B & AB & A^{2}B & \cdots & A^{n-1}B \end{bmatrix}$$
 
@@ -354,3 +354,17 @@ $$det \left(\begin{bmatrix}
 \end{bmatrix}\right) = (0 \times -10000) - (-280 \times 100) = 28000$$
 
 As $det(C_{M}) \neq 0$ $C_{M}$ must be full rank thus the system is controllable.
+
+
+### (iii) Design a regulator with the following characteristic equation, designed to hold the ball at the reference height h=0: $$s^{2} + 150s + 9000 = 0$$
+%%[[2025-01-05]] @ 14:00%%
+
+[[Nise's Control Systems Engineering - Norman S_ Nise.pdf#page=671&selection=351,0,353,6|Nise's Control Systems Engineering - 12.2 Controller Design, page 671]]
+
+The [[characteristic equation]] indicates the location of the system poles as found in [[#(i) Check the open-loop stability of the system]] along with features of the systems behaviour. Through the use of a regulator the [[characteristic equation]] can be moved to achieve different system behaviours. The regulator will consist of feedback $-K$ applied to the [[State Space Representation#State Vector|state vector]] $\text{x}$ and applied to the [[State Space Representation#Input Vector|input vector]] $u$.
+
+$$\dot{\text{x}} = A \text{x} +Bu \quad \to \quad  \dot{\text{x}} = A \text{x} +B (u-K \text{x})$$
+
+This is of course based on the assumption that all the [[State Space Representation#State Variable|state variables]] are visible to the controller, in practice sensors for ball height and current would be necessary.
+
+To find the correct values for gain $K$ to move the [[characteristic equation]] to  $s^{2} + 150s + 9000 = 0$ 
