@@ -265,13 +265,12 @@ So in this case, the steps are as follows:
 
 1. Factor in the variables and simplify
 
-$$\text {det} \left(
+$$\text{det} \left(
 \begin{bmatrix}
 	980 & -2.8 \\ 
-	0 & -100
+	0 & -100 \\ 
 \end{bmatrix}
--
-\begin{bmatrix} 
+-\begin{bmatrix} 
 	\lambda & 0 \\
 	0 & \lambda \\ 
 \end{bmatrix} 
@@ -464,7 +463,7 @@ $$\text{LHS} = \text {det} \left(
 
 $$\text{LHS} = (s-980)(s+100+100k_{2}) - (2.8)(100k_{1})$$
 
-4. Expanding the brackets and substituting back into the equation terms can be cancelled out:
+4. Expanding the brackets and substituting back into the equation:
 
 %% Workings
 
@@ -480,4 +479,52 @@ $$s^{2} +(-880 +100k_{2})s + (-98000 -280k_{1} -98000k_{2})$$
 
 %%
 
+$$s^{2} +(-880 +100k_{2})s + (-98000 -280k_{1} -98000k_{2}) = s^{2} + 150s + 9000$$
+
+5. The $s^{2}$ terms can be cancelled out:
+
 $$\cancel{s^{2}} +(-880 +100k_{2})s + (-98000 -280k_{1} -98000k_{2}) = \cancel{s^{2}} + 150s + 9000$$
+
+6. The $s$ term coefficient can only be affected by $k_{2}$, thus the value that satisfies $\frac{-880-150}{100} = k_{2}$ must be the identity. By this logic $k_{2}$ is substituted for $9.3$ and the $s$ term is cancelled:
+
+$$\cancel{(-880 +100(9.3))s} + (-98000 -280k_{1} -98000(9.3)) = \cancel{150s} + 9000$$
+
+7. Solving for $k1$ is then trivial:
+
+%% Working 
+
+$$-98000 -280k_{1} -98000(9.3) = 9000$$
+
+$$-1009400 -280k_{1} = 9000$$
+
+$$-280k_{1} = 9000+1009400$$
+
+$$-280k_{1} = 1018400$$
+
+$$k_{1} = \frac{1018400}{-280}$$
+
+%%
+
+$$\frac{9000+98000+98000(9.3)}{-280} = -3637.142857 = k_{1}$$
+
+8. The system with the regulator $K$ is given by:
+
+$$\Large \dot{\text{x}} = (A - K B)\text{x}$$
+
+Where:
+
+$$
+A = \begin{bmatrix}
+	980 & -2.8 \\ 
+	0 & -100
+\end{bmatrix}
+\qquad
+B = \begin{bmatrix}
+	0 \\ 100 \\
+\end{bmatrix}
+\qquad
+K = \Large\begin{bmatrix}
+	9.3 & \frac{-25460}{7}
+\end{bmatrix}$$
+
+## (b) Sketch the model as a Block Diagram, including the state feedback controller.
