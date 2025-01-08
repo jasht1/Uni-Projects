@@ -13,3 +13,5 @@ https://www.youtube.com/watch?v=hpeKrMG-WP0
 https://www.youtube.com/watch?v=dG6MSsdojLg&list=PLnoV7VLMKHHLva80JlEaK3xpIvmOjcZeS&pp=iAQB
 
 [Python Example](https://www.youtube.com/watch?v=5xwo94PH9H4)
+
+https://ocw.mit.edu/courses/16-333-aircraft-stability-and-control-fall-2004/7f8ff7511c3cfca3ca6c5fd52df595f7_lecture_10.pdf

@@ -195,10 +195,8 @@ Where the state vector $\text x$ is comprised of:
 
 $$\Large \text{x} = 
 \begin{bmatrix} 
-
 	x_{1} := h \\
 	x_{2} := i \\
-
 \end{bmatrix} \quad
 \begin{matrix} \begin{align}
 & \leftarrow \text{displacment (m)}\\ 
@@ -355,7 +353,7 @@ $$det \left(\begin{bmatrix}
 As $det(C_{M}) \neq 0$ $C_{M}$ must be full rank thus the system is controllable.
 
 
-### (iii) Design a regulator with the following characteristic equation, designed to hold the ball at the reference height h=0: $$s^{2} + 150s + 9000 = 0$$
+### (iii) Design a regulator with the following characteristic equation, designed to hold the ball at the reference height $h=0$: $$s^{2} + 150s + 9000 = 0$$
 %%[[2025-01-05]] @ 14:00%%
 
 [[Nise's Control Systems Engineering - Norman S_ Nise.pdf#page=671&selection=351,0,353,6|Nise's Control Systems Engineering - 12.2 Controller Design, page 671]]
