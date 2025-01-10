@@ -72,7 +72,7 @@ each with their respective cross section area $A_{n}$ and flow speed $v_{n}$. wh
 
 Conservation of mass implies mass flow rate at these 3 axial slices are equal:
 
-$$\dot{m} = \rho A_{U}v_{U} = \rho A_{T}v_{T} = \rho A_{D}v_{D}$$
+$$\large \dot{m} = \rho A_{U}v_{U} = \rho A_{T}v_{T} = \rho A_{D}v_{D}$$
 
 Where:
 - $\dot{m}$ : is the fluids mass flow rate
@@ -122,12 +122,13 @@ By setting these identities as equal an identity for $v_{T}$ in terms of $v_{U}$
 
 $$P = \rho A_{T} v_{T}^{2} (v_{U} - v_{D}) = \frac{1}{2} \rho A_{T} v_{T} (v_{U}^{2} - v_{D}^{2})$$
 
-$$\begin{align*}
-\cancel{\rho A_{T} v_{T}} v_{T} (v_{U} - v_{D}) &= \cancel{\rho A_{T} v_{T}} \frac{1}{2} (v_{U}^{2} - v_{D}^{2})\\
-v_{T} \cancel{(v_{U} - v_{D})} &= \frac{1}{2} (v_{U} + v_{D}) \cancel{(v_{U} - v_{D})}\\
-&\therefore \\
-v_{T} &= \frac{1}{2} (v_{U} + v_{D})\\
-\end{align*}$$
+> [!NOTE] Workings
+> $$\begin{align*}
+> \cancel{\rho A_{T} v_{T}} v_{T} (v_{U} - v_{D}) &= \cancel{\rho A_{T} v_{T}} \frac{1}{2} (v_{U}^{2} - v_{D}^{2})\\
+> v_{T} \cancel{(v_{U} - v_{D})} &= \frac{1}{2} (v_{U} + v_{D}) \cancel{(v_{U} - v_{D})}\\
+> &\therefore \\
+> v_{T} &= \frac{1}{2} (v_{U} + v_{D})\\
+> \end{align*}$$
 
 Thus:
 
@@ -143,17 +144,81 @@ Factoring in the identity for mass flow rate found above back into the equation 
 
 $$\Large P = \frac{1}{4} \rho A_{T} (v_{1} + v_{2}) ({v_{1}}^{2}−{v_{2}}^{2})$$
 
-This equation can be rearranged slightly to emphasise the impact of velocity change, i.e. $\frac{v_{1}}{v_{2}}$, like so:
+This equation can be rearranged slightly to emphasise the impact of the proportional velocity drop, i.e. $\frac{v_{2}}{v_{1}}$, like so:
 
-%% Workings
+%% Original workings
 $$v_{1} = \frac{v_{1}}{v_{2}}v_{2}$$
 $$P = \frac{1}{4} \rho A_{T} \left( \frac{v_{1}}{v_{2}}v_{2} + v_{2} \right) \left( {\frac{v_{1}}{v_{2}}v_{2}}^{2}−{v_{2}}^{2} \right)$$
 
 $$P = \frac{1}{4} \rho A_{T} {v_{2}}^{3} \left( \frac{v_{1}}{v_{2}} +1 \right) \left( \frac{v_{1}}{v_{2}}^{2}−1 \right)$$
-%%
 
 $$P = \frac{1}{4} \rho A_{T} {v_{2}}^{3} \left( \frac{v_{1}}{v_{2}}^{3} + \frac{v_{1}}{v_{2}}^{2} - \frac{v_{1}}{v_{2}} - 1 \right) $$
 
+*This explanation may be more intuitive if I factor $v_{1}$ out instead so it's clear power is proportional with wind speed cubed.*
+%%
+
+> [!NOTE]- Workings
+> 
+> $$\text{substituting:}\quad v_{2} = \frac{v_{2}}{v_{1}}v_{1}$$
+> 
+> $$P = \frac{1}{4} \rho A_{T} \left( v_{1} + \frac{v_{2}}{v_{1}} v_{1} \right) \left( {{v_{1}}^{2} - \frac{v_{2}}{v_{1}}v_{1}}^{2} \right)$$
+> 
+> $$P = \frac{1}{4} \rho A_{T} {v_{1}}^{3} \left( 1 + \frac{v_{2}}{v_{1}} \right) \left( 1 - \frac{v_{2}}{v_{1}}^{2} \right)$$
+> 
+
+$$P = \frac{1}{4} \rho A_{T} {v_{1}}^{3} \left( - \frac{v_{2}}{v_{1}}^{3} - \frac{v_{2}}{v_{1}}^{2} + \frac{v_{2}}{v_{1}} + 1 \right) $$
+
+This indicates the proportional velocity drop across a turbine $x$, where $x = v_{2}/v_{1}$, impacts power output $P$ according to the following relationship:
+
+$$\Large P \propto- x^{3} - x^{2} + x + 1 \quad \text{where} \ x = v_{2}/v_{1}$$
+
+The maximum value Given that the turbine is extracting energy from the wind flow the velocity will go down $v_{2} < v_{1}$ and will not be negative $v_{2} > 0$ thus providing the limits. The maximum value inside of these limits the proportional velocity drop associated with the maximum continuous extract-able power:
+
+$$P_{\text{max}} = \max(-x^{3} - x^{2} + x + 1) \quad \text{in range:} \ 0<x<1$$
+
+%% Workings
+*integrate and take the stationary points in your range then plug it back into the equation or just slap it in wolfram alpha :shrug*
+%%
+
+Which occurs at $x = 1/3$ indicating a turbine must reduce the fluid velocity by $66.\dot{6}$% to extract the maximum continuous power from a fluid flow. Thus at max efficiency $v_{2} = v_{1}/3 \ @ \ \eta_{max}$.
+
+### Finding max efficiency
+%%[[2025-01-10]] @ 02:48%%
+
+Dividing the power equation by the total power of the wind stream gives the following equation for the proportion of available wind power extracted:
+
+$$\Large \eta = \frac
+{\frac{1}{4} \rho A_{T} {v_{1}}^{3} \left( - \frac{v_{2}}{v_{1}}^{3} - \frac{v_{2}}{v_{1}}^{2} + \frac{v_{2}}{v_{1}} + 1 \right)}
+{\frac{1}{2} \rho A_{T} \frac{v_{1} + v_{2}}{2} {v_{1}}^{2}} $$
+
+Once the redundant terms are cancelled and the optimal proportional velocity drop is substituted this becomes:
+
+> [!NOTE]- Workings
+> $$\begin{align*}
+> \text{Canceling redundant terms,}\\
+> \eta &= \frac
+> {\cancel{\frac{1}{4}} \cancel{\rho A_{T}} {v_{1}}^{\cancel{3}} \left( - \frac{v_{2}}{v_{1}}^{3} - \frac{v_{2}}{v_{1}}^{2} + \frac{v_{2}}{v_{1}} + 1 \right)}
+> {\cancel{\frac{1}{2}} \cancel{\rho A_{T}} \frac{v_{1} + v_{2}}{\cancel{2}} \cancel{{v_{1}}^{2}}}
+> \\\\
+> \eta &= \frac
+> {\cancel{{v_{1}}} \left( - \frac{v_{2}}{v_{1}}^{3} - \frac{v_{2}}{v_{1}}^{2} + \frac{v_{2}}{v_{1}} + 1 \right)}
+> {\cancel{v_{1}} + \frac{v_{2}}{v_{1}}}
+> \\\\
+> \eta &=  \frac
+> {- \frac{v_{2}}{v_{1}}^{\cancel{3}2} - \frac{v_{2}}{v_{1}}^{\cancel{2}} + \cancel{\frac{v_{2}}{v_{1}}} + \cancel{1} \frac{v_{1}}{v_{2}}}
+> {\cancel{\frac{v_{2}}{v_{1}}}}
+> \\\\
+> \eta &= -\frac{v_{2}}{v_{1}}^{2} -\frac{v_{2}}{v_{1}} + \frac{v_{1}}{v_{2}}
+> \\\\
+> \text{Substituting:} \ v_{2} = v_{1}/3 \ @ \ \eta_{max}
+> \\
+> \eta_{max} &= -\frac{(v_{1}/3)}{v_{1}}^{2} -\frac{(v_{1}/3)}{v_{1}} +\frac{v_{1}}{(v_{1}/3)}
+> \\
+> \eta_{max} &= -\frac{\cancel{v_{1}}}{3 \cancel{v_{1}}}^{2} -\frac{\cancel{v_{1}}}{3 \cancel{v_{1}}} +\frac{3\cancel{v_{1}}}{\cancel{v_{1}}}
+> \end{align*}
+> $$
+
+$$\eta = -\frac{1}{3}^{2} -\frac{1}{3} +3 = 2.\dot{5}$$
 
 ## c. A horizontal axis wind turbine (HAWT) has a blade span (diameter) of 15 m and the hub is 35 m above ground level. The wind speed at 2 m height is 5 m/s. 
 ### i. Calculate the actual power output of the wind turbine assuming maximum efficiency. 
