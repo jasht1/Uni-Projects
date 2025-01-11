@@ -228,6 +228,7 @@ D = \begin{bmatrix}
 \end{bmatrix}$$
 
 ### (i) Check the open-loop stability of the system
+[5 marks]
 %%[[2024-12-24]] @ 14:54%%
 
 The system stability can be judged by the poles of the system, the poles are found as the [[eigenvalue]]s of the $A$ matrix given by the [[characteristic equation]]:
@@ -295,6 +296,7 @@ $$\Large \lambda = \quad 980, \quad \text{or} \quad -100$$
 $$\text {In this case 980 is positive and real indicating an unstable system.}$$
 
 ### (ii) Show whether the system is controllable.
+[3 marks]
 %%[[2024-12-31]] @ 02:35%%
 
 For a system to be 'controllable' any real output of the system must be reachable from any other by a finite set of real inputs in a finite time. It must be proved that the available inputs can influence every state in the system uniquely, as if this is the case then there must exist some linear combination of inputs that can affect every change to the system. This can be judged by it's controllability matrix $C_{M}$:
@@ -354,6 +356,8 @@ As $det(C_{M}) \neq 0$ $C_{M}$ must be full rank thus the system is controllable
 
 
 ### (iii) Design a regulator with the following characteristic equation, designed to hold the ball at the reference height $h=0$: $$s^{2} + 150s + 9000 = 0$$
+
+[10 marks]
 %%[[2025-01-05]] @ 14:00%%
 
 [[Nise's Control Systems Engineering - Norman S_ Nise.pdf#page=671&selection=351,0,353,6|Nise's Control Systems Engineering - 12.2 Controller Design, page 671]]
@@ -526,3 +530,64 @@ K = \Large\begin{bmatrix}
 \end{bmatrix}$$
 
 ## (b) Sketch the model as a Block Diagram, including the state feedback controller.
+[7 marks]
+%%[[2025-01-11]] @ 15:59%%
+
+![[State Space System Diagram (A,B,C,K).excalidraw.svg]]
+
+# Question 3
+
+A System contains a ‘$v^{2}$’ damper, shown in [[EGR3032M Sample TCA Questions.pdf#page=3&selection=112,0,113,43|Figure 3]]. Inspecting the free body diagram and summing forces gives: 
+
+$$M \ddot{x} = f(t) + f_{D}(t)$$
+
+Where:
+- $f_{D}(t) = - d \dot{x}^{2} (t)$ : damping force
+- $d = 0.1$ Nm/s : damping coefficient
+- $f(t) = 10 + \delta f(t)$ : applied force
+
+> [!NOTE] Interpretation note
+> The question posits the sum of the forces as:
+> 
+> $$M \ddot{x} + f_{D}(t) = f(t)$$
+> 
+> and the damper force as:
+> 
+> $$f_{D}(t) = d \dot{x}^{2} (t)$$
+> 
+> This is an interesting way of presenting the system, It is consistent but I would argue unclear. I would intuitively express the system as:
+> 
+> $$M \ddot{x} = f(t) + f_{D}(t)$$
+> 
+> To better indicate that $M \ddot{x}$ is the sum of forces, being a substitution of $F = ma$, and that the forces being summed are the applied force $f(t)$ and the damping force $f_{D}(t)$.
+> with damper force as:
+> 
+> $$f_{D}(t) = - d \dot{x}^{2} (t)$$
+> 
+> To better indicate that damping force acts against the motion of the system. This is how I have expressed the question above.
+
+## (a) Explain why this model is considered to be nonlinear.
+[3 marks]
+%%[[2025-01-11]] @ 16:08%%
+
+For a system to be considered linear all the equations that govern it's behaviour may only sum system states. States can be multiplied by constants but products or indices of system states make a system non linear.
+In this case the equation that governs the behaviour of the damper $fD(t) = d \dot{x}^{2} (t)$ is proportional to velocity squared. Raising a system state, velocity $v$, to a power makes this a non linear function. Thus the system as a whole is non-linear by transitive property. 
+
+## (b) Linearise the model about the equilibrium point. 
+[10 marks] 
+
+
+> [!NOTE] Interpenetration note
+> The equilibrium point is ambiguous given there are multiple forces and states. Equilibrium will be taken to mean $\ddot{x} = 0$. 
+
+
+
+
+## (c) Write the linearised model in LTI state space format 
+[6 marks]
+
+### (i) Can this linearised model be used to assess the system when relatively small forces are applied, causing small deflections of ± 5mm from the equilibrium point? Explain your answer. 
+[3 marks] 
+
+### (ii) Can this linearised model be used to assess the system when a large impact is applied, causing the damper to fully compress and extend? Explain your answer. 
+[3 marks]
