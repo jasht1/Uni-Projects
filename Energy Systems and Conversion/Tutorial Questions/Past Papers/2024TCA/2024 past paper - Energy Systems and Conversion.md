@@ -7,7 +7,7 @@ https://blackboard.lincoln.ac.uk/ultra/courses/_200912_1/outline/file/_9847443_1
 [5 marks]
 %%[[2025-01-08]] @ 14:51%%
 
-The [[Betz law]] is an estimate for the theoretical maximum continuous efficiency of an open flow turbine based on the optimal proportion of energy to extract from an incompressible fluid flow. In practice turbines cannot convert all the kinetic energy extracted from the mass flow to electrical energy due to:
+The [[Betz limit]] is an estimate for the theoretical maximum continuous efficiency of an open flow turbine based on the optimal proportion of energy to extract from an incompressible fluid flow. In practice turbines cannot convert all the kinetic energy extracted from the mass flow to electrical energy due to:
 
 1. Coil losses & associated inefficiencies in the alternator,
 2. Non Ideal fluid flow:
@@ -27,13 +27,13 @@ The [[Betz law]] is an estimate for the theoretical maximum continuous efficienc
 ### The claim is ambiguous 
 
 It should be stated at a minimum that the report of this claim is too ambiguous to be precisely interpret-able for several reasons. 
-Firstly any claim of efficiency is only relevant in the scope of the system boundaries chosen and this has not been communicated. For example the efficiency of the system where the bounds are considered the axial wind power to the mechanical power delivered to the hub is not comparable to the efficiency where the bounds are considered the mechanical power delivered hub to the electrical power at the generator terminals and so on. If the claim where made to an economist then they might expect an efficiency that considered expenses and profits rather than Watts. This is to say that the claim is to ambiguous to be true or false in and of itself. There may be a justifiable interpretation that supports "an efficiency of 65.3%" depending on where the system bounds are drawn and what approximations are taken.
+Firstly any claim of efficiency is only relevant in the scope of the system boundaries chosen and this has not been communicated. For example the efficiency of the system where the bounds are considered the axial wind power to the mechanical power delivered to the hub is not comparable to the efficiency where the bounds are considered the mechanical power delivered by the hub to the electrical power at the generator terminals and so on. If the claim where made to an economist then they might expect an efficiency that considered expenses and profits rather than Watts. This is to say that the claim is to ambiguous to be true or false in and of itself. There may be a justifiable interpretation that supports "an efficiency of 65.3%" depending on where the system bounds are drawn and what approximations are taken.
 
 ### Assuming the optimal case
 
 Given we have no information on the nature of the turbine we ought avoid speculation by keeping assumptions generally applicable to any device that my be fairly described as a "wind turbine". Considering a "wind turbine" as a means to convert the kinetic energy of a wind stream into electrical energy we may assume these as the system bounds and thus the efficiency a measure of the proportion of electrical power output over the total wind power available in the axial cross sectional area of the turbine. We can also assume there is some actuator exposed to a wind stream, this actuator extracts kinetic energy from the wind stream and converts it to electrical energy. It can be assumed that this conversion is less than 100% efficient based on the 2nd law of thermodynamics thus the electrical output power must be less than the power extracted from the wind stream. 
 
-Using these assumptions [[Betz law]] can be applied which provides an estimate for the theoretical maximum continuous efficiency of an open flow turbine based on the optimal velocity change of the fluid given by a control volume analysis. 
+Using these assumptions [[Betz limit]] can be applied which provides an estimate for the theoretical maximum continuous efficiency of an open flow turbine based on the optimal velocity change of the fluid given by a control volume analysis. 
 
 As the kinetic energy of a wind stream is given by:
 
@@ -68,7 +68,8 @@ This section will prove the velocity over the turbine $v_{T}$ is the average of 
 2. $T$ : at the rotor,
 3. $D$ : downstream of the rotor,
 
-each with their respective cross section area $A_{n}$ and flow speed $v_{n}$. where $v_{U}$ is equivalent to $v_{1}$ and $v_{D}$ is equivalent to $v_{2}$ as used previously. The manifold on which the cross sections are taken are normal to 
+each with their respective cross section area $A_{n}$ and flow speed $v_{n}$. where $v_{U}$ is equivalent to $v_{1}$ and $v_{D}$ is equivalent to $v_{2}$ as used previously. 
+%% The manifold on which the cross sections are taken are normal to  %%
 
 Conservation of mass implies mass flow rate at these 3 axial slices are equal:
 
@@ -123,12 +124,12 @@ By setting these identities as equal an identity for $v_{T}$ in terms of $v_{U}$
 $$P = \rho A_{T} v_{T}^{2} (v_{U} - v_{D}) = \frac{1}{2} \rho A_{T} v_{T} (v_{U}^{2} - v_{D}^{2})$$
 
 > [!NOTE] Workings
-> $$\begin{align*}
+> $$\begin{align}
 > \cancel{\rho A_{T} v_{T}} v_{T} (v_{U} - v_{D}) &= \cancel{\rho A_{T} v_{T}} \frac{1}{2} (v_{U}^{2} - v_{D}^{2})\\
 > v_{T} \cancel{(v_{U} - v_{D})} &= \frac{1}{2} (v_{U} + v_{D}) \cancel{(v_{U} - v_{D})}\\
 > &\therefore \\
 > v_{T} &= \frac{1}{2} (v_{U} + v_{D})\\
-> \end{align*}$$
+> \end{align}$$
 
 Thus:
 
@@ -166,11 +167,11 @@ $$P = \frac{1}{4} \rho A_{T} {v_{2}}^{3} \left( \frac{v_{1}}{v_{2}}^{3} + \frac{
 > $$P = \frac{1}{4} \rho A_{T} {v_{1}}^{3} \left( 1 + \frac{v_{2}}{v_{1}} \right) \left( 1 - \frac{v_{2}}{v_{1}}^{2} \right)$$
 > 
 
-$$P = \frac{1}{4} \rho A_{T} {v_{1}}^{3} \left( - \frac{v_{2}}{v_{1}}^{3} - \frac{v_{2}}{v_{1}}^{2} + \frac{v_{2}}{v_{1}} + 1 \right) $$
+$$\large P = \frac{1}{4} \rho A_{T} {v_{1}}^{3} \left( - \frac{v_{2}}{v_{1}}^{3} - \frac{v_{2}}{v_{1}}^{2} + \frac{v_{2}}{v_{1}} + 1 \right) $$
 
 This indicates the proportional velocity drop across a turbine $x$, where $x = v_{2}/v_{1}$, impacts power output $P$ according to the following relationship:
 
-$$\Large P \propto- x^{3} - x^{2} + x + 1 \quad \text{where} \ x = v_{2}/v_{1}$$
+$$\large P \propto- x^{3} - x^{2} + x + 1 \quad \text{where} \ x = v_{2}/v_{1}$$
 
 The maximum value Given that the turbine is extracting energy from the wind flow the velocity will go down $v_{2} < v_{1}$ and will not be negative $v_{2} > 0$ thus providing the limits. The maximum value inside of these limits the proportional velocity drop associated with the maximum continuous extract-able power:
 
@@ -194,6 +195,7 @@ $$\Large \eta = \frac
 Once the redundant terms are cancelled and the optimal proportional velocity drop is substituted this becomes:
 
 > [!NOTE]- Workings
+> 
 > $$\begin{align*}
 > \text{Canceling redundant terms,}\\
 > \eta &= \frac
@@ -280,6 +282,13 @@ A fuel rich mix can achieve higher peak power for an engine tuned to take advant
 
 ### i. Calculate the air–to–fuel ratio 
 [5 marks]
+%%[[2025-01-10]] @ 15:04%%
+
+Dry air is assumed to be 21% $O_{2}$ and 79% $N_{2}$, given that no new nitrogen was introduced and no oxides of nitrous appear in the in the gasious product analysis we may assume the amount of $N_{2}$ is unchanged thus giving a means of translating the proportion of oxygen in the in the gaseous product to it's proportion to the initial dry air.
+
+$$21*$$
+
+$$C_{8}H_{18} + O_{2} \to CO_{2} + CO + N_{2}$$
 
 ### ii. What is the percentage of theoretical air used, and 
 [5 marks]
