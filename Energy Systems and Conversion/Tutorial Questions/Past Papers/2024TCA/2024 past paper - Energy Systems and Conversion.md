@@ -271,7 +271,7 @@ A well designed engine should be able to withstand the added thermal and mechani
 
 A fuel rich mix can achieve higher peak power for an engine tuned to take advantage of it, however this is at the expense of lower fuel efficiency 
 
-## b. A gaseous fuel (C8H18) is burned in the presence of air that is assumed completely dry. Volumetric analysis of the gaseous products on a dry basis revealed the following composition:
+## b. A gaseous fuel ($C_{8}H_{18}$) is burned in the presence of air that is assumed completely dry. Volumetric analysis of the gaseous products on a dry basis revealed the following composition:
 
 | Name            | Proportion |
 | --------------- | ---------- |
@@ -284,13 +284,136 @@ A fuel rich mix can achieve higher peak power for an engine tuned to take advant
 [5 marks]
 %%[[2025-01-10]] @ 15:04%%
 
-Dry air is assumed to be 21% $O_{2}$ and 79% $N_{2}$, given that no new nitrogen was introduced and no oxides of nitrous appear in the in the gasious product analysis we may assume the amount of $N_{2}$ is unchanged thus giving a means of translating the proportion of oxygen in the in the gaseous product to it's proportion to the initial dry air.
+The air–to–fuel ratio is the proportion of mass of air over the mass of fuel introduced to combustion chamber.
 
-$$21*$$
+$$\text{AFR} = \frac{m_{\text{air}}}{m_{\text{fuel}}}$$
 
-$$C_{8}H_{18} + O_{2} \to CO_{2} + CO + N_{2}$$
+Assuming that the dry air is 21% $O_{2}$ and 79% $N_{2}$ it's mass is equivalent to:
 
-### ii. What is the percentage of theoretical air used, and 
+$$m_{\text{air}} = n_{\text{air}} \left( \frac{21}{100}M_{O_{2}} + \frac{79}{100} M_{N_{2}} \right)$$
+
+Similarly the fuel mass can be substituted for number of moles and molar mass:
+
+$$\text{AFR} = \frac {\frac{21}{100}2M_{O} + \frac{79}{100} 2M_{N}}{8 M_{C} + 18 M_{H}} \times \frac{n_{\text{air}}}{n_{\text{fuel}}}$$
+
+^c733f8
+
+Where the number of moles of air $n_{\text{air}}$ is implied by the number of moles of oxygen $n_{O_{2}}$:
+
+$$n_{\text{air}} = \frac{100}{21} n_{O_{2}}$$
+
+Assuming that all of the fuel reacted the number of moles of fuel $n_{\text{fuel}}$ can be found as a proportion to the moles of oxygen $n_{O_{2}}$ based on the gaseous products produced.   
+
+however, not all of the oxygen was reacted as it is still present in the gaseous product and the amount of gas in the product is not that of the initial air so the proportions provided are not directly comparable. 
+
+Given that no new nitrogen was introduced and no oxides of nitrous appear in the in the gaseous product analysis we may assume the amount of $N_{2}$ is unchanged. However dry air is assumed to be 79% $N_{2}$ not 83.5% indicating the change in the amount of gaseous substance. This will be due to $O_{2}$ being removed in the form of water as well as additional $CO_{2}$ & $CO$ being introduced as combustion products. 
+This giving a means of translating the proportion of oxygen in the gaseous product to it's equivalent proportion in the initial dry air.
+
+$$\large \frac{O_{2}\text{ un-reacted}} {O_{2} \text{ total}} = \frac{21 - \left( 5.6 \times\frac{83}{79} \right)}{21}$$
+
+Therefore the total oxygen can be found based on the amount reacted:
+
+$$\large n_{O_{2}} \text{ total} = n_{O_{2}} \text{ reacted} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
+
+Based on the gaseous products present the combustion equation must have the following form:
+
+%% Overly involved method for such a simple equation
+
+$$C_{8}H_{18} + O_{2} \to CO_{2} + CO + H_{2}O$$
+
+This can be represented in matrix form as:
+
+$$\begin{bmatrix} Q_{C_{8}H_{18}}  & Q_{O_{2}}\end{bmatrix} 
+\begin{bmatrix}8 & 18 & 0 \\ 0 & 0 & 2\end{bmatrix}
+= 
+\begin{bmatrix}Q_{CO_{2}} + Q_{CO} + Q_{H_{2}O} \end{bmatrix}
+\begin{bmatrix}1 & 0 & 2 \\ 1 & 0 & 1 \\ 0 & 2 & 1\end{bmatrix}$$
+%%
+
+$$q_{1} \ C_{8}H_{18} + q_{2} \ O_{2} \to q_{3} \ CO_{2} + q_{4} \ CO + q_{5} \ H_{2}O$$
+
+Where:
+
+- $q_{1} = n_{\text{fuel}} \text{ reacted}$ 
+- $q_{2} = n_{O_{2}} \text{ reacted}$ 
+
+As the fuel $C_{8}H_{18}$ contains 18 hydrogen's and this was entirely converted to water $H_{2}O$ with 2 hydrogens each it must have done so in a $1:9$ ratio.
+
+$$q_{5} = 8 q_{1}$$
+
+As $CO_{2}$ and $CO$ are negligible in the starting air and exist in the gaseous products in a $100:9$ ratio with no other carbon based products then:
+
+$$q_{3} = \frac{100}{100+9}q_{1}$$
+
+$$q_{4} = \frac{9}{100+9}q_{1}$$
+
+Now oxygen can be accounted for in terms of $q_{1}$ as a stoichiometric sum of the products:
+
+$$q_{2} = (2q_{3}+ q_{4}+ q_{5})q_{1} = \left( \frac{50}{109} +\frac{9}{109} +8 \right) q_{1} = \frac{931}{109}q_{1}$$
+
+%% Redundant
+Thus the combustion can be represented as:
+
+$$C_{8}H_{18} + 8\frac{59}{109} O_{2} \to \frac{100}{109} CO_{2} + \frac{9}{109} CO + 8 H_{2}O$$
+
+
+*while it is best practice to split this representation up into* 
+
+*$$C_{8}H_{18} + O_{2} \to CO + H_{2}O$$*
+*$$C_{8}H_{18} + O_{2} \to CO_{2} + H_{2}O$$*
+
+*and indicate the proportionality of the 2 reactions but this doesn't serve our means in this case as all we care about is $q_{2}/q_{1}$ i.e. oxygen to fuel ratio.*
+%%
+
+Therefore the moles of fuel $n_{\text{fuel}}$ can be represented in terms of moles of oxygen reacted $n_{O_{2}} \text{ reacted} = q_{2}$ along with moles of air $n_{\text{air}}$:
+
+$$\large n_{\text{fuel}} = \frac{109}{931} q_{2} \quad \& \quad n_{\text{air}} = \frac{100}{21} q_{2} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
+
+Substituting these identities into the [[#^c733f8|AFR equation found earlier]] air to fuel ratio is equal to:
+
+$$\large \text{AFR} = \frac
+{\frac{21}{100}2M_{O} + \frac{79}{100} 2M_{N}}
+{8 M_{C} + 18 M_{H}} 
+\times \frac
+{\frac{100}{21} q_{2} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)}
+{\frac{109}{931} q_{2}}$$
+
+Substituting the values for $M_{O}$, $M_{N}$, $M_{C}$, and $M_{H}$ the left hand fraction ($\text{LHF}$) can be reduced: 
+
+$$\text{LHF} = \frac
+{\frac{21}{100}2(16) + \frac{79}{100} 2(28)}
+{8 (12) + 18 (1)} $$
+$$\text{LHF} = \frac
+{\frac{21}{100}32 + \frac{79}{100}56}
+{96 + 18}$$
+$$\text{LHF} = \frac
+{21 \times 32 + 79 \times 56}
+{114 \times 100}$$
+$$\text{LHF} = \frac
+{21 \times 32 + 79 \times 56}
+{114 \times 100}$$
+$$\text{LHF} = \frac{5096}{11400} = \frac{637}{1425}$$
+
+In the right hand fraction ($\text{RHF}$) $q_{2}$ can be cancelled out and reduced:
+
+$$\text{RHF} = \frac
+{\frac{100}{21} \cancel{q_{2}} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)}
+{\frac{109}{931} \cancel{q_{2}}}$$
+$$\text{RHF} = \frac
+{931 \times 100 \left(1 + \frac{5.6 \times 83}{79 \times 21} \right)}
+{21 \times 109}$$
+$$\text{RHF} = \frac
+{93100 + \frac{93100 \times 5.6 \times 83}{1659}}
+{2289}$$
+$$\text{RHF} = \frac{93100}{2289} + \frac{93100 \times 5.6 \times 83}{2289 \times 1659}$$
+$$\text{RHF} = \frac{4035220}{77499}$$
+
+Substituting the reduced fractions back in:
+
+$$\large \text{AFR} = \frac{637}{1425} \times \frac{4035220}{77499} = \frac{27057212}{1162485} \approx 23.3$$
+
+
+### ii. What is the percentage of theoretical air used
 [5 marks]
 
 ### iii. Determine the quantity of water vapour that condenses as the products are cooled to 25°C at atmospheric pressure. 
