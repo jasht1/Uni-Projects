@@ -349,12 +349,12 @@ $$q_{4} = \frac{9}{100+9}q_{1}$$
 
 Now oxygen can be accounted for in terms of $q_{1}$ as a stoichiometric sum of the products:
 
-$$q_{2} = (2q_{3}+ q_{4}+ q_{5})q_{1} = \left( \frac{50}{109} +\frac{9}{109} +8 \right) q_{1} = \frac{931}{109}q_{1}$$
+$$q_{2} = \left( \frac{2q_{3}+ q_{4}+ q_{5}}{2} \right) q_{1} = \left( \frac{2\left( \frac{100}{109} \right) +\left(\frac{9}{109}\right) +(8)}{2} \right) q_{1} = \frac{1081}{218}q_{1}$$
 
 %% Redundant
 Thus the combustion can be represented as:
 
-$$C_{8}H_{18} + 8\frac{59}{109} O_{2} \to \frac{100}{109} CO_{2} + \frac{9}{109} CO + 8 H_{2}O$$
+$$C_{8}H_{18} + 4\frac{209}{218} O_{2} \to \frac{100}{109} CO_{2} + \frac{9}{109} CO + 8 H_{2}O$$
 
 
 *while it is best practice to split this representation up into* 
@@ -367,7 +367,7 @@ $$C_{8}H_{18} + 8\frac{59}{109} O_{2} \to \frac{100}{109} CO_{2} + \frac{9}{109}
 
 Therefore the moles of fuel $n_{\text{fuel}}$ can be represented in terms of moles of oxygen reacted $n_{O_{2}} \text{ reacted} = q_{2}$ along with moles of air $n_{\text{air}}$:
 
-$$\large n_{\text{fuel}} = \frac{109}{931} q_{2} \quad \& \quad n_{\text{air}} = \frac{100}{21} q_{2} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
+$$\large n_{\text{fuel}} = \frac{218}{1081} q_{2} \quad \& \quad n_{\text{air}} = \frac{100}{21} q_{2} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
 
 Substituting these identities into the [[#^c733f8|AFR equation found earlier]] air to fuel ratio is equal to:
 
@@ -376,7 +376,7 @@ $$\large \text{AFR} = \frac
 {8 M_{C} + 18 M_{H}} 
 \times \frac
 {\frac{100}{21} q_{2} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)}
-{\frac{109}{931} q_{2}}$$
+{\frac{218}{1081} q_{2}}$$
 
 Substituting the values for $M_{O}$, $M_{N}$, $M_{C}$, and $M_{H}$ the left hand fraction ($\text{LHF}$) can be reduced: 
 
@@ -398,19 +398,19 @@ In the right hand fraction ($\text{RHF}$) $q_{2}$ can be cancelled out and reduc
 
 $$\text{RHF} = \frac
 {\frac{100}{21} \cancel{q_{2}} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)}
-{\frac{109}{931} \cancel{q_{2}}}$$
+{\frac{218}{1081} \cancel{q_{2}}}$$
 $$\text{RHF} = \frac
-{931 \times 100 \left(1 + \frac{5.6 \times 83}{79 \times 21} \right)}
-{21 \times 109}$$
+{1081 \times 100 \left(1 + \frac{5.6 \times 83}{79 \times 21} \right)}
+{21 \times 218}$$
 $$\text{RHF} = \frac
-{93100 + \frac{93100 \times 5.6 \times 83}{1659}}
-{2289}$$
-$$\text{RHF} = \frac{93100}{2289} + \frac{93100 \times 5.6 \times 83}{2289 \times 1659}$$
-$$\text{RHF} = \frac{4035220}{77499}$$
+{108100 + \frac{108100 \times 5.6 \times 83}
+{1659}}{4578}$$
+$$\text{RHF} = \frac{108100}{4578} + \frac{108100 \times 5.6 \times 83}{4578 \times 1659}$$
+$$\text{RHF} = \frac{16398770}{542493}$$
 
 Substituting the reduced fractions back in:
 
-$$\large \text{AFR} = \frac{637}{1425} \times \frac{4035220}{77499} = \frac{27057212}{1162485} \approx 23.3$$
+$$\large \text{AFR} = \frac{637}{1425} \times \frac{16398770}{542493} = \frac{298457614}{22087215} \approx 13.5$$
 
 
 ### ii. What is the percentage of theoretical air used
