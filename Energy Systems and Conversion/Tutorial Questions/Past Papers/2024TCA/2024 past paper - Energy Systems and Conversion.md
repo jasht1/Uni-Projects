@@ -288,19 +288,15 @@ The air–to–fuel ratio is the proportion of mass of air over the mass of fuel
 
 $$\text{AFR} = \frac{m_{\text{air}}}{m_{\text{fuel}}}$$
 
-Assuming that the dry air is 21% $O_{2}$ and 79% $N_{2}$ it's mass is equivalent to:
+Where the mass of air $n_{\text{air}}$ is implied by the number of moles of oxygen $n_{O_{2}}$ Assuming that the dry air is 21% $O_{2}$ and 79% $N_{2}$:
 
-$$m_{\text{air}} = n_{\text{air}} \left( \frac{21}{100}M_{O_{2}} + \frac{79}{100} M_{N_{2}} \right)$$
+$$m_{\text{air}} = \frac{100}{21} M_{O_{2}} n_{O_{2}}$$
 
 Similarly the fuel mass can be substituted for number of moles and molar mass:
 
-$$\text{AFR} = \frac {\frac{21}{100}2M_{O} + \frac{79}{100} 2M_{N}}{8 M_{C} + 18 M_{H}} \times \frac{n_{\text{air}}}{n_{\text{fuel}}}$$
+$$\text{AFR} = \frac {\frac{100}{21} M_{O_{2}}}{8 M_{C} + 18 M_{H}} \times \frac{n_{\text{air}}}{n_{\text{fuel}}}$$
 
 ^c733f8
-
-Where the number of moles of air $n_{\text{air}}$ is implied by the number of moles of oxygen $n_{O_{2}}$:
-
-$$n_{\text{air}} = \frac{100}{21} n_{O_{2}}$$
 
 Assuming that all of the fuel reacted the number of moles of fuel $n_{\text{fuel}}$ can be found as a proportion to the moles of oxygen $n_{O_{2}}$ based on the gaseous products produced.   
 
@@ -372,27 +368,21 @@ $$\large n_{\text{fuel}} = \frac{218}{1081} q_{2} \quad \& \quad n_{\text{air}} 
 Substituting these identities into the [[#^c733f8|AFR equation found earlier]] air to fuel ratio is equal to:
 
 $$\large \text{AFR} = \frac
-{\frac{21}{100}2M_{O} + \frac{79}{100} 2M_{N}}
+{\frac{100}{21} M_{O_{2}}}
 {8 M_{C} + 18 M_{H}} 
 \times \frac
 {\frac{100}{21} q_{2} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)}
 {\frac{218}{1081} q_{2}}$$
 
-Substituting the values for $M_{O}$, $M_{N}$, $M_{C}$, and $M_{H}$ the left hand fraction ($\text{LHF}$) can be reduced: 
+Substituting the values for $M_{O}$, $M_{C}$, and $M_{H}$ the left hand fraction ($\text{LHF}$) can be reduced: 
 
 $$\text{LHF} = \frac
-{\frac{21}{100}2(16) + \frac{79}{100} 2(28)}
+{\frac{100}{21}2(16)}
 {8 (12) + 18 (1)} $$
 $$\text{LHF} = \frac
-{\frac{21}{100}32 + \frac{79}{100}56}
+{\frac{100}{21}32}
 {96 + 18}$$
-$$\text{LHF} = \frac
-{21 \times 32 + 79 \times 56}
-{114 \times 100}$$
-$$\text{LHF} = \frac
-{21 \times 32 + 79 \times 56}
-{114 \times 100}$$
-$$\text{LHF} = \frac{5096}{11400} = \frac{637}{1425}$$
+$$\text{LHF} = \frac{1600}{1197}$$
 
 In the right hand fraction ($\text{RHF}$) $q_{2}$ can be cancelled out and reduced:
 
@@ -410,7 +400,7 @@ $$\text{RHF} = \frac{16398770}{542493}$$
 
 Substituting the reduced fractions back in:
 
-$$\large \text{AFR} = \frac{637}{1425} \times \frac{16398770}{542493} = \frac{298457614}{22087215} \approx 13.5$$
+$$\large \text{AFR} = \frac{1600}{1197} \times \frac{16398770}{542493} = \frac{26238032000}{649364121} \approx 40.4$$
 
 
 ### ii. What is the percentage of theoretical air used
