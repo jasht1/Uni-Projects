@@ -387,11 +387,11 @@ $$q_{3} = 8q_{1} \quad \& \quad q_{4}= \frac{18}{2}q_{1}$$
 
 Therefore:
 
-$$q_{2} = \frac{2(8q_{1})+ \frac{18}{2} q_{1}}{2} = 26q_{1}$$
+$$q_{2} = \frac{2(8q_{1})+ \frac{18}{2} q_{1}}{2} = 12 \frac{1}{2} q_{1}$$
 
 Indicating a stoichiometric ratio of: 
 
-$$C_{8}H_{18} + 26 \ O_{2} \to 8 \ CO_{2} + 9 \ H_{2}O$$
+$$2 C_{8}H_{18} + 25 \ O_{2} \to 16 \ CO_{2} + 18 \ H_{2}O$$
 
 Air to fuel ratio can then be found as [[#^c733f8|previously stated]]:
 
@@ -399,15 +399,15 @@ $$\text{AFR} = \frac {\frac{100}{21} 2M_{O}}{8 M_{C} + 18 M_{H}} \times \frac{n_
 
 Substituting in all the named constants:
 
-$$\text{AFR}^{\text{theoretical}} = \frac{\frac{100}{21}32}{96 + 18} \times \frac{26}{1} = \frac{41600}{1197} \approx 34.75$$
+$$\text{AFR}^{\text{theoretical}} = \frac{\frac{100}{21}32}{96 + 18} \times \frac{25}{2} = \frac{20000}{1197} \approx 16.71$$
 
 Therefore the the percentage of theoretical air used is given by:
 
 $$\large x \% _{\text{air}}^{\text{theoretical}} =
 \frac{\text{AFR}^{\text{actual}}}{\text{AFR}^{\text{theoretical}}} =
-\frac{\frac{205826560}{10307367}}{\frac{41600}{1197}} = \frac{321604}{559715} \approx 57.5 \% \ _{\text{air}}^{\text{theoretical}}
+\frac{\frac{205826560}{10307367}}{\frac{20000}{1197}} = \frac{1286416}{1076375} \approx 120 \% \ _{\text{air}}^{\text{theoretical}}
 $$
 
-### iii. Determine the quantity of water vapour that condenses as the products are cooled to 25°C at atmospheric pressure. 
+### iii. Determine the quantity of water vapour that condenses as the products are cooled to 25°C at atmospheric pressure. Take atmospheric pressure to be 105 Pa.
 [5 marks]
-Note: you may take atmospheric pressure to be 105 Pa.
+
