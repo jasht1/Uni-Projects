@@ -298,9 +298,7 @@ $$\text{AFR} = \frac {\frac{100}{21} 2M_{O}}{8 M_{C} + 18 M_{H}} \times \frac{n_
 
 ^c733f8
 
-Assuming that all of the fuel reacted the number of moles of fuel $n_{\text{fuel}}$ can be found as a proportion to the moles of oxygen $n_{O_{2}}$ based on the gaseous products produced.   
-
-however, not all of the oxygen was reacted as it is still present in the gaseous product and the amount of gas in the product is not that of the initial air so the proportions provided are not directly comparable. 
+however, not all of the oxygen was reacted as it is still present in the gaseous product. The amount of gas in the product is not necessarily the same as the initial air so the proportions provided are not directly comparable. 
 
 Given that no new nitrogen was introduced and no oxides of nitrous appear in the in the gaseous product analysis we may assume the amount of $N_{2}$ is unchanged. However dry air is assumed to be 79% $N_{2}$ not 83.5% indicating the change in the amount of gaseous substance. This will be due to $O_{2}$ being removed in the form of water as well as additional $CO_{2}$ & $CO$ being introduced as combustion products. 
 This giving a means of translating the proportion of oxygen in the gaseous product to it's equivalent proportion in the initial dry air.
@@ -311,20 +309,8 @@ Therefore the total oxygen can be found based on the amount reacted:
 
 $$\large m_{O_{2}} \text{ total} = m_{O_{2}} \text{ reacted} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
 
+Assuming that all of the fuel reacted the number of moles of fuel $n_{\text{fuel}}$ can be found as a proportion to the moles of oxygen $n_{O_{2}}$ based on the gaseous products produced.
 Based on the gaseous products present the combustion equation must have the following form:
-
-%% Overly involved method for such a simple equation
-
-$$C_{8}H_{18} + O_{2} \to CO_{2} + CO + H_{2}O$$
-
-This can be represented in matrix form as:
-
-$$\begin{bmatrix} Q_{C_{8}H_{18}}  & Q_{O_{2}}\end{bmatrix} 
-\begin{bmatrix}8 & 18 & 0 \\ 0 & 0 & 2\end{bmatrix}
-= 
-\begin{bmatrix}Q_{CO_{2}} + Q_{CO} + Q_{H_{2}O} \end{bmatrix}
-\begin{bmatrix}1 & 0 & 2 \\ 1 & 0 & 1 \\ 0 & 2 & 1\end{bmatrix}$$
-%%
 
 $$q_{1} \ C_{8}H_{18} + q_{2} \ O_{2} \to q_{3} \ CO_{2} + q_{4} \ CO + q_{5} \ H_{2}O$$
 
@@ -347,23 +333,9 @@ Now oxygen can be accounted for in terms of $q_{1}$ as a stoichiometric sum of t
 
 $$q_{2} = \left( \frac{2q_{3}+ q_{4}+ q_{5}}{2} \right) q_{1} = \left( \frac{2\left( \frac{100}{109} \right) +\left(\frac{9}{109}\right) +(8)}{2} \right) q_{1} = \frac{1081}{218}q_{1}$$
 
-%% Redundant
-Thus the combustion can be represented as:
-
-$$C_{8}H_{18} + 4\frac{209}{218} O_{2} \to \frac{100}{109} CO_{2} + \frac{9}{109} CO + 8 H_{2}O$$
-
-
-*while it is best practice to split this representation up into* 
-
-*$$C_{8}H_{18} + O_{2} \to CO + H_{2}O$$*
-*$$C_{8}H_{18} + O_{2} \to CO_{2} + H_{2}O$$*
-
-*and indicate the proportionality of the 2 reactions but this doesn't serve our means in this case as all we care about is $q_{2}/q_{1}$ i.e. oxygen to fuel ratio.*
-%%
-
 Therefore the moles of fuel $n_{\text{fuel}}$ can be represented in terms of moles of oxygen reacted $n_{O_{2}} \text{ reacted} = q_{2}$ along with mass of air $m_{\text{air}}$:
 
-$$\large n_{\text{fuel}} = \frac{218}{1081} q_{2} \quad \& \quad m_{\text{air}} = \frac{100}{21} q_{2} 2M_{O} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
+$$\large n_{\text{fuel}} = \frac{218}{1081} q_{2} \quad \& \quad m_{\text{air}} = \frac{100}{21} 2M_{O} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)q_{2}$$
 
 Substituting these identities into the [[#^c733f8|AFR equation found earlier]] air to fuel ratio is equal to:
 
@@ -380,7 +352,8 @@ $$\text{LHF} = \frac
 $$\text{LHF} = \frac
 {\frac{100}{21}32 \left(1 + \frac{5.6 \times 83}{79 \times 21} \right)}
 {96 + 18}$$
-$$\text{LHF} = \frac{1600 + \frac{1600 \times 332}{1185}}{1197}$$
+$$\text{LHF} = \frac{3200 \left(1 + \frac{464.8}{1185}\right)}{21 \times 114}$$
+$$\text{LHF} = \frac{3200 \left(1 + \frac{464.8}{1185}\right)}{2394}$$
 $$\text{LHF} = \frac{485440}{283689}$$
 
 In the right hand fraction ($\text{RHF}$) can also be simplified:
