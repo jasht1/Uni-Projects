@@ -288,13 +288,13 @@ The air–to–fuel ratio is the proportion of mass of air over the mass of fuel
 
 $$\text{AFR} = \frac{m_{\text{air}}}{m_{\text{fuel}}}$$
 
-Where the mass of air $n_{\text{air}}$ is implied by the number of moles of oxygen $n_{O_{2}}$ Assuming that the dry air is 21% $O_{2}$ and 79% $N_{2}$:
+Where the mass of air $m_{\text{air}}$ is implied by the number of moles of oxygen $n_{O_{2}}$ Assuming that the dry air is 21% $O_{2}$ by mass:
 
 $$m_{\text{air}} = \frac{100}{21} M_{O_{2}} n_{O_{2}}$$
 
 Similarly the fuel mass can be substituted for number of moles and molar mass:
 
-$$\text{AFR} = \frac {\frac{100}{21} M_{O_{2}}}{8 M_{C} + 18 M_{H}} \times \frac{n_{\text{air}}}{n_{\text{fuel}}}$$
+$$\text{AFR} = \frac {\frac{100}{21} 2M_{O}}{8 M_{C} + 18 M_{H}} \times \frac{n_{O_{2}}}{n_{\text{fuel}}}$$
 
 ^c733f8
 
@@ -309,7 +309,7 @@ $$\large \frac{O_{2}\text{ un-reacted}} {O_{2} \text{ total}} = \frac{21 - \left
 
 Therefore the total oxygen can be found based on the amount reacted:
 
-$$\large n_{O_{2}} \text{ total} = n_{O_{2}} \text{ reacted} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
+$$\large m_{O_{2}} \text{ total} = m_{O_{2}} \text{ reacted} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
 
 Based on the gaseous products present the combustion equation must have the following form:
 
@@ -361,46 +361,35 @@ $$C_{8}H_{18} + 4\frac{209}{218} O_{2} \to \frac{100}{109} CO_{2} + \frac{9}{109
 *and indicate the proportionality of the 2 reactions but this doesn't serve our means in this case as all we care about is $q_{2}/q_{1}$ i.e. oxygen to fuel ratio.*
 %%
 
-Therefore the moles of fuel $n_{\text{fuel}}$ can be represented in terms of moles of oxygen reacted $n_{O_{2}} \text{ reacted} = q_{2}$ along with moles of air $n_{\text{air}}$:
+Therefore the moles of fuel $n_{\text{fuel}}$ can be represented in terms of moles of oxygen reacted $n_{O_{2}} \text{ reacted} = q_{2}$ along with mass of air $m_{\text{air}}$:
 
-$$\large n_{\text{fuel}} = \frac{218}{1081} q_{2} \quad \& \quad n_{\text{air}} = \frac{100}{21} q_{2} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
+$$\large n_{\text{fuel}} = \frac{218}{1081} q_{2} \quad \& \quad m_{\text{air}} = \frac{100}{21} q_{2} 2M_{O} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
 
 Substituting these identities into the [[#^c733f8|AFR equation found earlier]] air to fuel ratio is equal to:
 
 $$\large \text{AFR} = \frac
-{\frac{100}{21} M_{O_{2}}}
+{\frac{100}{21} 2M_{O} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)}
 {8 M_{C} + 18 M_{H}} 
-\times \frac
-{\frac{100}{21} q_{2} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)}
-{\frac{218}{1081} q_{2}}$$
+\times \frac{q_{2}}{\frac{218}{1081} q_{2}}$$
 
-Substituting the values for $M_{O}$, $M_{C}$, and $M_{H}$ the left hand fraction ($\text{LHF}$) can be reduced: 
+Substituting the values for $M_{O}$, $M_{C}$, and $M_{H}$ the left hand fraction ($\text{LHF}$) can be simplified: 
 
 $$\text{LHF} = \frac
-{\frac{100}{21}2(16)}
+{\frac{100}{21}2(16)\left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)}
 {8 (12) + 18 (1)} $$
 $$\text{LHF} = \frac
-{\frac{100}{21}32}
+{\frac{100}{21}32 \left(1 + \frac{5.6 \times 83}{79 \times 21} \right)}
 {96 + 18}$$
-$$\text{LHF} = \frac{1600}{1197}$$
+$$\text{LHF} = \frac{1600 + \frac{1600 \times 332}{1185}}{1197}$$
+$$\text{LHF} = \frac{485440}{283689}$$
 
-In the right hand fraction ($\text{RHF}$) $q_{2}$ can be cancelled out and reduced:
+In the right hand fraction ($\text{RHF}$) can also be simplified:
 
-$$\text{RHF} = \frac
-{\frac{100}{21} \cancel{q_{2}} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)}
-{\frac{218}{1081} \cancel{q_{2}}}$$
-$$\text{RHF} = \frac
-{1081 \times 100 \left(1 + \frac{5.6 \times 83}{79 \times 21} \right)}
-{21 \times 218}$$
-$$\text{RHF} = \frac
-{108100 + \frac{108100 \times 5.6 \times 83}
-{1659}}{4578}$$
-$$\text{RHF} = \frac{108100}{4578} + \frac{108100 \times 5.6 \times 83}{4578 \times 1659}$$
-$$\text{RHF} = \frac{16398770}{542493}$$
-
+$$\text{RHF} = \frac{\cancel{q_{2}}}{\frac{218}{1081} \cancel{q_{2}}}$$
+$$\text{RHF} = \frac{1081}{218}$$
 Substituting the reduced fractions back in:
 
-$$\large \text{AFR} = \frac{1600}{1197} \times \frac{16398770}{542493} = \frac{26238032000}{649364121} \approx 40.4$$
+$$\large \text{AFR} = \frac{485440}{283689} \times \frac{1081}{218} = \frac{262380320}{30922101} \approx 8.48$$
 
 
 ### ii. What is the percentage of theoretical air used
