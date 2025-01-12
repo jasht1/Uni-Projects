@@ -329,12 +329,6 @@ $$q_{3} = \frac{100}{100+9}8q_{1}$$
 
 $$q_{4} = \frac{9}{100+9}8q_{1}$$
 
-%% not proportional to mass
-$$q_{3} = \frac{100}{100+9} \times \frac{M_{CO_{2}}}{M_{O_{2}}} \times q_{1} = \frac{1200}{109}q_{1}$$
-
-$$q_{4} = \frac{9}{100+9} \times \frac{M_{CO}}{M_{O_{2}}} \times q_{1} = \frac{27}{436}q_{1}$$
-%%
-
 Now oxygen can be accounted for in terms of $q_{1}$ as a stoichiometric sum of the products:
 
 $$q_{2} = \left( \frac{2q_{3}+ q_{4}+ q_{5}}{2} \right) q_{1} = \left( \frac{2\left( 8\frac{100}{109} \right) +\left(8\frac{9}{109}\right) +(8)}{2} \right) q_{1} = 11\frac{73}{109}q_{1}$$
@@ -368,11 +362,51 @@ $$\text{RHF} = \frac{\cancel{q_{2}}}{\frac{109}{1272} \cancel{q_{2}}}$$
 $$\text{RHF} = \frac{1272}{109}$$
 Substituting the reduced fractions back in:
 
-$$\large \text{AFR} = \frac{485440}{283689} \times \frac{1272}{109} = \frac{262380320}{30922101} \approx 19.97$$
+$$\large \text{AFR} = \frac{485440}{283689} \times \frac{1272}{109} = \frac{205826560}{10307367} \approx 19.97$$
 
 
 ### ii. What is the percentage of theoretical air used
 [5 marks]
+%%[[2025-01-12]] @ 14:31%%
+
+The theoretical air is the exact amount necessary to perform complete combustion. This can be compared to the case above by finding the air to fuel ratio implied by complete combustion.
+
+$$\large \text{AFR} = \frac{m_{\text{air}}}{m_{\text{fuel}}} 
+\quad \therefore \quad 
+\frac{\text{AFR}^{\text{actual}}}{\text{AFR}^{\text{theoretical}}} = 
+\frac{\cancel{m_{\text{fuel}}} \times m_{\text{air}}^{\text{actual}}}{\cancel{m_{\text{fuel}}} \times m_{\text{air}}^{\text{theoretical}}} = 
+x \% _{\text{air}}^{\text{theoretical}}$$
+
+Complete combustion of $C_{8}H_{18}$ would convert all of the carbon content of the fuel to $CO_{2}$ and all of the hydrogen content to $H_{2}O$ thus must have the following form:
+
+$$q_{1} \ C_{8}H_{18} + q_{2} \ O_{2} \to q_{3} \ CO_{2} + q_{4} \ H_{2}O$$
+
+Thus:
+
+$$q_{3} = 8q_{1} \quad \& \quad q_{4}= \frac{18}{2}q_{1}$$
+
+Therefore:
+
+$$q_{2} = \frac{2(8q_{1})+ \frac{18}{2} q_{1}}{2} = 26q_{1}$$
+
+Indicating a stoichiometric ratio of: 
+
+$$C_{8}H_{18} + 26 \ O_{2} \to 8 \ CO_{2} + 9 \ H_{2}O$$
+
+Air to fuel ratio can then be found as [[#^c733f8|previously stated]]:
+
+$$\text{AFR} = \frac {\frac{100}{21} 2M_{O}}{8 M_{C} + 18 M_{H}} \times \frac{n_{O_{2}}}{n_{\text{fuel}}}$$
+
+Substituting in all the named constants:
+
+$$\text{AFR}^{\text{theoretical}} = \frac{\frac{100}{21}32}{96 + 18} \times \frac{26}{1} = \frac{41600}{1197} \approx 34.75$$
+
+Therefore the the percentage of theoretical air used is given by:
+
+$$\large x \% _{\text{air}}^{\text{theoretical}} =
+\frac{\text{AFR}^{\text{actual}}}{\text{AFR}^{\text{theoretical}}} =
+\frac{\frac{205826560}{10307367}}{\frac{41600}{1197}} = \frac{321604}{559715} \approx 57.5 \% \ _{\text{air}}^{\text{theoretical}}
+$$
 
 ### iii. Determine the quantity of water vapour that condenses as the products are cooled to 25°C at atmospheric pressure. 
 [5 marks]
