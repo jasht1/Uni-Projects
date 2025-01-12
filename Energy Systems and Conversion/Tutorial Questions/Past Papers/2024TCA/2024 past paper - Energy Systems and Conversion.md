@@ -309,7 +309,7 @@ Therefore the total oxygen can be found based on the amount reacted:
 
 $$\large m_{O_{2}} \text{ total} = m_{O_{2}} \text{ reacted} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)$$
 
-Assuming that all of the fuel reacted the number of moles of fuel $n_{\text{fuel}}$ can be found as a proportion to the moles of oxygen $n_{O_{2}}$ based on the gaseous products produced.
+Assuming that all of the fuel reacted, the number of moles of fuel $n_{\text{fuel}}$ can be found as a proportion to the moles of oxygen $n_{O_{2}}$ based on the gaseous products produced.
 Based on the gaseous products present the combustion equation must have the following form:
 
 $$q_{1} \ C_{8}H_{18} + q_{2} \ O_{2} \to q_{3} \ CO_{2} + q_{4} \ CO + q_{5} \ H_{2}O$$
@@ -323,26 +323,32 @@ As the fuel $C_{8}H_{18}$ contains 18 hydrogen's and this was entirely converted
 
 $$q_{5} = 8 q_{1}$$
 
-As $CO_{2}$ and $CO$ are negligible in the starting air and exist in the gaseous products in a $100:9$ ratio with no other carbon based products then:
+As $CO_{2}$ and $CO$ are negligible in the starting air and exist in the gaseous products in a $100:9$ volume ratio with no other carbon based products, given that $V \propto n$ and that $q_{1}$ provides 8 moles of carbon:
 
-$$q_{3} = \frac{100}{100+9}q_{1}$$
+$$q_{3} = \frac{100}{100+9}8q_{1}$$
 
-$$q_{4} = \frac{9}{100+9}q_{1}$$
+$$q_{4} = \frac{9}{100+9}8q_{1}$$
+
+%% not proportional to mass
+$$q_{3} = \frac{100}{100+9} \times \frac{M_{CO_{2}}}{M_{O_{2}}} \times q_{1} = \frac{1200}{109}q_{1}$$
+
+$$q_{4} = \frac{9}{100+9} \times \frac{M_{CO}}{M_{O_{2}}} \times q_{1} = \frac{27}{436}q_{1}$$
+%%
 
 Now oxygen can be accounted for in terms of $q_{1}$ as a stoichiometric sum of the products:
 
-$$q_{2} = \left( \frac{2q_{3}+ q_{4}+ q_{5}}{2} \right) q_{1} = \left( \frac{2\left( \frac{100}{109} \right) +\left(\frac{9}{109}\right) +(8)}{2} \right) q_{1} = \frac{1081}{218}q_{1}$$
+$$q_{2} = \left( \frac{2q_{3}+ q_{4}+ q_{5}}{2} \right) q_{1} = \left( \frac{2\left( 8\frac{100}{109} \right) +\left(8\frac{9}{109}\right) +(8)}{2} \right) q_{1} = 11\frac{73}{109}q_{1}$$
 
 Therefore the moles of fuel $n_{\text{fuel}}$ can be represented in terms of moles of oxygen reacted $n_{O_{2}} \text{ reacted} = q_{2}$ along with mass of air $m_{\text{air}}$:
 
-$$\large n_{\text{fuel}} = \frac{218}{1081} q_{2} \quad \& \quad m_{\text{air}} = \frac{100}{21} 2M_{O} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)q_{2}$$
+$$\large n_{\text{fuel}} = \frac{109}{1272} q_{2} \quad \& \quad m_{\text{air}} = \frac{100}{21} 2M_{O} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)q_{2}$$
 
 Substituting these identities into the [[#^c733f8|AFR equation found earlier]] air to fuel ratio is equal to:
 
 $$\large \text{AFR} = \frac
 {\frac{100}{21} 2M_{O} \left(1 + \frac{5.6 \times\frac{83}{79}}{21} \right)}
 {8 M_{C} + 18 M_{H}} 
-\times \frac{q_{2}}{\frac{218}{1081} q_{2}}$$
+\times \frac{q_{2}}{\frac{109}{1272} q_{2}}$$
 
 Substituting the values for $M_{O}$, $M_{C}$, and $M_{H}$ the left hand fraction ($\text{LHF}$) can be simplified: 
 
@@ -358,11 +364,11 @@ $$\text{LHF} = \frac{485440}{283689}$$
 
 In the right hand fraction ($\text{RHF}$) can also be simplified:
 
-$$\text{RHF} = \frac{\cancel{q_{2}}}{\frac{218}{1081} \cancel{q_{2}}}$$
-$$\text{RHF} = \frac{1081}{218}$$
+$$\text{RHF} = \frac{\cancel{q_{2}}}{\frac{109}{1272} \cancel{q_{2}}}$$
+$$\text{RHF} = \frac{1272}{109}$$
 Substituting the reduced fractions back in:
 
-$$\large \text{AFR} = \frac{485440}{283689} \times \frac{1081}{218} = \frac{262380320}{30922101} \approx 8.48$$
+$$\large \text{AFR} = \frac{485440}{283689} \times \frac{1272}{109} = \frac{262380320}{30922101} \approx 19.97$$
 
 
 ### ii. What is the percentage of theoretical air used
