@@ -1,7 +1,7 @@
 
 https://blackboard.lincoln.ac.uk/ultra/courses/_200912_1/outline/file/_9847443_1
 
-# Question 1 
+# Question 1 - Wind
 [Total: 25 marks]
 ## a. What are the main sources of losses that prevent a wind turbine from operating at or near the Betz limit? 
 [5 marks]
@@ -124,6 +124,7 @@ By setting these identities as equal an identity for $v_{T}$ in terms of $v_{U}$
 $$P = \rho A_{T} v_{T}^{2} (v_{U} - v_{D}) = \frac{1}{2} \rho A_{T} v_{T} (v_{U}^{2} - v_{D}^{2})$$
 
 > [!NOTE] Workings
+> 
 > $$\begin{align}
 > \cancel{\rho A_{T} v_{T}} v_{T} (v_{U} - v_{D}) &= \cancel{\rho A_{T} v_{T}} \frac{1}{2} (v_{U}^{2} - v_{D}^{2})\\
 > v_{T} \cancel{(v_{U} - v_{D})} &= \frac{1}{2} (v_{U} + v_{D}) \cancel{(v_{U} - v_{D})}\\
@@ -234,8 +235,39 @@ $$\eta = -\frac{1}{3}^{2} -\frac{1}{3} +3 = 2.\dot{5}$$
 ## a. 
 ### i. Name two differences between an Otto and a Diesel Cycle. 
 [2 marks] 
+%%[[2025-01-12]] @ 20:12%%
+
+1. The key difference in Otto and Diesel cycles is the heat addition stage. In the Otto cycle this occurs at a constant volume and the heat increases the pressure i.e. an isochoric process, Whereas in the Diesel cycle this is the opposite, the chamber increases in volume but heats at constant pressure i.e. an isobaric process.
+
+2. Another difference is in how the fuel mixture is ignited, where Otto cycle engines typically use a spark plug, Diesel cycle engines tend to rely on compressing and heating the mix above it's flash point to achieve spontaneous ignition. 
+
+3. In part for the reason above Diesel cycle engines tend to utilise a higher compression ratio to Otto cycle engines. 
+
 ### iii. which is worse – putting petrol in a diesel engine or vice versa? Rationalise each scenario. 
 [3 marks] 
+%%[[2025-01-12]] @ 20:13%%
+
+Consider the difference in the properties of diesel and petrol:
+1. Diesel is an effective lubricant where petrol is not a particularly effective lubricant and tends to dissolve non-polar hydrophobic greases that are often used as lubricants.
+2. Petrol has a lower flash point than diesel
+3. Petrol is more viscous than diesel
+
+#### Petrol in a diesel engine
+
+Diesel engines tend to use the diesel itself to lubricate many mechanical components through out the system, petrol would likely cause increased stress on any such components. This probably wouldn't have any immediate effects but would probably kill the engine eventually. 
+
+The lower flash point of petrol would cause knocking i.e. early combustion, this causes allot of strain on the engine and could cause damage quite quickly. 
+
+#### Diesel in a petrol engine
+
+The Diesel being thicker would cause some strain on the fuel pumping systems of petrol engines and would not flow as expected especially in thinner pipes, It could even clog up some finer arteries or the carburetor. 
+
+Speaking of the carburetor I would expect diesel would not aresolise particularly effectively and thus burn particularly dirty. The suit produced would build up especially around the intake and exhaust valves which could get stuck.
+
+#### Conclusion
+
+Both would be inconvenient mistakes, but I would expect petrol in a diesel engine to cause more damage more quickly. 
+
 ## b. A gas turbine operating on the Brayton gas cycle has one each of isentropic compression and expansion. Air is taken into the compressor at 95 kPa and ambient temperature of 22ºC. The compressor has a ratio of 6 to 1 while the compressed air is heated to 827ºC. The combustion products then go through expansion in a turbine. 
 ### i. Draw an annotated schematic and the T-S diagram for this cycle matching the numbering of each stream or process 
 [5 marks] 
@@ -245,7 +277,8 @@ $$\eta = -\frac{1}{3}^{2} -\frac{1}{3} +3 = 2.\dot{5}$$
 
 ### iii. Discuss the result above with respect to the compressor work and total turbine work. Your discussion should touch on what should be maximised and what should be minimised to ensure the economic viability of gas turbines. 
 [5 marks] 
-[Note that interpolation from thermodynamic tables is required to obtain accurate results in this task] 
+
+
 
 # Question 3  
 ## a.
@@ -383,7 +416,7 @@ $$q_{1} \ C_{8}H_{18} + q_{2} \ O_{2} \to q_{3} \ CO_{2} + q_{4} \ H_{2}O$$
 
 Thus:
 
-$$q_{3} = 8q_{1} \quad \& \quad q_{4}= \frac{18}{2}q_{1}$$
+$$q_{3} = 8q_{1} \quad \& \quad q_{4} = \frac{18}{2} q_{1}$$
 
 Therefore:
 

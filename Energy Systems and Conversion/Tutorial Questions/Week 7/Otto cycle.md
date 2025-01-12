@@ -6,18 +6,22 @@
 
 The [[Otto cycle]] is an idealised thermodynamic engine cycle that can be applied to reciprocating spark ignition engines.
 
+![Otto Cycle animation](https://edxengine-projects-files.s3.amazonaws.com/1589027088.gif)
+
 ![[Otto cycle - PV chart.excalidraw]]
 
-1. Ignition: Isochoric heating & pressure increase
-	At top dead centre the the fuel is ignited causing a rapid increase in pressure.
-
-2. Power Stroke: Isentropic expansion and cooling
-	The pressure drives the piston increasing the volume
-
-3. Exhaust/Intake: Isochoric cooling & pressure drop
+1. Exhaust/Intake: Isochoric cooling & pressure drop
 	The hot gas is expelled and fresh air is drawn in
 
-4. Compression Stroke: Isentropic compression
+2. Compression Stroke: Isentropic compression
+   The piston reduces the combustion chamber volume thereby increasing the pressure.
+
+3. Ignition: Isochoric heating & pressure increase
+	At top dead centre the the fuel is ignited causing a rapid increase in pressure.
+
+4. Power Stroke: Isentropic expansion and cooling
+	The pressure drives the piston increasing the volume
+
 
 ## Relevant Equations
 
