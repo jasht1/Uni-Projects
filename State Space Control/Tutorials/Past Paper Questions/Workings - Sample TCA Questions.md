@@ -28,6 +28,8 @@ $$\dot x = Ax+Bu$$
 ## How many state equations are needed to represent a ninth-order system?
 %%[[2024-12-23]] @ 18:18%%
 
+9
+
 A system that can be defined by a single 9th order differential equation could be represented with 9 states in a 9 dimensional state vector, each with a state equation i.e. 9 rows in the $A$ & $B$  matrices.
 
 ## (c) Consider the system shown in [[EGR3032M Sample TCA Questions.pdf#page=1&selection=109,0,114,24|Figure 1]]. Derive a mathematical model in state space form, showing both state space and output equations. 
@@ -487,27 +489,27 @@ $$s^{2} +(-880 +100k_{2})s + (-98000 -280k_{1} -98000k_{2}) = s^{2} + 150s + 900
 
 $$\cancel{s^{2}} +(-880 +100k_{2})s + (-98000 -280k_{1} -98000k_{2}) = \cancel{s^{2}} + 150s + 9000$$
 
-6. The $s$ term coefficient can only be affected by $k_{2}$, thus the value that satisfies $\frac{-880-150}{100} = k_{2}$ must be the identity. By this logic $k_{2}$ is substituted for $9.3$ and the $s$ term is cancelled:
+6. The $s$ term coefficient can only be affected by $k_{2}$, thus the value that satisfies $\frac{150+880}{100} = k_{2}$ must be the identity. By this logic $k_{2}$ is substituted for $10.3$ and the $s$ term is cancelled:
 
-$$\cancel{(-880 +100(9.3))s} + (-98000 -280k_{1} -98000(9.3)) = \cancel{150s} + 9000$$
+$$\cancel{(-880 +100(10.3))s} + (-98000 -280k_{1} -98000(10.3)) = \cancel{150s} + 9000$$
 
 7. Solving for $k1$ is then trivial:
 
 %% Working 
 
-$$-98000 -280k_{1} -98000(9.3) = 9000$$
+$$-98000 -280k_{1} -98000(10.3) = 9000$$
 
-$$-1009400 -280k_{1} = 9000$$
+$$-1107400 -280k_{1} = 9000$$
 
-$$-280k_{1} = 9000+1009400$$
+$$-280k_{1} = 9000+1107400$$
 
-$$-280k_{1} = 1018400$$
+$$-280k_{1} = 1116400$$
 
-$$k_{1} = \frac{1018400}{-280}$$
+$$k_{1} = \frac{1116400}{-280}$$
 
 %%
 
-$$\frac{9000+98000+98000(9.3)}{-280} = -3637.142857 = k_{1}$$
+$$k_{1} = \frac{9000+98000+98000(9.3)}{-280} = -3987.1$$
 
 8. The system with the regulator $K$ is given by:
 
@@ -526,7 +528,7 @@ B = \begin{bmatrix}
 \end{bmatrix}
 \qquad
 K = \Large\begin{bmatrix}
-	9.3 & \frac{-25460}{7}
+	-3987.1 & 10.3
 \end{bmatrix}$$
 
 ## (b) Sketch the model as a Block Diagram, including the state feedback controller.
@@ -576,11 +578,41 @@ In this case the equation that governs the behaviour of the damper $fD(t) = d \d
 ## (b) Linearise the model about the equilibrium point. 
 [10 marks] 
 
-
 > [!NOTE] Interpenetration note
-> The equilibrium point is ambiguous given there are multiple forces and states. Equilibrium will be taken to mean $\ddot{x} = 0$. 
+> The equilibrium point is ambiguous given there are multiple forces and states. Equilibrium will be taken to mean $\dot{x} = 0$. 
+
+The non linear damper force equation being:
+
+$$f_{D}(t) = - d \dot{x}^{2} (t)$$
+
+The gradient can be taken at the "equilibrium point" by differentiating by $\dot{x}$ and solving for $\dot{x} = 0$:
+
+$$\frac{\delta f_{D}(t)}{\delta \dot{x}} = - d 2\dot{x} (t)$$
+
+As would be expected this resolves to $0$:
+
+$$\frac{\delta f_{D}(t)}{\delta \dot{x}} ^{@ \dot{x} = 0} = - d 2(0) (t) = 0$$
+
+Making the linearised system:
+
+$$M \ddot{x} = f(t)$$
+
+## (c) Write the linearised model in LTI state space format
 
 
+
+```functionplot
+---
+title: 
+xLabel: 
+yLabel: 
+bounds: [-0.25,0.25,-0.01,0.01]
+disableZoom: false
+grid: true
+---
+f(x) = 0
+d(x) = 0.1*pow(x,2)
+```
 
 
 ## (c) Write the linearised model in LTI state space format 
