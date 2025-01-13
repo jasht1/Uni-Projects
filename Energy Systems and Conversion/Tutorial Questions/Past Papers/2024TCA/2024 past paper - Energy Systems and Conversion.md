@@ -136,9 +136,6 @@ Thus:
 
 $$\Large \dot{m} = \rho A_{T} \frac{v_{1} + v_{2}}{2}$$
 
-%% Not the case mass flow rate should cancel out
-$$\Large \eta = \frac{1}{2} \dot{m}\frac{({v_{1}}^{2}−{v_{2}}^{2})}{{v_{1}}^{2}} = \frac{1}{2} \left( \rho A_{T} \frac{v_{1} + v_{2}}{2} \right) \frac{({v_{1}}^{2}−{v_{2}}^{2})}{{v_{1}}^{2}}$$ %%
-
 ### Finding optimal velocity change
 %%[[2025-01-10]] @ 00:40%%
 
@@ -147,17 +144,6 @@ Factoring in the identity for mass flow rate found above back into the equation 
 $$\Large P = \frac{1}{4} \rho A_{T} (v_{1} + v_{2}) ({v_{1}}^{2}−{v_{2}}^{2})$$
 
 This equation can be rearranged slightly to emphasise the impact of the proportional velocity drop, i.e. $\frac{v_{2}}{v_{1}}$, like so:
-
-%% Original workings
-$$v_{1} = \frac{v_{1}}{v_{2}}v_{2}$$
-$$P = \frac{1}{4} \rho A_{T} \left( \frac{v_{1}}{v_{2}}v_{2} + v_{2} \right) \left( {\frac{v_{1}}{v_{2}}v_{2}}^{2}−{v_{2}}^{2} \right)$$
-
-$$P = \frac{1}{4} \rho A_{T} {v_{2}}^{3} \left( \frac{v_{1}}{v_{2}} +1 \right) \left( \frac{v_{1}}{v_{2}}^{2}−1 \right)$$
-
-$$P = \frac{1}{4} \rho A_{T} {v_{2}}^{3} \left( \frac{v_{1}}{v_{2}}^{3} + \frac{v_{1}}{v_{2}}^{2} - \frac{v_{1}}{v_{2}} - 1 \right) $$
-
-*This explanation may be more intuitive if I factor $v_{1}$ out instead so it's clear power is proportional with wind speed cubed.*
-%%
 
 > [!NOTE]- Workings
 > 

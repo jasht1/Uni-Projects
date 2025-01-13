@@ -76,20 +76,6 @@ $$\ddot{\text{x}}_{b} = \frac{F_{s} + F_{f} + f(t)}{m_{b}} = \frac{-\mu}{m_{b}} 
 ### State Equations
 %%[[2024-12-23]] @ 19:44%%
 
-The [[State Space Representation#State Vector|State Vector]] $\text{x}$ will take the form:
-
-$$\Large \text{x} = 
-\begin{bmatrix} 
-\begin{align*}
-	x_{1} &:= x_{\text{b}} \\
-	x_{2} &:= \dot x_{\text{b}} \\
-\end{align*}
-\end{bmatrix}$$
-
-And the [[State Space Representation#Input Equation|input equation]] will take the form: 
-
-$$\Large \dot{\text{x}} = Ax +Bu$$
-
 Where:
 
 - $\dot x$ is the [[derivative]] of the [[State Space Representation#State Vector|State Vector]],
@@ -578,48 +564,131 @@ In this case the equation that governs the behaviour of the damper $fD(t) = d \d
 ## (b) Linearise the model about the equilibrium point. 
 [10 marks] 
 
-> [!NOTE] Interpenetration note
-> The equilibrium point is ambiguous given there are multiple forces and states. Equilibrium will be taken to mean $\dot{x} = 0$. 
-
-The non linear damper force equation being:
+The non linear damper force equation:
 
 $$f_{D}(t) = - d \dot{x}^{2} (t)$$
 
-The gradient can be taken at the "equilibrium point" by differentiating by $\dot{x}$ and solving for $\dot{x} = 0$:
+can be expressed in terms of it's deviation $\delta$ from equilibrium $o$:
 
-$$\frac{\delta f_{D}(t)}{\delta \dot{x}} = - d 2\dot{x} (t)$$
+$$f_{D}(t) = - d (\dot{x}_{o} + \delta \dot{x})^{2}$$
 
-As would be expected this resolves to $0$:
+and then linearised using a [[Taylor series]]:
 
-$$\frac{\delta f_{D}(t)}{\delta \dot{x}} ^{@ \dot{x} = 0} = - d 2(0) (t) = 0$$
+$$\large \sum _{n=0}^{\infty }{\frac {f^{(n)}(0)}{n!}}x^{n}$$
 
-Making the linearised system:
+In this case:
 
-$$M \ddot{x} = f(t)$$
+$$f_{D}(t) = - d \dot{x}^{2}_{o} - 2d \dot{x}_{o}\delta \dot{x} -d\delta \dot{x}^{2}$$
 
-## (c) Write the linearised model in LTI state space format
+Given that $\delta \dot{x}^{2}$ is non linear this term will be dropped, leaving:
+
+$$f_{D}(t) \approx - d \dot{x}^{2}_{o} - 2d \dot{x}_{o}\delta \dot{x} = -d\dot{x}_{o}(\dot{x}_{o} + \delta \dot{x})$$
+
+At equilibrium $F = 0$ and by newtons second law $F=ma$ we may infer $M\ddot{x} = 0$. Thus at equilibrium the following condition must be satisfied:
+
+$$d \dot{x}^{2}_{o} = f_{o}$$
+
+When the system as a whole is represented based on it's deviation from equilibrium it is:
+
+$$M \ddot{x} = \delta f + f_{o} - d \dot{x}^{2}_{o} - 2d \dot{x}_{o}\delta \dot{x}$$
+
+where $f_{o}$ can be substituted for $d \dot{x}^{2}_{o}$ which cancels out:
+
+$$M \ddot{x} = \delta f + \cancel{d \dot{x}^{2}_{o}} - \cancel{d \dot{x}^{2}_{o}} - 2d \dot{x}_{o}\delta \dot{x}$$
+
+Giving a linear equation for approximating the motion about the equilibrium:
+
+$$\large M \ddot{x} \approx \delta f - 2d \dot{x}_{o}\delta \dot{x}$$
+
+## (c) Write the linearised model in LTI state space format 
+[6 marks]
+
+The [[State Space Representation#State Vector|State Vector]] $x$ will take the form:
+
+$$\Large \text{x} = 
+\begin{bmatrix} 
+\begin{align*}
+	x_{1} &:= \dot{x} \\
+	x_{2} &:= \delta \dot x \\
+\end{align*}
+\end{bmatrix}$$
+
+And the [[State Space Representation#Input Equation|input equation]] will take the form: 
+
+$$\Large \dot{\text{x}} = A\text{x} +Bu$$
+
+Where:
+
+- $\text{x}$ is the [[State Space Representation#State Vector|State Vector]] defined above,
+- $\dot{\text{x}}$ is the [[derivative]] of the [[State Space Representation#State Vector|State Vector]],
+- $u$ is the [[State Space Representation#Input Vector|input]] in this case $\delta f$,
+- $A$ & $B$ are the [[State Space Representation#State Equations|input matrices]]:
+	- $A$ is a matrix of first order coefficients that relate the [[State Space Representation#State Variable|State Variable]]s to their effect on the system dynamic.
+	- $B$ is a matrix of first order coefficients that relate the system inputs to their effect on the system dynamic.
+
+$A$ & $B$ will be:
+
+$$\Large
+A = \begin{bmatrix}
+	0 & 1 \\ 
+	0 & \frac{- 2d \dot{x}_{o}}{M}
+\end{bmatrix}
+\qquad
+B = \begin{bmatrix}
+	0 \\ \frac{1}{M} \\
+\end{bmatrix}$$
+
+The [[State Space Representation#Output Equation|output equation]] gives the output of the system at time $t$.
+
+$$\Large y = C\text{x} + Du$$
+
+Where:
+- $y$ is the [[State Space Representation#Output Vector|output vector]],
+- $C$ & $D$ are the [[State Space Representation#Output Equations|output matrices]]:
+	- $C$ is a matrix of first order coefficients that relate the current system state to their impact on the system outputs.
+	- $D$ is a matrix of firs order coefficients that relate the inputs to the system to their effect on the system outputs.
+
+and assuming the state variable of interest is the block's position $x_{b}$ then the output matrices $C$ & $D$ will be:
+
+$$\Large
+C = \begin{bmatrix}
+	1 & 0 \\ 
+\end{bmatrix}
+\qquad
+D = \begin{bmatrix}
+	0
+\end{bmatrix}$$
 
 
+### (i) Can this linearised model be used to assess the system when relatively small forces are applied, causing small deflections of $\pm 5$ mm from the equilibrium point? Explain your answer. 
+[3 marks] 
+
+The inaccuracy of the approximation is due to the missing $\delta \dot{x}^{2}$ term and thus graphing this will give the error function:
 
 ```functionplot
 ---
 title: 
 xLabel: 
 yLabel: 
-bounds: [-0.25,0.25,-0.01,0.01]
+bounds: [-0.1,0.1,-0.1,0.1]
 disableZoom: false
 grid: true
 ---
-f(x) = 0
-d(x) = 0.1*pow(x,2)
+e(x) = pow(x,2)
 ```
 
+at $\pm 5$ mm this represents a difference in estimated force from the damper of $\frac{1}{40000M} \ N$ thus an inacruracy in the acceleration predicted of $\frac{1}{40000M^{2}} \ m/s^{2}$. The position error will of course be cumulative so the further into the future it will be exponentially less accurate. Being that it is inversely proportional to mass, if the mass is particularly small then the inaccuracy will be larger.
 
-## (c) Write the linearised model in LTI state space format 
-[6 marks]
+It mostly depends on the level of accuracy needed, it is difficult to give definitive advice without further context. 
 
-### (i) Can this linearised model be used to assess the system when relatively small forces are applied, causing small deflections of ± 5mm from the equilibrium point? Explain your answer. 
-[3 marks] 
+The travel distance of the damper is not as important, the model would perform similarly with one full oscillation to many shorter ones assuming a similar time frame and acceleration.
+However it may be better suited to small deflections in the order of $\pm 5$ mm as these will likely be associated with lower accelerations closer to the equilibrium point.
 
 ### (ii) Can this linearised model be used to assess the system when a large impact is applied, causing the damper to fully compress and extend? Explain your answer. 
 [3 marks]
+
+The model is **not** suited to modelling larger impacts, the inaccuracy increases exponentially with velocity and a larger impact implies a high velocity. 
+
+Again the travel distance of the damper is not as important, the model would perform similarly with one full oscillation to many shorter ones assuming a similar time frame and acceleration.
+
+And again It mostly depends on the level of accuracy needed, it is difficult to give definitive advice without further context but it's unlikely this model would be sufficient.
