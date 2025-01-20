@@ -679,10 +679,10 @@ e(x) = pow(x,2)
 
 at $\pm 5$ mm this represents a difference in estimated force from the damper of $\frac{1}{40000M} \ N$ thus an inacruracy in the acceleration predicted of $\frac{1}{40000M^{2}} \ m/s^{2}$. The position error will of course be cumulative so the further into the future it will be exponentially less accurate. Being that it is inversely proportional to mass, if the mass is particularly small then the inaccuracy will be larger.
 
-It mostly depends on the level of accuracy needed, it is difficult to give definitive advice without further context. 
-
 The travel distance of the damper is not as important, the model would perform similarly with one full oscillation to many shorter ones assuming a similar time frame and acceleration.
 However it may be better suited to small deflections in the order of $\pm 5$ mm as these will likely be associated with lower accelerations closer to the equilibrium point.
+
+It mostly depends on the level of accuracy needed, it is difficult to give definitive advice without further context but it's likely this model would be sufficient.
 
 ### (ii) Can this linearised model be used to assess the system when a large impact is applied, causing the damper to fully compress and extend? Explain your answer. 
 [3 marks]

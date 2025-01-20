@@ -26,8 +26,6 @@ Diabetic nephropathy is a serious complication of both type 1 and 2 diabetes res
 
 An improved understanding of the changes of the mechanical properties of tubular cell cytoskeleton can lead to novel understanding of the disease and development of single cell diagnostics and therapies related to nanomedicine.
  
-%% #WIP Section on Single Cell AFM %%
-
 The study of the physical properties of living cells is challenging, most techniques that would provide suitable resolution require manipulations like staining drying or freezing which compromise the validity of the results. Atomic force microscopy provides a non destructive means of observing single cells close to their native state.[^4] Atomic force microscopes use the deflection of a very fine probe on the end of a cantilever to measure contact forces against a sample. In a process called nanoindentation a single cell can be advanced into the probe measuring the deflection of the cantilever against stage height to produce a force vs separation distance curve to gain insights into the physical properties of the cell.[^5]
 
 %% Page Break %% <div style="page-break-after: always;"></div>

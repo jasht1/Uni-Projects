@@ -5,6 +5,17 @@ This is preparatory background for my [[Individual Project]]
 > [!NOTE] Note that the majority of this file consits of direct quotes from:
 > Siamantouras E, et al, Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy. Nanomedicine: NBM 2016;12:1013-1021, http://dx.doi.org/10.1016/j.nano.2015.12.362 
 
+## Summary
+
+This study finds that pro-fibrotic cytokine transforming growth factor beta $\text{TGF} \! - \! \beta 1$ affected cell morphology increasing the [[Young's modulus]] of $\text{HK}2$ cells. This was associated with a weakening of cell adhesion shown by:
+
+- 53% decrease in the work of detachment, 
+- 46% decrease in the distance to complete separation, 
+- 19% lower peak unbinding force, 
+- 35% fewer TRE events.
+
+Indicating $\text{TGF} \! - \! \beta 1$ plays a role in the early changes of tubular injury in human proximal tubule cells.
+
 ## Background
 
 [[Diabetic nephropathy]]
@@ -23,7 +34,6 @@ Tublar injury involves:
 
 [[Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy.pdf#page=2&selection=33,39,35,50|Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy, page 2]]
 
-
 ### SCFS
 AFM-single cell force spectroscopy (SCFS) measures cell adhesion.
 
@@ -32,8 +42,6 @@ a condition where collagenous scar tissue builds up and stiffens, impairing orga
 
 ### 
 pro-fibrotic cytokine TGF-β1
-
-
 
 ## Data Anaylis
 JPK Data analysis software was used. To signify statistical differences data were evaluated using a paired t-test. Data are expressed as mean in the text and as median and interquartile range at the graphs. Number of experiments are represented with 'n'. P b 0.05 was taken to indicate statistical significance
