@@ -1,7 +1,7 @@
 
 # Reading notes from "Cytoskeletal re-arrangement in TGF-β1-induced alveolar epithelial-mesenchymal transition studied by atomic force microscopy and high-content analysis"
 
-Read online [here](https://www.sciencedirect.com/science/article/pii/S1549963411002747?via=ihub)
+Read online [here](https://www.sciencedirect.com/science/article/pii/S1549963411002747?via=ihub) [^1]
 
 [1]: S. T. Buckley, C. Medina, A. M. Davies, and C. Ehrhardt, “Cytoskeletal re-arrangement in TGF-β1-induced alveolar epithelial-mesenchymal transition studied by atomic force microscopy and high-content analysis,” 01-Apr-2012. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S1549963411002747?via=ihub. [Accessed: 16-Jan-2025].
 

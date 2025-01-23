@@ -1,7 +1,7 @@
 
 # Reading notes for "The basics of epithelial-mesenchymal transition"
 
-Read online [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/)
+Read online [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/) [^1]
 
 [^1]: R. Kalluri and R. A. Weinberg, “The basics of epithelial-mesenchymal transition,” 01-Jun-2009. [Online]. Available: https://doi.org/10.1172/JCI39104. [Accessed: 21-Jan-2025].
 

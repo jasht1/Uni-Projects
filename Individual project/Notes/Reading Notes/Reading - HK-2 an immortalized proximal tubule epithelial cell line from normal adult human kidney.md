@@ -1,7 +1,7 @@
 
 # Reading Notes from "HK-2: an immortalized proximal tubule epithelial cell line from normal adult human kidney"
 
-Read online [here](https://www.kidney-international.org/article/S0085-2538(15)58315-4/pdf)
+Read online [here](https://www.kidney-international.org/article/S0085-2538(15)58315-4/pdf) [^1]
 
 ## Summary
 

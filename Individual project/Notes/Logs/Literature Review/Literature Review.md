@@ -3,9 +3,9 @@
 
 ## Introduction
 
-%% Diabetic nephropathy %%
+## Diabetic Nephropathy
 
-%% Fibrosis %%
+## Fibrosis 
 
-%% Observing fibrosis with AFM %%
+## Observing fibrosis with AFM 
 

@@ -43,18 +43,24 @@ Areas of research:
 > 
 > [citation] M. J. Ryan, G. Johnson, J. Kirk, S. M. Fuerstenberg, R. A. Zager, and B. Torok-Storb, “HK-2: an immortalized proximal tubule epithelial cell line from normal adult human kidney,” 01-Jan-1994. [Online]. Available: https://pubmed.ncbi.nlm.nih.gov/8127021/. [Accessed: 15-Jan-2025].
 
-#### Fibrosis background
+#### Diabetic Nephropathy Background
 
 ###### [The basics of epithelial-mesenchymal transition](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/)
 
 - [x] Skim [The basics of epithelial-mesenchymal transition](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/) ✅ 2025-01-05
 - [x] Read [The basics of epithelial-mesenchymal transition](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/) ✅ 2025-01-22
-- [x] Summarise [The basics of epithelial-mesenchymal transition](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/) ✅ 2025-01-22
+- [x] Summarise [The basics of epithelial-mesenchymal transition](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/) in [[Reading - The basics of epithelial-mesenchymal transition|reading notes]] ✅ 2025-01-22
 
 > ![[Reading - The basics of epithelial-mesenchymal transition#Summary]]
 > [[Reading - The basics of epithelial-mesenchymal transition|Further Notes]]
 > 
 > [citation] R. Kalluri and R. A. Weinberg, “The basics of epithelial-mesenchymal transition,” 01-Jun-2009. [Online]. Available: https://doi.org/10.1172/JCI39104. [Accessed: 21-Jan-2025].
+
+###### [StatPearls Diabetic Nephropathy](https://www.ncbi.nlm.nih.gov/books/NBK534200/)
+
+- [x] Skim [Diabetic Nephropathy](https://www.ncbi.nlm.nih.gov/books/NBK534200/) ✅ 2025-01-23
+- [x] Thorough [[Reading - StatPearls Diabetic Nephropathy|reading notes]] ✅ 2025-01-23
+- [ ] Summarise [[Reading - StatPearls Diabetic Nephropathy#Summary|reading notes]]
 
 #### AFM as a means of observing fibrosis
 ###### [[Reading - Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy]]
