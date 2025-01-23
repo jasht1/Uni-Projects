@@ -1,5 +1,5 @@
-Data Set,Fit Range,Xmax (),Xmin (),Contact Point ($\micro$m),Baseline (pN),Elastic Modulus (Pa)
-force-save-2014.05.23-17.50.39.jpk-force,0,min,max,94.77,-136.9,143.1
-force-save-2014.05.23-17.50.39.jpk-force,1,93,97,94.79,-136.9,139.4
-force-save-2014.05.23-17.50.39.jpk-force,2,93,95,94.75,-121.1,142.2
-force-save-2014.05.23-17.50.39.jpk-force,3,94,95,94.78,-125,138.6
+Data Set,Fit Range,Xmin ($\micro$m),Xmax ($\micro$m),Contact Point ($\micro$m),Baseline (pN),Force (pN) [After Baseline correction],Indentation depth ($\micro$m) [After height correction],Elastic Modulus (Pa),Comments,Loading Force @ Xmin (pN),velocity (nm/s),Cantilever Sensitivity (nm/V),Tip shape,Tip radius ($\micro m$),Poisson
+force-save-2014.05.23-17.50.39.jpk-force,0,92.84,97.84,94.77,-136.9,1245.1,1.93,143.1,Full Range,1382,500,93.05,Sphere,5,0.5
+force-save-2014.05.23-17.50.39.jpk-force,1,93,97,94.79,-136.9,1033.1,1.79,139.4,Wide Range,1170,500,93.05,Sphere,5,0.5
+force-save-2014.05.23-17.50.39.jpk-force,2,93,95,94.75,-121.1,1048.9,1.75,142.2,Medium Range,1170,500,93.05,Sphere,5,0.5
+force-save-2014.05.23-17.50.39.jpk-force,3,94,95,94.78,-125,130,0.78,138.6,Tight Range,255,500,93.05,Sphere,5,0.5

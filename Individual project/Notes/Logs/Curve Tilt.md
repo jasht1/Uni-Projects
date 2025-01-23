@@ -17,3 +17,4 @@ When this gradient of the offset function is positive the curve is rotated clock
 ### When is tilting useful?
 %%[[2024-12-09]] @ 23:25%%
 
+It may be useful to correct systematic errors due to miss alignment in the AFM, however this shouldn't be necessary when the experimental setup has been well calibrated. 

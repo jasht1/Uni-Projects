@@ -18,7 +18,7 @@ This step seems redundant, the `Determine elasticity from indentation` function 
 
 This step also seems redundant, the `Determine elasticity from indentation` function finds the contact point independently and displays it with reference to the original vertical tip position anyway. 
 
-### Correct Height by for cantilever bending
+### Correct Height for cantilever bending
 %%[[2024-12-06]] @ 22:28%%
 
 This step is vital, as the indentation of the cell is not given by the head height but its sum with the cantilever deflection.
