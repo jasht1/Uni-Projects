@@ -28,20 +28,36 @@ axisFormat %d
 tickInterval 1day
 
 section lit review
-	Literature review: 2025-01-21, 2025-01-24
-	Literature review draft: milestone, 2025-01-23, 1d
+	Reading: 2025-01-15, 2025-01-22
+	draft: 2025-01-20, 2025-01-24
+	Lit rev send for comment: milestone, 2025-01-24, 1d
 section Report
 	Interim report: 2025-01-23, 2025-02-06
-	Interim report first draft: milestone, 2025-01-27, 1d
-	Interim report final draft: milestone, 2025-02-03, 1d
+	first draft: milestone, 2025-01-27, 1d
+	final draft: milestone, 2025-02-03, 1d
 	Interim report hand in: crit, milestone, 2025-02-06, 1d
 
 section presentation
 	Book Presentation: milestone, 2025-01-29, 1d
-	Presentation: 2025-02-06, 2025-02-12
-	presentation practice run: milestone, 2025-02-10, 1d
+	Prepare: 2025-02-06, 2025-02-12
+	practice run: milestone, 2025-02-10, 1d
 	presentation: milestone, crit, 2025-02-12, 1d
 	
 ```
 
 ^IndividualProjectInterimGantt
+
+## ToDos
+
+- [ ] [[Interim Report]] 
+	- [ ] Interim Report Plan
+	- [x] [[Literature Review]] (*see [[Literature Review Plan]] for more detail*) ✅ 2025-01-24
+	- [ ] First Draft
+
+- [ ] [[Interim Presentation]]
+	- [ ] Interim Presentation Plan
+	- [ ] Handouts
+		- [ ] [[Diabetic nephropathy]] handout
+	- [ ] Slides
+	- [ ] talking points
+
