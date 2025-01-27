@@ -47,4 +47,4 @@ Treatments target:
 And treatments in order of severity include:
 - Lifestyle changes
 - Medications
-- Renal Replacment
+- Renal Replacement

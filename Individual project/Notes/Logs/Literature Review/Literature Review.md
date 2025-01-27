@@ -5,18 +5,27 @@
 
 This project investigates the use of atomic force microscopy AFM as a method of detecting the progression of diabetic nephropathy.  
 
+### Diabetic Nephropathy
 Diabetic nephropathy is a common and serious complication of both type 1 and 2 diabetes resulting in kidney failure due to progressive damage to the nephrons, functional units responsible for filtering the blood. %% source %%
 
 Diabetic nephropathy develops in 30-40% of people with diabetes after 15-20 years, as the disease progresses the damage accumulates and mortality rate rises [^StatPearls].
 %% Stats about the number of people with it and dying of it and how that is changing over time %%
 
-## Diabetic Nephropathy
-
 %% connecting line from mortality to pathophysiology %%
-In type 1 diabetes a lack of insulin and in type 2 Insulin resistance cause chronic hyperglycemia a condition where there is too much glucose in the blood. Hyperglycemia causes an increased build up of reactive oxygen species (ROS) this oxidative stress causes inflammation [^Hyperglycemia&OidativeStress].
-Inflammation increases production of cytokines, including TGF-$\beta1$, which trigger Epithelial to Mesenchymal Transition (EMT) [^OxidativeStress]. EMT is a process where cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]) [^EMT]. In this case tubular epithelial, cells which make up the fine vessels of the kidney that filter blood, loose characteristics of their extra cellular matrix (ECM) like E-cadherin, which bond them to their neighbours, and transform into myofibroblasts or undergo apoptosis (cell death) [^TubularToMyofibroblasts]. This is the process of fibrosis, which reduces the elasticity [^TGFBinducesEMT] and results in intraglomerular hypertension and tubular injury. %% See if I can avoid using "intraglomerular hypertension" by just describing it %%
 
-## Observing fibrosis with AFM 
+%% Pathophysiology %%
+In type 1 diabetes a lack of insulin and in type 2 Insulin resistance cause chronic hyperglycemia a condition where there is too much glucose in the blood. Hyperglycemia causes an increased build up of reactive oxygen species (ROS) this oxidative stress causes inflammation [^Hyperglycemia&OidativeStress].
+Inflammation increases production of cytokines, including TGF-$\beta1$, which trigger Epithelial to Mesenchymal Transition (EMT) [^OxidativeStress]. EMT is a process where cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]) [^EMT]. In this case tubular epithelial, cells which make up the fine vessels of the kidney that filter blood, loose characteristics of their extra cellular matrix (ECM) like E-cadherin, which bond them to their neighbours, and transform into myofibroblasts or undergo apoptosis (cell death) [^TubularToMyofibroblasts]. This is the process of fibrosis, which reduces the elasticity [^TGFBinducesEMT] and results in intraglomerular hypertension and tubular injury causing progressive kidney damage [^HypertensionCKD].%% See if I can avoid using "intraglomerular hypertension" by just describing it %%
+
+%% Diagnosis %%
+
+> [!FIGURE] Figure: Prognosis of chronic kindey desease based on uACR and eGFR [^diagnosisSoA]
+> ![[Diagnosis of diabetic kidney disease - risk factor chart.png]] 
+
+The progress of kidney damage is typically monitored based on elevated albuminuria and decline in effective globular filtration rate (eGFR) based on urine and blood samples respectively. However these tests are limited in their diagnostic accuracy and require ongoing monitoring [^uACRaccuracy][^eGFRaccuracy]. 
+Based on the risk factor of the patient treatments range from lifestyle changes and Medications, to renal replacement which involves dialysis and transplantation [^StatPearls].
+
+### Observing fibrosis with AFM 
 
 
 
@@ -33,3 +42,11 @@ Inflammation increases production of cytokines, including TGF-$\beta1$, which tr
 [^TubularToMyofibroblasts]: M. Iwano, D. Plieth, T. M. Danoff, C. Xue, H. Okada, and E. G. Neilson, “Evidence that fibroblasts derive from epithelium during tissue fibrosis,” 01-Aug-2002. [Online]. Available: https://www.jci.org/articles/view/15518. [Accessed: 26-Jan-2025].
 
 [^TGFBinducesEMT]: C. E. Hills, E. Siamantouras, S. W. Smith, P. Cockwell, K.-K. Liu, and P. E. Squires, “TGFβ modulates cell-to-cell communication in early epithelial-to-mesenchymal transition,” 01-Mar-2012. [Online]. Available: https://link.springer.com/article/10.1007/s00125-011-2409-9. [Accessed: 16-Jan-2025].
+
+[^HypertensionCKD]: W. Metcalfe, “How does early chronic kidney disease progress?: A Background Paper prepared for the UK Consensus Conference on Early Chronic Kidney Disease,” 01-Sep-2007. [Online]. Available: https://academic.oup.com/ndt/article/22/suppl_9/ix26/1913530. [Accessed: 27-Jan-2025].
+
+[^diagnosisSoA]: F. Persson and P. Rossing, “Diagnosis of diabetic kidney disease: state of the art and future perspective,” 01-Jan-2018. [Online]. Available: https://pubmed.ncbi.nlm.nih.gov/30675433/. [Accessed: 27-Jan-2025].
+
+[^uACRaccuracy]: M. P. McTaggart, R. G. Newall, J. A. Hirst, C. R. Bankhead, E. J. Lamb, N. W. Roberts, and C. P. Price, “Diagnostic accuracy of point-of-care tests for detecting albuminuria: a systematic review and meta-analysis,” 01-Jan-2014. [Online]. Available: https://www.ncbi.nlm.nih.gov/books/NBK196046/. [Accessed: 27-Jan-2025].
+
+[^eGFRaccuracy]: E. J. Lamb, J. Barratt, E. A. Brettell, P. Cockwell, R. N. Dalton, J. J. Deeks, G. Eaglestone, T. Pellatt-Higgins, P. A. Kalra, K. Khunti, F. C. Loud, R. S. Ottridge, A. Potter, C. Rowe, K. Scandrett, A. J. Sitch, P. E. Stevens, C. C. Sharpe, B. Shinkins, A. Smith, A. J. Sutton, and M. W. Taal, “Accuracy of glomerular filtration rate estimation using creatinine and cystatin C for identifying and monitoring moderate chronic kidney disease: the eGFR-C study,” 25-Jul-2024. [Online]. Available: https://www.journalslibrary.nihr.ac.uk/hta/HYHN1078. [Accessed: 27-Jan-2025].
