@@ -16,3 +16,7 @@ In Layman's terms, it is a process by which cells which make up structural and f
 > [!QUOTE] Mesenchymal #definition 
 > Refers to cells that develop into connective tissue, blood vessels, and lymphatic tissue.
 > https://www.cancer.gov/publications/dictionaries/cancer-terms/def/mesenchymal
+
+## 
+
+[[Reading - The basics of epithelial-mesenchymal transition]]
