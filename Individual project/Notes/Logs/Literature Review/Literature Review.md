@@ -6,28 +6,36 @@
 This project investigates the use of atomic force microscopy AFM as a method of detecting the progression of diabetic nephropathy.  
 
 ### Diabetic Nephropathy
+
 Diabetic nephropathy is a common and serious complication of both type 1 and 2 diabetes resulting in kidney failure due to progressive damage to the nephrons, functional units responsible for filtering the blood. %% source %%
 
-Diabetic nephropathy develops in 30-40% of people with diabetes after 15-20 years, as the disease progresses the damage accumulates and mortality rate rises [^StatPearls].
+Diabetic nephropathy develops in 30-40% of people with diabetes after 15-20 years, as the disease progresses the damage accumulates and mortality rate rises [^StatPearls]. Based on the risk factor of the patient treatments range from lifestyle changes and medications, to renal replacement which involves dialysis and transplantation [^StatPearls]. 
+
 %% Stats about the number of people with it and dying of it and how that is changing over time %%
 
 %% connecting line from mortality to pathophysiology %%
 
 %% Pathophysiology %%
 In type 1 diabetes a lack of insulin and in type 2 Insulin resistance cause chronic hyperglycemia a condition where there is too much glucose in the blood. Hyperglycemia causes an increased build up of reactive oxygen species (ROS) this oxidative stress causes inflammation [^Hyperglycemia&OidativeStress].
-Inflammation increases production of cytokines, including TGF-$\beta1$, which trigger Epithelial to Mesenchymal Transition (EMT) [^OxidativeStress]. EMT is a process where cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]) [^EMT]. In this case tubular epithelial, cells which make up the fine vessels of the kidney that filter blood, loose characteristics of their extra cellular matrix (ECM) like E-cadherin, which bond them to their neighbours, and transform into myofibroblasts or undergo apoptosis (cell death) [^TubularToMyofibroblasts]. This is the process of fibrosis, which reduces the elasticity [^TGFBinducesEMT] and results in intraglomerular hypertension and tubular injury causing progressive kidney damage [^HypertensionCKD].%% See if I can avoid using "intraglomerular hypertension" by just describing it %%
+Inflammation increases production of cytokines, including TGF-$\beta1$, which trigger Epithelial to Mesenchymal Transition (EMT) [^OxidativeStress]. EMT is a process where cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]) [^EMT]. In this case tubular epithelial, cells which make up the fine vessels of the kidney that filter blood, transform into myofibroblasts or undergo apoptosis (cell death) [^TubularToMyofibroblasts]. This is the process of fibrosis, which reduces the elasticity [^TGFBinducesEMT] and results in intraglomerular hypertension and tubular injury causing progressive kidney damage [^HypertensionCKD].%% See if I can avoid using "intraglomerular hypertension" by just describing it %%
 
-%% Diagnosis %%
+### Diagnosis state of the art
+
+%% #### Current practice %%
+
+The progress of kidney damage is typically monitored based on elevated albuminuria and decline in effective globular filtration rate (eGFR) based on urine and blood samples respectively. However these tests are limited in their diagnostic accuracy and require ongoing monitoring [^uACRaccuracy][^eGFRaccuracy]. 
 
 > [!FIGURE] Figure: Prognosis of chronic kindey desease based on uACR and eGFR [^diagnosisSoA]
 > ![[Diagnosis of diabetic kidney disease - risk factor chart.png]] 
 
-The progress of kidney damage is typically monitored based on elevated albuminuria and decline in effective globular filtration rate (eGFR) based on urine and blood samples respectively. However these tests are limited in their diagnostic accuracy and require ongoing monitoring [^uACRaccuracy][^eGFRaccuracy]. 
-Based on the risk factor of the patient treatments range from lifestyle changes and Medications, to renal replacement which involves dialysis and transplantation [^StatPearls].
+%% #### Areas of active development %%
 
 ### Observing fibrosis with AFM 
 
+Recent developments in both understanding of the pathophysiology of kidney disease and the diagnostic application of AFM technology [^AFMdiagnosisSoA] may provide a novel means of detecting the progression of kidney failure [^AFMdetectCellularAdhesion].
+%% Need to know how easy it is to get hold of affected tubular cells from patients, is this non invasive? %%
 
+%% Inter cellular adhesion %%
 
 ## References
 
@@ -50,3 +58,7 @@ Based on the risk factor of the patient treatments range from lifestyle changes 
 [^uACRaccuracy]: M. P. McTaggart, R. G. Newall, J. A. Hirst, C. R. Bankhead, E. J. Lamb, N. W. Roberts, and C. P. Price, “Diagnostic accuracy of point-of-care tests for detecting albuminuria: a systematic review and meta-analysis,” 01-Jan-2014. [Online]. Available: https://www.ncbi.nlm.nih.gov/books/NBK196046/. [Accessed: 27-Jan-2025].
 
 [^eGFRaccuracy]: E. J. Lamb, J. Barratt, E. A. Brettell, P. Cockwell, R. N. Dalton, J. J. Deeks, G. Eaglestone, T. Pellatt-Higgins, P. A. Kalra, K. Khunti, F. C. Loud, R. S. Ottridge, A. Potter, C. Rowe, K. Scandrett, A. J. Sitch, P. E. Stevens, C. C. Sharpe, B. Shinkins, A. Smith, A. J. Sutton, and M. W. Taal, “Accuracy of glomerular filtration rate estimation using creatinine and cystatin C for identifying and monitoring moderate chronic kidney disease: the eGFR-C study,” 25-Jul-2024. [Online]. Available: https://www.journalslibrary.nihr.ac.uk/hta/HYHN1078. [Accessed: 27-Jan-2025].
+
+[^AFMdiagnosisSoA]: S. Liu, Y. Han, L. Kong, G. Wang, and Z. Ye, “Atomic force microscopy in disease-related studies: Exploring tissue and cell mechanics,” 01-Jan-2024. [Online]. Available: https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/jemt.24471. [Accessed: 27-Jan-2025].
+
+[^AFMdetectCellularAdhesion]: Siamantouras E, et al, Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy. Nanomedicine: NBM 2016;12:1013-1021, http://dx.doi.org/10.1016/j.nano.2015.12.362 
