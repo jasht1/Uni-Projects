@@ -17,18 +17,41 @@ Diabetic nephropathy develops in 30-40% of people with diabetes after 15-20 year
 
 %% Pathophysiology %%
 In type 1 diabetes a lack of insulin and in type 2 Insulin resistance cause chronic hyperglycemia a condition where there is too much glucose in the blood. Hyperglycemia causes an increased build up of reactive oxygen species (ROS) this oxidative stress causes inflammation [^Hyperglycemia&OidativeStress].
-Inflammation increases production of cytokines, including TGF-$\beta1$, which trigger Epithelial to Mesenchymal Transition (EMT) [^OxidativeStress]. EMT is a process where cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]) [^EMT]. In this case tubular epithelial, cells which make up the fine vessels of the kidney that filter blood, transform into myofibroblasts or undergo apoptosis (cell death) [^TubularToMyofibroblasts]. This is the process of fibrosis, which reduces the elasticity [^TGFBinducesEMT] and results in intraglomerular hypertension and tubular injury causing progressive kidney damage [^HypertensionCKD].%% See if I can avoid using "intraglomerular hypertension" by just describing it %%
+Inflammation increases production of cytokines, including TGF-$\beta1$, which trigger Epithelial to Mesenchymal Transition (EMT) [^TGFBinducesEMT][^OxidativeStress]. EMT is a process where cells which make up structural and functional surfaces ([[epithelial]]) transition into repair/maintenance cells ([[Mesenchymal]]) [^EMT]. In this case tubular epithelial, cells which make up the fine vessels of the kidney that filter blood, transform into myofibroblasts, repair and maintenance cells %% or undergo apoptosis (cell death) %% [^TubularToMyofibroblasts]. This is the underlying mechanism of fibrosis, which induces atrophy and scarring in the tubules %% and results in intraglomerular hypertension %% causing progressive kidney damage [^HypertensionCKD].
 
 ### Diagnosis state of the art
 
 %% #### Current practice %%
 
-The progress of kidney damage is typically monitored based on elevated albuminuria and decline in effective globular filtration rate (eGFR) based on urine and blood samples respectively. However these tests are limited in their diagnostic accuracy and require ongoing monitoring [^uACRaccuracy][^eGFRaccuracy]. 
+The progress of kidney damage is typically monitored by observing degradation of kidney function through elevated albuminuria and decline in effective globular filtration rate (eGFR) based on urine and blood samples respectively. However these tests are limited in their diagnostic accuracy and can only give a rough indication of the state of the kidney [^uACRaccuracy][^eGFRaccuracy]. 
 
 > [!FIGURE] Figure: Prognosis of chronic kindey desease based on uACR and eGFR [^diagnosisSoA]
 > ![[Diagnosis of diabetic kidney disease - risk factor chart.png]] 
 
+%% Biopsey as the gold standard and it's limitations, sample bias, invasivness %%
+
+Renal biopsies provide a far more direct and precise insight into kidney disease progression and are sensitive enough to catch it at an early stage, however such an invasive procedure is difficult to justify in most cases [^diagnosisSoA].
+
 %% #### Areas of active development %%
+
+
+
+As such effective biomarkers to track the progression of kidney disease especially in its early stages is an area of active research.
+One biomarker that shows promise is monitoring change in mechanical properties of the kidney as it undergoes fibrosis. 
+
+%% Stiffness %%
+
+There are several mechanisms that cause changes to the stiffness of the kidney such as:
+- f-actin cytoskeleton
+- cell to cell adhesion
+- EMT 
+- thickening of cell walls
+
+As myofibroblasts are overproduced their 
+
+%% MRI methods %% 
+
+
 
 ### Observing fibrosis with AFM 
 
