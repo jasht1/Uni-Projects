@@ -1,8 +1,8 @@
 ---
 category: literaturenote
-tags: 
+tags: 👁, 🖉, 🖋
 citekey: kalluriR2009-BasicsEpithelialmesenchymalTransition
-imported: 2025-01-29 11:46
+imported: 2025-01-31 06:29
 ---
 
 # The basics of epithelial-mesenchymal transition
@@ -15,6 +15,7 @@ imported: 2025-01-29 11:46
 > > **Year**:: 2009
 > > **Citekey**:: kalluriR2009-BasicsEpithelialmesenchymalTransition
 > > **Sources**:: [Zotero](zotero://select/library/items/66K38RBR) [pdf](file:////home/joeashton/Zotero/storage/3EDVXJUF/Kalluri%20and%20Weinberg%20-%202009%20-%20The%20basics%20of%20epithelial-mesenchymal%20transition.pdf) 
+> > **Tags:** #👁, #🖉, #🖋
 > > **FirstAuthor**:: Kalluri, Raghu
 > > **Author**:: Weinberg, Robert A.
 > > 
@@ -25,7 +26,13 @@ imported: 2025-01-29 11:46
 > > **Pages**:: 1420-1428
 > > **DOI**:: 10.1172/JCI39104
 
+# Annotations
+
+%% begin annotations %%%% end annotations %%
+
 # Notes
+
+%% begin notes %%
 
 > [!note]
 > ## Summary
@@ -38,10 +45,8 @@ imported: 2025-01-29 11:46
 > 
 > I found the following summary helpful:
 > 
-> > [!QUOTE] Epithelial to Mesenchymal Transition #definition
-> 
-> > An epithelial-mesenchymal transition (EMT) is a biologic process that allows a polarized epithelial cell, which normally interacts with basement membrane via its basal surface, to undergo multiple biochemical changes that enable it to assume a mesenchymal cell phenotype, which includes enhanced migratory capacity, invasiveness, elevated resistance to apoptosis, and greatly increased production of ECM components ([1](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/#B1)). The completion of an EMT is signaled by the degradation of underlying basement membrane and the formation of a mesenchymal cell that can migrate away from the epithelial layer in which it originated.
-> 
+> > [!QUOTE] Epithelial to Mesenchymal Transition #definition  
+> > An epithelial-mesenchymal transition (EMT) is a biologic process that allows a polarized epithelial cell, which normally interacts with basement membrane via its basal surface, to undergo multiple biochemical changes that enable it to assume a mesenchymal cell phenotype, which includes enhanced migratory capacity, invasiveness, elevated resistance to apoptosis, and greatly increased production of ECM components ([1](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/#B1)). The completion of an EMT is signaled by the degradation of underlying basement membrane and the formation of a mesenchymal cell that can migrate away from the epithelial layer in which it originated.  
 > > *From:* https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/
 > 
 > And have based my [[Epithelial to Mesenchymal Transition (EMT)#Summary]] off it.
@@ -82,17 +87,11 @@ imported: 2025-01-29 11:46
 > 
 > Resident fibroblasts and inflammatory cells release molecules such as TGF-β, PDGF, EGF, and FGF-2 that trigger EMT's, and degrade these structures. Where the basement membrane (part of the ECM) fails cells that do not undergo EMT tend to die (apoptosis).
 > 
-> > [!QUOTE]
-> 
+> > [!QUOTE]  
 > > Tissue fibrosis is in essence an unabated form of wound healing due to persistent inflammation.
 >
 > [see in Zotero](zotero://select/library/items/48R52B9H)
 
-# Annotations
+%% end notes %%
 
-%% begin annotations %%
-
-
-%% end annotations %%
-
-%% Import Date: 2025-01-29T23:48:17.950+00:00 %%
+%% Import Date: 2025-01-31T18:31:59.010+00:00 %%

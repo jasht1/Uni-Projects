@@ -1,8 +1,8 @@
 ---
 category: literaturenote
-tags: Atomic force microscopy, Cell elasticity, Fibrosis, Nanomechanics, TGF-β1
+tags: Atomic force microscopy, Cell elasticity, Fibrosis, Nanomechanics, TGF-β1, 👁, 🖉, 🖋
 citekey: siamantourasE2016-QuantifyingCellularMechanics
-imported: 2025-01-29 11:46
+imported: 2025-01-31 06:29
 ---
 
 # Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy
@@ -15,7 +15,7 @@ imported: 2025-01-29 11:46
 > > **Year**:: 2016
 > > **Citekey**:: siamantourasE2016-QuantifyingCellularMechanics
 > > **Sources**:: [Zotero](zotero://select/library/items/5JXX6Q9B) [pdf](file:////home/joeashton/Zotero/storage/JAZG36C9/Siamantouras%20et%20al.%20-%202016%20-%20Quantifying%20cellular%20mechanics%20and%20adhesion%20in%20renal%20tubular%20injury%20using%20single%20cell%20force%20spectros.pdf) 
-> > **Tags:** #Atomic-force-microscopy, #Cell-elasticity, #Fibrosis, #Nanomechanics, #TGF-β1
+> > **Tags:** #Atomic-force-microscopy, #Cell-elasticity, #Fibrosis, #Nanomechanics, #TGF-β1, #👁, #🖉, #🖋
 > > **FirstAuthor**:: Siamantouras, Eleftherios
 > > **Author**:: Hills, Claire E.
 > > **Author**:: Squires, Paul E.
@@ -33,7 +33,18 @@ imported: 2025-01-29 11:46
 From the Clinical Editor
 Diabetes affects many patients worldwide. One of the long term problems is diabetic nephropathy. Here, the authors utilized atomic force microscopy single cell force spectroscopy (AFM- SCFS) to study cellular stiffness and cell adhesion after TGF1 treatment in human proximal tubule kidney cells. The findings would help further understand the overall disease mechanism in diabetic patients.
 
+# Annotations
+
+%% begin annotations %%
+
+> [!YellowHighlight]
+> "Elasticity is defined as the ability of a cell to resist an applied force or stress  and return to its original configuration when the stress is removed. If the cell is assumed as  linear elastic material, the elasticity can be expressed quantitatively by modulus, such as  Young's modulus"
+> 
+> [see in Zotero](zotero://open-pdf/library/items/JAZG36C9?page=4&annotation=TXJ82QL5)%% end annotations %%
+
 # Notes
+
+%% begin notes %%
 
 > [!note]
 > ## Summary
@@ -76,19 +87,6 @@ Diabetes affects many patients worldwide. One of the long term problems is diabe
 >
 > [see in Zotero](zotero://select/library/items/9R3AB4VM)
 
-# Annotations
+%% end notes %%
 
-%% begin annotations %%
-
-
-
-%% imported:: 2025-01-29 11:46 pm %%
-
-
-<mark style="background-color: #ffd400">Quote</mark>
-> Elasticity is defined as the ability of a cell to resist an applied force or stress  and return to its original configuration when the stress is removed. If the cell is assumed as  linear elastic material, the elasticity can be expressed quantitatively by modulus, such as  Young's modulus
-
-
-%% end annotations %%
-
-%% Import Date: 2025-01-29T23:48:18.188+00:00 %%
+%% Import Date: 2025-01-31T18:31:59.378+00:00 %%

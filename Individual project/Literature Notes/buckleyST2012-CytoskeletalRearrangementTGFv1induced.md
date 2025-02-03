@@ -1,8 +1,8 @@
 ---
 category: literaturenote
-tags: 
+tags: 👁, 🖉
 citekey: buckleyST2012-CytoskeletalRearrangementTGFv1induced
-imported: 2025-01-29 11:46
+imported: 2025-01-31 06:29
 ---
 
 # Cytoskeletal re-arrangement in TGF-β1-induced alveolar epithelial-mesenchymal transition studied by atomic force microscopy and high-content analysis
@@ -15,6 +15,7 @@ imported: 2025-01-29 11:46
 > > **Year**:: 2012
 > > **Citekey**:: buckleyST2012-CytoskeletalRearrangementTGFv1induced
 > > **Sources**:: [Zotero](zotero://select/library/items/LVL9N5FI)
+> > **Tags:** #👁, #🖉
 > > **FirstAuthor**:: Buckley, Stephen T.
 > > **Author**:: Medina, Carlos
 > > **Author**:: Davies, Anthony M.
@@ -27,7 +28,13 @@ imported: 2025-01-29 11:46
 > > **Pages**:: 355-364
 > > **DOI**:: 10.1016/j.nano.2011.06.021
 
+# Annotations
+
+%% begin annotations %%%% end annotations %%
+
 # Notes
+
+%% begin notes %%
 
 > [!note]
 > ## Summary
@@ -42,11 +49,6 @@ imported: 2025-01-29 11:46
 >
 > [see in Zotero](zotero://select/library/items/KQSKSY4L)
 
-# Annotations
+%% end notes %%
 
-%% begin annotations %%
-
-
-%% end annotations %%
-
-%% Import Date: 2025-01-29T23:48:17.904+00:00 %%
+%% Import Date: 2025-01-31T18:31:58.771+00:00 %%

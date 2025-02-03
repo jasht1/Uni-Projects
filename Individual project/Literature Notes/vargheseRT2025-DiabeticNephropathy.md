@@ -1,8 +1,8 @@
 ---
 category: literaturenote
-tags: 
+tags: 👁, 🖉
 citekey: vargheseRT2025-DiabeticNephropathy
-imported: 2025-01-29 11:46
+imported: 2025-01-31 06:29
 ---
 
 # Diabetic Nephropathy
@@ -15,6 +15,7 @@ imported: 2025-01-29 11:46
 > > **Year**:: 2025
 > > **Citekey**:: vargheseRT2025-DiabeticNephropathy
 > > **Sources**:: [Zotero](zotero://select/library/items/E699E2DE)
+> > **Tags:** #👁, #🖉
 > > **FirstAuthor**:: Varghese, Ron T.
 > > **Author**:: Jialal, Ishwarlal
 > > 
@@ -26,7 +27,13 @@ imported: 2025-01-29 11:46
 > [!abstract]- Abstract
 > Diabetic kidney disease (DKD) is the leading cause of end-stage kidney disease (ESKD) in developed countries, including the United States. It is considered a microvascular complication and occurs in both diabetes mellitus type 1 (T1DM) and diabetes mellitus type 2 (T2DM). The disorder presents with persistent albuminuria and a progressive decline in the glomerular filtration rate. There is substantial evidence that early treatment can delay or prevent the progression of the disorder. Reliable tests for diagnosis and monitoring include urine albuminuria and the estimated GFR (eGFR). Optimizing glycemia and reasonable blood pressure control are pivotal in halting the progression of DKD.
 
+# Annotations
+
+%% begin annotations %%%% end annotations %%
+
 # Notes
+
+%% begin notes %%
 
 > [!note]
 > ## Summary
@@ -61,8 +68,7 @@ imported: 2025-01-29 11:46
 > 
 > - Persistent albuminuria (greater than 300 mg/d) on at least two visits 3-6 months apart.
 > 
-> > [!QUOTE] Persistent albuminuria
-> 
+> > [!QUOTE] Persistent albuminuria  
 > > Diabetic nephropathy is diagnosed by persistent albuminuria on two or more occasions, separated at least by three months on early morning urine samples. Persistent albuminuria is greater than 300 mg over 24 hours or greater than 200 micrograms per minute. Moderately increased albuminuria is when the urine albumin excretion rate is between 30 to 300 mg over 24 hours and is a marker of early DN.
 > 
 > ## How is it normally treated?
@@ -87,11 +93,6 @@ imported: 2025-01-29 11:46
 >
 > [see in Zotero](zotero://select/library/items/RPHRS9L3)
 
-# Annotations
+%% end notes %%
 
-%% begin annotations %%
-
-
-%% end annotations %%
-
-%% Import Date: 2025-01-29T23:48:18.242+00:00 %%
+%% Import Date: 2025-01-31T18:31:59.448+00:00 %%

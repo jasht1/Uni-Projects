@@ -1,8 +1,8 @@
 ---
 category: literaturenote
-tags: 
+tags: 👁, 🖉
 citekey: metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress
-imported: 2025-01-29 11:46
+imported: 2025-01-31 06:29
 ---
 
 # How does early chronic kidney disease progress?: A Background Paper prepared for the UK Consensus Conference on Early Chronic Kidney Disease
@@ -15,6 +15,7 @@ imported: 2025-01-29 11:46
 > > **Year**:: 2007
 > > **Citekey**:: metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress
 > > **Sources**:: [Zotero](zotero://select/library/items/SCWAUDQ3) [pdf](file:////home/joeashton/Zotero/storage/XHSHRQUJ/Metcalfe%20-%202007%20-%20How%20does%20early%20chronic%20kidney%20disease%20progress%20A%20Background%20Paper%20prepared%20for%20the%20UK%20Consensus%20Co.pdf) 
+> > **Tags:** #👁, #🖉
 > > **FirstAuthor**:: Metcalfe, Wendy
 > > 
 > > **itemType**:: journalArticle
@@ -24,7 +25,13 @@ imported: 2025-01-29 11:46
 > > **Pages**:: ix26-ix30
 > > **DOI**:: 10.1093/ndt/gfm446
 
+# Annotations
+
+%% begin annotations %%%% end annotations %%
+
 # Notes
+
+%% begin notes %%
 
 > [!note]
 > ## Summary
@@ -45,11 +52,6 @@ imported: 2025-01-29 11:46
 >
 > [see in Zotero](zotero://select/library/items/U6TWLCIW)
 
-# Annotations
+%% end notes %%
 
-%% begin annotations %%
-
-
-%% end annotations %%
-
-%% Import Date: 2025-01-29T23:48:18.042+00:00 %%
+%% Import Date: 2025-01-31T18:31:59.089+00:00 %%

@@ -1,8 +1,8 @@
 ---
 category: literaturenote
-tags: 
+tags: 👁, 🖉
 citekey: iwanoM2002-EvidenceThatFibroblasts
-imported: 2025-01-29 11:46
+imported: 2025-01-31 06:29
 ---
 
 # Evidence that fibroblasts derive from epithelium during tissue fibrosis
@@ -15,6 +15,7 @@ imported: 2025-01-29 11:46
 > > **Year**:: 2002
 > > **Citekey**:: iwanoM2002-EvidenceThatFibroblasts
 > > **Sources**:: [Zotero](zotero://select/library/items/4DM25RI7) [pdf](file:////home/joeashton/Zotero/storage/88VNKF7R/Iwano%20et%20al.%20-%202002%20-%20Evidence%20that%20fibroblasts%20derive%20from%20epithelium%20during%20tissue%20fibrosis.pdf) 
+> > **Tags:** #👁, #🖉
 > > **FirstAuthor**:: Iwano, Masayuki
 > > **Author**:: Plieth, David
 > > **Author**:: Danoff, Theodore M.
@@ -29,7 +30,13 @@ imported: 2025-01-29 11:46
 > > **Pages**:: 341-350
 > > **DOI**:: 10.1172/JCI15518
 
+# Annotations
+
+%% begin annotations %%%% end annotations %%
+
 # Notes
+
+%% begin notes %%
 
 > [!note]
 > ## Summary
@@ -40,11 +47,6 @@ imported: 2025-01-29 11:46
 >
 > [see in Zotero](zotero://select/library/items/7QFJC9B9)
 
-# Annotations
+%% end notes %%
 
-%% begin annotations %%
-
-
-%% end annotations %%
-
-%% Import Date: 2025-01-29T23:48:17.933+00:00 %%
+%% Import Date: 2025-01-31T18:31:58.868+00:00 %%

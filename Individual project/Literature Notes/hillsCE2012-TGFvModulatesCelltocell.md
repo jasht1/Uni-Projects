@@ -1,8 +1,8 @@
 ---
 category: literaturenote
-tags: Fibrosis, Cell adhesion, Cell communication, Diabetic nephropathy, Epithelial-to-mesenchymal transition, Gap junctions, Proximal tubule
+tags: Fibrosis, Cell adhesion, Cell communication, Diabetic nephropathy, Epithelial-to-mesenchymal transition, Gap junctions, Proximal tubule, 👁
 citekey: hillsCE2012-TGFvModulatesCelltocell
-imported: 2025-01-29 11:46
+imported: 2025-01-31 06:29
 ---
 
 # TGFβ modulates cell-to-cell communication in early epithelial-to-mesenchymal transition
@@ -15,7 +15,7 @@ imported: 2025-01-29 11:46
 > > **Year**:: 2012
 > > **Citekey**:: hillsCE2012-TGFvModulatesCelltocell
 > > **Sources**:: [Zotero](zotero://select/library/items/6JAYX4LK) [pdf](file:////home/joeashton/Zotero/storage/6QCHMGIF/Hills%20et%20al.%20-%202012%20-%20TGFβ%20modulates%20cell-to-cell%20communication%20in%20early%20epithelial-to-mesenchymal%20transition.pdf) 
-> > **Tags:** #Fibrosis, #Cell-adhesion, #Cell-communication, #Diabetic-nephropathy, #Epithelial-to-mesenchymal-transition, #Gap-junctions, #Proximal-tubule
+> > **Tags:** #Fibrosis, #Cell-adhesion, #Cell-communication, #Diabetic-nephropathy, #Epithelial-to-mesenchymal-transition, #Gap-junctions, #Proximal-tubule, #👁
 > > **FirstAuthor**:: Hills, C. E.
 > > **Author**:: Siamantouras, E.
 > > **Author**:: Smith, S. W.
@@ -31,11 +31,14 @@ imported: 2025-01-29 11:46
 > > **DOI**:: 10.1007/s00125-011-2409-9
 
 > [!abstract]- Abstract
-> A key pathology in diabetic nephropathy is tubulointerstitial fibrosis. The condition is characterised by increased deposition of the extracellular matrix, fibrotic scar formation and declining renal function, with the prosclerotic cytokine TGF-β1 mediating many of these catastrophic changes. Here we investigated whether TGF-β1-induced epithelial-to-mesenchymal transition (EMT) plays a role in alterations in cell adhesion, cell coupling and cell communication in the human renal proximal tubule.# Annotations
+> A key pathology in diabetic nephropathy is tubulointerstitial fibrosis. The condition is characterised by increased deposition of the extracellular matrix, fibrotic scar formation and declining renal function, with the prosclerotic cytokine TGF-β1 mediating many of these catastrophic changes. Here we investigated whether TGF-β1-induced epithelial-to-mesenchymal transition (EMT) plays a role in alterations in cell adhesion, cell coupling and cell communication in the human renal proximal tubule.
 
-%% begin annotations %%
+# Annotations
 
+%% begin annotations %%%% end annotations %%
 
-%% end annotations %%
+# Notes
 
-%% Import Date: 2025-01-29T23:48:17.923+00:00 %%
+%% begin notes %%%% end notes %%
+
+%% Import Date: 2025-01-31T18:31:58.810+00:00 %%

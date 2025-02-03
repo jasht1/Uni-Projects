@@ -1,8 +1,8 @@
 ---
 category: literaturenote
-tags: 
+tags: 👁, 🖉
 citekey: leungG2017-CouldMRIBeUsedImageKidneyFibrosis
-imported: 2025-01-29 11:46
+imported: 2025-01-31 06:29
 ---
 
 # Could MRI Be Used To Image Kidney Fibrosis? A Review of Recent Advances and Remaining Barriers
@@ -14,7 +14,8 @@ imported: 2025-01-29 11:46
 > > **Title**:: Could MRI Be Used To Image Kidney Fibrosis? A Review of Recent Advances and Remaining Barriers
 > > **Year**:: 2017
 > > **Citekey**:: leungG2017-CouldMRIBeUsedImageKidneyFibrosis
-> > **Sources**:: [Zotero](zotero://select/library/items/CRKXDUM9)
+> > **Sources**:: [Zotero](zotero://select/library/items/CRKXDUM9) [pdf](file:////home/joeashton/Zotero/storage/GUBJQHKT/Kim%20et%20al.%20-%202022%20-%20Cell–Matrix%20Interactions%20in%20Renal%20Fibrosis.pdf) 
+> > **Tags:** #👁, #🖉
 > > **FirstAuthor**:: Leung, General
 > > **Author**:: Kirpalani, Anish
 > > **Author**:: Szeto, Stephen G.
@@ -33,7 +34,13 @@ imported: 2025-01-29 11:46
 > [!abstract]- Abstract
 > A key contributor to the progression of nearly all forms of CKD is fibrosis, a largely irreversible process that drives further kidney injury. Despite its importance, clinicians currently have no means of noninvasively assessing renal scar, and thus have historically relied on percutaneous renal biopsy to assess fibrotic burden. Although helpful in the initial diagnostic assessment, renal biopsy remains an imperfect test for fibrosis measurement, limited not only by its invasiveness, but also, because of the small amounts of tissue analyzed, its susceptibility to sampling bias. These concerns have limited not only the prognostic utility of biopsy analysis and its ability to guide therapeutic decisions, but also the clinical translation of experimental antifibrotic agents. Recent advances in imaging technology have raised the exciting possibility of magnetic resonance imaging (MRI)–based renal scar analysis, by capitalizing on the differing physical features of fibrotic and nonfibrotic tissue. In this review, we describe two key fibrosis-induced pathologic changes (capillary loss and kidney stiffening) that can be imaged by MRI techniques, and the potential for these new MRI-based technologies to noninvasively image renal scar.
 
+# Annotations
+
+%% begin annotations %%%% end annotations %%
+
 # Notes
+
+%% begin notes %%
 
 > [!note]
 > ## Summary
@@ -46,11 +53,6 @@ imported: 2025-01-29 11:46
 >
 > [see in Zotero](zotero://select/library/items/5N4YHEZG)
 
-# Annotations
+%% end notes %%
 
-%% begin annotations %%
-
-
-%% end annotations %%
-
-%% Import Date: 2025-01-29T23:48:18.009+00:00 %%
+%% Import Date: 2025-01-31T18:31:59.025+00:00 %%
