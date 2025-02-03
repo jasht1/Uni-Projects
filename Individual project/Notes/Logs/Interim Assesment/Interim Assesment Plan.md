@@ -51,7 +51,7 @@ section presentation
 
 - [ ] [[Interim Report]] 
 	- [ ] Interim Report Plan
-	- [x] [[Literature Review]] (*see [[Literature Review Plan]] for more detail*) ✅ 2025-01-24
+	- [x] [[Interim Report - Introduction and Background]] (*see [[Literature Review Plan]] for more detail*) ✅ 2025-01-24
 	- [ ] First Draft
 
 - [ ] [[Interim Presentation]]

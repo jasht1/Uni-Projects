@@ -1,6 +1,4 @@
 
-# Literature Review
-
 ## Introduction
 
 This project investigates the use of atomic force microscopy AFM as a method of detecting the progression of diabetic nephropathy.  
