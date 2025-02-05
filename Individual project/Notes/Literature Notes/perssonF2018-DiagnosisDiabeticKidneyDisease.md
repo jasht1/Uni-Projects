@@ -41,7 +41,7 @@ imported: 2025-01-31 06:29
 > [see in Zotero](zotero://open-pdf/library/items/V6XA5P9Q?page=3&annotation=7D6SRBJ9)
 
 > [!Quote]
-> ![figure-2-x139-y92.png](attachments/perssonF2018-DiagnosisDiabeticKidneyDisease/figure-2-x139-y92.png)
+> ![figure-2-x139-y92.png](figure-2-x139-y92.png)
 > 
 > [see in Zotero](zotero://open-pdf/library/items/V6XA5P9Q?page=3&annotation=KTP7RE7X)%% end annotations %%
 

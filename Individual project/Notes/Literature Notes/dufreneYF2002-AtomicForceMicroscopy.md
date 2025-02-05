@@ -74,7 +74,7 @@ imported: 2025-02-03 02:04
 > [see in Zotero](zotero://open-pdf/library/items/5RFG8L8I?page=5206&annotation=CIEC5YMW)
 
 > [!Quote]
-> ![figure-2-x78-y535.png](attachments/dufreneYF2002-AtomicForceMicroscopy/figure-2-x78-y535.png)
+> ![figure-2-x78-y535.png](figure-2-x78-y535.png)
 > 
 > [see in Zotero](zotero://open-pdf/library/items/5RFG8L8I?page=5206&annotation=3JR8KF4D)
 
@@ -84,7 +84,7 @@ imported: 2025-02-03 02:04
 > [see in Zotero](zotero://open-pdf/library/items/5RFG8L8I?page=5210&annotation=HMBLKQJS)
 
 > [!Quote]
-> ![figure-7-x37-y486.png](attachments/dufreneYF2002-AtomicForceMicroscopy/figure-7-x37-y486.png)
+> ![figure-7-x37-y486.png](figure-7-x37-y486.png)
 > 
 > [see in Zotero](zotero://open-pdf/library/items/5RFG8L8I?page=5211&annotation=L4Y9RHDS)%% end annotations %%
 
