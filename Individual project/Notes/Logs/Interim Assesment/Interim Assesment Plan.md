@@ -28,20 +28,20 @@ axisFormat %d
 tickInterval 1day
 
 section lit review
-	Reading: 2025-01-15, 2025-01-22
-	draft: 2025-01-20, 2025-01-24
-	Lit rev send for comment: milestone, 2025-01-24, 1d
+	Reading: 2025-01-15, 2025-02-22
+
 section Report
-	Interim report: 2025-01-23, 2025-02-06
-	first draft: milestone, 2025-01-27, 1d
-	final draft: milestone, 2025-02-03, 1d
-	Interim report hand in: crit, milestone, 2025-02-06, 1d
+	drafting: 2025-01-20, 2025-02-03
+	Interim report: 2025-02-03, 2025-02-10
+	first draft: milestone, 2025-02-06, 1d
+	final draft: milestone, 2025-02-10, 1d
+	Interim report hand in: crit, milestone, 2025-02-13, 1d
 
 section presentation
-	Book Presentation: milestone, 2025-01-29, 1d
-	Prepare: 2025-02-06, 2025-02-12
-	practice run: milestone, 2025-02-10, 1d
-	presentation: milestone, crit, 2025-02-12, 1d
+	Book Presentation: milestone, 2025-02-05, 1d
+	Prepare: 2025-02-10, 2025-02-17
+	practice run: milestone, 2025-02-17, 1d
+	presentation: milestone, crit, 2025-02-19, 1d
 	
 ```
 
@@ -50,7 +50,7 @@ section presentation
 ## ToDos
 
 - [ ] [[Interim Report]] 
-	- [ ] Interim Report Plan
+	- [x] Interim Report Plan ✅ 2025-02-05
 	- [x] [[Interim Report - Main Body]] (*see [[Literature Review Plan]] for more detail*) ✅ 2025-01-24
 	- [ ] First Draft
 
@@ -76,3 +76,12 @@ The following must be submitted electronically on TurnitIn as a single document:
 needed, and no later than this deadline and handed to the Supervisor. A copy should be kept in the student’s logbook.)  
 - An updated ethics application should be submitted if applicable and not already done.
 
+%% 
+## Report plan
+
+- [ ] [Executive Summary](Interim%20Report%20-%20Main%20Body.md#Executive%20Summary)
+- [ ] [Introduction](Interim%20Report%20-%20Main%20Body.md#Introduction)
+- [ ] [Relevant Physiology](Interim%20Report%20-%20Main%20Body.md#Relevant%20Physiology)
+- [ ] [Diabetic Nephropathy (DN)](Interim%20Report%20-%20Main%20Body.md#Diabetic%20Nephropathy%20(DN))
+
+ %%

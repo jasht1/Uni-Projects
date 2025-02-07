@@ -37,7 +37,7 @@ imported: 2025-01-31 06:29
 > [!note]
 > ## Summary
 > 
-> [[Epithelial to Mesenchymal Transition (EMT)]] is a process by which cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]).
+> [[Epithelial to Mesenchymal Transition (EMT)]] is a process by which cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[mesenchymal]]).
 > 
 > There are 3 sub-types of EMT, of which type 2 is relevant to diabetic nephropathy. Type 2 EMT's occur around inflammation-inducing injuries for tissue regeneration, however with chronic inflammation they are associated with fibrosis and cause progressive organ damage.
 > 
@@ -51,9 +51,9 @@ imported: 2025-01-31 06:29
 > 
 > And have based my [[Epithelial to Mesenchymal Transition (EMT)#Summary]] off it.
 > 
-> So far as I understand [[Epithelial to Mesenchymal Transition (EMT)]] is a process by which cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]).
+> So far as I understand [[Epithelial to Mesenchymal Transition (EMT)]] is a process by which cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[mesenchymal]]).
 > 
-> Their previously [[epithelial]] phenotypes/traits are replaced by those typical of [[Mesenchymal]]. Of primary importance the basal surface degrades and they loose adhesion to their [[basement membrane]], becoming migratory.
+> Their previously [[epithelial]] phenotypes/traits are replaced by those typical of [[mesenchymal]]. Of primary importance the basal surface degrades and they loose adhesion to their [[basement membrane]], becoming migratory.
 > 
 > ## Classification of EMT into three different subtypes
 > 
