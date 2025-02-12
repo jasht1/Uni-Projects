@@ -2,17 +2,17 @@
 title: "Nanomechanical analysis of tubular cell cytoskeleton: Interim Report"
 subtitle: 
 titlepage-logo: /home/joeashton/Sync/Obsidian/SuperVault/Core/Templates/Pandoc/attachments/UoL_logo.png
-bibliography: /home/joeashton/Sync/Obsidian/SuperVault/.pandoc/ZotLibrary.bib
-author: "Joseph Ashton"
+# bibliography: /home/joeashton/Sync/Obsidian/SuperVault/.pandoc/ZotLibrary.bib
+author: Joseph Ashton
 authors:
-  - name: "Joseph Ashton"
-    affiliation: "School of Engineering"
-    institution: "University of Lincoln"
-    email: "27047440@students.lincoln.ac.uk"
-    address: "Lincoln"
-acknowledgements: "I would like to thank my patient amd knowledgable suporvisor Eleftherios Siamantouras"
+  - name: Joseph Ashton
+    affiliation: School of Engineering
+    institution: University of Lincoln
+    email: 27047440@students.lincoln.ac.uk
+    address: Lincoln
+acknowledgements: I would like to thank my patient amd knowledgable suporvisor Eleftherios Siamantouras
 declaration: ""
-abstract: "This project investigates changes in mechanical properties of kidney cells when exposed to TGF-β1, which is known to induce renal disease [@gentleME2013-EpithelialCellTGFv]. The aim of this project is to provide insight on the progression of diabetic nephropathy from a mechanical perspective based on changes in mechanical properties observed in single cells using atomic force microscopy."
+abstract: This project investigates changes in mechanical properties of kidney cells when exposed to TGF-β1, which is known to induce renal disease [@gentleME2013-EpithelialCellTGFv]. The aim of this project is to provide insight on the progression of diabetic nephropathy from a mechanical perspective based on changes in mechanical properties observed in single cells using atomic force microscopy.
 ---
 
 ## Executive Summary
@@ -27,26 +27,32 @@ The aim of this project is to provide insight on the progression of diabetic nep
 
 %% #### Kidney %%
 
-%% Basically a blood filter %%
-
 The human body can be understood as a complex biological machine, made up of many sub-mechanisms familiar to engineers. In this sense the filtration system of the human body is referred to as the renal system, in which the kidneys are a component about the size of a clenched fist that can be likened to a sophisticated water treatment plant combined with a feedback-controlled chemical processing unit. Each contain roughly a million multi step filter loops called nephrons [@bertramJF2011-HumanNephronNumber].  
 
-> ![Kidney and nephron - Labeled|400](Kidney%20and%20nephron%20-%20Labeled.jpg)
-> Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health. %% https://www.niddk.nih.gov/news/media-library/11236 %%
+> ![Close up of a nephron and its place in the kidney. Labels on the kidney cross section show where unfiltered blood enters, filtered blood leaves, and urine exits. On the nephron, the glomerulus, tubule, and collecting duct are labeled along with where unfiltered blood enters, filtered blood exits, and urine exits.|400](Kidney%20and%20nephron%20-%20Labeled.jpg)
+>Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled].
 
 %% #### Nephrons %%
 
 The nephrons are selective, able to remove waste products while keeping desirable substances in the blood. They are able to regulating essential substances such as water, electrolytes, and pH levels to strict set points. [@ogobuiroI2025-PhysiologyRenal]
 
-%% ##### glomerulus %%
+%% #### glomerulus %%
 
 The the first step unfiltered blood enters the glomerulus and if forced through several membrane filters by hydro-static pressure. The first layer permits all solutes blocking only cells. The next is negatively charged thus blocking proteins like albumin. The final layer modulates the flow resistance to vary the hydro-static pressure gradient, this will be counter balanced by the osmotic pressure such that it can be used to effectively vary the ultra filtration coefficient. [@pavenstadtH2000-RolesPodocyteGlomerular; @ogobuiroI2025-PhysiologyRenal] Leaving the glomerulus is a blood vessel containing only cells and proteins and a fractional remainder of the other solute, and the tubule carrying all the removed solute [@lumen-NephronStructure].
 
-%% ##### Tubule %%
+%% #### Tubule %%
 
-The glomerulus is an overly aggressive filter such that much of the water and solute must be re introduced to the blood from the tubules. %%in several stages. The first stage, the proximal convoluted tubule (PCT) pumps all the glucose and amino acids as well as most of the sodium and water back into the blood [@ogobuiroI2025-PhysiologyRenal]. In the next more water is reabsorbed, and in the final the remainder of the sodium as well as potassium and chlorides get reabsorbed via osmosis [@ogobuiroI2025-PhysiologyRenal]. %% The tubules run along side blood vessels and using a combination of osmosis, active transport and controlled ionic gradients %%sodium, potassium, calcium, magnesium, chlorides%% the valuable ions and most of the water is reabsorbed over several specialised segments [@ogobuiroI2025-PhysiologyRenal].  
+The glomerulus is an overly aggressive filter; much of the water and solute must be re introduced to the blood from the tubules. %%in several stages. The first stage, the proximal convoluted tubule (PCT) pumps all the glucose and amino acids as well as most of the sodium and water back into the blood [@ogobuiroI2025-PhysiologyRenal]. In the next more water is reabsorbed, and in the final the remainder of the sodium as well as potassium and chlorides get reabsorbed via osmosis [@ogobuiroI2025-PhysiologyRenal]. %% The tubules run along side blood vessels and using a combination of osmosis, active transport and controlled ionic gradients %%sodium, potassium, calcium, magnesium, chlorides%% the valuable ions and most of the water is reabsorbed over several uniquely specialised segments [@ogobuiroI2025-PhysiologyRenal].  
 
-%% Breakdown of the layers and cell types %%
+%% #### Tubule cell %%
+
+> ![Diagram of tubule, tubule wall and tubule cell structure.](Tubule%20zoom%20diagram.png)
+> Simplified diagram of tubule, tubule wall and tubule cell structure.
+> The structure of the tubule varies significantly across it's length to as different sections are specialised to permeate different resources, the lumen diameter and epithelial cell height values are averages of random samples [@morozovD2021-MappingKidneyTubule]. 
+
+%% Breakdown of the layers and cell types #WIP  %%
+
+Epithelial tubule cells are the essential building blocks of tubules. They are anchored to each other and to the extra cellular matrix (ECM) by junctions tied to their cytoskeleton [@yuASL2013-Chapter12Intercellular; @zihniC2016-TightJunctions]. In this way the cytoskeleton plays an essential role in maintaining the structure of both the individual cells and the larger structure. 
 
 ### Diabetic Nephropathy (DN)
 
@@ -73,73 +79,65 @@ Atomic Force Microscopy (AFM) is a technique for characterising nanomechanical p
 
 Atomic force microscopes use the deflection of a very fine probe on a flexible cantilever to detect contact forces ranging form nano to micro Newtons. By advancing a fine tipped probe on the end of the cantilever into a sample cell, a force over indentation depth curve can be produced from which the elasticity of the cell can be calculated using a Hertz contact model. [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces]
 
-### Observing Fibrosis with AFM 
+%% Further discription #WIP %%
 
-Developments in both understanding of the pathophysiology of kidney disease and the diagnostic application of atomic force microscopy (AFM) technology [@liuS2024-AtomicForceMicroscopyDisease-relatedStudies; @dufreneYF2002-AtomicForceMicroscopy] may provide a novel means of measuring the progression of kidney failure [@siamantourasE2016-QuantifyingCellularMechanics].
+%% #### Hertz contact model %%
 
-%% Need to know how easy it is to get hold of affected tubular cells from patients, is this non invasive? %%
+%% corrections for the hertz model %%
 
+## Literature Review
+
+Developments in both understanding %% of the pathophysiology %% of kidney disease and the application of atomic force microscopy (AFM) technology [@liuS2024-AtomicForceMicroscopyDisease-relatedStudies; @dufreneYF2002-AtomicForceMicroscopy] may provide a valuable measure of the progression of kidney failure to inform the research and development of novel therapies [@parrishAR2016-CytoskeletonNovelTarget].
+
+%% #### What we measure %%
+
+%% Single cell stiffness %%
 The mechanical properties of tubular cells are largely a result of their cytoskeletal structure [@jalilianI2015-CellElasticityRegulated] which is altered significantly with the progression of DN [@buckleyST2012-CytoskeletalRearrangementTGFv1induced]. 
 
 %% Inter cellular adhesion %%
 
-## Literature Review
+%% The stiffness of individual cells can be observed and correlated with the [@siamantourasE2016-QuantifyingCellularMechanics]. %%
 
-%% Table with papers and a relevant summary %%
+%% #### Obstacles & limitations %%
+
+%% Cell cultures aren't perfect representations of their in vitro counterparts. This can be improved with careful preperation. The elasticity of the substrate the culture is grown on can have a significant impact on cytoskelital arrangement [@wangD2022-KidneyProximalTubule; @loveH2018-SubstrateElasticityGoverns]  %%
+
+%% Table with papers and a relevant summary #WIP %%
+
+The below table lists several papers utilising atomic force microscopes to produce force displacement curves from a bead tipped cantilever fitted to a hertz contact model to find cell elasticity.
+
+| Paper                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Cell Type                                                                            | Scope                                                                                                                                                                   | Cell Elasticity                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [@siamantourasE2016-QuantifyingCellularMechanics]  E. Siamantouras, C. E. Hills, P. E. Squires, and K.-K. Liu, ‘Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy’, _Nanomedicine: Nanotechnology, Biology and Medicine_, vol. 12, no. 4, pp. 1013–1021, May 2016, doi: [10.1016/j.nano.2015.12.362](https://doi.org/10.1016/j.nano.2015.12.362).                                              | HK2: immortalised human kidney proximal tubule  epithelial cell culture              | Over 30 cells each indented 5 times immediately above the nucleus producing over 150 curves.                                                                            | **control**: 320Pa <br>cells treated with TGF-β1: 549 Pa          |
+| [@jafariA2024-MechanicalPropertiesHuman]  A. Jafari, A. Sadeghi, and M. Lafouti, ‘Mechanical properties of human kidney cells and their effects on the atomic force microscope beam vibrations’, _Microsc. Res. Tech._, vol. 87, no. 8, pp. 1704–1717, 2024, doi: [10.1002/jemt.24543](https://doi.org/10.1002/jemt.24543).                                                                                                                           | HEK-293: immortalised human embryonic kidney cell culture                            | did not elaborate                                                                                                                                                       | 539.8 Pa                                                          |
+| [@shimizuY2012-SimpleDisplaySystem]  Y. Shimizu, T. Kihara, S. M. A. Haghparast, S. Yuba, and J. Miyake, ‘Simple Display System of Mechanical Properties of Cells and Their Dispersion’, _PLOS ONE_, vol. 7, no. 3, p. e34305, Mar. 2012, doi: [10.1371/journal.pone.0034305](https://doi.org/10.1371/journal.pone.0034305).                                                                                                                          | HEK-293: immortalised human embryonic kidney cell culture                            | The median of value of over 100 cells examined at 25 points each.                                                                                                       | mode value ($x_{0}$): 410 Pa <br>variance ($w$): 0.757            |
+| [@buckleyST2012-CytoskeletalRearrangementTGFv1induced]  S. T. Buckley, C. Medina, A. M. Davies, and C. Ehrhardt, ‘Cytoskeletal re-arrangement in TGF-β1-induced alveolar epithelial-mesenchymal transition studied by atomic force microscopy and high-content analysis’, _Nanomedicine: Nanotechnology, Biology and Medicine_, vol. 8, no. 3, pp. 355–364, Apr. 2012, doi: [10.1016/j.nano.2011.06.021](https://doi.org/10.1016/j.nano.2011.06.021). | A549: human lung alveolar carcinoma epithelial cell culture                          | On each cell, a 4 × 4 grid of force-distance curves was collected in at least 5 different positions (avoiding the nucleus and the very edge) producing over 750 curves. | On Glass: 8300 $\pm$ 1100 Pa<br>On collagen I: 9100 $\pm$ 2900 Pa |
+| [@wyssHM2011-BiophysicalPropertiesNormal]  H. M. Wyss _et al._, ‘Biophysical properties of normal and diseased renal glomeruli’, _Am J Physiol Cell Physiol_, vol. 300, no. 3, pp. C397–C405, Mar. 2011, doi: [10.1152/ajpcell.00438.2010](https://doi.org/10.1152/ajpcell.00438.2010).                                                                                                                                                               | Sprague-Dawley rat kidney glomeruli capillary wall extracted by differential sieving | 10 different glomeruli with 10 measurements each                                                                                                                        | 2,300 $\pm$ 160 Pa                                                |
 
 ## Project 
 
 ### Progress Overview
 
+My supervisor has advised me that I have a sufficient understanding of the background to proceed with the curve analysis.
+I have begun working with the experimental data to begin putting together a suitable methodology for accurately assessing indentation curves.
+
 ### Data Processing 
 
 %% Learning Curve %%
 
+I have familiarised myself with the JPK data processing software. I have gone through the relevant documentation and applied the understanding I have gained from the literature review to produce my first set of results and a process file. I have shared these along with a log of my methods with my supervisor and we will meet to discuss improvements. Once myself and Dr Siamantouras are happy with it these process files can be used to batch process experimental data. 
+
+My logs for this process can be seen on the working repository with the links below and in the annex.
+- 
+
 ### Project Management
 
 %% Obsidian Academic research & writing improvements %%
+
+
 
 ### Research Methodology
 %% Ultralearning %%
 
 The main workload of this project thus far has been in familiarising myself with the background and context of the project. As going into this project I had no significant background in biology and to effectively interoperate the single cell indentation data an applied understanding of cytology, histology and microscopy are prerequisite.
 
-## Self Evaluation Form
-
-[STUDENT:: Joseph Ashton]
-
-[STUDENT ID:: 27047440]
-
-[SUPERVISOR:: Eleftherios Siamantouras]
-
-[PROJECT TITLE:: Nanomechanical analysis of tubular cell cytoskeleton]
-
-### Evaluation Criteria
-
-> _The following criteria are intended to guide discussions around student understanding, project progress and future plans. Please evaluate yourself against these five criteria by ticking the relevant box under each heading._
-
-Where:
-1. Unsatisfactory,
-2. Weak Pass,
-3. Good,
-4. Very Good,
-5. Excellent.
-
-| Please place a tick in the box that best evaluates your performance                                               | 1   | 2   | 3   | 4   | 5   |
-| ----------------------------------------------------------------------------------------------------------------- | --- | --- | --- | --- | --- |
-| I would rate my understanding of the context and theoretical background to the project as…                        |     |     |     | X   |     |
-| My work programme reflects the project aims, and has helped me meet my objectives                                 |     |     | X   |     |     |
-| I would rate my technical progress against the work programme as…                                                 |     |     | X   |     |     |
-| I have a clear plan for completing the project and I understand what I must do to complete the project            |     |     |     | X   |     |
-| I have scheduled and attended all required meetings with my supervisor, and documented my progress in my log book |     |     |     | X   |     |
-
-### Reflection
-
-> *Use this space to write a brief reflection on your progress so far. Consider what aspects of your work have gone well and what aspects have been less successful.*
-
-### Signature
-
-Student Signature:
-![Digital signiture|250](signature.png)
-
-Date: 2025-02-05

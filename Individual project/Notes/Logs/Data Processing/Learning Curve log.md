@@ -37,17 +37,16 @@ The fitment range will affect the models result. It is important to determine a 
 ## Results
 %%[[2024-12-06]] @ 22:55%%
 
-
-| Data Set                                 | Fit Range | Xmax () | Xmin () | Contact Point ($\micro$m) | Baseline (pN) | Elastic Modulus (Pa) |
-| ---------------------------------------- | --------- | ------- | ------- | ------------------------- | ------------- | -------------------- |
-| force-save-2014.05.23-17.50.39.jpk-force | 0         | min     | max     | 94.77                     | -136.9        | 143.1                |
-| force-save-2014.05.23-17.50.39.jpk-force | 1         | 93      | 97      | 94.79                     | -136.9        | 139.4                |
-| force-save-2014.05.23-17.50.39.jpk-force | 2         | 93      | 95      | 94.75                     | -121.1        | 142.2                |
-| force-save-2014.05.23-17.50.39.jpk-force | 3         | 94      | 95      | 94.78                     | -125          | 138.6                |
+| Data Set                                 | Fit Range | Xmax (µm) | Xmin (µm) | Contact Point (µm) | Baseline (pN) | Elastic Modulus (Pa) |
+| ---------------------------------------- | --------- | --------- | --------- | ------------------ | ------------- | -------------------- |
+| force-save-2014.05.23-17.50.39.jpk-force | 0         | min       | max       | 94.77              | -136.9        | 143.1                |
+| force-save-2014.05.23-17.50.39.jpk-force | 1         | 93        | 97        | 94.79              | -136.9        | 139.4                |
+| force-save-2014.05.23-17.50.39.jpk-force | 2         | 93        | 95        | 94.75              | -121.1        | 142.2                |
+| force-save-2014.05.23-17.50.39.jpk-force | 3         | 94        | 95        | 94.78              | -125          | 138.6                |
 
 ### Full results table
 
-[[Results.csv]]
+[Results](Results.csv)
 
 ```dataviewjs
 const Path = "Projects/Uni Projects/Individual project/Workspace/Results.csv"
