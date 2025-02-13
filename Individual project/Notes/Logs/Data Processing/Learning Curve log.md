@@ -46,7 +46,7 @@ The fitment range will affect the models result. It is important to determine a 
 
 ### Full results table
 
-[Results](Results.csv)
+[Results](../../../Workspace/Results.csv)
 
 ```dataviewjs
 const Path = "Projects/Uni Projects/Individual project/Workspace/Results.csv"
