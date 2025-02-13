@@ -54,6 +54,8 @@ The glomerulus is an overly aggressive filter; much of the water and solute must
 
 Epithelial tubule cells are the essential building blocks of tubules. They are anchored to each other and to the extra cellular matrix (ECM) by junctions tied to their cytoskeleton [@yuASL2013-Chapter12Intercellular; @zihniC2016-TightJunctions]. In this way the cytoskeleton plays an essential role in maintaining the structure of both the individual cells and the larger structure. 
 
+%% cytoskeleton %%
+
 ### Diabetic Nephropathy (DN)
 
 %% #### Summary %%
@@ -77,13 +79,41 @@ Inflammation increases production of cytokines, including TGF-β1, which trigger
 
 Atomic Force Microscopy (AFM) is a technique for characterising nanomechanical properties and structure. It is well suited to microbiology as it allows for the study of live cells [@kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
 
-Atomic force microscopes use the deflection of a very fine probe on a flexible cantilever to detect contact forces ranging form nano to micro Newtons. By advancing a fine tipped probe on the end of the cantilever into a sample cell, a force over indentation depth curve can be produced from which the elasticity of the cell can be calculated using a Hertz contact model. [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces]
+Atomic force microscopes use the deflection of a very fine probe on a flexible cantilever to detect contact forces ranging form nano to micro Newtons. There are a myriad of applications and operating modes of AFM [@dufreneYF2002-AtomicForceMicroscopy] but this report is primarily concerned with nano indentation. This involves advancing a fine tipped probe on the end of the cantilever into a sample cell producing a force over indentation depth curve, from which the elasticity of the cell can be calculated using a Hertz contact model [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces].
 
-%% Further discription #WIP %%
+%% #### functional/mechanical description %%
+
+The typically atomic force microscope utilise a laser focused on the free end of the cantilever such that any deflection of the probe produces an amplified deflection of the reflected beam, this is recorded by a position sensitive photodiode [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces]. 
+
+> ![Atomic Force Microscopy - mechanism diagram|400](Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
+> Atomic force microscope functional diagram
+
+The sample once mounted to the sample stage can be manoeuvred precisely in all directions relative to the probe by applying voltage to piezoelectric actuators [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @giraudF2019-ChapterOneIntroduction]. This is how the sample is advanced into the tip. Once calibrated the voltage at the actuators gives the sample stage position and the voltage at the photodiode gives the deflection of the probe, with this a force displacement curve can be produced by accounting for the stiffness of the cantilever and the relative displacement [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
+
+%% #### typical force displacement curve %%
+
+A typical force displacement curve from a nano indention experiment has the following shape seen in figure #WIP (A) below. A broadly level region where the probe is not in contact with the cell; the contact region; a sloped region where the probe is indenting the cell; the turnaround point; from which the same is repeated in reverse differing mainly at the point of separation [@kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
+
+> ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png) ![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
+> [@radmacherM2007-StudyingMechanicsCellular]
+
+%% Contact point jump %%
+
+The exact point of contact is often ambiguous and rarely the same as the the point of separation. On approach the cantilever will be deflected away from the cell by van der waals forces until the spring force of the cantilever overcomes and surface tension takes hold [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials]. Depending on the depth of indentation and the material interaction this can be important to account for before calculating elasticity, the influence of non contact forces can be modelled using the Derjaguin approximation for interaction potential [@buttHJ1995-MeasuringSurfaceForces].
+The point of separation is typically clearer as it's associated with a "jump" in cantilever deflection as the surface tension / adhesion of the cell to the probe is overcome [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
+
+%% 
+> ![AFM contact point jump|400](AFM%20contact%20point%20jump.png)
+> [@buttHJ1995-MeasuringSurfaceForces]
+%%
+
+
+### Contact Mechanics
 
 %% #### Hertz contact model %%
 
 %% corrections for the hertz model %%
+
 
 ## Literature Review
 
@@ -100,7 +130,7 @@ The mechanical properties of tubular cells are largely a result of their cytoske
 
 %% #### Obstacles & limitations %%
 
-%% Cell cultures aren't perfect representations of their in vitro counterparts. This can be improved with careful preperation. The elasticity of the substrate the culture is grown on can have a significant impact on cytoskelital arrangement [@wangD2022-KidneyProximalTubule; @loveH2018-SubstrateElasticityGoverns]  %%
+%% Cell cultures aren't perfect representations of their in vitro counterparts. This can be improved with careful preparation. The elasticity of the substrate the culture is grown on can have a significant impact on cytoskelital arrangement [@wangD2022-KidneyProximalTubule; @loveH2018-SubstrateElasticityGoverns]  %%
 
 %% Table with papers and a relevant summary #WIP %%
 
@@ -127,17 +157,19 @@ I have begun working with the experimental data to begin putting together a suit
 
 I have familiarised myself with the JPK data processing software. I have gone through the relevant documentation and applied the understanding I have gained from the literature review to produce my first set of results and a process file. I have shared these along with a log of my methods with my supervisor and we will meet to discuss improvements. Once myself and Dr Siamantouras are happy with it these process files can be used to batch process experimental data. 
 
-My logs for this process can be seen on the working repository with the links below and in the annex.
-- 
+My log and results for this process can be seen on the working repository with the links below and in the annex.
+- [Learning Curve Log](https://github.com/jasht1/Uni-Projects/blob/0744dc65cdd17b54bfb0e6cb28642035fd4155fb/Individual%20project/Notes/Logs/Data%20Processing/Learning%20Curve%20log.md)
+- [Results.csv](https://github.com/jasht1/Uni-Projects/blob/45f03a3ad8d47985c7ff29ca28c1ddcb26cfcf45/Individual%20project/Workspace/Results.csv)
+
 
 ### Project Management
 
 %% Obsidian Academic research & writing improvements %%
 
 
-
 ### Research Methodology
 %% Ultralearning %%
 
-The main workload of this project thus far has been in familiarising myself with the background and context of the project. As going into this project I had no significant background in biology and to effectively interoperate the single cell indentation data an applied understanding of cytology, histology and microscopy are prerequisite.
+The main workload of this project thus far has been in familiarising myself with the background and context of the project. As going into this project I had no background in biology or microscopy with which to interoperate the single cell indentation data.
 
+### Future Plans
