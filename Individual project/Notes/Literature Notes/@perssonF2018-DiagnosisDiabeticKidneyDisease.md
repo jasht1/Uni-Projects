@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "Diagnosis of diabetic kidney disease: state of the art and future perspective"
 tags: 👁
-citekey: perssonF2018-DiagnosisDiabeticKidneyDisease
-imported: 2025-01-31 06:29
+citekey: "perssonF2018-DiagnosisDiabeticKidneyDisease"
+imported: 2025-02-18 06:25
 ---
 
 # Diagnosis of diabetic kidney disease: state of the art and future perspective
@@ -49,4 +50,4 @@ imported: 2025-01-31 06:29
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-01-31T18:31:59.165+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.143+00:00 %%

@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "How does early chronic kidney disease progress?: A Background Paper prepared for the UK Consensus Conference on Early Chronic Kidney Disease"
 tags: 👁, 🖉
-citekey: metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress
-imported: 2025-01-31 06:29
+citekey: "metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress"
+imported: 2025-02-18 06:25
 ---
 
 # How does early chronic kidney disease progress?: A Background Paper prepared for the UK Consensus Conference on Early Chronic Kidney Disease
@@ -52,6 +53,44 @@ imported: 2025-01-31 06:29
 >
 > [see in Zotero](zotero://select/library/items/U6TWLCIW)
 
+> [!note]
+> ## Summary
+> 
+> Biomarkers of chronic kidney disease are:
+> 
+> - Systemic hypertension
+> - declining GFR
+> - Proteinuria
+> - _potentially_ Hyperlipidaemia
+> - Anaemia
+> 
+> ## Limitations
+> 
+> %%[[2025-01-27]] @ 13:30%%
+> 
+> There is a significant focus on hypertension with the implication that this is largely due to blood pressure with little mention to the role of hyperglycemia induced tubular damage.
+>
+> [see in Zotero](zotero://select/library/items/U6TWLCIW)
+
+> [!note]
+> ## Summary
+> 
+> Biomarkers of chronic kidney disease are:
+> 
+> - Systemic hypertension
+> - declining GFR
+> - Proteinuria
+> - _potentially_ Hyperlipidaemia
+> - Anaemia
+> 
+> ## Limitations
+> 
+> %%[[2025-01-27]] @ 13:30%%
+> 
+> There is a significant focus on hypertension with the implication that this is largely due to blood pressure with little mention to the role of hyperglycemia induced tubular damage.
+>
+> [see in Zotero](zotero://select/library/items/U6TWLCIW)
+
 %% end notes %%
 
-%% Import Date: 2025-01-31T18:31:59.089+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.079+00:00 %%

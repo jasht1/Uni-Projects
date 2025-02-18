@@ -1,8 +1,9 @@
 ---
-category: literaturenote
-tags: Atomic force microscope, Avidin coating, DLVO, Halobacterium, Purple membrane, Surface forces
-citekey: buttHJ1995-MeasuringSurfaceForces
-imported: 2025-02-05 01:07
+category: "literaturenote"
+title: "Measuring surface forces in aqueous electrolyte solution with the atomic force microscope"
+tags: 👁, 🖋, Atomic force microscope, Avidin coating, DLVO, Halobacterium, Purple membrane, Surface forces
+citekey: "buttHJ1995-MeasuringSurfaceForces"
+imported: 2025-02-18 06:25
 ---
 
 # Measuring surface forces in aqueous electrolyte solution with the atomic force microscope
@@ -15,7 +16,7 @@ imported: 2025-02-05 01:07
 > > **Year**:: 1995
 > > **Citekey**:: buttHJ1995-MeasuringSurfaceForces
 > > **Sources**:: [Zotero](zotero://select/library/items/H7W5CASM) [pdf](file:////home/joeashton/Zotero/storage/XTBCZPDG/Butt%20et%20al.%20-%201995%20-%20Measuring%20surface%20forces%20in%20aqueous%20electrolyte%20solution%20with%20the%20atomic%20force%20microscope.pdf) 
-> > **Tags:** #Atomic-force-microscope, #Avidin-coating, #DLVO, #Halobacterium, #Purple-membrane, #Surface-forces
+> > **Tags:** #👁, #🖋, #Atomic-force-microscope, #Avidin-coating, #DLVO, #Halobacterium, #Purple-membrane, #Surface-forces
 > > **FirstAuthor**:: Butt, Hans-Jürgen
 > > **Author**:: Jaschke, Manfred
 > > **Author**:: Ducker, William
@@ -82,10 +83,18 @@ imported: 2025-02-05 01:07
 > > [!note]
 > > On approach; in close proximity the non contact forces will deflect the cantilever [see Interatomic potential](https://en.wikipedia.org/wiki/Interatomic_potential). Once this has been overcome the probe will jump into contact. The opposite is true on retreat.
 > 
-> [see in Zotero](zotero://open-pdf/library/items/XTBCZPDG?page=193&annotation=GBVA46MZ)%% end annotations %%
+> [see in Zotero](zotero://open-pdf/library/items/XTBCZPDG?page=193&annotation=GBVA46MZ)> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/XTBCZPDG?page=194&annotation=4BJSD4G4)
+> "interactions between small particles in aqueous solution could be explained by the interplay between two forces: the van der Waals (vdW) force and the electrostatic double-layer force."
+> > [!note]
+> > DLVO, Derjaguin and Landau, and Verwey and Overbeek.
+
+> [!Quote] [see in Zotero](zotero://open-pdf/library/items/XTBCZPDG?page=199&annotation=7IPPMF2W)
+> ![figure-9-x340-y530.png](attachments/buttHJ1995-MeasuringSurfaceForces/figure-9-x340-y530.png)
+> > [!note]
+> > Cantilever deflection curves on approach and retraction of an avidin coated tip on a biotinylated agarose bead before (a) and after (b) blockage with an excess of free avidin. (c) Magnification of a force curve measured on a biotinylated agarose bead which was approximately 95% blocked with free avidin. The figure was reprinted with permission from Florin et al. [133]. Copyright 1994 American Association for the Advancement of Science.%% end annotations %%
 
 # Notes
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-02-05T01:07:13.030+00:00 %%
+%% Import Date: 2025-02-18T06:25:45.862+00:00 %%

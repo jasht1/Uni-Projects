@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "Accuracy of glomerular filtration rate estimation using creatinine and cystatin C for identifying and monitoring moderate chronic kidney disease: the eGFR-C study"
 tags: 👁
-citekey: lambEJ2024-AccuracyGlomerularFiltrationRateEstimationUsingCreatinineCystatinIdentifyingMonitoringModerateChronicKidneyDisease
-imported: 2025-01-31 06:52
+citekey: "lambEJ2024-AccuracyGlomerularFiltrationRateEstimationUsingCreatinineCystatinIdentifyingMonitoringModerateChronicKidneyDisease"
+imported: 2025-02-18 06:25
 ---
 
 # Accuracy of glomerular filtration rate estimation using creatinine and cystatin C for identifying and monitoring moderate chronic kidney disease: the eGFR-C study
@@ -57,4 +58,4 @@ imported: 2025-01-31 06:52
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-01-31T18:52:07.581+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.042+00:00 %%

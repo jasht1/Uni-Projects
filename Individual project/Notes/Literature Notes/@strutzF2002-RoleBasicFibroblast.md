@@ -1,12 +1,13 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "Role of basic fibroblast growth factor-2 in epithelial-mesenchymal transformation"
 tags: TGF-β1, 👁, extracellular matrix, 🖋, EGF, EGFR, FGFR-1, kidney fibrosis
-citekey: strutzF2002-RoleBasicFibroblast
-imported: 2025-02-18 05:59
+citekey: "strutzF2002-RoleBasicFibroblast"
+imported: 2025-02-18 06:25
 ---
 
 # Role of basic fibroblast growth factor-2 in epithelial-mesenchymal transformation
-[@linDC2009-SphericalIndentationSoftMatterHertzianRegime]
+
 
 > [!Cite] [strutzF2002-RoleBasicFibroblast](zotero://select/library/items/8CX6NL3R)
 > [1]  F. Strutz _et al._, ‘Role of basic fibroblast growth factor-2 in epithelial-mesenchymal transformation’, _Kidney International_, vol. 61, no. 5, pp. 1714–1728, May 2002, doi: [10.1046/j.1523-1755.2002.00333.x](https://doi.org/10.1046/j.1523-1755.2002.00333.x). Available: [https://www.kidney-international.org/article/S0085-2538(15)48408-X/fulltext](https://www.kidney-international.org/article/S0085-2538\(15\)48408-X/fulltext). [Accessed: Feb. 04, 2025]
@@ -52,4 +53,4 @@ imported: 2025-02-18 05:59
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-02-18T05:59:16.043+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.240+00:00 %%

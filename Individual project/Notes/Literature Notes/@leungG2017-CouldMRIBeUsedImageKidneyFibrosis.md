@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "Could MRI Be Used To Image Kidney Fibrosis? A Review of Recent Advances and Remaining Barriers"
 tags: 👁, 🖉
-citekey: leungG2017-CouldMRIBeUsedImageKidneyFibrosis
-imported: 2025-01-31 06:29
+citekey: "leungG2017-CouldMRIBeUsedImageKidneyFibrosis"
+imported: 2025-02-18 06:25
 ---
 
 # Could MRI Be Used To Image Kidney Fibrosis? A Review of Recent Advances and Remaining Barriers
@@ -53,6 +54,28 @@ imported: 2025-01-31 06:29
 >
 > [see in Zotero](zotero://select/library/items/5N4YHEZG)
 
+> [!note]
+> ## Summary
+> 
+> ### Diffusion MRI
+> 
+> Diffusion MRI can measure the movement of water in the kidney giving a metric of apparent diffusion coefficient (ADC) several studies have found a moderately strong inverse correlation between ADC and fibrosis.
+> 
+> ### Arterial spin labeling
+>
+> [see in Zotero](zotero://select/library/items/5N4YHEZG)
+
+> [!note]
+> ## Summary
+> 
+> ### Diffusion MRI
+> 
+> Diffusion MRI can measure the movement of water in the kidney giving a metric of apparent diffusion coefficient (ADC) several studies have found a moderately strong inverse correlation between ADC and fibrosis.
+> 
+> ### Arterial spin labeling
+>
+> [see in Zotero](zotero://select/library/items/5N4YHEZG)
+
 %% end notes %%
 
-%% Import Date: 2025-01-31T18:31:59.025+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.047+00:00 %%

@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "Studying the Mechanics of Cellular Processes by Atomic Force Microscopy"
 tags: 👁, 🖋
-citekey: radmacherM2007-StudyingMechanicsCellular
-imported: 2025-02-18 06:01
+citekey: "radmacherM2007-StudyingMechanicsCellular"
+imported: 2025-02-18 06:25
 ---
 
 # Studying the Mechanics of Cellular Processes by Atomic Force Microscopy
@@ -52,4 +53,4 @@ imported: 2025-02-18 06:01
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-02-18T06:01:50.990+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.176+00:00 %%

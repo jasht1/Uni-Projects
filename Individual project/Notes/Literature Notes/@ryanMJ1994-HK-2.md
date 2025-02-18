@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "HK-2: an immortalized proximal tubule epithelial cell line from normal adult human kidney"
 tags: Adult, Base Sequence, Cell Line, Transformed, DNA, Viral, Free Radical Scavengers, Genetic Vectors, Histocytochemistry, Humans, Hydrogen Peroxide, Hydroxyl Radical, Immunohistochemistry, Iron Chelating Agents, Kidney Tubules, Proximal, Male, Molecular Probes, Molecular Sequence Data, Papillomaviridae, Reference Values, 👁, 🖉
-citekey: ryanMJ1994-HK-2
-imported: 2025-01-31 06:29
+citekey: "ryanMJ1994-HK-2"
+imported: 2025-02-18 06:25
 ---
 
 # HK-2: an immortalized proximal tubule epithelial cell line from normal adult human kidney
@@ -48,6 +49,20 @@ imported: 2025-01-31 06:29
 >
 > [see in Zotero](zotero://select/library/items/KLC4MS6W)
 
+> [!note]
+> ## Summary
+> 
+> This publication outlines the creation of a standardised well-differentiated adult human proximal tubule epithelial cell line $\text{HK2}$. This was achieved via transduction with human pavlova virus HPV 16 E6/E7 proteins which eliminate negative regulators of cell proliferation immortalising them while maintaining the specialised phenotype.
+>
+> [see in Zotero](zotero://select/library/items/KLC4MS6W)
+
+> [!note]
+> ## Summary
+> 
+> This publication outlines the creation of a standardised well-differentiated adult human proximal tubule epithelial cell line $\text{HK2}$. This was achieved via transduction with human pavlova virus HPV 16 E6/E7 proteins which eliminate negative regulators of cell proliferation immortalising them while maintaining the specialised phenotype.
+>
+> [see in Zotero](zotero://select/library/items/KLC4MS6W)
+
 %% end notes %%
 
-%% Import Date: 2025-01-31T18:31:59.269+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.204+00:00 %%

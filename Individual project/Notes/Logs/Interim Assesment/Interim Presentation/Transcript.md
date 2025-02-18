@@ -115,7 +115,7 @@ Since then I've learnt more about atomic force microscopes and the various theor
 
 #### Literature Review
 
-> [!infor] [Moving Reading Notes to Zotero](Moving%20Reading%20Notes%20to%20Zotero.md)
+> [!infor] [Individual Project Literature Notes](Individual%20Project%20Literature%20Notes.md)
 
 The literature review wen't smoothly as having done so much research for the background I have honed my academic reading and note taking skills and methods.
 

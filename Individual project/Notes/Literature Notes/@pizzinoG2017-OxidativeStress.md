@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "Oxidative Stress: Harms and Benefits for Human Health"
 tags: 👁
-citekey: pizzinoG2017-OxidativeStress
-imported: 2025-02-05 01:18
+citekey: "pizzinoG2017-OxidativeStress"
+imported: 2025-02-18 06:25
 ---
 
 # Oxidative Stress: Harms and Benefits for Human Health
@@ -53,4 +54,4 @@ imported: 2025-02-05 01:18
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-02-05T01:18:52.870+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.169+00:00 %%

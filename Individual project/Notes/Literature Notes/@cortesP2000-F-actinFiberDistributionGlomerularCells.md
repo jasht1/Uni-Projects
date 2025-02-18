@@ -1,15 +1,16 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "F-actin fiber distribution in glomerular cells: Structural and functional implications"
 tags: 👁, 🖉
-citekey: cortesP2000-F-actinFiberDistributionGlomerularCells
-imported: 2025-01-31 06:29
+citekey: "cortesP2000-F-actinFiberDistributionGlomerularCells"
+imported: 2025-02-18 06:25
 ---
 
 # F-actin fiber distribution in glomerular cells: Structural and functional implications
 
 
 > [!Cite] [cortesP2000-F-actinFiberDistributionGlomerularCells](zotero://select/library/items/8X38UWZW)
-> [1]  P. Cortes _et al._, ‘F-actin fiber distribution in glomerular cells: Structural and functional implications’, _Kidney International_, vol. 58, no. 6, pp. 2452–2461, Dec. 2000, doi: [10.1046/j.1523-1755.2000.00428.x](https://doi.org/10.1046/j.1523-1755.2000.00428.x). Available: [https://www.kidney-international.org/article/S0085-2538(15)47361-2/abstract](https://www.kidney-international.org/article/S0085-2538(15)47361-2/abstract). [Accessed: Jan. 30, 2025]
+> [1]  P. Cortes _et al._, ‘F-actin fiber distribution in glomerular cells: Structural and functional implications’, _Kidney International_, vol. 58, no. 6, pp. 2452–2461, Dec. 2000, doi: [10.1046/j.1523-1755.2000.00428.x](https://doi.org/10.1046/j.1523-1755.2000.00428.x). Available: [https://www.kidney-international.org/article/S0085-2538(15)47361-2/abstract](https://www.kidney-international.org/article/S0085-2538\(15\)47361-2/abstract). [Accessed: Jan. 30, 2025]
 > > [!example]- Metadata    
 > > **Title**:: F-actin fiber distribution in glomerular cells: Structural and functional implications
 > > **Year**:: 2000
@@ -68,4 +69,4 @@ imported: 2025-01-31 06:29
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-01-31T18:31:58.798+00:00 %%
+%% Import Date: 2025-02-18T06:25:45.869+00:00 %%

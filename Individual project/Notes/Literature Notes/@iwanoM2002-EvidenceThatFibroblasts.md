@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "Evidence that fibroblasts derive from epithelium during tissue fibrosis"
 tags: 👁, 🖉
-citekey: iwanoM2002-EvidenceThatFibroblasts
-imported: 2025-01-31 06:29
+citekey: "iwanoM2002-EvidenceThatFibroblasts"
+imported: 2025-02-18 06:25
 ---
 
 # Evidence that fibroblasts derive from epithelium during tissue fibrosis
@@ -47,6 +48,24 @@ imported: 2025-01-31 06:29
 >
 > [see in Zotero](zotero://select/library/items/7QFJC9B9)
 
+> [!note]
+> ## Summary
+> 
+> %%[[2025-01-26]] @ 19:51%%
+> 
+> This paper shows that local [[Epithelial to Mesenchymal Transition (EMT)]] is a major source of myofibroblasts in renal fibrosis.
+>
+> [see in Zotero](zotero://select/library/items/7QFJC9B9)
+
+> [!note]
+> ## Summary
+> 
+> %%[[2025-01-26]] @ 19:51%%
+> 
+> This paper shows that local [[Epithelial to Mesenchymal Transition (EMT)]] is a major source of myofibroblasts in renal fibrosis.
+>
+> [see in Zotero](zotero://select/library/items/7QFJC9B9)
+
 %% end notes %%
 
-%% Import Date: 2025-01-31T18:31:58.868+00:00 %%
+%% Import Date: 2025-02-18T06:25:45.930+00:00 %%

@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "The basics of epithelial-mesenchymal transition"
 tags: 👁, 🖉, 🖋
-citekey: kalluriR2009-BasicsEpithelialmesenchymalTransition
-imported: 2025-01-31 06:29
+citekey: "kalluriR2009-BasicsEpithelialmesenchymalTransition"
+imported: 2025-02-18 06:25
 ---
 
 # The basics of epithelial-mesenchymal transition
@@ -92,6 +93,122 @@ imported: 2025-01-31 06:29
 >
 > [see in Zotero](zotero://select/library/items/48R52B9H)
 
+> [!note]
+> ## Summary
+> 
+> [[Epithelial to Mesenchymal Transition (EMT)]] is a process by which cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]).
+> 
+> There are 3 sub-types of EMT, of which type 2 is relevant to diabetic nephropathy. Type 2 EMT's occur around inflammation-inducing injuries for tissue regeneration, however with chronic inflammation they are associated with fibrosis and cause progressive organ damage.
+> 
+> ## What is epithelial-mesenchymal transition?
+> 
+> I found the following summary helpful:
+> 
+> > [!QUOTE] Epithelial to Mesenchymal Transition #definition  
+> > An epithelial-mesenchymal transition (EMT) is a biologic process that allows a polarized epithelial cell, which normally interacts with basement membrane via its basal surface, to undergo multiple biochemical changes that enable it to assume a mesenchymal cell phenotype, which includes enhanced migratory capacity, invasiveness, elevated resistance to apoptosis, and greatly increased production of ECM components ([1](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/#B1)). The completion of an EMT is signaled by the degradation of underlying basement membrane and the formation of a mesenchymal cell that can migrate away from the epithelial layer in which it originated.  
+> > *From:* https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/
+> 
+> And have based my [[Epithelial to Mesenchymal Transition (EMT)#Summary]] off it.
+> 
+> So far as I understand [[Epithelial to Mesenchymal Transition (EMT)]] is a process by which cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]).
+> 
+> Their previously [[epithelial]] phenotypes/traits are replaced by those typical of [[Mesenchymal]]. Of primary importance the basal surface degrades and they loose adhesion to their [[basement membrane]], becoming migratory.
+> 
+> ## Classification of EMT into three different subtypes
+> 
+> EMT's are distinguished based on their context and functional consequences into one of 3 types:
+> 
+> ![[EMT types.png]]
+> 
+> 1. Type 1
+> 
+>   **Context:** Embryo
+> 
+>   **Consequence:** embryogenesis - Normal development
+> 
+> 2. Type 2
+> 
+>   **Context:** inflammation
+> 
+>   **Consequence:** fibrosis - progressive organ damage
+> 
+> 3. Type 3
+> 
+>   **Context:** Cancer
+> 
+>   **Consequence:** metastasis - Invasive cancer
+> 
+> ## Type 2 EMT: EMT associated with tissue regeneration and organ fibrosis
+> 
+> In the undisturbed organ [[epithelial]] cells maintain an extracellular matrix (ECM) and cell adhesion molecules (CAM) that support the cells functionally and structurally support the functional organ surfaces.
+> 
+> ![[Fibrosis EMT process.png]]
+> 
+> Resident fibroblasts and inflammatory cells release molecules such as TGF-β, PDGF, EGF, and FGF-2 that trigger EMT's, and degrade these structures. Where the basement membrane (part of the ECM) fails cells that do not undergo EMT tend to die (apoptosis).
+> 
+> > [!QUOTE]  
+> > Tissue fibrosis is in essence an unabated form of wound healing due to persistent inflammation.
+>
+> [see in Zotero](zotero://select/library/items/48R52B9H)
+
+> [!note]
+> ## Summary
+> 
+> [[Epithelial to Mesenchymal Transition (EMT)]] is a process by which cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]).
+> 
+> There are 3 sub-types of EMT, of which type 2 is relevant to diabetic nephropathy. Type 2 EMT's occur around inflammation-inducing injuries for tissue regeneration, however with chronic inflammation they are associated with fibrosis and cause progressive organ damage.
+> 
+> ## What is epithelial-mesenchymal transition?
+> 
+> I found the following summary helpful:
+> 
+> > [!QUOTE] Epithelial to Mesenchymal Transition #definition  
+> > An epithelial-mesenchymal transition (EMT) is a biologic process that allows a polarized epithelial cell, which normally interacts with basement membrane via its basal surface, to undergo multiple biochemical changes that enable it to assume a mesenchymal cell phenotype, which includes enhanced migratory capacity, invasiveness, elevated resistance to apoptosis, and greatly increased production of ECM components ([1](https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/#B1)). The completion of an EMT is signaled by the degradation of underlying basement membrane and the formation of a mesenchymal cell that can migrate away from the epithelial layer in which it originated.  
+> > *From:* https://pmc.ncbi.nlm.nih.gov/articles/PMC2689101/
+> 
+> And have based my [[Epithelial to Mesenchymal Transition (EMT)#Summary]] off it.
+> 
+> So far as I understand [[Epithelial to Mesenchymal Transition (EMT)]] is a process by which cells which make up structural and functional surfaces ([[epithelial]]) transition into non-structural repair/maintenance cells ([[Mesenchymal]]).
+> 
+> Their previously [[epithelial]] phenotypes/traits are replaced by those typical of [[Mesenchymal]]. Of primary importance the basal surface degrades and they loose adhesion to their [[basement membrane]], becoming migratory.
+> 
+> ## Classification of EMT into three different subtypes
+> 
+> EMT's are distinguished based on their context and functional consequences into one of 3 types:
+> 
+> ![[EMT types.png]]
+> 
+> 1. Type 1
+> 
+>   **Context:** Embryo
+> 
+>   **Consequence:** embryogenesis - Normal development
+> 
+> 2. Type 2
+> 
+>   **Context:** inflammation
+> 
+>   **Consequence:** fibrosis - progressive organ damage
+> 
+> 3. Type 3
+> 
+>   **Context:** Cancer
+> 
+>   **Consequence:** metastasis - Invasive cancer
+> 
+> ## Type 2 EMT: EMT associated with tissue regeneration and organ fibrosis
+> 
+> In the undisturbed organ [[epithelial]] cells maintain an extracellular matrix (ECM) and cell adhesion molecules (CAM) that support the cells functionally and structurally support the functional organ surfaces.
+> 
+> ![[Fibrosis EMT process.png]]
+> 
+> Resident fibroblasts and inflammatory cells release molecules such as TGF-β, PDGF, EGF, and FGF-2 that trigger EMT's, and degrade these structures. Where the basement membrane (part of the ECM) fails cells that do not undergo EMT tend to die (apoptosis).
+> 
+> > [!QUOTE]  
+> > Tissue fibrosis is in essence an unabated form of wound healing due to persistent inflammation.
+>
+> [see in Zotero](zotero://select/library/items/48R52B9H)
+
 %% end notes %%
 
-%% Import Date: 2025-01-31T18:31:59.010+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.014+00:00 %%

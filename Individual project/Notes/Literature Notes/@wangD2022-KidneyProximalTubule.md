@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "A kidney proximal tubule model to evaluate effects of basement membrane stiffening on renal tubular epithelial cells"
 tags: 👁
-citekey: wangD2022-KidneyProximalTubule
-imported: 2025-01-31 06:29
+citekey: "wangD2022-KidneyProximalTubule"
+imported: 2025-02-18 06:25
 ---
 
 # A kidney proximal tubule model to evaluate effects of basement membrane stiffening on renal tubular epithelial cells
@@ -14,7 +15,7 @@ imported: 2025-01-31 06:29
 > > **Title**:: A kidney proximal tubule model to evaluate effects of basement membrane stiffening on renal tubular epithelial cells
 > > **Year**:: 2022
 > > **Citekey**:: wangD2022-KidneyProximalTubule
-> > **Sources**:: [Zotero](zotero://select/library/items/GXULY858)
+> > **Sources**:: [Zotero](zotero://select/library/items/GXULY858) [pdf](file:////home/joeashton/Zotero/storage/BAR4Q6AZ/Wang%20et%20al.%20-%202022%20-%20A%20kidney%20proximal%20tubule%20model%20to%20evaluate%20effects%20of%20basement%20membrane%20stiffening%20on%20renal%20tubular.pdf) 
 > > **Tags:** #👁
 > > **FirstAuthor**:: Wang, Dan
 > > **Author**:: Sant, Snehal
@@ -40,4 +41,4 @@ imported: 2025-01-31 06:29
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-01-31T18:31:59.593+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.270+00:00 %%

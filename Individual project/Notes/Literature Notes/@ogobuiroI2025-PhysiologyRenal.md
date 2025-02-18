@@ -1,8 +1,9 @@
 ---
-category: literaturenote
-tags: 
-citekey: ogobuiroI2025-PhysiologyRenal
-imported: 2025-02-18 05:59
+category: "literaturenote"
+title: "Physiology, Renal"
+tags: 👁, 🖋
+citekey: "ogobuiroI2025-PhysiologyRenal"
+imported: 2025-02-18 06:25
 ---
 
 # Physiology, Renal
@@ -15,6 +16,7 @@ imported: 2025-02-18 05:59
 > > **Year**:: 2025
 > > **Citekey**:: ogobuiroI2025-PhysiologyRenal
 > > **Sources**:: [Zotero](zotero://select/library/items/EL6ZYER8)
+> > **Tags:** #👁, #🖋
 > > **FirstAuthor**:: Ogobuiro, Ifeanyichukwu
 > > **Author**:: Tuma, Faiz
 > > 
@@ -55,4 +57,4 @@ imported: 2025-02-18 05:59
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-02-18T06:00:06.484+00:00 %%
+%% Import Date: 2025-02-18T06:25:46.123+00:00 %%

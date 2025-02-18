@@ -1,8 +1,9 @@
 ---
-category: literaturenote
+category: "literaturenote"
+title: "TGFβ modulates cell-to-cell communication in early epithelial-to-mesenchymal transition"
 tags: Fibrosis, Cell adhesion, Cell communication, Diabetic nephropathy, Epithelial-to-mesenchymal transition, Gap junctions, Proximal tubule, 👁
-citekey: hillsCE2012-TGFvModulatesCelltocell
-imported: 2025-01-31 06:29
+citekey: "hillsCE2012-TGFvModulatesCelltocell"
+imported: 2025-02-18 06:25
 ---
 
 # TGFβ modulates cell-to-cell communication in early epithelial-to-mesenchymal transition
@@ -41,4 +42,4 @@ imported: 2025-01-31 06:29
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-01-31T18:31:58.810+00:00 %%
+%% Import Date: 2025-02-18T06:25:45.905+00:00 %%
