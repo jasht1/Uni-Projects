@@ -55,7 +55,7 @@ section presentation
 	- [ ] First Draft
 
 - [ ] [[Interim Presentation]]
-	- [ ] Interim Presentation Plan
+	- [x] Interim Presentation Plan ✅ 2025-02-16
 	- [ ] Handouts
 		- [ ] [[Diabetic nephropathy]] handout
 	- [ ] Slides
@@ -75,13 +75,3 @@ The following must be submitted electronically on TurnitIn as a single document:
 
 needed, and no later than this deadline and handed to the Supervisor. A copy should be kept in the student’s logbook.)  
 - An updated ethics application should be submitted if applicable and not already done.
-
-%% 
-## Report plan
-
-- [ ] [Executive Summary](Interim%20Report%20-%20Main%20Body.md#Executive%20Summary)
-- [ ] [Introduction](Interim%20Report%20-%20Main%20Body.md#Introduction)
-- [ ] [Relevant Physiology](Interim%20Report%20-%20Main%20Body.md#Relevant%20Physiology)
-- [ ] [Diabetic Nephropathy (DN)](Interim%20Report%20-%20Main%20Body.md#Diabetic%20Nephropathy%20(DN))
-
- %%

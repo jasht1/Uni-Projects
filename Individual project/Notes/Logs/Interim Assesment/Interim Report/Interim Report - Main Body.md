@@ -95,11 +95,11 @@ The sample once mounted to the sample stage can be manoeuvred precisely in all d
 A typical force displacement curve from a nano indention experiment has the following shape seen in figure #WIP (A) below. A broadly level region where the probe is not in contact with the cell; the contact region; a sloped region where the probe is indenting the cell; the turnaround point; from which the same is repeated in reverse differing mainly at the point of separation [@kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
 
 > ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png) ![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
-> [@radmacherM2007-StudyingMechanicsCellular]
+> Example AFM data from Radmacher 2007, (A) shows the curve as a whole, (B) zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular].
 
 %% Contact point jump %%
 
-The exact point of contact is often ambiguous and rarely the same as the the point of separation. On approach the cantilever will be deflected away from the cell by van der waals forces until the spring force of the cantilever overcomes and surface tension takes hold [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials]. Depending on the depth of indentation and the material interaction this can be important to account for before calculating elasticity, the influence of non contact forces can be modelled using the Derjaguin approximation for interaction potential [@buttHJ1995-MeasuringSurfaceForces].
+The exact point of contact is often ambiguous and rarely the same as the the point of separation. On approach the cantilever will be deflected away from the cell by van der waals forces until the spring force of the cantilever overcomes and surface tension takes hold [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
 The point of separation is typically clearer as it's associated with a "jump" in cantilever deflection as the surface tension / adhesion of the cell to the probe is overcome [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
 
 %% 
@@ -110,10 +110,15 @@ The point of separation is typically clearer as it's associated with a "jump" in
 
 ### Contact Mechanics
 
-%% #### Hertz contact model %%
+In order to calculate elasticity the experimental data must be fit to a theoretical mechanical model of the interaction. Below is a table outlining different model indention relationships.
 
-%% corrections for the hertz model %%
+| Model                         | Force-Indentation relationship                                                                                         | Scope                                                                                                                                                                                                                                                                                                                                         |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hertz                         | $$F = \frac{4}{3}E' \sqrt{R} \ \omega^{3/2}$$                                                                          | Hertz model approximates the shallow indention of two linearly elastic spheres with infinitesimal strains [@linDC2009-SphericalIndentationSoftMatterHertzianRegime; @radmacherM2007-StudyingMechanicsCellular; @jpkinstruments-JPKDataProcessing].                                                                                            |
+| DMT (DerjaguinMuller-Toporov) | $$F = F_{Hertz} - F_{det}$$<br>$$\delta = \frac{a}{2} \ln \frac{R_{i}+a}{R_{i}-a}$$                                    | Depending on the depth of indentation and the material interaction it can be important to account electrostatic non contact forces, the influence of which can be modelled using the Derjaguin approximation for interaction potential [@buttHJ1995-MeasuringSurfaceForces; @jpkinstruments-JPKDataProcessing].                               |
+| Fung                          | $$F = B\pi (\frac{a^5- 15Ra^4 + 75R^2a^3}{5Ra^2- 50R^2a + 125R^3})\text{exp}⁡[b(\frac{a^3- 15Ra^2}{25R^2a- 125R^3})]$$ | An exponential strain energy function based on mechanical testing of mesentery and arterial tissues, that models the non linear elasticity of cells [@fungY1967-ElasticitySoftTissues; @linDC2009-SphericalIndentationSoftMatterHertzianRegime]. This method is tangebly more precise but doesn't provide a simple value for young's modulus. |
 
+%% Expand on obstacles with applying contact mechanics models to cells %%
 
 ## Literature Review
 
@@ -122,7 +127,7 @@ Developments in both understanding %% of the pathophysiology %% of kidney diseas
 %% #### What we measure %%
 
 %% Single cell stiffness %%
-The mechanical properties of tubular cells are largely a result of their cytoskeletal structure [@jalilianI2015-CellElasticityRegulated] which is altered significantly with the progression of DN [@buckleyST2012-CytoskeletalRearrangementTGFv1induced]. 
+The mechanical properties of tubular cells are largely a result of their cytoskeletal structure [@jalilianI2015-CellElasticityRegulated; @radmacherM2007-StudyingMechanicsCellular] which is altered significantly with the progression of DN [@buckleyST2012-CytoskeletalRearrangementTGFv1induced]. 
 
 %% Inter cellular adhesion %%
 
@@ -148,8 +153,24 @@ The below table lists several papers utilising atomic force microscopes to produ
 
 ### Progress Overview
 
-My supervisor has advised me that I have a sufficient understanding of the background to proceed with the curve analysis.
+%% What did I state in my proposal %%
+
+In my [Project Proposal](https://github.com/jasht1/Uni-Projects/blob/master/Individual%20project/Key%20Documents/Diabetic%20nephropathy%20Individual%20Project%20Proposal.pdf) I stated:
+
+> [!quote] Deliverables
+> The first stage of this project that broadly lines up with the first semester will be spent on research and processing the data into force displacement curves and will conclude in an interim report and oral presentation.
+> 
+> The second stage of this project that takes place over the second semester will be focused on extracting insights from the force displacement curves with numerical calculations for young's modulus and identification of features that may prove useful for distinguishing healthy from diseased samples. This will be presented in a dissertation like report along with an academic poster.
+
+%% What have I done since %%
+
+Since, my supervisor has advised me that I have a sufficient understanding of the background to proceed with the curve analysis.
 I have begun working with the experimental data to begin putting together a suitable methodology for accurately assessing indentation curves.
+
+### Research
+%% Ultralearning %%
+
+The main workload of this project thus far has been in familiarising myself with the background and context of the project. As going into this project I had no background in biology or microscopy with which to interoperate the single cell indentation data. I am now quite comfortable with the background and my reading has moved on to areas of potential progress and developments in the field. 
 
 ### Data Processing 
 
@@ -161,15 +182,27 @@ My log and results for this process can be seen on the working repository with t
 - [Learning Curve Log](https://github.com/jasht1/Uni-Projects/blob/0744dc65cdd17b54bfb0e6cb28642035fd4155fb/Individual%20project/Notes/Logs/Data%20Processing/Learning%20Curve%20log.md)
 - [Results.csv](https://github.com/jasht1/Uni-Projects/blob/45f03a3ad8d47985c7ff29ca28c1ddcb26cfcf45/Individual%20project/Workspace/Results.csv)
 
-
 ### Project Management
 
 %% Obsidian Academic research & writing improvements %%
 
+I have done several independent progress reviews, and keep a thorough logbook using obsidian. This contains:
+- progress logs where I record my work; 
+- meeting logs with meeting minuets and associated notes;
+- literature notes, these contains my highlights and sticky notes from zotero and further elaboration for especially useful references;
 
-### Research Methodology
-%% Ultralearning %%
-
-The main workload of this project thus far has been in familiarising myself with the background and context of the project. As going into this project I had no background in biology or microscopy with which to interoperate the single cell indentation data.
+My logbook can either be downloaded as a self hosting html site and viewed in your browser, or viewed in raw markdown on github. The downloadable version is updated less frequently but may provide a better user experience.
+- [Downloadable Log Book (HTML)](https://universityoflincoln-my.sharepoint.com/:f:/g/personal/27047440_students_lincoln_ac_uk/EpLyFaGZXrdEpWxGMmkhhlgBkQwebvzmgBRP1TMNOh1UXw?e=r9awaK)
+- [Live github repo](https://github.com/jasht1/Uni-Projects/tree/master/Individual%20project)
 
 ### Future Plans
+
+%% What is my end goal %%
+
+The aim of the project remains to identify of features of AFM indention curves of renal cells that may prove useful for distinguishing healthy from diseased samples.
+
+%% What will I do next %%
+
+In the immediate future I will continue to work with my supervisor to refine my curve processing in JPK. Once this is to a sufficient standard I will be able to produce a reliable set of young's moduli associated with the curves.
+
+These results will be assessed for predictive power in distinguishing healthy from diseased cells and if effective a methodology will be proposed for doing so.

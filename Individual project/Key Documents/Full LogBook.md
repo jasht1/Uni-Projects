@@ -12,8 +12,8 @@ excludes Christmas: 2024-12-20 to 2025-01-07, Exam week 1: 2025-01-14 to 2025-01
 section Project Admin
 	Ethics Subforms : crit, done, 2024-10-25, 4d
 	Project Proposal : crit, done, 2024-10-27, 2024-11-07
-	Interim Report : crit, active, 2024-12-25, 2025-02-06
-	Interim Presentation : milestone, 2025-02-12, 1d
+	Interim Report : crit, done, 2024-12-25, 2025-02-13
+	Interim Presentation : milestone, 2025-02-18, 1d
 	Final Report : crit, 2025-04-01, 2025-05-08
 	Poster : 2025-05-01, 2025-05-12
 
