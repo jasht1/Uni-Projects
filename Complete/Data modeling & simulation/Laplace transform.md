@@ -25,3 +25,13 @@ where $\sigma$ is the damping factor determining the change in oscillation over 
 [Brian Douglas](https://www.youtube.com/watch?v=ZGPtPkTft8g&list=PLUMWjy5jgHK3j74Z5Tq6Tso1fSfVWZC8L&index=5)
 ## Inverse laplace transform
 $$ f(t) = $$ #WIP 
+
+## Discrete Time Laplace Transform
+%%[[2025-02-19]] @ 16:06%%
+
+$$\LARGE Y(z) = \sum\limits_{n=0}^{\infty} y[n] e^{-i \omega}$$
+
+### 
+%%[[2025-02-19]] @ 15:42%%
+
+The accuracy of any discrete time analysis is subject to the sample length and the sample rate. The more data points the more accurately the frequency domain content can be resolved. 
