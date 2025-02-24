@@ -1,0 +1,7 @@
+[submodule "Robotics and Automation/Shared Workspace"]
+	path = Robotics and Automation/Shared Workspace
+	url = git@github.com:jasht1/ELE3005M-Group-Robotics-Project.git
+	branch = main
+[submodule "Robotics and Automation/Robotics Project Coursework/Shared Workspace"]
+	path = Robotics and Automation/Robotics Project Coursework/Shared Workspace
+	url = git@github.com:jasht1/ELE3005M-Group-Robotics-Project.git
