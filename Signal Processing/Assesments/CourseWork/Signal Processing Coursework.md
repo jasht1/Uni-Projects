@@ -2,13 +2,15 @@
 tags:
   - "#Assessment/Coursework"
 title: IIR Filter Design Assignment and Image processing
-module: EGR3031M Signal processing and System Identification
-Due: 2025-04-25T16:00:00
+module: EGR3031 Signal processing and System Identification
+due: 2025-04-25T16:00:00
+weight: 25
 ---
 
 # Brief
 
-> [!INFO]- [Brief](Brief.md)
-> ![Brief](Brief.md)
+> [!INFO]- [Brief](Projects/Uni%20Projects/Signal%20Processing/Assesments/CourseWork/Brief.md)
+> ![Brief](Projects/Uni%20Projects/Signal%20Processing/Assesments/CourseWork/Brief.md)
+
 # Plan
 

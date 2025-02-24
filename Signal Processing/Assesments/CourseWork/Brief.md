@@ -1,5 +1,5 @@
 
-## Question 1 (60marks)
+## Question 1 (60 marks)
 You are going to design and implement a digital Low Pass Filter (LPF) based on the Bilinear Transform that you will see in lectures. The filter prototype is going to be a (maximally flat) Butterworth Low Pass Filter, which has the transfer function:
 
 $$\frac{Y(s)}{X(s)} = \frac{{\omega_{b}}^{2}}{s^{2} + {\omega_{b}} \sqrt{2} s + {\omega_{b}}^{2}}$$
@@ -12,16 +12,16 @@ There are 7 elements to Question 1 of this assignment, see below:
 Derive the transfer function of your Butterworth prototype filter in the Laplace $s$ domain. 
 ### ii) Plot the impulse & frequency response (5 marks)
 Plot the frequency response of your prototype filter (using $s$ domain transfer function) in Matlab—ensure it matches your specification i.e. the -3dB point is at the equivalent of ${\omega_{b}}$ save your frequency response plot for your report. Plot the impulse response of your prototype filter in Matlab—save the impulse response for your report. 
-### iii) Derive the Z domain transfer function (5marks) 
+### iii) Derive the Z domain transfer function (5 marks) 
 Apply the Bilinear Transform and derive the z-domain transfer function of your digital filter. Show your derivation in your report.
 
-### iv) Use Matlab to obtain the frequency response (5marks) 
+### iv) Use Matlab to obtain the frequency response (5 marks) 
 Use Matlab to obtain the frequency response of your digital filter in the digital (𝜔d) and Analogue (𝜔c) domains—do they match at around the Break (of cut-off) frequency ? Note: take care to use digital frequency response function for your digital filter and analogue frequency response functions for your original prototype filter. Include your frequency response plot comparisons in your report.
-### v) Derive the Difference Equation (5marks) 
+### v) Derive the Difference Equation (5 marks) 
 Derive the Difference Equation of your digital filter. Show your derivation in your report. 
 ### vi) Implement your filter using Matlab (10 marks) 
 Implement your filter using a Matlab m-File using your derived Difference Equation in response to a unit step input. Include your m-file and results to show it implements the filter in your report. 
-### vii) Implement your filter on an Arduino (25marks)
+### vii) Implement your filter on an Arduino (25 marks)
 Implement your filter on an Arduino (eg. Uno or nano) or an alternative computational microcontroller/dsp/fpga platform. Provide all your code etc in your report so that the module leader can reproduce your results. You can either use real Arduino board and obtain the output data using a 3rd party graphing tool, OR use an online virtual simulator of an Arduino (eg. Uno) with your code eg. Virtronics, OR you can alternatively decide to use the Serial Plotter function in the Arduino IDE (?). Some example websites that may be useful include those below, although there are many more available—there is no prescriptive way to do this; choose something that you can get working! 
 https://www.tinkercad.com/circuits 
 http://www.makerplot.com
@@ -36,7 +36,7 @@ Then:
 Apply input squarewaves to your implemented digital filter and show that your filter has the correct step response characteristics for your 2nd order Butterworth filter 
 
 
-## Question 2 (10marks)
+## Question 2 (10 marks)
 You have been given a grayscale image file of a human brain, depicted below (Figure 2.1):
 
 > ![Brain_BW512x512](Brain_BW512x512.png)

@@ -1,4 +1,7 @@
-
+---
+tags:
+  - "#Lecture_Notes"
+---
 ## Truth Table
 %%[[2025-02-20]] @ 09:18%%
 

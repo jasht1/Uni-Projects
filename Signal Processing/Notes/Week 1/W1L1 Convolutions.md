@@ -1,4 +1,7 @@
-
+---
+tags:
+  - "#Lecture_Notes"
+---
 # Lecture Resources
 
 [Page 1](https://blackboard.lincoln.ac.uk/ultra/courses/_200914_1/outline/file/_9848868_1)

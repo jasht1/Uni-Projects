@@ -1,14 +1,19 @@
+---
+module: EGR3031 Signal processing and System Identification
+---
 
 ## Key Dates
 
-| Date                                  | Event                                                                   |
-| ------------------------------------- | ----------------------------------------------------------------------- |
-| [April 24th (2025-04-24)](2025-04-24) | [Signal Processing Coursework](Signal%20Processing%20Coursework.md) Due |
+```dataview
+TABLE link(dateformat(due,"yyyy-MM-dd"),dateformat(due,"yyyy-MM-dd")) AS "Due Date", due - date(today) AS "Due In", weight + "%" AS "Weight"
+FROM "Projects/Uni Projects/Signal Processing" AND #Assessment/Coursework
+SORT due 
+```
 
 ## Lecture Notes
 ```dataview
 LIST rows.file.link
-FROM "Projects/Uni Projects/Signal Processing/Notes"
+FROM "Projects/Uni Projects/Signal Processing/Notes" AND #Lecture_Notes
 GROUP BY substring(file.folder,46)
 ```
 

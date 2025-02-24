@@ -1,4 +1,7 @@
-
+---
+tags:
+  - "#Lecture_Notes"
+---
 # Lecture Notes
 %%[[2025-02-06]] @ 13:53%%
 
