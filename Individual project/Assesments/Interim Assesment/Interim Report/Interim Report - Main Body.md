@@ -206,3 +206,4 @@ The aim of the project remains to identify of features of AFM indention curves o
 In the immediate future I will continue to work with my supervisor to refine my curve processing in JPK. Once this is to a sufficient standard I will be able to produce a reliable set of young's moduli associated with the curves.
 
 These results will be assessed for predictive power in distinguishing healthy from diseased cells and if effective a methodology will be proposed for doing so.
+
