@@ -24,6 +24,6 @@
 
 ## Logbook
 
-View [LogBook](LogBook.md)
+View [LogBook](Projects/Uni%20Projects/Individual%20project/Notes/LogBook.md)
 
 %% ![Full LogBook](Full%20LogBook.md) %%

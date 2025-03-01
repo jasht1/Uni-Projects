@@ -42,7 +42,7 @@ The elasticity of tubule cells as measured by atomic force indention may valuabl
 
 ### Project Timeline
 
-> [!info] See [LogBook](LogBook.md)
+> [!info] See [LogBook](Projects/Uni%20Projects/Individual%20project/Notes/LogBook.md)
 
 Planning & time management looks different for everyone, despite appearances it's something I genuinely think about allot and spend allot of time doing. 
 
