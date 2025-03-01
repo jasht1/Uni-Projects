@@ -9,4 +9,3 @@
 > 4. Understand and evaluate the operation and application of a range of sensory systems in robotics and demonstrate principles of secure data storage and analysis.
 > 5. Communicate effectively on complex engineering matters with technical and non-technical audiences.
 > 
-
