@@ -1,12 +1,3 @@
----
-tags:
-  - "#Assessment/Coursework"
-title: HVAC State of Art Report
-module: EGR3038 Building Automation Systems
-due: 2025-04-03T16:00:00
-weight: 50
----
-
 ## Summary
 
 > [!Abstract]- Learning Objectives
