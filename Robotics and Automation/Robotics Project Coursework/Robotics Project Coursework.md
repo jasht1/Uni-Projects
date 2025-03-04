@@ -9,8 +9,8 @@ weight: 70
 
 # Brief
 
-> [!INFO]- [Breif](Breif.md)
-> ![Breif](Breif.md)
+> [!INFO]- [Brief](Projects/Uni%20Projects/Robotics%20and%20Automation/Robotics%20Project%20Coursework/Shared%20Workspace/Resources/Breif/Brief.md)
+> ![Brief](Projects/Uni%20Projects/Robotics%20and%20Automation/Robotics%20Project%20Coursework/Shared%20Workspace/Resources/Breif/Brief.md)
 
 # Plan
 
