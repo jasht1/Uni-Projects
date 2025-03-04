@@ -37,9 +37,11 @@ At the beginning of a cycle:
 2. Once **1A** has reached clamping position,
 3. **2A** is actuated,
 4. Once **2A** has reached stamping position,
-5. **1A** & **2A** are disconnected,
-6. After a brief delay,
-7. **3A** is actuated 
-8. After a brief delay,
-9. **3A** is disconnected
+5. **2A** is retracted,
+6. **1A** is retracted,
+7. After a brief delay,
+8. **3A** is actuated 
+9. After a brief delay,
+10. **3A** is disconnected
 End of cycle
+
