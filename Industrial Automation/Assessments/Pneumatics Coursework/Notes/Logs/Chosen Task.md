@@ -13,10 +13,17 @@ This cuts a section of sheet allowing the cut section to advance while blocking 
 Once the sheet section is clear from the switch the shear retracts, this allows the sheet roll to advance again and the cycle repeats.
 
 ### Magazine Dispense
+%%[[2025-03-04]] @ 16:31%%
 
 ![Magazine Single Release|800](Magazine%20Single%20Release.md)
 
 
-### Folder
+### Fold 1
+%%[[2025-03-04]] @ 21:00%%
 
 ![Fold 1.excalidraw|800](Fold%201.excalidraw.md)
+
+### Fold 2
+%%[[2025-03-04]] @ 22:28%%
+
+![Fold 2.excalidraw|800](Fold%202.excalidraw.md)
