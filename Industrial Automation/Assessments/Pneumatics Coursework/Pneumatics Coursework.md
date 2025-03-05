@@ -26,14 +26,15 @@ tickInterval 1day
 
 section ADMIN
 	Get FluidSIM working on Linux: 2025-02-21, 2d
+	Clarify Breif: 2025-02-28, 1d
+	Due: crit, milestone, 2025-03-13, 1d
 
 section Stamping machine
 	Identify Components: 2025-02-27, 1d
 
 section Industrial Task
-	Summary: 2025-03-01, 2d
-	Flow Chart: 2025-03-02, 2d
-Due: crit, milestone, 2025-03-13, 1d
+	Summary: 2025-03-05, 1d
+	Flow Chart: 2025-03-04, 2d
 ```
 
 # LogBook

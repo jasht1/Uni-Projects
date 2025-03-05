@@ -18,6 +18,7 @@ Once the sheet section is clear from the switch the shear retracts, this allows 
 ![Magazine Single Release|800](Magazine%20Single%20Release.md)
 
 
+
 ### Fold 1
 %%[[2025-03-04]] @ 21:00%%
 
@@ -27,3 +28,4 @@ Once the sheet section is clear from the switch the shear retracts, this allows 
 %%[[2025-03-04]] @ 22:28%%
 
 ![Fold 2.excalidraw|800](Fold%202.excalidraw.md)
+

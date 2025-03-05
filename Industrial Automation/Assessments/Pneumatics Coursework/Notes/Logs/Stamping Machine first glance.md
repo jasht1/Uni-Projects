@@ -34,7 +34,7 @@ Actuating **3A**
 
 At the beginning of a cycle:
 1. **1A** is actuated, 
-2. Once **1A** has reached clamping position,
+2. Once **1A** as reached clamping position,
 3. **2A** is actuated,
 4. Once **2A** has reached stamping position,
 5. **2A** is retracted,
@@ -45,3 +45,7 @@ At the beginning of a cycle:
 10. **3A** is disconnected
 End of cycle
 
+### Logic
+%%[[2025-03-05]] @ 16:09%%
+
+![Stamping Flow Chart](Stamping%20Flow%20Chart.md)
