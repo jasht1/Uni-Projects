@@ -3,7 +3,7 @@ category: "literaturenote"
 title: "Studying the Mechanics of Cellular Processes by Atomic Force Microscopy"
 tags: 👁, 🖋
 citekey: "radmacherM2007-StudyingMechanicsCellular"
-imported: 2025-02-18 06:25
+imported: 2025-03-10 04:01
 ---
 
 # Studying the Mechanics of Cellular Processes by Atomic Force Microscopy
@@ -44,13 +44,45 @@ imported: 2025-02-18 06:25
 > "The Poisson ratio n can have values between 0 and 0.5. A value of 0.5 corresponds to an incompressible material, which is a reasonable assumption for a wellhydrated soft polymeric gel such as the cytoskeleton."
 
 > [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/2LPRUTGQ?page=362&annotation=F24VPE3Z)
-> "These equations assume that the sample is homogeneous, isotropic, and infinitely thick. Strictly speaking, none of these assumptions necessarily applies to cells."
+> "These equations assume that the sample is:
+> - homogeneous, 
+> - isotropic, and 
+> - infinitely thick. 
+> 
+> Strictly speaking, none of these assumptions necessarily applies to cells."
 
 > [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/2LPRUTGQ?page=362&annotation=WSHRKVGW)
-> "The passive mechanical responses of cells are determined mainly by three cellular components: the cell membrane or cell wall, the cytoskeleton, and the cytosol."%% end annotations %%
+> "The passive mechanical responses of cells are determined mainly by three cellular components: 
+> - the cell membrane or cell wall, 
+> - the cytoskeleton, and 
+> - the cytosol."
+ 
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/2LPRUTGQ?page=362&annotation=9MJL5TNL)
+> "For most other eukaryotic cells, the cytoskeleton, composed of various filamentous proteins—mainly actin, but also microtubules and intermediate filaments—and associated proteins, control the molecular architecture and mechanical properties."
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/2LPRUTGQ?page=363&annotation=NWEGHUGE)
+> "Especially in the case of actin cytoskeleton, numerous accessory proteins are known to control the lengths of filaments, cross-link the filaments, anchor the filaments to the membrane, induce the formation of filament bundles including stress fibers, and link the filaments to cell–substrate adhesion sites"
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/2LPRUTGQ?page=363&annotation=ZH2IJM43)
+> "The cytoskeleton is a polymeric, fibrous network, which will not appear homogenous at a length scale comparable to or smaller than the mesh size (a few tens of nanometers)."
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/2LPRUTGQ?page=363&annotation=QYGDRN3P)
+> "the mechanical response of the cytoskeleton will not be isotropic in the presence of stress fibers or attachments to the membrane."
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/2LPRUTGQ?page=363&annotation=4ZN38QHM)
+> "sample thickness will be an issue for any estimate of mechanical properties, as a cell is never infinitely thick"
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/2LPRUTGQ?page=363&annotation=7ABB9WD4)
+> "As the indentation approaches the thickness of the region, no further compression is possible. Hence, the deflection becomes proportional to the sample height as on a stiV sample. EVectively, the cantilever senses only the stiVness of the underlying substrate."
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/2LPRUTGQ?page=365&annotation=GIUNX8JC)
+> "relative stiffness can always be extracted from the data if a region undergoes limited changes in thickness"
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/2LPRUTGQ?page=367&annotation=3S5J7GUC)
+> "At higher loading forces, the underlying cytoskeletal structures start to appear in the image."%% end annotations %%
 
 # Notes
 
 %% begin notes %%%% end notes %%
 
-%% Import Date: 2025-02-18T06:25:46.176+00:00 %%
+%% Import Date: 2025-03-10T16:01:17.288+00:00 %%
