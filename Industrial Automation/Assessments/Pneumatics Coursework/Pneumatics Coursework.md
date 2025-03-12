@@ -37,16 +37,18 @@ section Industrial Task
 	Flow Chart: 2025-03-04, 2d
 ```
 
-- [ ] Report
+- [x] Report ✅ 2025-03-12
 	- [x] Layout/Plan ✅ 2025-03-11
 	- [x] Stamping machine ✅ 2025-03-11
 		- [x] Screen shots of FluidSIM diagrams ✅ 2025-03-11
 		- [x] Components list ✅ 2025-03-12
-	- [ ] Chosen task
+	- [x] Chosen task ✅ 2025-03-12
 		- [x] Screen shots of FluidSIM diagrams ✅ 2025-03-11
 		- [x] Add Flow diagrams ✅ 2025-03-11
 		- [x] Components list ✅ 2025-03-12
-		- [ ] Descriptions
+		- [x] Descriptions ✅ 2025-03-12
+	- [x] Format Report ✅ 2025-03-12
+- [x] Make zip Submission ✅ 2025-03-12
 
 # LogBook
 
