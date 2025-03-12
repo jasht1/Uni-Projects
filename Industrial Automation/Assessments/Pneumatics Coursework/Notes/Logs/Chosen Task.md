@@ -5,7 +5,7 @@
 ### Switch actuated shear
 %%[[2025-03-04]] @ 02:37%%
 
-![Shear|800](Projects/Uni%20Projects/Industrial%20Automation/Assessments/Pneumatics%20Coursework/Notes/Logs/attachments/Drawings/Shear.md)
+![Shear|800](Cut%20Sections.excalidraw.md)
 
 A sheet is fed by conveyor of driven rollers, these have enough friction to pull the sheet forward when it is free but not to crumple/tear it.
 When the sheet roll reaches the roller switch, the shear is actuated.
