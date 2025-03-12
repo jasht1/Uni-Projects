@@ -3,7 +3,19 @@
 
 ## Stamping Machine
 
+--- start-multi-column: ID_9755
+```column-settings
+Number of Columns: 2
+Largest Column: Left
+```
+
+###### Figure 1: Stamping Machine FluidSIM Diagram
+
 ![Stamping Machine - FluidSIM Diagram|400](Stamping%20Machine%20-%20FluidSIM%20Diagram.png)
+
+--- column-break ---
+
+#### Components
 
 - Single acting cylinder
 - 3/2 Way Valve 
@@ -26,6 +38,11 @@
 - 3/2 Way Valve
 	- Detent Button
 	- Spring Return
+
+--- end-multi-column
+
+
+
 
 ## Metal Casing 
 
@@ -63,7 +80,6 @@ The cut sections can be deposited into a magazine, this gives the production lin
 ![Mag Dispense - Flow Diagram|550](Mag%20Dispense%20-%20Flow%20Diagram.svg)
 
 The magazines store a stack of sheet sections, when triggered by a pneumatic signal the bottom most part is dispensed. 
-A roller switch at the base of the magazine pulls double duty, detecting when a part is dispensed correctly and if the magazine is empty.
 
 ![Mag Dispense - FluidSIM Diagram|300](Mag%20Dispense%20-%20FluidSIM%20Diagram.png)
 
@@ -71,9 +87,6 @@ A roller switch at the base of the magazine pulls double duty, detecting when a 
 - 3/2 Way Valve
 	- Pneumatic
 	- Spring Return
-- 3/2 Way Valve
-	- Roller Switch
-	- Spring return
 - 3/2 Way Valve
 	- Detent Switch
 	- Spring return
