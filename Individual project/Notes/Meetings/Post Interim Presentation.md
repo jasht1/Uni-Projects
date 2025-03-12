@@ -13,7 +13,6 @@ tags:
 ### Need to associate molecular elements to their contribution to cell mechanics
 - [ ] associate molecular elements to their contribution to cell mechanics
 
-
 ### Invoke counter argument to EMT based understanding of tubular damage in diabetic nephropathy
 - [ ] Invoke counter argument to EMT based understanding of tubular damage in diabetic nephropathy
 %%[[2025-03-10]] @ 14:58%%
