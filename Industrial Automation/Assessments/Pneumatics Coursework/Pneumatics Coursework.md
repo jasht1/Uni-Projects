@@ -37,6 +37,17 @@ section Industrial Task
 	Flow Chart: 2025-03-04, 2d
 ```
 
+- [ ] Report
+	- [x] Layout/Plan ✅ 2025-03-11
+	- [x] Stamping machine ✅ 2025-03-11
+		- [x] Screen shots of FluidSIM diagrams ✅ 2025-03-11
+		- [x] Components list ✅ 2025-03-12
+	- [ ] Chosen task
+		- [x] Screen shots of FluidSIM diagrams ✅ 2025-03-11
+		- [x] Add Flow diagrams ✅ 2025-03-11
+		- [x] Components list ✅ 2025-03-12
+		- [ ] Descriptions
+
 # LogBook
 
 ![LogBook](Projects/Uni%20Projects/Industrial%20Automation/Assessments/Pneumatics%20Coursework/Notes/LogBook.md)

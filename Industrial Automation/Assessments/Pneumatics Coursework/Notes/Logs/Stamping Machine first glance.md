@@ -39,10 +39,10 @@ At the beginning of a cycle:
 4. Once **2A** has reached stamping position,
 5. **2A** is retracted,
 6. **1A** is retracted,
-7. After a brief delay,
+7. Once **1A** & **2A** are clear,
 8. **3A** is actuated 
-9. After a brief delay,
-10. **3A** is disconnected
+9. Once block is clear,
+10. **3A** is retracted
 End of cycle
 
 ### Logic
