@@ -8,8 +8,6 @@ title 4 months of uni timeline
 dateFormat YYYY-MM-DD
 tickInterval 2week
 
-created day: 2025-02-21, 1d
-
 section Industrial Automation
 	Pneumatics Due: crit, milestone, 2025-03-13, 1d
 	Electro-Pneumatics: crit, milestone, 2025-04-25, 1d
