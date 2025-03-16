@@ -1,18 +1,3 @@
-
-### A) Diagram
-
-> [!question] 
-> ![6a. Assign appropriate frames to the given robot (on the given figure or your own sketch).](Questions.md#6a.%20Assign%20appropriate%20frames%20to%20the%20given%20robot%20(on%20the%20given%20figure%20or%20your%20own%20sketch).)
-
-![IK Frames Diagram (Pose)](IK%20Frames%20Diagram%20(Pose).png)
-
-### B) MatLab Model
-%%[[2025-03-14]] @ 15:25%%
-
-> [!question] 
-> ![6b. Now that you have assigned appropriate frames, model this robot in MATLAB, show your code (copy and paste here) and result (save as figure the insert here, not screen capture).](Questions.md#6b.%20Now%20that%20you%20have%20assigned%20appropriate%20frames,%20model%20this%20robot%20in%20MATLAB,%20show%20your%20code%20(copy%20and%20paste%20here)%20and%20result%20(save%20as%20figure%20the%20insert%20here,%20not%20screen%20capture).)
-
-```MATLAB title="DefRobotArm.m"
 robotArm = rigidBodyTree;
 
 % Actual Base to Base Joint
@@ -69,19 +54,3 @@ joint_ee = rigidBodyJoint('joint_ee', 'fixed');
 setFixedTransform(joint_ee, trvec2tform([41.25, 0, 0]));
 end_effector.Joint = joint_ee;
 addBody(robotArm, end_effector, 'Wrist3');
-```
-
-![robotArm_home_pose](robotArm_home_pose.jpg)
-### C) Pose
-
-> [!Question]
-> ![6c. Assign a random configuration (angles) to this robot, using MATLAB, show your code (copy and paste here) and result (save as figure the insert here, not screen capture).](Questions.md#6c.%20Assign%20a%20random%20configuration%20(angles)%20to%20this%20robot,%20using%20MATLAB,%20show%20your%20code%20(copy%20and%20paste%20here)%20and%20result%20(save%20as%20figure%20the%20insert%20here,%20not%20screen%20capture).)
-
-```MATLAB
-randomPose = randomConfiguration(robotArm);
-
-figure
-show (robotArm, randomPose);
-```
-
-![robotArm_random_pose](robotArm_random_pose.jpg)
