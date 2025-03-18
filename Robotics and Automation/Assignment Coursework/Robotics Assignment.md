@@ -14,22 +14,6 @@ weight: 30
 
 # Plan
 
-```mermaid
----
-displayMode: compact
----
-gantt
-title Assignment
-dateFormat YYYY-MM-DD
-axisFormat %d
-tickInterval 1day
-
-section Discussion Questions
-section Transformation Questions
-section Inverse Kinematics
-	Frames
-```
-
 ## ToDo
 
 - [ ] Discussion Questions
@@ -38,5 +22,8 @@ section Inverse Kinematics
 	- [ ] Forward vs Inverse Kinematics
 	- [ ] Sensors
 - [ ] Transformations
-- [ ] Inverse Kinematic Model
 	- [ ] 
+- [x] [6 Inverse Kinematics](6%20Inverse%20Kinematics.md)✅ 2025-03-18
+	- [ ] [IK Frames Diagram (Pose)](IK%20Frames%20Diagram%20(Pose).md)
+	- [ ] [DefRobotArm](Projects/Uni%20Projects/Robotics%20and%20Automation/Assignment%20Coursework/Answers/Inverse%20Kinematics/Work/DefRobotArm.m)
+	- [ ] [PoseRobotArm](PoseRobotArm.m)
