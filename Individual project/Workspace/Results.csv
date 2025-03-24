@@ -1,9 +1,17 @@
-Data Set,Fit Range,Xmin (µm),Xmax (µm),Contact Point (µm),Baseline (pN),Force (pN) [After Baseline correction],Indentation depth (µm) [After height correction],Elastic Modulus (Pa),Comments,Loading Force @ Xmin (pN),velocity (nm/s),Cantilever Sensitivity (nm/V),Tip shape,Tip radius (µm),Poisson
-force-save-2014.05.23-17.50.39.jpk-force,0,92.84,97.84,94.77,-136.9,1245.1,1.93,143.1,Full Range,1382,500,93.05,Sphere,5,0.5
-force-save-2014.05.23-17.50.39.jpk-force,1,93,97,94.79,-136.9,1033.1,1.79,139.4,Wide Range,1170,500,93.05,Sphere,5,0.5
-force-save-2014.05.23-17.50.39.jpk-force,2,93,95,94.75,-121.1,1048.9,1.75,142.2,Medium Range,1170,500,93.05,Sphere,5,0.5
-force-save-2014.05.23-17.50.39.jpk-force,3,94,95,94.78,-125,130,0.78,138.6,Tight Range,255,500,93.05,Sphere,5,0.5
-force-save-2011.03.22-18.41.44.jpk-force,0,9.62053,69.7844,10.84,-1.64,711,1.2195,136,Full Range,710,500,73.64,Sphere,5,0.5
-force-save-2011.03.22-18.41.44.jpk-force,1,9.62053,12,10.68,48.86,678.2,1.0611,159.5,Wide Range,710,500,73.64,Sphere,5,0.5
-force-save-2011.03.22-18.41.44.jpk-force,2,10,12,10.73,47.66,336.8,0.7291,138.1,Medium Range,386.4,500,73.64,Sphere,5,0.5
-force-save-2011.03.22-18.41.44.jpk-force,3,10,11,10.71,53.92,332.5,0.7051,143.3,Tight Range,386.4,500,73.64,Sphere,5,0.5
+Data Set,Fit Range,Xmin (µm),Xmax (µm),Contact Point (µm),Baseline (pN),Force (pN) [After Baseline correction],Indentation depth (µm) [After height correction],Elastic Modulus (Pa),Loading Force @ Xmin (pN),velocity (nm/s),Cantilever Sensitivity (nm/V),Tip shape,Tip radius (µm),Poisson,Comments
+force-save-2014.05.23-17.50.39.jpk-force,Full Range,92.84,97.84,94.77,-136.9,1245.1,1.93,143.1,1382,500,93.05,Sphere,5,0.5,
+force-save-2014.05.23-17.50.39.jpk-force,Wide Range,93,97,94.79,-136.9,1033.1,1.79,139.4,1170,500,93.05,Sphere,5,0.5,
+force-save-2014.05.23-17.50.39.jpk-force,Medium Range,93,95,94.75,-121.1,1048.9,1.75,142.2,1170,500,93.05,Sphere,5,0.5,
+force-save-2014.05.23-17.50.39.jpk-force,Tight Range,94,95,94.78,-125,130,0.78,138.6,255,500,93.05,Sphere,5,0.5,
+force-save-2011.03.22-18.41.44.jpk-force,Full Range,9.62053,69.7844,10.84,-1.64,711,1.2195,136,710,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.41.44.jpk-force,Wide Range,9.62053,12,10.68,48.86,678.2,1.0611,159.5,710,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.41.44.jpk-force,Medium Range,10,12,10.73,47.66,336.8,0.7291,138.1,386.4,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.41.44.jpk-force,Tight Range,10,11,10.71,53.92,332.5,0.7051,143.3,386.4,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.43.08.jpk-force,Full Range,9.55,69.66,10.72,3.519,712.3,1.1679,146,746.2,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.43.08.jpk-force,Wide Range,9.55,12,10.59,44.02,686.8,1.0417,166,746.2,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.43.08.jpk-force,Medium Range,10,12,10.68,42.11,278.4,0.6768,127.5,320.4,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.43.08.jpk-force,Tight Range,10,11,10.65,48.98,274,0.6453,134.6,320.4,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.44.32.jpk-force,Full Range,9.46,69.5,10.67,16.88,707.5,1.2054,137.8,725.5,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.44.32.jpk-force,Wide Range,9.46,12,10.5,67.28,677.2,1.044,163.1,744.5,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.44.32.jpk-force,Medium Range,10,12,10.6,65.49,212.1,0.5966,117.2,277.6,500,73.64,Sphere,5,0.5,
+force-save-2011.03.22-18.44.32.jpk-force,Tight Range,10,11,10.56,70.95,209.6,0.5629,126.2,280.5,500,73.64,Sphere,5,0.5,
