@@ -23,16 +23,24 @@ $$\text{If} \quad l \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} 
 
 [5 marks]
 ### 2c. Do the calculations in MATLAB 
-Do the calculations in MATLAB and use rigiBody to visualise (both P1 and P2). Show your code (copy and paste here) and result (save as figure the insert here, not screen capture).
+Do the calculations in MATLAB and use rigidBody to visualise (both P1 and P2). Show your code (copy and paste here) and result (save as figure the insert here, not screen capture).
 [5 marks]
 
 ## 3. Consider the rotation about x of P1 to P2
 [15 marks] 
 
 ![image-4-x198-y90|400](image-4-x198-y90.png)
-### 3a. Determine the homogeneous transformation matrix (4 × 4) to rotate P1 to P2 around axis x for angle θ as shown in below figure.
-### 3b. if θ = 30° and x1 = 1, y1 = 1, z1 = 1, calculate x2, y2, z2.
-### 3c. Do the calculations in MATLAB and use rigiBody to visualise (both P1 and P2). Show your code (copy and paste here) and result (save as figure the insert here, not screen capture).
+### 3a. Determine the homogeneous transformation matrix
+Determine the homogeneous transformation matrix ($4 \times 4$) to translate $P1$ to $P2$ around axis $x$ for angle $\theta$ as shown in figure.
+[5 marks]
+### 3b. Find case
+
+$$\text{If} \quad \theta = 30 \degree \quad \text{and} \quad P1 \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} 1 \\ 1 \\ 1\end{pmatrix}, \quad \text{then calculate} \quad P2\begin{pmatrix} x \\ y \\ z \end{pmatrix}.$$
+
+[5 marks]
+### 3c. Do the calculations in MATLAB 
+Do the calculations in MATLAB and use rigidBody to visualise (both P1 and P2). Show your code (copy and paste here) and result (save as figure the insert here, not screen capture).
+[5 marks]
 
 ## 4. Consider the rotation about y of P1 to P2
 [15 marks] 
