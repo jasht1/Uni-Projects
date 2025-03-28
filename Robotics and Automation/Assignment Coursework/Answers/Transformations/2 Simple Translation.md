@@ -1,7 +1,9 @@
 > [!Question]-
 > ![2. Consider the translation P1 to P2](Questions.md#2.%20Consider%20the%20translation%20P1%20to%20P2)
 
-### General Transformation Matrix for Simple Translation
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+### 2a. General Transformation Matrix for Simple Translation
 %%[[2025-03-18]] @ 15:36%%
 
 The [figure](image-4-x199-y336.png) shows a simple translation. 
@@ -28,7 +30,7 @@ $$P_{2} = P_{1} \begin{bmatrix}
 
 Where $l (x,y,z)$ is the vector $\vec{l} = P_{2} - P_{1}$ and $P_{1}$ & $P_{2}$ are points represented by column vectors of homogeneous coordinates in the form:
 
-$$\large\begin{pmatrix}
+$$\begin{pmatrix}
 \newcommand{\G}[1]{{\color{green}#1}}
 \newcommand{\S}{{\color{red}s}}
 \begin{array}{c}
@@ -48,7 +50,9 @@ $$\large\begin{pmatrix}
 \end{align*}
 $$
 
-### Specific Case 
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+### 2b. Specific Case 
 %%[[2025-03-18]] @ 15:47%%
 
 If the euclidean distance from points $P_{1}$ to $P_{2}$ is $l$ where:
@@ -60,7 +64,17 @@ P_{1} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} 1 \\ 1 \\ 1\en
 P_{2}\begin{pmatrix} x \\ y \\ z \end{pmatrix}
 .$$
 
-Applying the general form described above in [General Transformation Matrix for Simple Translation](2%20Simple%20Translation.md#General%20Transformation%20Matrix%20for%20Simple%20Translation) the transformation matrix would be:
+--- start-multi-column: ID_zxbq
+```column-settings
+Number of Columns: 2
+Largest Column: left
+border:off
+Shadow:off
+```
+
+Applying the general form described above in [2a](#2a.%20General%20Transformation%20Matrix%20for%20Simple%20Translation) the transformation matrix would be as shown in the [equation](#^78aa37) to the right.
+
+--- column-break ---
 
 $$\begin{bmatrix}
 1 & 0 & 0 & 1 \\ 
@@ -68,6 +82,10 @@ $$\begin{bmatrix}
 0 & 0 & 1 & 3 \\ 
 0 & 0 & 0 & 1 \\ 
 \end{bmatrix}$$
+
+^78aa37
+
+--- end-multi-column
 
 And could be be applied as follows to find $P_{2}:$
 $$P_{2} = 
@@ -82,7 +100,9 @@ $$P_{2} =
 \begin{pmatrix} 2 \\ 3 \\ 4 \\ 1\end{pmatrix}
 $$
 
-### MATLAB Implementation
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+### 2c. MATLAB Implementation
 %%[[2025-03-25]] @ 15:03%%
 
 This simple translation can be used to arrange the joints of of a robot in MATLABs robotics toolbox as demonstrated by the code below.
@@ -129,6 +149,9 @@ title('Simple Translation from $P_{1}$ to $P_{2}$');
 view([2, 0.25, 0.5]); % side on view
 ```
 
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+###### Simple Translation Figure
 This script generates the following figure.
 
 ![SimpleTranslationRigidBodyFigure](SimpleTranslationRigidBodyFigure.svg)

@@ -1,14 +1,16 @@
 > [!Question]-
 > ![3. Consider the rotation about x of P1 to P2](Questions.md#3.%20Consider%20the%20rotation%20about%20x%20of%20P1%20to%20P2)
 
-### General Transformation Matrix for Simple Rotation
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+### 3a. General Transformation Matrix for Simple Rotation
 %%[[2025-03-25]] @ 20:45%%
 
 The [figure](image-4-x199-y336.png) shows a simple rotation.
 
 ![image-4-x198-y90|400](image-4-x198-y90.png)
 
-The form of the Homogeneous Transformation Matrix (HTM) for a simple rotation about the axis depends on the axis about which the rotation takes place as seen in the equation below.
+The form of the Homogeneous Transformation Matrix (HTM) for a simple rotation about the axis depends on the axis about which the rotation takes place as seen in the [equation](#^1211fc) below for the typical counter clockwise forms.
 
 $$
 \begin{matrix}
@@ -34,10 +36,12 @@ $$
 \sin(\theta) & \cos(\theta) & 0 & 0 \\
 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 1 \\
-\end{bmatrix}
+\end{bmatrix} \\ 
 \end{matrix}
 \end{matrix}
 $$
+
+^1211fc
 
 As the case above is about the $x$ axis the transformation can be applied as follows:
 
@@ -53,35 +57,16 @@ $$
 
 ^ea0369
 
-Where $\theta$ is the angle of rotation about the $x$ axis and $P_{1}$ & $P_{2}$ are points represented by column vectors of homogeneous coordinates in the form:
+Where $\theta$ is the angle of counter clockwise rotation about the $x$ axis and $P_{1}$ & $P_{2}$ are points represented by column vectors of homogeneous coordinates in the form as previously discussed.
 
-$$
-\large\begin{pmatrix}
-\newcommand{\G}[1]{{\color{green}#1}}
-\newcommand{\S}{{\color{red}s}}
-\begin{array}{c}
-\G{x}/\S \\
-\G{y}/\S \\
-\G{z}/\S \\
-\end{array}\\
-\color{red}
-\S \\
-\end{pmatrix}
-\quad
-\begin{align*}
-& \text{where}
-{\color{green} \begin{pmatrix} x \\ y \\ z \end{pmatrix}}
-\ \text{are cartesean coordinates denoting displacemnt from origin} \ O. \\
-& \text{and} \ {\color{red} s }\ \text{is a scalar typically 1 or the lowest common denominator of ${\color{green} (x,y,z)}$.}
-\end{align*}
-$$
+%% Page Break %% <div style="page-break-after: always;"></div>
 
-### Specific Case
+### 3a. Specific Case
 %%[[2025-03-25]] @ 21:41%%
 
 The case stated in the brief is ambiguous about whether the rotation is to be take about the origin $O$ or point $P1$ and as to the direction of the rotation, however it is taken to mean;
 
-> *If $P_{1}$ is a point at $(1,1,1)$ and point $P_{2}$ is found $30 \degree$ counter clockwise about the $x$ axis from $P_{1}$ find the coordinates for $P_2$.*
+> *If $P_{1}$ is a point at $(1,1,1)$ and point $P_{2}$ is found $30 \degree$ counter clockwise about the origin $x$ axis from $P_{1}$ find the coordinates for $P_2$.*
 
 The general form [described above](#^ea0369) the transformation matrix could be applied as follows to find $P_{2}$ as follows:
 
@@ -98,10 +83,12 @@ P_{2} =
 \begin{pmatrix} 1 \\ -0.83\\ 1.14 \\ 1\end{pmatrix}
 $$
 
-### MATLAB Implementation
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+### 3c. MATLAB Implementation
 %%[[2025-03-25]] @ 15:03%%
 
-This simple Rotation can be used to arrange the joints of of a robot in MATLABs robotics toolbox as demonstrated by the code below.
+This simple rotation can be used to arrange the joints of of a robot in MATLABs robotics toolbox as demonstrated by the code below.
 
 ```MATLAB title="Q2b_Simple_Rotation.m"
 % Define P1 & theta
@@ -149,6 +136,9 @@ fontsize(24,"points"); % bigger lables
 view([2, 0.25, 0.5]); % side on view
 ```
 
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+###### Simple Rotation about x Figure
 This script generates the following figure.
 
 ![SimpleXRotationRigidBodyFigure](SimpleXRotationRigidBodyFigure.svg)

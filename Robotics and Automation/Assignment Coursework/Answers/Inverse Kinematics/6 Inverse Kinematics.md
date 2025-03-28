@@ -1,12 +1,13 @@
-
-### A) Diagram
+### 6a. Diagram
 
 > [!question] 
 > ![6a. Assign appropriate frames to the given robot (on the given figure or your own sketch).](Questions.md#6a.%20Assign%20appropriate%20frames%20to%20the%20given%20robot%20(on%20the%20given%20figure%20or%20your%20own%20sketch).)
 
 ![IK Frames Diagram (Pose)](IK%20Frames%20Diagram%20(Pose).png)
 
-### B) MatLab Model
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+### 6b. MatLab Model
 %%[[2025-03-14]] @ 15:25%%
 
 > [!question] 
@@ -71,17 +72,23 @@ end_effector.Joint = joint_ee;
 addBody(robotArm, end_effector, 'Wrist3');
 ```
 
-![robotArm_home_pose](robotArm_home_pose.jpg)
-### C) Pose
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+###### Home Position
+![robotArm_home_pose|300](robotArm_home_pose.jpg)
+
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+### 6c. Pose
 
 > [!Question]
 > ![6c. Assign a random configuration (angles) to this robot, using MATLAB, show your code (copy and paste here) and result (save as figure the insert here, not screen capture).](Questions.md#6c.%20Assign%20a%20random%20configuration%20(angles)%20to%20this%20robot,%20using%20MATLAB,%20show%20your%20code%20(copy%20and%20paste%20here)%20and%20result%20(save%20as%20figure%20the%20insert%20here,%20not%20screen%20capture).)
 
 ```MATLAB
 randomPose = randomConfiguration(robotArm);
-
 figure
 show (robotArm, randomPose);
 ```
 
-![robotArm_random_pose](robotArm_random_pose.jpg)
+###### Random Pose
+![robotArm_random_pose|500](robotArm_random_pose.jpg)
