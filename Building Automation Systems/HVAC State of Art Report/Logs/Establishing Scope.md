@@ -16,3 +16,10 @@ The UK grid, like many large scale grids, is struggling to take advantage of sur
 ### Customer Export or Import Limitation Schemes (CLS)
 
 Small Generation Installation (SGI)
+
+This technology is likely out of scope, It is grid operated and operates at the junction of the building grid and the local substation so should be considered outside of the building management system.
+
+### Demand Side Manager 
+%%[[2025-03-29]] @ 18:08%%
+
+I am looking for hardware/software technologies that allow buildings to adjust their energy usage profile (especially for HVAC) based on gird generation. 

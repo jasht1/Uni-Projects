@@ -14,5 +14,17 @@ weight: 50
 
 # Plan
 
-
+- [x] Select Technologies ✅ 2025-03-30
+	- [x] Select Heat Source Technology ✅ 2025-03-19
+	- [x] Select Communication / Control Technology ✅ 2025-03-29
+- [ ] Research 
+	- [x] Preliminary research MCHP ✅ 2025-03-27
+		- [Magnetochaloric effect MCP](Magnetochaloric%20effect%20MCP.md)
+	- [x] Preliminary research IDSR ✅ 2025-03-31
+		- [energy smart appliance (ESA)](energy%20smart%20appliance%20(ESA).md)
+		- [customer energy manager (CEM)](customer%20energy%20manager%20(CEM).md)
+		- [DSR service provider (DSRSP)](DSR%20service%20provider%20(DSRSP).md)
 - [ ] [Report](Projects/Uni%20Projects/Building%20Automation%20Systems/HVAC%20State%20of%20Art%20Report/Report.md)
+	- [x] [Report](Projects/Uni%20Projects/Building%20Automation%20Systems/HVAC%20State%20of%20Art%20Report/Report.md) Plan ✅ 2025-03-31
+		- [x] Plan MHCP section ✅ 2025-03-27
+		- [x] Plan IDSM section ✅ 2025-03-31
