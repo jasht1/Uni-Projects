@@ -3,7 +3,7 @@ tags:
   - "#Assessment/Coursework"
 title: IIR Filter Design Assignment and Image processing
 module: EGR3031 Signal processing and System Identification
-due: 2025-04-25T16:00:00
+due: 2025-04-24T16:00:00
 weight: 25
 ---
 
