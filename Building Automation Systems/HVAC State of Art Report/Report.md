@@ -25,7 +25,7 @@
 
 %% #### Magnetocaloric effect %%
 
-![Magnetochaloric effect (MCP)](Magnetochaloric%20effect%20(MCP).md)
+%% ![Magnetochaloric effect (MCP)](Magnetochaloric%20effect%20(MCP).md) %%
 
 %% #### Magnetocaloric Chillers / Heat pumps %%
 
@@ -71,7 +71,7 @@
 %% Duck curve %%
 %% Peak shaving / Load Shifting %%
 
-### ESAs and CEMs
+### IDSR specification
 
 ### Standards
 
