@@ -68,10 +68,26 @@
 ### Background
 
 %% Grid Balancing %%
+
+%% ![IDSR grid balancing background](IDSR%20grid%20balancing%20background.md) %%
+
 %% Duck curve %%
 %% Peak shaving / Load Shifting %%
 
 ### IDSR specification
+
+
+
+%% 
+![energy smart appliance (ESA)](energy%20smart%20appliance%20(ESA).md) 
+![customer energy manager (CEM)](customer%20energy%20manager%20(CEM).md)
+![DSR service provider (DSRSP)](DSR%20service%20provider%20(DSRSP).md)
+![power profile](power%20profile.md)
+![IDSR interfaces](IDSR%20interfaces.md)
+%%
+
+
+
 
 ### Standards
 
