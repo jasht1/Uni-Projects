@@ -1,0 +1,2 @@
+
+One of the key advantages of MCHPs is their potential for huge temperature spans with the potential for providing ultra low temperature district cooling and cryogenic chilling [@casanovaifernandezF2004-MagnetocaloricEffectGd5SixGe1x4], however this report will focus on "room temperature" MCHPs. MCHPs with temperature spans of 10 - 20 K around ~ 290 K and >1000 W capacity configured for providing domestic or commercial space heating. 

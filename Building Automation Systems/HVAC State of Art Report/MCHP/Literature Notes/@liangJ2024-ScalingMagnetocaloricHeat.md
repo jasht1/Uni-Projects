@@ -2,7 +2,7 @@
 category: "literaturenote"
 title: "Scaling up magnetocaloric heat pump for building decarbonization initiatives"
 citekey: "liangJ2024-ScalingMagnetocaloricHeat"
-imported: 2025-03-27 03:28
+imported: 2025-04-02 05:21
 ---
 
 # Scaling up magnetocaloric heat pump for building decarbonization initiatives
@@ -34,6 +34,10 @@ imported: 2025-03-27 03:28
 > [!abstract]- Abstract
 > Building decarbonization necessitates renewable heating and cooling solutions such as heat pumps. Magnetocaloric heat pumps (MCHP) offer environmental and efficiency advantages but face challenges when scaling up from existing active magnetic regenerator configurations. This study highlights uneven flow resistance, porosity, and refrigerant magnetocaloric effects as key obstacles to MCHP performance in parallel multi-bed setups. To address these effects, two control strategies for the fluid flow control system were investigated: measurement feedback control and model predictive control. Results show a 36.9 % heating power improvement with measurement feedback control, though with extended control convergence times. Model predictive control achieved approximately seven times faster control convergence compared to the measurement feedback control strategy, despite exhibiting minor overshooting. Utilization factor-based model predictive control increased the heating capacity by 1.6 %–30.9 % and the COP by 1.2 %–10.7 % in scenarios with uneven flow resistance and porosity, offering computational efficiency but assuming even magnetocaloric effects between regenerators. This assumption can be addressed by outlet temperature-based model predictive control, albeit at a higher computational cost using genetic algorithm. The findings emphasize the importance of advanced control methods to scaling up MCHP in renewable energy building systems.
 
+# Notes
+
+%% begin notes %%%% end notes %%
+
 # Annotations
 
 %% begin annotations %%
@@ -63,10 +67,8 @@ imported: 2025-03-27 03:28
 > "Fluid flow profiles can be practically adjusted without hardware modifications, given a reliable valving system is in place."
 
 > [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/ZL7UUXJE?page=4&annotation=89H569AA)
-> "The MagQueen, detailed in Ref. [67], was initially engineered to meet the heating demands of a low-energy single-family house in Denmark, offering a superior COP compared to conventional systems."%% end annotations %%
+> "The MagQueen, detailed in Ref. [67], was initially engineered to meet the heating demands of a low-energy single-family house in Denmark, offering a superior COP compared to conventional systems."> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/ZL7UUXJE?page=3&annotation=MC3F2EMK)
+> two primary configurations based on the movement of MCM within a magnetic field: (a) Reciprocating [36], where the AMR reciprocates in and out of the magnetic field using dual magnetic field sources for continuous cooling; (b) Rotary [37], wherein the AMR rotates and traverses a circular path in and out of the field, with fluid flow categorized as axial [38], radial [39], and azimuthal [40]. The rotation of the magnetic field source over static AMR is a prevalent technique in recent prototypes [30].> [!OrangeHighlight] [see in Zotero](zotero://open-pdf/library/items/ZL7UUXJE?page=15&annotation=EDNIMB7X)
+> This study explores the feasibility of adjusting individual fluid flow using a solenoid valving system, resulting in heating capacity improvements of 36.9 % in experiments and 1.2 %–10.7 % in modeling.%% end annotations %%
 
-# Notes
-
-%% begin notes %%%% end notes %%
-
-%% Import Date: 2025-03-27T15:28:28.292+00:00 %%
+%% Import Date: 2025-04-02T05:21:56.113+01:00 %%
