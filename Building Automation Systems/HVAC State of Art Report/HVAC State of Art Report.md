@@ -47,7 +47,7 @@ weight: 50
 		- [x] Plan IDSM section ✅ 2025-03-31
 	- MCHP
 		- Theory
-			- [ ] [Magnetochaloric effect MCP](Magnetochaloric%20effect%20MCP.md)
+			- [ ] [Magnetochaloric effect (MCP)](Magnetochaloric%20effect%20(MCP).md)
 			- [ ] MCHP Cycle
 		- Performance
 			- [ ] Theoretical Performance
