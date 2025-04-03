@@ -1,20 +1,15 @@
 
-MCHP domestic & commercial heating solutions are a nascent technology but it is a promising alternative to vapour compression (VC) with several studies indicating potential for higher COP and higher temperature lift / span than existing VC based heat pump technologies. [@qianS2016-Not-in-kindCoolingTechnologies; @johraH2024-PerformanceOverviewCaloricHeatPumps; @schipperJ2023-EfficiencyCaloricMaterials] Figure of merit (FOM) is a metric used to compare caloric technologies as it is analogous to the isentropic efficiency of the compressor in traditional heat pumps or refrigerators. [@schipperJ2023-EfficiencyCaloricMaterials] 
+MCHP domestic & commercial heating solutions are a nascent technology but it is a promising alternative to vapour compression (VC) with several studies indicating potential for higher COP and higher temperature lift / span than existing VC based heat pump technologies. [@qianS2016-Not-in-kindCoolingTechnologies; @johraH2024-PerformanceOverviewCaloricHeatPumps; @schipperJ2023-EfficiencyCaloricMaterials] Figures of merit (FOM) are metrics used to compare caloric technologies analogous to the isentropic efficiency of the compressor in traditional heat pumps or refrigerators. [@schipperJ2023-EfficiencyCaloricMaterials; @hessT2020-ThermalHysteresisIts]
 
-Setting aside the parasitic losses all heat pumps share i.e. motors, pumps, heat exchangers, radiative losses etc.
+Setting aside the parasitic losses all heat pumps share i.e. motors, pumps, heat exchangers, radiative losses etc. Considering coefficient of performance COP of the ideal process:
 
 The key loss to consider in a vapour compression heat pump (VCHP) is superheating during compression due to friction in the refrigerant itself.
 
-In contrast MCHPs do work via the [Magnetochaloric effect (MCP)](Magnetochaloric%20effect%20(MCP).md) with loss due to hysteresis of the [magnetocaloric material (MCM)](magnetocaloric%20material%20(MCM).md) 
+In contrast MCHPs do work via the [Magnetochaloric effect (MCP)](Magnetochaloric%20effect%20(MCP).md) with loss due to hysteresis in the [magnetocaloric material (MCM)](magnetocaloric%20material%20(MCM).md) which releases dissipative heat. [@hessT2020-ThermalHysteresisIts]
 
-$$\eta_{c}= h_{2s} $$
+In both cases irreversible work is being done that reduces COP of the cycle. In a compressor some of this work can be captured by an internal heat exchanger (IHX) but even so the theoretical exergetic efficiency $\left(\frac{\text{system COP}}{\text{Carnot COP}}\right)$ limit of current VCHPs is far below that of caloric methods. [@qianS2016-Not-in-kindCoolingTechnologies; @schipperJ2023-EfficiencyCaloricMaterials] There are already prototype MCHPs capable of 60% of the COP of Carnot [@chaudronJB2018-PerformanceMeasurementsLargescale] and studies indicating that there are still significant improvements in power and temperature span to be unlocked with optimisations in design and control. [@schipperJ2023-EfficiencyCaloricMaterials; @slaughterJ2025-ScalableCompactMagnetocaloric; @liangJ2024-ScalingMagnetocaloricHeat]
 
-
-
-FOM is a measure of __ from which COP can then be derived by accounting for the remaining parasitic losses
-
-Studies have further indicated that there are still significant improvements in power and temperature span to be unlocked with optimisations in design and control based on the exergetic efficiency of [magnetocaloric material (MCM)](magnetocaloric%20material%20(MCM).md) compared with traditional refrigerants. [@schipperJ2023-EfficiencyCaloricMaterials; @qianS2016-Not-in-kindCoolingTechnologies; @slaughterJ2025-ScalableCompactMagnetocaloric; @hessT2020-ThermalHysteresisIts]
+![](figure-11-x161-y420.png) [@schipperJ2023-EfficiencyCaloricMaterials](@schipperJ2023-EfficiencyCaloricMaterials.md)
 
 ![Perfomance of MCHP Prototypes](figure-16-x53-y438.png) [@johraH2024-PerformanceOverviewCaloricHeatPumps](@johraH2024-PerformanceOverviewCaloricHeatPumps.md)
 
-![](figure-11-x161-y420.png) [@schipperJ2023-EfficiencyCaloricMaterials](@schipperJ2023-EfficiencyCaloricMaterials.md)
