@@ -22,15 +22,15 @@ weight: 50
 	- [x] Preliminary research IDSR ✅ 2025-03-31
 	- MCHP
 		- Thory
-			- [x] [Magnetochaloric effect (MCP)](Magnetochaloric%20effect%20(MCP).md) ✅ 2025-04-01
+			- [x] [magnetochaloric effect (MCP)](magnetochaloric%20effect%20(MCP).md) ✅ 2025-04-01
 			- [ ] MCHP Cycle
 		- [MCHP performance](MCHP%20performance.md)
 			- [x] Theoretical Performance ✅ 2025-04-02
 			- [x] Practical Performance ✅ 2025-04-02
-		- Considerations
-			- [ ] Health & saftey
-			- [ ] Legislative
-			- [ ] Path to market
+		- [MCHP considerations](MCHP%20considerations.md)
+			- [x] Health & saftey ✅ 2025-04-03
+			- [x] Legislative ✅ 2025-04-03
+			- [x] Path to market ✅ 2025-04-03
 	- IDSR
 		- Background
 			- [x] [IDSR grid balancing background](IDSR%20grid%20balancing%20background.md) ✅ 2025-04-01
@@ -47,7 +47,7 @@ weight: 50
 		- [x] Plan IDSM section ✅ 2025-03-31
 	- MCHP
 		- Theory
-			- [ ] [Magnetochaloric effect (MCP)](Magnetochaloric%20effect%20(MCP).md)
+			- [ ] [magnetochaloric effect (MCP)](magnetochaloric%20effect%20(MCP).md)
 			- [ ] MCHP Cycle
 		- Performance
 			- [ ] Theoretical Performance

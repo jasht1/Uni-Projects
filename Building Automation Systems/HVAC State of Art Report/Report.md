@@ -25,7 +25,7 @@
 
 %% #### Magnetocaloric effect %%
 
-%% ![Magnetochaloric effect (MCP)](Magnetochaloric%20effect%20(MCP).md) %%
+%% ![magnetochaloric effect (MCP)](magnetochaloric%20effect%20(MCP).md) %%
 
 %% #### Magnetocaloric Chillers / Heat pumps %%
 
