@@ -2,7 +2,7 @@
 category: "literaturenote"
 title: "Performance overview of caloric heat pumps: magnetocaloric, elastocaloric, electrocaloric and barocaloric systems: Update 2024"
 citekey: "johraH2024-PerformanceOverviewCaloricHeatPumps"
-imported: 2025-04-02 06:00
+imported: 2025-04-03 02:10
 ---
 
 # Performance overview of caloric heat pumps: magnetocaloric, elastocaloric, electrocaloric and barocaloric systems: Update 2024
@@ -51,6 +51,20 @@ imported: 2025-04-02 06:00
 > [!Quote] [see in Zotero](zotero://open-pdf/library/items/ZNK7XEH4?page=16&annotation=UDYYC5QL)
 > ![figure-16-x53-y438.png](attachments/johraH2024-PerformanceOverviewCaloricHeatPumps/figure-16-x53-y438.png)
 > > [!note]
-> > Performance overview of different magnetocaloric heat pump prototypes: COP as a function of temperature span for magnetocaloric and conventional vapour-compression heat pumps (measurement data only) [4].%% end annotations %%
+> > Performance overview of different magnetocaloric heat pump prototypes: COP as a function of temperature span for magnetocaloric and conventional vapour-compression heat pumps (measurement data only) [4].> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/ZNK7XEH4?page=14&annotation=AHLAMRY5)
+> Simulation results suggest that caloric systems could also be employed for higher temperature lift  (necessary for domestic hot water production and high-temperature heating systems) with very good COPs.
 
-%% Import Date: 2025-04-02T18:00:38.213+01:00 %%
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/ZNK7XEH4?page=18&annotation=86B3C24P)
+> simulation studies  indicate a possibility for a significant increase in the heating/cooling power output and temperature span of  all caloric systems.
+
+> [!Quote] [see in Zotero](zotero://open-pdf/library/items/ZNK7XEH4?page=18&annotation=QAD294QH)
+> ![figure-18-x52-y282.png](attachments/johraH2024-PerformanceOverviewCaloricHeatPumps/figure-18-x52-y282.png)
+> > [!note]
+> > Performance overview of different caloric heat pump systems: heating/cooling power output as a function of temperature span for magnetocaloric, elastocaloric, electrocaloric, and barocaloric heat pumps (simulation and measurement data).
+
+> [!Quote] [see in Zotero](zotero://open-pdf/library/items/ZNK7XEH4?page=20&annotation=285LUBNV)
+> ![figure-20-x52-y277.png](attachments/johraH2024-PerformanceOverviewCaloricHeatPumps/figure-20-x52-y277.png)
+> > [!note]
+> > Performance overview of different caloric heat pump systems: COP as a function of heating/cooling power output for magnetocaloric, elastocaloric, electrocaloric, and barocaloric heat pumps (simulation and measurement data).%% end annotations %%
+
+%% Import Date: 2025-04-03T02:12:43.677+01:00 %%

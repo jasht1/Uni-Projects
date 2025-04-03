@@ -24,9 +24,9 @@ weight: 50
 		- Thory
 			- [x] [Magnetochaloric effect (MCP)](Magnetochaloric%20effect%20(MCP).md) ✅ 2025-04-01
 			- [ ] MCHP Cycle
-		- Performance
-			- [ ] Theoretical Performance
-			- [ ] Practical Performance
+		- [MCHP performance](MCHP%20performance.md)
+			- [x] Theoretical Performance ✅ 2025-04-02
+			- [x] Practical Performance ✅ 2025-04-02
 		- Considerations
 			- [ ] Health & saftey
 			- [ ] Legislative
@@ -41,7 +41,7 @@ weight: 50
 		- Performance
 			- [ ] Theoretical
 			- [ ] Practical
-- [ ] [Report](Projects/Uni%20Projects/Building%20Automation%20Systems/HVAC%20State%20of%20Art%20Report/Report.md)
+- [x] [Report](Projects/Uni%20Projects/Building%20Automation%20Systems/HVAC%20State%20of%20Art%20Report/Report.md)
 	- [x] [Report](Projects/Uni%20Projects/Building%20Automation%20Systems/HVAC%20State%20of%20Art%20Report/Report.md) Plan ✅ 2025-03-31
 		- [x] Plan MHCP section ✅ 2025-03-27
 		- [x] Plan IDSM section ✅ 2025-03-31

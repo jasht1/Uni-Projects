@@ -2,7 +2,7 @@
 category: "literaturenote"
 title: "Magnetocaloric Effect In Gd5(SixGe1-x)4 Alloys"
 citekey: "casanovaifernandezF2004-MagnetocaloricEffectGd5SixGe1x4"
-imported: 2025-04-02 05:21
+imported: 2025-04-03 02:10
 ---
 
 # Magnetocaloric Effect In Gd5(SixGe1-x)4 Alloys
@@ -56,4 +56,4 @@ This effect can be used in place of compression in traditional vapour compressio
 > [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/ZF8XFREV?page=11&annotation=DM9AMN4L)
 > "The fact that |(∂M/∂T )H| is large allows these magnetic materials to have a signi cant MCE. Since it is not the absolute value of the magnetisation, but rather its derivative with respect to temperature the one that must be large to obtain a large MCE,"%% end annotations %%
 
-%% Import Date: 2025-04-02T05:21:56.022+01:00 %%
+%% Import Date: 2025-04-03T02:12:43.395+01:00 %%

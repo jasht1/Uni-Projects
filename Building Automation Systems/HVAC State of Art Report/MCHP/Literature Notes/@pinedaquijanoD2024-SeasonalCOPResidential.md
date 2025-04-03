@@ -2,7 +2,7 @@
 category: "literaturenote"
 title: "Seasonal COP of a residential magnetocaloric heat pump based on MnFePSi"
 citekey: "pinedaquijanoD2024-SeasonalCOPResidential"
-imported: 2025-04-02 05:21
+imported: 2025-04-03 02:10
 ---
 
 # Seasonal COP of a residential magnetocaloric heat pump based on MnFePSi
@@ -33,6 +33,15 @@ imported: 2025-04-02 05:21
 # Notes
 
 %% begin notes %%
+
+> [!note]
+> As is the case with typical VCS heat pumps MCHPs benefit from:  
+> 
+> - Ground source heat exchangers (GSHEX)
+> - Under floor heating (UFH) systems
+> - Intermediate heat exchangers that separate the MCHP HTF from that in external heat exchangers
+>
+> [see in Zotero](zotero://select/library/items/MSKL6T5J)
 
 > [!note]
 > As is the case with typical VCS heat pumps MCHPs benefit from:  
@@ -80,6 +89,7 @@ imported: 2025-04-02 05:21
 > Liang et al. (2022) suggested to control the capacity of an MCHP (designed to be used as a booster heat pump in an ultra-lowtemperature district heating system)
 
 > [!PurpleHighlight] [see in Zotero](zotero://open-pdf/library/items/WXB5L4ZH?page=42&annotation=M2RXDNG8)
-> EN-14825:2022%% end annotations %%
+> EN-14825:2022> [!OrangeHighlight] [see in Zotero](zotero://open-pdf/library/items/WXB5L4ZH?page=43&annotation=Z4Y4I8J4)
+> the fact that the AMR works more efficiently at part-load conditions can be exploited to increase the SCOP of an MCHP.%% end annotations %%
 
-%% Import Date: 2025-04-02T05:21:56.174+01:00 %%
+%% Import Date: 2025-04-03T02:12:43.724+01:00 %%

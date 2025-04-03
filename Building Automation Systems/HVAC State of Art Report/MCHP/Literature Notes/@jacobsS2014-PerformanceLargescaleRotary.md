@@ -2,7 +2,7 @@
 category: "literaturenote"
 title: "The performance of a large-scale rotary magnetic refrigerator"
 citekey: "jacobsS2014-PerformanceLargescaleRotary"
-imported: 2025-04-02 05:21
+imported: 2025-04-03 02:10
 ---
 
 # The performance of a large-scale rotary magnetic refrigerator
@@ -50,4 +50,4 @@ imported: 2025-04-02 05:21
 > > [!note]
 > > Fig. 9 e The electrical COP of the Astronautics system at flow rates 15.5, 19.4, and 21.2 L minL1.%% end annotations %%
 
-%% Import Date: 2025-04-02T05:21:56.071+01:00 %%
+%% Import Date: 2025-04-03T02:12:43.632+01:00 %%

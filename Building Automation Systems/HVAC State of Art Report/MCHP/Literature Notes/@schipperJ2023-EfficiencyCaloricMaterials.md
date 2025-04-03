@@ -2,7 +2,7 @@
 category: "literaturenote"
 title: "On the efficiency of caloric materials in direct comparison with exergetic grades of compressors"
 citekey: "schipperJ2023-EfficiencyCaloricMaterials"
-imported: 2025-04-02 06:51
+imported: 2025-04-03 02:10
 ---
 
 # On the efficiency of caloric materials in direct comparison with exergetic grades of compressors
@@ -60,6 +60,60 @@ imported: 2025-04-02 06:51
 > In this comparison, loss types that are shared between the two technologies are ignored. The remaining efficiency reducers are hysteresis losses described by the FOM for caloric systems and losses during compression described by ηc for vapor compression systems.
 
 > [!OrangeHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=11&annotation=65S6VHJD)
-> Magneto- and barocaloric materials are already at a point where systems are possible, that would even surpass a vapor compression system with a 100% efficient compressor. Nevertheless, up to now no system has been published where the efficiency exceeds 60% of Carnot. Thus, further effort in the development of caloric systems is required to get closer to the potential efficiency limit of caloric materials.%% end annotations %%
+> Magneto- and barocaloric materials are already at a point where systems are possible, that would even surpass a vapor compression system with a 100% efficient compressor. Nevertheless, up to now no system has been published where the efficiency exceeds 60% of Carnot. Thus, further effort in the development of caloric systems is required to get closer to the potential efficiency limit of caloric materials.> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=1&annotation=ESXIFS2G)
+> Vapor compression systems, which are the most common type of heat pumps, achieve exergetic efficiencies of up to 50% [4, 5], indicating that there is still room for improvement.
 
-%% Import Date: 2025-04-02T18:51:56.174+01:00 %%
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=1&annotation=TQTMNK5L)
+> In some of these materials this effect is highly reversible, suggesting that it should be possible to build more efficient heat pumps
+
+> [!PurpleHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=1&annotation=QI9KQBNS)
+> Chaudron et al [6]
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=GPHMTY76)
+> For caloric systems, this maximum efficiency potential is determined by properties of the caloric materials.
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=LPCGU5XE)
+> For vapor compression systems, the corresponding property is the isentropic efficiency of the compressor.
+
+> [!RedHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=PR2R8UHM)
+> It should be noted that several different figures of merits have been defined for caloric materials over the years that focus on different desirable properties.
+
+> [!MagentaHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=Z48YJBXM)
+> The reversible heat defined by Gottschall et al [7] focuses on the size of the caloric effect.
+
+> [!MagentaHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=9ASCYZQD)
+> we will focus on efficiency losses that are specific to each technology and ignore those that are shared between the technologies.
+
+> [!MagentaHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=DLND2CM7)
+> the efficiency of the field generation device (magnetic resp. electric field, force) is not included in the efficiency evaluation.
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=K2BFCYMA)
+> For a caloric system, the efficiency mainly gets diminished due to hysteresis of the phase transition.
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=E65LV632)
+> a small increase in hysteresis from 0.5% to 1% could reduce efficiency in active caloric regeneration systems by as much as 50%.
+
+> [!PurpleHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=RYFTVVBJ)
+> Hess et al [15] provided a theoretical maximum performance of a caloric material in a Carnot-like cycle. Zeggai et al [16] later came to the same conclusion when looking at the efficiency of electrocaloric materials.
+
+> [!PurpleHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=7RIHKRUA)
+> cascaded systems
+
+> [!MagentaHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=2&annotation=I4QVNWF6)
+> The COP is defined as the ratio between heat that is being removed/added ∆Qc, ∆Qh by the system and the required work W that needs to be put into the system during one closed cycle:  COPcooling = ∆Qc  W , COPheating = ∆Qh  W .
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=8&annotation=HXBKRGFU)
+> The idealized vapor compression cycle (figure 7(a)) can be divided into the following steps: 1 → 2 s /2: Starting from the evaporation curve, vapor gets compressed by the compressor. This causes vapor to reach a temperature above the condenser temperature. In an ideal and adiabatic compressor this step is isentropic and the vapor gets compressed to the point 2 s. Real compressors exhibit losses due to friction, causing the entropy to increase slightly during this step so that point 2 is reached at the end of this step 2 s/2 → 2′: The overheated gas gets cooled down isobarically by the condenser until it reaches the evaporation curve. 2′ → 3: After reaching the wet steam area the fluid gets liquified. This process is isothermal and isobaric. 3 → 4: The liquid working fluid gets expanded by throttling. This process step is in good approximation isenthalpically. 4 → 1: Heat intake to the liquid/vapor and evaporates it. Like 2′-3 this process is isobaric an isothermal as well. The irreversibility of a real compressor can be considered by the isentropic efficiency ηc of the compressor [88]. This is in accordance with international standards for performance measurements for refrigeration compressors, such as DIN EN 12 900 [89] or AHRI 540 [90], respectively. Assuming an adiabatic compressor for the considerations done here, the isentropic efficiency can be defined by:  ηc = h2s − h1  h2 − h1
+
+> [!Quote] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=9&annotation=QT6ZXDT8)
+> ![figure-10-x352-y612.png](attachments/schipperJ2023-EfficiencyCaloricMaterials/figure-10-x352-y612.png)
+> > [!note]
+> > Comparison between the basic vapor compression cycle without an IHX and a modified cycle with a IHX.
+
+> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=10&annotation=4N8LPU8M)
+> IHX can further improve the efficiency, but the effect is much smaller compared the effect regeneration has in a caloric system.
+
+> [!PurpleHighlight] [see in Zotero](zotero://open-pdf/library/items/AJ7BZKJJ?page=10&annotation=W8RHTHLK)
+> The highest experimental efficiency of a caloric system is 60% published by Chaudron et al [6].%% end annotations %%
+
+%% Import Date: 2025-04-03T02:12:44.031+01:00 %%

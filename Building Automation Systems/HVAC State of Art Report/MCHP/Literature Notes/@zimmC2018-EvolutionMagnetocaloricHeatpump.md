@@ -2,7 +2,7 @@
 category: "literaturenote"
 title: "The evolution of magnetocaloric heat-pump devices"
 citekey: "zimmC2018-EvolutionMagnetocaloricHeatpump"
-imported: 2025-04-02 05:21
+imported: 2025-04-03 02:10
 ---
 
 # The evolution of magnetocaloric heat-pump devices
@@ -53,4 +53,4 @@ imported: 2025-04-02 05:21
 > [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/93MKUWGL?page=276&annotation=L3ENGAFE)
 > the bed may be layered, with each layer containing an MCM composition with properties optimized for the operating temperature of that layer.%% end annotations %%
 
-%% Import Date: 2025-04-02T05:21:56.231+01:00 %%
+%% Import Date: 2025-04-03T02:12:44.281+01:00 %%

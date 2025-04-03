@@ -2,7 +2,7 @@
 category: "literaturenote"
 title: "Magnetic heat pumps: An overview of design principles and challenges"
 citekey: "trevizoliPV2016-MagneticHeatPumps"
-imported: 2025-04-02 05:21
+imported: 2025-04-03 02:10
 ---
 
 # Magnetic heat pumps: An overview of design principles and challenges
@@ -71,4 +71,4 @@ imported: 2025-04-02 05:21
 > [!PurpleHighlight] [see in Zotero](zotero://open-pdf/library/items/Y79PRGPH?page=514&annotation=DLLAW4IG)
 > Entropy Generation Minization (EGM) (Bejan 1995; Li et al. 2008; Numazawa et al. 2012; Trevizoli 2015a; Trevizoli and Barbosa 2015b).%% end annotations %%
 
-%% Import Date: 2025-04-02T05:21:56.189+01:00 %%
+%% Import Date: 2025-04-03T02:12:44.269+01:00 %%

@@ -2,7 +2,7 @@
 category: "literaturenote"
 title: "Scaling up magnetocaloric heat pump for building decarbonization initiatives"
 citekey: "liangJ2024-ScalingMagnetocaloricHeat"
-imported: 2025-04-02 05:21
+imported: 2025-04-03 02:10
 ---
 
 # Scaling up magnetocaloric heat pump for building decarbonization initiatives
@@ -69,6 +69,13 @@ imported: 2025-04-02 05:21
 > [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/ZL7UUXJE?page=4&annotation=89H569AA)
 > "The MagQueen, detailed in Ref. [67], was initially engineered to meet the heating demands of a low-energy single-family house in Denmark, offering a superior COP compared to conventional systems."> [!YellowHighlight] [see in Zotero](zotero://open-pdf/library/items/ZL7UUXJE?page=3&annotation=MC3F2EMK)
 > two primary configurations based on the movement of MCM within a magnetic field: (a) Reciprocating [36], where the AMR reciprocates in and out of the magnetic field using dual magnetic field sources for continuous cooling; (b) Rotary [37], wherein the AMR rotates and traverses a circular path in and out of the field, with fluid flow categorized as axial [38], radial [39], and azimuthal [40]. The rotation of the magnetic field source over static AMR is a prevalent technique in recent prototypes [30].> [!OrangeHighlight] [see in Zotero](zotero://open-pdf/library/items/ZL7UUXJE?page=15&annotation=EDNIMB7X)
-> This study explores the feasibility of adjusting individual fluid flow using a solenoid valving system, resulting in heating capacity improvements of 36.9 % in experiments and 1.2 %–10.7 % in modeling.%% end annotations %%
+> This study explores the feasibility of adjusting individual fluid flow using a solenoid valving system, resulting in heating capacity improvements of 36.9 % in experiments and 1.2 %–10.7 % in modeling.> [!OrangeHighlight] [see in Zotero](zotero://open-pdf/library/items/ZL7UUXJE?page=16&annotation=TMW526DS)
+> Measurement Feedback Control enhances heating capacity by 36.9 % but requires a lengthy control convergence time of at least 7600 s.
 
-%% Import Date: 2025-04-02T05:21:56.113+01:00 %%
+> [!OrangeHighlight] [see in Zotero](zotero://open-pdf/library/items/ZL7UUXJE?page=16&annotation=55J6CIQU)
+> Utilization Factor-Based Model Predictive Control increases heating capacity by 1.6 %–30.9 % and COP by 1.2 %–10.7 % in scenarios characterized by uneven flow resistance and porosity
+
+> [!OrangeHighlight] [see in Zotero](zotero://open-pdf/library/items/ZL7UUXJE?page=16&annotation=DKNTQ9QJ)
+> Outlet Temperature-Based Model Predictive Control further improves COP by ~3.5 %%% end annotations %%
+
+%% Import Date: 2025-04-03T02:12:43.703+01:00 %%
