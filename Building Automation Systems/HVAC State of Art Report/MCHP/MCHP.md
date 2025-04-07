@@ -9,3 +9,5 @@ A magnetocaloric material (MCM) is
 ![MCHP design](MCHP%20design.md)
 
 ![MCHP performance](MCHP%20performance.md)
+
+![MCHP considerations](MCHP%20considerations.md)

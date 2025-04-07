@@ -21,7 +21,7 @@ weight: 50
 	- [x] Preliminary research MCHP ✅ 2025-03-27
 	- [x] Preliminary research IDSR ✅ 2025-03-31
 	- MCHP
-		- Thory
+		- Theory
 			- [x] [magnetochaloric effect (MCP)](magnetochaloric%20effect%20(MCP).md) ✅ 2025-04-01
 			- [ ] MCHP Cycle
 		- [MCHP performance](MCHP%20performance.md)
@@ -38,7 +38,7 @@ weight: 50
 			- [x] [energy smart appliance (ESA)](energy%20smart%20appliance%20(ESA).md)
 			- [x] [customer energy manager (CEM)](customer%20energy%20manager%20(CEM).md)
 			- [x] [DSR service provider (DSRSP)](DSR%20service%20provider%20(DSRSP).md)
-		- Performance
+		- [ ] Performance
 			- [ ] Theoretical
 			- [ ] Practical
 - [x] [Report](Projects/Uni%20Projects/Building%20Automation%20Systems/HVAC%20State%20of%20Art%20Report/Report.md)
