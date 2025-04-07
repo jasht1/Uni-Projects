@@ -33,7 +33,8 @@ weight: 50
 			- [x] Path to market ✅ 2025-04-03
 	- IDSR
 		- Background
-			- [x] [IDSR grid balancing background](IDSR%20grid%20balancing%20background.md) ✅ 2025-04-01
+			- [x] [grid balancing background](grid%20balancing%20background.md) ✅ 2025-04-01
+			- [x] [UK IDSR background](UK%20IDSR%20background.md) ✅ 2025-04-07
 		- Specification
 			- [x] [energy smart appliance (ESA)](energy%20smart%20appliance%20(ESA).md)
 			- [x] [customer energy manager (CEM)](customer%20energy%20manager%20(CEM).md)

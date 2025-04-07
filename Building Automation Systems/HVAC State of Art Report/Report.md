@@ -39,9 +39,12 @@
 
 %% #### Efficiency %%
 
-%% Theoretical efficiency cooling and heating modes %%
+%% 
+Theoretical efficiency cooling and heating modes
+Practical / real world efficiency 
+%%
 
-%% Practical / real world efficiency %%
+%% ![MCHP performance](MCHP%20performance.md) %%
 
 %% #### Refrigerants vs Magnetochaloric materials %%
 
@@ -59,6 +62,8 @@
 
 %% Path to market %%
 
+%% ![MCHP considerations](MCHP%20considerations.md) %%
+
 ### Conclusion
 
 %% What is the impact potential of MCHP %%
@@ -69,14 +74,14 @@
 
 %% Grid Balancing %%
 
-%% ![IDSR grid balancing background](IDSR%20grid%20balancing%20background.md) %%
+%% ![grid balancing background](grid%20balancing%20background.md) %%
 
 %% Duck curve %%
 %% Peak shaving / Load Shifting %%
 
 ### IDSR specification
 
-
+%% ![UK IDSR background](UK%20IDSR%20background.md) %%
 
 %% 
 ![energy smart appliance (ESA)](energy%20smart%20appliance%20(ESA).md) 
@@ -86,17 +91,13 @@
 ![IDSR interfaces](IDSR%20interfaces.md)
 %%
 
-
-
-
-### Standards
-
 %% Overview %%
 
 %% Security %%
 
-%%  %%
 ### Performance
+
+### Considerations
 
 ### Conclusion
 
