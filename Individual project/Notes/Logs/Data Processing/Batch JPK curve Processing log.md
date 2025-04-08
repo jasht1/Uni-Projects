@@ -54,3 +54,15 @@ Below is a list of curves / cells that exhibit this split behaviour:
 | force-save-2011.03.22-19.38.36.jpk-force |
 | force-save-2011.03.22-19.40.00.jpk-force |
 | force-save-2011.03.22-19.43.38.jpk-force |
+|                                          |
+| force-save-2011.03.22-19.51.24.jpk-force |
+| force-save-2011.03.22-19.52.48.jpk-force |
+| force-save-2011.03.22-19.54.12.jpk-force |
+| force-save-2011.03.22-19.55.36.jpk-force |
+| force-save-2011.03.22-19.57.00.jpk-force |
+|                                          |
+| force-save-2011.03.22-19.59.46.jpk-force |
+| force-save-2011.03.22-20.01.10.jpk-force |
+| force-save-2011.03.22-20.02.34.jpk-force |
+| force-save-2011.03.22-20.03.58.jpk-force |
+| force-save-2011.03.22-20.05.22.jpk-force |
