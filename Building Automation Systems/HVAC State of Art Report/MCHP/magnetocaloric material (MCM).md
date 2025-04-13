@@ -1,2 +1,2 @@
 
-A material that exhibits the [magnetochaloric effect (MCP)](magnetochaloric%20effect%20(MCP).md). 
+A material that exhibits the [magnetocaloric effect (MCP)](magnetocaloric%20effect%20(MCP).md). 

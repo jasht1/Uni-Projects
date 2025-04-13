@@ -1,0 +1,2 @@
+
+The cyber security for energy smart appliances are regulated by EN 303 645 which is the baseline applicable to all IoT devices. [@etsi2025-303645]. Given IDSR involves remote control authority over safety critical infrastructure and by proxy the stability of the electricity grid, load controllers managing over 300 MW are subject to Network and Information Systems (NIS) regulations [25] and held to account under the Cyber Assessment Framework (CAF) [26].

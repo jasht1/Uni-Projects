@@ -25,9 +25,11 @@
 
 %% #### Magnetocaloric effect %%
 
-%% ![magnetochaloric effect (MCP)](magnetochaloric%20effect%20(MCP).md) %%
+%% ![magnetocaloric effect (MCP)](magnetocaloric%20effect%20(MCP).md) %%
 
 %% #### Magnetocaloric Chillers / Heat pumps %%
+
+%% ![MCHP design](MCHP%20design.md) %%
 
 %% magnetocaloric chiller t-s cycle diagram %%
 
@@ -83,12 +85,16 @@ Practical / real world efficiency
 
 %% ![UK IDSR background](UK%20IDSR%20background.md) %%
 
+%% IDSR system structure diagram %%
+
+%% Outline of basic operation %%
+
 %% 
-![energy smart appliance (ESA)](energy%20smart%20appliance%20(ESA).md) 
-![customer energy manager (CEM)](customer%20energy%20manager%20(CEM).md)
-![DSR service provider (DSRSP)](DSR%20service%20provider%20(DSRSP).md)
-![power profile](power%20profile.md)
-![IDSR interfaces](IDSR%20interfaces.md)
+[energy smart appliance (ESA)](energy%20smart%20appliance%20(ESA).md) 
+[customer energy manager (CEM)](customer%20energy%20manager%20(CEM).md)
+[DSR service provider (DSRSP)](DSR%20service%20provider%20(DSRSP).md)
+[power profile](power%20profile.md)
+[IDSR interfaces](IDSR%20interfaces.md)
 %%
 
 %% Overview %%
@@ -97,7 +103,9 @@ Practical / real world efficiency
 
 ### Performance
 
+%% ![DSR Performance](DSR%20Performance.md) %%
 ### Considerations
 
+%% ![IDSR Considerations](IDSR%20Considerations.md) %%
 ### Conclusion
 

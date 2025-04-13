@@ -5,7 +5,7 @@ Setting aside the parasitic losses all heat pumps share i.e. motors, pumps, heat
 
 The key loss to consider in a vapour compression heat pump (VCHP) is superheating during compression due to friction in the refrigerant itself.
 
-In contrast MCHPs do work via the [magnetochaloric effect (MCP)](magnetochaloric%20effect%20(MCP).md) with loss due to hysteresis in the [magnetocaloric material (MCM)](magnetocaloric%20material%20(MCM).md) which releases dissipative heat. [@hessT2020-ThermalHysteresisIts]
+In contrast MCHPs do work via the [magnetocaloric effect (MCP)](magnetocaloric%20effect%20(MCP).md) with loss due to hysteresis in the [magnetocaloric material (MCM)](magnetocaloric%20material%20(MCM).md) which releases dissipative heat. [@hessT2020-ThermalHysteresisIts]
 
 In both cases irreversible work is being done that reduces COP of the cycle. In a compressor some of this work can be captured by an internal heat exchanger (IHX) but even so the theoretical exergetic efficiency $\left(\frac{\text{system COP}}{\text{Carnot COP}}\right)$ limit of current VCHPs is far below that of caloric methods. [@qianS2016-Not-in-kindCoolingTechnologies; @schipperJ2023-EfficiencyCaloricMaterials] There are already prototype MCHPs capable of 60% of the COP of Carnot [@chaudronJB2018-PerformanceMeasurementsLargescale] and studies indicating that there are still significant improvements in power and temperature span to be unlocked with optimisations in design and control. [@schipperJ2023-EfficiencyCaloricMaterials; @slaughterJ2025-ScalableCompactMagnetocaloric; @liangJ2024-ScalingMagnetocaloricHeat]
 

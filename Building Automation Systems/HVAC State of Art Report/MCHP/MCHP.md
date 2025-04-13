@@ -1,5 +1,5 @@
 
-![magnetochaloric effect (MCP)](magnetochaloric%20effect%20(MCP).md)
+![magnetocaloric effect (MCP)](magnetocaloric%20effect%20(MCP).md)
 
 A magnetocaloric material (MCM) is
 ![magnetocaloric material (MCM)](magnetocaloric%20material%20(MCM).md)
