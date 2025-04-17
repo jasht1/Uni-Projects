@@ -48,4 +48,4 @@ End of cycle
 ### Logic
 %%[[2025-03-05]] @ 16:09%%
 
-![Stamping Flow Chart](Stamping%20Flow%20Chart.md)
+![Stamping Flow Chart](Projects/Uni%20Projects/Industrial%20Automation/Assessments/Pneumatics%20Coursework/Notes/Logs/attachments/Drawings/Stamping%20Flow%20Chart.md)

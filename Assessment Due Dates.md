@@ -29,5 +29,6 @@ section Individual Project
 ```dataview
 TABLE link(dateformat(due,"yyyy-MM-dd"),dateformat(due,"yyyy-MM-dd")) AS "Due Date", due - date(today) AS "Due In", weight + "%" AS "Weight", substring(module, 8) as Module
 FROM "Projects/Uni Projects" AND #Assessment
+WHERE due > date(today)
 SORT due 
 ```

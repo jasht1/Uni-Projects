@@ -1,0 +1,431 @@
+<?xml version="1.0" standalone="no" ?>
+<!-- Creator: FluidSIM 6.2.5.1 -->
+<!-- Description: 1  Box Folding Task -->
+<svg width="580" height="552" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<polyline points="180 96 183 102 186 96" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="135" y1="96" x2="135" y2="108" stroke="#000" stroke-linecap="round" />
+<line x1="186" y1="87" x2="186" y2="96" stroke="#000" stroke-linecap="round" />
+<line x1="186" y1="72" x2="186" y2="81" stroke="#000" stroke-linecap="round" />
+<line x1="132" y1="96" x2="186" y2="96" stroke="#000" stroke-linecap="round" />
+<line x1="132" y1="72" x2="186" y2="72" stroke="#000" stroke-linecap="round" />
+<line x1="132" y1="72" x2="132" y2="96" stroke="#000" stroke-linecap="round" />
+<rect x="138" y="72" width="12" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="147 76.5 141 76.5 141 91.5 147 91.5 147 88.5 144 88.5 144 79.5 147 79.5 147 76.5" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="147 76.5 141 76.5 141 91.5 147 91.5 147 88.5 144 88.5 144 79.5 147 79.5 147 76.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="150" y="81" width="54" height="6" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="150 96 156 72 162 96 168 72 174 96 180 72 186 96" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="137.8" y="70.2" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">A1</text>
+<line x1="135" y1="169.6" x2="135" y2="156" stroke="#000" stroke-linecap="round" />
+<polyline points="129 180 135 169.61 141 180 129 180" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="93" y1="144" x2="99" y2="132" stroke="#000" stroke-linecap="round" />
+<rect x="87" y="132" width="18" height="12" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="123" y1="144" x2="123" y2="138" stroke="#000" stroke-linecap="round" />
+<line x1="120.2" y1="138" x2="125.8" y2="138" stroke="#000" stroke-linecap="round" />
+<line x1="111" y1="144" x2="111" y2="120" stroke="#000" stroke-linecap="round" />
+<polyline points="109.9 125.6 110.8 120 111.2 120 112.1 125.6 109.9 125.6" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="109.9 125.6 111 120 112.1 125.6 109.9 125.6" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="105" y="120" width="24" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="144" y1="144" x2="147" y2="150" stroke="#000" stroke-linecap="round" />
+<line x1="150" y1="144" x2="147" y2="150" stroke="#000" stroke-linecap="round" />
+<line x1="147" y1="144" x2="147" y2="156" stroke="#FFF" stroke-linecap="round" />
+<line x1="135" y1="144" x2="135" y2="156" stroke="#000" stroke-linecap="round" />
+<line x1="135" y1="120" x2="135" y2="108" stroke="#000" stroke-linecap="round" />
+<line x1="135" y1="120" x2="147" y2="144" stroke="#000" stroke-linecap="round" />
+<polyline points="145.5 138.5 147.2 143.9 146.8 144.1 143.5 139.5 145.5 138.5" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="145.48 138.5 147 144 143.51 139.48 145.48 138.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="135" y1="144" x2="135" y2="138" stroke="#000" stroke-linecap="round" />
+<line x1="132.2" y1="138" x2="137.8" y2="138" stroke="#000" stroke-linecap="round" />
+<rect x="129" y="120" width="24" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="168 138 166.75 144 164.25 132 161.75 144 159.25 132 156.75 144 154.25 132 153 138" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="135 108 135 108" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="135 156 135 156" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="156.1" y="30.3" font-size="13.7" font-family="Segoe UI" text-anchor="middle" fill="#000">Shear Actuator</text>
+<line x1="102" y1="384" x2="84" y2="384" stroke="#000" stroke-linecap="round" />
+<line x1="102" y1="360" x2="84" y2="360" stroke="#000" stroke-linecap="round" />
+<line x1="288" y1="414" x2="288" y2="432" stroke="#000" stroke-linecap="round" />
+<line x1="324" y1="414.1" x2="324" y2="432.1" stroke="#000" stroke-linecap="round" />
+<line x1="360" y1="414" x2="360" y2="432" stroke="#000" stroke-linecap="round" />
+<line x1="396" y1="414.1" x2="396" y2="432.1" stroke="#000" stroke-linecap="round" />
+<line x1="396" y1="312" x2="396" y2="330" stroke="#000" stroke-linecap="round" />
+<line x1="360" y1="312" x2="360" y2="330" stroke="#000" stroke-linecap="round" />
+<line x1="288" y1="312" x2="288" y2="330" stroke="#000" stroke-linecap="round" />
+<line x1="324" y1="312" x2="324" y2="330" stroke="#000" stroke-linecap="round" />
+<line x1="202.5" y1="402.7" x2="205.5" y2="402.7" stroke="#000" stroke-linecap="round" />
+<line x1="202.5" y1="402.7" x2="204" y2="400.5" stroke="#000" stroke-linecap="round" />
+<line x1="201" y1="408" x2="189" y2="408" stroke="#000" stroke-linecap="round" />
+<line x1="201" y1="414" x2="201" y2="402" stroke="#000" stroke-linecap="round" />
+<line x1="210" y1="399" x2="201" y2="403.5" stroke="#000" stroke-linecap="round" />
+<line x1="201" y1="412.5" x2="210" y2="417" stroke="#000" stroke-linecap="round" />
+<line x1="216" y1="420" x2="216" y2="432" stroke="#000" stroke-linecap="round" />
+<line x1="396" y1="402" x2="405" y2="402" stroke="#000" stroke-linecap="round" />
+<line x1="396" y1="330" x2="405" y2="330" stroke="#000" stroke-linecap="round" />
+<text x="238.5" y="411" font-size="8.4" font-family="Arial" fill="#000">K2</text>
+<text x="238.5" y="339" font-size="8.4" font-family="Arial" fill="#000">K1</text>
+<text x="126.2" y="375" font-size="8.4" font-family="Arial" fill="#000">PNOZ</text>
+<text x="201" y="339" font-size="8.4" font-family="Arial" text-anchor="middle" fill="#000">Input</text>
+<text x="135" y="339" font-size="8.4" font-family="Arial" text-anchor="middle" fill="#000">Input</text>
+<text x="135" y="411" font-size="8.4" font-family="Arial" text-anchor="middle" fill="#000">Reset/Start</text>
+<line x1="396" y1="342" x2="396" y2="402" stroke="#000" stroke-linecap="round" />
+<line x1="360" y1="342" x2="360" y2="402" stroke="#000" stroke-linecap="round" />
+<line x1="324" y1="342" x2="324" y2="402" stroke="#000" stroke-linecap="round" />
+<line x1="288" y1="342" x2="288" y2="402" stroke="#000" stroke-linecap="round" />
+<line x1="216" y1="324" x2="216" y2="312" stroke="#000" stroke-linecap="round" />
+<line x1="186" y1="324" x2="186" y2="312" stroke="#000" stroke-linecap="round" />
+<line x1="150" y1="324" x2="150" y2="312" stroke="#000" stroke-linecap="round" />
+<line x1="120" y1="420" x2="120" y2="432" stroke="#000" stroke-linecap="round" />
+<line x1="120" y1="324" x2="120" y2="312" stroke="#000" stroke-linecap="round" />
+<line x1="168" y1="420" x2="168" y2="396" stroke="#000" stroke-linecap="round" />
+<line x1="168" y1="324" x2="168" y2="348" stroke="#000" stroke-linecap="round" />
+<rect x="102" y="396" width="132" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="102" y="324" width="132" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="102" y="324" width="150" height="96" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="284.4" y1="338.4" x2="399.6" y2="338.4" stroke="#000" stroke-linecap="round" />
+<line x1="284.4" y1="333.6" x2="399.6" y2="333.6" stroke="#000" stroke-linecap="round" />
+<circle cx="284.4" cy="336" r="2.4" stroke="#000" fill="#000" stroke-width="0" />
+<circle cx="284.4" cy="336" r="2.4" stroke="#000" fill="none" stroke-linecap="round" />
+<circle cx="320.4" cy="336" r="2.4" stroke="#000" fill="#000" stroke-width="0" />
+<circle cx="320.4" cy="336" r="2.4" stroke="#000" fill="none" stroke-linecap="round" />
+<circle cx="356.4" cy="336" r="2.4" stroke="#000" fill="#000" stroke-width="0" />
+<circle cx="356.4" cy="336" r="2.4" stroke="#000" fill="none" stroke-linecap="round" />
+<circle cx="399.6" cy="336" r="2.4" stroke="#000" fill="#000" stroke-width="0" />
+<circle cx="399.6" cy="336" r="2.4" stroke="#000" fill="none" stroke-linecap="round" />
+<line x1="396" y1="342" x2="405" y2="327" stroke="#000" stroke-linecap="round" />
+<line x1="288" y1="342" x2="279" y2="327" stroke="#000" stroke-linecap="round" />
+<line x1="252" y1="336" x2="282" y2="336" stroke="#000" stroke-linecap="round" stroke-dasharray="3,3" />
+<line x1="360" y1="342" x2="351" y2="327" stroke="#000" stroke-linecap="round" />
+<line x1="324" y1="342" x2="315" y2="327" stroke="#000" stroke-linecap="round" />
+<line x1="396" y1="414" x2="405" y2="399" stroke="#000" stroke-linecap="round" />
+<circle cx="284.4" cy="408" r="2.4" stroke="#000" fill="#000" stroke-width="0" />
+<circle cx="284.4" cy="408" r="2.4" stroke="#000" fill="none" stroke-linecap="round" />
+<line x1="284.4" y1="410.4" x2="399.6" y2="410.4" stroke="#000" stroke-linecap="round" />
+<line x1="284.4" y1="405.6" x2="399.6" y2="405.6" stroke="#000" stroke-linecap="round" />
+<circle cx="320.4" cy="408" r="2.4" stroke="#000" fill="#000" stroke-width="0" />
+<circle cx="320.4" cy="408" r="2.4" stroke="#000" fill="none" stroke-linecap="round" />
+<circle cx="356.4" cy="408" r="2.4" stroke="#000" fill="#000" stroke-width="0" />
+<circle cx="356.4" cy="408" r="2.4" stroke="#000" fill="none" stroke-linecap="round" />
+<circle cx="399.6" cy="408" r="2.4" stroke="#000" fill="#000" stroke-width="0" />
+<circle cx="399.6" cy="408" r="2.4" stroke="#000" fill="none" stroke-linecap="round" />
+<line x1="252" y1="408" x2="282" y2="408" stroke="#000" stroke-linecap="round" stroke-dasharray="3,3" />
+<line x1="360" y1="414" x2="351" y2="399" stroke="#000" stroke-linecap="round" />
+<line x1="324" y1="414" x2="315" y2="399" stroke="#000" stroke-linecap="round" />
+<line x1="288" y1="414" x2="279" y2="399" stroke="#000" stroke-linecap="round" />
+<polyline points="84 360 84 252" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="288 432 288 456 228 456 228 480" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="60" cy="216" r="3" stroke="#000" fill="none" stroke-linecap="round" />
+<line x1="63" y1="216" x2="72" y2="216" stroke="#000" stroke-linecap="round" />
+<text x="20.5" y="219.3" font-size="14.1" font-family="Arial" fill="#000"> 24 V</text>
+<circle cx="60" cy="528" r="3" stroke="#000" fill="none" stroke-linecap="round" />
+<line x1="63" y1="528" x2="72" y2="528" stroke="#000" stroke-linecap="round" />
+<text x="27.1" y="531.6" font-size="14.1" font-family="Arial" fill="#000"> 0 V</text>
+<line x1="228" y1="516" x2="228" y2="504" stroke="#000" stroke-linecap="round" />
+<line x1="228" y1="480" x2="228" y2="492" stroke="#000" stroke-linecap="round" />
+<line x1="240" y1="498" x2="252" y2="498" stroke="#000" stroke-linecap="round" stroke-dasharray="12,3" />
+<line x1="249" y1="498" x2="252" y2="498" stroke="#000" stroke-linecap="round" stroke-dasharray="12,3" />
+<line x1="252" y1="504" x2="252" y2="510" stroke="#000" stroke-linecap="round" />
+<line x1="252" y1="492" x2="252" y2="486" stroke="#000" stroke-linecap="round" />
+<polyline points="249 491.98 255 491.98 249 503.98 255 503.98 249 491.98" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="222" y1="504" x2="234" y2="492" stroke="#000" stroke-linecap="round" />
+<rect x="216" y="492" width="24" height="12" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="228 516 228 528" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="294" y1="516" x2="294" y2="504" stroke="#000" stroke-linecap="round" />
+<line x1="294" y1="480" x2="294" y2="492" stroke="#000" stroke-linecap="round" />
+<line x1="306" y1="498" x2="318" y2="498" stroke="#000" stroke-linecap="round" stroke-dasharray="12,3" />
+<line x1="315" y1="498" x2="318" y2="498" stroke="#000" stroke-linecap="round" stroke-dasharray="12,3" />
+<line x1="318" y1="504" x2="318" y2="510" stroke="#000" stroke-linecap="round" />
+<line x1="318" y1="492" x2="318" y2="486" stroke="#000" stroke-linecap="round" />
+<polyline points="315 491.97 321 491.97 315 503.97 321 503.97 315 491.97" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="288" y1="504" x2="300" y2="492" stroke="#000" stroke-linecap="round" />
+<rect x="282" y="492" width="24" height="12" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="294 480 294 468 324 468 324 432" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="294 516 294 528" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="360" y1="516" x2="360" y2="504" stroke="#000" stroke-linecap="round" />
+<line x1="360" y1="480" x2="360" y2="492" stroke="#000" stroke-linecap="round" />
+<line x1="372" y1="498" x2="384" y2="498" stroke="#000" stroke-linecap="round" stroke-dasharray="12,3" />
+<line x1="381" y1="498" x2="384" y2="498" stroke="#000" stroke-linecap="round" stroke-dasharray="12,3" />
+<line x1="384" y1="504" x2="384" y2="510" stroke="#000" stroke-linecap="round" />
+<line x1="384" y1="492" x2="384" y2="486" stroke="#000" stroke-linecap="round" />
+<polyline points="381 491.97 387 491.97 381 503.97 387 503.97 381 491.97" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="354" y1="504" x2="366" y2="492" stroke="#000" stroke-linecap="round" />
+<rect x="348" y="492" width="24" height="12" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="360 480 360 432" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="360 516 360 528" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="294" cy="528" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="294 528 228 528" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="228" cy="528" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="228 528 120 528" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="207.8" y="503" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">Y1</text>
+<circle cx="84" cy="528" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="84 528 72 528" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="84 528 84 384" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="84" cy="216" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="84 216 72 216" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="360" cy="528" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="360 528 294 528" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="264" y1="264.3" x2="264" y2="276.3" stroke="#000" stroke-linecap="round" />
+<line x1="264" y1="240.3" x2="264" y2="252.3" stroke="#000" stroke-linecap="round" />
+<line x1="264" y1="264.3" x2="255.6" y2="249.9" stroke="#000" stroke-linecap="round" />
+<polyline points="264 240.3 264 216" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="264 276.3 264 294.1 288 294.1 288 312" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="384" y1="264.3" x2="384" y2="276.3" stroke="#000" stroke-linecap="round" />
+<line x1="384" y1="240.3" x2="384" y2="252.3" stroke="#000" stroke-linecap="round" />
+<line x1="384" y1="264.3" x2="375.6" y2="249.9" stroke="#000" stroke-linecap="round" />
+<polyline points="384 240.3 384 216" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="384 276.3 384 294.1 360 294.1 360 312" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="273.8" y="503" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">Y2</text>
+<text x="339.8" y="503" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">Y3</text>
+<circle cx="264" cy="216" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="264 216 84 216" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="247.4" y="263.3" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">K1</text>
+<text x="367.4" y="263.3" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">K3</text>
+<circle cx="324" cy="216" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="324 216 324 240.1" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="324 216 264 216" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="384" cy="216" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="384 216 324 216" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="84" cy="252" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="84 252 60 252 60 264.2" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="84 252 84 216" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="60" y1="288.2" x2="60" y2="300.2" stroke="#000" stroke-linecap="round" />
+<line x1="60" y1="264.2" x2="60" y2="276.2" stroke="#000" stroke-linecap="round" />
+<line x1="43.7" y1="282.2" x2="56.5" y2="282.2" stroke="#000" stroke-linecap="round" stroke-dasharray="3,3" />
+<polyline points="47.49 279.17 43.74 279.17 43.74 285.17 47.49 285.17" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="60" y1="288.2" x2="51.6" y2="273.8" stroke="#000" stroke-linecap="round" />
+<polyline points="60 300.2 60 432.1 120 432.1 120 432" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="51.9" y="267.4" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">E0</text>
+<circle cx="120" cy="270.7" r="6" stroke="#000" fill="none" stroke-linecap="round" />
+<line x1="124.5" y1="270.7" x2="121.5" y2="273.7" stroke="#000" stroke-linecap="round" />
+<line x1="124.5" y1="270.7" x2="121.5" y2="267.7" stroke="#000" stroke-linecap="round" />
+<line x1="115.5" y1="270.7" x2="124.5" y2="270.7" stroke="#000" stroke-linecap="round" />
+<line x1="156" y1="287.9" x2="142.5" y2="287.9" stroke="#000" stroke-linecap="round" />
+<line x1="108" y1="287.9" x2="121.5" y2="287.9" stroke="#000" stroke-linecap="round" />
+<circle cx="140.25" cy="287.95" r="2.25" stroke="#000" fill="none" stroke-linecap="round" />
+<circle cx="123.75" cy="287.95" r="2.25" stroke="#000" fill="none" stroke-linecap="round" />
+<polyline points="132 290.16 132 287.16 127.5 284.91 132 282.66 132 273.66" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 137.196184380345 276.700055352934 A 6 6 0 0 0 126.803814021789 276.70005812059" stroke="#000" fill="none" stroke-linecap="round" />
+<line x1="121.5" y1="290.2" x2="142.5" y2="290.2" stroke="#000" stroke-linecap="round" />
+<polyline points="108 287.9 108 300 120 300 120 312" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="156 287.9 156 300 150 300 150 312" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="192" cy="270.8" r="6" stroke="#000" fill="none" stroke-linecap="round" />
+<line x1="196.5" y1="270.8" x2="193.5" y2="273.8" stroke="#000" stroke-linecap="round" />
+<line x1="196.5" y1="270.8" x2="193.5" y2="267.8" stroke="#000" stroke-linecap="round" />
+<line x1="187.5" y1="270.8" x2="196.5" y2="270.8" stroke="#000" stroke-linecap="round" />
+<line x1="228" y1="288" x2="214.5" y2="288" stroke="#000" stroke-linecap="round" />
+<line x1="180" y1="288" x2="193.5" y2="288" stroke="#000" stroke-linecap="round" />
+<circle cx="212.25" cy="288.05" r="2.25" stroke="#000" fill="none" stroke-linecap="round" />
+<circle cx="195.75" cy="288.05" r="2.25" stroke="#000" fill="none" stroke-linecap="round" />
+<polyline points="204 290.25 204 287.25 199.5 285 204 282.75 204 273.75" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 209.196184380345 276.800055352934 A 6 6 0 0 0 198.803814021789 276.80005812059" stroke="#000" fill="none" stroke-linecap="round" />
+<line x1="193.5" y1="290.3" x2="214.5" y2="290.3" stroke="#000" stroke-linecap="round" />
+<polyline points="180 288 180 300 186 300 186 312" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="228 288 228 300 216 300 216 312" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="134.5" y="268.2" font-size="13.7" font-family="Segoe UI" text-anchor="middle" fill="#000">E1</text>
+<text x="206.5" y="268.2" font-size="13.7" font-family="Segoe UI" text-anchor="middle" fill="#000">E2</text>
+<line x1="324" y1="264.1" x2="324" y2="276.1" stroke="#000" stroke-linecap="round" />
+<line x1="324" y1="240.1" x2="324" y2="252.1" stroke="#000" stroke-linecap="round" />
+<line x1="324" y1="264.1" x2="315.6" y2="249.7" stroke="#000" stroke-linecap="round" />
+<polyline points="324 276.1 324 312" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="307.4" y="263.1" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">K2</text>
+<circle cx="120" cy="528" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="120 528 84 528" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="429" y1="503.8" x2="429" y2="515.8" stroke="#000" stroke-linecap="round" />
+<line x1="429" y1="491.8" x2="429" y2="479.8" stroke="#000" stroke-linecap="round" />
+<rect x="417" y="491.8" width="24" height="12" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="429 479.8 429 336.3" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="429 515.8 429 527.8" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="408.8" y="502.8" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">K1</text>
+<rect x="144" y="41.5" width="30" height="30" stroke="#FFF" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="171" y="59.9" font-size="11.3" font-family="Segoe UI" text-anchor="middle" fill="#000">S1</text>
+<rect x="168" y="62.5" width="6" height="7" stroke="#000" fill="#000" stroke-width="0" />
+<rect x="168" y="62.5" width="6" height="7" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="469.5" y1="276.4" x2="469.5" y2="264.4" stroke="#000" stroke-linecap="round" />
+<line x1="469.5" y1="240.4" x2="469.5" y2="252.4" stroke="#000" stroke-linecap="round" />
+<line x1="469.5" y1="252.4" x2="478.5" y2="252.4" stroke="#000" stroke-linecap="round" />
+<line x1="469.5" y1="264.4" x2="477" y2="250.1" stroke="#000" stroke-linecap="round" />
+<polyline points="469.5 240.4 469.5 216.1" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="469.5 276.4 469.5 288.4" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="495.1" y="264.2" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">B2</text>
+<line x1="469.5" y1="312.4" x2="469.5" y2="324.4" stroke="#000" stroke-linecap="round" />
+<line x1="469.5" y1="288.4" x2="469.5" y2="300.4" stroke="#000" stroke-linecap="round" />
+<line x1="469.5" y1="312.4" x2="461.1" y2="298" stroke="#000" stroke-linecap="round" />
+<text x="452.9" y="311.4" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">K1</text>
+<line x1="429" y1="264.4" x2="429" y2="276.4" stroke="#000" stroke-linecap="round" />
+<line x1="429" y1="240.4" x2="429" y2="252.4" stroke="#000" stroke-linecap="round" />
+<line x1="429" y1="264.4" x2="420.6" y2="250" stroke="#000" stroke-linecap="round" />
+<polyline points="429 240.4 429 216.1" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="429 276.4 429 336.3" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="429" cy="336.3" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="429 336.3 469.5 336.3 469.5 324.4" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="312 96 315 102 318 96" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="267" y1="96" x2="267" y2="108" stroke="#000" stroke-linecap="round" />
+<line x1="318" y1="87" x2="318" y2="96" stroke="#000" stroke-linecap="round" />
+<line x1="318" y1="72" x2="318" y2="81" stroke="#000" stroke-linecap="round" />
+<line x1="264" y1="96" x2="318" y2="96" stroke="#000" stroke-linecap="round" />
+<line x1="264" y1="72" x2="318" y2="72" stroke="#000" stroke-linecap="round" />
+<line x1="264" y1="72" x2="264" y2="96" stroke="#000" stroke-linecap="round" />
+<rect x="270" y="72" width="12" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="279 76.5 273 76.5 273 91.5 279 91.5 279 88.5 276 88.5 276 79.5 279 79.5 279 76.5" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="279 76.5 273 76.5 273 91.5 279 91.5 279 88.5 276 88.5 276 79.5 279 79.5 279 76.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="282" y="81" width="54" height="6" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="282 96 288 72 294 96 300 72 306 96 312 72 318 96" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="267 108 267 108" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="272.8" y="68.5" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">A2</text>
+<text x="281.1" y="28.6" font-size="13.7" font-family="Segoe UI" text-anchor="middle" fill="#000">Clamp</text>
+<polyline points="408 96 411 102 414 96" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="363" y1="96" x2="363" y2="108" stroke="#000" stroke-linecap="round" />
+<line x1="414" y1="87" x2="414" y2="96" stroke="#000" stroke-linecap="round" />
+<line x1="414" y1="72" x2="414" y2="81" stroke="#000" stroke-linecap="round" />
+<line x1="360" y1="96" x2="414" y2="96" stroke="#000" stroke-linecap="round" />
+<line x1="360" y1="72" x2="414" y2="72" stroke="#000" stroke-linecap="round" />
+<line x1="360" y1="72" x2="360" y2="96" stroke="#000" stroke-linecap="round" />
+<rect x="366" y="72" width="12" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="375 76.5 369 76.5 369 91.5 375 91.5 375 88.5 372 88.5 372 79.5 375 79.5 375 76.5" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="375 76.5 369 76.5 369 91.5 375 91.5 375 88.5 372 88.5 372 79.5 375 79.5 375 76.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="378" y="81" width="54" height="6" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="378 96 384 72 390 96 396 72 402 96 408 72 414 96" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="368.8" y="68.5" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">A3</text>
+<text x="391.9" y="28.6" font-size="13.7" font-family="Segoe UI" text-anchor="middle" fill="#000">Left Fold</text>
+<polyline points="492 96 495 102 498 96" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="447" y1="96" x2="447" y2="108" stroke="#000" stroke-linecap="round" />
+<line x1="498" y1="87" x2="498" y2="96" stroke="#000" stroke-linecap="round" />
+<line x1="498" y1="72" x2="498" y2="81" stroke="#000" stroke-linecap="round" />
+<line x1="444" y1="96" x2="498" y2="96" stroke="#000" stroke-linecap="round" />
+<line x1="444" y1="72" x2="498" y2="72" stroke="#000" stroke-linecap="round" />
+<line x1="444" y1="72" x2="444" y2="96" stroke="#000" stroke-linecap="round" />
+<rect x="450" y="72" width="12" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="459 76.5 453 76.5 453 91.5 459 91.5 459 88.5 456 88.5 456 79.5 459 79.5 459 76.5" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="459 76.5 453 76.5 453 91.5 459 91.5 459 88.5 456 88.5 456 79.5 459 79.5 459 76.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="462" y="81" width="54" height="6" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="462 96 468 72 474 96 480 72 486 96 492 72 498 96" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="447 108 429 108" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="452.8" y="68.5" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">A4</text>
+<text x="480.7" y="28.6" font-size="13.7" font-family="Segoe UI" text-anchor="middle" fill="#000">Right Fold</text>
+<line x1="267" y1="169.6" x2="267" y2="156" stroke="#000" stroke-linecap="round" />
+<polyline points="261 180 267 169.61 273 180 261 180" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="225" y1="144" x2="231" y2="132" stroke="#000" stroke-linecap="round" />
+<rect x="219" y="132" width="18" height="12" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="255" y1="144" x2="255" y2="138" stroke="#000" stroke-linecap="round" />
+<line x1="252.2" y1="138" x2="257.8" y2="138" stroke="#000" stroke-linecap="round" />
+<line x1="243" y1="144" x2="243" y2="120" stroke="#000" stroke-linecap="round" />
+<polyline points="241.9 125.6 242.8 120 243.2 120 244.1 125.6 241.9 125.6" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="241.9 125.6 243 120 244.1 125.6 241.9 125.6" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="237" y="120" width="24" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="276" y1="144" x2="279" y2="150" stroke="#000" stroke-linecap="round" />
+<line x1="282" y1="144" x2="279" y2="150" stroke="#000" stroke-linecap="round" />
+<line x1="279" y1="144" x2="279" y2="156" stroke="#FFF" stroke-linecap="round" />
+<line x1="267" y1="144" x2="267" y2="156" stroke="#000" stroke-linecap="round" />
+<line x1="267" y1="120" x2="267" y2="108" stroke="#000" stroke-linecap="round" />
+<line x1="267" y1="120" x2="279" y2="144" stroke="#000" stroke-linecap="round" />
+<polyline points="277.5 138.5 279.2 143.9 278.8 144.1 275.5 139.5 277.5 138.5" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="277.48 138.5 279 144 275.51 139.48 277.48 138.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="267" y1="144" x2="267" y2="138" stroke="#000" stroke-linecap="round" />
+<line x1="264.2" y1="138" x2="269.8" y2="138" stroke="#000" stroke-linecap="round" />
+<rect x="261" y="120" width="24" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="300 138 298.75 144 296.25 132 293.75 144 291.25 132 288.75 144 286.25 132 285 138" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="267 156 267 156" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="429" y1="175.6" x2="429" y2="162" stroke="#000" stroke-linecap="round" />
+<polyline points="423 186 429 175.61 435 186 423 186" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="387" y1="150" x2="393" y2="138" stroke="#000" stroke-linecap="round" />
+<rect x="381" y="138" width="18" height="12" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="417" y1="150" x2="417" y2="144" stroke="#000" stroke-linecap="round" />
+<line x1="414.2" y1="144" x2="419.8" y2="144" stroke="#000" stroke-linecap="round" />
+<line x1="405" y1="150" x2="405" y2="126" stroke="#000" stroke-linecap="round" />
+<polyline points="403.9 131.6 404.8 126 405.2 126 406.1 131.6 403.9 131.6" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="403.9 131.6 405 126 406.1 131.6 403.9 131.6" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="399" y="126" width="24" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="438" y1="150" x2="441" y2="156" stroke="#000" stroke-linecap="round" />
+<line x1="444" y1="150" x2="441" y2="156" stroke="#000" stroke-linecap="round" />
+<line x1="441" y1="150" x2="441" y2="162" stroke="#FFF" stroke-linecap="round" />
+<line x1="429" y1="150" x2="429" y2="162" stroke="#000" stroke-linecap="round" />
+<line x1="429" y1="126" x2="429" y2="114" stroke="#000" stroke-linecap="round" />
+<line x1="429" y1="126" x2="441" y2="150" stroke="#000" stroke-linecap="round" />
+<polyline points="439.5 144.5 441.2 149.9 440.8 150.1 437.5 145.5 439.5 144.5" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="439.48 144.5 441 150 437.51 145.48 439.48 144.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="429" y1="150" x2="429" y2="144" stroke="#000" stroke-linecap="round" />
+<line x1="426.2" y1="144" x2="431.8" y2="144" stroke="#000" stroke-linecap="round" />
+<rect x="423" y="126" width="24" height="24" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="462 144 460.75 150 458.25 138 455.75 150 453.25 138 450.75 150 448.25 138 447 144" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="429 114 429 108" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="429 162 429 162" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="505.5" y1="407" x2="505.5" y2="419" stroke="#000" stroke-linecap="round" />
+<line x1="505.5" y1="383" x2="505.5" y2="395" stroke="#000" stroke-linecap="round" />
+<line x1="505.5" y1="407" x2="497.1" y2="392.6" stroke="#000" stroke-linecap="round" />
+<line x1="502" y1="401" x2="492" y2="401" stroke="#000" stroke-linecap="round" stroke-dasharray="3,3" />
+<circle cx="487.5" cy="401" r="4.5" stroke="#000" fill="none" stroke-linecap="round" />
+<polyline points="505.5 383 505.5 358.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="505.5 419 505.5 467" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="276" y="41.5" width="30" height="30" stroke="#FFF" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="303" y="59.9" font-size="11.3" font-family="Segoe UI" text-anchor="middle" fill="#000">S2</text>
+<rect x="300" y="62.5" width="6" height="7" stroke="#000" fill="#000" stroke-width="0" />
+<rect x="300" y="62.5" width="6" height="7" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="372" y="41.5" width="30" height="30" stroke="#FFF" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="399" y="59.9" font-size="11.3" font-family="Segoe UI" text-anchor="middle" fill="#000">S3</text>
+<rect x="396" y="62.5" width="6" height="7" stroke="#000" fill="#000" stroke-width="0" />
+<rect x="396" y="62.5" width="6" height="7" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="456" y="41.5" width="30" height="30" stroke="#FFF" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="483" y="59.9" font-size="11.3" font-family="Segoe UI" text-anchor="middle" fill="#000">S4</text>
+<rect x="480" y="62.5" width="6" height="7" stroke="#000" fill="#000" stroke-width="0" />
+<rect x="480" y="62.5" width="6" height="7" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="505.5" y1="503.8" x2="505.5" y2="515.8" stroke="#000" stroke-linecap="round" />
+<line x1="505.5" y1="491.8" x2="505.5" y2="479.8" stroke="#000" stroke-linecap="round" />
+<rect x="493.5" y="491.8" width="24" height="12" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="485.3" y="502.8" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">K2</text>
+<line x1="552" y1="270.1" x2="552" y2="282.1" stroke="#000" stroke-linecap="round" />
+<line x1="552" y1="246.1" x2="552" y2="258.1" stroke="#000" stroke-linecap="round" />
+<line x1="552" y1="270.1" x2="543.6" y2="255.7" stroke="#000" stroke-linecap="round" />
+<line x1="547.6" y1="262.6" x2="545.3" y2="263.9" stroke="#000" stroke-linecap="round" />
+<line x1="545.3" y1="263.9" x2="550.5" y2="267.5" stroke="#000" stroke-linecap="round" />
+<polyline points="552 246.1 552 216.1 505.5 216.1" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="552 282.1 552 294.1" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="535.4" y="269.1" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">S2</text>
+<line x1="552" y1="448.6" x2="552" y2="460.6" stroke="#000" stroke-linecap="round" />
+<line x1="552" y1="436.6" x2="552" y2="424.6" stroke="#000" stroke-linecap="round" />
+<rect x="540" y="436.6" width="24" height="12" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="552 460.6 552 527.8 504 527.8" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="531.8" y="447.6" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">K3</text>
+<line x1="552" y1="330.1" x2="552" y2="318.1" stroke="#000" stroke-linecap="round" />
+<line x1="552" y1="294.1" x2="552" y2="306.1" stroke="#000" stroke-linecap="round" />
+<line x1="552" y1="306.1" x2="561" y2="306.1" stroke="#000" stroke-linecap="round" />
+<line x1="552" y1="318.1" x2="559.5" y2="303.8" stroke="#000" stroke-linecap="round" />
+<line x1="556.1" y1="310.4" x2="553.7" y2="309.1" stroke="#000" stroke-linecap="round" />
+<line x1="553.7" y1="309.1" x2="553.4" y2="315.5" stroke="#000" stroke-linecap="round" />
+<polyline points="552 330.1 552 341.9" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="543.8" y="317.1" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">S3</text>
+<line x1="552" y1="377.9" x2="552" y2="365.9" stroke="#000" stroke-linecap="round" />
+<line x1="552" y1="341.9" x2="552" y2="353.9" stroke="#000" stroke-linecap="round" />
+<line x1="552" y1="353.9" x2="561" y2="353.9" stroke="#000" stroke-linecap="round" />
+<line x1="552" y1="365.9" x2="559.5" y2="351.6" stroke="#000" stroke-linecap="round" />
+<line x1="556.1" y1="358.2" x2="553.7" y2="356.9" stroke="#000" stroke-linecap="round" />
+<line x1="553.7" y1="356.9" x2="553.4" y2="363.3" stroke="#000" stroke-linecap="round" />
+<polyline points="552 377.9 552 424.6" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="543.8" y="364.9" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">S4</text>
+<circle cx="429" cy="216.1" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="429 216.1 384 216" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="469.5" cy="216.1" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="469.5 216.1 429 216.1" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="505.5" cy="216.1" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="505.5 216.1 469.5 216.1" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="429" cy="527.8" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="429 527.8 429 528 360 528" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="429 527.8 504 527.8" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="504" cy="527.8" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="504 527.8 504 521.8 505.5 521.8 505.5 515.8" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="446.2" y="264.2" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">B1</text>
+<text x="524.3" y="406" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">B2</text>
+<circle cx="429" cy="108" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="429 108 363 108" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="469.5" y1="455" x2="469.5" y2="467" stroke="#000" stroke-linecap="round" />
+<line x1="469.5" y1="431" x2="469.5" y2="443" stroke="#000" stroke-linecap="round" />
+<line x1="469.5" y1="455" x2="461.1" y2="440.6" stroke="#000" stroke-linecap="round" />
+<text x="452.9" y="454" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">K2</text>
+<line x1="469.5" y1="407" x2="469.5" y2="419" stroke="#000" stroke-linecap="round" />
+<line x1="469.5" y1="383" x2="469.5" y2="395" stroke="#000" stroke-linecap="round" />
+<line x1="469.5" y1="407" x2="461.1" y2="392.6" stroke="#000" stroke-linecap="round" />
+<polyline points="469.5 383 469.5 358.5 505.5 358.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="469.5 419 469.5 431" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="452.9" y="406" font-size="13.7" font-family="Segoe UI" text-anchor="end" fill="#000">K3</text>
+<circle cx="505.5" cy="467" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="505.5 467 505.5 479.8" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<polyline points="505.5 467 469.5 467" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="505.5" cy="358.5" r="3" stroke="#000" fill="#000" stroke-width="0" />
+<polyline points="505.5 358.5 505.5 216.1" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

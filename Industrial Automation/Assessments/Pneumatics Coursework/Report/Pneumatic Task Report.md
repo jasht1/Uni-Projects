@@ -11,7 +11,7 @@ Largest Column: Left
 
 ###### Figure 1: Stamping Machine FluidSIM Diagram
 
-![Stamping Machine - FluidSIM Diagram|400](Stamping%20Machine%20-%20FluidSIM%20Diagram.png)
+![Stamping Machine - FluidSIM Diagram|400](Projects/Uni%20Projects/Industrial%20Automation/Assessments/Pneumatics%20Coursework/Report/attachments/Stamping%20Machine%20-%20FluidSIM%20Diagram.png)
 
 --- column-break ---
 
