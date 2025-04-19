@@ -45,6 +45,9 @@ def extract_indentation_datasets(folder_path):  # Rips force vs indentation data
     
     return extracted_data
 
+# txt_path = "/home/joeashton/Sync/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Workspace/Curves/txt-export/Control/wide_fit-2025.04.08-10.54.23/"
+# data = extract_indentation_datasets(txt_path)
+
 def get_csv_datasets(folder_path):
     extracted_data = {}
 
@@ -62,12 +65,34 @@ def get_csv_datasets(folder_path):
 
     return extracted_data
 
-
-# txt_path = "/home/joeashton/Sync/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Workspace/Curves/txt-export/Control/wide_fit-2025.04.08-10.54.23/"
-# data = extract_indentation_datasets(txt_path)
-
 # csv_path = '/home/joeashton/Sync/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Workspace/Curves/csv-force-indentation/untreated/'
 # data = get_csv_datasets(csv_path)
 
 # for fname, df in data.items():
 #     df.to_csv(f"{fname}.csv", index=False)
+
+def get_paths(relative_paths):
+    import os
+    workspace = os.path.dirname(__file__).split("Scripts")[0]
+    paths = {}
+    for path in relative_paths:
+        paths[path] = os.path.join(workspace,relative_paths[path])
+
+    return paths
+
+# relative_paths = {
+#     'Control': "Curves/txt-export/HK2 Control/HK2 Control_processed-2025.04.18-16.35.00.tsv",
+#     'Treated': "Curves/txt-export/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)_processed-2025.04.18-16.25.25.tsv"
+# }
+# paths = get_paths(relative_paths)
+
+def get_jpk_batch_data(paths):
+    data = {}
+
+    for path in paths:
+        df = pd.read_csv(paths[path],sep='\t')  # JPK outputs a tsv summarising batch processes
+        data[path] = df
+
+    return data
+
+# data = get_jpk_batch_data(paths) # Use w prev example

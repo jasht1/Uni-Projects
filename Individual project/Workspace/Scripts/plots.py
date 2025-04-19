@@ -1,20 +1,22 @@
-import pandas
-# import matplotlib
+from matplotlib import pyplot as plt
 
-paths = {
-    'Control': "/home/joeashton/Sync/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Workspace/Curves/txt-export/HK2 Control/HK2 Control_processed-2025.04.18-16.35.00.tsv",
-    'Treated': "/home/joeashton/Sync/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Workspace/Curves/txt-export/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)_processed-2025.04.18-16.25.25.tsv"
+from import_data import get_paths as get_paths
+from import_data import get_jpk_batch_data as get_jpk_batch_data
+
+relative_paths = {
+  'Control': "Curves/txt-export/HK2 Control/HK2 Control_processed-2025.04.18-16.35.00.tsv",
+  'Treated': "Curves/txt-export/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)_processed-2025.04.18-16.25.25.tsv"
 }
 
-def get_jpk_batch_data(paths):
-    data = {}
+paths = get_paths(relative_paths)
 
-    for path in paths:
-        df = pandas.read_csv(paths[path],sep='\t')  # JPK outputs a tsv summarising batch processes
-        data[path] = df
+batch_data = get_jpk_batch_data(paths)
 
-    return data
+data = []
+lables = []
+for dataset in batch_data:
+  data.append(batch_data[dataset]["Young's Modulus [Pa]"].astype(float))
+  lables.append(dataset)
 
-data = get_jpk_batch_data(paths)
+plt.violinplot(data)
 
-print('yay')

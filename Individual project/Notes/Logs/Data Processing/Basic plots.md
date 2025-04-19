@@ -29,7 +29,7 @@ ResidualRMS [N]            float64
 dtype: object
 ```
 
-### Box Plots
+### Box/violin Plots
 %%[[2025-04-18]] @ 17:50%%
 
 I need to compare control and treated cell young's modulus. A box plot / violin plot would be useful visualisations that account for distribution. 
