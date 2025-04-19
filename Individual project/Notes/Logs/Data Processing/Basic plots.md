@@ -29,6 +29,13 @@ ResidualRMS [N]            float64
 dtype: object
 ```
 
+## Observation notes
+
+### YM appears loosely correlated with RMS error
+%%[[2025-04-18]] @ 18:35%%
+
+![](Basic%20plots%20-%20YM%20vs%20RMS%20error%20(control).png)
+
 ### Box/violin Plots
 %%[[2025-04-18]] @ 17:50%%
 
@@ -38,9 +45,5 @@ https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html
 
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.violinplot.html
 
-## Observation notes
-
-### YM appears loosely correlated with RMS error
-%%[[2025-04-18]] @ 18:35%%
-
-![](Basic%20plots%20-%20YM%20vs%20RMS%20error%20(control).png)
+![YM_Viol_comparison](YM_Viol_comparison.svg)
+See the code in [plots](plots.py) script
