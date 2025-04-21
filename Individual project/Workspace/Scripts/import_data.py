@@ -45,8 +45,10 @@ def extract_indentation_datasets(folder_path):  # Rips force vs indentation data
     
     return extracted_data
 
-# txt_path = "/home/joeashton/Sync/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Workspace/Curves/txt-export/Control/wide_fit-2025.04.08-10.54.23/"
+# txt_path = get_paths("Curves/txt-export/HK2 Control/processed_curves-2025.04.18-16.35.00")
 # data = extract_indentation_datasets(txt_path)
+# for fname, df in data.items():
+#     df.to_csv(f"{fname}.csv", index=False)
 
 def get_csv_datasets(folder_path):
     extracted_data = {}
@@ -68,9 +70,6 @@ def get_csv_datasets(folder_path):
 # csv_path = '/home/joeashton/Sync/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Workspace/Curves/csv-force-indentation/untreated/'
 # data = get_csv_datasets(csv_path)
 
-# for fname, df in data.items():
-#     df.to_csv(f"{fname}.csv", index=False)
-
 def get_paths(relative_paths):
     import os
     workspace = os.path.dirname(__file__).split("Scripts")[0]
@@ -86,7 +85,10 @@ def get_paths(relative_paths):
 # }
 # paths = get_paths(relative_paths)
 
-def get_jpk_batch_data(paths):
+def get_jpk_batch_data(paths, relative_paths=False):
+    if relative_paths:
+        paths = get_paths(paths)
+
     data = {}
 
     for path in paths:

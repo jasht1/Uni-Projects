@@ -5,7 +5,7 @@
 ### Aim
 %%[[2025-04-18]] @ 17:23%%
 
-I want to make a set of plots to compare the preliminary results of the [Batch JPK curve Processing](Batch%20JPK%20curve%20Processing%20log.md).
+I want to make a set of plots to compare the preliminary results of the [Batch JPK curve Processing](Batch%20JPK%20curve%20Processing%20log.md) as discussed in [Progress & Data](Progress%20&%20Data.md)
 
 Primarily a box and whisker plot.
 
@@ -36,7 +36,7 @@ dtype: object
 
 ![](Basic%20plots%20-%20YM%20vs%20RMS%20error%20(control).png)
 
-### Box/violin Plots
+## Box/violin Plots
 %%[[2025-04-18]] @ 17:50%%
 
 I need to compare control and treated cell young's modulus. A box plot / violin plot would be useful visualisations that account for distribution. 
@@ -47,3 +47,12 @@ https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.violinplot.html
 
 ![YM_Viol_comparison](YM_Viol_comparison.svg)
 See the code in [plots](plots.py) script
+
+## Indentation vs Force
+
+### Goal
+%%[[2025-04-20]] @ 01:21%%
+
+A graph that shows indentation on x axis with force on y axis. 
+Experimental data with Hertz fit overlay
+Sub graph showing residual by indentation depth
