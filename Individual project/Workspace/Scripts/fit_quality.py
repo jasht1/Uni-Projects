@@ -1,16 +1,11 @@
 from matplotlib import pyplot as plt
 import numpy as np
 
-def fit_quality_plot (curve, ym, cp, bl, R = 5e-6, v = 0.5, find_cp=False, smoothing = False, zoom=7):
+def fit_quality_plot (curve, ym, cp, bl, R = 5e-6, v = 0.5, smoothing = False, zoom=7, filename=''):
 
   curve = curve[curve["verticalTipPosition"] <= cp]
 
   e = (ym / (1 - v**2))
-  # e = ym
-
-  # indentation = -(curve["verticalTipPosition"] - cp)
-  # actual_force = curve["vDeflection"] - bl 
-  # txt exports already factor these corrections in
   indentation = -(curve["verticalTipPosition"])
   actual_force = curve["vDeflection"]  
 
@@ -18,12 +13,6 @@ def fit_quality_plot (curve, ym, cp, bl, R = 5e-6, v = 0.5, find_cp=False, smoot
     from scipy.signal import savgol_filter
     actual_force = savgol_filter(np.array(actual_force), 11, 3)
 
-  if find_cp:
-    model_cp = better_cp(indentation,actual_force)
-  else: 
-    model_cp = curve.loc[curve["vDeflection"] <= 0, "verticalTipPosition"].max()
-
-  # model_indentation = indentation + cp - model_cp
   model_indentation = indentation
 
   model_force = (4/3) * e * np.sqrt(R) * model_indentation ** (3/2)
@@ -33,7 +22,7 @@ def fit_quality_plot (curve, ym, cp, bl, R = 5e-6, v = 0.5, find_cp=False, smoot
   plt.plot(indentation, model_force, label='Hertz Model Fit', linestyle='--')
   plt.xlabel('Indentation [m]', fontsize=14)
   plt.ylabel('Force [N]', fontsize=14)
-  plt.title('Hertz Model Fit Quality', fontsize=16)
+  plt.title(f"{filename} Hertz Model Fit Quality", fontsize=16)
   plt.legend()
   plt.grid(True)
   plt.tight_layout()
@@ -42,15 +31,6 @@ def fit_quality_plot (curve, ym, cp, bl, R = 5e-6, v = 0.5, find_cp=False, smoot
     zoom = 1/10**zoom
     plt.xlim(-zoom,indentation.max()+zoom)
   plt.show()
-
-  print("yay")
-
-def better_cp(indentation,force):
-  import pwlf
-  model = pwlf.PiecewiseLinFit(indentation, force)
-  breaks = model.fit(2)
-  
-  return breaks[1]
 
 def fit_quality_plot_for_curve(curve_fname, group='Control'):
   from import_data import get_jpk_batch_data as get_jpk_batch_data
@@ -68,7 +48,7 @@ def fit_quality_plot_for_curve(curve_fname, group='Control'):
   bl = fit_data["Baseline [N]"].max()
 
   # fit_quality_plot(curve, ym, cp, bl, find_cp=True, smoothing=True)
-  fit_quality_plot(curve, ym, cp, bl,smoothing=True)
+  fit_quality_plot(curve, ym, cp, bl,smoothing=True, filename=curve_fname)
   # fit_quality_plot(curve, ym, cp, bl)
   
 # fit_quality_plot_for_curve("force-save-2011.03.22-20.02.34.jpk-force")
