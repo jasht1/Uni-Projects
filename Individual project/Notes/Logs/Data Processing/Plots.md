@@ -49,10 +49,23 @@ https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.violinplot.html
 See the code in [plots](plots.py) script
 
 ## Indentation vs Force
-
-### Goal
 %%[[2025-04-20]] @ 01:21%%
 
 A graph that shows indentation on x axis with force on y axis. 
 Experimental data with Hertz fit overlay
 Sub graph showing residual by indentation depth
+
+%%[[2025-04-22]] @ 10:47%%
+
+Every experiment now has an automatically generated Indentation vs Force graph displaying the accuracy of the fit.
+
+![Treated-2011.03.31-22.48.06](Treated-2011.03.31-22.48.06.svg)
+
+See the code in [fit_quality](fit_quality.py) script
+
+## Young's Modulus FD Comparison
+%%[[2025-04-22]] @ 10:49%%
+
+The average, standard deviation, min/max, with faint traces for each fit for experimental values.
+
+![YM_FD_comparison](YM_FD_comparison.svg)

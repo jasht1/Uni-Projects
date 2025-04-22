@@ -89,7 +89,7 @@ def colored_line_between_pts(x, y, c, ax, **lc_kwargs):
     lc.set_array(c)
     return ax.add_collection(lc)
 
-def fit_quality_plot_for_curve(curve_fname, group='Control'):
+def fit_quality_plot_for_curve(curve_fname, group='Control', save=False):
   from import_data import get_jpk_batch_data as get_jpk_batch_data
   from import_data import get_csv_dataset
 
@@ -105,9 +105,7 @@ def fit_quality_plot_for_curve(curve_fname, group='Control'):
   bl = fit_data["Baseline [N]"].max()
   rms = fit_data["ResidualRMS [N]"].max()
 
-  # fit_quality_plot(curve, ym, cp, bl, find_cp=True, smoothing=True)
-  fit_quality_plot(curve, ym, cp, bl,smoothing=True, filename=f"{group}-{curve_fname[11:-10]}", rms=rms, save=True)
-  # fit_quality_plot(curve, ym, cp, bl)
+  fit_quality_plot(curve, ym, cp, bl,smoothing=True, filename=f"{group}-{curve_fname[11:-10]}", rms=rms, save=save)
   
 # fit_quality_plot_for_curve("force-save-2011.03.22-20.02.34.jpk-force")
 
@@ -124,6 +122,6 @@ def fit_quality_plot_all():
   for group in paths:
     for filename in os.listdir(paths[group]):
       if filename.startswith("force-save-") and filename.endswith(".jpk-force"):
-        fit_quality_plot_for_curve(filename,group=group)
+        fit_quality_plot_for_curve(filename,group=group, save=True)
         
-fit_quality_plot_all()
+# fit_quality_plot_all()
