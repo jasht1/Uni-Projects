@@ -26,6 +26,7 @@ def extract_indentation_datasets(folder_path):  # Rips force vs indentation data
 
     for filename in os.listdir(folder_path):
         if not (filename.endswith(".txt") and filename.startswith("force-save-")):
+            print(f"skipped {filename}")
             continue
         
         filepath = os.path.join(folder_path, filename)
@@ -65,7 +66,7 @@ def extract_indentation_datasets(folder_path):  # Rips force vs indentation data
     
     return extracted_data
 
-# txt_path = get_paths("Curves/txt-export/HK2 Control/processed_curves-2025.04.18-16.35.00")
+# txt_path = get_path("Curves/txt-export/HK2 Control/processed_curves-2025.04.18-16.35.00")
 # txt_path = get_path("Curves/txt-export/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)/processed_curves-2025.04.18-16.25.25")
 # data = extract_indentation_datasets(txt_path)
 # for fname, df in data.items():
@@ -105,14 +106,19 @@ def get_csv_dataset(filename, group="Control"):
 
     folder_path = get_path(f"Curves/csv-force-indentation/{group}")
     filepath = os.path.join(folder_path, filename)
-    df = pd.read_csv(filepath)
+    try:
+        df = pd.read_csv(filepath)
+    except:
+        print(f"cant open{filepath}")
+        return 0
 
     if 'verticalTipPosition' in df.columns and 'vDeflection' in df.columns:
         df = df[['verticalTipPosition', 'vDeflection']].astype(float)
         name = filename[:-4]  # remove .csv
-        extracted_data[name] = df
+        return df
 
-    return extracted_data
+    else:
+        return 0
 
 def get_jpk_batch_data(paths='default', relative_paths=False):
 

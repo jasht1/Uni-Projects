@@ -68,7 +68,7 @@ def elastic_linearity(curve, smoothing = False, R = 5e-6, reigions = 2):
         x = delta ** (3/2)
         y = force
 
-    plt.plot(x,y, 'rs-', label='indentation normalised', linewidth=2)
+    plt.plot(x,y, 'r-', label='indentation normalised', linewidth=2)
 
     model = pwlf.PiecewiseLinFit(x, y)
     breaks = model.fit(reigions)
@@ -76,7 +76,7 @@ def elastic_linearity(curve, smoothing = False, R = 5e-6, reigions = 2):
     yHat = model.predict(xHat)
     plt.plot(xHat, yHat, '-', label='linear fits')
 
-    plt.plot(delta,force, 'go-', label='force v indentation', linewidth=2)
+    plt.plot(delta,force, 'g-', label='force v indentation', linewidth=2)
     xHertz = xHat ** (2/3)
     yHertz = yHat
     plt.plot(xHertz, yHertz, '-', label='hertz fits')
@@ -84,12 +84,15 @@ def elastic_linearity(curve, smoothing = False, R = 5e-6, reigions = 2):
     plt.show()
 
 def test():
-    from import_data import get_csv_datasets
-    csv_path = '/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Workspace/Curves/csv-force-indentation/untreated'
-    data = get_csv_datasets(csv_path)
-    # curve = data['force-depth-2014.05.23-17.50.39']
-    curve = data['force-depth-2011.03.22-19.34.24']
-    elastic_linearity(curve,smoothing=True,reigions=3)
+    # from import_data import get_csv_datasets
+    # csv_path = '/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Workspace/Curves/csv-force-indentation/untreated'
+    # data = get_csv_datasets(csv_path)
+    # curve = 'force-depth-2014.05.23-17.50.39.csv'
+    # curve = 'force-depth-2011.03.22-19.34.24.csv'
+    curve = "force-save-2011.03.22-18.41.44.jpk-force"
+    from import_data import get_csv_dataset
+    curve = get_csv_dataset(curve)
+    elastic_linearity(curve,smoothing=True,reigions=2)
     # for dataset in data:
     #     elasticity_model = hertz_reigions(data[dataset])
     #     print(elasticity_model)
