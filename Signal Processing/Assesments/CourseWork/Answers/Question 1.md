@@ -6,7 +6,7 @@
 
 ### S domain TF
 
-The ideal behavior of a low pass filter is to admit frequencies ($\omega$) below the cut off ($\omega _{b}$) without distortion while rejecting frequencies above it. The power gain ($|H(j\omega)|^{2}$), being the absolute ratio of input to output e.m.f, should be like a sharp edged brick wall.
+The ideal behaviour of a low pass filter is to reject frequencies ($\omega$) above the cut off ($\omega _{b}$) while admitting frequencies below it without distortion. The power gain ($|H(j\omega)|^{2}$), being the absolute ratio of input to output e.m.f, should be like a sharp edged brick wall.
 
 $$\Large |H(j\omega)|^{2} = \begin{cases}
 \omega \le \omega_{b} : 1 \\
@@ -17,18 +17,55 @@ This desirable brick wall response was approximated for simple staged filter amp
 
 | 
 
-$$\Large |H(j\omega)|^{2} = \frac{1}{1 + \left( \frac{\omega}{\omega_{b}} \right)^{2n}}$$  ^Equation2-GeneralButterworthPowerResponse
+$$\Large |H(j\omega)|^{2} = \frac{1}{1 + \left( \frac{\omega}{\omega_{b}} \right)^{2n}}$$
+^Equation2-GeneralButterworthPowerResponse
 
 | 
 
-$$\Large |H(j\omega)|^{2} = \frac{1}{1 + \left( \frac{\omega}{5} \right)^{4}}$$ ^Equation3-PtypeButterworthPowerResponse
+$$\Large |H(j\omega)|^{2} = \frac{1}{1 + \left( \frac{\omega}{5} \right)^{4}}$$
+^Equation3-PtypeButterworthPowerResponse
 
 |
 
-The $s$ domain transfer function equivalent for [Equation 3](#^Equation3-PtypeButterworthPowerResponse) can be designed by pole placement as the poles of of a Butterworth filter lie evenly spaced across the left hand plane of a circle of radius $r = \omega_{b}$ according to [[|Equation 4]]. 
+The $s$ domain transfer function equivalent for [Equation 3](#^Equation3-PtypeButterworthPowerResponse) can be designed by pole placement as the poles of of a Butterworth filter lie evenly spaced across the left hand plane of a circle of radius $r = \omega_{b}$ according to [Equation 4 (left)](#^Equation4-GeneralButterworthPoles). In the case of a 2 stage filter the poles will be those shown in [Equation 5 (right)](#^Equation5-2StageButterworthPoleLocations).
 
+|
 
+$$\begin{align*}
+& \text{for $k = $ in range($n$):} \\ 
+& \Large \quad s_{k} = \omega_{b} \cdot e ^{j \pi \left( \frac{2k + 1}{2n} \right)}
+\end{align*}$$
+^Equation4-GeneralButterworthPoles
 
+|
+
+$$\text{for $n = 2$ :} \quad
+\large \begin{align*}
+s_{0} &= \omega_{b} e^{j 3 \pi /4} \\
+s_{1} &= \omega_{b} e^{j 5 \pi /4} \\
+\end{align*}$$
+^Equation5-2StageButterworthPoleLocations
+
+|
+
+%% 
+$$\large s = -\omega_{b} \frac{1}{\sqrt2} \pm \omega_{b} \frac{1}{\sqrt2}$$
+^EquationNaN-2StageButterwothPoleIdentity
+%%
+
+The $s$ domain transfer function ($H(s)$) of any filter can be represented by [Equation 6 (left)](#^Equation7-PTFilterTF) thus the prototype filter is given by [Equation 7 (right)](#^Equation7-PTFilterTF)
+
+|
+
+$$H(s) = \frac{\omega_{b}{^2}}{\sum\limits^{k}_{0}(s-s_{k})}$$
+^Equation6-GeneralFilterTF
+
+|
+
+$$H(s) = \frac{\omega_{b}{^2}}{s^{2} + \sqrt2 \omega_{b}s + \omega_{b}{^2}}$$
+^Equation7-PTFilterTF
+
+|
 
 %% $|H(j\omega)|^{2} @(\omega = \omega_{b}) = \frac{1}{\sqrt{2}} \approx -3.01$ ← represent this more clearly %%
 
