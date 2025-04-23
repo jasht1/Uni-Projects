@@ -6,5 +6,7 @@
 
 ![Q1i](Q1i.md)
 
-###### Figure 1: Analog Butterworth Low Pass Filter Response 
+###### Figure 1: Analogue Butterworth Low Pass Filter Response 
 ![Analog_BWLPF_Response](Analog_BWLPF_Response.svg)
+
+![Q1iii](Q1iii.md)

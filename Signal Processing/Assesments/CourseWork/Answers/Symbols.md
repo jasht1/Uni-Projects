@@ -2,20 +2,25 @@
 
 ### Symbols
 
-| Symbol                       | Meaning                                            |
-| ---------------------------- | -------------------------------------------------- |
-| $\omega$                     | Angular frequency (rad/s)                          |
-| $\omega_b$                   | Butterworth cutoff frequency (rad/s)               |
-| $\omega_s$                   | Sampling frequency (rad/s)                         |
-| $n$                          | Filter order (number of poles)                     |
-| $H(s)$                       | Transfer function in the Laplace (analog) domain   |
-| $s$                          | Complex frequency variable in Laplace domain       |
-| $H(j\omega)$                 | Frequency response evaluated on the $j\omega$ axis |
-| $\lvert{H(j\omega)}\rvert^2$ | Power gain                                         |
-| $s_k$                        | $k$-th pole of the filter in the $s$-domain        |
-| $j$                          | Imaginary unit ($j^2 = -1$)                        |
-| $X(s), Y(s)$                 | Input and output signals in the $s$-domain         |
-| $Fs$                         | Sampling frequency in Hz ($Fs = \omega_s / 2\pi$)  |
+| Symbol                       | Meaning                                                |
+| ---------------------------- | ------------------------------------------------------ |
+| $j$                          | Imaginary unit ($j^2 = -1$)                            |
+| $s$                          | Complex frequency variable in Laplace domain           |
+| $s_k$                        | $k$-th pole of the filter in the $s$-domain            |
+| $z$                          | Complex frequency in Z-domain                          |
+| $\omega$                     | Angular frequency (rad/s)                              |
+| $\Omega$                     | Digital frequency (rad/sample)                         |
+| $\omega_b$                   | Butterworth cutoff frequency (rad/s)                   |
+| $\omega_s$                   | Sampling frequency (rad/s)                             |
+| $H(s)$                       | Transfer function in the Laplace (analogue) domain       |
+| $H(z)$                       | Digital transfer function (Z domain)                   |
+| $H(j\omega)$                 | Frequency response evaluated on the $j\omega$ axis     |
+| $\lvert{H(j\omega)}\rvert^2$ | Power gain                                             |
+| $X(s), Y(s)$                 | Input and output signals in the $s$-domain             |
+| $n$                          | Filter order (number of poles)                         |
+| $F_{s}$                      | Sampling frequency in Hz ($F_{s} = \omega_{s} / 2\pi$) |
+| $F_{s}$​                     | Sampling frequency (Hz)                                |
+| $T$                          | Sampling period (s), $T=1/F_{s}$​                      |
 
 %%
 ```latex
@@ -29,7 +34,7 @@
 \(\omega_s\) & Sampling frequency (rad/s) \\
 \(n\) & Order of the Butterworth filter (number of poles) \\
 \\
-\(H(s)\) & Transfer function in the Laplace (analog) domain \\
+\(H(s)\) & Transfer function in the Laplace (analogue) domain \\
 \(s\) & Complex frequency variable in Laplace domain (\(s = \sigma + j\omega\)) \\
 \\
 \(H(j\omega)\) & Frequency response evaluated on the \(j\omega\) axis \\
@@ -43,3 +48,4 @@
 \(Fs\) & Sampling frequency in Hz (related to \(\omega_s\) via \(Fs = \omega_s / 2\pi\)) \\
 \end{tabular}
 ```
+

@@ -1,4 +1,4 @@
-### S domain Transfer Function
+### Deriving the s-domain Transfer Function
 
 The ideal behaviour of a low pass filter is to reject frequencies ($\omega$) above the cut off ($\omega _{b}$) while admitting frequencies below it without distortion. The power gain ($|H(j\omega)|^{2}$), defined as the magnitude of the frequency response ($H(j\omega$) squared, should ideally resemble a sharp edged brick wall as given by [Equation 1](#^Equation1-BrickWall).
 
