@@ -1,9 +1,7 @@
-% Analogue 2nd-order Butterworth LPF: impulse & frequency response
-
 %% Params
 omega_b = 5;  % Cutoff frequency (rad/s)
 
-% Define transfer function H(s)
+%% Define transfer function H(s)
 num_s = [omega_b^2];
 den_s = [1, sqrt(2)*omega_b, omega_b^2];
 
