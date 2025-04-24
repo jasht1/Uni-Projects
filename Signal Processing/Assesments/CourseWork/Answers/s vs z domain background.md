@@ -6,6 +6,6 @@ A system with a positive real component grows exponentially out of control but t
 In contrast the $z$ variable is a polar coordinate where the exponential growth/decay is captured by the radius $r$ and the frequency is represented by the angle $\Omega$. Similarly to the $s$-domain Poles with low $\Omega$ near the real axis correspond to lower frequency behaviour and those further away correspond to higher frequency oscillations. In contrast the rate of decay decreases with distance from the origin with stability is indicated by whether the pole exists inside the unit circle.
 This can be seen in Fig 1, 2, 3 and 4 below showing various $s$ and $z$ poles with their implied impulse response and magnitude vs frequency response. The code for which can be found in annex !%% annex num %%.
 
-| ![400](s_Impulse_Response.png)                | ![400](s_MagvFreq_Response.png)                 |
+| ![400](s_Impulse_Response.svg)                | ![400](s_MagvFreq_Response.svg)                 |
 | --------------------------------------------- | ----------------------------------------------- |
-| ![z_Impulse_Response](z_Impulse_Response.png) | ![z_MagvFreq_Response](z_MagvFreq_Response.png) |
+| ![z_Impulse_Response](z_Impulse_Response.svg) | ![z_MagvFreq_Response](z_MagvFreq_Response.svg) |
