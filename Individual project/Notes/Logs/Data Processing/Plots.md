@@ -59,7 +59,9 @@ Sub graph showing residual by indentation depth
 
 Every experiment now has an automatically generated Indentation vs Force graph displaying the accuracy of the fit.
 
-![Treated-2011.03.31-22.48.06](Treated-2011.03.31-22.48.06.svg)
+![](Control-2011.03.22-19.12.50.svg)
+
+![](Treated-2011.03.31-22.42.34.svg)
 
 See the code in [fit_quality](fit_quality.py) script
 
@@ -69,3 +71,4 @@ See the code in [fit_quality](fit_quality.py) script
 The average, standard deviation, min/max, with faint traces for each fit for experimental values.
 
 ![YM_FD_comparison](YM_FD_comparison.svg)
+

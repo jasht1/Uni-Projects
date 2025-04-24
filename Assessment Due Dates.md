@@ -4,19 +4,19 @@
 displayMode: compact
 ---
 gantt
-title 4 months of uni timeline
+title Last Semester of Uni
 dateFormat YYYY-MM-DD
 tickInterval 2week
 
 section Industrial Automation
 	Pneumatics Due: done, milestone, 2025-03-13, 1d
-	Electro-Pneumatics: crit, milestone, 2025-04-17, 1d
+	Electro-Pneumatics: done, milestone, 2025-04-17, 1d
 	Report: crit, milestone, 2025-05-22, 1d
 section Robotics 
 	Assignment: done, milestone, 2025-03-27, 1d
 	Project: crit, milestone, 2025-05-22, 1d
 section Building Systems
-	SOA: crit, milestone, 2025-04-03, 1d
+	SOA: done, milestone, 2025-04-03, 1d
 	Design Project: crit, milestone, 2025-06-05, 1d 
 section Signal Processing
 	Assignment: crit, milestone, 2025-04-24, 1d
@@ -27,7 +27,10 @@ section Individual Project
 ```
 
 ```dataview
-TABLE link(dateformat(due,"yyyy-MM-dd"),dateformat(due,"yyyy-MM-dd")) AS "Due Date", due - date(today) AS "Due In", weight + "%" AS "Weight", substring(module, 8) as Module
+TABLE 
+link(dateformat(due,"yyyy-MM-dd"),dateformat(due,"yyyy-MM-dd")) AS "Due Date",
+due - date(now) AS "Due In",
+weight + "%" AS "Weight", substring(module, 8) as Module
 FROM "Projects/Uni Projects" AND #Assessment
 WHERE due > date(today)
 SORT due 

@@ -4,17 +4,8 @@ import numpy as np
 indentation = np.linspace(0,5e-7,1000)
 
 def batch_fd_from_ym ():
-  from import_data import get_paths as get_paths
   from import_data import get_jpk_batch_data as get_jpk_batch_data
-
-  relative_paths = {
-    'Control': "Curves/txt-export/HK2 Control/HK2 Control_processed-2025.04.18-16.35.00.tsv",
-    'Treated': "Curves/txt-export/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)_processed-2025.04.18-16.25.25.tsv"
-  }
-
-  paths = get_paths(relative_paths)
-  batch_data = get_jpk_batch_data(paths)
-
+  batch_data = get_jpk_batch_data()
 
   for group in batch_data:
 
