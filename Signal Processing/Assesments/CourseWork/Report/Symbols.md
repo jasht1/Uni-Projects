@@ -12,14 +12,13 @@
 | $\Omega$                     | Digital frequency (rad/sample)                         |
 | $\omega_b$                   | Butterworth cutoff frequency (rad/s)                   |
 | $\omega_s$                   | Sampling frequency (rad/s)                             |
-| $H(s)$                       | Transfer function in the Laplace (analogue) domain       |
+| $H(s)$                       | Transfer function in the Laplace (analogue) domain     |
 | $H(z)$                       | Digital transfer function (Z domain)                   |
 | $H(j\omega)$                 | Frequency response evaluated on the $j\omega$ axis     |
 | $\lvert{H(j\omega)}\rvert^2$ | Power gain                                             |
 | $X(s), Y(s)$                 | Input and output signals in the $s$-domain             |
 | $n$                          | Filter order (number of poles)                         |
 | $F_{s}$                      | Sampling frequency in Hz ($F_{s} = \omega_{s} / 2\pi$) |
-| $F_{s}$​                     | Sampling frequency (Hz)                                |
 | $T$                          | Sampling period (s), $T=1/F_{s}$​                      |
 
 %%

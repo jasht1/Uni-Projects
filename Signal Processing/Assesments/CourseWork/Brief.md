@@ -4,7 +4,7 @@ You are going to design and implement a digital Low Pass Filter (LPF) based on t
 
 $$\frac{Y(s)}{X(s)} = \frac{{\omega_{b}}^{2}}{s^{2} + {\omega_{b}} \sqrt{2} s + {\omega_{b}}^{2}}$$
 
-You are required to design the filter so that has a bandwidth of $\omega_{b} = 5 \frac{\text{rad}}{\text{sec}}$. The sampling frequency you are going to use to implement your digital filter is a compromise between the accuracy of obtaining the same characteristics as the analogue prototype filter, and computational effort (and finite wordlength effects—more on this later in the course). In this case, you are going to choose a sampling frequency of $\omega_{s} = 10 \text{x} \ \omega_{b} \ \text{Hz}$. 
+You are required to design the filter so that has a bandwidth of $\omega_{b} = 5 \frac{\text{rad}}{\text{sec}}$. The sampling frequency you are going to use to implement your digital filter is a compromise between the accuracy of obtaining the same characteristics as the analogue prototype filter, and computational effort (and finite wordlength effects—more on this later in the course). In this case, you are going to choose a sampling frequency of $\omega_{s} = 10 \times \ \omega_{b} \ \text{Hz}$. 
 
 There are 7 elements to Question 1 of this assignment, see below: 
 
