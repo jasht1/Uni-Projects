@@ -1,16 +1,15 @@
-% function Vary_Kernal_Size()
+function Vary_Kernal_Strength()
 
 original_image = double(imread('Brain_BW512x512.png'));
 
-kernels = 1:4:17;
+kernel_strength = [10,1,-1,-10,-100];
 num_kernels = length(kernels);
 
 figure('Name', 'Effect of Different Kernel Sizes');
 
 for i = 1:num_kernels
-  kernel_size = kernels(i);
-  kernel = ones(kernel_size,kernel_size)*-1;
-  midpont = ceil(kernel_size/2);
+  kernel = ones(5,5)*kernel_surrounding(i);
+  midpont = 3;
   centre_val = sum(kernel,"all") * -1;
   kernel(midpont,midpont) = centre_val;
   
@@ -18,16 +17,9 @@ for i = 1:num_kernels
   
   filtered_image = uint8(mat2gray(filtered_image) * 255); % to match original_image
   
-  % Plot the kernel
-  subplot(2, num_kernels, i);
-  imagesc(kernel);
-  axis image off;
-  colormap('gray');
-  title(sprintf('%dx%d Kernel', kernel_size, kernel_size), 'FontSize', 10);
-  
   % Plot the filtered image
-  subplot(2, num_kernels, i + num_kernels);
+  subplot(1, num_kernels, i);
   imshow(filtered_image);
-  axis image off;
+  title(sprintf('Surrounding Value: %d', kernel_surrounding(i)), 'FontSize', 10);
 end
-% end
+end
