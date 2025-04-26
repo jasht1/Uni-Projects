@@ -79,28 +79,28 @@ The numerator and denominator can be approximated by sections as:
 
 $$\begin{align*}
 &\text{numerator}\\
-& \omega_b'{^{2} (1 + 2z^{-1} + z^{-2})} \qquad \approx 26.74789+53.49578 z^{−1} + 26.74789 z^{−2} &\\\\
-
+& \omega_b'{^{2} (1 + 2z^{-1} + z^{-2})} \qquad \approx 26.74789+53.49578 z^{−1} + 26.74789 z^{−2}\\
+\\
 &\text{denominator}\\
-& \left(\frac{2}{T}\right)^{2} + \sqrt{2} \omega_b' \cdot \frac{2}{T} + \omega_{b}'{^{2}} \approx 253.30296+1.4142⋅82.34737+26.74789 &\approx 395.9572 &\\\\
-
-& -2\left(\frac{2}{T}\right)^{2} + 2\omega_b'{^2} \approx −2⋅253.30296+2⋅26.74789 &\approx −505.5581 &\\\\
-
-
+& \left(\frac{2}{T}\right)^{2} + \sqrt{2} \omega_b' \cdot \frac{2}{T} + \omega_{b}'{^{2}} \approx 253.30296+1.4142⋅82.34737+26.74789 &\approx 395.9572\\
+\\
+& -2\left(\frac{2}{T}\right)^{2} + 2\omega_b'{^2} \approx −2⋅253.30296+2⋅26.74789 &\approx −505.5581\\
+\\
 & \left(\frac{2}{T}\right)^2 - \sqrt{2} \omega_b' \cdot \frac{2}{T} + \omega_b'{^2} \approx 253.30296−116.5343+26.74789 &\approx 163.5165 &\\
-
 \end{align*}
 $$
 
-Substituting these values back into the $z$-domain function, it can be slightly visually simplified by dividing by $\omega_{b}'{^{2}}$.
+Substituting these values back into the $z$-domain function, it can be slightly visually simplified by dividing by $\omega_{b}'{^{2}}$ and then put into the standard from by cancelling out the remaining constant coefficient in the denominator.
 
 $$\begin{align*}
-H(z) &= \frac{26.74789 + 53.49578 z^{-1} + 26.74789 z^{-2}}{395.9572 - 505.5581 z^{-1} + 163.5165 z^{-2}} \div \frac{26.74190492}{26.74190492}\\\\
-
-H(z) &= \frac{1 + 2 z^{-1} + z^{-2}}{14.8065 - 18.9021 z^{-1} + 6.1138 z^{-2}}
+H(z) &= \frac{26.74789 + 53.49578 z^{-1} + 26.74789 z^{-2}}{395.9572 - 505.5581 z^{-1} + 163.5165 z^{-2}} &\div \frac{26.74190492}{26.74190492}\\
+\\
+H(z) &= \frac{1 + 2 z^{-1} + z^{-2}}{14.8065 - 18.9021 z^{-1} + 6.1138 z^{-2}} &\div \frac{14.8065}{14.8065}\\
+\\
+H(z) &= \frac{0.0675 + 0.1350 z^{-1} + 0.0675 z^{-2}}{1 - 1.2765 z^{-1} + 0.4129 z^{-2}}\\
 \end{align*}$$
 
-This is within rounding error of the answer given by MATLAB using the symbolic math Toolbox 
+This is within rounding error of the answer given by MATLAB using the symbolic math Toolbox.
 
 ```matlab title=pretty(Hz)
                                                                 2

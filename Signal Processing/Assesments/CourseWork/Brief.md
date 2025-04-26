@@ -22,7 +22,9 @@ Derive the Difference Equation of your digital filter. Show your derivation in y
 ### vi) Implement your filter using Matlab (10 marks) 
 Implement your filter using a Matlab m-File using your derived Difference Equation in response to a unit step input. Include your m-file and results to show it implements the filter in your report. 
 ### vii) Implement your filter on an Arduino (25 marks)
-Implement your filter on an Arduino (eg. Uno or nano) or an alternative computational microcontroller/dsp/fpga platform. Provide all your code etc in your report so that the module leader can reproduce your results. You can either use real Arduino board and obtain the output data using a 3rd party graphing tool, OR use an online virtual simulator of an Arduino (eg. Uno) with your code eg. Virtronics, OR you can alternatively decide to use the Serial Plotter function in the Arduino IDE (?). Some example websites that may be useful include those below, although there are many more available—there is no prescriptive way to do this; choose something that you can get working! 
+Implement your filter on an Arduino (eg. Uno or nano) or an alternative computational microcontroller/dsp/fpga platform. Provide all your code etc in your report so that the module leader can reproduce your results. You can either use real Arduino board and obtain the output data using a 3rd party graphing tool, OR use an online virtual simulator of an Arduino (eg. Uno) with your code eg. Virtronics, OR you can alternatively decide to use the Serial Plotter function in the Arduino IDE (?). 
+
+Some example websites that may be useful include those below, although there are many more available—there is no prescriptive way to do this; choose something that you can get working! 
 https://www.tinkercad.com/circuits 
 http://www.makerplot.com
 
@@ -30,11 +32,10 @@ https://github.com/gregpinero/ArduinoPlot
 https://github.com/devinaconley/arduino-plotter 
 https://www.megunolink.com 
 https://github.com/sebnil/RealtimePlotter 
-You could also open a com port in Matlab and display data using Matlab 
+You could also open a com port in Matlab and display data using Matlab
 routines if this is your preferred route. 
 Then: 
 Apply input squarewaves to your implemented digital filter and show that your filter has the correct step response characteristics for your 2nd order Butterworth filter 
-
 
 ## Question 2 (10 marks)
 You have been given a grayscale image file of a human brain, depicted below (Figure 2.1):
