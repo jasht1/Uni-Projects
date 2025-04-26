@@ -34,14 +34,14 @@ imshow(uint8(original_image));
 title('Original Image');
 
 nexttile;
-imshow(uint8(mat2gray(filtered_x) * 255));
+imshow(uint8(mat2gray(filtered_x)) * 255);
 title('Sobel Horizontal');
 
 nexttile;
-imshow(uint8(mat2gray(filtered_y) * 255));
+imshow(uint8(mat2gray(filtered_y)) * 255);
 title('Sobel Vertical');
 nexttile;
 
-imshow(uint8(sobel_magnitude) * 255);
+imshow(uint8(sobel_magnitude * 255));
 title('Gradient Magnitude');
 end
