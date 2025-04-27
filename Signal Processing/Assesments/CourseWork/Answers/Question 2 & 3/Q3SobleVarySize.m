@@ -2,11 +2,11 @@ function Scaled_Sobel_Filter()
 
 original_image = double(imread('Brain_BW512x512.png'));
 
-kernel_sizes = 3:4:17;
+kernel_sizes = [3, 5, 15, 31];
 num_kernels = length(kernel_sizes);
 
 figure('Name', 'Sobel Filter Scale Compare');
-tiledlayout(1, num_kernels*4);
+tiledlayout(num_kernels, 5);
 
 %% smallest case
 Gx = [

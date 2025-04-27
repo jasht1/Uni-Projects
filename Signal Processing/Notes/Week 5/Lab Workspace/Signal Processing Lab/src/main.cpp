@@ -36,7 +36,7 @@ int enable_sampling(int ADCpin = A0, int samplerate = 1000){
 }
 
 void loop() {
-  // ramp();
+  ramp();
 
   enable_sampling();
 }

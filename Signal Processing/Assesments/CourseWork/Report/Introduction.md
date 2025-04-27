@@ -1,0 +1,2 @@
+
+This report is comprised of 2 major sections the first discusses the design and implementation of a Butterworth low pass filter and the second briefly discusses digital filter techniques such as convolutions for image processing and psudo-random binary sequences for system identification.

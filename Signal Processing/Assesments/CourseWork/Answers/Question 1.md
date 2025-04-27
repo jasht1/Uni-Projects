@@ -17,3 +17,12 @@
 ###### Figure 3: Analogue vs Digital Low Pass Filter Response
 ![Analog_vs_Digital_FreqResp](Analog_vs_Digital_FreqResp.svg)
 
+###### Figure 4: Matlab Implementation
+
+![](Arduino%20butterworth%20filter%20trace.png)
+
+![](Arduino%20Butterworth%20Filter%20Traces.png)
+
+![](Arduino%20Butterworth%20Filter%20Traces-1.png)
+
+![](Arduino%20Butterworth%20Filter%20Traces.png)
