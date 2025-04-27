@@ -16,10 +16,10 @@ section Robotics
 	Assignment: done, milestone, 2025-03-27, 1d
 	Project: crit, milestone, 2025-05-22, 1d
 section Building Systems
-	SOA: done, milestone, 2025-04-03, 1d
-	Design Project: crit, milestone, 2025-06-05, 1d 
+	SOA: done, milestone, 2025-04-03, 2025-04-10
+	Design Project: crit, milestone, 2025-06-05, 2025-06-05 
 section Signal Processing
-	Assignment: crit, milestone, 2025-04-24, 1d
+	Assignment: done, milestone, 2025-04-24, 2025-04-27
 	TCA: crit, milestone, 2025-05-12, 1d
 section Individual Project
 	Diss: crit, milestone, 2025-05-08, 1d

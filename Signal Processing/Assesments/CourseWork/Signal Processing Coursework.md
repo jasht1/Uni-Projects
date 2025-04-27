@@ -12,5 +12,5 @@ weight: 25
 > [!INFO]- [Brief](Projects/Uni%20Projects/Signal%20Processing/Assesments/CourseWork/Brief.md)
 > ![Brief](Projects/Uni%20Projects/Signal%20Processing/Assesments/CourseWork/Brief.md)
 
-# Plan
 
+![[Signal Processing Coursework Report.pdf]]

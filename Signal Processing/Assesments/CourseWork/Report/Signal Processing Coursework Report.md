@@ -337,6 +337,8 @@ $$ H(z) = \frac{0.0675 + 0.1350 z^{-1} + 0.0675 z^{-2}}{1 - 1.2765 z^{-1} + 0.41
 $$y[n] = 0.0675 x[n] + 0.1350 x[n-1] + 0.0675 x[n-2] + 1.2765 y[n-1] - 0.4129 y[n-2]$$
 
 
+%% Page Break %% <div style="page-break-after: always;"></div>
+
 
 ## Simulation
 
@@ -660,6 +662,10 @@ By changing the centre value we can essentially add this on top of the original 
 
 The details of the scripts to generate the two figures above can be found in the annex.
 
+
+%% Page Break %% <div style="page-break-after: always;"></div>
+
+
 ### Edge Detection
 
 In applications such as computer vision systems it is often necessary to extract details like edges, the convolution of images with specialised kernels is a computationally effective way of extracting information like this.
@@ -742,6 +748,10 @@ It's worth noting the impact of the size of the sobel filter, the reader will no
 ![[Sobel_Size_Comparison.svg]]
 
 Details on the script used to generate the figure above can be found in the annex.
+
+
+%% Page Break %% <div style="page-break-after: always;"></div>
+
 
 ## Pseudo Random Binary Sequences 
 
