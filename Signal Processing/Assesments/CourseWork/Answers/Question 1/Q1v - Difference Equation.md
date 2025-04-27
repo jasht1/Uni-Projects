@@ -1,7 +1,7 @@
 
-A $z$-domain transfer function represents a digital system, it operates in discrete time samples unlike a continuous $s$-domain representation. Given that the $z$ variable is $z = r \cdot e^{i\omega}$ then $z^{-n}$ can be expressed as:
+The digital systems represented by $z$-domain transfer functions operate in discrete time samples unlike a continuous $s$-domain representation. Given that the $z$ variable is $z = r \cdot e^{i\omega}$ then $z^{-n}$ can be expressed as:
 $$z^{-n} = (r \cdot e^{i\omega})^{-n} = e^{-i\omega n} \times r^{-n}$$
-with $e^{-i\omega\color{red}n}$ shifting the phase and $r^{\color{red}n}$ scaling the amplitude so that the coefficients of each $z^{-n}$ term represent the influence of a sample $n$ sampling periods ago.
+with $e^{-i\omega\color{red}n}$ shifting the phase and $r^{\color{red}n}$ scaling the amplitude so that the coefficients of each $z^{-n}$ term represent the influence of a sample from $n$ sampling periods ago.
 The difference equation uses this property to give a recursive relationship that predicts the system output $y[n]$ for a given set of input samples $x[n]$. This can be found by collecting the $z$-domain transfer function into $z^{-n}$ terms. 
 
 $$\begin{align*}

@@ -17,8 +17,7 @@ $$\omega{'} = \frac{2}{T} \cdot \tan\left( \frac{\omega T}{2} \right)$$
 
 |
 
-Performing these substitutions to on [Equation 7](Q1i%20-%20s%20domain%20TF.md#^Equation7-PTFilterTF) found in the the previous section and simplifying gives the following $z$-domain transfer function. For the full method with a detailed walk through see appendix ! %% add appendix
-[Q1iii - full method](Q1iii%20-%20full%20method.md)%%
+Performing these substitutions to on [Equation 7](Q1i%20-%20s%20domain%20TF.md#^Equation7-PTFilterTF) found in the the previous section and simplifying gives the following $z$-domain transfer function. For the full method with a detailed walk through see appendix for a full step by step walk through of the method.
 
 $$
 \begin{align*}
@@ -40,7 +39,7 @@ H(z) &= \frac{\omega_b'{^2} (1 + 2z^{-1} + z^{-2})}
 + \left[\left(\frac{2}{T}\right)^2 - \sqrt{2} \omega_b' \cdot \frac{2}{T} + \omega_b'{^2}\right]z^{-2}
 }\\\\
 
-\text{aprox numerical}\\
+\text{substitute numerical}\\
 \text{values} \qquad\\
 H(z) &\approx \frac{0.0675 + 0.1350 z^{-1} + 0.0675 z^{-2}}{1 - 1.2765 z^{-1} + 0.4129 z^{-2}}
 \end{align*}

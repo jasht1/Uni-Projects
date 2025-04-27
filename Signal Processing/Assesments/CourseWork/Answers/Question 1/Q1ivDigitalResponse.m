@@ -1,10 +1,10 @@
 %% params
-omega_b = 5;                 % Cutoff frequency (rad/s)
-omega_s = 10 * omega_b;      % Sampling frequency (rad/s)
-Fs = omega_s / (2*pi);       % Sampling frequency (Hz)
+omega_b = 5;  % Cutoff frequency (rad/s)
+omega_s = 10 * omega_b;  % Sampling frequency (rad/s)
+Fs = omega_s / (2*pi);  % Sampling frequency (Hz)
 
 %% Define transfer function H(s)
-num_s = [omega_b^2];
+num_s = omega_b^2;
 den_s = [1, sqrt(2)*omega_b, omega_b^2];
 
 H_s = tf(num_s, den_s);  % Analogue transfer function in Laplace domain
@@ -25,7 +25,7 @@ xlabel('n (samples)');
 ylabel('Amplitude');
 grid on;
 
-%%% Frequency response (magnitude and phase)
+%%% Frequency response
 %nexttile;
 figure()
 freqz(num_z, den_z, 1024, Fs); % creates it's own figure ANNOYING
