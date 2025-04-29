@@ -36,11 +36,11 @@
 ## Understanding the Project brief
 %%[[2024-10-13]] @ 19:22%%
 
-> ![[Diabetic nephropathy]]
+> ![[Projects/Uni Projects/Individual project/Notes/Knowledge/Diabetic Nephropathy/Diabetic nephropathy]]
 
 > ![[Contact Mechanics]]
 
-> ![[atomic force microscopy]]
+> ![[Knowledge/Engineering/Mechanical/Tribology/atomic force microscopy]]
 
 
 %% Page Break %% <div style="page-break-after: always;"></div>

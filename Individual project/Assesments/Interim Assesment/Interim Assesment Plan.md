@@ -57,7 +57,7 @@ section presentation
 - [ ] [[Interim Presentation]]
 	- [x] Interim Presentation Plan ✅ 2025-02-16
 	- [ ] Handouts
-		- [ ] [[Diabetic nephropathy]] handout
+		- [ ] [[Projects/Uni Projects/Individual project/Notes/Knowledge/Diabetic Nephropathy/Diabetic nephropathy]] handout
 	- [ ] Slides
 	- [ ] talking points
 
