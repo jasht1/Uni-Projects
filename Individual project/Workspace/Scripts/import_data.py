@@ -147,8 +147,8 @@ def get_jpk_batch_data(paths='default', relative_paths=False):
 
 # data = get_jpk_batch_data(paths) # Use w prev example
 
-def get_results_data(path="cell",delimiter=','):
-    if path == "cell":
+def get_results_data(path="Cell",delimiter=','):
+    if path == "Cell":
         path = "CellResults.csv"
     if path == "experiment":
         path = "ExpermentResults.csv"
@@ -157,7 +157,7 @@ def get_results_data(path="cell",delimiter=','):
     data = pd.read_csv(path,sep=delimiter)
     return data
 
-def get_results_batch_data(path="cell",delimiter=','):
+def get_results_batch_data(path="Cell",delimiter=','):
     data = get_results_data(path=path,delimiter=delimiter)
     batchdata={
         'Control': data[data['Group'] == "Control"],

@@ -8,4 +8,8 @@ The treated cells are on average twice as stiff as the untreated cells with 500 
 | Control | 160.643 | 137.977 | 1161.76 | 385.253 | 482.63 | 301.24 |
 | Treated | 605.979 | 381.52  | 1964.58 | 833.028 | 983.46 | 506.70 |
 
-![[YM_Viol_comparison.svg]]![[YM_FD_comparison.svg]]
+
+![[YM_Viol_comparison_byExperiment.svg]]
+![[YM_Viol_comparison_byCell.svg]]
+
+![[YM_FD_comparison.svg]]
