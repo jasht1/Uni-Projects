@@ -15,9 +15,9 @@ trtd2011 = "/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Indivi
 path = ctrl2011_3s
 
 # load the data
-indent = afmformats.formats.fmt_jpk.load_jpk(path)
+# indent = afmformats.formats.fmt_jpk.load_jpk(path)
 
-indent = afmformats.load_data(path)
+# indent = afmformats.load_data(path)
 
 group = nanite.load_group(path)
 indent = group[0]  # this is an instance of `nanite.Indentation`

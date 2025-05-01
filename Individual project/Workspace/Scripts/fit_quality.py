@@ -1,8 +1,10 @@
 from matplotlib import colors as mcolors, gridspec, pyplot as plt
 from matplotlib.collections import LineCollection
 import numpy as np
+import pandas as pd
+from  nanite.model.model_sneddon_spherical_approximation import hertz_sneddon_spherical_approx as sneddon_spherical_approximation
 
-def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = False, zoom=7, filename='', residuals=True, save=False):
+def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = False, model='Sneddon', zoom=7, filename='', residuals=True, save=False):
 
   curve = curve[curve["verticalTipPosition"] <= cp]
 
@@ -16,7 +18,16 @@ def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = Fal
 
   model_indentation = indentation
 
-  model_force = (4/3) * e * np.sqrt(R) * model_indentation ** (3/2)
+  if model == 'Sneddon':
+    model_force = (4/3) * e * np.sqrt(R) * model_indentation ** (3/2)
+    model_force = sneddon_spherical_approximation(indentation*-1,ym,R,v)
+    model_force = pd.Series(model_force, index=curve.index)
+  elif model == 'Hertz':
+    model_force = (4/3) * e * np.sqrt(R) * model_indentation ** (3/2)
+  else:
+    print(f"bad model name: {model}")
+    return 0
+
 
   if residuals == True:
     residuals = actual_force - model_force
@@ -27,9 +38,9 @@ def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = Fal
     # Main plot
     ax1 = fig.add_subplot(gs[0])
     ax1.plot(indentation, actual_force, label='Measured Force', alpha=0.7)
-    ax1.plot(indentation, model_force, label='Hertz Model Fit', linestyle='--')
+    ax1.plot(indentation, model_force, label=f'{model} Model Fit', linestyle='--')
     ax1.set_ylabel('Force [N]', fontsize=14)
-    ax1.set_title(f"{filename} Hertz Model Fit Quality", fontsize=16)
+    ax1.set_title(f"{filename} {model} Model Fit Quality", fontsize=16)
     ax1.legend(title=f"Residual RMS: {rms}")
     ax1.grid(True)
 
@@ -65,10 +76,10 @@ def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = Fal
   else:
     plt.figure(figsize=(8, 6))
     plt.plot(indentation, actual_force, label='Measured Force', alpha=0.7)
-    plt.plot(indentation, model_force, label='Hertz Model Fit', linestyle='--')
+    plt.plot(indentation, model_force, label=f'{model} Model Fit', linestyle='--')
     plt.xlabel('Indentation [m]', fontsize=14)
     plt.ylabel('Force [N]', fontsize=14)
-    plt.title(f"{filename} Hertz Model Fit Quality", fontsize=16)
+    plt.title(f"{filename} {model} Model Fit Quality", fontsize=16)
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
@@ -109,7 +120,7 @@ def fit_quality_plot_for_curve(curve_fname, group='Control', save=False):
   
 # fit_quality_plot_for_curve("force-save-2011.03.22-20.02.34.jpk-force")
 
-def fit_quality_plot_all():
+def fit_quality_plot_all(save=False):
   from import_data import get_paths as get_paths
   import os
   
@@ -122,6 +133,6 @@ def fit_quality_plot_all():
   for group in paths:
     for filename in os.listdir(paths[group]):
       if filename.startswith("force-save-") and filename.endswith(".jpk-force"):
-        fit_quality_plot_for_curve(filename,group=group, save=True)
+        fit_quality_plot_for_curve(filename,group=group, save=save)
         
-# fit_quality_plot_all()
+fit_quality_plot_all(save=True)

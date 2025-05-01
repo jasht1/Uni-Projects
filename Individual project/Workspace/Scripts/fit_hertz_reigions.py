@@ -88,13 +88,13 @@ def fit_all_curves():
   from import_data import get_paths as get_paths
   
   rpaths = {
-      'Control': "Curves/jpk-force/HK2 Control",
-      'Treated': "Curves/jpk-force/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)"
+      'Control': "Curves/csv-force-indentation/Control",
+      'Treated': "Curves/csv-force-indentation/Treated"
   }
   paths = get_paths(rpaths)
 
   for path in paths:
-    data = get_csv_datasets(path)
+    data = get_csv_datasets(paths[path])
     for dataset in data:
         elasticity_model = hertz_reigions(data[dataset])
         # print(f"{data[dataset][]}{elasticity_model})
