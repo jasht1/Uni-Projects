@@ -72,7 +72,10 @@ def extract_indentation_datasets(folder_path):  # Rips force vs indentation data
 # for fname, df in data.items():
 #     df.to_csv(f"{fname}.csv", index=False)
 
-def get_csv_datasets(folder_path):
+def get_csv_datasets(folder_path="default"):
+    # if folder_path == "default":
+    #
+    #     folder_path = get_path("Curves/csv-force-indentation/untreated")
     extracted_data = {}
 
     for filename in os.listdir(folder_path):

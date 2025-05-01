@@ -83,21 +83,32 @@ def elastic_linearity(curve, smoothing = False, R = 5e-6, reigions = 2):
 
     plt.show()
 
-def test():
-    # from import_data import get_csv_datasets
-    # csv_path = '/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Workspace/Curves/csv-force-indentation/untreated'
-    # data = get_csv_datasets(csv_path)
+def fit_all_curves():
+  from import_data import get_csv_datasets
+  from import_data import get_paths as get_paths
+  
+  rpaths = {
+      'Control': "Curves/jpk-force/HK2 Control",
+      'Treated': "Curves/jpk-force/HK2 Diseased (TGF-beta1- 10ng per mL, 48h)"
+  }
+  paths = get_paths(rpaths)
+
+  for path in paths:
+    data = get_csv_datasets(path)
+    for dataset in data:
+        elasticity_model = hertz_reigions(data[dataset])
+        # print(f"{data[dataset][]}{elasticity_model})
+        print(f"{elasticity_model}")
+    return True
+
+def single_curve():
+    from import_data import get_csv_dataset
     # curve = 'force-depth-2014.05.23-17.50.39.csv'
     # curve = 'force-depth-2011.03.22-19.34.24.csv'
     curve = "force-save-2011.03.22-18.41.44.jpk-force"
-    from import_data import get_csv_dataset
     curve = get_csv_dataset(curve)
     elastic_linearity(curve,smoothing=True,reigions=2)
-    # for dataset in data:
-    #     elasticity_model = hertz_reigions(data[dataset])
-    #     print(elasticity_model)
-    return True
 
-test()
+fit_all_curves()
 
 # import matplotlib.pyplot as plt

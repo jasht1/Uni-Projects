@@ -16,7 +16,7 @@ abstract: This project investigates changes in mechanical properties of kidney c
 
 ## Abstract
 
-![Abstract](Sections/Abstract.md)
+![[Abstract]]
 
 ## Introduction 
 
