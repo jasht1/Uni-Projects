@@ -28,7 +28,7 @@ Largest Column: standard
 
 ###### Figure: Experiment-wise Young's Modulus (Pa) by test group
 
-![[YM_Viol_comparison_byExperiment.svg|350]]
+![[YM+Residuals_Viol_comparison_byExperiment.svg|350]]
 
 ###### Table: Experiment-wise Young's Modulus (Pa) statistics by test group
 
