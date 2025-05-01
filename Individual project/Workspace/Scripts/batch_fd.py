@@ -3,9 +3,7 @@ import numpy as np
 
 indentation = np.linspace(0,5e-7,1000)
 
-def batch_fd_from_ym ():
-  from import_data import get_jpk_batch_data as get_jpk_batch_data
-  batch_data = get_jpk_batch_data()
+def plot_batch_fd_from_ym (batch_data, title="Elasticity Fit Comparison"):
 
   for group in batch_data:
 
@@ -26,15 +24,15 @@ def batch_fd_from_ym ():
     colour = cmap(np.linspace(0,1,5))
 
     for value in ym:
-      plt.plot(indentation,hertz_model(value),color=colour[3],linestyle='--',alpha=0.1)
+      plt.plot(indentation,hertz_model(value),color=colour[3],linestyle='--',alpha=0.3)
 
     plt.fill_between(indentation,min_mdl,max_mdl, color=colour[2], alpha=0.2, label=f"{group} range")
-    plt.fill_between(indentation,stdv_up,stdv_dn, color=colour[3], alpha=0.3, label=f"{group} standard deviation")
+    plt.fill_between(indentation,stdv_up,stdv_dn, color=colour[3], alpha=0.1, label=f"{group} standard deviation")
     plt.plot(indentation,mean_mdl, color=colour[4], linewidth=4, label=f"{group} mean")
 
   plt.xlabel('Indentation [m]', fontsize=14)
   plt.ylabel('Force [N]', fontsize=14)
-  plt.title("Elasticity Fit Comparison", fontsize=16)
+  plt.title(title, fontsize=16)
   plt.tight_layout()
   plt.legend()
   plt.show()
@@ -47,4 +45,24 @@ def hertz_model(ym, R = 5e-6, v = 0.5):
   force = (4/3) * e * np.sqrt(R) * indentation ** (3/2)
   return force
 
-batch_fd_from_ym()
+def batch_fd_from_ym (by='Cell',title="Elasticity Fit Comparison"):
+
+  if by == 'Experiment':
+    from import_data import get_jpk_batch_data 
+    batch_data = get_jpk_batch_data()
+
+  if by == 'Cell':
+    from import_data import get_results_batch_data 
+    batch_data = get_results_batch_data()
+
+  plot_batch_fd_from_ym(batch_data,title=title)
+
+batch_fd_from_ym(by='Cell',title="Cell Elasticity Fits by Test Group")
+# batch_fd_from_ym(by='Experiment',title="Indentation Elasticity Fits by Test Group")
+
+# yms = np.arange(100,2000,100)
+#
+# for ym in yms:
+#   plt.plot(indentation,hertz_model(ym),label=ym)
+#
+# plt.show()
