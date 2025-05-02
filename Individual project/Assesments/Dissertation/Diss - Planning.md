@@ -1,18 +1,25 @@
 
 
 - [x] [Abstract](Sections/Abstract.md) ✅ 2025-05-01
-- [ ] [Introduction](Sections/Introduction/Introduction.md)
+- [ ] [Introduction](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/1%20Introduction/Introduction.md)
 - [x] [Background](Sections/Background.md) ✅ 2025-05-01
-	- [x] [Diabetic Nephropathy](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/Background/Diabetic%20Nephropathy.md) ✅ 2025-05-01
+	- [x] [Diabetic Nephropathy](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/2%20Background/Diabetic%20Nephropathy.md) ✅ 2025-05-01
 	- [x] [Physiology](Physiology.md) ✅ 2025-05-01
-	- [x] [Atomic Force Microscopy](Sections/Background/Atomic%20Force%20Microscopy.md) ✅ 2025-05-01
+	- [x] [Atomic Force Microscopy](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/2%20Background/Atomic%20Force%20Microscopy.md) ✅ 2025-05-01
 	- [x] [Cellular Elasticity Modeling](Cellular%20Elasticity%20Modeling.md) ✅ 2025-05-01
 - [ ] [Methodology](Methodology.md)
 	- [x] [Experimental methodology](Experimental%20methodology.md) ✅ 2025-05-01
-	- [ ] [Cell Elasticity model fitting](Cell%20Elasticity%20model%20fitting.md)
+	- [x] [Cell Elasticity model fitting](Cell%20Elasticity%20model%20fitting.md) ✅ 2025-05-02
 	- [ ] [Verifying Data](Verifying%20Data.md)
+	- [ ] [Disease measure method](Disease%20measure%20method.md)
 - [ ] [Results](Results.md)
-	- [ ] [YM comparison between groups](YM%20comparison%20between%20groups.md)
+	- [x] [YM comparison between groups](YM%20comparison%20between%20groups.md) ✅ 2025-05-02
 	- [ ] [Certainty Interval](Certainty%20Interval.md)
+	- [ ] [Disease measure](Disease%20measure.md)
 - [ ] [Discussion](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/Discussion.md)
+	- [x] [Single high YM treated cell](Single%20high%20YM%20treated%20cell.md) ✅ 2025-05-02
+	- [x] [YM range correlation with average YM](YM%20range%20correlation%20with%20average%20YM.md) ✅ 2025-05-02
 - [ ] [Conclusions](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/Conclusions.md)
+	- [ ] [Potential for Diagnosis](Potential%20for%20Diagnosis.md)
+	- [ ] [Potential for Drug Screening](Potential%20for%20Drug%20Screening.md)
+	- [ ] [Recommendations](Recommendations.md)

@@ -1,0 +1,1 @@
+In both the Control and the Treated group the majority of cells consistently exhibit YM lower than the group average with a few very high YM cells with higher inter experiment range. However, the range in YM increases linearly with with higher average YM values, when variance is considered proportionally there is no correlation, so this can likely be considered systematic error.

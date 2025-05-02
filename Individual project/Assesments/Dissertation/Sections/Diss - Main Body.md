@@ -16,11 +16,11 @@ abstract: This project investigates changes in mechanical properties of kidney c
 
 ## Abstract
 
-![[Abstract]]
+![[Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/1 Introduction/Abstract]]
 
 ## Introduction 
 
-![Introduction](Sections/Introduction/Introduction.md)
+![Introduction](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/1%20Introduction/Introduction.md)
 
 ## Background
 

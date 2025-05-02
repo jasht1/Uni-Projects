@@ -18,7 +18,7 @@ The sample once mounted to the sample stage can be manoeuvred precisely in relat
 
 %% #### typical force displacement curve %%
 
-A typical force displacement curve from a nano indention experiment has the following shape seen in figure #WIP (A) below. A broadly level region where the probe is not in contact with the cell; the contact region; a sloped region where the probe is indenting the cell; the turnaround point; from which the same is repeated in reverse differing mainly at the point of separation [@kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
+A typical force displacement curve from a nano indention experiment has the following shape seen in figure %% #WIP %% (A) below. A broadly level region where the probe is not in contact with the cell; the contact region; a sloped region where the probe is indenting the cell; the turnaround point; from which the same is repeated in reverse differing mainly at the point of separation [@kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
 
 > ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png) ![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
 > Example AFM data from Radmacher 2007, (A) shows the curve as a whole, (B) zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular].

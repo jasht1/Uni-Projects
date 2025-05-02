@@ -1,0 +1,2 @@
+
+The mechanical properties of cells are finely tuned to their function, especially epithelial cells who's core role is to form active structural surfaces where correct functioning is a direct result of appropriate strength, stiffness, and shape. In patients suffering from diabetic nephropathy the alterations in renal tubule cell properties are directly associated with progression of the disease and further kidney damage. 
