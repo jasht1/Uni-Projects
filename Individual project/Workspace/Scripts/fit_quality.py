@@ -2,7 +2,9 @@ from matplotlib import colors as mcolors, gridspec, pyplot as plt
 from matplotlib.collections import LineCollection
 import numpy as np
 import pandas as pd
-from  nanite.model.model_sneddon_spherical_approximation import hertz_sneddon_spherical_approx as sneddon_spherical_approximation
+from nanite.model.model_sneddon_spherical_approximation import hertz_sneddon_spherical_approx as sneddon_spherical_approximation
+from nanite.model.model_hertz_paraboloidal import hertz_paraboloidal
+from nanite.model.model_hertz_paraboloidal import hertz_paraboloidal
 
 def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = False, model='Sneddon', zoom=7, filename='', residuals=True, save=False):
 
@@ -21,17 +23,20 @@ def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = Fal
   if model == 'Sneddon':
     model_force = (4/3) * e * np.sqrt(R) * model_indentation ** (3/2)
     model_force = sneddon_spherical_approximation(indentation*-1,ym,R,v)
-    model_force = pd.Series(model_force, index=curve.index)
   elif model == 'Hertz':
-    model_force = (4/3) * e * np.sqrt(R) * model_indentation ** (3/2)
+    # model_force = (4/3) * e * np.sqrt(R) * model_indentation ** (3/2)
+    model_force = hertz_paraboloidal(indentation*-1,ym,R,v)
+    
   else:
     print(f"bad model name: {model}")
     return 0
 
+  model_force = pd.Series(model_force, index=curve.index)
 
   if residuals == True:
     residuals = actual_force - model_force
-    abs_residuals = np.abs(residuals)
+    residuals_abs = np.abs(residuals)
+    residuals_rms = np.nanmean(residuals_abs)
 
     fig = plt.figure(figsize=(8, 6))
     gs = gridspec.GridSpec(2,1,height_ratios=[4,1], hspace=0.10)
@@ -41,7 +46,7 @@ def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = Fal
     ax1.plot(indentation, model_force, label=f'{model} Model Fit', linestyle='--')
     ax1.set_ylabel('Force [N]', fontsize=14)
     ax1.set_title(f"{filename} {model} Model Fit Quality", fontsize=16)
-    ax1.legend(title=f"Residual RMS: {rms}")
+    ax1.legend(title=f"Residual RMS: {residuals_rms:.5e}")
     ax1.grid(True)
 
     if zoom:
@@ -50,13 +55,13 @@ def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = Fal
 
     # Residuals subplot with multicolored line
     ax2 = fig.add_subplot(gs[1], sharex=ax1)
-    norm = mcolors.Normalize(vmin=abs_residuals.min(), vmax=abs_residuals.max())
+    norm = mcolors.Normalize(vmin=residuals_abs.min(), vmax=residuals_abs.max())
     cmap = plt.get_cmap('summer')
 
     line = colored_line_between_pts(
       indentation.values,
       residuals.values,
-      abs_residuals.values[:-1],  # one less for segments
+      residuals_abs.values[:-1],  # one less for segments
       ax2,
       linewidth=2,
       cmap=cmap,
@@ -116,7 +121,7 @@ def fit_quality_plot_for_curve(curve_fname, group='Control', save=False):
   bl = fit_data["Baseline [N]"].max()
   rms = fit_data["ResidualRMS [N]"].max()
 
-  fit_quality_plot(curve, ym, cp, bl,smoothing=True, filename=f"{group}-{curve_fname[11:-10]}", rms=rms, save=save)
+  fit_quality_plot(curve, ym, cp, bl,smoothing=True, model='Hertz', filename=f"{group}-{curve_fname[11:-10]}", rms=rms, save=save)
   
 # fit_quality_plot_for_curve("force-save-2011.03.22-20.02.34.jpk-force")
 
@@ -135,4 +140,5 @@ def fit_quality_plot_all(save=False):
       if filename.startswith("force-save-") and filename.endswith(".jpk-force"):
         fit_quality_plot_for_curve(filename,group=group, save=save)
         
+# fit_quality_plot_all(save=False)
 fit_quality_plot_all(save=True)
