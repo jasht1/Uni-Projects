@@ -100,6 +100,7 @@ def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='S
   if ci == True:
     gs = gridspec.GridSpec(1,2,width_ratios=[4,1], wspace=0.10)
     ax1 = fig.add_subplot(gs[0])
+    ax2 = fig.add_subplot(gs[1])
   else: 
     ax1 = fig.add_subplot()
 
@@ -137,8 +138,10 @@ def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='S
   else:
     indentation = np.linspace(0,5e-7,1000)
 
-  # if ci == True:
-    # from ci_figures import 
+  if ci == True:
+    from ci_figures import ci_notch_whisker_plot
+    data=experiments["Young's Modulus [Pa]"].astype(float)
+    ci_notch_whisker_plot(data,ax=ax2)
 
   ym = experiments["Young's Modulus [Pa]"].mean()
   cp = experiments["Contact Point [m]"].mean()
@@ -156,7 +159,7 @@ def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='S
   if zoom:
     # plt.xlim(-1/10**zoom,indentation.max())
     zoom = 1/10**zoom
-    plt.xlim(-zoom,indentation.max()+zoom)
+    ax1.set_xlim(-zoom, indentation.max() + zoom)
   plt.tight_layout()
 
   if save == True:
@@ -220,6 +223,6 @@ def cell_fit_quality_plot_all(save=False):
       #   datasets.append(get_csv_dataset(experiment['Filename']))
       # experiments["Dataset"] = datasets
 
-      cell_fit_quality_plot(experiments,smoothing=True, model='Sneddon', filename=f"{group}-Cell{cell}", save=save)
+      cell_fit_quality_plot(experiments, ci=True, smoothing=True, model='Sneddon', filename=f"{group}-Cell{cell}", save=save)
 
-cell_fit_quality_plot_all()
+cell_fit_quality_plot_all(save=False)
