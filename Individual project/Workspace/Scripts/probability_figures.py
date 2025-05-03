@@ -1,0 +1,48 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import stats
+import pandas as pd
+from classifier import get_ci
+
+def group_pdf_figure(batch_data,lim_cases=True):
+  x = np.linspace(0, 2000, 500)
+
+  colors = {'Control': 'blue', 'Treated': 'red'}
+
+  fig, ax = plt.subplots(figsize=(8, 4))
+
+  for group in batch_data:
+    data = batch_data[group]["Young's Modulus [Pa]"].astype(float)
+    mean = data.mean()
+    std = data.std()
+    n = len(data)
+
+    pdf = stats.norm.pdf(x, loc=mean, scale=std)
+    ax.fill_between(x, pdf, alpha=0.3, color=colors[group], label=f'{group} PDF')
+
+    if lim_cases==True:
+      # best case would be means far apart tight distribution, worst is close together and wide
+      ci_mean, ci_std = get_ci(mean, std, n)
+      if group=='Treated':ci_mean=sorted(ci_mean, reverse=True) 
+
+      best_pdf = stats.norm.pdf(x, loc=ci_mean[0], scale=ci_std[0])
+      ax.plot(x, best_pdf, label=f'{group} Best-Case', linestyle=':', color=colors[group], alpha=0.5)
+
+      worst_pdf = stats.norm.pdf(x, loc=ci_mean[1], scale=ci_std[1])
+      ax.plot(x, worst_pdf, label=f'{group} Worst-Case', linestyle='--', color=colors[group], alpha=0.3)
+
+  ax.set_xlim(0, 2000)
+  ax.set_xlabel("Young's Modulus [Pa]")
+  ax.set_ylabel("Probability Density")
+  ax.set_title("Probability Density Functions of Control and Treated Groups")
+  ax.legend()
+  plt.tight_layout()
+  plt.show()
+
+
+def plot_group_pdf():
+  from import_data import get_results_batch_data
+  batch_data = get_results_batch_data()
+  group_pdf_figure(batch_data)
+
+plot_group_pdf()

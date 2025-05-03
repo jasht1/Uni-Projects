@@ -1,23 +1,7 @@
 
 import numpy as np
-from scipy import stats
 from matplotlib import pyplot as plt, patches, lines
-
-def get_ci(mean, std, n, alpha=0.05):
-  # Confidence interval for the mean using t-distribution
-  t_crit = stats.t.ppf(1 - alpha / 2, df=n - 1)
-  se_mean = std / np.sqrt(n)
-  ci_mean = (mean - t_crit * se_mean, mean + t_crit * se_mean)
-  
-  # Confidence interval for the standard deviation using chi-squared distribution
-  chi2_lower = stats.chi2.ppf(alpha / 2, df=n - 1)
-  chi2_upper = stats.chi2.ppf(1 - alpha / 2, df=n - 1)
-  ci_std = (
-    np.sqrt((n - 1) * std**2 / chi2_upper),
-    np.sqrt((n - 1) * std**2 / chi2_lower)
-  )
-  
-  return ci_mean, ci_std
+from classifier import get_ci
 
 def ci_notch_whisker_plot(
   data, 
@@ -98,7 +82,7 @@ def ci_notch_whisker_plot(
 
   if ci_stdv_bars==True:
     # Std dev
-    ax.vlines(i+0.1, mean - std, mean + std, colors=f"xkcd:lightish {colors['Bars']}", linewidth=3)
+    # ax.vlines(i+0.1, mean - std, mean + std, colors=f"xkcd:lightish {colors['Bars']}", linewidth=3)
     ax.hlines(mean - std, i, i+0.2, colors=f"xkcd:lightish {colors['Bars']}", linewidth=3)
     ax.hlines(mean + std, i, i+0.2, colors=f"xkcd:lightish {colors['Bars']}", linewidth=3)
     # # CI for std dev (lighter)
@@ -183,4 +167,4 @@ def ci_figure():
   batch_data = get_results_batch_data()
   batch_ci_notch_whisker_plot(batch_data)
 
-# ci_figure()
+ci_figure()

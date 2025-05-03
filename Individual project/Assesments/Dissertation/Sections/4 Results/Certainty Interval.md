@@ -1,6 +1,7 @@
 
 %% Small sample size, Group overlap, predictive power %%
 %% Look at these overlapping reigions %%
+%% Cohen's d = 1.2015293213102536, this shows a strong effect size, but this  %%
 ###### Figure: Force Indentation for Apparent Cell YM Coloured by Test Group
 
 ![[YM_FD_comparison_byCell.svg]]

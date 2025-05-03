@@ -54,5 +54,5 @@ def combined_data ():
 
   return combined_data
 
-metrics = evaluate_predictive_power(combined_data())
-print(metrics)
+# metrics = evaluate_predictive_power(combined_data())
+# print(metrics)
