@@ -2,15 +2,14 @@ from matplotlib import colors as mcolors, gridspec, pyplot as plt
 from matplotlib.collections import LineCollection
 import numpy as np
 import pandas as pd
-from nanite.model.model_sneddon_spherical_approximation import hertz_sneddon_spherical_approx as sneddon_spherical_approximation
+from nanite.model.model_sneddon_spherical_approximation import hertz_sneddon_spherical_approx
 from nanite.model.model_hertz_paraboloidal import hertz_paraboloidal
-from nanite.model.model_hertz_paraboloidal import hertz_paraboloidal
+from import_data import get_csv_dataset
 
-def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = False, model='Sneddon', zoom=7, filename='', residuals=True, save=False):
+def curve_fit_quality_plot (curve, ym, cp, bl=0, rms=0, R=5e-6, v=0.5, smoothing = False, model='Sneddon', zoom=7, filename='', residuals=True, save=False):
 
   curve = curve[curve["verticalTipPosition"] <= cp]
 
-  e = (ym / (1 - v**2))
   indentation = -(curve["verticalTipPosition"])
   actual_force = curve["vDeflection"]  
 
@@ -18,13 +17,11 @@ def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = Fal
     from scipy.signal import savgol_filter
     actual_force = savgol_filter(np.array(actual_force), 11, 3)
 
-  model_indentation = indentation
-
   if model == 'Sneddon':
-    model_force = (4/3) * e * np.sqrt(R) * model_indentation ** (3/2)
-    model_force = sneddon_spherical_approximation(indentation*-1,ym,R,v)
+    model_force = hertz_sneddon_spherical_approx(indentation*-1,ym,R,v)
   elif model == 'Hertz':
-    # model_force = (4/3) * e * np.sqrt(R) * model_indentation ** (3/2)
+    # e = (ym / (1 - v**2))
+    # model_force = (4/3) * e * np.sqrt(R) * indentation ** (3/2)
     model_force = hertz_paraboloidal(indentation*-1,ym,R,v)
     
   else:
@@ -98,6 +95,75 @@ def fit_quality_plot (curve, ym, cp, bl, rms, R = 5e-6, v = 0.5, smoothing = Fal
   else:
     plt.show()
 
+def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='Sneddon', zoom=7, filename='', all_fits=True, ci=False, save=False):
+  fig = plt.figure(figsize=(8, 6))
+  if ci == True:
+    gs = gridspec.GridSpec(1,2,width_ratios=[4,1], wspace=0.10)
+    ax1 = fig.add_subplot(gs[0])
+  else: 
+    ax1 = fig.add_subplot()
+
+  if all_fits == True:
+    colours = mcolors._color_sequences['Paired'] 
+
+    for i, [n, experiment] in enumerate(experiments.iterrows()):
+      
+      ym = experiment["Young's Modulus [Pa]"]
+      cp = experiment["Contact Point [m]"]
+      # bl = experiment["Baseline [N]"]
+      # rms = experiment["ResidualRMS [N]"]
+      group = experiment["Group"]
+      curve = get_csv_dataset(experiment['Filename'],group=group)
+
+      curve = curve[curve["verticalTipPosition"] <= cp]
+      indentation = -(curve["verticalTipPosition"])
+      actual_force = curve["vDeflection"]  
+
+      if smoothing:
+        from scipy.signal import savgol_filter
+        actual_force = savgol_filter(np.array(actual_force), 11, 3)
+
+      if model == 'Sneddon':
+        model_force = hertz_sneddon_spherical_approx(indentation*-1,ym,R,v)
+      elif model == 'Hertz':
+        model_force = hertz_paraboloidal(indentation*-1,ym,R,v)
+      else:
+        print(f"bad model name: {model}")
+        return 0
+
+      ax1.plot(indentation, actual_force, label=f'Experiment {n} Force', color=colours[i*2], alpha=0.5)
+      ax1.plot(indentation, model_force, label=f'Experiment {n} Fit', color=colours[i*2+1], alpha=0.7, linestyle='--')
+
+  else:
+    indentation = np.linspace(0,5e-7,1000)
+
+  # if ci == True:
+    # from ci_figures import 
+
+  ym = experiments["Young's Modulus [Pa]"].mean()
+  cp = experiments["Contact Point [m]"].mean()
+  rms= experiments["ResidualRMS [N]"].mean()
+  cell = experiments["Cell"].mean()
+  model_force = hertz_paraboloidal(indentation*-1,ym,R,v)
+
+  ax1.plot(indentation, model_force, label=f'Mean Cell {cell:.0f} Fit', linewidth=2.5)
+  # ax1.legend(title=f"Residual RMS: {rms:.5e}")
+
+  ax1.set_ylabel('Force [N]', fontsize=14)
+  ax1.set_title(f"{filename} {model} Model Fit Quality", fontsize=16)
+  ax1.legend()
+  ax1.grid(True)
+  if zoom:
+    # plt.xlim(-1/10**zoom,indentation.max())
+    zoom = 1/10**zoom
+    plt.xlim(-zoom,indentation.max()+zoom)
+  plt.tight_layout()
+
+  if save == True:
+    plt.savefig(f"exports/{filename}.svg")
+  else:
+    plt.show()
+
 def colored_line_between_pts(x, y, c, ax, **lc_kwargs):
     points = np.array([x, y]).T.reshape(-1, 1, 2)
     segments = np.concatenate([points[:-1], points[1:]], axis=1)
@@ -121,11 +187,11 @@ def fit_quality_plot_for_curve(curve_fname, group='Control', save=False):
   bl = fit_data["Baseline [N]"].max()
   rms = fit_data["ResidualRMS [N]"].max()
 
-  fit_quality_plot(curve, ym, cp, bl,smoothing=True, model='Hertz', filename=f"{group}-{curve_fname[11:-10]}", rms=rms, save=save)
+  curve_fit_quality_plot(curve, ym, cp, bl,smoothing=True, model='Hertz', filename=f"{group}-{curve_fname[11:-10]}", rms=rms, save=save)
   
 # fit_quality_plot_for_curve("force-save-2011.03.22-20.02.34.jpk-force")
 
-def fit_quality_plot_all(save=False):
+def curve_fit_quality_plot_all(save=False):
   from import_data import get_paths as get_paths
   import os
   
@@ -141,4 +207,19 @@ def fit_quality_plot_all(save=False):
         fit_quality_plot_for_curve(filename,group=group, save=save)
         
 # fit_quality_plot_all(save=False)
-fit_quality_plot_all(save=True)
+
+def cell_fit_quality_plot_all(save=False):
+  from import_data import get_results_batch_data, get_csv_dataset
+  results = get_results_batch_data(path='Experiment')
+  for group, data in results.items():
+    cells = data['Cell'].unique()
+    for cell in cells:
+      experiments = data[data["Cell"] == cell]
+      # datasets = []
+      # for curve_fname in experiments["Filename"]:
+      #   datasets.append(get_csv_dataset(experiment['Filename']))
+      # experiments["Dataset"] = datasets
+
+      cell_fit_quality_plot(experiments,smoothing=True, model='Sneddon', filename=f"{group}-Cell{cell}", save=save)
+
+cell_fit_quality_plot_all()

@@ -153,7 +153,7 @@ def get_jpk_batch_data(paths='default', relative_paths=False):
 def get_results_data(path="Cell",delimiter=','):
     if path == "Cell":
         path = "CellResults.csv"
-    if path == "experiment":
+    if path == "Experiment":
         path = "ExpermentResults.csv"
     path = get_path(path)
 

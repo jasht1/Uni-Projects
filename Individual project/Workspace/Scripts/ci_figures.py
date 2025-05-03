@@ -19,60 +19,6 @@ def get_ci(mean, std, n, alpha=0.05):
   
   return ci_mean, ci_std
 
-def ci_notchplot(batch_data):
-  data=[]
-  groups={}
-  for group in batch_data:
-    ym = batch_data[group]["Young's Modulus [Pa]"].astype(float)
-    ym_mean = ym.mean()
-    ym_stdv = ym.std()
-    [ym_mean_ci,ym_stdv_ci] = get_ci(ym_mean,ym_stdv,len(ym))
-    data.append(ym)
-    groups.update({group:{
-        'ym_mean':ym_mean,
-        'ym_stdv':ym_stdv,
-        'ym_mean_ci':ym_mean_ci,
-        'ym_stdv_ci':ym_stdv_ci
-      }})
-    
-  boxs = plt.boxplot(data,notch=True,bootstrap=1000)
-  boxs = plt.boxplot(data,notch=True)
-  plt.show()
-
-
-def ci_whiskerplot(batch_data):
-  fig, ax = plt.subplots(figsize=(10, 6))
-  colors = {'Control': 'blue', 'Treated': 'red'}
-
-  for i, group in enumerate(batch_data):
-    data = batch_data[group]["Young's Modulus [Pa]"].astype(float)
-    mean = data.mean()
-    std = data.std()
-    n = len(data)
-    ci_mean, ci_std = get_ci(mean, std, n)
-
-    # Std dev whiskers
-    ax.vlines(i, mean - std, mean + std, colors=colors[group], linewidth=3)
-    # CI for std dev as thin whiskers
-    ax.vlines(i, ci_std[0], ci_std[1], colors=colors[group], linewidth=1)
-
-    # Mean line
-    ax.hlines(mean, i - 0.25, i + 0.25, color=colors[group], linewidth=2)
-    # Notch CI for mean
-    ax.hlines(ci_mean, i - 0.1, i + 0.1, color=colors[group], linewidth=2)
-
-    # Scatter individual data points
-    jitter = np.random.normal(loc=i, scale=0.02, size=len(data))
-    ax.scatter(jitter, data, alpha=0.5, color=colors[group])
-
-  ax.set_xticks(range(len(batch_data)))
-  ax.set_xticklabels(batch_data.keys())
-  ax.set_ylabel("Young's Modulus [Pa]")
-  ax.set_title("Young's Modulus by Group with Confidence Intervals")
-  ax.grid(True, axis='y', linestyle='--', alpha=0.7)
-  plt.tight_layout()
-  plt.show()
-
 def ci_notch_whisker_plot(batch_data, ci_notches=False):
   fig, ax = plt.subplots(figsize=(10, 6))
   colors = {'Control': 'blue', 'Treated': 'red'}
@@ -85,7 +31,7 @@ def ci_notch_whisker_plot(batch_data, ci_notches=False):
     ci_mean, ci_std = get_ci(mean, std, n)
 
     # Boxplot at correct x position with color and transparency
-    bp = ax.boxplot(
+    ax.boxplot(
       data,
       notch=True,
       patch_artist=True,
@@ -97,7 +43,7 @@ def ci_notch_whisker_plot(batch_data, ci_notches=False):
       medianprops=dict(alpha=0),
       flierprops=dict(marker='')
     )
-    bp = ax.boxplot(
+    ax.boxplot(
       data,
       notch=True,bootstrap=1000,
       patch_artist=True,
