@@ -22,6 +22,7 @@ def get_ci(mean, std, n, alpha=0.05):
 def ci_notch_whisker_plot(
   data, 
   ax=False, 
+  bootstrap=100,
   scatterpoints=True,
   ci_mean_bars=True, 
   ci_stdv_bars=False, 
@@ -74,18 +75,19 @@ def ci_notch_whisker_plot(
     medianprops=dict(alpha=0),
     flierprops=dict(marker='')
   )
-  ax.boxplot(
-    data,
-    notch=True,bootstrap=100,
-    patch_artist=True,
-    widths=0.75,
-    positions=[i],
-    boxprops=dict(facecolor=colors['notchfill'], alpha=0.1, color=colors['notchfill']),
-    # whiskerprops=dict(color=colors['Bars']),
-    # capprops=dict(color=colors['Bars']),
-    medianprops=dict(color='black'),
-    flierprops=dict(marker='')
-  )
+  if isinstance(bootstrap,int):
+    ax.boxplot(
+      data,
+      notch=True,bootstrap=bootstrap,
+      patch_artist=True,
+      widths=0.75,
+      positions=[i],
+      boxprops=dict(facecolor=colors['notchfill'], alpha=0.1, color=colors['notchfill']),
+      # whiskerprops=dict(color=colors['Bars']),
+      # capprops=dict(color=colors['Bars']),
+      medianprops=dict(color='black'),
+      flierprops=dict(marker='')
+    )
 
   if ci_mean_bars==True:
     # Mean
@@ -181,4 +183,4 @@ def ci_figure():
   batch_data = get_results_batch_data()
   batch_ci_notch_whisker_plot(batch_data)
 
-ci_figure()
+# ci_figure()

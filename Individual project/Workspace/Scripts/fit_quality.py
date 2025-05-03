@@ -96,7 +96,7 @@ def curve_fit_quality_plot (curve, ym, cp, bl=0, rms=0, R=5e-6, v=0.5, smoothing
     plt.show()
 
 def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='Sneddon', zoom=7, filename='', all_fits=True, ci=False, save=False):
-  fig = plt.figure(figsize=(8, 6))
+  fig = plt.figure(figsize=(8, 5))
   if ci == True:
     gs = gridspec.GridSpec(1,2,width_ratios=[5,2], wspace=0.30)
     ax1 = fig.add_subplot(gs[0])
@@ -132,8 +132,9 @@ def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='S
         print(f"bad model name: {model}")
         return 0
 
-      ax1.plot(indentation, actual_force, label=f'Experiment {n} Force', color=colours[i*2], alpha=0.5)
-      ax1.plot(indentation, model_force, label=f'Experiment {n} Fit', color=colours[i*2+1], alpha=0.7, linestyle='--')
+      # ax1.plot(indentation, actual_force, label=f'Test {n} Force', color=colours[i*2], alpha=0.5)
+      ax1.plot(indentation, actual_force, label=None, color=colours[i*2], alpha=0.5)
+      ax1.plot(indentation, model_force, label=f'Test {n} Fit: {ym:.0f} Pa', color=colours[i*2+1], alpha=0.7, linestyle='--')
 
   else:
     indentation = np.linspace(0,5e-7,1000)
@@ -146,18 +147,21 @@ def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='S
       'notchfill': 'blue', 
       'Bars': 'blue',
       }
-    ci_notch_whisker_plot(data,ax=ax2,colors=colors)
+    legend_handles = ci_notch_whisker_plot(data,ax=ax2,colors=colors, legend_handles=[])
+    ax2.legend(handles=legend_handles, loc='best', fontsize=9.5)
 
   ym = experiments["Young's Modulus [Pa]"].mean()
   cp = experiments["Contact Point [m]"].mean()
-  rms= experiments["ResidualRMS [N]"].mean()
-  cell = experiments["Cell"].mean()
+  # rms= experiments["ResidualRMS [N]"].mean()
+  # cell = experiments["Cell"].mean()
   model_force = hertz_paraboloidal(indentation*-1,ym,R,v)
 
-  ax1.plot(indentation, model_force, label=f'Mean Cell {cell:.0f} Fit', linewidth=2.5)
+  # ax1.plot(indentation, model_force, label=f'Mean Cell {cell:.0f} Fit {ym:.0f} Pa', linewidth=2.5)
+  ax1.plot(indentation, model_force, label=f'Mean Cell Fit: {ym:.0f} Pa', linewidth=2.5)
   # ax1.legend(title=f"Residual RMS: {rms:.5e}")
 
   ax1.set_ylabel('Force [N]', fontsize=14)
+  ax1.set_xlabel('Indentation [m]', fontsize=14)
   ax1.set_title(f"{filename} {model} Model Fit Quality", fontsize=16)
   ax1.legend()
   ax1.grid(True)
