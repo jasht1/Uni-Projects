@@ -98,7 +98,7 @@ def curve_fit_quality_plot (curve, ym, cp, bl=0, rms=0, R=5e-6, v=0.5, smoothing
 def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='Sneddon', zoom=7, filename='', all_fits=True, ci=False, save=False):
   fig = plt.figure(figsize=(8, 6))
   if ci == True:
-    gs = gridspec.GridSpec(1,2,width_ratios=[4,1], wspace=0.10)
+    gs = gridspec.GridSpec(1,2,width_ratios=[5,2], wspace=0.30)
     ax1 = fig.add_subplot(gs[0])
     ax2 = fig.add_subplot(gs[1])
   else: 
@@ -141,7 +141,12 @@ def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='S
   if ci == True:
     from ci_figures import ci_notch_whisker_plot
     data=experiments["Young's Modulus [Pa]"].astype(float)
-    ci_notch_whisker_plot(data,ax=ax2)
+    colors = {
+      'datapoints':(colours[::2])[:len(data)], 
+      'notchfill': 'blue', 
+      'Bars': 'blue',
+      }
+    ci_notch_whisker_plot(data,ax=ax2,colors=colors)
 
   ym = experiments["Young's Modulus [Pa]"].mean()
   cp = experiments["Contact Point [m]"].mean()
@@ -225,4 +230,4 @@ def cell_fit_quality_plot_all(save=False):
 
       cell_fit_quality_plot(experiments, ci=True, smoothing=True, model='Sneddon', filename=f"{group}-Cell{cell}", save=save)
 
-cell_fit_quality_plot_all(save=False)
+cell_fit_quality_plot_all(save=True)

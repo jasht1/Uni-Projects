@@ -1,7 +1,7 @@
 
 import numpy as np
 from scipy import stats
-from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt, patches, lines
 
 def get_ci(mean, std, n, alpha=0.05):
   # Confidence interval for the mean using t-distribution
@@ -28,7 +28,7 @@ def ci_notch_whisker_plot(
   position=0,
   x_lable="Certianty",
   y_lable="Young's Modulus [Pa]",
-  title="Young's Modulus Confidence",
+  title="Young's Modulus \nConfidence",
   # y_lims='Default',
   y_lims=[0,2000],
   y_scale='linear',
@@ -42,9 +42,12 @@ def ci_notch_whisker_plot(
   ):
   # if y_lims=='Default':
   #   y_lims=[data.min(),data.max()]
-  if colors['datapoints']=='Default':
-    # colors['datapoints']=['blue']*data.size()
-    colors['datapoints']=['blue']
+  if colors['datapoints'] == 'Default':
+    colors['datapoints'] = ['blue'] * len(data)
+  elif isinstance(colors['datapoints'], str):
+    colors['datapoints'] = [colors['datapoints']] * len(data)
+  elif len(colors['datapoints']) != len(data):
+    raise ValueError(f"colors['datapoints'] length ({len(colors['datapoints'])}) must match data length ({len(data)})")
 
   # fig, ax = plt.subplots(figsize=(10, 6))
   if ax==False:
@@ -105,7 +108,7 @@ def ci_notch_whisker_plot(
 
   if scatterpoints==True:
     jitter = np.random.normal(loc=i, scale=0.02, size=len(data))
-    ax.scatter(jitter, data, alpha=0.5, color=colors['datapoints'])
+    ax.scatter(jitter, data, alpha=0.5, c=colors['datapoints'])
 
   ax.set_xticks([position])
   ax.set_xticklabels([x_lable])
@@ -114,7 +117,16 @@ def ci_notch_whisker_plot(
   ax.grid(True, axis='y', linestyle='--', alpha=0.7)
   ax.set_yscale(y_scale)
   ax.set_ylim(y_lims)
-  ax.legend()
+
+  legend_handles = [
+    lines.Line2D([], [], color=colors['Bars'], linewidth=3, label='Mean'),
+    lines.Line2D([], [], color=f"dark{colors['Bars']}", linewidth=2, label='Mean 95% \nConfidence \nInterval'),
+    lines.Line2D([], [], color='black', linewidth=1, label='Median'),
+    patches.Patch(color=colors['notchfill'], alpha=0.3, label='Notched \nBox Plot'),
+    patches.Patch(color=colors['notchfill'], alpha=0.1, label='Bootstrapped \nBox Plot'),
+  ]
+
+  ax.legend(handles=legend_handles, loc='best')
 
 def batch_ci_notch_whisker_plot(batch_data, ci_bars=False):
   fig, ax = plt.subplots(figsize=(10, 6))
