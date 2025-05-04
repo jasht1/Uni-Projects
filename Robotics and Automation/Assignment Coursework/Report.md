@@ -26,7 +26,7 @@
 
 ## 1. Discussion Questions
 
-![Discussion](Discussion.md)
+![Discussion](Projects/Uni%20Projects/Robotics%20and%20Automation/Assignment%20Coursework/Answers/Discussion/Discussion.md)
 
 ## Transformations
 
