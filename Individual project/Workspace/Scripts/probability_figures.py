@@ -4,12 +4,12 @@ from scipy import stats
 import pandas as pd
 from classifier import get_ci
 
-def group_pdf_figure(batch_data,lim_cases=True):
+def group_pdf_figure(batch_data,lim_cases=False):
   x = np.linspace(0, 2000, 500)
 
   colors = {'Control': 'blue', 'Treated': 'red'}
 
-  fig, ax = plt.subplots(figsize=(8, 4))
+  fig, ax = plt.subplots(figsize=(5, 3))
 
   for group in batch_data:
     data = batch_data[group]["Young's Modulus [Pa]"].astype(float)
@@ -34,7 +34,7 @@ def group_pdf_figure(batch_data,lim_cases=True):
   ax.set_xlim(0, 2000)
   ax.set_xlabel("Young's Modulus [Pa]")
   ax.set_ylabel("Probability Density")
-  ax.set_title("Probability Density Functions of Control and Treated Groups")
+  ax.set_title("Probability Density Functions of Test Groups")
   ax.legend()
   plt.tight_layout()
   plt.show()
