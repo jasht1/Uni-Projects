@@ -1,5 +1,5 @@
+A Bayes classifier was constructed to quantify the probability of diabetic nephropathy from cell stiffness based on the effect observed in the experimental data. The control group is taken as a model of healthy cell presentation and the treated group representing the onset of diabetic nephropathy. Similarly to how cell properties where estimated from several tests, the typical group properties are estimated from several cells, conversely it can also be found by taking the averages and standard deviations of the whole dataset. It is often the case that considering the whole raw dataset provides more accurate picture of the group, however in this case it is appropriate to consider by subgroups i.e. by cells, this is because the samples are not independent and not representative of the test case. As it has been observed that successive tests are not introducing systematic error their average provides a more accurate estimation of the given cell, thus classification should be considered at the cell level. 
 
-A Bayes classifier was constructed to quantify the probability of diabetic nephropathy from cell stiffness based on the effect observed in the experimental data. 
 
 %% The following is the general formula for normal distribution: 
 

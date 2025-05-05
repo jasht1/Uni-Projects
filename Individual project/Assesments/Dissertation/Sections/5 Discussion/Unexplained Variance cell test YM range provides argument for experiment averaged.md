@@ -1,0 +1,2 @@
+
+Due to the unexplained variance in the range of YM across tests of single cells the possibility of it's relation to the diseased state has not been ruled out Introducing the possibility that method increases classification accuracy at the cell level but potentially sacrifices it at the population level. This provides an argument to establish group characteristics on the experiment level rather than the cell level for use cases where many samples are being taken from single unknown group as might be the case in a biopsy for example.
