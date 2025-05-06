@@ -2,7 +2,7 @@
 ## Drafting
 
 - [x] [Abstract](Abstract.md) ✅ 2025-05-01
-- [ ] [Introduction](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/1%20Introduction/Introduction.md)
+- [x] [Introduction](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/1%20Introduction/Introduction.md) ✅ 2025-05-06
 - [x] [Background](Sections/Background.md) ✅ 2025-05-01
 	- [x] [Diabetic Nephropathy](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/2%20Background/Diabetic%20Nephropathy.md) ✅ 2025-05-01
 	- [x] [Physiology](Physiology.md) ✅ 2025-05-01

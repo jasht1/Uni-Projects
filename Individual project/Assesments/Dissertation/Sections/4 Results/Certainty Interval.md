@@ -17,4 +17,3 @@ In the figure above the control group is contrasted with the treated group using
 
 %% Overlapping notches, what dose this mean for the usability of the metric %%
 
-%% ![](Group_PDFs_LimCases.svg) %%

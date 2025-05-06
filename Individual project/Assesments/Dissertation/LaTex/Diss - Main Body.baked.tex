@@ -158,6 +158,25 @@
 \makesavenoteenv{longtable}
 % add backlinks to footnote references, cf. https://tex.stackexchange.com/questions/302266/make-footnote-clickable-both-ways
 \usepackage{footnotebackref}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+% Make use of float-package and set default placement for figures to H.
+% The option H means 'PUT IT HERE' (as  opposed to the standard h option which means 'You may put it here if you like').
+\usepackage{float}
+\floatplacement{figure}{H}
+\makeatother
+\usepackage{svg}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -169,12 +188,13 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Nanomechanical Analysis of Tubular Cell Cytoskeleton},
+  pdftitle={Nanomechanical Analysis of Renal Tubular Cell Cytoskeleton for the Detection of Renal Disease},
   pdfauthor={Joseph Ashton},
   hidelinks,
   breaklinks=true,
   pdfcreator={LaTeX via pandoc with the Eisvogel template}}
-\title{Nanomechanical Analysis of Tubular Cell Cytoskeleton}
+\title{Nanomechanical Analysis of Renal Tubular Cell Cytoskeleton for
+the Detection of Renal Disease}
 \author{Joseph Ashton}
   \date{\today}
 
@@ -268,7 +288,8 @@
 % variables for title, author and date
 %
 \usepackage{titling}
-\title{Nanomechanical Analysis of Tubular Cell Cytoskeleton}
+\title{Nanomechanical Analysis of Renal Tubular Cell Cytoskeleton for
+the Detection of Renal Disease}
 \author{Joseph Ashton}
 \date{}
 
@@ -306,7 +327,8 @@
 
 \newpairofpagestyles{eisvogel-header-footer}{
   \clearpairofpagestyles
-  \ihead*{Nanomechanical Analysis of Tubular Cell Cytoskeleton}
+  \ihead*{Nanomechanical Analysis of Renal Tubular Cell Cytoskeleton for
+the Detection of Renal Disease}
   \chead*{}
   \ohead*{}
   \ifoot*{Joseph Ashton}
@@ -347,7 +369,8 @@
   \setstretch{1.4}
   \vfill
   \noindent {\huge \textbf{\textsf{
-      Nanomechanical Analysis of Tubular Cell Cytoskeleton
+      Nanomechanical Analysis of Renal Tubular Cell Cytoskeleton for the
+      Detection of Renal Disease
   }}}
     \vskip 2em
   \noindent {\Large \textit{Joseph Ashton}}
@@ -357,7 +380,7 @@
 
 \noindent
 \begin{center}
-\includegraphics[width=35mm]{/home/joeashton/Sync/Obsidian/SuperVault/Core/Templates/Pandoc/attachments/UoL\_logo.png}
+\includegraphics[width=35mm]{/home/joe/Documents/Obsidian/SuperVault/Core/Templates/Pandoc/attachments/UoL\_logo.png}
 \end{center}
 \end{flushleft}
 \end{titlepage}
@@ -378,11 +401,12 @@
 \begin{abstract}
 \begin{justify}
     This project investigates changes in mechanical properties of kidney
-    cells when exposed to TGF-β1, which is known to induce renal disease
-    {[}@gentleME2013-EpithelialCellTGFv{]}. The aim of this project is
-    to provide insight on the progression of diabetic nephropathy from a
-    mechanical perspective based on changes in mechanical properties
-    observed in single cells using atomic force microscopy.
+    cells when exposed to TGF-\(\beta 1\), which is known to induce
+    renal disease {[}@gentleME2013-EpithelialCellTGFv{]}. The aim of
+    this project is to provide insight on the progression of diabetic
+    nephropathy from a mechanical perspective based on changes in
+    mechanical properties observed in single cells using atomic force
+    microscopy.
   \end{justify}
 \end{abstract}
 \pagebreak
@@ -416,11 +440,11 @@ Siamantouras
 \subsection{Abstract}\label{abstract}
 
 This project investigates changes in mechanical properties of kidney
-cells when exposed to TGF-β1, which is known to induce renal disease
-{[}@gentleME2013-EpithelialCellTGFv{]}. The aim of this project is to
-develop a method to quantify the progression of diabetic nephropathy
-from a mechanical perspective based on changes in mechanical properties
-observed in single cells using atomic force microscopy.
+cells when exposed to TGF-\(\beta 1\), which is known to induce renal
+disease {[}@gentleME2013-EpithelialCellTGFv{]}. The aim of this project
+is to develop a method to quantify the progression of diabetic
+nephropathy from a mechanical perspective based on changes in mechanical
+properties observed in single cells using atomic force microscopy.
 
 \subsection{Introduction}\label{introduction}
 
@@ -430,12 +454,14 @@ surfaces where correct functioning is a direct result of appropriate
 strength, stiffness, and shape. In patients suffering from diabetic
 nephropathy the alterations in renal tubule cell properties are directly
 associated with progression of the disease and further kidney damage.
+Increased renal tubule cell stiffness has been observed in association
+with renal disease and may have potential as a biomarker for diagnosis
+or drug development. This report will investigate a potential method for
+associating observed cell stiffness with progression of renal disease.
 
 \subsection{Background}\label{background}
 
 \subsubsection{Relevant Physiology}\label{relevant-physiology}
-
-\%\% \#\#\#\# Kidney \%\%
 
 The human body can be understood as a complex biological machine, made
 up of many sub-mechanisms familiar to engineers. In this sense the
@@ -447,19 +473,16 @@ roughly a million multi step filter loops called nephrons
 {[}@bertramJF2011-HumanNephronNumber{]}.
 
 \begin{quote}
-{} Labeled Kidney and Nephron form National Institute of Diabetes and
+\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Assesments/Interim Assesment/Interim Report/attachments/Kidney and nephron - Labeled.jpg}}
+Labeled Kidney and Nephron form National Institute of Diabetes and
 Digestive and Kidney Diseases, National Institutes of Health
 {[}@niddk-KidneyNephronLabeled{]}.
 \end{quote}
-
-\%\% \#\#\#\# Nephrons \%\%
 
 The nephrons are selective, able to remove waste products while keeping
 desirable substances in the blood. They are able to regulating essential
 substances such as water, electrolytes, and pH levels to strict set
 points. {[}@ogobuiroI2025-PhysiologyRenal{]}
-
-\%\% \#\#\#\# glomerulus \%\%
 
 The the first step unfiltered blood enters the glomerulus and if forced
 through several membrane filters by hydro-static pressure. The first
@@ -474,33 +497,21 @@ vessel containing only cells and proteins and a fractional remainder of
 the other solute, and the tubule carrying all the removed solute
 {[}@lumen-NephronStructure{]}.
 
-\%\% \#\#\#\# Tubule \%\%
-
 The glomerulus is an overly aggressive filter; much of the water and
-solute must be re introduced to the blood from the tubules. \%\%in
-several stages. The first stage, the proximal convoluted tubule (PCT)
-pumps all the glucose and amino acids as well as most of the sodium and
-water back into the blood {[}@ogobuiroI2025-PhysiologyRenal{]}. In the
-next more water is reabsorbed, and in the final the remainder of the
-sodium as well as potassium and chlorides get reabsorbed via osmosis
-{[}@ogobuiroI2025-PhysiologyRenal{]}. \%\% The tubules run along side
-blood vessels and using a combination of osmosis, active transport and
-controlled ionic gradients \%\%sodium, potassium, calcium, magnesium,
-chlorides\%\% the valuable ions and most of the water is reabsorbed over
-several uniquely specialised segments
+solute must be re introduced to the blood from the tubules. The tubules
+run along side blood vessels and using a combination of osmosis, active
+transport and controlled ionic gradients the valuable ions and most of
+the water is reabsorbed over several uniquely specialised segments
 {[}@ogobuiroI2025-PhysiologyRenal{]}.
 
-\%\% \#\#\#\# Tubule cell \%\%
-
 \begin{quote}
-{} Simplified diagram of tubule, tubule wall and tubule cell structure.
-The structure of the tubule varies significantly across it's length to
-as different sections are specialised to permeate different resources,
-the lumen diameter and epithelial cell height values are averages of
-random samples {[}@morozovD2021-MappingKidneyTubule{]}.
+\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Assesments/Interim Assesment/Interim Report/attachments/Tubule zoom diagram.png}}
+Simplified diagram of tubule, tubule wall and tubule cell structure. The
+structure of the tubule varies significantly across it's length to as
+different sections are specialised to permeate different resources, the
+lumen diameter and epithelial cell height values are averages of random
+samples {[}@morozovD2021-MappingKidneyTubule{]}.
 \end{quote}
-
-\%\% Breakdown of the layers and cell types \#WIP \%\%
 
 Epithelial tubule cells are the essential building blocks of tubules.
 They are anchored to each other and to the extra cellular matrix (ECM)
@@ -509,55 +520,42 @@ by junctions tied to their cytoskeleton
 this way the cytoskeleton plays an essential role in maintaining the
 structure of both the individual cells and the larger structure.
 
-\%\% cytoskeleton \%\%
-
 \subsubsection{Diabetic Nephropathy (DN)}\label{diabetic-nephropathy-dn}
 
-\%\% \#\#\#\# Summary \%\% Diabetic nephropathy (DN) is a common and
-serious complication of diabetes resulting in kidney failure due to
-progressive damage to the nephrons, the functional units of the kidney
-responsible for filtering the blood.
+Diabetic nephropathy (DN) is a common and serious complication of
+diabetes resulting in kidney failure due to progressive damage to the
+nephrons, the functional units of the kidney responsible for filtering
+the blood.
 
-\%\% \#\#\#\# Epidemiology \& Prognosis \%\% Diabetic nephropathy
-develops in 30-40\% of people with diabetes after 15-20 years, as the
-disease progresses the damage accumulates and mortality rate rises
-{[}@vargheseRT2025-DiabeticNephropathy{]}. Based on the risk factor of
-the patient treatments range from lifestyle changes and medications, to
-renal replacement which involves dialysis or transplantation
-{[}@vargheseRT2025-DiabeticNephropathy{]}.
+Diabetic nephropathy develops in 30-40\% of people with diabetes after
+15-20 years, as the disease progresses the damage accumulates and
+mortality rate rises {[}@vargheseRT2025-DiabeticNephropathy{]}. Based on
+the risk factor of the patient treatments range from lifestyle changes
+and medications, to renal replacement which involves dialysis or
+transplantation {[}@vargheseRT2025-DiabeticNephropathy{]}.
 
-\%\% Stats about the number of people with it and dying of it and how
-that is changing over time \%\%
+In type 1 diabetes a lack of insulin and in type 2 Insulin resistance
+cause chronic hyperglycemia a condition where there is too much glucose
+in the blood. Hyperglycemia causes an increased build up of reactive
+oxygen species (ROS) this ongoing oxidative stress causes chronic
+inflammation {[}@gonzalezP2023-HyperglycemiaOxidativeStress{]}.
 
-\%\% connecting line from mortality to pathophysiology \%\%
-
-\%\% \#\#\#\# Relevant Pathophysiology \%\% In type 1 diabetes a lack of
-insulin and in type 2 Insulin resistance cause chronic hyperglycemia a
-condition where there is too much glucose in the blood. Hyperglycemia
-causes an increased build up of reactive oxygen species (ROS) this
-ongoing oxidative stress causes chronic inflammation
-{[}@gonzalezP2023-HyperglycemiaOxidativeStress{]}.
-
-Inflammation increases production of cytokines, including TGF-β1, which
-trigger Epithelial to Mesenchymal Transition (EMT)
-{[}@hillsCE2012-TGFvModulatesCelltocell;
+Inflammation increases production of cytokines, including
+TGF-\(\beta 1\), which trigger Epithelial to Mesenchymal Transition
+(EMT) {[}@hillsCE2012-TGFvModulatesCelltocell;
 @pizzinoG2017-OxidativeStress{]}. EMT is a process where cells which
 make up structural and functional surfaces (epithelial) transition into
 repair/maintenance cells (mesenchymal)
 {[}@kalluriR2009-BasicsEpithelialmesenchymalTransition{]}. In this case
 tubular epithelial, cells which make up the fine vessels of the kidney
 that filter blood, transform into myofibroblasts, repair and maintenance
-cells \%\% or undergo apoptosis (cell death) \%\%
-{[}@iwanoM2002-EvidenceThatFibroblasts{]}. This is the underlying
+cells {[}@iwanoM2002-EvidenceThatFibroblasts{]}. This is the underlying
 mechanism of fibrosis, which induces atrophy and scarring in the tubules
-\%\% and results in intraglomerular hypertension \%\% causing
-progressive kidney damage
+causing progressive kidney damage
 {[}@metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress{]}.
 
 \subsubsection{Atomic Force Microscopy
 (AFM)}\label{atomic-force-microscopy-afm}
-
-\%\% \#\#\#\# What is AFM? \%\%
 
 Atomic Force Microscopy (AFM) is a technique for characterising
 nanomechanical properties and structure. It is well suited to
@@ -575,8 +573,6 @@ be calculated using a Hertz contact model
 {[}@dufreneYF2002-AtomicForceMicroscopy;
 @buttHJ1995-MeasuringSurfaceForces{]}.
 
-\%\% \#\#\#\# functional/mechanical description \%\%
-
 The typically atomic force microscope utilise a laser focused on the
 free end of the cantilever such that any deflection of the probe
 produces an amplified deflection of the reflected beam, this is recorded
@@ -585,7 +581,8 @@ by a position sensitive photodiode
 @buttHJ1995-MeasuringSurfaceForces{]}.
 
 \begin{quote}
-{} Atomic force microscope functional diagram
+\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Assesments/Interim Assesment/Interim Report/attachments/Atomic Force Microscopy - mechanism diagram.png}}
+Atomic force microscope functional diagram
 \end{quote}
 
 The sample once mounted to the sample stage can be manoeuvred precisely
@@ -602,23 +599,21 @@ the cantilever and the relative displacement
 @buttHJ1995-MeasuringSurfaceForces;
 @kilpatrickJI2015-NanomechanicsCellsBiomaterials{]}.
 
-\%\% \#\#\#\# typical force displacement curve \%\%
-
 A typical force displacement curve from a nano indention experiment has
-the following shape seen in figure \%\% \#WIP \%\% (A) below. A broadly
-level region where the probe is not in contact with the cell; the
-contact region; a sloped region where the probe is indenting the cell;
-the turnaround point; from which the same is repeated in reverse
-differing mainly at the point of separation
+the following shape seen in figure (A) below. A broadly level region
+where the probe is not in contact with the cell; the contact region; a
+sloped region where the probe is indenting the cell; the turnaround
+point; from which the same is repeated in reverse differing mainly at
+the point of separation
 {[}@kilpatrickJI2015-NanomechanicsCellsBiomaterials{]}.
 
 \begin{quote}
-{} {} Example AFM data from Radmacher 2007, (A) shows the curve as a
-whole, (B) zoomed into the contact / separation region
+\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Assesments/Interim Assesment/Interim Report/attachments/fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Assesments/Interim Assesment/Interim Report/attachments/fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png}}
+Example AFM data from Radmacher 2007, (A) shows the curve as a whole,
+(B) zoomed into the contact / separation region
 {[}@radmacherM2007-StudyingMechanicsCellular{]}.
 \end{quote}
-
-\%\% Contact point jump \%\%
 
 The exact point of contact is often ambiguous and rarely the same as the
 the point of separation. On approach the cantilever will be deflected
@@ -632,9 +627,6 @@ cantilever deflection as the surface tension / adhesion of the cell to
 the probe is overcome {[}@dufreneYF2002-AtomicForceMicroscopy;
 @buttHJ1995-MeasuringSurfaceForces;
 @kilpatrickJI2015-NanomechanicsCellsBiomaterials{]}.
-
-\%\% \textgreater{} {} \textgreater{}
-{[}@buttHJ1995-MeasuringSurfaceForces{]} \%\%
 
 \subsubsection{Contact Mechanics}\label{contact-mechanics}
 
@@ -672,7 +664,7 @@ influence of which can be modelled using the Derjaguin approximation for
 interaction potential {[}@buttHJ1995-MeasuringSurfaceForces;
 @jpkinstruments-JPKDataProcessing{]}. \\
 Fung &
-\(F = B\pi (\frac{a^5- 15Ra^4 + 75R^2a^3}{5Ra^2- 50R^2a + 125R^3})\text{exp}⁡[b(\frac{a^3- 15Ra^2}{25R^2a- 125R^3})]\)
+\(F = B\pi (\frac{a^5- 15Ra^4 + 75R^2a^3}{5Ra^2- 50R^2a + 125R^3})\text{exp}[b(\frac{a^3- 15Ra^2}{25R^2a- 125R^3})]\)
 & An exponential strain energy function based on mechanical testing of
 mesentery and arterial tissues, that models the non linear elasticity of
 cells {[}@fungY1967-ElasticitySoftTissues;
@@ -681,53 +673,31 @@ is tangebly more precise but doesn't provide a simple value for young's
 modulus. \\
 \end{longtable}
 
-\%\% Expand on obstacles with applying contact mechanics models to cells
-\%\%
-
 \subsection{Literature Review}\label{literature-review}
 
-Developments in both understanding \%\% of the pathophysiology \%\% of
-kidney disease and the application of atomic force microscopy (AFM)
-technology {[}@liuS2024-AtomicForceMicroscopyDisease-relatedStudies;
+Developments in both understanding of kidney disease and the application
+of atomic force microscopy (AFM) technology
+{[}@liuS2024-AtomicForceMicroscopyDisease-relatedStudies;
 @dufreneYF2002-AtomicForceMicroscopy{]} may provide a valuable measure
 of the progression of kidney failure to inform the research and
 development of novel therapies
 {[}@parrishAR2016-CytoskeletonNovelTarget{]}.
 
-\%\% \#\#\#\# What we measure \%\%
-
-\%\% Single cell stiffness \%\% The mechanical properties of tubular
-cells are largely a result of their cytoskeletal structure
-{[}@jalilianI2015-CellElasticityRegulated;
+The mechanical properties of tubular cells are largely a result of their
+cytoskeletal structure {[}@jalilianI2015-CellElasticityRegulated;
 @radmacherM2007-StudyingMechanicsCellular{]} which is altered
 significantly with the progression of DN
 {[}@buckleyST2012-CytoskeletalRearrangementTGFv1induced{]}.
-
-\%\% Inter cellular adhesion \%\%
-
-\%\% The stiffness of individual cells can be observed and correlated
-with the {[}@siamantourasE2016-QuantifyingCellularMechanics{]}. \%\%
-
-\%\% \#\#\#\# Obstacles \& limitations \%\%
-
-\%\% Cell cultures aren't perfect representations of their in vitro
-counterparts. This can be improved with careful preparation. The
-elasticity of the substrate the culture is grown on can have a
-significant impact on cytoskelital arrangement
-{[}@wangD2022-KidneyProximalTubule;
-@loveH2018-SubstrateElasticityGoverns{]} \%\%
-
-\%\% Table with papers and a relevant summary \#WIP \%\%
 
 The below table lists several papers utilising atomic force microscopes
 to produce force displacement curves from a bead tipped cantilever
 fitted to a hertz contact model to find cell elasticity.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.5803}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1116}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2218}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0863}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.5842}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1105}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2197}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0855}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Paper
@@ -750,15 +720,15 @@ Medicine}, vol.~12, no. 4, pp.~1013--1021, May 2016, doi:
 \href{https://doi.org/10.1016/j.nano.2015.12.362}{10.1016/j.nano.2015.12.362}.
 & HK2: immortalised human kidney proximal tubule epithelial cell culture
 & Over 30 cells each indented 5 times immediately above the nucleus
-producing over 150 curves. & \textbf{control}: 320Pa cells treated with
-TGF-β1: 549 Pa \\
+producing over 150 curves. & \textbf{control}: \(320 \ \text{Pa}\) cells
+treated with TGF-\(\beta 1\): \(549 \ \text{Pa}\) \\
 {[}@jafariA2024-MechanicalPropertiesHuman{]} A. Jafari, A. Sadeghi, and
 M. Lafouti, `Mechanical properties of human kidney cells and their
 effects on the atomic force microscope beam vibrations', \emph{Microsc.
 Res. Tech.}, vol.~87, no. 8, pp.~1704--1717, 2024, doi:
 \href{https://doi.org/10.1002/jemt.24543}{10.1002/jemt.24543}. &
 HEK-293: immortalised human embryonic kidney cell culture & did not
-elaborate & 539.8 Pa \\
+elaborate & \(539.8 \ \text{Pa}\) \\
 {[}@shimizuY2012-SimpleDisplaySystem{]} Y. Shimizu, T. Kihara, S. M. A.
 Haghparast, S. Yuba, and J. Miyake, `Simple Display System of Mechanical
 Properties of Cells and Their Dispersion', \emph{PLOS ONE}, vol.~7, no.
@@ -766,19 +736,20 @@ Properties of Cells and Their Dispersion', \emph{PLOS ONE}, vol.~7, no.
 \href{https://doi.org/10.1371/journal.pone.0034305}{10.1371/journal.pone.0034305}.
 & HEK-293: immortalised human embryonic kidney cell culture & The median
 of value of over 100 cells examined at 25 points each. & mode value
-(\(x_{0}\)): 410 Pa variance (\(w\)): 0.757 \\
+(\(x_{0}\)): \(410 \ \text{Pa}\) variance (\(w\)): \(0.757\) \\
 {[}@buckleyST2012-CytoskeletalRearrangementTGFv1induced{]} S. T.
 Buckley, C. Medina, A. M. Davies, and C. Ehrhardt, `Cytoskeletal
-re-arrangement in TGF-β1-induced alveolar epithelial-mesenchymal
-transition studied by atomic force microscopy and high-content
-analysis', \emph{Nanomedicine: Nanotechnology, Biology and Medicine},
-vol.~8, no. 3, pp.~355--364, Apr.~2012, doi:
+re-arrangement in TGF-\(\beta 1\)-induced alveolar
+epithelial-mesenchymal transition studied by atomic force microscopy and
+high-content analysis', \emph{Nanomedicine: Nanotechnology, Biology and
+Medicine}, vol.~8, no. 3, pp.~355--364, Apr.~2012, doi:
 \href{https://doi.org/10.1016/j.nano.2011.06.021}{10.1016/j.nano.2011.06.021}.
 & A549: human lung alveolar carcinoma epithelial cell culture & On each
-cell, a 4 × 4 grid of force-distance curves was collected in at least 5
-different positions (avoiding the nucleus and the very edge) producing
-over 750 curves. & On Glass: 8300 \(\pm\) 1100 PaOn collagen I: 9100
-\(\pm\) 2900 Pa \\
+cell, a \(4 \times 4\) grid of force-distance curves was collected in at
+least 5 different positions (avoiding the nucleus and the very edge)
+producing over 750 curves. & On Glass: 8300 \(\pm\)
+\(1100 \ \text{Pa}\)On collagen I: \(9100 \ \pm\)
+\(2900 \ \text{Pa}\) \\
 {[}@wyssHM2011-BiophysicalPropertiesNormal{]} H. M. Wyss \emph{et al.},
 `Biophysical properties of normal and diseased renal glomeruli',
 \emph{Am J Physiol Cell Physiol}, vol.~300, no. 3, pp.~C397--C405,
@@ -786,10 +757,12 @@ Mar.~2011, doi:
 \href{https://doi.org/10.1152/ajpcell.00438.2010}{10.1152/ajpcell.00438.2010}.
 & Sprague-Dawley rat kidney glomeruli capillary wall extracted by
 differential sieving & 10 different glomeruli with 10 measurements each
-& 2,300 \(\pm\) 160 Pa \\
+& \(2,300 \ \pm\) \(160 \ \text{Pa}\) \\
 \end{longtable}
 
 \subsection{Methodology}\label{methodology}
+
+\subsubsection{Experimental Method}\label{experimental-method}
 
 The experimental procedure used to produce the data used in this report
 is detailed thoroughly in reference
@@ -798,30 +771,26 @@ adult human proximal tubule kidney (HK2) cell line
 {[}@ryanMJ1994-HK-2{]} where purchased from the American Type Culture
 Collection (ATCC; Gaithersburg, MD 20878 USA). These where maintained in
 Dulbecco's Modified Eagle Medium/Nutrient Mixture F-12 (DMEM/F12), 10\%
-fetal calf serum (FCS), glutamine (2mM), and EGF (5ng/ml) for 48 hours.
-The cells where divided into 2 test groups, the ``control'' group and
-the ``treated'' group which where where serum starved overnight before
-being exposed to TBF-β, an E-cadherin antibody obtained from R\&D
-systems, at (2-10ng/mL) for a further 48 hours.
+fetal calf serum (FCS), glutamine (\(2 \ \text{mM}\)), and EGF
+(\(5 \ \text{ng/ml}\)) for 48 hours. The cells where divided into 2 test
+groups, the ``control'' group and the ``treated'' group which where
+where serum starved overnight before being exposed to TBF-\(\beta\), an
+E-cadherin antibody obtained from R\&D systems, at (\(10 \ ng/mL\)) for
+a further 48 hours.
 
 The indentation experiments where carried out using a JPK Instruments
 CellHesion©200 module with a BioCell™ temperature controller to maintain
-a bed temperature of 37°C on a TMC 63-530 anti-vibration table. Probes
-where constructed by attaching 11µm Polyscience PolyBeads® to Nanoworld
-TL-1 tipless cantilevers with a force constant of 0.03N/m. Each cell was
-indented 5 times directly above the nucleus at a constant speed of 5µm/s
-with intervals of 60 seconds. For each set of experiments the spring
-constant of the cantilever was calibrated using the thermal noise method
-and the cell's height was measured to determine an appropriate
-indentation depth to minimise the influence of the hard basal substrate.
+a bed temperature of 37°C on a TMC 63-530 anti-vibration
+table. Probes where constructed by attaching \(11\ \micro m\)
+Polyscience PolyBeads® to Nanoworld TL-1 tipless cantilevers with a
+force constant of \(0.03 N/m\). Each cell was indented 5 times directly
+above the nucleus at a constant speed of \(5\ \micro m / s\) with
+intervals of 60 seconds. For each set of experiments the spring constant
+of the cantilever was calibrated using the thermal noise method and the
+cell's height was measured to determine an appropriate indentation depth
+to minimise the influence of the hard basal substrate.
 
-\%\% thermal noise method how and why \%\%
-
-\%\% on a Nikon eclipse TE 300 inverted microscope. The AFM bed was
-maintained at 37°C using a JPK Instruments BioCell™ temperature
-controller. \%\%
-
-\%\% How did i get ym values from the datasets \%\%
+\subsubsection{Elasticity Modeling}\label{elasticity-modeling}
 
 Experimental data was received in the form of \texttt{.jpk-force} logs
 of head height position against vertical deflection force along with
@@ -830,11 +799,11 @@ calculate the probe height based on spring constant and at this point
 the curves where exported in text form. In order to establish
 ``trustworthy'' values for YM the function included in the JPK data
 processing software was used with the deepest point of indentation to
-1µm past the contact point as upper and lower bounds. This was then
-replicated for the text exports in python using \texttt{nanite} an open
-source package that offers the same Hertz/Sneddon elasticity model
-truncated power series approximation for spherical indenters with a
-difference in fit optimisation methods; where JPK Data Processing uses
+\(1 \ \micro m\) past the contact point as upper and lower bounds. This
+was then replicated for the text exports in python using \texttt{nanite}
+an open source package that offers the same Hertz/Sneddon elasticity
+model truncated power series approximation for spherical indenters with
+a difference in fit optimisation methods; where JPK Data Processing uses
 least squared regression, Nanite utilises machine learning for fit
 quality estimation and optimisation. Despite not providing the
 ``trustworthy'' fits as a rated training dataset Nanite reproduced the
@@ -847,9 +816,6 @@ Attention was paid to identify any consistent trends in the residual as
 If the residual where to consistently deviate from generally flat noise
 at 0 this would imply a poorly matched elasticity model.
 
-\%\% How did I determine the appropriate cell YM given the experimental
-data \%\%
-
 As each cell was tested 5 times the apparent YM of a cell was taken to
 be the average average of the Hertz/Sneddon fits. To validate the
 results the force indentation curves of the experiments and the implied
@@ -857,14 +823,9 @@ curve of the apparent YM where plotted and inspected visually checking
 for cell relaxation or systematic error based on observable trends in
 successive experimentation or any apparent anomalies. In addition the
 95\% confidence interval of the apparent cell YM was calculated for the
-natural set and a \(100 \times\) bootstrapped super set this was
-inspected on log scales given that the error margin increases
-proportionally with higher YM, however for consistency with the rest of
-the report figures included in the results section maintain linear YM
-axis of 0,2000.
-
-\%\% Confidence Intervals, what are they and how did I calculate them
-\%\%
+natural set and a \(100 \times\) bootstrapped super set and these
+metrics where inspected to assert whether the apparent YM given by the
+average is a fair representation of the cell behaviour.
 
 As the apparent cell YM was taken to be the mean it's confidence
 intervals where those of the mean YM for the set of cell tests.
@@ -879,10 +840,10 @@ as is later necessary in determining the confidence in the group
 classifications and when montecarlo sampling, the chi distribution is
 used. This was originally tried using normal distributions being a
 generally acceptable approximation, however given the small and bottom
-biased experiment sample sets assuming symmetric distribution of
-probable standard deviations was not a fair representation.
+biased experiment sample sets symmetric distribution of probable
+standard deviations was not a fair representation.
 
-\%\% Bootstrapping, what is it, why did I do it \%\%
+\subsubsection{Classification Method}\label{classification-method}
 
 A Bayes classifier was constructed to quantify the probability of
 diabetic nephropathy from cell stiffness based on the effect observed in
@@ -900,44 +861,27 @@ tests are not introducing systematic error their average provides a more
 accurate estimation of the given cell, thus classification should be
 considered at the cell level.
 
-\%\% The following is the general formula for normal distribution:
-
 \[
-{\large f(x)=
-\frac{1}{\sigma \sqrt{2 \pi}}
-e^{\frac{-1}{2}
-\left( \cfrac{x-\mu}{\sigma}\right)^{2}}
-}
-\qquad
-\begin{align}
-f(x)    &=  \text{Probability Density Function}\\
-x       &=  \text{Variable (i.e. Young's Modulus)}\\
-\sigma  &=  \text{Standard Deviation}\\
-\mu     &=  \text{Mean}\\
+{\Large  
+P(G∣x) = \frac{P(x∣G) \cdot P(G)}{P(x)}  
+}  
+\qquad  
+\begin{align}  
+P(G∣x) &:: \text{Posterior Probability}\\
+P(x∣G) &:: \text{Likleyhood}\\
+P(G)   &:: \text{Prior Probability}\\
+P(x)   &:: \text{Evidence}\\
 \end{align}
-\] \%\%
+\]
 
-\%\% Bayes Classifier \%\%
-
-Bayes Theorem (Eq below) enables us to quantify the probability a cell
+Bayes Theorem (Eq above) enables us to quantify the probability a cell
 is diseased given its YM by considering the posterior probability that
 it is an occurrence in a group with the appropriate probability density
-function.
-
-\[\large
-P(G∣x) = \frac{P(x∣G) \cdot P(G)}{P(x)} 
-\qquad
-\begin{align}
-P(G∣x)  &=  \text{Posterior Probability}\\
-P(x∣G)  &=  \text{Likleyhood}\\
-P(G)    &=  \text{Prior Probability}\\
-P(x)    &=  \text{Evidence}\\
-\end{align}
-​\]
-
-If we take healthy and diseased to be exclusive groups \(G_{1}\) and
-\(G_{2}\) then the probability of a cell being diseased would be given
-by:
+function. If we take healthy and diseased to be exclusive groups
+\(G_{1}\) and \(G_{2}\) then the probability of a cell being diseased
+would be given by the proportional instance probability of it's YM for
+the treated group over the control and treated groups all multiplied by
+their prior probability.
 
 \[\large P(G_2 \mid x) = \frac{P(x \mid G_2) \cdot P(G_2)}{P(x \mid G_1) \cdot P(G_1) + P(x \mid G_2) \cdot P(G_2)}\]
 
@@ -945,26 +889,23 @@ Where the likelihood of a given group is based on the normal
 distribution implied by the mean and standard deviation of the YM
 observed in the experimental data.
 
-\%\%
-\[P(x \mid G) = \frac{1}{\sqrt{2\pi}\sigma_G} \exp\left( -\frac{(x - \mu_G)^2}{2\sigma_G^2} \right)
-\] \%\%
-
 \[
-{\large P(x \mid G) = 
-\frac{1}{\sigma_{G} \sqrt{2 \pi}}
-e^{\tfrac{-1}{2}
-\left( \cfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}
-}
-\qquad
-\begin{align}
-P(x \mid G) &=  \text{Group Probability Density Function}\\
-x           &=  \text{Variable (i.e. Young's Modulus)}\\
-\sigma_{G}  &=  \text{Group Standard Deviation}\\
-\mu_{G}     &=  \text{Group Mean}\\
+{\large  
+P(x \mid G) =  
+\frac{1}{\sigma_{G} \sqrt{2 \pi}}  
+e^{\tfrac{-1}{2}  
+\left( \cfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}  
+}  
+\qquad  
+\begin{align}  
+P(x \mid G) &:: \text{Group Probability Density Function}\\
+x           &:: \text{Variable (i.e. Young's Modulus)}\\
+\sigma_{G}  &:: \text{Group Standard Deviation}\\
+\mu_{G}     &:: \text{Group Mean}\\
 \end{align}
 \]
 
-And the prior probabilities will depend on the application, for high
+The prior probabilities will depend on the application, for high
 throughput screening this wold be heavily biased towards the initial
 cell state, or in patient diagnosis this could be a function of patient
 specific and/or epidemiological factors. In the context of this report
@@ -981,8 +922,6 @@ residual fit error with it's slightly more progressive curvature. Below
 are representative examples of each fit for the same force indentation
 curve.
 
-\%\% Quantify difference in Hertz v Sneddon average residuals \%\%
-
 Figure: Comparison in Elasticity Fit Techniques for an Example Curve
 
 --- start-multi-column: ID\_31no
@@ -994,36 +933,49 @@ Figure: Comparison in Elasticity Fit Techniques for an Example Curve
 \end{Highlighting}
 \end{Shaded}
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg}}
+\caption{Control-2011.03.22-18.41.44}
+\end{figure}
 
 --- column-break ---
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg}}
+\caption{Control-2011.03.22-18.41.44}
+\end{figure}
 
 --- end-multi-column
 
 There where some trends observed in the general shape of the residual
-error, specifically; 1) an initial hump at the contact point likely due
-to unaccounted for electrostatic non contact forces due to the van der
-walls effect, 2) a middle dip and final flick where fit's are shallower
-than the actual force indention behaviour implying an under estimation
-of YM or a non linear elasticity. Both of these effects are particularly
+error, specifically; 1) an initial hump at the contact point likely
+unaccounted for electrostatic non contact forces due to Van der Waals
+effect, 2) a middle dip and final flick where fit's are shallower than
+the actual force indention behaviour implying an under estimation of YM
+or a non linear elasticity. Both of these effects are particularly
 pronounced in the following fitting for this dataset this would be
 considered a bad fit.
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg}}
+\caption{Control-2011.03.22-19.35.48}
+\end{figure}
 
-\%\% Figure showing all residual curves faintly with smoothed average of
-all and grouped \%\%
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/SuccessiveTest_trends_absolute.svg}}
+\caption{SuccessiveTest\_trends\_absolute}
+\end{figure}
 
-\%\% Checking for cell relaxation or systematic error based on observed
-trends in successive experimentation \%\%
-
-There where no general trends observed across successive tests meaning
-there was no need to control for cell relaxation. The majority of cells
-showed strong agreement across tests resulting in tight confidence
-intervals and representative apparent YM values. The examples below are
-emblematic of typical samples from each group.
+There was a slight negative trend observed across successive tests
+indicative of cell relaxation with the first test indicating a 10\%
+higher YM on average, however this was not deemed necessary to control
+for. The majority of cells showed strong agreement across tests
+resulting in tight confidence intervals and representative apparent YM
+values. The examples below are typical samples from each group.
 
 Figure: Example Cell Fittings for Control vs Treated Group
 
@@ -1036,25 +988,34 @@ Figure: Example Cell Fittings for Control vs Treated Group
 \end{Highlighting}
 \end{Shaded}
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell6.svg}}
+\caption{Control-Cell6}
+\end{figure}
 
 --- column-break ---
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell12.svg}}
+\caption{Treated-Cell12}
+\end{figure}
 
 --- end-multi-column
 
 There where cells that displayed significantly higher variation between
-experiments from both groups however this was not constantly associated
-with the order of the tests. Given the shallow depth of the indention
-this is not likely the influence of stiffer organelles but could perhaps
-be due to the probing site interacting with cytoskelital structures such
-as the microvilli force sensing/transducing elements or structural
-anchor points, however It would require more advanced imaging techniques
-to explain these variations with confidence. Notably cells in the
-treated group tended to have one test with a significantly lower
-apparent elasticity but strong agreement in the other 4 as is the case
-below.
+experiments from both groups, this was not constantly associated with
+the order of the tests but did correlate with higher overall YM and only
+a sporadic effect. Given the shallow depth of the indention this is
+unlikely to be the influence of stiffer organelles but could perhaps be
+due to the probing site interacting with cytoskeletal structures such as
+the microvilli force sensing/transducing elements or structural anchor
+points, however It would require more advanced imaging techniques to
+explain these variations with confidence. Notably cells in the treated
+group tended to have one test with a significantly lower apparent
+elasticity but strong agreement in the other 4 as is the case below,
+this neither was consistently associated with test order.
 
 --- start-multi-column: ID\_2ugn
 
@@ -1065,20 +1026,29 @@ below.
 \end{Highlighting}
 \end{Shaded}
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell4.svg}}
+\caption{Control-Cell4}
+\end{figure}
 
 --- column-break ---
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell7.svg}}
+\caption{Treated-Cell7}
+\end{figure}
 
 --- end-multi-column
 
-\%\% \#\#\# Validity of results \%\%
-
 The treated cells where found to be on average twice as stiff as the
-untreated cells with a 500 Pa higher average young's modulus in addition
-the treated group shows a 77\% higher variance with a standard deviation
-of 541 Pa.
+untreated cells with a \(517 \ \text{Pa}\) higher average young's
+modulus. Both groups where fairly broad with standard deviations of
+\(306\) and \(541 \ \text{Pa}\) for control and treated respectively,
+while this gives the treated group a \(77\%\) higher variance, as a
+proportion of average YM they are similar being \(55\%\) and \(67\%\) of
+their respective means. Considering range as a proportion of of median
 
 --- start-multi-column: ID\_3r15
 
@@ -1089,9 +1059,13 @@ of 541 Pa.
 \end{Highlighting}
 \end{Shaded}
 
-Figure: Cell Young's Modulus by test group
+Figure: Population Shape of Cell Young's Modulus by group
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/YM+Range_Viol_comparison_byCell.svg}}
+\caption{350}
+\end{figure}
 
 Table: Cell Young's Modulus (Pa) statistics by test group
 
@@ -1108,11 +1082,15 @@ Treated & 524.65 & 524.65 & 1761.58 & 807.94 & 975.53 & 540.96 \\
 
 --- column-break ---
 
-Figure: Experiment-wise Young's Modulus (Pa) by test group
+Figure: Population Shape of Test Young's Modulus (Pa) by group
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/YM+Residuals_Viol_comparison_byExperiment.svg}}
+\caption{350}
+\end{figure}
 
-Table: Experiment-wise Young's Modulus (Pa) statistics by test group
+Table: Test Young's Modulus (Pa) statistics by test group
 
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule\noalign{}
@@ -1127,30 +1105,31 @@ Treated & 605.979 & 381.52 & 1964.58 & 833.028 & 983.46 & 506.70 \\
 
 --- end-multi-column
 
-\%\% Small sample size, Group overlap, predictive power \%\% \%\% Look
-at these overlapping reigions \%\% \%\% Cohen's d = 1.2015293213102536,
-this shows a strong effect size, but this \%\% \#\#\#\#\#\# Figure:
-Force Indentation for Apparent Cell YM Coloured by Test Group
+\#\#\#\#\#\# Figure: Force Indentation for Apparent Cell YM Coloured by
+Test Group
 
-{} \%\% {} \%\%
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/YM_FD_comparison_byCell.svg}}
 
 Figure: Young's Module by Group with Confidence Metrics
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/YM_CI_byGroup.svg}}
+\caption{YM\_CI\_byGroup}
+\end{figure}
 
 In the figure above the control group is contrasted with the treated
 group using notched Tukey style box plots overlaid with the mean and
 standard deviation 95\% confidence intervals as well as the apparent
 cell YM values for each group.
 
-\%\% Overlapping notches, what dose this mean for the usability of the
-metric \%\%
-
-\%\% {} \%\%
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Group_PDFs.svg}}
+\caption{Group\_PDFs}
+\end{figure}
 
 \subsection{Discussion}\label{discussion}
-
-\%\% Best and worst cases based on confidence intervals \%\%
 
 The sample sizes used in this report are not sufficient to produce a
 classifier suitable for use in industry or for diagnosis, considering
@@ -1165,21 +1144,58 @@ spread would render this method completely ineffective.
 
 Figure: Best vs Worst Case Probability Density Functions
 
-{}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Group_PDFs_LimCases.svg}}
+\caption{Group\_PDFs\_LimCases}
+\end{figure}
 
 It should be noted that with the small sample size of the treated group
-n=4, these metrics are significantly brought upward by the results of a
-single cell. However, other than the substantially higher Young's Module
+\(n=4\), these metrics are significantly brought upward by the results
+of a single cell and removing it significantly diminishes the
+statistical significance of the stiffening effect relied upon in this
+method. However, other than the substantially higher Young's Module
 values there is no reason to expect this cell or it's experiments to be
-erroneous. The Hetz fit's appear representative of the observed cell
-response with residuals similar to average across all fits 2e-11 N.
+erroneous. The Hertz fit's appear representative of the observed cell
+response with residuals similar to average across all fits
+\(2 \ \text{pN}\). The relevant metrics for the cell in question are
+below and the reader is encouraged to judge for their own satisfaction
+whether the conclusions drawn from the full dataset are sufficiently
+supported or if the influence of this single observation undermines the
+findings.
+
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell7.svg}}
+\caption{\textbar400}
+\end{figure}
+
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg}}
 
 In both the Control and the Treated group the majority of cells
 consistently exhibit YM lower than the group average with a few very
-high YM cells with higher inter experiment range. However, the range in
-YM increases linearly with with higher average YM values, when variance
-is considered proportionally there is no correlation, so this can likely
-be considered systematic error.
+high YM cells with higher inter experiment range. The range in YM
+increases linearly with with higher average YM values, however when
+range is considered as a proportion of average YM there is no
+correlation. This is unlikely to be a product of fitting error or the
+dimensionality of YM emphasising experimental inaccuracy based on how
+well the fittings match the observed cell responses, the cells are
+exhibiting a fixed linear elasticity within a given test but a range of
+different elasticises across tests and that range increases
+proportionally with the average. Neither is this a case of the higher
+average being a result of cells displaying higher variance in elasticity
+from a fixed minimum as the lower bound of even the \(1000\times\)
+bootstrapped confidence intervals rise in tandem with the average YM.
+
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/YM_RangeByApparentVal.svg}}
+\caption{YM\_RangeByApparentVal}
+\end{figure}
 
 Due to the unexplained variance in the range of YM across tests of
 single cells the possibility of it's relation to the diseased state has
@@ -1196,10 +1212,23 @@ as might be the case in a biopsy for example.
 
 \subsubsection{Control}\label{control}
 
-{} {} {} {} {} {} {} {} {} {} {}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell1.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell2.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell3.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell4.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell5.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell6.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell7.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell8.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell9.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell10.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell11.svg}}
 
 \subsubsection{Treated}\label{treated}
 
-{} {} {} {}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell5.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell6.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell7.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell12.svg}}
 
 \end{document}
