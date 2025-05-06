@@ -1,3 +1,3 @@
 
-This project investigates changes in mechanical properties of kidney cells when exposed to TGF-β1, which is known to induce renal disease [@gentleME2013-EpithelialCellTGFv]. 
+This project investigates changes in mechanical properties of kidney cells when exposed to TGF-$\beta 1$, which is known to induce renal disease [@gentleME2013-EpithelialCellTGFv]. 
 The aim of this project is to develop a method to quantify the progression of diabetic nephropathy from a mechanical perspective based on changes in mechanical properties observed in single cells using atomic force microscopy.

@@ -1,7 +1,7 @@
 
 %% ### Validity of results %%
 
-The treated cells where found to be on average twice as stiff as the untreated cells with a 517 Pa higher average young's modulus. Both groups where fairly broad with standard deviations of 306 and 541 Pa for control and treated respectively, while this gives the treated group a 77% higher variance, as a proportion of average YM they are similar being 55% and 67% of their respective means. Considering range as a proportion of of median 
+The treated cells where found to be on average twice as stiff as the untreated cells with a $517 \ \text{Pa}$ higher average young's modulus. Both groups where fairly broad with standard deviations of $306$ and $541 \ \text{Pa}$ for control and treated respectively, while this gives the treated group a $77\%$ higher variance, as a proportion of average YM they are similar being $55\%$ and $67\%$ of their respective means. Considering range as a proportion of of median 
 
 %%
 stdv/mean 
