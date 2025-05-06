@@ -16,7 +16,7 @@ $$\text{CI}_\mu = \left[ \mu - t^* \cdot \frac{\sigma}{\sqrt{n}},\ \mu + t^* \cd
 \text{CI}_\sigma = \left[ \sqrt{ \frac{(n-1) \cdot \sigma^2}{\chi^2_{\text{upper}}} },\ \sqrt{ \frac{(n-1) \cdot \sigma^2}{\chi^2_{\text{lower}}} } \right]
 $$
 
-Where confidence intervals where calculated for the standard deviation as is later necessary in determining the confidence in the group classifications and when montecarlo sampling, the chi distribution is used. This was originally tried using normal distributions being a generally acceptable approximation, however given the small and bottom biased experiment sample sets assuming symmetric distribution of probable standard deviations was not a fair representation.
+Where confidence intervals where calculated for the standard deviation as is later necessary in determining the confidence in the group classifications and when montecarlo sampling, the chi distribution is used. This was originally tried using normal distributions being a generally acceptable approximation, however given the small and bottom biased experiment sample sets symmetric distribution of probable standard deviations was not a fair representation.
 
 %% Bootstrapping, what is it, why did I do it %%
 

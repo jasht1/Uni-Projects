@@ -22,7 +22,7 @@ Largest Column: standard
 
 --- end-multi-column
 
-There where some trends observed in the general shape of the residual error, specifically; 1) an initial hump at the contact point likely due to unaccounted for electrostatic non contact forces due to the van der walls effect,  2) a middle dip and final flick where fit's are shallower than the actual force indention behaviour implying an under estimation of YM or a non linear elasticity. Both of these effects are particularly pronounced in the following fitting for this dataset this would be considered a bad fit.
+There where some trends observed in the general shape of the residual error, specifically; 1) an initial hump at the contact point likely unaccounted for electrostatic non contact forces due to Van der Waals effect,  2) a middle dip and final flick where fit's are shallower than the actual force indention behaviour implying an under estimation of YM or a non linear elasticity. Both of these effects are particularly pronounced in the following fitting for this dataset this would be considered a bad fit.
 
 ![](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
 
@@ -33,7 +33,9 @@ There where some trends observed in the general shape of the residual error, spe
 
 %% Plot showing trend in average variation across experiments %%
 
-There where no general trends observed across successive tests meaning there was no need to control for cell relaxation. The majority of cells showed strong agreement across tests resulting in tight confidence intervals and representative apparent YM values. The examples below are typical samples from each group.
+![](SuccessiveTest_trends_absolute.svg)
+
+There was a slight negative trend observed across successive tests indicative of cell relaxation with the first test indicating a 10% higher YM on average, however this was not deemed necessary to control for. The majority of cells showed strong agreement across tests resulting in tight confidence intervals and representative apparent YM values. The examples below are typical samples from each group.
 
 ###### Figure: Example Cell Fittings for Control vs Treated Group
 
@@ -57,7 +59,7 @@ Largest Column: standard
 --- end-multi-column
 
 
-There where cells that displayed significantly higher variation between experiments from both groups however this was not constantly associated with the order of the tests but did correlate with higher overall YM but was a sporadic effect. Given the shallow depth of the indention this is unlikely to be the influence of stiffer organelles but could perhaps be due to the probing site interacting with cytoskelital structures such as the microvilli force sensing/transducing elements or structural anchor points, however It would require more advanced imaging techniques to explain these variations with confidence. Notably cells in the treated group tended to have one test with a significantly lower apparent elasticity but strong agreement in the other 4 as is the case below. 
+There where cells that displayed significantly higher variation between experiments from both groups, this was not constantly associated with the order of the tests but did correlate with higher overall YM and only a sporadic effect. Given the shallow depth of the indention this is unlikely to be the influence of stiffer organelles but could perhaps be due to the probing site interacting with cytoskeletal structures such as the microvilli force sensing/transducing elements or structural anchor points, however It would require more advanced imaging techniques to explain these variations with confidence. Notably cells in the treated group tended to have one test with a significantly lower apparent elasticity but strong agreement in the other 4 as is the case below, this neither was consistently associated with test order. 
 
 --- start-multi-column: ID_2ugn
 ```column-settings
