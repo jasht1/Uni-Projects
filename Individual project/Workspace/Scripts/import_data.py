@@ -150,6 +150,18 @@ def get_jpk_batch_data(paths='default', relative_paths=False):
 
 # data = get_jpk_batch_data(paths) # Use w prev example
 
+def get_jpk_combined_data ():
+  batch_data = get_jpk_batch_data()
+
+  data_sets = []
+  for group in batch_data:
+    batch_data[group].insert(1, "Group" ,[group]* len(batch_data[group]))
+    data_sets.append(batch_data[group][["Group", "Filename", "Young's Modulus [Pa]", "ResidualRMS [N]"]])
+
+  combined_data = pd.concat(data_sets, ignore_index=True)
+
+  return combined_data
+
 def get_results_data(path="Cell",delimiter=','):
     if path == "Cell":
         path = "CellResults.csv"

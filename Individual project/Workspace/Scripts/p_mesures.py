@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
-from sklearn.metrics import roc_auc_score, accuracy_score
-from sklearn.linear_model import LogisticRegression
 
 def evaluate_predictive_power(df, measure_col="Young's Modulus [Pa]", group_col="Group"):
+    from sklearn.metrics import roc_auc_score, accuracy_score
+    from sklearn.linear_model import LogisticRegression
     # Convert group labels to binary
     group_labels = df[group_col].unique()
     assert len(group_labels) == 2, "Only supports binary groups"
@@ -41,18 +41,36 @@ def evaluate_predictive_power(df, measure_col="Young's Modulus [Pa]", group_col=
         "Median Threshold Accuracy": naive_acc
     }
 
-def combined_data ():
-  from import_data import get_jpk_batch_data as get_jpk_batch_data
-  batch_data = get_jpk_batch_data()
 
-  data_sets = []
-  for group in batch_data:
-    batch_data[group].insert(1, "Group" ,[group]* len(batch_data[group]))
-    data_sets.append(batch_data[group][["Group", "Filename", "Young's Modulus [Pa]", "ResidualRMS [N]"]])
+def corr_groupVym():
+    from import_data import get_jpk_combined_data
+    metrics = evaluate_predictive_power(get_jpk_combined_data())
+    print(metrics)
 
-  combined_data = pd.concat(data_sets, ignore_index=True)
+def corr_rangeVym ():
+    from import_data import get_results_data
+    data = get_results_data()
+    range = data["Max Young's Modulus [Pa]"] - data["Min Young's Modulus [Pa]"]
+    ym = data["Young's Modulus [Pa]"]
+    from matplotlib import pyplot as plt
+    plt.scatter(ym,range)
+    m,c = np.polyfit(ym,range,1)
+    plt.plot(ym,m*ym+c)
+    plt.show()
+    
+    print(data)
 
-  return combined_data
+corr_rangeVym()
 
-# metrics = evaluate_predictive_power(combined_data())
-# print(metrics)
+
+# def find_corr (metrics, by="Cell"):
+#     from import_data import get_results_data
+#     data = get_results_data(path=by)
+#     print(data)
+#     for metric in metrics:
+#         if metric in data:
+#             V1 = data[metric]
+
+# m1 = {'range':"Young's Modulus [Pa]", 'by':"Cell"}
+# m2 = 
+# find_corr([m1 , m2])

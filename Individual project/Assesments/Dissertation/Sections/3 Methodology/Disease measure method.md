@@ -1,50 +1,31 @@
-A Bayes classifier was constructed to quantify the probability of diabetic nephropathy from cell stiffness based on the effect observed in the experimental data. The control group is taken as a model of healthy cell presentation and the treated group representing the onset of diabetic nephropathy. Similarly to how cell properties where estimated from several tests, the typical group properties are estimated from several cells, conversely it can also be found by taking the averages and standard deviations of the whole dataset. It is often the case that considering the whole raw dataset provides more accurate picture of the group, however in this case it is appropriate to consider by subgroups i.e. by cells, this is because the samples are not independent and not representative of the test case. As it has been observed that successive tests are not introducing systematic error their average provides a more accurate estimation of the given cell, thus classification should be considered at the cell level. 
+A Bayes classifier was constructed to quantify the probability of diabetic nephropathy from cell stiffness based on the effect observed in the experimental data. The control group is taken as a model of healthy cell presentation and the treated group representing the onset of diabetic nephropathy. Similarly to how cell properties where estimated from several tests, the typical group properties are estimated from several cells, conversely it can also be found by taking the averages and standard deviations of the whole dataset. It is often the case that considering the whole raw dataset provides more accurate picture of the group, however in this case it is appropriate to consider by subgroups i.e. by cells, this is because the samples are not independent and not representative of the test case. As it has been observed that successive tests are not introducing systematic error their average provides a more accurate estimation of the given cell, thus classification should be considered at the cell level.
 
-
-%% The following is the general formula for normal distribution: 
-
-$$
-{\large f(x)=
-\frac{1}{\sigma \sqrt{2 \pi}}
-e^{\frac{-1}{2}
-\left( \cfrac{x-\mu}{\sigma}\right)^{2}}
-}
-\qquad
-\begin{align}
-f(x)	&= 	\text{Probability Density Function}\\
-x       &=  \text{Variable (i.e. Young's Modulus)}\\
-\sigma	&= 	\text{Standard Deviation}\\
-\mu	    &= 	\text{Mean}\\
-\end{align}
-$$ %%
-
-
-%% Bayes Classifier %%  
+%% Bayes Classifier %%
 
 Bayes Theorem (Eq below) enables us to quantify the probability a cell is diseased given its YM by considering the posterior probability that it is an occurrence in a group with the appropriate probability density function.
 
-$$\large
-P(G∣x) = \frac{P(x∣G) \cdot P(G)}{P(x)} 
+$$
+{\Large
+P(G∣x) = \frac{P(x∣G) \cdot P(G)}{P(x)}
+}
 \qquad
 \begin{align}
-P(G∣x)	&= 	\text{Posterior Probability}\\
-P(x∣G)  &=  \text{Likleyhood}\\
-P(G)	&= 	\text{Prior Probability}\\
-P(x)    &= 	\text{Evidence}\\
+P(G∣x) &= \text{Posterior Probability}\\
+P(x∣G) &= \text{Likleyhood}\\
+P(G)   &= \text{Prior Probability}\\
+P(x)   &= \text{Evidence}\\
 \end{align}
-​$$
+$$
 
 If we take healthy and diseased to be exclusive groups $G_{1}$ and $G_{2}$ then the probability of a cell being diseased would be given by:
 
 $$\large P(G_2 \mid x) = \frac{P(x \mid G_2) \cdot P(G_2)}{P(x \mid G_1) \cdot P(G_1) + P(x \mid G_2) \cdot P(G_2)}$$
 
-Where the likelihood of a given group is based on the normal distribution implied by the mean and standard deviation of the YM observed in the experimental data. 
-
-%% $$P(x \mid G) = \frac{1}{\sqrt{2\pi}\sigma_G} \exp\left( -\frac{(x - \mu_G)^2}{2\sigma_G^2} \right)
-$$ %%
+Where the likelihood of a given group is based on the normal distribution implied by the mean and standard deviation of the YM observed in the experimental data.
 
 $$
-{\large P(x \mid G) = 
+{\large
+P(x \mid G) =
 \frac{1}{\sigma_{G} \sqrt{2 \pi}}
 e^{\tfrac{-1}{2}
 \left( \cfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}
@@ -53,8 +34,8 @@ e^{\tfrac{-1}{2}
 \begin{align}
 P(x \mid G)	&= 	\text{Group Probability Density Function}\\
 x           &=  \text{Variable (i.e. Young's Modulus)}\\
-\sigma_{G}	&= 	\text{Group Standard Deviation}\\
-\mu_{G}	    &= 	\text{Group Mean}\\
+\sigma_{G}  &= 	\text{Group Standard Deviation}\\
+\mu_{G}     &= 	\text{Group Mean}\\
 \end{align}
 $$
 

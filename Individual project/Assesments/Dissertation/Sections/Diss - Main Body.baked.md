@@ -1,5 +1,5 @@
 ---
-title: Nanomechanical Analysis of Tubular Cell Cytoskeleton
+title: Nanomechanical Analysis of Renal Tubular Cell Cytoskeleton for the Detection of Renal Disease
 subtitle: 
 titlepage-logo: /home/joeashton/Sync/Obsidian/SuperVault/Core/Templates/Pandoc/attachments/UoL_logo.png
 author: Joseph Ashton
@@ -275,23 +275,18 @@ The difference between the Hertz elasticity model for a parabolic indentation an
 %% Quantify difference in Hertz v Sneddon average residuals %%
 
 ###### Figure: Comparison in Elasticity Fit Techniques for an Example Curve
---- start-multi-column: ID_31no
-```column-settings
-Number of Columns: 2
-Largest Column: standard
-```
 
 
 ![](file:///home/joe/Documents/Obsidian/SuperVault/Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
 
 
---- column-break ---
+
 
 
 ![](file:///home/joe/Documents/Obsidian/SuperVault/Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
 
 
---- end-multi-column
+
 
 There where some trends observed in the general shape of the residual error, specifically; 1) an initial hump at the contact point likely due to unaccounted for electrostatic non contact forces due to the van der walls effect,  2) a middle dip and final flick where fit's are shallower than the actual force indention behaviour implying an under estimation of YM or a non linear elasticity. Both of these effects are particularly pronounced in the following fitting for this dataset this would be considered a bad fit.
 
@@ -307,44 +302,37 @@ There where no general trends observed across successive tests meaning there was
 ###### Figure: Example Cell Fittings for Control vs Treated Group
 
 
---- start-multi-column: ID_xdg9
-```column-settings
-Number of Columns: 2
-Largest Column: standard
-```
+_xdg9
 
 
 ![](file:///home/joe/Documents/Obsidian/SuperVault/Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell6.svg)
 
 
---- column-break ---
+
 
 
 ![](file:///home/joe/Documents/Obsidian/SuperVault/Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Treated-Cell12.svg)
 
 
---- end-multi-column
+
 
 
 There where cells that displayed significantly higher variation between experiments from both groups however this was not constantly associated with the order of the tests. Given the shallow depth of the indention this is not likely the influence of stiffer organelles but could perhaps be due to the probing site interacting with cytoskelital structures such as the microvilli force sensing/transducing elements or structural anchor points, however It would require more advanced imaging techniques to explain these variations with confidence. Notably cells in the treated group tended to have one test with a significantly lower apparent elasticity but strong agreement in the other 4 as is the case below. 
 
---- start-multi-column: ID_2ugn
-```column-settings
-Number of Columns: 2
-Largest Column: standard
-```
+_2ugn
+
 
 
 ![](file:///home/joe/Documents/Obsidian/SuperVault/Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell4.svg)
 
 
---- column-break ---
+
 
 
 ![](file:///home/joe/Documents/Obsidian/SuperVault/Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Treated-Cell7.svg)
 
 
---- end-multi-column
+
 
 
 
@@ -355,11 +343,8 @@ Largest Column: standard
 The treated cells where found to be on average twice as stiff as the untreated cells with a 500 Pa higher average young's modulus in addition the treated group shows a 77% higher variance with a standard deviation of 541 Pa.  
 
 
---- start-multi-column: ID_3r15
-```column-settings
-Number of Columns: 2
-Largest Column: standard
-```
+_3r15
+
 
 
 ###### Figure: Cell Young's Modulus by test group
@@ -374,7 +359,7 @@ Largest Column: standard
 | Treated | 524.65 | 524.65 | 1761.58 | 807.94 | 975.53 | 540.96 |
 
 
---- column-break ---
+
 
 
 ###### Figure: Experiment-wise Young's Modulus (Pa) by test group
@@ -389,7 +374,7 @@ Largest Column: standard
 | Treated | 605.979 | 381.52  | 1964.58 | 833.028 | 983.46 | 506.70 |
 
 
---- end-multi-column
+
 
 
 

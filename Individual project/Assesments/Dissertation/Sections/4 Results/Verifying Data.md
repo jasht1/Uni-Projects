@@ -31,7 +31,9 @@ There where some trends observed in the general shape of the residual error, spe
 
 %% Checking for cell relaxation or systematic error based on observed trends in successive experimentation %%
 
-There where no general trends observed across successive tests meaning there was no need to control for cell relaxation. The majority of cells showed strong agreement across tests resulting in tight confidence intervals and representative apparent YM values. The examples below are emblematic of typical samples from each group.
+%% Plot showing trend in average variation across experiments %%
+
+There where no general trends observed across successive tests meaning there was no need to control for cell relaxation. The majority of cells showed strong agreement across tests resulting in tight confidence intervals and representative apparent YM values. The examples below are typical samples from each group.
 
 ###### Figure: Example Cell Fittings for Control vs Treated Group
 
@@ -55,7 +57,7 @@ Largest Column: standard
 --- end-multi-column
 
 
-There where cells that displayed significantly higher variation between experiments from both groups however this was not constantly associated with the order of the tests. Given the shallow depth of the indention this is not likely the influence of stiffer organelles but could perhaps be due to the probing site interacting with cytoskelital structures such as the microvilli force sensing/transducing elements or structural anchor points, however It would require more advanced imaging techniques to explain these variations with confidence. Notably cells in the treated group tended to have one test with a significantly lower apparent elasticity but strong agreement in the other 4 as is the case below. 
+There where cells that displayed significantly higher variation between experiments from both groups however this was not constantly associated with the order of the tests but did correlate with higher overall YM but was a sporadic effect. Given the shallow depth of the indention this is unlikely to be the influence of stiffer organelles but could perhaps be due to the probing site interacting with cytoskelital structures such as the microvilli force sensing/transducing elements or structural anchor points, however It would require more advanced imaging techniques to explain these variations with confidence. Notably cells in the treated group tended to have one test with a significantly lower apparent elasticity but strong agreement in the other 4 as is the case below. 
 
 --- start-multi-column: ID_2ugn
 ```column-settings

@@ -1,8 +1,22 @@
 
 %% ### Validity of results %%
 
-The treated cells where found to be on average twice as stiff as the untreated cells with a 500 Pa higher average young's modulus in addition the treated group shows a 77% higher variance with a standard deviation of 541 Pa.  
+The treated cells where found to be on average twice as stiff as the untreated cells with a 517 Pa higher average young's modulus. Both groups where fairly broad with standard deviations of 306 and 541 Pa for control and treated respectively, while this gives the treated group a 77% higher variance, as a proportion of average YM they are similar being 55% and 67% of their respective means. Considering range as a proportion of of median 
 
+%%
+stdv/mean 
+`=305.52/457.99*100`
+`=540.96/975.53*100`
+median/mean 
+`=392.04/457.99*100`
+`=807.94/975.53*100`
+range/mean
+`=( 982.09 - 143.85) / 457.99*100`
+`=(1761.58 - 524.65) / 975.53*100`
+range/median
+`=( 982.09 - 143.85) / 392.04*100`
+`=(1761.58 - 524.65) / 807.94*100`
+%%
 
 --- start-multi-column: ID_3r15
 ```column-settings
@@ -11,9 +25,9 @@ Largest Column: standard
 ```
 
 
-###### Figure: Cell Young's Modulus by test group
+###### Figure: Population Shape of Cell Young's Modulus by group
 
-![[YM+Variance_Viol_comparison_byCell.svg|350]]
+![[YM+Range_Viol_comparison_byCell.svg|350]]
 
 ###### Table: Cell Young's Modulus (Pa) statistics by test group
 
@@ -26,11 +40,11 @@ Largest Column: standard
 --- column-break ---
 
 
-###### Figure: Experiment-wise Young's Modulus (Pa) by test group
+###### Figure: Population Shape of Test Young's Modulus (Pa) by group
 
 ![[YM+Residuals_Viol_comparison_byExperiment.svg|350]]
 
-###### Table: Experiment-wise Young's Modulus (Pa) statistics by test group
+###### Table: Test Young's Modulus (Pa) statistics by test group
 
 | Group   | Mode    | Min     | Max     | Median  | Mean   | StDev  |
 | ------- | ------- | ------- | ------- | ------- | ------ | ------ |

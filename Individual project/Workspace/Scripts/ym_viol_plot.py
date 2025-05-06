@@ -51,18 +51,18 @@ def viol_plot (by='Cell', dataset='results', with_scatter=False, colour_by="Resi
     from import_data import get_results_batch_data
     batch_data = get_results_batch_data(path=by)
 
-  if colour_by=="Cell Young's Modulus range [Pa]":
+  if colour_by=="Cell Young's Modulus Range [Pa]":
     from import_data import get_results_data
     data = get_results_data()
-    data["Cell Young's Modulus range [Pa]"] = data["Max Young's Modulus [Pa]"] - data["Min Young's Modulus [Pa]"]
+    data["Cell Young's Modulus Range [Pa]"] = data["Max Young's Modulus [Pa]"] - data["Min Young's Modulus [Pa]"]
     batch_data={
         'Control': data[data['Group'] == "Control"],
         'Treated': data[data['Group'] == "Treated"]
     }
-  if colour_by=="Cell Young's Modulus variance ±%":
+  if colour_by=="Cell Young's Modulus Range Across Tests ±%":
     from import_data import get_results_data
     data = get_results_data()
-    data["Cell Young's Modulus variance ±%"] = (data["Max Young's Modulus [Pa]"] - data["Min Young's Modulus [Pa]"])/data["Young's Modulus [Pa]"]
+    data["Cell Young's Modulus Range Across Tests ±%"] = (data["Max Young's Modulus [Pa]"] - data["Min Young's Modulus [Pa]"])/data["Young's Modulus [Pa]"]
     batch_data={
         'Control': data[data['Group'] == "Control"],
         'Treated': data[data['Group'] == "Treated"]
@@ -70,6 +70,6 @@ def viol_plot (by='Cell', dataset='results', with_scatter=False, colour_by="Resi
 
   YM_viol_plot(batch_data, with_scatter=True, colour_by=colour_by, title=title)
 
-viol_plot(colour_by="Cell Young's Modulus range [Pa]", title="Young's Modulus per Cell \n Coloured by Range Across Experiments")
-# viol_plot(colour_by="Cell Young's Modulus variance ±%", title="Young's Modulus per Cell \n Coloured by Variance Across Experiments")
-viol_plot(by="experiment", title="Young's Modulus per Experiment \n Coloured by Residual Fit Error")
+# viol_plot(colour_by="Cell Young's Modulus Range [Pa]", title="Young's Modulus per Cell \n Coloured by Range Across Tests")
+viol_plot(colour_by="Cell Young's Modulus Range Across Tests ±%", title="Young's Modulus per Cell \n Coloured by Range Across Tests")
+# viol_plot(by="experiment", title="Young's Modulus per Experiment \n Coloured by Residual Fit Error")

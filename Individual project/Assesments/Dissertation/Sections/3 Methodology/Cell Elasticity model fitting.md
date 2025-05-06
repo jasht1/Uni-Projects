@@ -5,7 +5,7 @@ Experimental data was received in the form of `.jpk-force` logs of head height p
 
 %% How did I determine the appropriate cell YM given the experimental data %%
 
-As each cell was tested 5 times the apparent YM of a cell was taken to be the average average  of the Hertz/Sneddon fits. To validate the results the force indentation curves of the experiments and the implied curve of the apparent YM where plotted and inspected visually checking for cell relaxation or systematic error based on observable trends in successive experimentation or any apparent anomalies. In addition the 95% confidence interval of the apparent cell YM was calculated for the natural set and a $100 \times$ bootstrapped super set this was inspected on log scales given that the error margin increases proportionally with higher YM, however for consistency with the rest of the report figures included in the results section maintain linear YM axis of 0,2000.
+As each cell was tested 5 times the apparent YM of a cell was taken to be the average average  of the Hertz/Sneddon fits. To validate the results the force indentation curves of the experiments and the implied curve of the apparent YM where plotted and inspected visually checking for cell relaxation or systematic error based on observable trends in successive experimentation or any apparent anomalies. In addition the 95% confidence interval of the apparent cell YM was calculated for the natural set and a $100 \times$ bootstrapped super set and these metrics where inspected to assert whether the apparent YM given by the average is a fair representation of the cell behaviour.
 
 %% Confidence Intervals, what are they and how did I calculate them %%
 

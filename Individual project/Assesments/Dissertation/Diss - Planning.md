@@ -1,6 +1,7 @@
 
+## Drafting
 
-- [x] [Abstract](Sections/Abstract.md) ✅ 2025-05-01
+- [x] [Abstract](Abstract.md) ✅ 2025-05-01
 - [ ] [Introduction](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/1%20Introduction/Introduction.md)
 - [x] [Background](Sections/Background.md) ✅ 2025-05-01
 	- [x] [Diabetic Nephropathy](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/2%20Background/Diabetic%20Nephropathy.md) ✅ 2025-05-01
@@ -10,9 +11,10 @@
 - [ ] [Methodology](Methodology.md)
 	- [x] [Experimental methodology](Experimental%20methodology.md) ✅ 2025-05-01
 	- [x] [Cell Elasticity model fitting](Cell%20Elasticity%20model%20fitting.md) ✅ 2025-05-02
-	- [ ] [Verifying Data](Verifying%20Data.md)
+	- [x] [Verifying Data](Verifying%20Data.md) ✅ 2025-05-05
 	- [ ] [Disease measure method](Disease%20measure%20method.md)
 - [ ] [Results](Results.md)
+	- [x] [Verifying Data](Verifying%20Data.md) ✅ 2025-05-04
 	- [x] [YM comparison between groups](YM%20comparison%20between%20groups.md) ✅ 2025-05-02
 	- [ ] [Certainty Interval](Certainty%20Interval.md)
 	- [ ] [Disease measure](Disease%20measure.md)
@@ -23,3 +25,4 @@
 	- [ ] [Potential for Diagnosis](Potential%20for%20Diagnosis.md)
 	- [ ] [Potential for Drug Screening](Potential%20for%20Drug%20Screening.md)
 	- [ ] [Recommendations](Recommendations.md)
+

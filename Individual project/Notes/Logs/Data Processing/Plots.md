@@ -47,7 +47,7 @@ https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.violinplot.html
 
 ![](YM+Residuals_Viol_comparison_byExperiment.svg)
 ![](YM+Range_Viol_comparison_byCell.svg)
-![](YM+Variance_Viol_comparison_byCell.svg)
+![](YM+RelRange_Viol_comparison_byCell.svg)
 See the code in [plots](plots.py) script
 
 ## Indentation vs Force

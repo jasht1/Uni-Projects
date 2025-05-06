@@ -1,5 +1,5 @@
 ---
-title: Nanomechanical Analysis of Tubular Cell Cytoskeleton
+title: Nanomechanical Analysis of Renal Tubular Cell Cytoskeleton for the Detection of Renal Disease
 subtitle: 
 titlepage-logo: /home/joeashton/Sync/Obsidian/SuperVault/Core/Templates/Pandoc/attachments/UoL_logo.png
 author: Joseph Ashton
