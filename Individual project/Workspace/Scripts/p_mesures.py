@@ -50,33 +50,28 @@ def corr_groupVym():
 def corr_rangeVym ():
   from import_data import get_results_data
   from matplotlib import pyplot as plt
+  plt.figure(figsize=(6,4))
   data = get_results_data()
-  range = data["Max Young's Modulus [Pa]"] - data["Min Young's Modulus [Pa]"]
-  ym = data["Young's Modulus [Pa]"]
-  m,c = np.polyfit(ym,range,1)
-  plt.plot(ym,m*ym+c)
+
   colors = {'Control': 'blue', 'Treated': 'red'}
   for group in data["Group"].unique():
     group_data=data[data["Group"]==group]
     range = group_data["Max Young's Modulus [Pa]"] - group_data["Min Young's Modulus [Pa]"]
     ym = group_data["Young's Modulus [Pa]"]
-    plt.scatter(ym,range,c=colors[group])
+    plt.scatter(ym,range,c=colors[group],alpha=0.3)
     m,c = np.polyfit(ym,range,1)
-    plt.plot(ym,m*ym+c,c=colors[group])
+    plt.plot(ym,m*ym+c,label=f"{group} Group Trend",c=colors[group],alpha=0.5)
+
+  range = data["Max Young's Modulus [Pa]"] - data["Min Young's Modulus [Pa]"]
+  ym = data["Young's Modulus [Pa]"]
+  m,c = np.polyfit(ym,range,1)
+  plt.plot(ym,m*ym+c, label="General Trend",alpha=0.5,linewidth=2.5)
+
+  plt.legend()
+  plt.xlabel("Apparent Cell Young's Modulus [Pa]")
+  plt.ylabel("Range in Young's Modulus Acrros Tests [Pa]")
+  plt.tight_layout()
   plt.show()
 
 corr_rangeVym()
-# corr_rangeVym("Treated")
 
-
-# def find_corr (metrics, by="Cell"):
-#     from import_data import get_results_data
-#     data = get_results_data(path=by)
-#     print(data)
-#     for metric in metrics:
-#         if metric in data:
-#             V1 = data[metric]
-
-# m1 = {'range':"Young's Modulus [Pa]", 'by':"Cell"}
-# m2 = 
-# find_corr([m1 , m2])
