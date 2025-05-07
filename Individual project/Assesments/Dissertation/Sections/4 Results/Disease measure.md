@@ -4,4 +4,6 @@
 
 %% Disease measure against YM coloured by test group %%
 
-![Comparison of Distribution Models on Decision Curve](Classification_Threashhold_by_Distribution_Model.svg)
+> ![Comparison of Distribution Models on Decision Curve](Classification_Threashhold_by_Distribution_Model.svg)
+> Comparison of Distribution Models on Decision Curve
+

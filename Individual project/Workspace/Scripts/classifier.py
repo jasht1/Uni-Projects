@@ -20,6 +20,48 @@ def get_ci(mean, std, n, alpha=0.05):
   
   return ci_mean, ci_std
 
+def direct_likelihood(data, method, YM, n_samples=1, mean=None, std=None, a_skew=None):
+  if method == "kde":
+      kde = stats.gaussian_kde(data)
+      return kde(YM)
+  elif method == "gaussian":
+      mean = data.mean() if mean is None else mean
+      std = data.std() if std is None else std
+      return stats.norm.pdf(YM, loc=mean, scale=std / np.sqrt(n_samples))
+  elif method == "skewnorm":
+    if a_skew is None:
+      skew_val = (data.mean() - data.median()) / data.std()
+      a_skew = np.clip(skew_val * 10, -20, 20)
+    mean = data.mean() if mean is None else mean
+    std = data.std() if std is None else std
+    return stats.skewnorm.pdf(YM, a=a_skew, loc=mean, scale=std / np.sqrt(n_samples))
+
+def sample_params(data, mc_resampling=1000, alpha=0.05):
+  mean = data.mean()
+  std = data.std()
+  n = len(data)
+  ci_mean, ci_std = get_ci(mean, std, n, alpha)
+  sampled_means = np.random.normal(loc=mean, scale=(ci_mean[1] - ci_mean[0]) / 2, size=mc_resampling)
+  sampled_stds = np.abs(np.random.normal(loc=std, scale=(ci_std[1] - ci_std[0]) / 2, size=mc_resampling))
+  return sampled_means, sampled_stds
+
+def monte_carlo_likelihood(data, method, YM, mc_resampling=1000, n_samples=5, alpha=0.05):
+  likelihood_samples = np.zeros((mc_resampling, len(YM)))
+  sampled_means, sampled_stds = sample_params(data, mc_resampling=mc_resampling, alpha=alpha)
+
+  if method == "skewnorm":
+    data_skew = (data.mean() - data.median()) / data.std()
+    a_skew = np.clip(data_skew * 10, -20, 20)
+  else:
+    a_skew = None
+
+  for i in range(mc_resampling):
+    likelihood_samples[i] = direct_likelihood(
+        data, method, YM, n_samples=n_samples,
+        mean=sampled_means[i], std=sampled_stds[i], a_skew=a_skew,
+      )
+    return likelihood_samples.mean(axis=0)
+
 def get_group_probability(
     YM: Union[float, np.ndarray, pd.Series],
     control_data: pd.Series,
@@ -33,52 +75,10 @@ def get_group_probability(
   ):
   YM = np.atleast_1d(YM)
 
-  def sample_params(data):
-    mean = data.mean()
-    std = data.std()
-    n = len(data)
-    ci_mean, ci_std = get_ci(mean, std, n, alpha)
-    sampled_means = np.random.normal(loc=mean, scale=(ci_mean[1] - ci_mean[0]) / 2, size=mc_resampling)
-    sampled_stds = np.abs(np.random.normal(loc=std, scale=(ci_std[1] - ci_std[0]) / 2, size=mc_resampling))
-    return sampled_means, sampled_stds
-
-  def monte_carlo_likelihood(data, method):
-    likelihood_samples = np.zeros((mc_resampling, len(YM)))
-    sampled_means, sampled_stds = sample_params(data)
-
-    if method == "skewnorm":
-      data_skew = (data.mean() - data.median()) / data.std()
-      a_skew = np.clip(data_skew * 10, -20, 20)
-    else:
-      a_skew = None
-
-    for i in range(mc_resampling):
-      likelihood_samples[i] = direct_likelihood(
-          data, method, YM, n_samples=n_samples,
-          mean=sampled_means[i], std=sampled_stds[i], a_skew=a_skew,
-        )
-      return likelihood_samples.mean(axis=0)
-
-  def direct_likelihood(data, method, YM, n_samples=1, mean=None, std=None, a_skew=None):
-    if method == "kde":
-        kde = stats.gaussian_kde(data)
-        return kde(YM)
-    elif method == "gaussian":
-        mean = data.mean() if mean is None else mean
-        std = data.std() if std is None else std
-        return stats.norm.pdf(YM, loc=mean, scale=std / np.sqrt(n_samples))
-    elif method == "skewnorm":
-      if a_skew is None:
-        skew_val = (data.mean() - data.median()) / data.std()
-        a_skew = np.clip(skew_val * 10, -20, 20)
-      mean = data.mean() if mean is None else mean
-      std = data.std() if std is None else std
-      return stats.skewnorm.pdf(YM, a=a_skew, loc=mean, scale=std / np.sqrt(n_samples))
-
   # Choose appropriate likelihood estimation
   if mc_resampling > 1:
-    likelihood_control = monte_carlo_likelihood(control_data, method)
-    likelihood_treated = monte_carlo_likelihood(treated_data, method)
+    likelihood_control = monte_carlo_likelihood(control_data, method, YM, n_samples=n_samples, mc_resampling=mc_resampling, alpha=alpha)
+    likelihood_treated = monte_carlo_likelihood(treated_data, method, YM, n_samples=n_samples, mc_resampling=mc_resampling, alpha=alpha)
   else:
     likelihood_control = direct_likelihood(control_data, method, YM)
     likelihood_treated = direct_likelihood(treated_data, method, YM)
