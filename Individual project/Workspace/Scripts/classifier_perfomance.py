@@ -5,51 +5,72 @@ from matplotlib.cm import ScalarMappable
 from classifier import get_group_probability
 
 
-def classification_threashold(mc_resampling=1000,pos_only=False, cbg=True):
-  YM_vals = np.linspace(0, 2000, 500)
+def classification_threashold(mc_resampling=1000, pos_only=False, cbg=True):
   from import_data import get_results_batch_data
+  from classifier import get_group_probability
+  YM_vals = np.linspace(0, 2000, 500)
   batch_data = get_results_batch_data(path="Experiment")
   control_data = batch_data["Control"]["Young's Modulus [Pa]"]
   treated_data = batch_data["Treated"]["Young's Modulus [Pa]"]
-  norm_healthy_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Control", n_samples=5, method="gaussian")
-  norm_diseased_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Treated", n_samples=5, method="gaussian")
-  pnorm_healthy_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Control", n_samples=5)
-  pnorm_diseased_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Treated", n_samples=5)
-  mc_healthy_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Control", n_samples=5, mc_resampling=mc_resampling)
-  mc_diseased_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Treated", n_samples=5, mc_resampling=mc_resampling)
+  methods = ["gaussian", "kde", "skewnorm"]
+  colors = {"Control": "blue", "Treated": "red"}
 
-  # Plot
   plt.figure(figsize=(6, 4))
 
-  plt.plot(YM_vals, norm_healthy_probs,  label="P(Healthy | YM) from Raw Data \n(assume normally distributed)", color="blue", alpha=0.5, linestyle=':')
-  plt.plot(YM_vals, norm_diseased_probs, label="P(diseased | YM) from Raw Data \n(assume normally distributed)", color="red", alpha=0.5, linestyle=':')
-  plt.plot(YM_vals, pnorm_healthy_probs,  label="P(Healthy | YM) from Raw Data", color="blue", alpha=0.5, linestyle='--')
-  plt.plot(YM_vals, pnorm_diseased_probs, label="P(diseased | YM) from Raw Data", color="red", alpha=0.5, linestyle='--')
-  plt.plot(YM_vals, mc_healthy_probs,  label="P(Healthy | YM) from Monte Carlo", color="blue")
-  plt.plot(YM_vals, mc_diseased_probs, label="P(diseased | YM) from Monte Carlo", color="red")
+  for method in methods:
+    for group in ["Control", "Treated"]:
+      probs_mc = get_group_probability(
+        YM_vals, control_data, treated_data,
+        p_of_group=group,
+        n_samples=5,
+        mc_resampling=mc_resampling,
+        method=method
+      )
+      probs_nomc = get_group_probability(
+        YM_vals, control_data, treated_data,
+        p_of_group=group,
+        n_samples=5,
+        mc_resampling=0,
+        method=method
+      )
+      label_mc = f"{method.title()} - {group} (MC)"
+      label_nomc = f"{method.title()} - {group} (No MC)"
+      linestyle_mc = "-"
+      linestyle_nomc = "--"
+
+      plt.plot(YM_vals, probs_mc, label=label_mc, color=colors[group], linestyle=linestyle_mc)
+      plt.plot(YM_vals, probs_nomc, label=label_nomc, color=colors[group], linestyle=linestyle_nomc, alpha=0.5)
 
   if pos_only:
-    plt.ylim(0.5,1)
+    plt.ylim(0.5, 1)
   else:
     plt.axhline(0.5, color="gray", linestyle="--", label="Decision Threshold")
-  if cbg:  # colour background by priorprob
+
+  if cbg:
     cmap = plt.get_cmap('RdBu')
     norm = Normalize(vmin=0, vmax=1)
-    colors = cmap(norm(mc_healthy_probs))
-    grdnt = np.tile(colors[np.newaxis, :, :], (100, 1, 1))
-
-    # Overlay on plot
-    plt.imshow(
-        grdnt,
-        extent=[YM_vals.min(), YM_vals.max(), 0,1],
-        aspect='auto',
-        alpha=0.5,
-        origin='lower'
+    # Choose one MC probability to color by — here we use gaussian Control
+    ref_probs = get_group_probability(
+      YM_vals, control_data, treated_data,
+      p_of_group="Control",
+      n_samples=5,
+      mc_resampling=mc_resampling,
+      method="gaussian"
     )
+    colors = cmap(norm(ref_probs))
+    grdnt = np.tile(colors[np.newaxis, :, :], (100, 1, 1))
+    plt.imshow(
+      grdnt,
+      extent=[YM_vals.min(), YM_vals.max(), 0, 1],
+      aspect='auto',
+      alpha=0.5,
+      origin='lower'
+    )
+
   plt.xlabel("Young's Modulus (Pa)")
   plt.ylabel("Posterior Probability")
-  plt.title("Single Cell Classification Threshold Curves")
-  plt.legend()
+  plt.title("Single Cell Classification Threshold Curves by Method")
+  plt.legend(fontsize=8, loc="best")
   plt.grid(True)
   plt.tight_layout()
   plt.show()
