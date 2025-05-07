@@ -4,5 +4,4 @@
 
 %% Disease measure against YM coloured by test group %%
 
-
-![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Classification_Threashhold.svg)![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Classification_Boundry_v_Samples.svg)
+![Comparison of Distribution Models on Decision Curve](Classification_Threashhold_by_Distribution_Model.svg)

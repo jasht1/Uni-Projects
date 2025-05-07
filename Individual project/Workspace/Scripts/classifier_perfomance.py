@@ -5,41 +5,40 @@ from matplotlib.cm import ScalarMappable
 from classifier import get_group_probability
 
 
-def classification_threashold(mc_resampling=1000, pos_only=False, cbg=True):
+def classification_threshold(mc_resampling=0, pos_only=False, cbg=True):
   from import_data import get_results_batch_data
-  from classifier import get_group_probability
   YM_vals = np.linspace(0, 2000, 500)
   batch_data = get_results_batch_data(path="Experiment")
   control_data = batch_data["Control"]["Young's Modulus [Pa]"]
   treated_data = batch_data["Treated"]["Young's Modulus [Pa]"]
   methods = ["gaussian", "kde", "skewnorm"]
-  colors = {"Control": "blue", "Treated": "red"}
+  cmap = plt.get_cmap('tab20')
 
   plt.figure(figsize=(6, 4))
 
-  for method in methods:
-    for group in ["Control", "Treated"]:
+  for i, method in enumerate(methods):
+    color = cmap(i * 2)
+    probs_nomc = get_group_probability(
+      YM_vals, control_data, treated_data,
+      p_of_group="Treated", n_samples=5, mc_resampling=0, method=method
+    )
+    plt.plot(
+      YM_vals, probs_nomc, label=f"{method.title()}",
+      color=color, linestyle="-", linewidth=2.5, # alpha=0.7
+    )
+
+    if mc_resampling > 0 and method != "kde":
+      # Monte Carlo
+      color = cmap(i * 2+1)
       probs_mc = get_group_probability(
         YM_vals, control_data, treated_data,
-        p_of_group=group,
-        n_samples=5,
-        mc_resampling=mc_resampling,
-        method=method
+        p_of_group="Treated",
+        n_samples=5, mc_resampling=mc_resampling, method=method
       )
-      probs_nomc = get_group_probability(
-        YM_vals, control_data, treated_data,
-        p_of_group=group,
-        n_samples=5,
-        mc_resampling=0,
-        method=method
+      plt.plot(
+        YM_vals, probs_mc, label=f"{method.title()} (MC)",
+        color=color, linestyle="--"
       )
-      label_mc = f"{method.title()} - {group} (MC)"
-      label_nomc = f"{method.title()} - {group} (No MC)"
-      linestyle_mc = "-"
-      linestyle_nomc = "--"
-
-      plt.plot(YM_vals, probs_mc, label=label_mc, color=colors[group], linestyle=linestyle_mc)
-      plt.plot(YM_vals, probs_nomc, label=label_nomc, color=colors[group], linestyle=linestyle_nomc, alpha=0.5)
 
   if pos_only:
     plt.ylim(0.5, 1)
@@ -47,35 +46,31 @@ def classification_threashold(mc_resampling=1000, pos_only=False, cbg=True):
     plt.axhline(0.5, color="gray", linestyle="--", label="Decision Threshold")
 
   if cbg:
-    cmap = plt.get_cmap('RdBu')
     norm = Normalize(vmin=0, vmax=1)
-    # Choose one MC probability to color by — here we use gaussian Control
     ref_probs = get_group_probability(
       YM_vals, control_data, treated_data,
-      p_of_group="Control",
+      p_of_group="Treated",
       n_samples=5,
       mc_resampling=mc_resampling,
       method="gaussian"
     )
-    colors = cmap(norm(ref_probs))
-    grdnt = np.tile(colors[np.newaxis, :, :], (100, 1, 1))
+    bg_colors = plt.get_cmap('RdBu')(norm(ref_probs))
+    gradient = np.tile(bg_colors[np.newaxis, :, :], (100, 1, 1))
     plt.imshow(
-      grdnt,
+      gradient,
       extent=[YM_vals.min(), YM_vals.max(), 0, 1],
-      aspect='auto',
-      alpha=0.5,
-      origin='lower'
+      aspect='auto', alpha=0.5, origin='lower'
     )
 
   plt.xlabel("Young's Modulus (Pa)")
-  plt.ylabel("Posterior Probability")
-  plt.title("Single Cell Classification Threshold Curves by Method")
-  plt.legend(fontsize=8, loc="best")
+  plt.ylabel("Posterior Probability (Treated)")
+  plt.title("Single Cell Classification Threshold Curves \nby Distribution Modeling Method")
+  plt.legend()
   plt.grid(True)
   plt.tight_layout()
   plt.show()
 
-classification_threashold(mc_resampling=100)
+classification_threshold()
 
 
 def n_samples_effect(
