@@ -27,10 +27,9 @@ def get_group_probability(
     p_of_group: str="Treated",
     alpha: float = 0.05,
     prior_control: float = 0.5,
-    n_samples: int = 1,  # WIP
+    n_samples: int = 1,
     mc_resampling: int = 0,
   ):
-
   YM = np.atleast_1d(YM) # Support scalar input
 
   if mc_resampling > 1 :
@@ -50,14 +49,14 @@ def get_group_probability(
     likelihood_treated = np.zeros_like(likelihood_control)
 
     for i in range(mc_resampling):
-      likelihood_control[i] = stats.norm.pdf(YM, loc=control_means[i], scale=control_stds[i] / np.sqrt(mc_resampling))
-      likelihood_treated[i] = stats.norm.pdf(YM, loc=treated_means[i], scale=treated_stds[i] / np.sqrt(mc_resampling))
+      likelihood_control[i] = stats.norm.pdf(YM, loc=control_means[i], scale=control_stds[i] / np.sqrt(n_samples))
+      likelihood_treated[i] = stats.norm.pdf(YM, loc=treated_means[i], scale=treated_stds[i] / np.sqrt(n_samples))
 
     likelihood_control = likelihood_control.mean(axis=0)
     likelihood_treated = likelihood_treated.mean(axis=0)
   else:
-    likelihood_control = stats.norm.pdf(YM, loc=control_data.mean(), scale=control_data.std())
-    likelihood_treated = stats.norm.pdf(YM, loc=treated_data.mean(), scale=treated_data.std())
+    likelihood_control = stats.norm.pdf(YM, loc=control_data.mean(), scale=control_data.std() / np.sqrt(n_samples))
+    likelihood_treated = stats.norm.pdf(YM, loc=treated_data.mean(), scale=treated_data.std() / np.sqrt(n_samples))
 
   # Bayes' Rule
   p_control = prior_control
