@@ -10,17 +10,17 @@ def classification_threashold(pos_only=False, cbg=True):
   control_data = batch_data["Control"]["Young's Modulus [Pa]"]
   treated_data = batch_data["Treated"]["Young's Modulus [Pa]"]
   healthy_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Control", n_samples=5)
-  deseased_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Treated", n_samples=5)
+  diseased_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Treated", n_samples=5)
   mc_healthy_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Control", n_samples=5, mc_resampling=10000)
-  mc_deseased_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Treated", n_samples=5, mc_resampling=10000)
+  mc_diseased_probs = get_group_probability(YM_vals, control_data, treated_data, p_of_group="Treated", n_samples=5, mc_resampling=10000)
 
   # Plot
   plt.figure(figsize=(6, 4))
 
   plt.plot(YM_vals, healthy_probs,  label="P(Healthy | YM) from Raw Data", color="blue", alpha=0.5, linestyle='--')
-  plt.plot(YM_vals, deseased_probs, label="P(Deseased | YM) from Raw Data", color="red", alpha=0.5, linestyle='--')
+  plt.plot(YM_vals, diseased_probs, label="P(diseased | YM) from Raw Data", color="red", alpha=0.5, linestyle='--')
   plt.plot(YM_vals, mc_healthy_probs,  label="P(Healthy | YM) from Monte Carlo", color="blue")
-  plt.plot(YM_vals, mc_deseased_probs, label="P(Deseased | YM) from Monte Carlo", color="red")
+  plt.plot(YM_vals, mc_diseased_probs, label="P(diseased | YM) from Monte Carlo", color="red")
 
   if pos_only:
     plt.ylim(0.5,1)
@@ -44,7 +44,7 @@ def classification_threashold(pos_only=False, cbg=True):
     )
   plt.xlabel("Young's Modulus (Pa)")
   plt.ylabel("Posterior Probability")
-  plt.title("Classification Threshold Curves")
+  plt.title("Single Cell Classification Threshold Curves")
   plt.legend()
   plt.grid(True)
   plt.tight_layout()
