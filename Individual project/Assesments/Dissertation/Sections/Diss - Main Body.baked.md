@@ -25,6 +25,10 @@ The aim of this project is to develop a method to quantify the progression of di
 
 The mechanical properties of cells are finely tuned to their function, especially epithelial cells who's core role is to form active structural surfaces where correct functioning is a direct result of appropriate strength, stiffness, and shape. In patients suffering from diabetic nephropathy the alterations in renal tubule cell properties are directly associated with progression of the disease and further kidney damage. Increased renal tubule cell stiffness has been observed in association with renal disease and may have potential as a biomarker for diagnosis or drug development. This report will investigate a potential method for associating observed cell stiffness with progression of renal disease.  
 
+The progress of this project can be broken down into 4 successive objectives summarised in the boxes below, the methodology and results sections will reflect this structure.
+
+![](Methodology%20Summary%20Blocks.png)
+
 
 ## Background
 
@@ -109,18 +113,39 @@ The sample once mounted to the sample stage can be manoeuvred precisely in relat
 
 A typical force displacement curve from a nano indention experiment has the following shape seen in figure %% #WIP %% (A) below. A broadly level region where the probe is not in contact with the cell; the contact region; a sloped region where the probe is indenting the cell; the turnaround point; from which the same is repeated in reverse differing mainly at the point of separation [@kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
 
-> ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png)![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
-> Example AFM data from Radmacher 2007, (A) shows the curve as a whole, (B) zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular].
+
+--- start-multi-column: ID_orvl
+```column-settings
+Number of Columns: 3
+Largest Column: standard
+```
+
+
+> ![Example AFM data from Radmacher 2007 shows the curve as a whole [@radmacherM2007-StudyingMechanicsCellular]](fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png)
+
+
+--- column-break ---
+
+
+![Example AFM data from Radmacher 2007 zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular]](fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
+
+
+--- column-break ---
+
+
+> ![Contact point jump explanatory diagram from H.Butt 1995 [@buttHJ1995-MeasuringSurfaceForces]](AFM%20contact%20point%20jump.png)
+
+
+
+--- end-multi-column
+
 
 %% Contact point jump %%
 
-The exact point of contact is often ambiguous and rarely the same as the the point of separation. On approach the cantilever will be deflected away from the cell by van der waals forces until the spring force of the cantilever overcomes and surface tension takes hold [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
-The point of separation is typically clearer as it's associated with a "jump" in cantilever deflection as the surface tension / adhesion of the cell to the probe is overcome [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
 
-%% 
-> ![AFM contact point jump|400](AFM%20contact%20point%20jump.png)
-> [@buttHJ1995-MeasuringSurfaceForces]
-%%
+The exact point of contact is often ambiguous and rarely the same as the the point of separation. On approach the cantilever will be deflected away from the cell by Van Der Waals forces until the spring force of the cantilever overcomes and surface tension takes hold [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials]. The point of separation is typically clearer as it's associated with a "jump" in cantilever deflection as the surface tension / adhesion of the cell to the probe is overcome [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
+
+
 
 
 
@@ -128,13 +153,83 @@ The point of separation is typically clearer as it's associated with a "jump" in
 
 In order to calculate elasticity the experimental data must be fit to a theoretical mechanical model of the interaction. Below is a table outlining different model indention relationships.
 
-| Model                         | Force-Indentation relationship                                                                                            | Scope                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hertz                         | $$F = \frac{4}{3}E' \sqrt{R} \ \omega^{3/2}$$                                                                             | Hertz model approximates the shallow indention of two linearly elastic spheres with infinitesimal strains [@linDC2009-SphericalIndentationSoftMatterHertzianRegime; @radmacherM2007-StudyingMechanicsCellular; @jpkinstruments-JPKDataProcessing].                                                                                            |
-| DMT (DerjaguinMuller-Toporov) | $$F = F_{Hertz} - F_{det}$$<br>$$\delta = \frac{a}{2} \ln \frac{R_{i}+a}{R_{i}-a}$$                                       | Depending on the depth of indentation and the material interaction it can be important to account electrostatic non contact forces, the influence of which can be modelled using the Derjaguin approximation for interaction potential [@buttHJ1995-MeasuringSurfaceForces; @jpkinstruments-JPKDataProcessing].                               |
-| Fung                          | $$F = B\pi (\frac{a^5- 15Ra^4 + 75R^2a^3}{5Ra^2- 50R^2a + 125R^3})\text{exp}[b(\frac{a^3- 15Ra^2}{25R^2a- 125R^3})]<br>$$ | An exponential strain energy function based on mechanical testing of mesentery and arterial tissues, that models the non linear elasticity of cells [@fungY1967-ElasticitySoftTissues; @linDC2009-SphericalIndentationSoftMatterHertzianRegime]. This method is tangebly more precise but doesn't provide a simple value for young's modulus. |
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0470}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4133}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5397}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Model
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Force-Indentation relationship
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Scope
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Hertz & \(F = \frac{4}{3}E' \sqrt{R} \ \omega^{3/2}\) & Hertz model
+approximates the shallow indention of two linearly elastic spheres with
+infinitesimal strains {[}21{]}, {[}22{]}, {[}23{]}. \\
+DMT &
+\begin{minipage}[t]{\linewidth}
+\begin{equation*}
+\begin{aligned}
+F &= F_{\text{Hertz}} - F_{\text{det}} \\
+\delta &= \frac{a}{2} \ln \left( \frac{R_i + a}{R_i - a} \right)
+\end{aligned}
+\end{equation*}
+\end{minipage}
+& Depending on the depth of indentation and the material interaction it
+can be important to account electrostatic non contact forces, the
+influence of which can be modelled using the Derjaguin approximation for
+interaction potential {[}19{]}, {[}23{]}. \\
+Fung &
+\begin{minipage}[t]{\linewidth}
+\begin{equation*}
+\begin{aligned}
+F = &B\pi \left( \frac{N(a)}{D(a)} \right)
+\exp\left[ b \left( \frac{E(a)}{F(a)} \right) \right] \\ \\
+N(a) &= a^5 - 15Ra^4 + 75R^2a^3 \\
+D(a) &= 5Ra^2 - 50R^2a + 125R^3 \\
+E(a) &= a^3 - 15Ra^2 \\
+F(a) &= 25R^2a - 125R^3 \\
+\end{aligned}
+\end{equation*}
+\end{minipage}
+& An exponential strain energy function based on mechanical testing of
+mesentery and arterial tissues, that models the non linear elasticity of
+cells {[}22{]}, {[}24{]}. This method is tangebly more precise but
+doesn't provide a simple value for young's modulus. \\
+\end{longtable}
+
 
 %% Expand on obstacles with applying contact mechanics models to cells %%
+
+%% 
+Full Fung equation 
+$$F = B\pi (\frac{a^5- 15Ra^4 + 75R^2a^3}{5Ra^2- 50R^2a + 125R^3})\text{exp}[b(\frac{a^3- 15Ra^2}{25R^2a- 125R^3})]$$
+Thinner Fung equation
+$$
+\begin{align*}
+N(a) &= a^5 - 15Ra^4 + 75R^2a^3 \\
+D(a) &= 5Ra^2 - 50R^2a + 125R^3 \\
+E(a) &= a^3 - 15Ra^2 \\
+F(a) &= 25R^2a - 125R^3 \\
+\\
+F =\ &B\pi \left( \frac{N(a)}{D(a)} \right) \exp\left[ b \left( \frac{E(a)}{F(a)} \right) \right]
+\end{align*}
+$$ 
+$$ \begin{align*} N(a) &= a^5 - 15Ra^4 + 75R^2a^3 \\ D(a) &= 5Ra^2 - 50R^2a + 125R^3 \\ E(a) &= a^3 - 15Ra^2 \\ F(a) &= 25R^2a - 125R^3 \\ \\ F =\ &B\pi \left( \frac{N(a)}{D(a)} \right) \exp\left[ b \left( \frac{E(a)}{F(a)} \right) \right] \end{align*} $$ 
+%%
+
+%% Better Table
+
+%%
+
+Given the focus of this investigation is the elastic response of the cell membrane the non contact forces are relatively small and can be ignored by reducing the fitting strictness close to the contact point. The difference between the traditional Hertzian models and the power series approximations are not significant enough to justify the increased complexity in this case.
 
 ## Literature Review
 
@@ -157,13 +252,13 @@ The mechanical properties of tubular cells are largely a result of their cytoske
 
 The below table lists several papers utilising atomic force microscopes to produce force displacement curves from a bead tipped cantilever fitted to a hertz contact model to find cell elasticity.
 
-| Paper                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Cell Type                                                                            | Scope                                                                                                                                                                   | Cell Elasticity                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [@siamantourasE2016-QuantifyingCellularMechanics]  E. Siamantouras, C. E. Hills, P. E. Squires, and K.-K. Liu, ‘Quantifying cellular mechanics and adhesion in renal tubular injury using single cell force spectroscopy’, _Nanomedicine: Nanotechnology, Biology and Medicine_, vol. 12, no. 4, pp. 1013–1021, May 2016, doi: [10.1016/j.nano.2015.12.362](https://doi.org/10.1016/j.nano.2015.12.362).                                                     | HK2: immortalised human kidney proximal tubule  epithelial cell culture              | Over 30 cells each indented 5 times immediately above the nucleus producing over 150 curves.                                                                            | **control**: $320 \ \text{Pa}$ <br>cells treated with TGF-$\beta 1$: $549 \ \text{Pa}$   |
-| [@jafariA2024-MechanicalPropertiesHuman]  A. Jafari, A. Sadeghi, and M. Lafouti, ‘Mechanical properties of human kidney cells and their effects on the atomic force microscope beam vibrations’, _Microsc. Res. Tech._, vol. 87, no. 8, pp. 1704–1717, 2024, doi: [10.1002/jemt.24543](https://doi.org/10.1002/jemt.24543).                                                                                                                                  | HEK-293: immortalised human embryonic kidney cell culture                            | did not elaborate                                                                                                                                                       | $539.8 \ \text{Pa}$                                                          |
-| [@shimizuY2012-SimpleDisplaySystem]  Y. Shimizu, T. Kihara, S. M. A. Haghparast, S. Yuba, and J. Miyake, ‘Simple Display System of Mechanical Properties of Cells and Their Dispersion’, _PLOS ONE_, vol. 7, no. 3, p. e34305, Mar. 2012, doi: [10.1371/journal.pone.0034305](https://doi.org/10.1371/journal.pone.0034305).                                                                                                                                 | HEK-293: immortalised human embryonic kidney cell culture                            | The median of value of over 100 cells examined at 25 points each.                                                                                                       | mode value ($x_{0}$): $410 \ \text{Pa}$ <br>variance ($w$): $0.757$            |
-| [@buckleyST2012-CytoskeletalRearrangementTGFv1induced]  S. T. Buckley, C. Medina, A. M. Davies, and C. Ehrhardt, ‘Cytoskeletal re-arrangement in TGF-$\beta 1$-induced alveolar epithelial-mesenchymal transition studied by atomic force microscopy and high-content analysis’, _Nanomedicine: Nanotechnology, Biology and Medicine_, vol. 8, no. 3, pp. 355–364, Apr. 2012, doi: [10.1016/j.nano.2011.06.021](https://doi.org/10.1016/j.nano.2011.06.021). | A549: human lung alveolar carcinoma epithelial cell culture                          | On each cell, a $4 \times 4$ grid of force-distance curves was collected in at least 5 different positions (avoiding the nucleus and the very edge) producing over 750 curves. | On Glass: 8300 $\pm$ $1100 \ \text{Pa}$<br>On collagen I: $9100 \ \pm$ $2900 \ \text{Pa}$ |
-| [@wyssHM2011-BiophysicalPropertiesNormal]  H. M. Wyss _et al._, ‘Biophysical properties of normal and diseased renal glomeruli’, _Am J Physiol Cell Physiol_, vol. 300, no. 3, pp. C397–C405, Mar. 2011, doi: [10.1152/ajpcell.00438.2010](https://doi.org/10.1152/ajpcell.00438.2010).                                                                                                                                                                      | Sprague-Dawley rat kidney glomeruli capillary wall extracted by differential sieving | 10 different glomeruli with 10 measurements each                                                                                                                        | $2,300 \ \pm$ $160 \ \text{Pa}$                                                |
+| Paper                                                               | Cell Type                                                                            | Scope                                                                                                                                                                          | Cell Elasticity                                                                           |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| Siamantouras 2016 [@siamantourasE2016-QuantifyingCellularMechanics] | HK2: immortalised human kidney proximal tubule  epithelial cell culture              | Over 30 cells each indented 5 times immediately above the nucleus producing over 150 curves.                                                                                   | **control**: $320 \ \text{Pa}$ <br>cells treated with TGF-$\beta 1$: $549 \ \text{Pa}$    |
+| Jafari 2024 [@jafariA2024-MechanicalPropertiesHuman]                | HEK-293: immortalised human embryonic kidney cell culture                            | did not elaborate                                                                                                                                                              | $539.8 \ \text{Pa}$                                                                       |
+| Shimizu 2012 [@shimizuY2012-SimpleDisplaySystem]                    | HEK-293: immortalised human embryonic kidney cell culture                            | The median of value of over 100 cells examined at 25 points each.                                                                                                              | mode value ($x_{0}$): $410 \ \text{Pa}$ <br>variance ($w$): $0.757$                       |
+| Buckley 2012 [@buckleyST2012-CytoskeletalRearrangementTGFv1induced] | A549: human lung alveolar carcinoma epithelial cell culture                          | On each cell, a $4 \times 4$ grid of force-distance curves was collected in at least 5 different positions (avoiding the nucleus and the very edge) producing over 750 curves. | On Glass: 8300 $\pm$ $1100 \ \text{Pa}$<br>On collagen I: $9100 \ \pm$ $2900 \ \text{Pa}$ |
+| Wyss 2011 [@wyssHM2011-BiophysicalPropertiesNormal]                 | Sprague-Dawley rat kidney glomeruli capillary wall extracted by differential sieving | 10 different glomeruli with 10 measurements each                                                                                                                               | $2,300 \ \pm$ $160 \ \text{Pa}$                                                           |
 
 
 
@@ -178,6 +273,7 @@ The experimental procedure used to produce the data used in this report is detai
 The indentation experiments where carried out using a JPK Instruments CellHesion©200 module with a BioCell™ temperature controller to maintain a bed temperature of $37 \degree \text{C}$ on a TMC 63-530 anti-vibration table. Probes where constructed by attaching $11\ \micro \text{m}$ Polyscience PolyBeads® to Nanoworld TL-1 tipless cantilevers with a force constant of $0.03 \text{N/m}$. Each cell was indented 5 times directly above the nucleus at a constant speed of $5\ \micro \text{m / s}$ with intervals of 60 seconds. For each set of experiments the spring constant of the cantilever was calibrated using the thermal noise method and the cell's height was measured to determine an appropriate indentation depth to minimise the influence of the hard basal substrate. 
 
 %% thermal noise method how and why %%
+
 
 
 ### Elasticity Modeling
@@ -251,11 +347,13 @@ The prior probabilities will depend on the application, for high throughput scre
 
 
 
-The difference between the Hertz elasticity model for a parabolic indentation and the Hertz/Sneddon spherical indentation where minor producing effectively indistinguishable estimates for YM however the Hertz parabolic model resulted in a slightly but consistently higher residual fit error with it's slightly more progressive curvature.  Below are representative examples of each fit for the same force indentation curve.
+The difference between the Hertz elasticity model for a parabolic indentation and the Hertz/Sneddon spherical indentation where minor producing effectively indistinguishable estimates for YM however the Hertz parabolic model resulted in a slightly but consistently higher residual fit error with it's slightly more progressive curvature. For this reason the values from the Hertz/Sneddon spherical where preferred for all subsequent analysis.
+Below are representative examples of each fit for the same force indentation curve showing just how similar they are in practice.
 
 %% Quantify difference in Hertz v Sneddon average residuals %%
 
-###### Figure: Comparison in Elasticity Fit Techniques for an Example Curve
+%% ###### Figure: Comparison in Elasticity Fit Techniques for an Example Curve %%
+
 --- start-multi-column: ID_31no
 ```column-settings
 Number of Columns: 2
@@ -263,29 +361,48 @@ Largest Column: standard
 ```
 
 
-![](Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
+> ![Sneddon fit](Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
+> Hertz/Sneddon spherical indentation model fit
 
 
 --- column-break ---
 
 
-![](Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
+> ![](Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
+> Hertz parabolic indentation model fit
 
 
 --- end-multi-column
 
-There where some trends observed in the general shape of the residual error, specifically; 1) an initial hump at the contact point likely unaccounted for electrostatic non contact forces due to Van der Waals effect,  2) a middle dip and final flick where fit's are shallower than the actual force indention behaviour implying an under estimation of YM or a non linear elasticity. Both of these effects are particularly pronounced in the following fitting for this dataset this would be considered a bad fit.
+There where some trends observed in the general shape of the residual error, specifically; 1) an initial hump at the contact point likely unaccounted for electrostatic non contact forces due to Van der Waals effect,  2) a middle dip and final flick where fit's are shallower than the actual force indention behaviour implying an under estimation of YM or a non linear elasticity. The first effect of non contact forces is not relevant to this study of cytoskelital and thus a high tolerance for error near the contact region is tolerated and expected. For cells displaying non linear elastic behaviour the best single approximation was taken. Both of these effects are particularly pronounced in the following fitting (below left) for this dataset this would be considered a bad fit.
 
-![](Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
+
+
+--- start-multi-column: ID_iwtt
+```column-settings
+Number of Columns: 2
+Largest Column: standard
+```
+
+
+
+> ![Example of a bad fit](Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
+> Example of a poor fit to a non linear elastic response
 
 %% Figure showing all residual curves faintly with smoothed average of all and grouped %%
+
+--- column-break ---
+
+
+> ![Plot showing trend in average variation across experiments](SuccessiveTest_trends_absolute.svg)
+> Plot showing trend in average variation across experiments
+
+
+--- end-multi-column
 
 
 %% Checking for cell relaxation or systematic error based on observed trends in successive experimentation %%
 
-%% Plot showing trend in average variation across experiments %%
-
-![](SuccessiveTest_trends_absolute.svg)
 
 There was a slight negative trend observed across successive tests indicative of cell relaxation with the first test indicating a 10% higher YM on average, however this was not deemed necessary to control for. The majority of cells showed strong agreement across tests resulting in tight confidence intervals and representative apparent YM values. The examples below are typical samples from each group.
 
@@ -299,13 +416,15 @@ Largest Column: standard
 ```
 
 
-![](Fit%20Quality/Cells/Control-Cell6.svg)
+> ![Typical control group cell elsasticity approximation](Fit%20Quality/Cells/Control-Cell6.svg)
+> Typical control group cell elsasticity approximation
 
 
 --- column-break ---
 
 
-![](Fit%20Quality/Cells/Treated-Cell12.svg)
+> ![Typical treated group cell elasticity approximation](Fit%20Quality/Cells/Treated-Cell12.svg)
+> Typical treated group cell elasticity approximation  
 
 
 --- end-multi-column
@@ -320,13 +439,15 @@ Largest Column: standard
 ```
 
 
-![](Fit%20Quality/Cells/Control-Cell4.svg)
+> ![High inter experimental range control cell](Fit%20Quality/Cells/Control-Cell4.svg)
+> High inter experimental range control cell
 
 
 --- column-break ---
 
 
-![](Fit%20Quality/Cells/Control-Cell7.svg)
+> ![High inter experimental range treated cell](Fit%20Quality/Cells/Control-Cell7.svg)
+> High inter experimental range treated cell
 
 
 --- end-multi-column
@@ -361,36 +482,33 @@ Largest Column: standard
 ```
 
 
-###### Figure: Population Shape of Cell Young's Modulus by group
+%% ###### Figure: Population Shape of Cell Young's Modulus by group %%
 
-![|350](YM+Range_Viol_comparison_byCell.svg)
-
-###### Table: Cell Young's Modulus (Pa) statistics by test group
-
-| Group   | Mode   | Min    | Max     | Median | Mean   | StDev  |
-| ------- | ------ | ------ | ------- | ------ | ------ | ------ |
-| Control | 154.96 | 143.85 | 982.09  | 392.04 | 457.99 | 305.52 |
-| Treated | 524.65 | 524.65 | 1761.58 | 807.94 | 975.53 | 540.96 |
+> ![Population Shape of Cell Young's Modulus by group|350](YM+Range_Viol_comparison_byCell.svg)
+> Population Shape of Cell Young's Modulus by group
 
 
 --- column-break ---
 
 
-###### Figure: Population Shape of Test Young's Modulus (Pa) by group
+%% ###### Figure: Population Shape of Test Young's Modulus (Pa) by group %%
 
-![|350](YM+Residuals_Viol_comparison_byExperiment.svg)
-
-###### Table: Test Young's Modulus (Pa) statistics by test group
-
-| Group   | Mode    | Min     | Max     | Median  | Mean   | StDev  |
-| ------- | ------- | ------- | ------- | ------- | ------ | ------ |
-| Control | 160.643 | 137.977 | 1161.76 | 385.253 | 482.63 | 301.24 |
-| Treated | 605.979 | 381.52  | 1964.58 | 833.028 | 983.46 | 506.70 |
+> ![Population Shape of Test Young's Modulus (Pa) by group|350](YM+Residuals_Viol_comparison_byExperiment.svg)
+> Population Shape of Test Young's Modulus (Pa) by group
 
 
 --- end-multi-column
 
+> Group statistical characteristics cell wise vs group wise 
+>
+| Group   | Mode   | Min    | Max     | Median | Mean   | StDev  |
+| ------- | ------ | ------ | ------- | ------ | ------ | ------ |
+| Control, By Cells | 154.96 | 143.85 | 982.09  | 392.04 | 457.99 | 305.52 |
+| Control, By tests | 160.643 | 137.977 | 1161.76 | 385.253 | 482.63 | 301.24 |
+| Treated, By Cells | 524.65 | 524.65 | 1761.58 | 807.94 | 975.53 | 540.96 |
+| Treated, By tests | 605.979 | 381.52  | 1964.58 | 833.028 | 983.46 | 506.70 |
 
+By grouping the raw test data by cell and producing group characteristics cell wise rather than with the whole raw dataset provides more differentiable groups with more distant means and tighter standard deviations
 
 
 %% Small sample size, Group overlap, predictive power %%
@@ -438,13 +556,40 @@ The sample sizes used in this report are not sufficient to produce a classifier 
 
 It should be noted that with the small sample size of the treated group $n=4$, these metrics are significantly brought upward by the results of a single cell and removing it significantly diminishes the statistical significance of the stiffening effect relied upon in this method. However, other than the substantially higher Young's Module values there is no reason to expect this cell or it's experiments to be erroneous. The Hertz fit's appear representative of the observed cell response with residuals similar to average across all fits $2 \ \text{pN}$. The relevant metrics for the cell in question are below and the reader is encouraged to judge for their own satisfaction whether the conclusions drawn from the full dataset are sufficiently supported or if the influence of this single observation undermines the findings. 
 
+
+--- start-multi-column: ID_3tbo
+```column-settings
+Number of Columns: 2
+Largest Column: standard
+```
+
+
 ![|400](Fit%20Quality/Cells/Treated-Cell7.svg) 
 
-![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg)
 ![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg)
-![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg)
+
 ![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg)
+
+
+--- column-break ---
+
+
+![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg)
+
+![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg)
+
 ![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg)
+
+
+--- end-multi-column
+
+
+
+
+
+
+
+
 
 In both the Control and the Treated group the majority of cells consistently exhibit YM lower than the group average with a few very high YM cells with higher inter experiment range. The range in YM increases linearly with with higher average YM values, however when range is considered as a proportion of average YM there is no correlation. This is unlikely to be a product of fitting error or the dimensionality of YM emphasising experimental inaccuracy based on how well the fittings match the observed cell responses, the cells are exhibiting a fixed linear elasticity within a given test but a range of different elasticises across tests and that range increases proportionally with the average. Neither is this a case of the higher average being a result of cells displaying higher variance in elasticity from a fixed minimum as the lower bound of even the $1000\times$ bootstrapped confidence intervals rise in tandem with the average YM. 
 

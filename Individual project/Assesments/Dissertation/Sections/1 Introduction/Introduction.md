@@ -1,2 +1,6 @@
 
 The mechanical properties of cells are finely tuned to their function, especially epithelial cells who's core role is to form active structural surfaces where correct functioning is a direct result of appropriate strength, stiffness, and shape. In patients suffering from diabetic nephropathy the alterations in renal tubule cell properties are directly associated with progression of the disease and further kidney damage. Increased renal tubule cell stiffness has been observed in association with renal disease and may have potential as a biomarker for diagnosis or drug development. This report will investigate a potential method for associating observed cell stiffness with progression of renal disease.  
+
+The progress of this project can be broken down into 4 successive objectives summarised in the boxes below, the methodology and results sections will reflect this structure.
+
+![](Methodology%20Summary%20Blocks.png)

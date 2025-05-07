@@ -20,15 +20,36 @@ The sample once mounted to the sample stage can be manoeuvred precisely in relat
 
 A typical force displacement curve from a nano indention experiment has the following shape seen in figure %% #WIP %% (A) below. A broadly level region where the probe is not in contact with the cell; the contact region; a sloped region where the probe is indenting the cell; the turnaround point; from which the same is repeated in reverse differing mainly at the point of separation [@kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
 
-> ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png)![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
-> Example AFM data from Radmacher 2007, (A) shows the curve as a whole, (B) zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular].
+
+--- start-multi-column: ID_orvl
+```column-settings
+Number of Columns: 3
+Largest Column: standard
+```
+
+
+> ![Example AFM data from Radmacher 2007 shows the curve as a whole [@radmacherM2007-StudyingMechanicsCellular]](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png)
+
+
+--- column-break ---
+
+
+![Example AFM data from Radmacher 2007 zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular]](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
+
+%% 
+--- column-break ---
+
+
+> ![Contact point jump explanatory diagram from H.Butt 1995 [@buttHJ1995-MeasuringSurfaceForces]](AFM%20contact%20point%20jump.png)
+ %%
+
+
+--- end-multi-column
+
 
 %% Contact point jump %%
 
-The exact point of contact is often ambiguous and rarely the same as the the point of separation. On approach the cantilever will be deflected away from the cell by van der waals forces until the spring force of the cantilever overcomes and surface tension takes hold [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
-The point of separation is typically clearer as it's associated with a "jump" in cantilever deflection as the surface tension / adhesion of the cell to the probe is overcome [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
 
-%% 
-> ![AFM contact point jump|400](AFM%20contact%20point%20jump.png)
-> [@buttHJ1995-MeasuringSurfaceForces]
-%%
+The exact point of contact is often ambiguous and rarely the same as the the point of separation. On approach the cantilever will be deflected away from the cell by Van Der Waals forces until the spring force of the cantilever overcomes and surface tension takes hold [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials]. The point of separation is typically clearer as it's associated with a "jump" in cantilever deflection as the surface tension / adhesion of the cell to the probe is overcome [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
+
+

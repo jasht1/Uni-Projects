@@ -97,55 +97,6 @@
 \usepackage[margin=2.5cm,includehead=true,includefoot=true,centering,]{geometry}
 \usepackage[export]{adjustbox}
 \usepackage{graphicx}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\newenvironment{Shaded}{}{}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
-\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-
-% Workaround/bugfix from jannick0.
-% See https://github.com/jgm/pandoc/issues/4302#issuecomment-360669013)
-% or https://github.com/Wandmalfarbe/pandoc-latex-template/issues/2
-%
-% Redefine the verbatim environment 'Highlighting' to break long lines (with
-% the help of fvextra). Redefinition is necessary because it is unlikely that
-% pandoc includes fvextra in the default template.
-\usepackage{fvextra}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,fontsize=\small,commandchars=\\\{\}}
-
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -380,8 +331,6 @@ the Detection of Renal Disease}
 \usepackage[export]{adjustbox}
 \usepackage{graphicx}
 \usepackage{ragged2e}
-\usepackage{siunitx}
-\usepackage{gensymb}
 
 
 \begin{document}
@@ -492,6 +441,12 @@ Increased renal tubule cell stiffness has been observed in association
 with renal disease and may have potential as a biomarker for diagnosis
 or drug development. This report will investigate a potential method for
 associating observed cell stiffness with progression of renal disease.
+
+The progress of this project can be broken down into 4 successive
+objectives summarised in the boxes below, the methodology and results
+sections will reflect this structure.
+
+\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Methodology Summary Blocks.png}}
 
 \subsection{Background}\label{background}
 
@@ -630,15 +585,50 @@ sloped region where the probe is indenting the cell; the turnaround
 point; from which the same is repeated in reverse differing mainly at
 the point of separation {[}17{]}.
 
+\noindent
+\begin{minipage}[t]{0.32\textwidth}
+Example AFM data from Radmacher 2007 shows the curve as a whole {[}21{]}
+
+\pandocbounded{\includegraphics[keepaspectratio]{fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png}}
+
+\begin{figure}
+\centering
+\caption{}
+\end{figure}
+
 \begin{quote}
-\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png}}\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png}}
-Example AFM data from Radmacher 2007, (A) shows the curve as a whole,
-(B) zoomed into the contact / separation region {[}21{]}.
 \end{quote}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+Example AFM data from Radmacher 2007 zoomed into the contact /
+separation region {[}21{]}
+
+\pandocbounded{\includegraphics[keepaspectratio]{fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png}}
+
+\begin{figure}
+\centering
+\caption{}
+\end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+Contact point jump explanatory diagram from H.Butt 1995 {[}19{]}
+
+\pandocbounded{\includegraphics[keepaspectratio]{AFM contact point jump.png}}
+
+\begin{figure}
+\centering
+\caption{}
+\end{figure}
+
+\begin{quote}
+\end{quote}
+\end{minipage}
 
 The exact point of contact is often ambiguous and rarely the same as the
 the point of separation. On approach the cantilever will be deflected
-away from the cell by van der waals forces until the spring force of the
+away from the cell by Van Der Waals forces until the spring force of the
 cantilever overcomes and surface tension takes hold {[}17{]}, {[}18{]},
 {[}19{]}. The point of separation is typically clearer as it's
 associated with a ``jump'' in cantilever deflection as the surface
@@ -652,9 +642,9 @@ theoretical mechanical model of the interaction. Below is a table
 outlining different model indention relationships.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0600}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2505}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6894}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0470}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4133}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5397}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -670,40 +660,65 @@ Scope
 Hertz & \(F = \frac{4}{3}E' \sqrt{R} \ \omega^{3/2}\) & Hertz model
 approximates the shallow indention of two linearly elastic spheres with
 infinitesimal strains {[}21{]}, {[}22{]}, {[}23{]}. \\
-DMT (DerjaguinMuller-Toporov) &
-\(F = F_{Hertz} - F_{det}\)\(\delta = \frac{a}{2} \ln \frac{R_{i}+a}{R_{i}-a}\)
+DMT &
+\begin{minipage}[t]{\linewidth}
+\begin{equation*}
+\begin{aligned}
+F &= F_{\text{Hertz}} - F_{\text{det}} \\
+\delta &= \frac{a}{2} \ln \left( \frac{R_i + a}{R_i - a} \right)
+\end{aligned}
+\end{equation*}
+\end{minipage}
 & Depending on the depth of indentation and the material interaction it
 can be important to account electrostatic non contact forces, the
 influence of which can be modelled using the Derjaguin approximation for
 interaction potential {[}19{]}, {[}23{]}. \\
 Fung &
-\(F = B\pi (\frac{a^5- 15Ra^4 + 75R^2a^3}{5Ra^2- 50R^2a + 125R^3})\text{exp}[b(\frac{a^3- 15Ra^2}{25R^2a- 125R^3})]<br>\)
+\begin{minipage}[t]{\linewidth}
+\begin{equation*}
+\begin{aligned}
+F = &B\pi \left( \frac{N(a)}{D(a)} \right)
+\exp\left[ b \left( \frac{E(a)}{F(a)} \right) \right] \\ \\
+N(a) &= a^5 - 15Ra^4 + 75R^2a^3 \\
+D(a) &= 5Ra^2 - 50R^2a + 125R^3 \\
+E(a) &= a^3 - 15Ra^2 \\
+F(a) &= 25R^2a - 125R^3 \\
+\end{aligned}
+\end{equation*}
+\end{minipage}
 & An exponential strain energy function based on mechanical testing of
 mesentery and arterial tissues, that models the non linear elasticity of
 cells {[}22{]}, {[}24{]}. This method is tangebly more precise but
 doesn't provide a simple value for young's modulus. \\
 \end{longtable}
 
+Given the focus of this investigation is the elastic response of the
+cell membrane the non contact forces are relatively small and can be
+ignored by reducing the fitting strictness close to the contact point.
+The difference between the traditional Hertzian models and the power
+series approximations are not significant enough to justify the
+increased complexity in this case.
+
 \subsection{Literature Review}\label{literature-review}
 
 Developments in both understanding of kidney disease and the application
-of atomic force microscopy (AFM) technology {[}18{]}, {[}25{]} may
+of atomic force microscopy (AFM) technology {[}18{]}, {[}22{]} may
 provide a valuable measure of the progression of kidney failure to
-inform the research and development of novel therapies {[}26{]}.
+inform the research and development of novel therapies {[}23{]}.
 
 The mechanical properties of tubular cells are largely a result of their
-cytoskeletal structure {[}21{]}, {[}27{]} which is altered significantly
-with the progression of DN {[}28{]}.
+cytoskeletal structure {[}21{]}, {[}24{]} which is altered significantly
+with the progression of DN {[}25{]}.
 
 The below table lists several papers utilising atomic force microscopes
 to produce force displacement curves from a bead tipped cantilever
 fitted to a hertz contact model to find cell elasticity.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.5842}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1105}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2197}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0855}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1618}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2029}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.4203}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2150}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Paper
@@ -718,49 +733,25 @@ Cell Elasticity
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-{[}29{]} E. Siamantouras, C. E. Hills, P. E. Squires, and K.-K. Liu,
-`Quantifying cellular mechanics and adhesion in renal tubular injury
-using single cell force spectroscopy', \emph{Nanomedicine:
-Nanotechnology, Biology and Medicine}, vol.~12, no. 4, pp.~1013--1021,
-May 2016, doi:
-\href{https://doi.org/10.1016/j.nano.2015.12.362}{10.1016/j.nano.2015.12.362}.
-& HK2: immortalised human kidney proximal tubule epithelial cell culture
-& Over 30 cells each indented 5 times immediately above the nucleus
-producing over 150 curves. & \textbf{control}: \(320 \ \text{Pa}\) cells
-treated with TGF-\(\beta 1\): \(549 \ \text{Pa}\) \\
-{[}30{]} A. Jafari, A. Sadeghi, and M. Lafouti, `Mechanical properties
-of human kidney cells and their effects on the atomic force microscope
-beam vibrations', \emph{Microsc. Res. Tech.}, vol.~87, no. 8,
-pp.~1704--1717, 2024, doi:
-\href{https://doi.org/10.1002/jemt.24543}{10.1002/jemt.24543}. &
-HEK-293: immortalised human embryonic kidney cell culture & did not
-elaborate & \(539.8 \ \text{Pa}\) \\
-{[}31{]} Y. Shimizu, T. Kihara, S. M. A. Haghparast, S. Yuba, and J.
-Miyake, `Simple Display System of Mechanical Properties of Cells and
-Their Dispersion', \emph{PLOS ONE}, vol.~7, no. 3, p.~e34305, Mar.~2012,
-doi:
-\href{https://doi.org/10.1371/journal.pone.0034305}{10.1371/journal.pone.0034305}.
-& HEK-293: immortalised human embryonic kidney cell culture & The median
-of value of over 100 cells examined at 25 points each. & mode value
-(\(x_{0}\)): \(410 \ \text{Pa}\) variance (\(w\)): \(0.757\) \\
-{[}28{]} S. T. Buckley, C. Medina, A. M. Davies, and C. Ehrhardt,
-`Cytoskeletal re-arrangement in TGF-\(\beta 1\)-induced alveolar
-epithelial-mesenchymal transition studied by atomic force microscopy and
-high-content analysis', \emph{Nanomedicine: Nanotechnology, Biology and
-Medicine}, vol.~8, no. 3, pp.~355--364, Apr.~2012, doi:
-\href{https://doi.org/10.1016/j.nano.2011.06.021}{10.1016/j.nano.2011.06.021}.
-& A549: human lung alveolar carcinoma epithelial cell culture & On each
-cell, a \(4 \times 4\) grid of force-distance curves was collected in at
-least 5 different positions (avoiding the nucleus and the very edge)
-producing over 750 curves. & On Glass: 8300 \(\pm\)
-\(1100 \ \text{Pa}\)On collagen I: \(9100 \ \pm\)
+Siamantouras 2016 {[}26{]} & HK2: immortalised human kidney proximal
+tubule epithelial cell culture & Over 30 cells each indented 5 times
+immediately above the nucleus producing over 150 curves. &
+\textbf{control}: \(320 \ \text{Pa}\) cells treated with
+TGF-\(\beta 1\): \(549 \ \text{Pa}\) \\
+Jafari 2024 {[}28{]} & HEK-293: immortalised human embryonic kidney cell
+culture & did not elaborate & \(539.8 \ \text{Pa}\) \\
+Shimizu 2012 {[}29{]} & HEK-293: immortalised human embryonic kidney
+cell culture & The median of value of over 100 cells examined at 25
+points each. & mode value (\(x_{0}\)): \(410 \ \text{Pa}\) variance
+(\(w\)): \(0.757\) \\
+Buckley 2012 {[}25{]} & A549: human lung alveolar carcinoma epithelial
+cell culture & On each cell, a \(4 \times 4\) grid of force-distance
+curves was collected in at least 5 different positions (avoiding the
+nucleus and the very edge) producing over 750 curves. & On Glass: 8300
+\(\pm\) \(1100 \ \text{Pa}\)On collagen I: \(9100 \ \pm\)
 \(2900 \ \text{Pa}\) \\
-\textbf{wyssHM2011-BiophysicalPropertiesNormal?} H. M. Wyss \emph{et
-al.}, `Biophysical properties of normal and diseased renal glomeruli',
-\emph{Am J Physiol Cell Physiol}, vol.~300, no. 3, pp.~C397--C405,
-Mar.~2011, doi:
-\href{https://doi.org/10.1152/ajpcell.00438.2010}{10.1152/ajpcell.00438.2010}.
-& Sprague-Dawley rat kidney glomeruli capillary wall extracted by
+Wyss 2011 \textbf{wyssHM2011-BiophysicalPropertiesNormal?} &
+Sprague-Dawley rat kidney glomeruli capillary wall extracted by
 differential sieving & 10 different glomeruli with 10 measurements each
 & \(2,300 \ \pm\) \(160 \ \text{Pa}\) \\
 \end{longtable}
@@ -770,8 +761,8 @@ differential sieving & 10 different glomeruli with 10 measurements each
 \subsubsection{Experimental Method}\label{experimental-method}
 
 The experimental procedure used to produce the data used in this report
-is detailed thoroughly in reference {[}29{]}. Cells of the adult human
-proximal tubule kidney (HK2) cell line {[}32{]} where purchased from the
+is detailed thoroughly in reference {[}26{]}. Cells of the adult human
+proximal tubule kidney (HK2) cell line {[}30{]} where purchased from the
 American Type Culture Collection (ATCC; Gaithersburg, MD 20878 USA).
 These where maintained in Dulbecco's Modified Eagle Medium/Nutrient
 Mixture F-12 (DMEM/F12), 10\% fetal calf serum (FCS), glutamine
@@ -922,41 +913,54 @@ The difference between the Hertz elasticity model for a parabolic
 indentation and the Hertz/Sneddon spherical indentation where minor
 producing effectively indistinguishable estimates for YM however the
 Hertz parabolic model resulted in a slightly but consistently higher
-residual fit error with it's slightly more progressive curvature. Below
-are representative examples of each fit for the same force indentation
-curve.
+residual fit error with it's slightly more progressive curvature. For
+this reason the values from the Hertz/Sneddon spherical where preferred
+for all subsequent analysis. Below are representative examples of each
+fit for the same force indentation curve showing just how similar they
+are in practice.
 
-Figure: Comparison in Elasticity Fit Techniques for an Example Curve
-
---- start-multi-column: ID\_31no
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{Number of Columns: 2}
-\NormalTok{Largest Column: standard}
-\end{Highlighting}
-\end{Shaded}
-
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg}}
-
---- column-break ---
-
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg}}
-
---- end-multi-column
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg}}
+Hertz/Sneddon spherical indentation model fit
+\end{quote}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg}}
+Hertz parabolic indentation model fit
+\end{quote}
+\end{minipage}
 
 There where some trends observed in the general shape of the residual
 error, specifically; 1) an initial hump at the contact point likely
 unaccounted for electrostatic non contact forces due to Van der Waals
 effect, 2) a middle dip and final flick where fit's are shallower than
 the actual force indention behaviour implying an under estimation of YM
-or a non linear elasticity. Both of these effects are particularly
-pronounced in the following fitting for this dataset this would be
-considered a bad fit.
+or a non linear elasticity. The first effect of non contact forces is
+not relevant to this study of cytoskelital and thus a high tolerance for
+error near the contact region is tolerated and expected. For cells
+displaying non linear elastic behaviour the best single approximation
+was taken. Both of these effects are particularly pronounced in the
+following fitting (below left) for this dataset this would be considered
+a bad fit.
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg}}
-
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/SuccessiveTest_trends_absolute.svg}}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg}}
+Example of a poor fit to a non linear elastic response
+\end{quote}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{SuccessiveTest_trends_absolute.svg}}
+Plot showing trend in average variation across experiments
+\end{quote}
+\end{minipage}
 
 There was a slight negative trend observed across successive tests
 indicative of cell relaxation with the first test indicating a 10\%
@@ -967,22 +971,20 @@ values. The examples below are typical samples from each group.
 
 Figure: Example Cell Fittings for Control vs Treated Group
 
---- start-multi-column: ID\_xdg9
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{Number of Columns: 2}
-\NormalTok{Largest Column: standard}
-\end{Highlighting}
-\end{Shaded}
-
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell6.svg}}
-
---- column-break ---
-
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell12.svg}}
-
---- end-multi-column
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Cells/Control-Cell6.svg}}
+Typical control group cell elsasticity approximation
+\end{quote}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Cells/Treated-Cell12.svg}}
+Typical treated group cell elasticity approximation
+\end{quote}
+\end{minipage}
 
 There where cells that displayed significantly higher variation between
 experiments from both groups, this was not constantly associated with
@@ -997,22 +999,20 @@ group tended to have one test with a significantly lower apparent
 elasticity but strong agreement in the other 4 as is the case below,
 this neither was consistently associated with test order.
 
---- start-multi-column: ID\_2ugn
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{Number of Columns: 2}
-\NormalTok{Largest Column: standard}
-\end{Highlighting}
-\end{Shaded}
-
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell4.svg}}
-
---- column-break ---
-
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell7.svg}}
-
---- end-multi-column
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Cells/Control-Cell4.svg}}
+High inter experimental range control cell
+\end{quote}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Cells/Control-Cell7.svg}}
+High inter experimental range treated cell
+\end{quote}
+\end{minipage}
 
 The treated cells where found to be on average twice as stiff as the
 untreated cells with a \(517 \ \text{Pa}\) higher average young's
@@ -1022,60 +1022,67 @@ while this gives the treated group a \(77\%\) higher variance, as a
 proportion of average YM they are similar being \(55\%\) and \(67\%\) of
 their respective means. Considering range as a proportion of of median
 
---- start-multi-column: ID\_3r15
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{YM+Range_Viol_comparison_byCell.svg}}
+Population Shape of Cell Young's Modulus by group
+\end{quote}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{YM+Residuals_Viol_comparison_byExperiment.svg}}
+Population Shape of Test Young's Modulus (Pa) by group
+\end{quote}
+\end{minipage}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{Number of Columns: 2}
-\NormalTok{Largest Column: standard}
-\end{Highlighting}
-\end{Shaded}
+\begin{quote}
+Group statistical characteristics cell wise vs group wise
 
-Figure: Population Shape of Cell Young's Modulus by group
-
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/YM+Range_Viol_comparison_byCell.svg}}
-\caption{\textbar350}
-\end{figure}
-
-Table: Cell Young's Modulus (Pa) statistics by test group
-
-\begin{longtable}[]{@{}lllllll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1591}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1364}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1364}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1591}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1364}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1364}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1364}}@{}}
 \toprule\noalign{}
-Group & Mode & Min & Max & Median & Mean & StDev \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Group
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Mode
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Min
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Max
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Median
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Mean
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+StDev
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Control & 154.96 & 143.85 & 982.09 & 392.04 & 457.99 & 305.52 \\
-Treated & 524.65 & 524.65 & 1761.58 & 807.94 & 975.53 & 540.96 \\
+Control, By Cells & 154.96 & 143.85 & 982.09 & 392.04 & 457.99 &
+305.52 \\
+Control, By tests & 160.643 & 137.977 & 1161.76 & 385.253 & 482.63 &
+301.24 \\
+Treated, By Cells & 524.65 & 524.65 & 1761.58 & 807.94 & 975.53 &
+540.96 \\
+Treated, By tests & 605.979 & 381.52 & 1964.58 & 833.028 & 983.46 &
+506.70 \\
 \end{longtable}
+\end{quote}
 
---- column-break ---
-
-Figure: Population Shape of Test Young's Modulus (Pa) by group
-
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/YM+Residuals_Viol_comparison_byExperiment.svg}}
-\caption{\textbar350}
-\end{figure}
-
-Table: Test Young's Modulus (Pa) statistics by test group
-
-\begin{longtable}[]{@{}lllllll@{}}
-\toprule\noalign{}
-Group & Mode & Min & Max & Median & Mean & StDev \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Control & 160.643 & 137.977 & 1161.76 & 385.253 & 482.63 & 301.24 \\
-Treated & 605.979 & 381.52 & 1964.58 & 833.028 & 983.46 & 506.70 \\
-\end{longtable}
-
---- end-multi-column
+By grouping the raw test data by cell and producing group
+characteristics cell wise rather than with the whole raw dataset
+provides more differentiable groups with more distant means and tighter
+standard deviations
 
 \#\#\#\#\#\# Figure: Force Indentation for Apparent Cell YM Coloured by
 Test Group
@@ -1124,17 +1131,64 @@ whether the conclusions drawn from the full dataset are sufficiently
 supported or if the influence of this single observation undermines the
 findings.
 
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\textbar400
+
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Cells/Treated-Cell7.svg}}
+
 \begin{figure}
 \centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell7.svg}}
-\caption{\textbar400}
+\caption{}
 \end{figure}
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg}}
+\textbar250
+
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg}}
+
+\begin{figure}
+\centering
+\caption{}
+\end{figure}
+
+\textbar250
+
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg}}
+
+\begin{figure}
+\centering
+\caption{}
+\end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\textbar250
+
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg}}
+
+\begin{figure}
+\centering
+\caption{}
+\end{figure}
+
+\textbar250
+
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg}}
+
+\begin{figure}
+\centering
+\caption{}
+\end{figure}
+
+\textbar250
+
+\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg}}
+
+\begin{figure}
+\centering
+\caption{}
+\end{figure}
+\end{minipage}
 
 In both the Control and the Treated group the majority of cells
 consistently exhibit YM lower than the group average with a few very
@@ -1392,34 +1446,8 @@ Available:
 \url{https://linkinghub.elsevier.com/retrieve/pii/S0091679X07830159}.
 {[}Accessed: Feb. 13, 2025{]}}
 
-\bibitem[\citeproctext]{ref-linDC2009-SphericalIndentationSoftMatterHertzianRegime}
-\CSLLeftMargin{{[}22{]} }%
-\CSLRightInline{D. C. Lin, D. I. Shreiber, E. K. Dimitriadis, and F.
-Horkay, {``Spherical indentation of soft matter beyond the {Hertzian}
-regime: Numerical and experimental validation of hyperelastic models,''}
-\emph{Biomech Model Mechanobiol}, vol. 8, no. 5, pp. 345--358, Oct.
-2009, doi:
-\href{https://doi.org/10.1007/s10237-008-0139-9}{10.1007/s10237-008-0139-9}.
-Available: \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3615644/}.
-{[}Accessed: Feb. 13, 2025{]}}
-
-\bibitem[\citeproctext]{ref-jpkinstruments-JPKDataProcessing}
-\CSLLeftMargin{{[}23{]} }%
-\CSLRightInline{JPK Instruments, Ed., {``{JPK Data Processing Software
-MANUAL-6}.0b.''} Burker.}
-
-\bibitem[\citeproctext]{ref-fungY1967-ElasticitySoftTissues}
-\CSLLeftMargin{{[}24{]} }%
-\CSLRightInline{Y. Fung, {``Elasticity of soft tissues in simple
-elongation,''} \emph{American Journal of Physiology-Legacy Content},
-vol. 213, no. 6, pp. 1532--1544, Dec. 1967, doi:
-\href{https://doi.org/10.1152/ajplegacy.1967.213.6.1532}{10.1152/ajplegacy.1967.213.6.1532}.
-Available:
-\url{https://www.physiology.org/doi/10.1152/ajplegacy.1967.213.6.1532}.
-{[}Accessed: Feb. 13, 2025{]}}
-
 \bibitem[\citeproctext]{ref-liuS2024-AtomicForceMicroscopyDisease-relatedStudies}
-\CSLLeftMargin{{[}25{]} }%
+\CSLLeftMargin{{[}22{]} }%
 \CSLRightInline{S. Liu, Y. Han, L. Kong, G. Wang, and Z. Ye, {``Atomic
 force microscopy in disease-related studies: {Exploring} tissue and cell
 mechanics,''} \emph{Microscopy Research and Technique}, vol. 87, no. 4,
@@ -1430,7 +1458,7 @@ Available:
 {[}Accessed: Jan. 30, 2025{]}}
 
 \bibitem[\citeproctext]{ref-parrishAR2016-CytoskeletonNovelTarget}
-\CSLLeftMargin{{[}26{]} }%
+\CSLLeftMargin{{[}23{]} }%
 \CSLRightInline{A. R. Parrish, {``The cytoskeleton as a novel target for
 treatment of renal fibrosis,''} \emph{Pharmacology \& Therapeutics},
 vol. 166, pp. 1--8, Oct. 2016, doi:
@@ -1440,7 +1468,7 @@ Available:
 {[}Accessed: Feb. 09, 2025{]}}
 
 \bibitem[\citeproctext]{ref-jalilianI2015-CellElasticityRegulated}
-\CSLLeftMargin{{[}27{]} }%
+\CSLLeftMargin{{[}24{]} }%
 \CSLRightInline{I. Jalilian \emph{et al.}, {``Cell {Elasticity Is
 Regulated} by the {Tropomyosin Isoform Composition} of the {Actin
 Cytoskeleton},''} \emph{PLOS ONE}, vol. 10, no. 5, p. e0126214, May
@@ -1451,7 +1479,7 @@ Available:
 {[}Accessed: Feb. 06, 2025{]}}
 
 \bibitem[\citeproctext]{ref-buckleyST2012-CytoskeletalRearrangementTGFv1induced}
-\CSLLeftMargin{{[}28{]} }%
+\CSLLeftMargin{{[}25{]} }%
 \CSLRightInline{S. T. Buckley, C. Medina, A. M. Davies, and C. Ehrhardt,
 {``Cytoskeletal re-arrangement in {TGF-β1-induced} alveolar
 epithelial-mesenchymal transition studied by atomic force microscopy and
@@ -1463,7 +1491,7 @@ Available:
 {[}Accessed: Jan. 29, 2025{]}}
 
 \bibitem[\citeproctext]{ref-siamantourasE2016-QuantifyingCellularMechanics}
-\CSLLeftMargin{{[}29{]} }%
+\CSLLeftMargin{{[}26{]} }%
 \CSLRightInline{E. Siamantouras, C. E. Hills, P. E. Squires, and K.-K.
 Liu, {``Quantifying cellular mechanics and adhesion in renal tubular
 injury using single cell force spectroscopy,''} \emph{Nanomedicine:
@@ -1474,8 +1502,19 @@ Available:
 \url{https://www.sciencedirect.com/science/article/pii/S1549963415006073}.
 {[}Accessed: Jan. 29, 2025{]}}
 
+\bibitem[\citeproctext]{ref-wangD2022-KidneyProximalTubule}
+\CSLLeftMargin{{[}27{]} }%
+\CSLRightInline{D. Wang, S. Sant, C. Lawless, and N. Ferrell, {``A
+kidney proximal tubule model to evaluate effects of basement membrane
+stiffening on renal tubular epithelial cells,''} \emph{Integrative
+Biology}, vol. 14, no. 8--12, pp. 171--183, Dec. 2022, doi:
+\href{https://doi.org/10.1093/intbio/zyac016}{10.1093/intbio/zyac016}.
+Available:
+\url{https://academic.oup.com/ib/article/14/8-12/171/6960971}.
+{[}Accessed: Jan. 29, 2025{]}}
+
 \bibitem[\citeproctext]{ref-jafariA2024-MechanicalPropertiesHuman}
-\CSLLeftMargin{{[}30{]} }%
+\CSLLeftMargin{{[}28{]} }%
 \CSLRightInline{A. Jafari, A. Sadeghi, and M. Lafouti, {``Mechanical
 properties of human kidney cells and their effects on the atomic force
 microscope beam vibrations,''} \emph{Microscopy Research and Technique},
@@ -1486,7 +1525,7 @@ Available:
 {[}Accessed: Feb. 12, 2025{]}}
 
 \bibitem[\citeproctext]{ref-shimizuY2012-SimpleDisplaySystem}
-\CSLLeftMargin{{[}31{]} }%
+\CSLLeftMargin{{[}29{]} }%
 \CSLRightInline{Y. Shimizu, T. Kihara, S. M. A. Haghparast, S. Yuba, and
 J. Miyake, {``Simple {Display System} of {Mechanical Properties} of
 {Cells} and {Their Dispersion},''} \emph{PLOS ONE}, vol. 7, no. 3, p.
@@ -1497,7 +1536,7 @@ Available:
 {[}Accessed: Feb. 12, 2025{]}}
 
 \bibitem[\citeproctext]{ref-ryanMJ1994-HK-2}
-\CSLLeftMargin{{[}32{]} }%
+\CSLLeftMargin{{[}30{]} }%
 \CSLRightInline{M. J. Ryan, G. Johnson, J. Kirk, S. M. Fuerstenberg, R.
 A. Zager, and B. Torok-Storb, {``{HK-2}: An immortalized proximal tubule
 epithelial cell line from normal adult human kidney,''} \emph{Kidney
