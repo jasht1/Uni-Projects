@@ -58,6 +58,7 @@ def batch_fd_from_ym (by='Cell',title="Elasticity Fit Comparison"):
   plot_batch_fd_from_ym(batch_data,title=title)
 
 batch_fd_from_ym(by='Cell',title="Cell Elasticity Fits by Test Group")
+
 # batch_fd_from_ym(by='Experiment',title="Indentation Elasticity Fits by Test Group")
 
 # yms = np.arange(100,2000,100)
