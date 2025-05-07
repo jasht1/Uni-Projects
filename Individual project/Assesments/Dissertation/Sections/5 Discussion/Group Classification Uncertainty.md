@@ -5,4 +5,4 @@ The sample sizes used in this report are not sufficient to produce a classifier 
 
 ###### Figure: Best vs Worst Case Probability Density Functions
 
-![](Group_PDFs_LimCases.svg)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Group_PDFs_LimCases.svg)

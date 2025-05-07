@@ -11,7 +11,7 @@ Atomic force microscopes use the deflection of a very fine probe on a flexible c
 
 The typically atomic force microscope utilise a laser focused on the free end of the cantilever such that any deflection of the probe produces an amplified deflection of the reflected beam, this is recorded by a position sensitive photodiode [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces]. 
 
-> ![Atomic Force Microscopy - mechanism diagram|400](Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
+> ![Atomic Force Microscopy - mechanism diagram|400](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
 > Atomic force microscope functional diagram
 
 The sample once mounted to the sample stage can be manoeuvred precisely in relative to the probe by applying voltage to piezoelectric actuators [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @giraudF2019-PiezoelectricActuatorsIntroduction] this is how the sample is advanced into the tip. Once calibrated the voltage at the actuators gives the sample stage position and the voltage at the photodiode gives the deflection of the probe, with this a force displacement curve can be produced by accounting for the stiffness of the cantilever and the relative displacement [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
@@ -20,7 +20,7 @@ The sample once mounted to the sample stage can be manoeuvred precisely in relat
 
 A typical force displacement curve from a nano indention experiment has the following shape seen in figure %% #WIP %% (A) below. A broadly level region where the probe is not in contact with the cell; the contact region; a sloped region where the probe is indenting the cell; the turnaround point; from which the same is repeated in reverse differing mainly at the point of separation [@kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
 
-> ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png) ![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
+> ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png)![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
 > Example AFM data from Radmacher 2007, (A) shows the curve as a whole, (B) zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular].
 
 %% Contact point jump %%

@@ -1,6 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.colors import Normalize
+from matplotlib.cm import ScalarMappable
 from classifier import get_group_probability
 
 
@@ -51,7 +52,6 @@ def classification_threashold(pos_only=False, cbg=True):
 
 # classification_threashold()
 
-from matplotlib.cm import ScalarMappable
 
 def n_samples_effect(
     ym_range=(0, 2000),
@@ -89,7 +89,7 @@ def n_samples_effect(
 
   # Axis formatting
   ax.set_xlim(0,len(sample_sizes))
-  ax.set_ylim(ym_range)
+  ax.set_ylim(ym_range[0],ym_range[1])
   ax.set_xticks(np.arange(len(sample_sizes)) + 0.5)
   ax.set_xticklabels(sample_sizes)
   ax.set_ylabel("Young's Modulus [Pa]")

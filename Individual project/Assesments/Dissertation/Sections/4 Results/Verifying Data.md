@@ -11,20 +11,20 @@ Largest Column: standard
 ```
 
 
-![](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
 
 
 --- column-break ---
 
 
-![](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
 
 
 --- end-multi-column
 
 There where some trends observed in the general shape of the residual error, specifically; 1) an initial hump at the contact point likely unaccounted for electrostatic non contact forces due to Van der Waals effect,  2) a middle dip and final flick where fit's are shallower than the actual force indention behaviour implying an under estimation of YM or a non linear elasticity. Both of these effects are particularly pronounced in the following fitting for this dataset this would be considered a bad fit.
 
-![](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
 
 %% Figure showing all residual curves faintly with smoothed average of all and grouped %%
 
@@ -33,7 +33,7 @@ There where some trends observed in the general shape of the residual error, spe
 
 %% Plot showing trend in average variation across experiments %%
 
-![](SuccessiveTest_trends_absolute.svg)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/SuccessiveTest_trends_absolute.svg)
 
 There was a slight negative trend observed across successive tests indicative of cell relaxation with the first test indicating a 10% higher YM on average, however this was not deemed necessary to control for. The majority of cells showed strong agreement across tests resulting in tight confidence intervals and representative apparent YM values. The examples below are typical samples from each group.
 
@@ -47,13 +47,13 @@ Largest Column: standard
 ```
 
 
-![](Control-Cell6.svg)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Control-Cell6.svg)
 
 
 --- column-break ---
 
 
-![](Treated-Cell12.svg)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Treated-Cell12.svg)
 
 
 --- end-multi-column
@@ -68,13 +68,13 @@ Largest Column: standard
 ```
 
 
-![](Control-Cell4.svg)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Control-Cell4.svg)
 
 
 --- column-break ---
 
 
-![](Treated-Cell7.svg)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Control-Cell7.svg)
 
 
 --- end-multi-column

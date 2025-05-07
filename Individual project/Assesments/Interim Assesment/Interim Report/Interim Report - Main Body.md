@@ -29,7 +29,7 @@ The aim of this project is to provide insight on the progression of diabetic nep
 
 The human body can be understood as a complex biological machine, made up of many sub-mechanisms familiar to engineers. In this sense the filtration system of the human body is referred to as the renal system, in which the kidneys are a component about the size of a clenched fist that can be likened to a sophisticated water treatment plant combined with a feedback-controlled chemical processing unit. Each contain roughly a million multi step filter loops called nephrons [@bertramJF2011-HumanNephronNumber].  
 
-> ![Close up of a nephron and its place in the kidney. Labels on the kidney cross section show where unfiltered blood enters, filtered blood leaves, and urine exits. On the nephron, the glomerulus, tubule, and collecting duct are labeled along with where unfiltered blood enters, filtered blood exits, and urine exits.|400](Kidney%20and%20nephron%20-%20Labeled.jpg)
+> ![Close up of a nephron and its place in the kidney. Labels on the kidney cross section show where unfiltered blood enters, filtered blood leaves, and urine exits. On the nephron, the glomerulus, tubule, and collecting duct are labeled along with where unfiltered blood enters, filtered blood exits, and urine exits.|400](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/Kidney%20and%20nephron%20-%20Labeled.jpg)
 >Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled].
 
 %% #### Nephrons %%
@@ -46,7 +46,7 @@ The glomerulus is an overly aggressive filter; much of the water and solute must
 
 %% #### Tubule cell %%
 
-> ![Diagram of tubule, tubule wall and tubule cell structure.](Tubule%20zoom%20diagram.png)
+> ![Diagram of tubule, tubule wall and tubule cell structure.](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/Tubule%20zoom%20diagram.png)
 > Simplified diagram of tubule, tubule wall and tubule cell structure.
 > The structure of the tubule varies significantly across it's length to as different sections are specialised to permeate different resources, the lumen diameter and epithelial cell height values are averages of random samples [@morozovD2021-MappingKidneyTubule]. 
 
@@ -85,7 +85,7 @@ Atomic force microscopes use the deflection of a very fine probe on a flexible c
 
 The typically atomic force microscope utilise a laser focused on the free end of the cantilever such that any deflection of the probe produces an amplified deflection of the reflected beam, this is recorded by a position sensitive photodiode [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces]. 
 
-> ![Atomic Force Microscopy - mechanism diagram|400](Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
+> ![Atomic Force Microscopy - mechanism diagram|400](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
 > Atomic force microscope functional diagram
 
 The sample once mounted to the sample stage can be manoeuvred precisely in all directions relative to the probe by applying voltage to piezoelectric actuators [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @giraudF2019-ChapterOneIntroduction]. This is how the sample is advanced into the tip. Once calibrated the voltage at the actuators gives the sample stage position and the voltage at the photodiode gives the deflection of the probe, with this a force displacement curve can be produced by accounting for the stiffness of the cantilever and the relative displacement [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
@@ -94,7 +94,7 @@ The sample once mounted to the sample stage can be manoeuvred precisely in all d
 
 A typical force displacement curve from a nano indention experiment has the following shape seen in figure #WIP (A) below. A broadly level region where the probe is not in contact with the cell; the contact region; a sloped region where the probe is indenting the cell; the turnaround point; from which the same is repeated in reverse differing mainly at the point of separation [@kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
 
-> ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png) ![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
+> ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png) ![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
 > Example AFM data from Radmacher 2007, (A) shows the curve as a whole, (B) zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular].
 
 %% Contact point jump %%

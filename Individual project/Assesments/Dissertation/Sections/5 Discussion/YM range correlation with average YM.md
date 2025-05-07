@@ -2,4 +2,4 @@ In both the Control and the Treated group the majority of cells consistently exh
 
 %% This is likely due to %%
 
-![](YM_RangeByApparentVal.svg)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM_RangeByApparentVal.svg)

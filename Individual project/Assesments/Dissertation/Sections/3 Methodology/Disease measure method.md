@@ -2,12 +2,12 @@ A Bayes classifier was constructed to quantify the probability of diabetic nephr
 
 $$
 {\Large  
-P(G∣x) = \frac{P(x∣G) \cdot P(G)}{P(x)}  
+P(G \mid x) = \frac{P(x \mid G) \mid \cdot P(G)}{P(x)}  
 }  
 \qquad  
 \begin{align}  
-P(G∣x) &:: \text{Posterior Probability}\\
-P(x∣G) &:: \text{Likleyhood}\\
+P(G \mid x) &:: \text{Posterior Probability}\\
+P(x \mid G) &:: \text{Likleyhood}\\
 P(G)   &:: \text{Prior Probability}\\
 P(x)   &:: \text{Evidence}\\
 \end{align}

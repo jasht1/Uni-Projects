@@ -38,7 +38,8 @@ The mechanical properties of cells are finely tuned to their function, especiall
 
 The human body can be understood as a complex biological machine, made up of many sub-mechanisms familiar to engineers. In this sense the filtration system of the human body is referred to as the renal system, in which the kidneys are a component about the size of a clenched fist that can be likened to a sophisticated water treatment plant combined with a feedback-controlled chemical processing unit. Each contain roughly a million multi step filter loops called nephrons [@bertramJF2011-HumanNephronNumber].  
 
-> ![Close up of a nephron and its place in the kidney. Labels on the kidney cross section show where unfiltered blood enters, filtered blood leaves, and urine exits. On the nephron, the glomerulus, tubule, and collecting duct are labeled along with where unfiltered blood enters, filtered blood exits, and urine exits.|400](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/Kidney%20and%20nephron%20-%20Labeled.jpg)
+> ![Close up of a nephron and its place in the kidney. Labels on the kidney cross section show where unfiltered blood enters, filtered blood leaves, and urine exits. On the nephron, the glomerulus, tubule, and collecting duct are labeled along with where unfiltered blood enters, filtered blood exits, and urine exits.|400](Kidney%20and%20nephron%20-%20Labeled.jpg)
+> 
 >Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled].
 
 %% #### Nephrons %%
@@ -55,7 +56,7 @@ The glomerulus is an overly aggressive filter; much of the water and solute must
 
 %% #### Tubule cell %%
 
-> ![Diagram of tubule, tubule wall and tubule cell structure.](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/Tubule%20zoom%20diagram.png)
+> ![Diagram of tubule, tubule wall and tubule cell structure.](Tubule%20zoom%20diagram.png)
 > Simplified diagram of tubule, tubule wall and tubule cell structure.
 > The structure of the tubule varies significantly across it's length to as different sections are specialised to permeate different resources, the lumen diameter and epithelial cell height values are averages of random samples [@morozovD2021-MappingKidneyTubule]. 
 
@@ -99,7 +100,7 @@ Atomic force microscopes use the deflection of a very fine probe on a flexible c
 
 The typically atomic force microscope utilise a laser focused on the free end of the cantilever such that any deflection of the probe produces an amplified deflection of the reflected beam, this is recorded by a position sensitive photodiode [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces]. 
 
-> ![Atomic Force Microscopy - mechanism diagram|400](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
+> ![Atomic Force Microscopy - mechanism diagram|400](Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
 > Atomic force microscope functional diagram
 
 The sample once mounted to the sample stage can be manoeuvred precisely in relative to the probe by applying voltage to piezoelectric actuators [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @giraudF2019-PiezoelectricActuatorsIntroduction] this is how the sample is advanced into the tip. Once calibrated the voltage at the actuators gives the sample stage position and the voltage at the photodiode gives the deflection of the probe, with this a force displacement curve can be produced by accounting for the stiffness of the cantilever and the relative displacement [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
@@ -108,7 +109,7 @@ The sample once mounted to the sample stage can be manoeuvred precisely in relat
 
 A typical force displacement curve from a nano indention experiment has the following shape seen in figure %% #WIP %% (A) below. A broadly level region where the probe is not in contact with the cell; the contact region; a sloped region where the probe is indenting the cell; the turnaround point; from which the same is repeated in reverse differing mainly at the point of separation [@kilpatrickJI2015-NanomechanicsCellsBiomaterials]. 
 
-> ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png) ![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
+> ![fdcurve figure A - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png)![fdcurve figure B - radmacherM2007-StudyingMechanicsCellular|350](fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
 > Example AFM data from Radmacher 2007, (A) shows the curve as a whole, (B) zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular].
 
 %% Contact point jump %%
@@ -117,7 +118,7 @@ The exact point of contact is often ambiguous and rarely the same as the the poi
 The point of separation is typically clearer as it's associated with a "jump" in cantilever deflection as the surface tension / adhesion of the cell to the probe is overcome [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
 
 %% 
-> ![AFM contact point jump|400](Projects/Uni%20Projects/Individual%20project/Assesments/Interim%20Assesment/Interim%20Report/attachments/AFM%20contact%20point%20jump.png)
+> ![AFM contact point jump|400](AFM%20contact%20point%20jump.png)
 > [@buttHJ1995-MeasuringSurfaceForces]
 %%
 
@@ -127,11 +128,11 @@ The point of separation is typically clearer as it's associated with a "jump" in
 
 In order to calculate elasticity the experimental data must be fit to a theoretical mechanical model of the interaction. Below is a table outlining different model indention relationships.
 
-| Model                         | Force-Indentation relationship                                                                                         | Scope                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hertz                         | $$F = \frac{4}{3}E' \sqrt{R} \ \omega^{3/2}$$                                                                          | Hertz model approximates the shallow indention of two linearly elastic spheres with infinitesimal strains [@linDC2009-SphericalIndentationSoftMatterHertzianRegime; @radmacherM2007-StudyingMechanicsCellular; @jpkinstruments-JPKDataProcessing].                                                                                            |
-| DMT (DerjaguinMuller-Toporov) | $$F = F_{Hertz} - F_{det}$$<br>$$\delta = \frac{a}{2} \ln \frac{R_{i}+a}{R_{i}-a}$$                                    | Depending on the depth of indentation and the material interaction it can be important to account electrostatic non contact forces, the influence of which can be modelled using the Derjaguin approximation for interaction potential [@buttHJ1995-MeasuringSurfaceForces; @jpkinstruments-JPKDataProcessing].                               |
-| Fung                          | $$F = B\pi (\frac{a^5- 15Ra^4 + 75R^2a^3}{5Ra^2- 50R^2a + 125R^3})\text{exp}⁡[b(\frac{a^3- 15Ra^2}{25R^2a- 125R^3})]$$ | An exponential strain energy function based on mechanical testing of mesentery and arterial tissues, that models the non linear elasticity of cells [@fungY1967-ElasticitySoftTissues; @linDC2009-SphericalIndentationSoftMatterHertzianRegime]. This method is tangebly more precise but doesn't provide a simple value for young's modulus. |
+| Model                         | Force-Indentation relationship                                                                                            | Scope                                                                                                                                                                                                                                                                                                                                         |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hertz                         | $$F = \frac{4}{3}E' \sqrt{R} \ \omega^{3/2}$$                                                                             | Hertz model approximates the shallow indention of two linearly elastic spheres with infinitesimal strains [@linDC2009-SphericalIndentationSoftMatterHertzianRegime; @radmacherM2007-StudyingMechanicsCellular; @jpkinstruments-JPKDataProcessing].                                                                                            |
+| DMT (DerjaguinMuller-Toporov) | $$F = F_{Hertz} - F_{det}$$<br>$$\delta = \frac{a}{2} \ln \frac{R_{i}+a}{R_{i}-a}$$                                       | Depending on the depth of indentation and the material interaction it can be important to account electrostatic non contact forces, the influence of which can be modelled using the Derjaguin approximation for interaction potential [@buttHJ1995-MeasuringSurfaceForces; @jpkinstruments-JPKDataProcessing].                               |
+| Fung                          | $$F = B\pi (\frac{a^5- 15Ra^4 + 75R^2a^3}{5Ra^2- 50R^2a + 125R^3})\text{exp}[b(\frac{a^3- 15Ra^2}{25R^2a- 125R^3})]<br>$$ | An exponential strain energy function based on mechanical testing of mesentery and arterial tissues, that models the non linear elasticity of cells [@fungY1967-ElasticitySoftTissues; @linDC2009-SphericalIndentationSoftMatterHertzianRegime]. This method is tangebly more precise but doesn't provide a simple value for young's modulus. |
 
 %% Expand on obstacles with applying contact mechanics models to cells %%
 
@@ -150,7 +151,7 @@ The mechanical properties of tubular cells are largely a result of their cytoske
 
 %% #### Obstacles & limitations %%
 
-%% Cell cultures aren't perfect representations of their in vitro counterparts. This can be improved with careful preparation. The elasticity of the substrate the culture is grown on can have a significant impact on cytoskelital arrangement [@wangD2022-KidneyProximalTubule; @loveH2018-SubstrateElasticityGoverns]  %%
+%% Cell cultures aren't perfect representations of their in vitro counterparts. This can be improved with careful preparation. The elasticity of the substrate the culture is grown on can have a significant impact on cytoskelital arrangement [@wangD2022-KidneyProximalTubule] [loveH2018-SubstrateElasticityGoverns]  %%
 
 %% Table with papers and a relevant summary #WIP %%
 
@@ -172,9 +173,9 @@ The below table lists several papers utilising atomic force microscopes to produ
 ### Experimental Method
 
 
-The experimental procedure used to produce the data used in this report is detailed thoroughly in reference [@siamantourasE2016-QuantifyingCellularMechanics]. Cells of the adult human proximal tubule kidney (HK2) cell line [@ryanMJ1994-HK-2] where purchased from the American Type Culture Collection (ATCC; Gaithersburg,  MD 20878 USA). These where maintained in Dulbecco's Modified Eagle Medium/Nutrient Mixture F-12 (DMEM/F12), 10% fetal calf serum (FCS), glutamine ($2 \ \text{mM}$), and EGF ($5 \ \text{ng/ml}$) for 48 hours. The cells where divided into 2 test groups, the "control" group and the "treated" group which where where serum starved overnight before being exposed to TBF-β, an E-cadherin antibody obtained from R&D systems, at ($10 \ ng/mL$) for a further 48 hours. 
+The experimental procedure used to produce the data used in this report is detailed thoroughly in reference [@siamantourasE2016-QuantifyingCellularMechanics]. Cells of the adult human proximal tubule kidney (HK2) cell line [@ryanMJ1994-HK-2] where purchased from the American Type Culture Collection (ATCC; Gaithersburg,  MD 20878 USA). These where maintained in Dulbecco's Modified Eagle Medium/Nutrient Mixture F-12 (DMEM/F12), 10% fetal calf serum (FCS), glutamine ($2 \ \text{mM}$), and EGF ($5 \ \text{ng/ml}$) for 48 hours. The cells where divided into 2 test groups, the "control" group and the "treated" group which where where serum starved overnight before being exposed to TBF-$\beta$, an E-cadherin antibody obtained from R&D systems, at ($10 \ \text{ng/mL}$) for a further 48 hours. 
 
-The indentation experiments where carried out using a JPK Instruments CellHesion©200 module with a BioCell™ temperature controller to maintain a bed temperature of $37 \degree C$ on a TMC 63-530 anti-vibration table. Probes where constructed by attaching $11\ \micro m$ Polyscience PolyBeads® to Nanoworld TL-1 tipless cantilevers with a force constant of $0.03 N/m$. Each cell was indented 5 times directly above the nucleus at a constant speed of $5\ \micro m / s$ with intervals of 60 seconds. For each set of experiments the spring constant of the cantilever was calibrated using the thermal noise method and the cell's height was measured to determine an appropriate indentation depth to minimise the influence of the hard basal substrate. 
+The indentation experiments where carried out using a JPK Instruments CellHesion©200 module with a BioCell™ temperature controller to maintain a bed temperature of $37 \degree \text{C}$ on a TMC 63-530 anti-vibration table. Probes where constructed by attaching $11\ \micro \text{m}$ Polyscience PolyBeads® to Nanoworld TL-1 tipless cantilevers with a force constant of $0.03 \text{N/m}$. Each cell was indented 5 times directly above the nucleus at a constant speed of $5\ \micro \text{m / s}$ with intervals of 60 seconds. For each set of experiments the spring constant of the cantilever was calibrated using the thermal noise method and the cell's height was measured to determine an appropriate indentation depth to minimise the influence of the hard basal substrate. 
 
 %% thermal noise method how and why %%
 
@@ -184,7 +185,7 @@ The indentation experiments where carried out using a JPK Instruments CellHesion
 
 %% How did i get ym values from the datasets %%
 
-Experimental data was received in the form of `.jpk-force` logs of head height position against vertical deflection force along with experimental metadata. The JPK data processing software was used to calculate the probe height based on spring constant and at this point the curves where exported in text form. In order to establish "trustworthy" values for YM the function included in the JPK data processing software was used with the deepest point of indentation to $1 \ \micro m$ past the contact point as upper and lower bounds. This was then replicated for the text exports in python using `nanite` an open source package that offers the same Hertz/Sneddon elasticity model truncated power series approximation for spherical indenters with a difference in fit optimisation methods; where JPK Data Processing uses least squared regression, Nanite utilises machine learning for fit quality estimation and optimisation. Despite not providing the "trustworthy" fits as a rated training dataset Nanite reproduced the "trustworthy" YM estimations with an average deviation of less than ±0.05%. The Hertz parabolic indenter model was also tested and compared with the Hertz/Sneddon approximation. All force indentation curves where plotted alongside those implied by the fitting along with the residual fitting error to identify potential anomalies or systematic error. Attention was paid to identify any consistent trends in the residual as If the residual where to consistently deviate from generally flat noise at 0 this would imply a poorly matched elasticity model.
+Experimental data was received in the form of `.jpk-force` logs of head height position against vertical deflection force along with experimental metadata. The JPK data processing software was used to calculate the probe height based on spring constant and at this point the curves where exported in text form. In order to establish "trustworthy" values for YM the function included in the JPK data processing software was used with the deepest point of indentation to $1 \ \micro m$ past the contact point as upper and lower bounds. This was then replicated for the text exports in python using `nanite` an open source package that offers the same Hertz/Sneddon elasticity model truncated power series approximation for spherical indenters with a difference in fit optimisation methods; where JPK Data Processing uses least squared regression, Nanite utilises machine learning for fit quality estimation and optimisation. Despite not providing the "trustworthy" JPK fits as a rated training dataset Nanite reproduced the YM estimations with an average deviation of less than ±0.05%. The Hertz parabolic indenter model was also tested and compared with the Hertz/Sneddon approximation. All force indentation curves where plotted alongside those implied by the fitting along with the residual fitting error to identify potential anomalies or systematic error. Attention was paid to identify any consistent trends in the residual as If the residual where to consistently deviate from generally flat noise at 0 this would imply a poorly matched elasticity model.
 
 %% How did I determine the appropriate cell YM given the experimental data %%
 
@@ -211,12 +212,12 @@ A Bayes classifier was constructed to quantify the probability of diabetic nephr
 
 $$
 {\Large  
-P(G∣x) = \frac{P(x∣G) \cdot P(G)}{P(x)}  
+P(G \mid x) = \frac{P(x \mid G) \mid \cdot P(G)}{P(x)}  
 }  
 \qquad  
 \begin{align}  
-P(G∣x) &:: \text{Posterior Probability}\\
-P(x∣G) &:: \text{Likleyhood}\\
+P(G \mid x) &:: \text{Posterior Probability}\\
+P(x \mid G) &:: \text{Likleyhood}\\
 P(G)   &:: \text{Prior Probability}\\
 P(x)   &:: \text{Evidence}\\
 \end{align}
@@ -262,20 +263,20 @@ Largest Column: standard
 ```
 
 
-![Control-2011.03.22-18.41.44](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
+![](Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
 
 
 --- column-break ---
 
 
-![Control-2011.03.22-18.41.44](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
+![](Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
 
 
 --- end-multi-column
 
 There where some trends observed in the general shape of the residual error, specifically; 1) an initial hump at the contact point likely unaccounted for electrostatic non contact forces due to Van der Waals effect,  2) a middle dip and final flick where fit's are shallower than the actual force indention behaviour implying an under estimation of YM or a non linear elasticity. Both of these effects are particularly pronounced in the following fitting for this dataset this would be considered a bad fit.
 
-![Control-2011.03.22-19.35.48](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
+![](Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
 
 %% Figure showing all residual curves faintly with smoothed average of all and grouped %%
 
@@ -284,7 +285,7 @@ There where some trends observed in the general shape of the residual error, spe
 
 %% Plot showing trend in average variation across experiments %%
 
-![SuccessiveTest_trends_absolute](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/SuccessiveTest_trends_absolute.svg)
+![](SuccessiveTest_trends_absolute.svg)
 
 There was a slight negative trend observed across successive tests indicative of cell relaxation with the first test indicating a 10% higher YM on average, however this was not deemed necessary to control for. The majority of cells showed strong agreement across tests resulting in tight confidence intervals and representative apparent YM values. The examples below are typical samples from each group.
 
@@ -298,13 +299,13 @@ Largest Column: standard
 ```
 
 
-![Control-Cell6](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell6.svg)
+![](Fit%20Quality/Cells/Control-Cell6.svg)
 
 
 --- column-break ---
 
 
-![Treated-Cell12](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Treated-Cell12.svg)
+![](Fit%20Quality/Cells/Treated-Cell12.svg)
 
 
 --- end-multi-column
@@ -319,13 +320,13 @@ Largest Column: standard
 ```
 
 
-![Control-Cell4](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell4.svg)
+![](Fit%20Quality/Cells/Control-Cell4.svg)
 
 
 --- column-break ---
 
 
-![Treated-Cell7](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Treated-Cell7.svg)
+![](Fit%20Quality/Cells/Control-Cell7.svg)
 
 
 --- end-multi-column
@@ -362,7 +363,7 @@ Largest Column: standard
 
 ###### Figure: Population Shape of Cell Young's Modulus by group
 
-![350](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/YM+Range_Viol_comparison_byCell.svg)
+![|350](YM+Range_Viol_comparison_byCell.svg)
 
 ###### Table: Cell Young's Modulus (Pa) statistics by test group
 
@@ -377,7 +378,7 @@ Largest Column: standard
 
 ###### Figure: Population Shape of Test Young's Modulus (Pa) by group
 
-![350](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/YM+Residuals_Viol_comparison_byExperiment.svg)
+![|350](YM+Residuals_Viol_comparison_byExperiment.svg)
 
 ###### Table: Test Young's Modulus (Pa) statistics by test group
 
@@ -397,13 +398,14 @@ Largest Column: standard
 %% Cohen's d = 1.2015293213102536, this shows a strong effect size, but this  %%
 ###### Figure: Force Indentation for Apparent Cell YM Coloured by Test Group
 
-![YM_FD_comparison_byCell](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/YM_FD_comparison_byCell.svg)
-%% [YM_FD_comparison_byExperiment](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/YM_FD_comparison_byExperiment.svg) %%
+![](YM_FD_comparison_byCell.svg)
+
+%% [YM_FD_comparison_byExperiment](YM_FD_comparison_byExperiment.svg) %%
 
 
 ###### Figure: Young's Module by Group with Confidence Metrics
 
-![YM_CI_byGroup](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/YM_CI_byGroup.svg)
+![](YM_CI_byGroup.svg)
 
 In the figure above the control group is contrasted with the treated group using notched Tukey style box plots overlaid with the mean and standard deviation 95% confidence intervals as well as the apparent cell YM values for each group. 
 
@@ -414,9 +416,12 @@ In the figure above the control group is contrasted with the treated group using
 
 
 
-![Group_PDFs](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Group_PDFs.svg)
+%% ![](Group_PDFs.svg) %%
 
 %% Disease measure against YM coloured by test group %%
+
+
+![](Classification_Threashhold.svg)![](Classification_Boundry_v_Samples.svg)
 
 ## Discussion
 
@@ -428,24 +433,24 @@ The sample sizes used in this report are not sufficient to produce a classifier 
 
 ###### Figure: Best vs Worst Case Probability Density Functions
 
-![Group_PDFs_LimCases](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Group_PDFs_LimCases.svg)
+![](Group_PDFs_LimCases.svg)
 
 
 It should be noted that with the small sample size of the treated group $n=4$, these metrics are significantly brought upward by the results of a single cell and removing it significantly diminishes the statistical significance of the stiffening effect relied upon in this method. However, other than the substantially higher Young's Module values there is no reason to expect this cell or it's experiments to be erroneous. The Hertz fit's appear representative of the observed cell response with residuals similar to average across all fits $2 \ \text{pN}$. The relevant metrics for the cell in question are below and the reader is encouraged to judge for their own satisfaction whether the conclusions drawn from the full dataset are sufficiently supported or if the influence of this single observation undermines the findings. 
 
-![|400](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Treated-Cell7.svg) 
+![|400](Fit%20Quality/Cells/Treated-Cell7.svg) 
 
-![|250](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg)
-![|250](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg)
-![|250](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg)
-![|250](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg)
-![|250](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg)
+![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg)
+![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg)
+![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg)
+![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg)
+![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg)
 
 In both the Control and the Treated group the majority of cells consistently exhibit YM lower than the group average with a few very high YM cells with higher inter experiment range. The range in YM increases linearly with with higher average YM values, however when range is considered as a proportion of average YM there is no correlation. This is unlikely to be a product of fitting error or the dimensionality of YM emphasising experimental inaccuracy based on how well the fittings match the observed cell responses, the cells are exhibiting a fixed linear elasticity within a given test but a range of different elasticises across tests and that range increases proportionally with the average. Neither is this a case of the higher average being a result of cells displaying higher variance in elasticity from a fixed minimum as the lower bound of even the $1000\times$ bootstrapped confidence intervals rise in tandem with the average YM. 
 
 %% This is likely due to %%
 
-![YM_RangeByApparentVal](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/YM_RangeByApparentVal.svg)
+![](YM_RangeByApparentVal.svg)
 
 
 Due to the unexplained variance in the range of YM across tests of single cells the possibility of it's relation to the diseased state has not been ruled out Introducing the possibility that method increases classification accuracy at the cell level but potentially sacrifices it at the population level. This provides an argument to establish group characteristics on the experiment level rather than the cell level for use cases where many samples are being taken from single unknown group as might be the case in a biopsy for example.
@@ -455,26 +460,29 @@ Due to the unexplained variance in the range of YM across tests of single cells 
 
 
 
+## Bibliography
+
 ## Annexes
 
 
 ### Control
 
-![Control-Cell1](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell1.svg)
-![Control-Cell2](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell2.svg)
-![Control-Cell3](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell3.svg)
-![Control-Cell4](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell4.svg)
-![Control-Cell5](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell5.svg)
-![Control-Cell6](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell6.svg)
-![Control-Cell7](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell7.svg)
-![Control-Cell8](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell8.svg)
-![Control-Cell9](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell9.svg)
-![Control-Cell10](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell10.svg)
-![Control-Cell11](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Control-Cell11.svg)
+![](Fit%20Quality/Cells/Control-Cell1.svg)
+![](Fit%20Quality/Cells/Control-Cell2.svg)
+![](Fit%20Quality/Cells/Control-Cell3.svg)
+![](Fit%20Quality/Cells/Control-Cell4.svg)
+![](Fit%20Quality/Cells/Control-Cell5.svg)
+![](Fit%20Quality/Cells/Control-Cell6.svg)
+![](Fit%20Quality/Cells/Control-Cell7.svg)
+![](Fit%20Quality/Cells/Control-Cell8.svg)
+![](Fit%20Quality/Cells/Control-Cell9.svg)
+![](Fit%20Quality/Cells/Control-Cell10.svg)
+![](Fit%20Quality/Cells/Control-Cell11.svg)
 
 ### Treated
-![Treated-Cell5](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Treated-Cell5.svg)
-![Treated-Cell6](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Treated-Cell6.svg)
-![Treated-Cell7](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Treated-Cell7.svg)
-![Treated-Cell12](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/Fit%20Quality/Cells/Treated-Cell12.svg)
+
+![](Fit%20Quality/Cells/Treated-Cell5.svg)
+![](Fit%20Quality/Cells/Treated-Cell6.svg)
+![](Fit%20Quality/Cells/Treated-Cell7.svg)
+![](Fit%20Quality/Cells/Treated-Cell12.svg)
 

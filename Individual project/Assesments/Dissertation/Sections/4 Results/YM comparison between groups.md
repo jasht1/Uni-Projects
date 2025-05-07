@@ -27,7 +27,7 @@ Largest Column: standard
 
 ###### Figure: Population Shape of Cell Young's Modulus by group
 
-![[YM+Range_Viol_comparison_byCell.svg|350]]
+![|350](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM+Range_Viol_comparison_byCell.svg)
 
 ###### Table: Cell Young's Modulus (Pa) statistics by test group
 
@@ -42,7 +42,7 @@ Largest Column: standard
 
 ###### Figure: Population Shape of Test Young's Modulus (Pa) by group
 
-![[YM+Residuals_Viol_comparison_byExperiment.svg|350]]
+![|350](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM+Residuals_Viol_comparison_byExperiment.svg)
 
 ###### Table: Test Young's Modulus (Pa) statistics by test group
 

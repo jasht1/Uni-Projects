@@ -181,6 +181,39 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+  {\begin{list}{}{%
+   \setlength{\itemindent}{0pt}
+   \setlength{\leftmargin}{0pt}
+   \setlength{\parsep}{0pt}
+   % turn on hanging indent if param 1 is 1
+   \ifodd #1
+    \setlength{\leftmargin}{\cslhangindent}
+    \setlength{\itemindent}{-1\cslhangindent}
+   \fi
+   % set entry spacing
+   \setlength{\itemsep}{#2\baselineskip}}}
+  {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -347,6 +380,8 @@ the Detection of Renal Disease}
 \usepackage[export]{adjustbox}
 \usepackage{graphicx}
 \usepackage{ragged2e}
+\usepackage{siunitx}
+\usepackage{gensymb}
 
 
 \begin{document}
@@ -402,11 +437,10 @@ the Detection of Renal Disease}
 \begin{justify}
     This project investigates changes in mechanical properties of kidney
     cells when exposed to TGF-\(\beta 1\), which is known to induce
-    renal disease {[}@gentleME2013-EpithelialCellTGFv{]}. The aim of
-    this project is to provide insight on the progression of diabetic
-    nephropathy from a mechanical perspective based on changes in
-    mechanical properties observed in single cells using atomic force
-    microscopy.
+    renal disease {[}1{]}. The aim of this project is to provide insight
+    on the progression of diabetic nephropathy from a mechanical
+    perspective based on changes in mechanical properties observed in
+    single cells using atomic force microscopy.
   \end{justify}
 \end{abstract}
 \pagebreak
@@ -441,10 +475,10 @@ Siamantouras
 
 This project investigates changes in mechanical properties of kidney
 cells when exposed to TGF-\(\beta 1\), which is known to induce renal
-disease {[}@gentleME2013-EpithelialCellTGFv{]}. The aim of this project
-is to develop a method to quantify the progression of diabetic
-nephropathy from a mechanical perspective based on changes in mechanical
-properties observed in single cells using atomic force microscopy.
+disease {[}1{]}. The aim of this project is to develop a method to
+quantify the progression of diabetic nephropathy from a mechanical
+perspective based on changes in mechanical properties observed in single
+cells using atomic force microscopy.
 
 \subsection{Introduction}\label{introduction}
 
@@ -469,20 +503,27 @@ filtration system of the human body is referred to as the renal system,
 in which the kidneys are a component about the size of a clenched fist
 that can be likened to a sophisticated water treatment plant combined
 with a feedback-controlled chemical processing unit. Each contain
-roughly a million multi step filter loops called nephrons
-{[}@bertramJF2011-HumanNephronNumber{]}.
+roughly a million multi step filter loops called nephrons {[}2{]}.
 
 \begin{quote}
-\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Assesments/Interim Assesment/Interim Report/attachments/Kidney and nephron - Labeled.jpg}}
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Kidney and nephron - Labeled.jpg}}
+\caption{Close up of a nephron and its place in the kidney. Labels on
+the kidney cross section show where unfiltered blood enters, filtered
+blood leaves, and urine exits. On the nephron, the glomerulus, tubule,
+and collecting duct are labeled along with where unfiltered blood
+enters, filtered blood exits, and urine exits.\textbar400}
+\end{figure}
+
 Labeled Kidney and Nephron form National Institute of Diabetes and
-Digestive and Kidney Diseases, National Institutes of Health
-{[}@niddk-KidneyNephronLabeled{]}.
+Digestive and Kidney Diseases, National Institutes of Health {[}3{]}.
 \end{quote}
 
 The nephrons are selective, able to remove waste products while keeping
 desirable substances in the blood. They are able to regulating essential
 substances such as water, electrolytes, and pH levels to strict set
-points. {[}@ogobuiroI2025-PhysiologyRenal{]}
+points. {[}4{]}
 
 The the first step unfiltered blood enters the glomerulus and if forced
 through several membrane filters by hydro-static pressure. The first
@@ -490,35 +531,32 @@ layer permits all solutes blocking only cells. The next is negatively
 charged thus blocking proteins like albumin. The final layer modulates
 the flow resistance to vary the hydro-static pressure gradient, this
 will be counter balanced by the osmotic pressure such that it can be
-used to effectively vary the ultra filtration coefficient.
-{[}@pavenstadtH2000-RolesPodocyteGlomerular;
-@ogobuiroI2025-PhysiologyRenal{]} Leaving the glomerulus is a blood
-vessel containing only cells and proteins and a fractional remainder of
-the other solute, and the tubule carrying all the removed solute
-{[}@lumen-NephronStructure{]}.
+used to effectively vary the ultra filtration coefficient. {[}4{]},
+{[}5{]} Leaving the glomerulus is a blood vessel containing only cells
+and proteins and a fractional remainder of the other solute, and the
+tubule carrying all the removed solute {[}6{]}.
 
 The glomerulus is an overly aggressive filter; much of the water and
 solute must be re introduced to the blood from the tubules. The tubules
 run along side blood vessels and using a combination of osmosis, active
 transport and controlled ionic gradients the valuable ions and most of
 the water is reabsorbed over several uniquely specialised segments
-{[}@ogobuiroI2025-PhysiologyRenal{]}.
+{[}4{]}.
 
 \begin{quote}
-\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Assesments/Interim Assesment/Interim Report/attachments/Tubule zoom diagram.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Tubule zoom diagram.png}}
 Simplified diagram of tubule, tubule wall and tubule cell structure. The
 structure of the tubule varies significantly across it's length to as
 different sections are specialised to permeate different resources, the
 lumen diameter and epithelial cell height values are averages of random
-samples {[}@morozovD2021-MappingKidneyTubule{]}.
+samples {[}7{]}.
 \end{quote}
 
 Epithelial tubule cells are the essential building blocks of tubules.
 They are anchored to each other and to the extra cellular matrix (ECM)
-by junctions tied to their cytoskeleton
-{[}@yuASL2013-Chapter12Intercellular; @zihniC2016-TightJunctions{]}. In
-this way the cytoskeleton plays an essential role in maintaining the
-structure of both the individual cells and the larger structure.
+by junctions tied to their cytoskeleton {[}8{]}, {[}9{]}. In this way
+the cytoskeleton plays an essential role in maintaining the structure of
+both the individual cells and the larger structure.
 
 \subsubsection{Diabetic Nephropathy (DN)}\label{diabetic-nephropathy-dn}
 
@@ -529,104 +567,83 @@ the blood.
 
 Diabetic nephropathy develops in 30-40\% of people with diabetes after
 15-20 years, as the disease progresses the damage accumulates and
-mortality rate rises {[}@vargheseRT2025-DiabeticNephropathy{]}. Based on
-the risk factor of the patient treatments range from lifestyle changes
-and medications, to renal replacement which involves dialysis or
-transplantation {[}@vargheseRT2025-DiabeticNephropathy{]}.
+mortality rate rises {[}10{]}. Based on the risk factor of the patient
+treatments range from lifestyle changes and medications, to renal
+replacement which involves dialysis or transplantation {[}10{]}.
 
 In type 1 diabetes a lack of insulin and in type 2 Insulin resistance
 cause chronic hyperglycemia a condition where there is too much glucose
 in the blood. Hyperglycemia causes an increased build up of reactive
 oxygen species (ROS) this ongoing oxidative stress causes chronic
-inflammation {[}@gonzalezP2023-HyperglycemiaOxidativeStress{]}.
+inflammation {[}11{]}.
 
 Inflammation increases production of cytokines, including
 TGF-\(\beta 1\), which trigger Epithelial to Mesenchymal Transition
-(EMT) {[}@hillsCE2012-TGFvModulatesCelltocell;
-@pizzinoG2017-OxidativeStress{]}. EMT is a process where cells which
-make up structural and functional surfaces (epithelial) transition into
-repair/maintenance cells (mesenchymal)
-{[}@kalluriR2009-BasicsEpithelialmesenchymalTransition{]}. In this case
-tubular epithelial, cells which make up the fine vessels of the kidney
-that filter blood, transform into myofibroblasts, repair and maintenance
-cells {[}@iwanoM2002-EvidenceThatFibroblasts{]}. This is the underlying
-mechanism of fibrosis, which induces atrophy and scarring in the tubules
-causing progressive kidney damage
-{[}@metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress{]}.
+(EMT) {[}12{]}, {[}13{]}. EMT is a process where cells which make up
+structural and functional surfaces (epithelial) transition into
+repair/maintenance cells (mesenchymal) {[}14{]}. In this case tubular
+epithelial, cells which make up the fine vessels of the kidney that
+filter blood, transform into myofibroblasts, repair and maintenance
+cells {[}15{]}. This is the underlying mechanism of fibrosis, which
+induces atrophy and scarring in the tubules causing progressive kidney
+damage {[}16{]}.
 
 \subsubsection{Atomic Force Microscopy
 (AFM)}\label{atomic-force-microscopy-afm}
 
 Atomic Force Microscopy (AFM) is a technique for characterising
 nanomechanical properties and structure. It is well suited to
-microbiology as it allows for the study of live cells
-{[}@kilpatrickJI2015-NanomechanicsCellsBiomaterials{]}.
+microbiology as it allows for the study of live cells {[}17{]}.
 
 Atomic force microscopes use the deflection of a very fine probe on a
 flexible cantilever to detect contact forces ranging form nano to micro
 Newtons. There are a myriad of applications and operating modes of AFM
-{[}@dufreneYF2002-AtomicForceMicroscopy{]} but this report is primarily
-concerned with nano indentation. This involves advancing a fine tipped
-probe on the end of the cantilever into a sample cell producing a force
-over indentation depth curve, from which the elasticity of the cell can
-be calculated using a Hertz contact model
-{[}@dufreneYF2002-AtomicForceMicroscopy;
-@buttHJ1995-MeasuringSurfaceForces{]}.
+{[}18{]} but this report is primarily concerned with nano indentation.
+This involves advancing a fine tipped probe on the end of the cantilever
+into a sample cell producing a force over indentation depth curve, from
+which the elasticity of the cell can be calculated using a Hertz contact
+model {[}18{]}, {[}19{]}.
 
 The typically atomic force microscope utilise a laser focused on the
 free end of the cantilever such that any deflection of the probe
 produces an amplified deflection of the reflected beam, this is recorded
-by a position sensitive photodiode
-{[}@dufreneYF2002-AtomicForceMicroscopy;
-@buttHJ1995-MeasuringSurfaceForces{]}.
+by a position sensitive photodiode {[}18{]}, {[}19{]}.
 
 \begin{quote}
-\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Assesments/Interim Assesment/Interim Report/attachments/Atomic Force Microscopy - mechanism diagram.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Atomic Force Microscopy - mechanism diagram.png}}
 Atomic force microscope functional diagram
 \end{quote}
 
 The sample once mounted to the sample stage can be manoeuvred precisely
 in relative to the probe by applying voltage to piezoelectric actuators
-{[}@dufreneYF2002-AtomicForceMicroscopy;
-@buttHJ1995-MeasuringSurfaceForces;
-@giraudF2019-PiezoelectricActuatorsIntroduction{]} this is how the
-sample is advanced into the tip. Once calibrated the voltage at the
-actuators gives the sample stage position and the voltage at the
-photodiode gives the deflection of the probe, with this a force
-displacement curve can be produced by accounting for the stiffness of
-the cantilever and the relative displacement
-{[}@dufreneYF2002-AtomicForceMicroscopy;
-@buttHJ1995-MeasuringSurfaceForces;
-@kilpatrickJI2015-NanomechanicsCellsBiomaterials{]}.
+{[}18{]}, {[}19{]}, {[}20{]} this is how the sample is advanced into the
+tip. Once calibrated the voltage at the actuators gives the sample stage
+position and the voltage at the photodiode gives the deflection of the
+probe, with this a force displacement curve can be produced by
+accounting for the stiffness of the cantilever and the relative
+displacement {[}17{]}, {[}18{]}, {[}19{]}.
 
 A typical force displacement curve from a nano indention experiment has
 the following shape seen in figure (A) below. A broadly level region
 where the probe is not in contact with the cell; the contact region; a
 sloped region where the probe is indenting the cell; the turnaround
 point; from which the same is repeated in reverse differing mainly at
-the point of separation
-{[}@kilpatrickJI2015-NanomechanicsCellsBiomaterials{]}.
+the point of separation {[}17{]}.
 
 \begin{quote}
-\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Assesments/Interim Assesment/Interim Report/attachments/fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png}}
-\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Assesments/Interim Assesment/Interim Report/attachments/fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png}}\pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png}}
 Example AFM data from Radmacher 2007, (A) shows the curve as a whole,
-(B) zoomed into the contact / separation region
-{[}@radmacherM2007-StudyingMechanicsCellular{]}.
+(B) zoomed into the contact / separation region {[}21{]}.
 \end{quote}
 
 The exact point of contact is often ambiguous and rarely the same as the
 the point of separation. On approach the cantilever will be deflected
 away from the cell by van der waals forces until the spring force of the
-cantilever overcomes and surface tension takes hold
-{[}@dufreneYF2002-AtomicForceMicroscopy;
-@buttHJ1995-MeasuringSurfaceForces;
-@kilpatrickJI2015-NanomechanicsCellsBiomaterials{]}. The point of
-separation is typically clearer as it's associated with a ``jump'' in
-cantilever deflection as the surface tension / adhesion of the cell to
-the probe is overcome {[}@dufreneYF2002-AtomicForceMicroscopy;
-@buttHJ1995-MeasuringSurfaceForces;
-@kilpatrickJI2015-NanomechanicsCellsBiomaterials{]}.
+cantilever overcomes and surface tension takes hold {[}17{]}, {[}18{]},
+{[}19{]}. The point of separation is typically clearer as it's
+associated with a ``jump'' in cantilever deflection as the surface
+tension / adhesion of the cell to the probe is overcome {[}17{]},
+{[}18{]}, {[}19{]}.
 
 \subsubsection{Contact Mechanics}\label{contact-mechanics}
 
@@ -635,9 +652,9 @@ theoretical mechanical model of the interaction. Below is a table
 outlining different model indention relationships.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0604}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2458}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6938}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0600}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2505}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6894}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Model
@@ -652,42 +669,31 @@ Scope
 \endlastfoot
 Hertz & \(F = \frac{4}{3}E' \sqrt{R} \ \omega^{3/2}\) & Hertz model
 approximates the shallow indention of two linearly elastic spheres with
-infinitesimal strains
-{[}@linDC2009-SphericalIndentationSoftMatterHertzianRegime;
-@radmacherM2007-StudyingMechanicsCellular;
-@jpkinstruments-JPKDataProcessing{]}. \\
+infinitesimal strains {[}21{]}, {[}22{]}, {[}23{]}. \\
 DMT (DerjaguinMuller-Toporov) &
 \(F = F_{Hertz} - F_{det}\)\(\delta = \frac{a}{2} \ln \frac{R_{i}+a}{R_{i}-a}\)
 & Depending on the depth of indentation and the material interaction it
 can be important to account electrostatic non contact forces, the
 influence of which can be modelled using the Derjaguin approximation for
-interaction potential {[}@buttHJ1995-MeasuringSurfaceForces;
-@jpkinstruments-JPKDataProcessing{]}. \\
+interaction potential {[}19{]}, {[}23{]}. \\
 Fung &
-\(F = B\pi (\frac{a^5- 15Ra^4 + 75R^2a^3}{5Ra^2- 50R^2a + 125R^3})\text{exp}[b(\frac{a^3- 15Ra^2}{25R^2a- 125R^3})]\)
+\(F = B\pi (\frac{a^5- 15Ra^4 + 75R^2a^3}{5Ra^2- 50R^2a + 125R^3})\text{exp}[b(\frac{a^3- 15Ra^2}{25R^2a- 125R^3})]<br>\)
 & An exponential strain energy function based on mechanical testing of
 mesentery and arterial tissues, that models the non linear elasticity of
-cells {[}@fungY1967-ElasticitySoftTissues;
-@linDC2009-SphericalIndentationSoftMatterHertzianRegime{]}. This method
-is tangebly more precise but doesn't provide a simple value for young's
-modulus. \\
+cells {[}22{]}, {[}24{]}. This method is tangebly more precise but
+doesn't provide a simple value for young's modulus. \\
 \end{longtable}
 
 \subsection{Literature Review}\label{literature-review}
 
 Developments in both understanding of kidney disease and the application
-of atomic force microscopy (AFM) technology
-{[}@liuS2024-AtomicForceMicroscopyDisease-relatedStudies;
-@dufreneYF2002-AtomicForceMicroscopy{]} may provide a valuable measure
-of the progression of kidney failure to inform the research and
-development of novel therapies
-{[}@parrishAR2016-CytoskeletonNovelTarget{]}.
+of atomic force microscopy (AFM) technology {[}18{]}, {[}25{]} may
+provide a valuable measure of the progression of kidney failure to
+inform the research and development of novel therapies {[}26{]}.
 
 The mechanical properties of tubular cells are largely a result of their
-cytoskeletal structure {[}@jalilianI2015-CellElasticityRegulated;
-@radmacherM2007-StudyingMechanicsCellular{]} which is altered
-significantly with the progression of DN
-{[}@buckleyST2012-CytoskeletalRearrangementTGFv1induced{]}.
+cytoskeletal structure {[}21{]}, {[}27{]} which is altered significantly
+with the progression of DN {[}28{]}.
 
 The below table lists several papers utilising atomic force microscopes
 to produce force displacement curves from a bead tipped cantilever
@@ -712,34 +718,33 @@ Cell Elasticity
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-{[}@siamantourasE2016-QuantifyingCellularMechanics{]} E. Siamantouras,
-C. E. Hills, P. E. Squires, and K.-K. Liu, `Quantifying cellular
-mechanics and adhesion in renal tubular injury using single cell force
-spectroscopy', \emph{Nanomedicine: Nanotechnology, Biology and
-Medicine}, vol.~12, no. 4, pp.~1013--1021, May 2016, doi:
+{[}29{]} E. Siamantouras, C. E. Hills, P. E. Squires, and K.-K. Liu,
+`Quantifying cellular mechanics and adhesion in renal tubular injury
+using single cell force spectroscopy', \emph{Nanomedicine:
+Nanotechnology, Biology and Medicine}, vol.~12, no. 4, pp.~1013--1021,
+May 2016, doi:
 \href{https://doi.org/10.1016/j.nano.2015.12.362}{10.1016/j.nano.2015.12.362}.
 & HK2: immortalised human kidney proximal tubule epithelial cell culture
 & Over 30 cells each indented 5 times immediately above the nucleus
 producing over 150 curves. & \textbf{control}: \(320 \ \text{Pa}\) cells
 treated with TGF-\(\beta 1\): \(549 \ \text{Pa}\) \\
-{[}@jafariA2024-MechanicalPropertiesHuman{]} A. Jafari, A. Sadeghi, and
-M. Lafouti, `Mechanical properties of human kidney cells and their
-effects on the atomic force microscope beam vibrations', \emph{Microsc.
-Res. Tech.}, vol.~87, no. 8, pp.~1704--1717, 2024, doi:
+{[}30{]} A. Jafari, A. Sadeghi, and M. Lafouti, `Mechanical properties
+of human kidney cells and their effects on the atomic force microscope
+beam vibrations', \emph{Microsc. Res. Tech.}, vol.~87, no. 8,
+pp.~1704--1717, 2024, doi:
 \href{https://doi.org/10.1002/jemt.24543}{10.1002/jemt.24543}. &
 HEK-293: immortalised human embryonic kidney cell culture & did not
 elaborate & \(539.8 \ \text{Pa}\) \\
-{[}@shimizuY2012-SimpleDisplaySystem{]} Y. Shimizu, T. Kihara, S. M. A.
-Haghparast, S. Yuba, and J. Miyake, `Simple Display System of Mechanical
-Properties of Cells and Their Dispersion', \emph{PLOS ONE}, vol.~7, no.
-3, p.~e34305, Mar.~2012, doi:
+{[}31{]} Y. Shimizu, T. Kihara, S. M. A. Haghparast, S. Yuba, and J.
+Miyake, `Simple Display System of Mechanical Properties of Cells and
+Their Dispersion', \emph{PLOS ONE}, vol.~7, no. 3, p.~e34305, Mar.~2012,
+doi:
 \href{https://doi.org/10.1371/journal.pone.0034305}{10.1371/journal.pone.0034305}.
 & HEK-293: immortalised human embryonic kidney cell culture & The median
 of value of over 100 cells examined at 25 points each. & mode value
 (\(x_{0}\)): \(410 \ \text{Pa}\) variance (\(w\)): \(0.757\) \\
-{[}@buckleyST2012-CytoskeletalRearrangementTGFv1induced{]} S. T.
-Buckley, C. Medina, A. M. Davies, and C. Ehrhardt, `Cytoskeletal
-re-arrangement in TGF-\(\beta 1\)-induced alveolar
+{[}28{]} S. T. Buckley, C. Medina, A. M. Davies, and C. Ehrhardt,
+`Cytoskeletal re-arrangement in TGF-\(\beta 1\)-induced alveolar
 epithelial-mesenchymal transition studied by atomic force microscopy and
 high-content analysis', \emph{Nanomedicine: Nanotechnology, Biology and
 Medicine}, vol.~8, no. 3, pp.~355--364, Apr.~2012, doi:
@@ -750,8 +755,8 @@ least 5 different positions (avoiding the nucleus and the very edge)
 producing over 750 curves. & On Glass: 8300 \(\pm\)
 \(1100 \ \text{Pa}\)On collagen I: \(9100 \ \pm\)
 \(2900 \ \text{Pa}\) \\
-{[}@wyssHM2011-BiophysicalPropertiesNormal{]} H. M. Wyss \emph{et al.},
-`Biophysical properties of normal and diseased renal glomeruli',
+\textbf{wyssHM2011-BiophysicalPropertiesNormal?} H. M. Wyss \emph{et
+al.}, `Biophysical properties of normal and diseased renal glomeruli',
 \emph{Am J Physiol Cell Physiol}, vol.~300, no. 3, pp.~C397--C405,
 Mar.~2011, doi:
 \href{https://doi.org/10.1152/ajpcell.00438.2010}{10.1152/ajpcell.00438.2010}.
@@ -765,30 +770,29 @@ differential sieving & 10 different glomeruli with 10 measurements each
 \subsubsection{Experimental Method}\label{experimental-method}
 
 The experimental procedure used to produce the data used in this report
-is detailed thoroughly in reference
-{[}@siamantourasE2016-QuantifyingCellularMechanics{]}. Cells of the
-adult human proximal tubule kidney (HK2) cell line
-{[}@ryanMJ1994-HK-2{]} where purchased from the American Type Culture
-Collection (ATCC; Gaithersburg, MD 20878 USA). These where maintained in
-Dulbecco's Modified Eagle Medium/Nutrient Mixture F-12 (DMEM/F12), 10\%
-fetal calf serum (FCS), glutamine (\(2 \ \text{mM}\)), and EGF
-(\(5 \ \text{ng/ml}\)) for 48 hours. The cells where divided into 2 test
-groups, the ``control'' group and the ``treated'' group which where
-where serum starved overnight before being exposed to TBF-\(\beta\), an
-E-cadherin antibody obtained from R\&D systems, at (\(10 \ ng/mL\)) for
-a further 48 hours.
+is detailed thoroughly in reference {[}29{]}. Cells of the adult human
+proximal tubule kidney (HK2) cell line {[}32{]} where purchased from the
+American Type Culture Collection (ATCC; Gaithersburg, MD 20878 USA).
+These where maintained in Dulbecco's Modified Eagle Medium/Nutrient
+Mixture F-12 (DMEM/F12), 10\% fetal calf serum (FCS), glutamine
+(\(2 \ \text{mM}\)), and EGF (\(5 \ \text{ng/ml}\)) for 48 hours. The
+cells where divided into 2 test groups, the ``control'' group and the
+``treated'' group which where where serum starved overnight before being
+exposed to TBF-\(\beta\), an E-cadherin antibody obtained from R\&D
+systems, at (\(10 \ \text{ng/mL}\)) for a further 48 hours.
 
 The indentation experiments where carried out using a JPK Instruments
 CellHesion©200 module with a BioCell™ temperature controller to maintain
-a bed temperature of 37°C on a TMC 63-530 anti-vibration
-table. Probes where constructed by attaching \(11\ \micro m\)
-Polyscience PolyBeads® to Nanoworld TL-1 tipless cantilevers with a
-force constant of \(0.03 N/m\). Each cell was indented 5 times directly
-above the nucleus at a constant speed of \(5\ \micro m / s\) with
-intervals of 60 seconds. For each set of experiments the spring constant
-of the cantilever was calibrated using the thermal noise method and the
-cell's height was measured to determine an appropriate indentation depth
-to minimise the influence of the hard basal substrate.
+a bed temperature of \(37 \degree \text{C}\) on a TMC 63-530
+anti-vibration table. Probes where constructed by attaching
+\(11\ \micro \text{m}\) Polyscience PolyBeads® to Nanoworld TL-1 tipless
+cantilevers with a force constant of \(0.03 \text{N/m}\). Each cell was
+indented 5 times directly above the nucleus at a constant speed of
+\(5\ \micro \text{m / s}\) with intervals of 60 seconds. For each set of
+experiments the spring constant of the cantilever was calibrated using
+the thermal noise method and the cell's height was measured to determine
+an appropriate indentation depth to minimise the influence of the hard
+basal substrate.
 
 \subsubsection{Elasticity Modeling}\label{elasticity-modeling}
 
@@ -806,15 +810,15 @@ model truncated power series approximation for spherical indenters with
 a difference in fit optimisation methods; where JPK Data Processing uses
 least squared regression, Nanite utilises machine learning for fit
 quality estimation and optimisation. Despite not providing the
-``trustworthy'' fits as a rated training dataset Nanite reproduced the
-``trustworthy'' YM estimations with an average deviation of less than
-±0.05\%. The Hertz parabolic indenter model was also tested and compared
-with the Hertz/Sneddon approximation. All force indentation curves where
-plotted alongside those implied by the fitting along with the residual
-fitting error to identify potential anomalies or systematic error.
-Attention was paid to identify any consistent trends in the residual as
-If the residual where to consistently deviate from generally flat noise
-at 0 this would imply a poorly matched elasticity model.
+``trustworthy'' JPK fits as a rated training dataset Nanite reproduced
+the YM estimations with an average deviation of less than ±0.05\%. The
+Hertz parabolic indenter model was also tested and compared with the
+Hertz/Sneddon approximation. All force indentation curves where plotted
+alongside those implied by the fitting along with the residual fitting
+error to identify potential anomalies or systematic error. Attention was
+paid to identify any consistent trends in the residual as If the
+residual where to consistently deviate from generally flat noise at 0
+this would imply a poorly matched elasticity model.
 
 As each cell was tested 5 times the apparent YM of a cell was taken to
 be the average average of the Hertz/Sneddon fits. To validate the
@@ -863,12 +867,12 @@ considered at the cell level.
 
 \[
 {\Large  
-P(G∣x) = \frac{P(x∣G) \cdot P(G)}{P(x)}  
+P(G \mid x) = \frac{P(x \mid G) \mid \cdot P(G)}{P(x)}  
 }  
 \qquad  
 \begin{align}  
-P(G∣x) &:: \text{Posterior Probability}\\
-P(x∣G) &:: \text{Likleyhood}\\
+P(G \mid x) &:: \text{Posterior Probability}\\
+P(x \mid G) &:: \text{Likleyhood}\\
 P(G)   &:: \text{Prior Probability}\\
 P(x)   &:: \text{Evidence}\\
 \end{align}
@@ -933,19 +937,11 @@ Figure: Comparison in Elasticity Fit Techniques for an Example Curve
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg}}
-\caption{Control-2011.03.22-18.41.44}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg}}
 
 --- column-break ---
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg}}
-\caption{Control-2011.03.22-18.41.44}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg}}
 
 --- end-multi-column
 
@@ -958,17 +954,9 @@ or a non linear elasticity. Both of these effects are particularly
 pronounced in the following fitting for this dataset this would be
 considered a bad fit.
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg}}
-\caption{Control-2011.03.22-19.35.48}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg}}
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/SuccessiveTest_trends_absolute.svg}}
-\caption{SuccessiveTest\_trends\_absolute}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/SuccessiveTest_trends_absolute.svg}}
 
 There was a slight negative trend observed across successive tests
 indicative of cell relaxation with the first test indicating a 10\%
@@ -988,19 +976,11 @@ Figure: Example Cell Fittings for Control vs Treated Group
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell6.svg}}
-\caption{Control-Cell6}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell6.svg}}
 
 --- column-break ---
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell12.svg}}
-\caption{Treated-Cell12}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell12.svg}}
 
 --- end-multi-column
 
@@ -1026,19 +1006,11 @@ this neither was consistently associated with test order.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell4.svg}}
-\caption{Control-Cell4}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell4.svg}}
 
 --- column-break ---
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell7.svg}}
-\caption{Treated-Cell7}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell7.svg}}
 
 --- end-multi-column
 
@@ -1063,8 +1035,8 @@ Figure: Population Shape of Cell Young's Modulus by group
 
 \begin{figure}
 \centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/YM+Range_Viol_comparison_byCell.svg}}
-\caption{350}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/YM+Range_Viol_comparison_byCell.svg}}
+\caption{\textbar350}
 \end{figure}
 
 Table: Cell Young's Modulus (Pa) statistics by test group
@@ -1086,8 +1058,8 @@ Figure: Population Shape of Test Young's Modulus (Pa) by group
 
 \begin{figure}
 \centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/YM+Residuals_Viol_comparison_byExperiment.svg}}
-\caption{350}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/YM+Residuals_Viol_comparison_byExperiment.svg}}
+\caption{\textbar350}
 \end{figure}
 
 Table: Test Young's Modulus (Pa) statistics by test group
@@ -1108,26 +1080,18 @@ Treated & 605.979 & 381.52 & 1964.58 & 833.028 & 983.46 & 506.70 \\
 \#\#\#\#\#\# Figure: Force Indentation for Apparent Cell YM Coloured by
 Test Group
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/YM_FD_comparison_byCell.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/YM_FD_comparison_byCell.svg}}
 
 Figure: Young's Module by Group with Confidence Metrics
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/YM_CI_byGroup.svg}}
-\caption{YM\_CI\_byGroup}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/YM_CI_byGroup.svg}}
 
 In the figure above the control group is contrasted with the treated
 group using notched Tukey style box plots overlaid with the mean and
 standard deviation 95\% confidence intervals as well as the apparent
 cell YM values for each group.
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Group_PDFs.svg}}
-\caption{Group\_PDFs}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Classification_Threashhold.svg}}\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Classification_Boundry_v_Samples.svg}}
 
 \subsection{Discussion}\label{discussion}
 
@@ -1144,11 +1108,7 @@ spread would render this method completely ineffective.
 
 Figure: Best vs Worst Case Probability Density Functions
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Group_PDFs_LimCases.svg}}
-\caption{Group\_PDFs\_LimCases}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Group_PDFs_LimCases.svg}}
 
 It should be noted that with the small sample size of the treated group
 \(n=4\), these metrics are significantly brought upward by the results
@@ -1166,15 +1126,15 @@ findings.
 
 \begin{figure}
 \centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell7.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell7.svg}}
 \caption{\textbar400}
 \end{figure}
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg}}
 
 In both the Control and the Treated group the majority of cells
 consistently exhibit YM lower than the group average with a few very
@@ -1191,11 +1151,7 @@ average being a result of cells displaying higher variance in elasticity
 from a fixed minimum as the lower bound of even the \(1000\times\)
 bootstrapped confidence intervals rise in tandem with the average YM.
 
-\begin{figure}
-\centering
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/YM_RangeByApparentVal.svg}}
-\caption{YM\_RangeByApparentVal}
-\end{figure}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/YM_RangeByApparentVal.svg}}
 
 Due to the unexplained variance in the range of YM across tests of
 single cells the possibility of it's relation to the diseased state has
@@ -1208,27 +1164,347 @@ as might be the case in a biopsy for example.
 
 \subsection{Conclusion}\label{conclusion}
 
+\subsection{Bibliography}\label{bibliography}
+
 \subsection{Annexes}\label{annexes}
 
 \subsubsection{Control}\label{control}
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell1.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell2.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell3.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell4.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell5.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell6.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell7.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell8.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell9.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell10.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Control-Cell11.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell1.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell2.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell3.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell4.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell5.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell6.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell7.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell8.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell9.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell10.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell11.svg}}
 
 \subsubsection{Treated}\label{treated}
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell5.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell6.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell7.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/Sections/Projects/Uni Projects/Individual project/Workspace/Figures/Fit Quality/Cells/Treated-Cell12.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell5.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell6.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell7.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell12.svg}}
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{0}{0}
+\bibitem[\citeproctext]{ref-gentleME2013-EpithelialCellTGFv}
+\CSLLeftMargin{{[}1{]} }%
+\CSLRightInline{M. E. Gentle \emph{et al.}, {``Epithelial {Cell TGFβ
+Signaling Induces Acute Tubular Injury} and {Interstitial
+Inflammation},''} \emph{J Am Soc Nephrol}, vol. 24, no. 5, pp. 787--799,
+Apr. 2013, doi:
+\href{https://doi.org/10.1681/ASN.2012101024}{10.1681/ASN.2012101024}.
+Available: \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3636798/}.
+{[}Accessed: Feb. 04, 2025{]}}
+
+\bibitem[\citeproctext]{ref-bertramJF2011-HumanNephronNumber}
+\CSLLeftMargin{{[}2{]} }%
+\CSLRightInline{J. F. Bertram, R. N. Douglas-Denton, B. Diouf, M. D.
+Hughson, and W. E. Hoy, {``Human nephron number: Implications for health
+and disease,''} \emph{Pediatr Nephrol}, vol. 26, no. 9, pp. 1529--1533,
+Sep. 2011, doi:
+\href{https://doi.org/10.1007/s00467-011-1843-8}{10.1007/s00467-011-1843-8}.
+Available: \url{https://doi.org/10.1007/s00467-011-1843-8}. {[}Accessed:
+Feb. 05, 2025{]}}
+
+\bibitem[\citeproctext]{ref-niddk-KidneyNephronLabeled}
+\CSLLeftMargin{{[}3{]} }%
+\CSLRightInline{NIDDK, {``Kidney and nephron - {Labeled} - {Media Asset}
+- {NIDDK}.''} Available:
+\url{https://www.niddk.nih.gov/news/media-library/11236}. {[}Accessed:
+Feb. 08, 2025{]}}
+
+\bibitem[\citeproctext]{ref-ogobuiroI2025-PhysiologyRenal}
+\CSLLeftMargin{{[}4{]} }%
+\CSLRightInline{I. Ogobuiro and F. Tuma, {``Physiology, {Renal},''} in
+\emph{{StatPearls}}, Treasure Island (FL): StatPearls Publishing, 2025.
+Available: \url{http://www.ncbi.nlm.nih.gov/books/NBK538339/}.
+{[}Accessed: Feb. 05, 2025{]}}
+
+\bibitem[\citeproctext]{ref-pavenstadtH2000-RolesPodocyteGlomerular}
+\CSLLeftMargin{{[}5{]} }%
+\CSLRightInline{H. Pavenstädt, {``Roles of the podocyte in glomerular
+function,''} \emph{American Journal of Physiology-Renal Physiology},
+vol. 278, no. 2, pp. F173--F179, Feb. 2000, doi:
+\href{https://doi.org/10.1152/ajprenal.2000.278.2.F173}{10.1152/ajprenal.2000.278.2.F173}.
+Available:
+\url{https://journals.physiology.org/doi/full/10.1152/ajprenal.2000.278.2.F173}.
+{[}Accessed: Feb. 07, 2025{]}}
+
+\bibitem[\citeproctext]{ref-lumen-NephronStructure}
+\CSLLeftMargin{{[}6{]} }%
+\CSLRightInline{Lumen, {``Nephron -- {Structure} \textbar{} {BIO103}:
+{Human Biology}.''} Available:
+\url{https://courses.lumenlearning.com/suny-dutchess-ap1/chapter/nephrons-structure/}.
+{[}Accessed: Feb. 05, 2025{]}}
+
+\bibitem[\citeproctext]{ref-morozovD2021-MappingKidneyTubule}
+\CSLLeftMargin{{[}7{]} }%
+\CSLRightInline{D. Morozov, N. Parvin, J. R. Charlton, and K. M.
+Bennett, {``Mapping kidney tubule diameter ex vivo by diffusion
+{MRI},''} \emph{Am J Physiol Renal Physiol}, vol. 320, no. 5, pp.
+F934--F946, May 2021, doi:
+\href{https://doi.org/10.1152/ajprenal.00369.2020}{10.1152/ajprenal.00369.2020}.
+Available: \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8424553/}.
+{[}Accessed: Feb. 08, 2025{]}}
+
+\bibitem[\citeproctext]{ref-yuASL2013-Chapter12Intercellular}
+\CSLLeftMargin{{[}8{]} }%
+\CSLRightInline{A. S. L. Yu, F. Hanner, and J. Peti-Peterdi, {``Chapter
+12 - {Intercellular Junctions},''} in \emph{Seldin and {Giebisch}'s {The
+Kidney} ({Fifth Edition})}, R. J. Alpern, O. W. Moe, and M. Caplan,
+Eds., Academic Press, 2013, pp. 347--368. doi:
+\href{https://doi.org/10.1016/B978-0-12-381462-3.00012-4}{10.1016/B978-0-12-381462-3.00012-4}.
+Available:
+\url{https://www.sciencedirect.com/science/article/pii/B9780123814623000124}.
+{[}Accessed: Feb. 08, 2025{]}}
+
+\bibitem[\citeproctext]{ref-zihniC2016-TightJunctions}
+\CSLLeftMargin{{[}9{]} }%
+\CSLRightInline{C. Zihni, C. Mills, K. Matter, and M. S. Balda, {``Tight
+junctions: From simple barriers to multifunctional molecular gates,''}
+\emph{Nat Rev Mol Cell Biol}, vol. 17, no. 9, pp. 564--580, Sep. 2016,
+doi: \href{https://doi.org/10.1038/nrm.2016.80}{10.1038/nrm.2016.80}.
+Available: \url{https://www.nature.com/articles/nrm.2016.80}.
+{[}Accessed: Feb. 08, 2025{]}}
+
+\bibitem[\citeproctext]{ref-vargheseRT2025-DiabeticNephropathy}
+\CSLLeftMargin{{[}10{]} }%
+\CSLRightInline{R. T. Varghese and I. Jialal, {``Diabetic
+{Nephropathy},''} in \emph{{StatPearls}}, Treasure Island (FL):
+StatPearls Publishing, 2025. Available:
+\url{http://www.ncbi.nlm.nih.gov/books/NBK534200/}. {[}Accessed: Jan.
+29, 2025{]}}
+
+\bibitem[\citeproctext]{ref-gonzalezP2023-HyperglycemiaOxidativeStress}
+\CSLLeftMargin{{[}11{]} }%
+\CSLRightInline{P. González, P. Lozano, G. Ros, and F. Solano,
+{``Hyperglycemia and {Oxidative Stress}: {An Integral}, {Updated} and
+{Critical Overview} of {Their Metabolic Interconnections},''}
+\emph{International Journal of Molecular Sciences}, vol. 24, no. 11, 11,
+p. 9352, Jan. 2023, doi:
+\href{https://doi.org/10.3390/ijms24119352}{10.3390/ijms24119352}.
+Available: \url{https://www.mdpi.com/1422-0067/24/11/9352}. {[}Accessed:
+Jan. 30, 2025{]}}
+
+\bibitem[\citeproctext]{ref-hillsCE2012-TGFvModulatesCelltocell}
+\CSLLeftMargin{{[}12{]} }%
+\CSLRightInline{C. E. Hills, E. Siamantouras, S. W. Smith, P. Cockwell,
+K.-K. Liu, and P. E. Squires, {``{TGFβ} modulates cell-to-cell
+communication in early epithelial-to-mesenchymal transition,''}
+\emph{Diabetologia}, vol. 55, no. 3, pp. 812--824, Mar. 2012, doi:
+\href{https://doi.org/10.1007/s00125-011-2409-9}{10.1007/s00125-011-2409-9}.
+Available: \url{https://doi.org/10.1007/s00125-011-2409-9}. {[}Accessed:
+Jan. 29, 2025{]}}
+
+\bibitem[\citeproctext]{ref-pizzinoG2017-OxidativeStress}
+\CSLLeftMargin{{[}13{]} }%
+\CSLRightInline{G. Pizzino \emph{et al.}, {``Oxidative {Stress}: {Harms}
+and {Benefits} for {Human Health},''} \emph{Oxid Med Cell Longev}, vol.
+2017, p. 8416763, 2017, doi:
+\href{https://doi.org/10.1155/2017/8416763}{10.1155/2017/8416763}.
+Available: \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5551541/}.
+{[}Accessed: Jan. 30, 2025{]}}
+
+\bibitem[\citeproctext]{ref-kalluriR2009-BasicsEpithelialmesenchymalTransition}
+\CSLLeftMargin{{[}14{]} }%
+\CSLRightInline{R. Kalluri and R. A. Weinberg, {``The basics of
+epithelial-mesenchymal transition,''} \emph{J Clin Invest}, vol. 119,
+no. 6, pp. 1420--1428, Jun. 2009, doi:
+\href{https://doi.org/10.1172/JCI39104}{10.1172/JCI39104}. Available:
+\url{https://www.jci.org/articles/view/39104}. {[}Accessed: Jan. 29,
+2025{]}}
+
+\bibitem[\citeproctext]{ref-iwanoM2002-EvidenceThatFibroblasts}
+\CSLLeftMargin{{[}15{]} }%
+\CSLRightInline{M. Iwano, D. Plieth, T. M. Danoff, C. Xue, H. Okada, and
+E. G. Neilson, {``Evidence that fibroblasts derive from epithelium
+during tissue fibrosis,''} \emph{J Clin Invest}, vol. 110, no. 3, pp.
+341--350, Aug. 2002, doi:
+\href{https://doi.org/10.1172/JCI15518}{10.1172/JCI15518}. Available:
+\url{https://www.jci.org/articles/view/15518}. {[}Accessed: Jan. 29,
+2025{]}}
+
+\bibitem[\citeproctext]{ref-metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress}
+\CSLLeftMargin{{[}16{]} }%
+\CSLRightInline{W. Metcalfe, {``How does early chronic kidney disease
+progress?: {A Background Paper} prepared for the {UK Consensus
+Conference} on {Early Chronic Kidney Disease},''} \emph{Nephrology
+Dialysis Transplantation}, vol. 22, pp. ix26--ix30, Sep. 2007, doi:
+\href{https://doi.org/10.1093/ndt/gfm446}{10.1093/ndt/gfm446}.
+Available: \url{https://doi.org/10.1093/ndt/gfm446}. {[}Accessed: Jan.
+29, 2025{]}}
+
+\bibitem[\citeproctext]{ref-kilpatrickJI2015-NanomechanicsCellsBiomaterials}
+\CSLLeftMargin{{[}17{]} }%
+\CSLRightInline{J. I. Kilpatrick, I. Revenko, and B. J. Rodriguez,
+{``Nanomechanics of {Cells} and {Biomaterials Studied} by {Atomic Force
+Microscopy},''} \emph{Advanced Healthcare Materials}, vol. 4, no. 16,
+pp. 2456--2474, 2015, doi:
+\href{https://doi.org/10.1002/adhm.201500229}{10.1002/adhm.201500229}.
+Available:
+\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/adhm.201500229}.
+{[}Accessed: Feb. 06, 2025{]}}
+
+\bibitem[\citeproctext]{ref-dufreneYF2002-AtomicForceMicroscopy}
+\CSLLeftMargin{{[}18{]} }%
+\CSLRightInline{Y. F. Dufrêne, {``Atomic {Force Microscopy}, a {Powerful
+Tool} in {Microbiology},''} \emph{Journal of Bacteriology}, vol. 184,
+no. 19, pp. 5205--5213, Oct. 2002, doi:
+\href{https://doi.org/10.1128/jb.184.19.5205-5213.2002}{10.1128/jb.184.19.5205-5213.2002}.
+Available:
+\url{https://journals.asm.org/doi/10.1128/jb.184.19.5205-5213.2002}.
+{[}Accessed: Feb. 02, 2025{]}}
+
+\bibitem[\citeproctext]{ref-buttHJ1995-MeasuringSurfaceForces}
+\CSLLeftMargin{{[}19{]} }%
+\CSLRightInline{H.-J. Butt, M. Jaschke, and W. Ducker, {``Measuring
+surface forces in aqueous electrolyte solution with the atomic force
+microscope,''} \emph{Bioelectrochemistry and Bioenergetics}, vol. 38,
+no. 1, pp. 191--201, Aug. 1995, doi:
+\href{https://doi.org/10.1016/0302-4598(95)01800-T}{10.1016/0302-4598(95)01800-T}.
+Available:
+\url{https://www.sciencedirect.com/science/article/pii/030245989501800T}.
+{[}Accessed: Feb. 03, 2025{]}}
+
+\bibitem[\citeproctext]{ref-giraudF2019-PiezoelectricActuatorsIntroduction}
+\CSLLeftMargin{{[}20{]} }%
+\CSLRightInline{F. Giraud and C. Giraud-Audine, {``Piezoelectric
+{Actuators} - {Introduction},''} in \emph{Piezoelectric {Actuators}:
+{Vector Control Method}}, F. Giraud and C. Giraud-Audine, Eds.,
+Butterworth-Heinemann, 2019, pp. 1--42. doi:
+\href{https://doi.org/10.1016/B978-0-12-814186-1.00005-3}{10.1016/B978-0-12-814186-1.00005-3}.
+Available:
+\url{https://www.sciencedirect.com/science/article/pii/B9780128141861000053}.
+{[}Accessed: Feb. 13, 2025{]}}
+
+\bibitem[\citeproctext]{ref-radmacherM2007-StudyingMechanicsCellular}
+\CSLLeftMargin{{[}21{]} }%
+\CSLRightInline{M. Radmacher, {``Studying the {Mechanics} of {Cellular
+Processes} by {Atomic Force Microscopy},''} in \emph{Methods in {Cell
+Biology}}, Elsevier, 2007, pp. 347--372. doi:
+\href{https://doi.org/10.1016/S0091-679X(07)83015-9}{10.1016/S0091-679X(07)83015-9}.
+Available:
+\url{https://linkinghub.elsevier.com/retrieve/pii/S0091679X07830159}.
+{[}Accessed: Feb. 13, 2025{]}}
+
+\bibitem[\citeproctext]{ref-linDC2009-SphericalIndentationSoftMatterHertzianRegime}
+\CSLLeftMargin{{[}22{]} }%
+\CSLRightInline{D. C. Lin, D. I. Shreiber, E. K. Dimitriadis, and F.
+Horkay, {``Spherical indentation of soft matter beyond the {Hertzian}
+regime: Numerical and experimental validation of hyperelastic models,''}
+\emph{Biomech Model Mechanobiol}, vol. 8, no. 5, pp. 345--358, Oct.
+2009, doi:
+\href{https://doi.org/10.1007/s10237-008-0139-9}{10.1007/s10237-008-0139-9}.
+Available: \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3615644/}.
+{[}Accessed: Feb. 13, 2025{]}}
+
+\bibitem[\citeproctext]{ref-jpkinstruments-JPKDataProcessing}
+\CSLLeftMargin{{[}23{]} }%
+\CSLRightInline{JPK Instruments, Ed., {``{JPK Data Processing Software
+MANUAL-6}.0b.''} Burker.}
+
+\bibitem[\citeproctext]{ref-fungY1967-ElasticitySoftTissues}
+\CSLLeftMargin{{[}24{]} }%
+\CSLRightInline{Y. Fung, {``Elasticity of soft tissues in simple
+elongation,''} \emph{American Journal of Physiology-Legacy Content},
+vol. 213, no. 6, pp. 1532--1544, Dec. 1967, doi:
+\href{https://doi.org/10.1152/ajplegacy.1967.213.6.1532}{10.1152/ajplegacy.1967.213.6.1532}.
+Available:
+\url{https://www.physiology.org/doi/10.1152/ajplegacy.1967.213.6.1532}.
+{[}Accessed: Feb. 13, 2025{]}}
+
+\bibitem[\citeproctext]{ref-liuS2024-AtomicForceMicroscopyDisease-relatedStudies}
+\CSLLeftMargin{{[}25{]} }%
+\CSLRightInline{S. Liu, Y. Han, L. Kong, G. Wang, and Z. Ye, {``Atomic
+force microscopy in disease-related studies: {Exploring} tissue and cell
+mechanics,''} \emph{Microscopy Research and Technique}, vol. 87, no. 4,
+pp. 660--684, 2024, doi:
+\href{https://doi.org/10.1002/jemt.24471}{10.1002/jemt.24471}.
+Available:
+\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/jemt.24471}.
+{[}Accessed: Jan. 30, 2025{]}}
+
+\bibitem[\citeproctext]{ref-parrishAR2016-CytoskeletonNovelTarget}
+\CSLLeftMargin{{[}26{]} }%
+\CSLRightInline{A. R. Parrish, {``The cytoskeleton as a novel target for
+treatment of renal fibrosis,''} \emph{Pharmacology \& Therapeutics},
+vol. 166, pp. 1--8, Oct. 2016, doi:
+\href{https://doi.org/10.1016/j.pharmthera.2016.06.006}{10.1016/j.pharmthera.2016.06.006}.
+Available:
+\url{https://www.sciencedirect.com/science/article/pii/S0163725816300961}.
+{[}Accessed: Feb. 09, 2025{]}}
+
+\bibitem[\citeproctext]{ref-jalilianI2015-CellElasticityRegulated}
+\CSLLeftMargin{{[}27{]} }%
+\CSLRightInline{I. Jalilian \emph{et al.}, {``Cell {Elasticity Is
+Regulated} by the {Tropomyosin Isoform Composition} of the {Actin
+Cytoskeleton},''} \emph{PLOS ONE}, vol. 10, no. 5, p. e0126214, May
+2015, doi:
+\href{https://doi.org/10.1371/journal.pone.0126214}{10.1371/journal.pone.0126214}.
+Available:
+\url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0126214}.
+{[}Accessed: Feb. 06, 2025{]}}
+
+\bibitem[\citeproctext]{ref-buckleyST2012-CytoskeletalRearrangementTGFv1induced}
+\CSLLeftMargin{{[}28{]} }%
+\CSLRightInline{S. T. Buckley, C. Medina, A. M. Davies, and C. Ehrhardt,
+{``Cytoskeletal re-arrangement in {TGF-β1-induced} alveolar
+epithelial-mesenchymal transition studied by atomic force microscopy and
+high-content analysis,''} \emph{Nanomedicine: Nanotechnology, Biology
+and Medicine}, vol. 8, no. 3, pp. 355--364, Apr. 2012, doi:
+\href{https://doi.org/10.1016/j.nano.2011.06.021}{10.1016/j.nano.2011.06.021}.
+Available:
+\url{https://linkinghub.elsevier.com/retrieve/pii/S1549963411002747}.
+{[}Accessed: Jan. 29, 2025{]}}
+
+\bibitem[\citeproctext]{ref-siamantourasE2016-QuantifyingCellularMechanics}
+\CSLLeftMargin{{[}29{]} }%
+\CSLRightInline{E. Siamantouras, C. E. Hills, P. E. Squires, and K.-K.
+Liu, {``Quantifying cellular mechanics and adhesion in renal tubular
+injury using single cell force spectroscopy,''} \emph{Nanomedicine:
+Nanotechnology, Biology and Medicine}, vol. 12, no. 4, pp. 1013--1021,
+May 2016, doi:
+\href{https://doi.org/10.1016/j.nano.2015.12.362}{10.1016/j.nano.2015.12.362}.
+Available:
+\url{https://www.sciencedirect.com/science/article/pii/S1549963415006073}.
+{[}Accessed: Jan. 29, 2025{]}}
+
+\bibitem[\citeproctext]{ref-jafariA2024-MechanicalPropertiesHuman}
+\CSLLeftMargin{{[}30{]} }%
+\CSLRightInline{A. Jafari, A. Sadeghi, and M. Lafouti, {``Mechanical
+properties of human kidney cells and their effects on the atomic force
+microscope beam vibrations,''} \emph{Microscopy Research and Technique},
+vol. 87, no. 8, pp. 1704--1717, 2024, doi:
+\href{https://doi.org/10.1002/jemt.24543}{10.1002/jemt.24543}.
+Available:
+\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/jemt.24543}.
+{[}Accessed: Feb. 12, 2025{]}}
+
+\bibitem[\citeproctext]{ref-shimizuY2012-SimpleDisplaySystem}
+\CSLLeftMargin{{[}31{]} }%
+\CSLRightInline{Y. Shimizu, T. Kihara, S. M. A. Haghparast, S. Yuba, and
+J. Miyake, {``Simple {Display System} of {Mechanical Properties} of
+{Cells} and {Their Dispersion},''} \emph{PLOS ONE}, vol. 7, no. 3, p.
+e34305, Mar. 2012, doi:
+\href{https://doi.org/10.1371/journal.pone.0034305}{10.1371/journal.pone.0034305}.
+Available:
+\url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034305}.
+{[}Accessed: Feb. 12, 2025{]}}
+
+\bibitem[\citeproctext]{ref-ryanMJ1994-HK-2}
+\CSLLeftMargin{{[}32{]} }%
+\CSLRightInline{M. J. Ryan, G. Johnson, J. Kirk, S. M. Fuerstenberg, R.
+A. Zager, and B. Torok-Storb, {``{HK-2}: An immortalized proximal tubule
+epithelial cell line from normal adult human kidney,''} \emph{Kidney
+Int}, vol. 45, no. 1, pp. 48--57, Jan. 1994, doi:
+\href{https://doi.org/10.1038/ki.1994.6}{10.1038/ki.1994.6}. Available:
+\url{https://www.ncbi.nlm.nih.gov/pubmed/8127021}}
+
+\end{CSLReferences}
 
 \end{document}

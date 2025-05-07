@@ -45,8 +45,8 @@ https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html
 
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.violinplot.html
 
-![](YM+Residuals_Viol_comparison_byExperiment.svg)
-![](YM+Range_Viol_comparison_byCell.svg)
+![](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/YM+Residuals_Viol_comparison_byExperiment.svg)
+![](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/YM+Range_Viol_comparison_byCell.svg)
 ![](YM+RelRange_Viol_comparison_byCell.svg)
 See the code in [plots](plots.py) script
 
@@ -71,6 +71,6 @@ See the code in [fit_quality](fit_quality.py) script
 %%[[2025-04-22]] @ 10:49%%
 
 The average, standard deviation, min/max, with faint traces for each fit for experimental values.
-![](YM_FD_comparison_byCell.svg)
+![](Projects/Uni%20Projects/Individual%20project/Workspace/Figures/YM_FD_comparison_byCell.svg)
 ![YM_FD_comparison](YM_FD_comparison_byExperiment.svg)
 
