@@ -13,15 +13,13 @@ Largest Column: standard
 ```
 
 
-> ![Sneddon fit](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
-> Hertz/Sneddon spherical indentation model fit
+![Hertz/Sneddon spherical indentation model fit](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
 
 
 --- column-break ---
 
 
-> ![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
-> Hertz parabolic indentation model fit
+![Hertz parabolic indentation model fit](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
 
 
 --- end-multi-column
@@ -38,16 +36,14 @@ Largest Column: standard
 
 
 
-> ![Example of a bad fit](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
-> Example of a poor fit to a non linear elastic response
+![Example of a poor fit to a non linear elastic response](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
 
 %% Figure showing all residual curves faintly with smoothed average of all and grouped %%
 
 --- column-break ---
 
 
-> ![Plot showing trend in average variation across experiments](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/SuccessiveTest_trends_absolute.svg)
-> Plot showing trend in average variation across experiments
+![Plot showing trend in average variation across experiments](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/SuccessiveTest_trends_absolute.svg)
 
 
 --- end-multi-column
@@ -68,15 +64,13 @@ Largest Column: standard
 ```
 
 
-> ![Typical control group cell elsasticity approximation](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Control-Cell6.svg)
-> Typical control group cell elsasticity approximation
+![Typical control group cell elsasticity approximation](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Control-Cell6.svg)
 
 
 --- column-break ---
 
 
-> ![Typical treated group cell elasticity approximation](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Treated-Cell12.svg)
-> Typical treated group cell elasticity approximation  
+![Typical treated group cell elasticity approximation](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Treated-Cell12.svg)
 
 
 --- end-multi-column
@@ -91,15 +85,13 @@ Largest Column: standard
 ```
 
 
-> ![High inter experimental range control cell](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Control-Cell4.svg)
-> High inter experimental range control cell
+![High inter experimental range control cell](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Control-Cell4.svg)
 
 
 --- column-break ---
 
 
-> ![High inter experimental range treated cell](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Control-Cell7.svg)
-> High inter experimental range treated cell
+![High inter experimental range treated cell](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Fit%20Quality/Cells/Control-Cell7.svg)
 
 
 --- end-multi-column

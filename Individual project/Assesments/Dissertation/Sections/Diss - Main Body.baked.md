@@ -35,8 +35,8 @@ The progress of this project can be broken down into 4 successive objectives sum
 
 The human body can be understood as a complex biological machine, made up of many sub-mechanisms familiar to engineers. In this sense the filtration system of the human body is referred to as the renal system, in which the kidneys are a component about the size of a clenched fist that can be likened to a sophisticated water treatment plant combined with a feedback-controlled chemical processing unit. Each contain roughly a million multi step filter loops called nephrons [@bertramJF2011-HumanNephronNumber].  
 
-> ![ Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled]](Kidney%20and%20nephron%20-%20Labeled.jpg)
-> Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled].
+![ Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled]](Kidney%20and%20nephron%20-%20Labeled.jpg)
+
 
 %% #### Nephrons %%
 
@@ -52,7 +52,7 @@ The glomerulus is an overly aggressive filter; much of the water and solute must
 
 %% #### Tubule cell %%
 
-> ![Diagram of tubule, tubule wall and tubule cell structure](Tubule%20zoom%20diagram.png)
+![Diagram of tubule, tubule wall and tubule cell structure](Tubule%20zoom%20diagram.png)
 > Simplified diagram of tubule, tubule wall and tubule cell structure.
 
 The structure of the tubule varies significantly across it's length to as different sections are specialised to permeate different resources, the lumen diameter and epithelial cell height values are averages of random samples [@morozovD2021-MappingKidneyTubule]. 
@@ -97,8 +97,7 @@ Atomic force microscopes use the deflection of a very fine probe on a flexible c
 
 The typically atomic force microscope utilise a laser focused on the free end of the cantilever such that any deflection of the probe produces an amplified deflection of the reflected beam, this is recorded by a position sensitive photodiode [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces]. 
 
-> ![Atomic force microscope functional diagram](Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
-> Atomic force microscope functional diagram
+![Atomic force microscope functional diagram](Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
 
 The sample once mounted to the sample stage can be manoeuvred precisely in relative to the probe by applying voltage to piezoelectric actuators [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @giraudF2019-PiezoelectricActuatorsIntroduction] this is how the sample is advanced into the tip. Once calibrated the voltage at the actuators gives the sample stage position and the voltage at the photodiode gives the deflection of the probe, with this a force displacement curve can be produced by accounting for the stiffness of the cantilever and the relative displacement [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
 
@@ -385,15 +384,13 @@ Largest Column: standard
 ```
 
 
-> ![Sneddon fit](Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
-> Hertz/Sneddon spherical indentation model fit
+![Hertz/Sneddon spherical indentation model fit](Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg)
 
 
 --- column-break ---
 
 
-> ![](Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
-> Hertz parabolic indentation model fit
+![Hertz parabolic indentation model fit](Fit%20Quality/Experiments/Hertz/Control/Control-2011.03.22-18.41.44.svg)
 
 
 --- end-multi-column
@@ -410,16 +407,14 @@ Largest Column: standard
 
 
 
-> ![Example of a bad fit](Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
-> Example of a poor fit to a non linear elastic response
+![Example of a poor fit to a non linear elastic response](Fit%20Quality/Experiments/Sneddon/Control/Control-2011.03.22-19.35.48.svg)
 
 %% Figure showing all residual curves faintly with smoothed average of all and grouped %%
 
 --- column-break ---
 
 
-> ![Plot showing trend in average variation across experiments](SuccessiveTest_trends_absolute.svg)
-> Plot showing trend in average variation across experiments
+![Plot showing trend in average variation across experiments](SuccessiveTest_trends_absolute.svg)
 
 
 --- end-multi-column
@@ -440,15 +435,13 @@ Largest Column: standard
 ```
 
 
-> ![Typical control group cell elsasticity approximation](Fit%20Quality/Cells/Control-Cell6.svg)
-> Typical control group cell elsasticity approximation
+![Typical control group cell elsasticity approximation](Fit%20Quality/Cells/Control-Cell6.svg)
 
 
 --- column-break ---
 
 
-> ![Typical treated group cell elasticity approximation](Fit%20Quality/Cells/Treated-Cell12.svg)
-> Typical treated group cell elasticity approximation  
+![Typical treated group cell elasticity approximation](Fit%20Quality/Cells/Treated-Cell12.svg)
 
 
 --- end-multi-column
@@ -463,15 +456,13 @@ Largest Column: standard
 ```
 
 
-> ![High inter experimental range control cell](Fit%20Quality/Cells/Control-Cell4.svg)
-> High inter experimental range control cell
+![High inter experimental range control cell](Fit%20Quality/Cells/Control-Cell4.svg)
 
 
 --- column-break ---
 
 
-> ![High inter experimental range treated cell](Fit%20Quality/Cells/Control-Cell7.svg)
-> High inter experimental range treated cell
+![High inter experimental range treated cell](Fit%20Quality/Cells/Control-Cell7.svg)
 
 
 --- end-multi-column
@@ -510,8 +501,7 @@ Largest Column: standard
 
 %% ###### Figure: Population Shape of Cell Young's Modulus by group %%
 
-> ![Population Shape of Cell Young's Modulus by group](YM+Range_Viol_comparison_byCell.svg)
-> Population Shape of Cell Young's Modulus by group
+![Population Shape of Cell Young's Modulus by group](YM+Range_Viol_comparison_byCell.svg)
 
 
 --- column-break ---
@@ -519,8 +509,7 @@ Largest Column: standard
 
 %% ###### Figure: Population Shape of Test Young's Modulus (Pa) by group %%
 
-> ![Population Shape of Test Young's Modulus (Pa) by group](YM+Residuals_Viol_comparison_byExperiment.svg)
-> Population Shape of Test Young's Modulus (Pa) by group
+![Population Shape of Test Young's Modulus (Pa) by group](YM+Residuals_Viol_comparison_byExperiment.svg)
 
 
 --- end-multi-column
@@ -536,7 +525,6 @@ By grouping the raw test data by cell and producing group characteristics cell w
 | Treated, By Cells | 524.65  | 524.65  | 1761.58 | 807.94  | 975.53 | 540.96 |
 | Treated, By tests | 605.979 | 381.52  | 1964.58 | 833.028 | 983.46 | 506.70 |
 
-> Group statistical characteristics cell wise vs group wise 
 
 ### Construct Classifiers
 
@@ -545,14 +533,12 @@ Given the observed data is distributed quite unevenly the choice of distribution
 
 ![Comparison of Group Probability Density Functions by Distribution Model](Group_PDFs_byModel.svg)
 
-> Comparison of Group Probability Density Functions by Distribution Model
 
 The single cell classification curves in the figure below show what a classifier based on each of the distribution models would rate a cell's probability of being from the treated/diseased group (1) vs the control/healthy group (0). This is valid for an average of 5 indentation tests performed as described in the experimental method a different number of tests and a different methodology would likely need additional controls or a model based on a more relevant dataset. 
 
 %% Disease measure against YM coloured by test group %%
 
-> ![Comparison of Distribution Models on Decision Curve](Classification_Threashhold_by_Distribution_Model.svg)
-> Comparison of distribution models on single cell classifier decision curve
+![Comparison of distribution models on single cell classifier decision curve](Classification_Threashhold_by_Distribution_Model.svg)
 
 The confidence of the model increases, albeit diminishingly, the more samples are taken, an average of 15 cells, each being an average of 5 tests, from a common unknown group could be classified with an average accuracy of 90%. This largely is due to reducing the uncertainty in the crossover range of $500 \text{Pa} \lt  \text{YM} \lt 1000 \text{Pa}$ where a lage portion of samples are likely to fall and for a single cell might just as well be healthy or diseased.
 
@@ -564,15 +550,13 @@ Largest Column: standard
 ```
 
 
-> ![Average Classification Accuracy Threshold with n Samples](Classification%20Accuracy%20vs%20Sample%20Size.svg)
-> Average classification accuracy threshold with n samples, $90 \% @ \text{n}=15$ and $99 \% @ \text{n}=37$
+![Average classification accuracy threshold with n samples, $90 \% @ \text{n}=15$ and $99 \% @ \text{n}=37$](Classification%20Accuracy%20vs%20Sample%20Size.svg)
 
 
 --- column-break ---
 
 
-> ![Normal Distribution Classifier Boundary Classification Confidence with n Samples](Classification_Boundry_v_Samples.svg)
-> Normal distribution classifier boundary classification confidence with n samples
+![Normal Distribution Classifier Boundary Classification Confidence with n Samples](Classification_Boundry_v_Samples.svg)
 
 
 --- end-multi-column
@@ -600,20 +584,24 @@ Largest Column: standard
 
 %% ###### Figure: Best vs Worst Case Probability Density Functions %%
 
-> ![Best vs Worst Case Probability Density Functions](Group_PDFs_LimCases.svg)
-> (Above) Best vs Worst Case Probability Density Functions
+![Best vs Worst Case Probability Density Functions](Group_PDFs_LimCases.svg)
 
 --- column-break ---
 
 
-> ![Young's Module by Group with Confidence Metrics](YM_CI_byGroup.svg)
+![Young's Module by Group with Confidence Metrics](YM_CI_byGroup.svg)
 
 
 --- end-multi-column
 
-> (Right) Group mean and standard deviation 95% confidence intervals overlayed on notched Tukey style box plots showing overlap, an indication of poor statistical significance.
+%% > (Right) Group mean and standard deviation 95% confidence intervals overlayed on notched Tukey style box plots showing overlap, an indication of poor statistical significance. %%
 
 It should be noted that with the small sample size of the treated group $n=4$, these metrics are significantly brought upward by the results of a single cell and removing it significantly diminishes the statistical significance of the stiffening effect relied upon in this method. However, other than the substantially higher Young's Module values there is no reason to expect this cell or it's experiments to be erroneous. The Hertz fit's appear representative of the observed cell response with residuals similar to average across all fits $2 \ \text{pN}$. The relevant metrics for the cell in question are below and the reader is encouraged to judge to their own satisfaction whether the conclusions drawn from the full dataset are sufficiently supported or if the influence of this single observation undermines the findings. 
+
+
+![Apparent cell 7 YM classification; (Left Axis) all elasticity tests compared with estimate for apparent YM, (Right Axis) characterisation uncertainty: mean with 90% confidence intervals overlyed on notched box plot of raw data (darker) and $100 \times$ bootstrapped (lighter).](Fit%20Quality/Cells/Treated-Cell7.svg)
+
+
 
 
 --- start-multi-column: ID_3tbo
@@ -623,24 +611,53 @@ Largest Column: standard
 ```
 
 
-![ ](Fit%20Quality/Cells/Treated-Cell7.svg) 
 
-![ ](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg)
-
-![ ](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg)
+![Test 61 Elasticity Model Fit](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg)
 
 
 --- column-break ---
 
 
-![ ](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg)
-![ ](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg)
-![ ](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg)
+![Test 62 Elasticity Model Fit](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg)
+
 
 
 --- end-multi-column
 
-> Cell 7 fitting characteristics; (top left) Apparent cell YM classification, (rest) elasticity model fittings for each test, (top right) Test 61, (middle left) Test 62 fit, (middle right) Test 63 fit, (bottom left) Test 64 fit, (bottom right) Test 65 fit.
+
+
+
+%% > Cell 7 fitting characteristics; (top) Apparent cell YM classification, (rest) elasticity model fittings for each test, (middle left) Test 61, (middle right) Test 62 fit, (bottom left) Test 63 fit, (bottom middle) Test 64 fit, (bottom right) Test 65 fit. %%
+
+
+
+--- start-multi-column: ID_2qgu
+```column-settings
+Number of Columns: 3
+Largest Column: standard
+```
+
+
+
+![Test 63 Elasticity Model Fit](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg)
+
+
+--- column-break ---
+
+
+![Test 64 Elasticity Model Fit](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg)
+
+
+--- column-break ---
+
+
+![Test 65 Elasticity Model Fit](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg)
+
+
+--- end-multi-column
+
+
+
 
 
 
@@ -660,15 +677,13 @@ Largest Column: standard
 ```
 
 
-> ![Cell inter test range in YM against apparent cell YM](YM_RangeByApparentVal.svg)
-> Cell inter test range in YM against apparent cell YM increases proportionally 
+![Cell inter test range in YM against apparent cell YM](YM_RangeByApparentVal.svg)
 
 
 --- column-break ---
 
 
-> ![Cell relative inter test range in YM against apparent cell YM](YM_RelRangeByApparentVal.svg)
-> Cell relative inter test range in YM against apparent cell YM
+![Cell relative inter test range in YM against apparent cell YM](YM_RelRangeByApparentVal.svg)
 
 
 --- end-multi-column

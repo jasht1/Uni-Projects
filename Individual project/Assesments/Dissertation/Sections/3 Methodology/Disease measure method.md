@@ -18,6 +18,7 @@ Bayes Theorem (Eq above) enables us to quantify the probability a cell is diseas
 $$\large \hat{P}(G_2 \mid x) = \frac{P(x \mid G_2) \cdot P(G_2)}{P(x \mid G_1) \cdot P(G_1) + P(x \mid G_2) \cdot P(G_2)}$$
 
 Where the likelihood of a given group is determined based on fitting the observed occurrences to a probability density function. 3 distribution modelling methods will be tested: 1) Gaussian, 2) Kernel Density Estimation, 3) Skewed normal. 
+
 Gaussian is the familiar normal distribution implied by the mean and standard deviation of the YM observed in the experimental data. It assumes an ideal symmetrical probability density function like one that would be observed by taking infinite samples of a single true value obscured by white noise. 
 
 $$
@@ -71,5 +72,6 @@ h                 &:: \text{Bandwidth (Smoothing Parameter)}\\
 \end{align}
 $$
 
-Each of these distribution fitting methods will be tested in Bayesian classifier and prediction accuracy for the experimental dataset will be compared.
 The prior probabilities depend on the application, for high throughput screening this wold be heavily biased towards the initial cell state, or in patient diagnosis this could be a function of patient specific and/or epidemiological factors. In the context of this report prior probabilities are simply the proportion of samples from each group.
+
+A Bayesian classifier will be constructed for each of these distribution fitting methods and prediction accuracy for the experimental dataset will be compared.

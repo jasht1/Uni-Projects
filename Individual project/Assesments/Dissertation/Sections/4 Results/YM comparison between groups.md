@@ -27,8 +27,7 @@ Largest Column: standard
 
 %% ###### Figure: Population Shape of Cell Young's Modulus by group %%
 
-> ![Population Shape of Cell Young's Modulus by group](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM+Range_Viol_comparison_byCell.svg)
-> Population Shape of Cell Young's Modulus by group
+![Population Shape of Cell Young's Modulus by group](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM+Range_Viol_comparison_byCell.svg)
 
 
 --- column-break ---
@@ -36,8 +35,7 @@ Largest Column: standard
 
 %% ###### Figure: Population Shape of Test Young's Modulus (Pa) by group %%
 
-> ![Population Shape of Test Young's Modulus (Pa) by group](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM+Residuals_Viol_comparison_byExperiment.svg)
-> Population Shape of Test Young's Modulus (Pa) by group
+![Population Shape of Test Young's Modulus (Pa) by group](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM+Residuals_Viol_comparison_byExperiment.svg)
 
 
 --- end-multi-column
@@ -52,5 +50,3 @@ By grouping the raw test data by cell and producing group characteristics cell w
 | Control, By tests | 160.643 | 137.977 | 1161.76 | 385.253 | 482.63 | 301.24 |
 | Treated, By Cells | 524.65  | 524.65  | 1761.58 | 807.94  | 975.53 | 540.96 |
 | Treated, By tests | 605.979 | 381.52  | 1964.58 | 833.028 | 983.46 | 506.70 |
-
-> Group statistical characteristics cell wise vs group wise 

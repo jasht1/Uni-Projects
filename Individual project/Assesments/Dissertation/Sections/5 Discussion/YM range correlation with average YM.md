@@ -10,15 +10,13 @@ Largest Column: standard
 ```
 
 
-> ![Cell inter test range in YM against apparent cell YM](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM_RangeByApparentVal.svg)
-> Cell inter test range in YM against apparent cell YM increases proportionally 
+![Cell inter test range in YM against apparent cell YM](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM_RangeByApparentVal.svg)
 
 
 --- column-break ---
 
 
-> ![Cell relative inter test range in YM against apparent cell YM](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM_RelRangeByApparentVal.svg)
-> Cell relative inter test range in YM against apparent cell YM
+![Cell relative inter test range in YM against apparent cell YM](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM_RelRangeByApparentVal.svg)
 
 
 --- end-multi-column

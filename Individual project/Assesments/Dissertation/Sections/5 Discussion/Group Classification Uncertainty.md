@@ -14,15 +14,14 @@ Largest Column: standard
 
 %% ###### Figure: Best vs Worst Case Probability Density Functions %%
 
-> ![Best vs Worst Case Probability Density Functions](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Group_PDFs_LimCases.svg)
-> (Above) Best vs Worst Case Probability Density Functions
+![Best vs Worst Case Probability Density Functions](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Group_PDFs_LimCases.svg)
 
 --- column-break ---
 
 
-> ![Young's Module by Group with Confidence Metrics](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM_CI_byGroup.svg)
+![Young's Module by Group with Confidence Metrics](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM_CI_byGroup.svg)
 
 
 --- end-multi-column
 
-> (Right) Group mean and standard deviation 95% confidence intervals overlayed on notched Tukey style box plots showing overlap, an indication of poor statistical significance.
+%% > (Right) Group mean and standard deviation 95% confidence intervals overlayed on notched Tukey style box plots showing overlap, an indication of poor statistical significance. %%
