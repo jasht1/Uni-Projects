@@ -38,7 +38,7 @@ def ci_notch_whisker_plot(
 
   # fig, ax = plt.subplots(figsize=(10, 6))
   if ax==False:
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(6, 4))
   
   mean = data.mean()
   std = data.std()
@@ -120,7 +120,7 @@ def ci_notch_whisker_plot(
   return legend_handles
 
 def batch_ci_notch_whisker_plot(batch_data, ci_mean_bars=True, ci_stdv_bars=True):
-  fig, ax = plt.subplots(figsize=(8, 6))
+  fig, ax = plt.subplots(figsize=(6, 4))
   
   base_colors = {'Control': 'blue', 'Treated': 'red'}
   datapoint_colors = {'Control': 'blue', 'Treated': 'red'}
@@ -157,7 +157,7 @@ def batch_ci_notch_whisker_plot(batch_data, ci_mean_bars=True, ci_stdv_bars=True
   ax.set_yscale('linear')
   ax.grid(True, axis='y', linestyle='--', alpha=0.7)
   # ax.legend(title="Group", loc='center left', bbox_to_anchor=(1.02, 0.5))
-  ax.legend(handles=legend_handles, ncols=2, loc='best')
+  ax.legend(handles=legend_handles, ncols=2, loc='best', fontsize=6)
   # ax.legend(ncols=2)
   plt.tight_layout()
   plt.show()

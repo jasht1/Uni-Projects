@@ -9,7 +9,7 @@ def group_pdf_ci_lims_figure(batch_data,lim_cases=False):
 
   colors = {'Control': 'blue', 'Treated': 'red'}
 
-  fig, ax = plt.subplots(figsize=(5, 3))
+  fig, ax = plt.subplots(figsize=(6, 4))
 
   for group in batch_data:
     data = batch_data[group]["Young's Modulus [Pa]"].astype(float)
@@ -122,7 +122,7 @@ def group_likelihood_figure(batch_data, models=["gaussian", "kde", "skewnorm"], 
 def plot_group_pdf():
   from import_data import get_results_batch_data
   batch_data = get_results_batch_data()
-  # group_pdf_ci_lims_figure(batch_data)
-  group_likelihood_figure(batch_data)
+  group_pdf_ci_lims_figure(batch_data, lim_cases=True)
+  # group_likelihood_figure(batch_data)
 
 plot_group_pdf()
