@@ -14,12 +14,6 @@ declaration: ""
 abstract: This project investigates changes in mechanical properties of kidney cells when exposed to TGF-$\beta 1$, which is known to induce renal disease [@gentleME2013-EpithelialCellTGFv]. The aim of this project is to provide insight on the progression of diabetic nephropathy from a mechanical perspective based on changes in mechanical properties observed in single cells using atomic force microscopy.
 ---
 
-## Abstract
-
-
-This project investigates changes in mechanical properties of kidney cells when exposed to TGF-$\beta 1$, which is known to induce renal disease [@gentleME2013-EpithelialCellTGFv]. 
-The aim of this project is to develop a method to quantify the progression of diabetic nephropathy from a mechanical perspective based on changes in mechanical properties observed in single cells using atomic force microscopy.
-
 ## Introduction 
 
 
@@ -28,7 +22,6 @@ The mechanical properties of cells are finely tuned to their function, especiall
 The progress of this project can be broken down into 4 successive objectives summarised in the boxes below, the methodology and results sections will reflect this structure.
 
 ![](Methodology%20Summary%20Blocks.png)
-
 
 ## Background
 
@@ -42,9 +35,8 @@ The progress of this project can be broken down into 4 successive objectives sum
 
 The human body can be understood as a complex biological machine, made up of many sub-mechanisms familiar to engineers. In this sense the filtration system of the human body is referred to as the renal system, in which the kidneys are a component about the size of a clenched fist that can be likened to a sophisticated water treatment plant combined with a feedback-controlled chemical processing unit. Each contain roughly a million multi step filter loops called nephrons [@bertramJF2011-HumanNephronNumber].  
 
-> ![Close up of a nephron and its place in the kidney. Labels on the kidney cross section show where unfiltered blood enters, filtered blood leaves, and urine exits. On the nephron, the glomerulus, tubule, and collecting duct are labeled along with where unfiltered blood enters, filtered blood exits, and urine exits.|400](Kidney%20and%20nephron%20-%20Labeled.jpg)
-> 
->Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled].
+> ![ Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled]](Kidney%20and%20nephron%20-%20Labeled.jpg)
+> Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled].
 
 %% #### Nephrons %%
 
@@ -60,9 +52,10 @@ The glomerulus is an overly aggressive filter; much of the water and solute must
 
 %% #### Tubule cell %%
 
-> ![Diagram of tubule, tubule wall and tubule cell structure.](Tubule%20zoom%20diagram.png)
+> ![Diagram of tubule, tubule wall and tubule cell structure](Tubule%20zoom%20diagram.png)
 > Simplified diagram of tubule, tubule wall and tubule cell structure.
-> The structure of the tubule varies significantly across it's length to as different sections are specialised to permeate different resources, the lumen diameter and epithelial cell height values are averages of random samples [@morozovD2021-MappingKidneyTubule]. 
+
+The structure of the tubule varies significantly across it's length to as different sections are specialised to permeate different resources, the lumen diameter and epithelial cell height values are averages of random samples [@morozovD2021-MappingKidneyTubule]. 
 
 %% Breakdown of the layers and cell types #WIP  %%
 
@@ -104,7 +97,7 @@ Atomic force microscopes use the deflection of a very fine probe on a flexible c
 
 The typically atomic force microscope utilise a laser focused on the free end of the cantilever such that any deflection of the probe produces an amplified deflection of the reflected beam, this is recorded by a position sensitive photodiode [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces]. 
 
-> ![Atomic Force Microscopy - mechanism diagram|400](Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
+> ![Atomic force microscope functional diagram](Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
 > Atomic force microscope functional diagram
 
 The sample once mounted to the sample stage can be manoeuvred precisely in relative to the probe by applying voltage to piezoelectric actuators [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @giraudF2019-PiezoelectricActuatorsIntroduction] this is how the sample is advanced into the tip. Once calibrated the voltage at the actuators gives the sample stage position and the voltage at the photodiode gives the deflection of the probe, with this a force displacement curve can be produced by accounting for the stiffness of the cantilever and the relative displacement [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
@@ -116,25 +109,18 @@ A typical force displacement curve from a nano indention experiment has the foll
 
 --- start-multi-column: ID_orvl
 ```column-settings
-Number of Columns: 3
+Number of Columns: 2
 Largest Column: standard
 ```
 
 
-> ![Example AFM data from Radmacher 2007 shows the curve as a whole [@radmacherM2007-StudyingMechanicsCellular]](fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png)
+![Example AFM data from Radmacher 2007 shows the curve as a whole [@radmacherM2007-StudyingMechanicsCellular]](fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png)
 
 
 --- column-break ---
 
 
 ![Example AFM data from Radmacher 2007 zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular]](fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
-
-
---- column-break ---
-
-
-> ![Contact point jump explanatory diagram from H.Butt 1995 [@buttHJ1995-MeasuringSurfaceForces]](AFM%20contact%20point%20jump.png)
-
 
 
 --- end-multi-column
@@ -144,7 +130,6 @@ Largest Column: standard
 
 
 The exact point of contact is often ambiguous and rarely the same as the the point of separation. On approach the cantilever will be deflected away from the cell by Van Der Waals forces until the spring force of the cantilever overcomes and surface tension takes hold [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials]. The point of separation is typically clearer as it's associated with a "jump" in cantilever deflection as the surface tension / adhesion of the cell to the probe is overcome [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
-
 
 
 
@@ -254,7 +239,7 @@ The below table lists several papers utilising atomic force microscopes to produ
 
 | Paper                                                               | Cell Type                                                                            | Scope                                                                                                                                                                          | Cell Elasticity                                                                           |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| Siamantouras 2016 [@siamantourasE2016-QuantifyingCellularMechanics] | HK2: immortalised human kidney proximal tubule  epithelial cell culture              | Over 30 cells each indented 5 times immediately above the nucleus producing over 150 curves.                                                                                   | **control**: $320 \ \text{Pa}$ <br>cells treated with TGF-$\beta 1$: $549 \ \text{Pa}$    |
+| Siamantouras 2016 [@siamantourasE2016-QuantifyingCellularMechanics] | HK2: immortalised human kidney proximal tubule  epithelial cell culture              | Over 30 cells each indented 5 times immediately above the nucleus producing over 150 curves.                                                                                   | control: $320 \ \text{Pa}$ <br>cells treated with TGF-$\beta 1$: $549 \ \text{Pa}$    |
 | Jafari 2024 [@jafariA2024-MechanicalPropertiesHuman]                | HEK-293: immortalised human embryonic kidney cell culture                            | did not elaborate                                                                                                                                                              | $539.8 \ \text{Pa}$                                                                       |
 | Shimizu 2012 [@shimizuY2012-SimpleDisplaySystem]                    | HEK-293: immortalised human embryonic kidney cell culture                            | The median of value of over 100 cells examined at 25 points each.                                                                                                              | mode value ($x_{0}$): $410 \ \text{Pa}$ <br>variance ($w$): $0.757$                       |
 | Buckley 2012 [@buckleyST2012-CytoskeletalRearrangementTGFv1induced] | A549: human lung alveolar carcinoma epithelial cell culture                          | On each cell, a $4 \times 4$ grid of force-distance curves was collected in at least 5 different positions (avoiding the nucleus and the very edge) producing over 750 curves. | On Glass: 8300 $\pm$ $1100 \ \text{Pa}$<br>On collagen I: $9100 \ \pm$ $2900 \ \text{Pa}$ |
@@ -321,30 +306,69 @@ $$
 
 Bayes Theorem (Eq above) enables us to quantify the probability a cell is diseased given its YM by considering the posterior probability that it is an occurrence in a group with the appropriate probability density function. If we take healthy and diseased to be exclusive groups $G_{1}$ and $G_{2}$ then the probability of a cell being diseased would be given by the proportional instance probability of it's YM for the treated group over the control and treated groups all multiplied by their prior probability.
 
-$$\large P(G_2 \mid x) = \frac{P(x \mid G_2) \cdot P(G_2)}{P(x \mid G_1) \cdot P(G_1) + P(x \mid G_2) \cdot P(G_2)}$$
+$$\large \hat{P}(G_2 \mid x) = \frac{P(x \mid G_2) \cdot P(G_2)}{P(x \mid G_1) \cdot P(G_1) + P(x \mid G_2) \cdot P(G_2)}$$
 
-Where the likelihood of a given group is based on the normal distribution implied by the mean and standard deviation of the YM observed in the experimental data.
+Where the likelihood of a given group is determined based on fitting the observed occurrences to a probability density function. 3 distribution modelling methods will be tested: 1) Gaussian, 2) Kernel Density Estimation, 3) Skewed normal. 
+Gaussian is the familiar normal distribution implied by the mean and standard deviation of the YM observed in the experimental data. It assumes an ideal symmetrical probability density function like one that would be observed by taking infinite samples of a single true value obscured by white noise. 
 
 $$
 {\large  
-P(x \mid G) =  
+\hat{P}(x \mid G) =  
 \frac{1}{\sigma_{G} \sqrt{2 \pi}}  
 e^{\tfrac{-1}{2}  
-\left( \cfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}  
-}  
+\left( \tfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}  
+}
 \qquad  
 \begin{align}  
-P(x \mid G) &:: \text{Group Probability Density Function}\\
-x           &:: \text{Variable (i.e. Young's Modulus)}\\
+\hat{P}(x \mid G) &:: \text{Group Probability Density Function}\\
+x           &:: \text{Observation (i.e. Young's Modulus)}\\
 \sigma_{G}  &:: \text{Group Standard Deviation}\\
 \mu_{G}     &:: \text{Group Mean}\\
 \end{align}
 $$
 
-The prior probabilities will depend on the application, for high throughput screening this wold be heavily biased towards the initial cell state, or in patient diagnosis this could be a function of patient specific and/or epidemiological factors. In the context of this report prior probabilities are simply the proportion of samples from each group.
+Skew-Normal is an extension of the Gaussian distribution that allows for asymmetric bias i.e. most of the observations occurring just to one side of the mean and a few occurring far out to the other. It dose this by multiplying the Gaussian as seen above, by the cumulative distribution function (CDF) of it's z-score multiplied by a skewness parameter. A CFD simply provides the probability of finding a value below a given threshold, and in this case that threshold is set by the distance of each observation from the mean biased by a skew parameter for it's shape. 
+
+$$
+{\large
+\hat{P}(x \mid G) =  
+\phi\left(x; \mu_G, \sigma_G \right)
+\cdot  
+\Phi\left(  
+\alpha_G \cdot \frac{x - \mu_G}{\sigma_G}  
+\right)
+}
+\qquad
+\begin{align}
+\phi(x; \mu, \sigma) &:: \text{Normal PDF evaluated at } x \\
+\alpha_G          &:: \text{Group Skew Parameter} \\
+\Phi(z)           &:: \text{Standard Normal CDF}
+\end{align}
+$$
+
+Kernel Density Estimation (KDE) on the other hand is more observation focused producing a probability density function that more closely mimics the shape of the observed data without pre-supposing a particular form. It achieves this by producing a Gaussian for every single point centred at it's location with a fixed spread, these are then summed to produce a single complex curve.
+
+$$
+{\large  
+\hat{P}(x \mid G) =  
+\frac{1}{n h} \sum_{i=1}^{n} K\left( \frac{x - x_{i_G}}{h} \right)  
+}  
+\qquad  
+\begin{align}  
+x_{i_G}           &:: \text{Observed Data Points from Group G}\\
+n                 &:: \text{Number of Observations}\\
+K(\cdot)          &:: \text{Kernel Function (i.e. Gaussian)}\\
+h                 &:: \text{Bandwidth (Smoothing Parameter)}\\
+\end{align}
+$$
+
+Each of these distribution fitting methods will be tested in Bayesian classifier and prediction accuracy for the experimental dataset will be compared.
+The prior probabilities depend on the application, for high throughput screening this wold be heavily biased towards the initial cell state, or in patient diagnosis this could be a function of patient specific and/or epidemiological factors. In the context of this report prior probabilities are simply the proportion of samples from each group.
 
 ## Results
 
+
+### Elasticity Modeling
 
 
 The difference between the Hertz elasticity model for a parabolic indentation and the Hertz/Sneddon spherical indentation where minor producing effectively indistinguishable estimates for YM however the Hertz parabolic model resulted in a slightly but consistently higher residual fit error with it's slightly more progressive curvature. For this reason the values from the Hertz/Sneddon spherical where preferred for all subsequent analysis.
@@ -406,7 +430,7 @@ Largest Column: standard
 
 There was a slight negative trend observed across successive tests indicative of cell relaxation with the first test indicating a 10% higher YM on average, however this was not deemed necessary to control for. The majority of cells showed strong agreement across tests resulting in tight confidence intervals and representative apparent YM values. The examples below are typical samples from each group.
 
-###### Figure: Example Cell Fittings for Control vs Treated Group
+%% ###### Figure: Example Cell Fittings for Control vs Treated Group %%
 
 
 --- start-multi-column: ID_xdg9
@@ -455,6 +479,8 @@ Largest Column: standard
 
 
 
+### Determine Effect Strength
+
 
 %% ### Validity of results %%
 
@@ -484,7 +510,7 @@ Largest Column: standard
 
 %% ###### Figure: Population Shape of Cell Young's Modulus by group %%
 
-> ![Population Shape of Cell Young's Modulus by group|350](YM+Range_Viol_comparison_byCell.svg)
+> ![Population Shape of Cell Young's Modulus by group](YM+Range_Viol_comparison_byCell.svg)
 > Population Shape of Cell Young's Modulus by group
 
 
@@ -493,53 +519,67 @@ Largest Column: standard
 
 %% ###### Figure: Population Shape of Test Young's Modulus (Pa) by group %%
 
-> ![Population Shape of Test Young's Modulus (Pa) by group|350](YM+Residuals_Viol_comparison_byExperiment.svg)
+> ![Population Shape of Test Young's Modulus (Pa) by group](YM+Residuals_Viol_comparison_byExperiment.svg)
 > Population Shape of Test Young's Modulus (Pa) by group
 
 
 --- end-multi-column
 
-> Group statistical characteristics cell wise vs group wise 
->
-| Group   | Mode   | Min    | Max     | Median | Mean   | StDev  |
-| ------- | ------ | ------ | ------- | ------ | ------ | ------ |
-| Control, By Cells | 154.96 | 143.85 | 982.09  | 392.04 | 457.99 | 305.52 |
+
+By grouping the raw test data by cell and producing group characteristics cell wise rather than with the whole raw dataset provides more distinguishable groups with more distant means and tighter standard deviations.
+
+
+| Group             | Mode    | Min     | Max     | Median  | Mean   | StDev  |
+| ----------------- | ------- | ------- | ------- | ------- | ------ | ------ |
+| Control, By Cells | 154.96  | 143.85  | 982.09  | 392.04  | 457.99 | 305.52 |
 | Control, By tests | 160.643 | 137.977 | 1161.76 | 385.253 | 482.63 | 301.24 |
-| Treated, By Cells | 524.65 | 524.65 | 1761.58 | 807.94 | 975.53 | 540.96 |
+| Treated, By Cells | 524.65  | 524.65  | 1761.58 | 807.94  | 975.53 | 540.96 |
 | Treated, By tests | 605.979 | 381.52  | 1964.58 | 833.028 | 983.46 | 506.70 |
 
-By grouping the raw test data by cell and producing group characteristics cell wise rather than with the whole raw dataset provides more differentiable groups with more distant means and tighter standard deviations
+> Group statistical characteristics cell wise vs group wise 
+
+### Construct Classifiers
 
 
-%% Small sample size, Group overlap, predictive power %%
-%% Look at these overlapping reigions %%
-%% Cohen's d = 1.2015293213102536, this shows a strong effect size, but this  %%
-###### Figure: Force Indentation for Apparent Cell YM Coloured by Test Group
+Given the observed data is distributed quite unevenly the choice of distribution used to model it's likelihood has a significant effect. Below are the candidate probability density functions for use in the classifier. The direct Gaussian based distributions i.e. Gaussian and skew-normal have additional dashed curves produced by Monte Carlo sampling 50,000 candidate distributions with means and standard deviations within the 95% confidence intervals of the observed distribution. These provide an indication of what a larger study would likely find.
 
-![](YM_FD_comparison_byCell.svg)
+![Comparison of Group Probability Density Functions by Distribution Model](Group_PDFs_byModel.svg)
 
-%% [YM_FD_comparison_byExperiment](YM_FD_comparison_byExperiment.svg) %%
+> Comparison of Group Probability Density Functions by Distribution Model
 
-
-###### Figure: Young's Module by Group with Confidence Metrics
-
-![](YM_CI_byGroup.svg)
-
-In the figure above the control group is contrasted with the treated group using notched Tukey style box plots overlaid with the mean and standard deviation 95% confidence intervals as well as the apparent cell YM values for each group. 
-
-
-%% Overlapping notches, what dose this mean for the usability of the metric %%
-
-
-
-
-
-%% ![](Group_PDFs.svg) %%
+The single cell classification curves in the figure below show what a classifier based on each of the distribution models would rate a cell's probability of being from the treated/diseased group (1) vs the control/healthy group (0). This is valid for an average of 5 indentation tests performed as described in the experimental method a different number of tests and a different methodology would likely need additional controls or a model based on a more relevant dataset. 
 
 %% Disease measure against YM coloured by test group %%
 
+> ![Comparison of Distribution Models on Decision Curve](Classification_Threashhold_by_Distribution_Model.svg)
+> Comparison of distribution models on single cell classifier decision curve
 
-![](Classification_Threashhold.svg)![](Classification_Boundry_v_Samples.svg)
+The confidence of the model increases, albeit diminishingly, the more samples are taken, an average of 15 cells, each being an average of 5 tests, from a common unknown group could be classified with an average accuracy of 90%. This largely is due to reducing the uncertainty in the crossover range of $500 \text{Pa} \lt  \text{YM} \lt 1000 \text{Pa}$ where a lage portion of samples are likely to fall and for a single cell might just as well be healthy or diseased.
+
+
+--- start-multi-column: ID_j1ca
+```column-settings
+Number of Columns: 2
+Largest Column: standard
+```
+
+
+> ![Average Classification Accuracy Threshold with n Samples](Classification%20Accuracy%20vs%20Sample%20Size.svg)
+> Average classification accuracy threshold with n samples, $90 \% @ \text{n}=15$ and $99 \% @ \text{n}=37$
+
+
+--- column-break ---
+
+
+> ![Normal Distribution Classifier Boundary Classification Confidence with n Samples](Classification_Boundry_v_Samples.svg)
+> Normal distribution classifier boundary classification confidence with n samples
+
+
+--- end-multi-column
+
+
+
+
 
 ## Discussion
 
@@ -549,12 +589,31 @@ In the figure above the control group is contrasted with the treated group using
 
 The sample sizes used in this report are not sufficient to produce a classifier suitable for use in industry or for diagnosis, considering the the confidence intervals of the groups established it is possible that a larger experimental dataset my prove this method to be significantly more or less effective than has been estimated here. By considering the limit cases of the 95% confidence intervals of the most distinct best case i.e. furthest means and smallest standard deviations this method may prove highly accurate requiring very few samples in contrast the worst case least distinct i.e. closest means and wisest spread would render this method completely ineffective.  
 
-###### Figure: Best vs Worst Case Probability Density Functions
-
-![](Group_PDFs_LimCases.svg)
 
 
-It should be noted that with the small sample size of the treated group $n=4$, these metrics are significantly brought upward by the results of a single cell and removing it significantly diminishes the statistical significance of the stiffening effect relied upon in this method. However, other than the substantially higher Young's Module values there is no reason to expect this cell or it's experiments to be erroneous. The Hertz fit's appear representative of the observed cell response with residuals similar to average across all fits $2 \ \text{pN}$. The relevant metrics for the cell in question are below and the reader is encouraged to judge for their own satisfaction whether the conclusions drawn from the full dataset are sufficiently supported or if the influence of this single observation undermines the findings. 
+--- start-multi-column: ID_llj8
+```column-settings
+Number of Columns: 2
+Largest Column: standard
+```
+
+
+%% ###### Figure: Best vs Worst Case Probability Density Functions %%
+
+> ![Best vs Worst Case Probability Density Functions](Group_PDFs_LimCases.svg)
+> (Above) Best vs Worst Case Probability Density Functions
+
+--- column-break ---
+
+
+> ![Young's Module by Group with Confidence Metrics](YM_CI_byGroup.svg)
+
+
+--- end-multi-column
+
+> (Right) Group mean and standard deviation 95% confidence intervals overlayed on notched Tukey style box plots showing overlap, an indication of poor statistical significance.
+
+It should be noted that with the small sample size of the treated group $n=4$, these metrics are significantly brought upward by the results of a single cell and removing it significantly diminishes the statistical significance of the stiffening effect relied upon in this method. However, other than the substantially higher Young's Module values there is no reason to expect this cell or it's experiments to be erroneous. The Hertz fit's appear representative of the observed cell response with residuals similar to average across all fits $2 \ \text{pN}$. The relevant metrics for the cell in question are below and the reader is encouraged to judge to their own satisfaction whether the conclusions drawn from the full dataset are sufficiently supported or if the influence of this single observation undermines the findings. 
 
 
 --- start-multi-column: ID_3tbo
@@ -564,26 +623,24 @@ Largest Column: standard
 ```
 
 
-![|400](Fit%20Quality/Cells/Treated-Cell7.svg) 
+![ ](Fit%20Quality/Cells/Treated-Cell7.svg) 
 
-![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg)
+![ ](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg)
 
-![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg)
+![ ](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg)
 
 
 --- column-break ---
 
 
-![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg)
-
-![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg)
-
-![|250](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg)
+![ ](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg)
+![ ](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg)
+![ ](Fit%20Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg)
 
 
 --- end-multi-column
 
-
+> Cell 7 fitting characteristics; (top left) Apparent cell YM classification, (rest) elasticity model fittings for each test, (top right) Test 61, (middle left) Test 62 fit, (middle right) Test 63 fit, (bottom left) Test 64 fit, (bottom right) Test 65 fit.
 
 
 
@@ -595,7 +652,27 @@ In both the Control and the Treated group the majority of cells consistently exh
 
 %% This is likely due to %%
 
-![](YM_RangeByApparentVal.svg)
+
+--- start-multi-column: ID_11ib
+```column-settings
+Number of Columns: 2
+Largest Column: standard
+```
+
+
+> ![Cell inter test range in YM against apparent cell YM](YM_RangeByApparentVal.svg)
+> Cell inter test range in YM against apparent cell YM increases proportionally 
+
+
+--- column-break ---
+
+
+> ![Cell relative inter test range in YM against apparent cell YM](YM_RelRangeByApparentVal.svg)
+> Cell relative inter test range in YM against apparent cell YM
+
+
+--- end-multi-column
+
 
 
 Due to the unexplained variance in the range of YM across tests of single cells the possibility of it's relation to the diseased state has not been ruled out Introducing the possibility that method increases classification accuracy at the cell level but potentially sacrifices it at the population level. This provides an argument to establish group characteristics on the experiment level rather than the cell level for use cases where many samples are being taken from single unknown group as might be the case in a biopsy for example.
@@ -606,28 +683,4 @@ Due to the unexplained variance in the range of YM across tests of single cells 
 
 
 ## Bibliography
-
-## Annexes
-
-
-### Control
-
-![](Fit%20Quality/Cells/Control-Cell1.svg)
-![](Fit%20Quality/Cells/Control-Cell2.svg)
-![](Fit%20Quality/Cells/Control-Cell3.svg)
-![](Fit%20Quality/Cells/Control-Cell4.svg)
-![](Fit%20Quality/Cells/Control-Cell5.svg)
-![](Fit%20Quality/Cells/Control-Cell6.svg)
-![](Fit%20Quality/Cells/Control-Cell7.svg)
-![](Fit%20Quality/Cells/Control-Cell8.svg)
-![](Fit%20Quality/Cells/Control-Cell9.svg)
-![](Fit%20Quality/Cells/Control-Cell10.svg)
-![](Fit%20Quality/Cells/Control-Cell11.svg)
-
-### Treated
-
-![](Fit%20Quality/Cells/Treated-Cell5.svg)
-![](Fit%20Quality/Cells/Treated-Cell6.svg)
-![](Fit%20Quality/Cells/Treated-Cell7.svg)
-![](Fit%20Quality/Cells/Treated-Cell12.svg)
 

@@ -3,4 +3,4 @@ The mechanical properties of cells are finely tuned to their function, especiall
 
 The progress of this project can be broken down into 4 successive objectives summarised in the boxes below, the methodology and results sections will reflect this structure.
 
-![](Methodology%20Summary%20Blocks.png)
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Methodology%20Summary%20Blocks.png)

@@ -5,9 +5,8 @@
 
 The human body can be understood as a complex biological machine, made up of many sub-mechanisms familiar to engineers. In this sense the filtration system of the human body is referred to as the renal system, in which the kidneys are a component about the size of a clenched fist that can be likened to a sophisticated water treatment plant combined with a feedback-controlled chemical processing unit. Each contain roughly a million multi step filter loops called nephrons [@bertramJF2011-HumanNephronNumber].  
 
-> ![Close up of a nephron and its place in the kidney. Labels on the kidney cross section show where unfiltered blood enters, filtered blood leaves, and urine exits. On the nephron, the glomerulus, tubule, and collecting duct are labeled along with where unfiltered blood enters, filtered blood exits, and urine exits.|400](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Kidney%20and%20nephron%20-%20Labeled.jpg)
-> 
->Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled].
+> ![ Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled]](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Kidney%20and%20nephron%20-%20Labeled.jpg)
+> Labeled Kidney and Nephron form National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health [@niddk-KidneyNephronLabeled].
 
 %% #### Nephrons %%
 
@@ -23,9 +22,10 @@ The glomerulus is an overly aggressive filter; much of the water and solute must
 
 %% #### Tubule cell %%
 
-> ![Diagram of tubule, tubule wall and tubule cell structure.](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Tubule%20zoom%20diagram.png)
+> ![Diagram of tubule, tubule wall and tubule cell structure](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Tubule%20zoom%20diagram.png)
 > Simplified diagram of tubule, tubule wall and tubule cell structure.
-> The structure of the tubule varies significantly across it's length to as different sections are specialised to permeate different resources, the lumen diameter and epithelial cell height values are averages of random samples [@morozovD2021-MappingKidneyTubule]. 
+
+The structure of the tubule varies significantly across it's length to as different sections are specialised to permeate different resources, the lumen diameter and epithelial cell height values are averages of random samples [@morozovD2021-MappingKidneyTubule]. 
 
 %% Breakdown of the layers and cell types #WIP  %%
 

@@ -47,31 +47,41 @@ def corr_groupVym():
   metrics = evaluate_predictive_power(get_jpk_combined_data())
   print(metrics)
 
-def corr_rangeVym ():
+def corr_rangeVym (rel=False):
   from import_data import get_results_data
   from matplotlib import pyplot as plt
   plt.figure(figsize=(6,4))
   data = get_results_data()
 
+  def get_range(data):
+    if rel:
+      range = (data["Max Young's Modulus [Pa]"] - data["Min Young's Modulus [Pa]"])/data["Young's Modulus [Pa]"]
+    else:
+      range = data["Max Young's Modulus [Pa]"] - data["Min Young's Modulus [Pa]"]
+    return range
   colors = {'Control': 'blue', 'Treated': 'red'}
+
   for group in data["Group"].unique():
     group_data=data[data["Group"]==group]
-    range = group_data["Max Young's Modulus [Pa]"] - group_data["Min Young's Modulus [Pa]"]
+    range = get_range(group_data)
     ym = group_data["Young's Modulus [Pa]"]
     plt.scatter(ym,range,c=colors[group],alpha=0.3)
-    m,c = np.polyfit(ym,range,1)
-    plt.plot(ym,m*ym+c,label=f"{group} Group Trend",c=colors[group],alpha=0.5)
+    # m,c = np.polyfit(ym,range,1)
+    # plt.plot(ym,m*ym+c,label=f"{group} Group Trend",c=colors[group],alpha=0.5)
 
-  range = data["Max Young's Modulus [Pa]"] - data["Min Young's Modulus [Pa]"]
-  ym = data["Young's Modulus [Pa]"]
-  m,c = np.polyfit(ym,range,1)
-  plt.plot(ym,m*ym+c, label="General Trend",alpha=0.5,linewidth=2.5)
+  # range = get_range(data)
+  # ym = data["Young's Modulus [Pa]"]
+  # m,c = np.polyfit(ym,range,1)
+  # plt.plot(ym,m*ym+c, label="General Trend",alpha=0.5,linewidth=2.5)
 
   plt.legend()
   plt.xlabel("Apparent Cell Young's Modulus [Pa]")
-  plt.ylabel("Range in Young's Modulus Acrros Tests [Pa]")
+  if rel:
+    plt.ylabel("Relative Range in Young's Modulus Across Tests [±Pa]")
+  else:
+    plt.ylabel("Range in Young's Modulus Across Tests [Pa]")
   plt.tight_layout()
   plt.show()
 
-corr_rangeVym()
+corr_rangeVym(rel=True)
 

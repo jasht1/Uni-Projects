@@ -2,4 +2,23 @@ In both the Control and the Treated group the majority of cells consistently exh
 
 %% This is likely due to %%
 
-![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM_RangeByApparentVal.svg)
+
+--- start-multi-column: ID_11ib
+```column-settings
+Number of Columns: 2
+Largest Column: standard
+```
+
+
+> ![Cell inter test range in YM against apparent cell YM](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM_RangeByApparentVal.svg)
+> Cell inter test range in YM against apparent cell YM increases proportionally 
+
+
+--- column-break ---
+
+
+> ![Cell relative inter test range in YM against apparent cell YM](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/YM_RelRangeByApparentVal.svg)
+> Cell relative inter test range in YM against apparent cell YM
+
+
+--- end-multi-column

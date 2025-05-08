@@ -420,15 +420,6 @@ Siamantouras
 \tableofcontents
 \newpage
 }
-\subsection{Abstract}\label{abstract}
-
-This project investigates changes in mechanical properties of kidney
-cells when exposed to TGF-\(\beta 1\), which is known to induce renal
-disease {[}1{]}. The aim of this project is to develop a method to
-quantify the progression of diabetic nephropathy from a mechanical
-perspective based on changes in mechanical properties observed in single
-cells using atomic force microscopy.
-
 \subsection{Introduction}\label{introduction}
 
 The mechanical properties of cells are finely tuned to their function,
@@ -461,16 +452,7 @@ with a feedback-controlled chemical processing unit. Each contain
 roughly a million multi step filter loops called nephrons {[}2{]}.
 
 \begin{quote}
-\begin{figure}
-\centering
 \pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Kidney and nephron - Labeled.jpg}}
-\caption{Close up of a nephron and its place in the kidney. Labels on
-the kidney cross section show where unfiltered blood enters, filtered
-blood leaves, and urine exits. On the nephron, the glomerulus, tubule,
-and collecting duct are labeled along with where unfiltered blood
-enters, filtered blood exits, and urine exits.\textbar400}
-\end{figure}
-
 Labeled Kidney and Nephron form National Institute of Diabetes and
 Digestive and Kidney Diseases, National Institutes of Health {[}3{]}.
 \end{quote}
@@ -500,12 +482,13 @@ the water is reabsorbed over several uniquely specialised segments
 
 \begin{quote}
 \pandocbounded{\includegraphics[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Tubule zoom diagram.png}}
-Simplified diagram of tubule, tubule wall and tubule cell structure. The
-structure of the tubule varies significantly across it's length to as
-different sections are specialised to permeate different resources, the
-lumen diameter and epithelial cell height values are averages of random
-samples {[}7{]}.
+Simplified diagram of tubule, tubule wall and tubule cell structure.
 \end{quote}
+
+The structure of the tubule varies significantly across it's length to
+as different sections are specialised to permeate different resources,
+the lumen diameter and epithelial cell height values are averages of
+random samples {[}7{]}.
 
 Epithelial tubule cells are the essential building blocks of tubules.
 They are anchored to each other and to the extra cellular matrix (ECM)
@@ -586,7 +569,7 @@ point; from which the same is repeated in reverse differing mainly at
 the point of separation {[}17{]}.
 
 \noindent
-\begin{minipage}[t]{0.32\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
 Example AFM data from Radmacher 2007 shows the curve as a whole {[}21{]}
 
 \pandocbounded{\includegraphics[keepaspectratio]{fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png}}
@@ -595,12 +578,9 @@ Example AFM data from Radmacher 2007 shows the curve as a whole {[}21{]}
 \centering
 \caption{}
 \end{figure}
-
-\begin{quote}
-\end{quote}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.32\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
 Example AFM data from Radmacher 2007 zoomed into the contact /
 separation region {[}21{]}
 
@@ -610,20 +590,6 @@ separation region {[}21{]}
 \centering
 \caption{}
 \end{figure}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.32\textwidth}
-Contact point jump explanatory diagram from H.Butt 1995 {[}19{]}
-
-\pandocbounded{\includegraphics[keepaspectratio]{AFM contact point jump.png}}
-
-\begin{figure}
-\centering
-\caption{}
-\end{figure}
-
-\begin{quote}
-\end{quote}
 \end{minipage}
 
 The exact point of contact is often ambiguous and rarely the same as the
@@ -735,9 +701,9 @@ Cell Elasticity
 \endlastfoot
 Siamantouras 2016 {[}26{]} & HK2: immortalised human kidney proximal
 tubule epithelial cell culture & Over 30 cells each indented 5 times
-immediately above the nucleus producing over 150 curves. &
-\textbf{control}: \(320 \ \text{Pa}\) cells treated with
-TGF-\(\beta 1\): \(549 \ \text{Pa}\) \\
+immediately above the nucleus producing over 150 curves. & control:
+\(320 \ \text{Pa}\) cells treated with TGF-\(\beta 1\):
+\(549 \ \text{Pa}\) \\
 Jafari 2024 {[}28{]} & HEK-293: immortalised human embryonic kidney cell
 culture & did not elaborate & \(539.8 \ \text{Pa}\) \\
 Shimizu 2012 {[}29{]} & HEK-293: immortalised human embryonic kidney
@@ -750,10 +716,9 @@ curves was collected in at least 5 different positions (avoiding the
 nucleus and the very edge) producing over 750 curves. & On Glass: 8300
 \(\pm\) \(1100 \ \text{Pa}\)On collagen I: \(9100 \ \pm\)
 \(2900 \ \text{Pa}\) \\
-Wyss 2011 \textbf{wyssHM2011-BiophysicalPropertiesNormal?} &
-Sprague-Dawley rat kidney glomeruli capillary wall extracted by
-differential sieving & 10 different glomeruli with 10 measurements each
-& \(2,300 \ \pm\) \(160 \ \text{Pa}\) \\
+Wyss 2011 {[}30{]} & Sprague-Dawley rat kidney glomeruli capillary wall
+extracted by differential sieving & 10 different glomeruli with 10
+measurements each & \(2,300 \ \pm\) \(160 \ \text{Pa}\) \\
 \end{longtable}
 
 \subsection{Methodology}\label{methodology}
@@ -762,7 +727,7 @@ differential sieving & 10 different glomeruli with 10 measurements each
 
 The experimental procedure used to produce the data used in this report
 is detailed thoroughly in reference {[}26{]}. Cells of the adult human
-proximal tubule kidney (HK2) cell line {[}30{]} where purchased from the
+proximal tubule kidney (HK2) cell line {[}31{]} where purchased from the
 American Type Culture Collection (ATCC; Gaithersburg, MD 20878 USA).
 These where maintained in Dulbecco's Modified Eagle Medium/Nutrient
 Mixture F-12 (DMEM/F12), 10\% fetal calf serum (FCS), glutamine
@@ -878,29 +843,84 @@ would be given by the proportional instance probability of it's YM for
 the treated group over the control and treated groups all multiplied by
 their prior probability.
 
-\[\large P(G_2 \mid x) = \frac{P(x \mid G_2) \cdot P(G_2)}{P(x \mid G_1) \cdot P(G_1) + P(x \mid G_2) \cdot P(G_2)}\]
+\[\large \hat{P}(G_2 \mid x) = \frac{P(x \mid G_2) \cdot P(G_2)}{P(x \mid G_1) \cdot P(G_1) + P(x \mid G_2) \cdot P(G_2)}\]
 
-Where the likelihood of a given group is based on the normal
+Where the likelihood of a given group is determined based on fitting the
+observed occurrences to a probability density function. 3 distribution
+modelling methods will be tested: 1) Gaussian, 2) Kernel Density
+Estimation, 3) Skewed normal. Gaussian is the familiar normal
 distribution implied by the mean and standard deviation of the YM
-observed in the experimental data.
+observed in the experimental data. It assumes an ideal symmetrical
+probability density function like one that would be observed by taking
+infinite samples of a single true value obscured by white noise.
 
 \[
 {\large  
-P(x \mid G) =  
+\hat{P}(x \mid G) =  
 \frac{1}{\sigma_{G} \sqrt{2 \pi}}  
 e^{\tfrac{-1}{2}  
-\left( \cfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}  
-}  
+\left( \tfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}  
+}
 \qquad  
 \begin{align}  
-P(x \mid G) &:: \text{Group Probability Density Function}\\
-x           &:: \text{Variable (i.e. Young's Modulus)}\\
+\hat{P}(x \mid G) &:: \text{Group Probability Density Function}\\
+x           &:: \text{Observation (i.e. Young's Modulus)}\\
 \sigma_{G}  &:: \text{Group Standard Deviation}\\
 \mu_{G}     &:: \text{Group Mean}\\
 \end{align}
 \]
 
-The prior probabilities will depend on the application, for high
+Skew-Normal is an extension of the Gaussian distribution that allows for
+asymmetric bias i.e.~most of the observations occurring just to one side
+of the mean and a few occurring far out to the other. It dose this by
+multiplying the Gaussian as seen above, by the cumulative distribution
+function (CDF) of it's z-score multiplied by a skewness parameter. A CFD
+simply provides the probability of finding a value below a given
+threshold, and in this case that threshold is set by the distance of
+each observation from the mean biased by a skew parameter for it's
+shape.
+
+\[
+{\large
+\hat{P}(x \mid G) =  
+\phi\left(x; \mu_G, \sigma_G \right)
+\cdot  
+\Phi\left(  
+\alpha_G \cdot \frac{x - \mu_G}{\sigma_G}  
+\right)
+}
+\qquad
+\begin{align}
+\phi(x; \mu, \sigma) &:: \text{Normal PDF evaluated at } x \\
+\alpha_G          &:: \text{Group Skew Parameter} \\
+\Phi(z)           &:: \text{Standard Normal CDF}
+\end{align}
+\]
+
+Kernel Density Estimation (KDE) on the other hand is more observation
+focused producing a probability density function that more closely
+mimics the shape of the observed data without pre-supposing a particular
+form. It achieves this by producing a Gaussian for every single point
+centred at it's location with a fixed spread, these are then summed to
+produce a single complex curve.
+
+\[
+{\large  
+\hat{P}(x \mid G) =  
+\frac{1}{n h} \sum_{i=1}^{n} K\left( \frac{x - x_{i_G}}{h} \right)  
+}  
+\qquad  
+\begin{align}  
+x_{i_G}           &:: \text{Observed Data Points from Group G}\\
+n                 &:: \text{Number of Observations}\\
+K(\cdot)          &:: \text{Kernel Function (i.e. Gaussian)}\\
+h                 &:: \text{Bandwidth (Smoothing Parameter)}\\
+\end{align}
+\]
+
+Each of these distribution fitting methods will be tested in Bayesian
+classifier and prediction accuracy for the experimental dataset will be
+compared. The prior probabilities depend on the application, for high
 throughput screening this wold be heavily biased towards the initial
 cell state, or in patient diagnosis this could be a function of patient
 specific and/or epidemiological factors. In the context of this report
@@ -908,6 +928,8 @@ prior probabilities are simply the proportion of samples from each
 group.
 
 \subsection{Results}\label{results}
+
+\subsubsection{Elasticity Modeling}\label{elasticity-modeling-1}
 
 The difference between the Hertz elasticity model for a parabolic
 indentation and the Hertz/Sneddon spherical indentation where minor
@@ -969,8 +991,6 @@ for. The majority of cells showed strong agreement across tests
 resulting in tight confidence intervals and representative apparent YM
 values. The examples below are typical samples from each group.
 
-Figure: Example Cell Fittings for Control vs Treated Group
-
 \noindent
 \begin{minipage}[t]{0.48\textwidth}
 \begin{quote}
@@ -1014,6 +1034,9 @@ High inter experimental range treated cell
 \end{quote}
 \end{minipage}
 
+\subsubsection{Determine Effect
+Strength}\label{determine-effect-strength}
+
 The treated cells where found to be on average twice as stiff as the
 untreated cells with a \(517 \ \text{Pa}\) higher average young's
 modulus. Both groups where fairly broad with standard deviations of
@@ -1037,17 +1060,19 @@ Population Shape of Test Young's Modulus (Pa) by group
 \end{quote}
 \end{minipage}
 
-\begin{quote}
-Group statistical characteristics cell wise vs group wise
+By grouping the raw test data by cell and producing group
+characteristics cell wise rather than with the whole raw dataset
+provides more distinguishable groups with more distant means and tighter
+standard deviations.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1591}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1364}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1364}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1591}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1364}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1364}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1364}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2982}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1053}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1053}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Group
@@ -1077,28 +1102,72 @@ Treated, By Cells & 524.65 & 524.65 & 1761.58 & 807.94 & 975.53 &
 Treated, By tests & 605.979 & 381.52 & 1964.58 & 833.028 & 983.46 &
 506.70 \\
 \end{longtable}
+
+\begin{quote}
+Group statistical characteristics cell wise vs group wise
 \end{quote}
 
-By grouping the raw test data by cell and producing group
-characteristics cell wise rather than with the whole raw dataset
-provides more differentiable groups with more distant means and tighter
-standard deviations
+\subsubsection{Construct Classifiers}\label{construct-classifiers}
 
-\#\#\#\#\#\# Figure: Force Indentation for Apparent Cell YM Coloured by
-Test Group
+Given the observed data is distributed quite unevenly the choice of
+distribution used to model it's likelihood has a significant effect.
+Below are the candidate probability density functions for use in the
+classifier. The direct Gaussian based distributions i.e.~Gaussian and
+skew-normal have additional dashed curves produced by Monte Carlo
+sampling 50,000 candidate distributions with means and standard
+deviations within the 95\% confidence intervals of the observed
+distribution. These provide an indication of what a larger study would
+likely find.
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/YM_FD_comparison_byCell.svg}}
+\begin{figure}
+\centering
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Group_PDFs_byModel.svg}}
+\caption{Comparison of Group Probability Density Functions by
+Distribution Model}
+\end{figure}
 
-Figure: Young's Module by Group with Confidence Metrics
+\begin{quote}
+Comparison of Group Probability Density Functions by Distribution Model
+\end{quote}
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/YM_CI_byGroup.svg}}
+The single cell classification curves in the figure below show what a
+classifier based on each of the distribution models would rate a cell's
+probability of being from the treated/diseased group (1) vs the
+control/healthy group (0). This is valid for an average of 5 indentation
+tests performed as described in the experimental method a different
+number of tests and a different methodology would likely need additional
+controls or a model based on a more relevant dataset.
 
-In the figure above the control group is contrasted with the treated
-group using notched Tukey style box plots overlaid with the mean and
-standard deviation 95\% confidence intervals as well as the apparent
-cell YM values for each group.
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Classification_Threashhold_by_Distribution_Model.svg}}
+Comparison of distribution models on single cell classifier decision
+curve
+\end{quote}
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Classification_Threashhold.svg}}\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Classification_Boundry_v_Samples.svg}}
+The confidence of the model increases, albeit diminishingly, the more
+samples are taken, an average of 15 cells, each being an average of 5
+tests, from a common unknown group could be classified with an average
+accuracy of 90\%. This largely is due to reducing the uncertainty in the
+crossover range of \(500 \text{Pa} \lt  \text{YM} \lt 1000 \text{Pa}\)
+where a lage portion of samples are likely to fall and for a single cell
+might just as well be healthy or diseased.
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{Classification Accuracy vs Sample Size.svg}}
+Average classification accuracy threshold with n samples,
+\(90 \% @ \text{n}=15\) and \(99 \% @ \text{n}=37\)
+\end{quote}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{Classification_Boundry_v_Samples.svg}}
+Normal distribution classifier boundary classification confidence with n
+samples
+\end{quote}
+\end{minipage}
 
 \subsection{Discussion}\label{discussion}
 
@@ -1113,9 +1182,33 @@ this method may prove highly accurate requiring very few samples in
 contrast the worst case least distinct i.e.~closest means and wisest
 spread would render this method completely ineffective.
 
-Figure: Best vs Worst Case Probability Density Functions
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{Group_PDFs_LimCases.svg}}
+(Above) Best vs Worst Case Probability Density Functions
+\end{quote}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+Young's Module by Group with Confidence Metrics
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Group_PDFs_LimCases.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{YM_CI_byGroup.svg}}
+
+\begin{figure}
+\centering
+\caption{}
+\end{figure}
+
+\begin{quote}
+\end{quote}
+\end{minipage}
+
+\begin{quote}
+(Right) Group mean and standard deviation 95\% confidence intervals
+overlayed on notched Tukey style box plots showing overlap, an
+indication of poor statistical significance.
+\end{quote}
 
 It should be noted that with the small sample size of the treated group
 \(n=4\), these metrics are significantly brought upward by the results
@@ -1126,69 +1219,36 @@ values there is no reason to expect this cell or it's experiments to be
 erroneous. The Hertz fit's appear representative of the observed cell
 response with residuals similar to average across all fits
 \(2 \ \text{pN}\). The relevant metrics for the cell in question are
-below and the reader is encouraged to judge for their own satisfaction
+below and the reader is encouraged to judge to their own satisfaction
 whether the conclusions drawn from the full dataset are sufficiently
 supported or if the influence of this single observation undermines the
 findings.
 
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell7.svg}}
+
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg}}
+
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg}}
+
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg}}
+\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg}}
+
 \noindent
 \begin{minipage}[t]{0.48\textwidth}
-\textbar400
 
-\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Cells/Treated-Cell7.svg}}
-
-\begin{figure}
-\centering
-\caption{}
-\end{figure}
-
-\textbar250
-
-\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.54.49.svg}}
-
-\begin{figure}
-\centering
-\caption{}
-\end{figure}
-
-\textbar250
-
-\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.57.37.svg}}
-
-\begin{figure}
-\centering
-\caption{}
-\end{figure}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.48\textwidth}
-\textbar250
 
-\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.53.24.svg}}
-
-\begin{figure}
-\centering
-\caption{}
-\end{figure}
-
-\textbar250
-
-\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.56.13.svg}}
-
-\begin{figure}
-\centering
-\caption{}
-\end{figure}
-
-\textbar250
-
-\pandocbounded{\includesvg[keepaspectratio]{Fit Quality/Experiments/Sneddon/Treated/Treated-2011.03.31-22.59.01.svg}}
-
-\begin{figure}
-\centering
-\caption{}
-\end{figure}
 \end{minipage}
+
+\begin{quote}
+Cell 7 fitting characteristics; (top left) Apparent cell YM
+classification, (rest) elasticity model fittings for each test, (top
+right) Test 61, (middle left) Test 62 fit, (middle right) Test 63 fit,
+(bottom left) Test 64 fit, (bottom right) Test 65 fit.
+\end{quote}
 
 In both the Control and the Treated group the majority of cells
 consistently exhibit YM lower than the group average with a few very
@@ -1205,7 +1265,21 @@ average being a result of cells displaying higher variance in elasticity
 from a fixed minimum as the lower bound of even the \(1000\times\)
 bootstrapped confidence intervals rise in tandem with the average YM.
 
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/YM_RangeByApparentVal.svg}}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{YM_RangeByApparentVal.svg}}
+Cell inter test range in YM against apparent cell YM increases
+proportionally
+\end{quote}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\begin{quote}
+\pandocbounded{\includesvg[keepaspectratio]{YM_RelRangeByApparentVal.svg}}
+Cell relative inter test range in YM against apparent cell YM
+\end{quote}
+\end{minipage}
 
 Due to the unexplained variance in the range of YM across tests of
 single cells the possibility of it's relation to the diseased state has
@@ -1218,30 +1292,8 @@ as might be the case in a biopsy for example.
 
 \subsection{Conclusion}\label{conclusion}
 
-\subsection{Bibliography}\label{bibliography}
-
-\subsection{Annexes}\label{annexes}
-
-\subsubsection{Control}\label{control}
-
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell1.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell2.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell3.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell4.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell5.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell6.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell7.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell8.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell9.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell10.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Control-Cell11.svg}}
-
-\subsubsection{Treated}\label{treated}
-
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell5.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell6.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell7.svg}}
-\pandocbounded{\includesvg[keepaspectratio]{/home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Fit Quality/Cells/Treated-Cell12.svg}}
+\subsection*{Bibliography}\label{bibliography}
+\addcontentsline{toc}{subsection}{Bibliography}
 
 \protect\phantomsection\label{refs}
 \begin{CSLReferences}{0}{0}
@@ -1535,8 +1587,19 @@ Available:
 \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034305}.
 {[}Accessed: Feb. 12, 2025{]}}
 
-\bibitem[\citeproctext]{ref-ryanMJ1994-HK-2}
+\bibitem[\citeproctext]{ref-wyssHM2011-BiophysicalPropertiesNormal}
 \CSLLeftMargin{{[}30{]} }%
+\CSLRightInline{H. M. Wyss \emph{et al.}, {``Biophysical properties of
+normal and diseased renal glomeruli,''} \emph{American Journal of
+Physiology-Cell Physiology}, vol. 300, no. 3, pp. C397--C405, Mar. 2011,
+doi:
+\href{https://doi.org/10.1152/ajpcell.00438.2010}{10.1152/ajpcell.00438.2010}.
+Available:
+\url{https://journals.physiology.org/doi/full/10.1152/ajpcell.00438.2010}.
+{[}Accessed: May 07, 2025{]}}
+
+\bibitem[\citeproctext]{ref-ryanMJ1994-HK-2}
+\CSLLeftMargin{{[}31{]} }%
 \CSLRightInline{M. J. Ryan, G. Johnson, J. Kirk, S. M. Fuerstenberg, R.
 A. Zager, and B. Torok-Storb, {``{HK-2}: An immortalized proximal tubule
 epithelial cell line from normal adult human kidney,''} \emph{Kidney

@@ -11,7 +11,7 @@ Atomic force microscopes use the deflection of a very fine probe on a flexible c
 
 The typically atomic force microscope utilise a laser focused on the free end of the cantilever such that any deflection of the probe produces an amplified deflection of the reflected beam, this is recorded by a position sensitive photodiode [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces]. 
 
-> ![Atomic Force Microscopy - mechanism diagram|400](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
+> ![Atomic force microscope functional diagram](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
 > Atomic force microscope functional diagram
 
 The sample once mounted to the sample stage can be manoeuvred precisely in relative to the probe by applying voltage to piezoelectric actuators [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @giraudF2019-PiezoelectricActuatorsIntroduction] this is how the sample is advanced into the tip. Once calibrated the voltage at the actuators gives the sample stage position and the voltage at the photodiode gives the deflection of the probe, with this a force displacement curve can be produced by accounting for the stiffness of the cantilever and the relative displacement [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
@@ -23,25 +23,18 @@ A typical force displacement curve from a nano indention experiment has the foll
 
 --- start-multi-column: ID_orvl
 ```column-settings
-Number of Columns: 3
+Number of Columns: 2
 Largest Column: standard
 ```
 
 
-> ![Example AFM data from Radmacher 2007 shows the curve as a whole [@radmacherM2007-StudyingMechanicsCellular]](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png)
+![Example AFM data from Radmacher 2007 shows the curve as a whole [@radmacherM2007-StudyingMechanicsCellular]](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/fdcurve%20figure%20A%20-%20radmacherM2007-StudyingMechanicsCellular.png)
 
 
 --- column-break ---
 
 
 ![Example AFM data from Radmacher 2007 zoomed into the contact / separation region [@radmacherM2007-StudyingMechanicsCellular]](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/fdcurve%20figure%20B%20-%20radmacherM2007-StudyingMechanicsCellular.png)
-
-%% 
---- column-break ---
-
-
-> ![Contact point jump explanatory diagram from H.Butt 1995 [@buttHJ1995-MeasuringSurfaceForces]](AFM%20contact%20point%20jump.png)
- %%
 
 
 --- end-multi-column
@@ -51,5 +44,4 @@ Largest Column: standard
 
 
 The exact point of contact is often ambiguous and rarely the same as the the point of separation. On approach the cantilever will be deflected away from the cell by Van Der Waals forces until the spring force of the cantilever overcomes and surface tension takes hold [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials]. The point of separation is typically clearer as it's associated with a "jump" in cantilever deflection as the surface tension / adhesion of the cell to the probe is overcome [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
-
 

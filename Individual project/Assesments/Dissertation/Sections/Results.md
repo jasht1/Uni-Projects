@@ -1,8 +1,12 @@
 
+### Elasticity Modeling
+
 ![Verifying Data](Verifying%20Data.md)
+
+### Determine Effect Strength
 
 ![YM comparison between groups](YM%20comparison%20between%20groups.md)
 
-![Certainty Interval](Certainty%20Interval.md)
+### Construct Classifiers
 
 ![Disease measure](Disease%20measure.md)

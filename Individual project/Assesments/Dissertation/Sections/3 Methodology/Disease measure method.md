@@ -25,8 +25,8 @@ $$
 \hat{P}(x \mid G) =  
 \frac{1}{\sigma_{G} \sqrt{2 \pi}}  
 e^{\tfrac{-1}{2}  
-\left( \cfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}  
-}  
+\left( \tfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}  
+}
 \qquad  
 \begin{align}  
 \hat{P}(x \mid G) &:: \text{Group Probability Density Function}\\
