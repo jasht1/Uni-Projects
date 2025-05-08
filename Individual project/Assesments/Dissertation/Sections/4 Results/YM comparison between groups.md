@@ -51,4 +51,4 @@ Largest Column: standard
 | Treated, By Cells | 524.65 | 524.65 | 1761.58 | 807.94 | 975.53 | 540.96 |
 | Treated, By tests | 605.979 | 381.52  | 1964.58 | 833.028 | 983.46 | 506.70 |
 
-By grouping the raw test data by cell and producing group characteristics cell wise rather than with the whole raw dataset provides more differentiable groups with more distant means and tighter standard deviations
+By grouping the raw test data by cell and producing group characteristics cell wise rather than with the whole raw dataset provides more distinguishable groups with more distant means and tighter standard deviations.

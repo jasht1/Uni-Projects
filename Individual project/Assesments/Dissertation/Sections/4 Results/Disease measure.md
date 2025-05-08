@@ -1,6 +1,9 @@
 
+Given the observed data is distributed unevenly it is important to choose a suitable distribution to model it's likelihood. 
 
-%% ![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Group_PDFs.svg) %%
+![Comparison of Group Probability Density Functions by Distribution Model](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Group_PDFs_byModel.svg)
+> Comparison of Group Probability Density Functions by Distribution Model
+
 
 %% Disease measure against YM coloured by test group %%
 

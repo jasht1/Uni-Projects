@@ -54,7 +54,7 @@ def classification_threshold(mc_resampling=0, pos_only=False, cbg=True):
       mc_resampling=mc_resampling,
       method="gaussian"
     )
-    bg_colors = plt.get_cmap('RdBu')(norm(ref_probs))
+    bg_colors = plt.get_cmap('RdBu_r')(norm(ref_probs))
     gradient = np.tile(bg_colors[np.newaxis, :, :], (100, 1, 1))
     plt.imshow(
       gradient,
