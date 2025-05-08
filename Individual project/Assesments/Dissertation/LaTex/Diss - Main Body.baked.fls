@@ -1645,7 +1645,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/sourcecodepro/T1SourceCodePro-TLF.
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/sourcecodepro/SourceCodePro-Regular-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/sourcecodepro/SourceCodePro-Regular-tlf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/sourcecodepro/SourceCodePro-Regular-tlf-t1--base.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Regular-tlf-t1.tfm
 INPUT ./Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg
 INPUT Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg
 INPUT ./Fit Quality/Experiments/Sneddon/Control/Control-2011.03.22-18.41.44.svg
@@ -1925,6 +1924,46 @@ INPUT ./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf
 INPUT ./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf
 INPUT ./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf
 INPUT ./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf
+INPUT ./Classifier_Performace_ColourBars_byExperiment.svg
+INPUT Classifier_Performace_ColourBars_byExperiment.svg
+INPUT ./Classifier_Performace_ColourBars_byExperiment.svg
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf
+INPUT ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf
+INPUT ./Classification_Accuracy_v_Samples_byModel.svg
+INPUT Classification_Accuracy_v_Samples_byModel.svg
+INPUT ./Classification_Accuracy_v_Samples_byModel.svg
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
+INPUT ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
 INPUT ./Group_PDFs_LimCases.svg
 INPUT Group_PDFs_LimCases.svg
 INPUT ./Group_PDFs_LimCases.svg

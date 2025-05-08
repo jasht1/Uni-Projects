@@ -9,8 +9,8 @@ authors:
     institution: University of Lincoln
     email: 27047440@students.lincoln.ac.uk
     address: Lincoln
-acknowledgements: I would like to thank my patient amd knowledgable suporvisor Eleftherios Siamantouras
-declaration: ""
+acknowledgements: I would like to thank my patient and knowledgeable supervisor Eleftherios Siamantouras for his guidance.
+declaration: 
 abstract: This project investigates changes in mechanical properties of kidney cells when exposed to TGF-$\beta 1$, which is known to induce renal disease [@gentleME2013-EpithelialCellTGFv]. The aim of this project is to provide insight on the progression of diabetic nephropathy from a mechanical perspective based on changes in mechanical properties observed in single cells using atomic force microscopy.
 ---
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.5.6)  8 MAY 2025 10:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.5.6)  8 MAY 2025 15:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1357,65 +1357,60 @@ l.461
 </home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Tubule zoom diagram.png, id=83, 1477.52pt x 857.2025pt>
 File: /home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Tubule zoom diagram.png Graphic file (type png)
 <use /home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Tubule zoom diagram.png>
-Package pdftex.def Info: /home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Tubule zoom diagram.png  used on input line 485.
+Package pdftex.def Info: /home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Tubule zoom diagram.png  used on input line 487.
 (pdftex.def)             Requested size: 1477.5164pt x 857.20041pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 485--488
-[][]
- []
-
-[3 </home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Tubule zoom diagram.png>]
+ [3 </home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Tubule zoom diagram.png>]
 </home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Atomic Force Microscopy - mechanism diagram.png, id=91, 1204.5pt x 942.52126pt>
 File: /home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Atomic Force Microscopy - mechanism diagram.png Graphic file (type png)
 <use /home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Atomic Force Microscopy - mechanism diagram.png>
-Package pdftex.def Info: /home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Atomic Force Microscopy - mechanism diagram.png  used on input line 553.
+Package pdftex.def Info: /home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Atomic Force Microscopy - mechanism diagram.png  used on input line 555.
 (pdftex.def)             Requested size: 1204.49707pt x 942.51897pt.
  [4]
-<fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png, id=97, 967.36406pt x 682.04813pt>
+<fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png, id=98, 967.36406pt x 682.04813pt>
 File: fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png Graphic file (type png)
 <use fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png>
-Package pdftex.def Info: fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png  used on input line 577.
+Package pdftex.def Info: fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png  used on input line 579.
 (pdftex.def)             Requested size: 967.3617pt x 682.04646pt.
-<fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png, id=98, 1272.755pt x 870.25125pt>
+<fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png, id=99, 1272.755pt x 870.25125pt>
 File: fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png Graphic file (type png)
 <use fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png>
-Package pdftex.def Info: fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png  used on input line 586.
+Package pdftex.def Info: fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png  used on input line 588.
 (pdftex.def)             Requested size: 1272.7519pt x 870.24913pt.
  [5 </home/joe/Documents/Obsidian/SuperVault/Projects/Uni Projects/Individual project/Assesments/Dissertation/LaTex/Atomic Force Microscopy - mechanism diagram.png>]
-Overfull \hbox (7.36507pt too wide) in paragraph at lines 613--614
+Overfull \hbox (7.36507pt too wide) in paragraph at lines 615--616
 []\T1/SourceSansPro-TLF/regular/n/10.95 (-20) Model  
  []
 
 
-Overfull \hbox (3.9848pt too wide) in paragraph at lines 623--623
+Overfull \hbox (3.9848pt too wide) in paragraph at lines 625--625
 []|\T1/SourceSansPro-TLF/regular/n/10.95 (-20) Hertz|  
  []
 
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 630.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 632.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 8.0pt on input line 630.
+(Font)              scaled to size 8.0pt on input line 632.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 630.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 632.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 6.0pt on input line 630.
+(Font)              scaled to size 6.0pt on input line 632.
 
-Overfull \hbox (1.99606pt too wide) in paragraph at lines 639--639
+Overfull \hbox (1.99606pt too wide) in paragraph at lines 641--641
 []|\T1/SourceSansPro-TLF/regular/n/10.95 (-20) Fung|  
  []
 
 [6 <./fdcurve figure A - radmacherM2007-StudyingMechanicsCellular.png> <./fdcurve figure B - radmacherM2007-StudyingMechanicsCellular.png>] [7]
-LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 738.
+LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 740.
  (/usr/share/texlive/texmf-dist/tex/latex/sourcesanspro/TS1SourceSansPro-TLF.fd
 File: TS1SourceSansPro-TLF.fd 2020/01/19 (autoinst) Font definitions for TS1/SourceSansPro-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 738.
+(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 740.
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 10.95pt on input line 738.
+(Font)              scaled to size 10.95pt on input line 740.
 
 ! Undefined control sequence.
-l.739 a bed temperature of \(37 \degree
+l.741 a bed temperature of \(37 \degree
                                         \text{C}\) on a TMC 63-530
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1424,7 +1419,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.741 \(11\ \micro
+l.743 \(11\ \micro
                    \text{m}\) Polyscience PolyBeads® to Nanoworld TL-1 tipless
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1433,7 +1428,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.744 \(5\ \micro
+l.746 \(5\ \micro
                   \text{m / s}\) with intervals of 60 seconds. For each set of
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1442,15 +1437,15 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [8]
-LaTeX Font Info:    Trying to load font information for T1+SourceCodePro-TLF on input line 752.
+LaTeX Font Info:    Trying to load font information for T1+SourceCodePro-TLF on input line 754.
  (/usr/share/texlive/texmf-dist/tex/latex/sourcecodepro/T1SourceCodePro-TLF.fd
 File: T1SourceCodePro-TLF.fd 2018/02/18 (autoinst) Font definitions for T1/SourceCodePro-TLF.
 )
 LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 752.
+(Font)              scaled to size 10.95pt on input line 754.
 
 ! Undefined control sequence.
-l.759 \(1 \ \micro
+l.761 \(1 \ \micro
                    m\) past the contact point as upper and lower bounds. This
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1460,9 +1455,6 @@ and I'll forget about whatever was undefined.
 
 [9]
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 822.
-
-
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1470,23 +1462,13 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.831 \end{align}
+l.833 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 843.
-
-LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 843.
-LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 12.0pt on input line 843.
 [10]
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 855.
-
-
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1494,15 +1476,12 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.867 \end{align}
+l.871 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 881.
-
-
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1510,15 +1489,12 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.894 \end{align}
+l.898 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 905.
-
-
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1526,54 +1502,54 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.915 \end{align}
+l.919 \end{align}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [11]
-Package svg Info: Last page of `./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf' is 1 on input line 945.
+Package svg Info: Last page of `./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf' is 1 on input line 950.
  (./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf_tex
-<./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf, id=152, page=1, 578.16pt x 433.62pt>
+<./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf, id=153, page=1, 578.16pt x 433.62pt>
 File: ./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 433.63878pt.
 )
-Package svg Info: Last page of `./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf' is 1 on input line 953.
+Package svg Info: Last page of `./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf' is 1 on input line 958.
  (./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf_tex
 File: ./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 433.63878pt.
 )
-Package svg Info: Last page of `./svg-inkscape/Control-2011.03.22-19.35.48_svg-tex.pdf' is 1 on input line 975.
+Package svg Info: Last page of `./svg-inkscape/Control-2011.03.22-19.35.48_svg-tex.pdf' is 1 on input line 980.
  (./svg-inkscape/Control-2011.03.22-19.35.48_svg-tex.pdf_tex
-<./svg-inkscape/Control-2011.03.22-19.35.48_svg-tex.pdf, id=155, page=1, 578.16pt x 433.62pt>
+<./svg-inkscape/Control-2011.03.22-19.35.48_svg-tex.pdf, id=156, page=1, 578.16pt x 433.62pt>
 File: ./svg-inkscape/Control-2011.03.22-19.35.48_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Control-2011.03.22-19.35.48_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Control-2011.03.22-19.35.48_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 433.63878pt.
 )
-Package svg Info: Last page of `./svg-inkscape/SuccessiveTest_trends_absolute_svg-tex.pdf' is 1 on input line 983.
+Package svg Info: Last page of `./svg-inkscape/SuccessiveTest_trends_absolute_svg-tex.pdf' is 1 on input line 988.
  (./svg-inkscape/SuccessiveTest_trends_absolute_svg-tex.pdf_tex
-<./svg-inkscape/SuccessiveTest_trends_absolute_svg-tex.pdf, id=157, page=1, 433.62pt x 315.81992pt>
+<./svg-inkscape/SuccessiveTest_trends_absolute_svg-tex.pdf, id=158, page=1, 433.62pt x 315.81992pt>
 File: ./svg-inkscape/SuccessiveTest_trends_absolute_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/SuccessiveTest_trends_absolute_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/SuccessiveTest_trends_absolute_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 433.62pt x 315.83359pt.
 ) [12 <./svg-inkscape/Control-2011.03.22-18.41.44_svg-tex.pdf>]
-Package svg Info: Last page of `./svg-inkscape/Control-Cell6_svg-tex.pdf' is 1 on input line 999.
+Package svg Info: Last page of `./svg-inkscape/Control-Cell6_svg-tex.pdf' is 1 on input line 1004.
  (./svg-inkscape/Control-Cell6_svg-tex.pdf_tex
-<./svg-inkscape/Control-Cell6_svg-tex.pdf, id=1960, page=1, 578.16pt x 361.35pt>
+<./svg-inkscape/Control-Cell6_svg-tex.pdf, id=1961, page=1, 578.16pt x 361.35pt>
 File: ./svg-inkscape/Control-Cell6_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Control-Cell6_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Control-Cell6_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 361.36566pt.
 )
-Package svg Info: Last page of `./svg-inkscape/Treated-Cell12_svg-tex.pdf' is 1 on input line 1007.
+Package svg Info: Last page of `./svg-inkscape/Treated-Cell12_svg-tex.pdf' is 1 on input line 1012.
  (./svg-inkscape/Treated-Cell12_svg-tex.pdf_tex
-<./svg-inkscape/Treated-Cell12_svg-tex.pdf, id=1962, page=1, 578.16pt x 361.35pt>
+<./svg-inkscape/Treated-Cell12_svg-tex.pdf, id=1963, page=1, 578.16pt x 361.35pt>
 File: ./svg-inkscape/Treated-Cell12_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Treated-Cell12_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Treated-Cell12_svg-tex.pdf , page1 used on input line 56.
@@ -1588,33 +1564,33 @@ pdfTeX warning: pdflatex (file ./svg-inkscape/Control-Cell6_svg-tex.pdf): PDF in
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/Treated-Cell12_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Package svg Info: Last page of `./svg-inkscape/Control-Cell4_svg-tex.pdf' is 1 on input line 1029.
+Package svg Info: Last page of `./svg-inkscape/Control-Cell4_svg-tex.pdf' is 1 on input line 1034.
  (./svg-inkscape/Control-Cell4_svg-tex.pdf_tex
-<./svg-inkscape/Control-Cell4_svg-tex.pdf, id=3835, page=1, 578.16pt x 361.35pt>
+<./svg-inkscape/Control-Cell4_svg-tex.pdf, id=3836, page=1, 578.16pt x 361.35pt>
 File: ./svg-inkscape/Control-Cell4_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Control-Cell4_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Control-Cell4_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 361.36566pt.
 )
-Package svg Info: Last page of `./svg-inkscape/Control-Cell7_svg-tex.pdf' is 1 on input line 1037.
+Package svg Info: Last page of `./svg-inkscape/Control-Cell7_svg-tex.pdf' is 1 on input line 1042.
  (./svg-inkscape/Control-Cell7_svg-tex.pdf_tex
-<./svg-inkscape/Control-Cell7_svg-tex.pdf, id=3837, page=1, 578.16pt x 361.35pt>
+<./svg-inkscape/Control-Cell7_svg-tex.pdf, id=3838, page=1, 578.16pt x 361.35pt>
 File: ./svg-inkscape/Control-Cell7_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Control-Cell7_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Control-Cell7_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 361.36566pt.
 )
-Package svg Info: Last page of `./svg-inkscape/YM+Range_Viol_comparison_byCell_svg-tex.pdf' is 1 on input line 1057.
+Package svg Info: Last page of `./svg-inkscape/YM+Range_Viol_comparison_byCell_svg-tex.pdf' is 1 on input line 1062.
  (./svg-inkscape/YM+Range_Viol_comparison_byCell_svg-tex.pdf_tex
-<./svg-inkscape/YM+Range_Viol_comparison_byCell_svg-tex.pdf, id=3839, page=1, 462.52798pt x 373.6359pt>
+<./svg-inkscape/YM+Range_Viol_comparison_byCell_svg-tex.pdf, id=3840, page=1, 462.52798pt x 373.6359pt>
 File: ./svg-inkscape/YM+Range_Viol_comparison_byCell_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/YM+Range_Viol_comparison_byCell_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/YM+Range_Viol_comparison_byCell_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 462.528pt x 373.65207pt.
 )
-Package svg Info: Last page of `./svg-inkscape/YM+Residuals_Viol_comparison_byExperiment_svg-tex.pdf' is 1 on input line 1065.
+Package svg Info: Last page of `./svg-inkscape/YM+Residuals_Viol_comparison_byExperiment_svg-tex.pdf' is 1 on input line 1070.
  (./svg-inkscape/YM+Residuals_Viol_comparison_byExperiment_svg-tex.pdf_tex
-<./svg-inkscape/YM+Residuals_Viol_comparison_byExperiment_svg-tex.pdf, id=3841, page=1, 462.52798pt x 373.6359pt>
+<./svg-inkscape/YM+Residuals_Viol_comparison_byExperiment_svg-tex.pdf, id=3842, page=1, 462.52798pt x 373.6359pt>
 File: ./svg-inkscape/YM+Residuals_Viol_comparison_byExperiment_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/YM+Residuals_Viol_comparison_byExperiment_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/YM+Residuals_Viol_comparison_byExperiment_svg-tex.pdf , page1 used on input line 56.
@@ -1629,51 +1605,37 @@ pdfTeX warning: pdflatex (file ./svg-inkscape/YM+Range_Viol_comparison_byCell_sv
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/YM+Residuals_Viol_comparison_byExperiment_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Package svg Info: Last page of `./svg-inkscape/Group_PDFs_byModel_svg-tex.pdf' is 1 on input line 1127.
+Package svg Info: Last page of `./svg-inkscape/Group_PDFs_byModel_svg-tex.pdf' is 1 on input line 1132.
  (./svg-inkscape/Group_PDFs_byModel_svg-tex.pdf_tex
-<./svg-inkscape/Group_PDFs_byModel_svg-tex.pdf, id=4498, page=1, 1084.05pt x 315.81992pt>
+<./svg-inkscape/Group_PDFs_byModel_svg-tex.pdf, id=4499, page=1, 1084.05pt x 315.81992pt>
 File: ./svg-inkscape/Group_PDFs_byModel_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Group_PDFs_byModel_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Group_PDFs_byModel_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 1084.04999pt x 315.83359pt.
 )
-Package svg Info: Last page of `./svg-inkscape/Classification_Threashhold_by_Distribution_Model_svg-tex.pdf' is 1 on input line 1142.
+Package svg Info: Last page of `./svg-inkscape/Classification_Threashhold_by_Distribution_Model_svg-tex.pdf' is 1 on input line 1147.
  (./svg-inkscape/Classification_Threashhold_by_Distribution_Model_svg-tex.pdf_tex
-<./svg-inkscape/Classification_Threashhold_by_Distribution_Model_svg-tex.pdf, id=4500, page=1, 867.24pt x 346.17331pt>
+<./svg-inkscape/Classification_Threashhold_by_Distribution_Model_svg-tex.pdf, id=4501, page=1, 867.24pt x 346.17331pt>
 File: ./svg-inkscape/Classification_Threashhold_by_Distribution_Model_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Classification_Threashhold_by_Distribution_Model_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Classification_Threashhold_by_Distribution_Model_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 867.23999pt x 346.1883pt.
 ) [15 <./svg-inkscape/Group_PDFs_byModel_svg-tex.pdf>]
-! Undefined control sequence.
-l.1151 crossover range of \(500 \text{Pa} \lt
-                                               \text{YM} \lt 1000 \text{Pa}\)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.1151 ...ge of \(500 \text{Pa} \lt  \text{YM} \lt
-                                                   1000 \text{Pa}\)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Package svg Info: Last page of `./svg-inkscape/Classification Accuracy vs Sample Size_svg-tex.pdf' is 1 on input line 1159.
-(./svg-inkscape/Classification Accuracy vs Sample Size_svg-tex.pdf_tex
-<./svg-inkscape/Classification Accuracy vs Sample Size_svg-tex.pdf, id=4715, page=1, 433.62pt x 315.81992pt>
+Package svg Info: Last page of `./svg-inkscape/Classification Accuracy vs Sample Size_svg-tex.pdf' is 1 on input line 1164.
+ (./svg-inkscape/Classification Accuracy vs Sample Size_svg-tex.pdf_tex
+<./svg-inkscape/Classification Accuracy vs Sample Size_svg-tex.pdf, id=4716, page=1, 433.62pt x 315.81992pt>
 File: ./svg-inkscape/Classification Accuracy vs Sample Size_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Classification Accuracy vs Sample Size_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Classification Accuracy vs Sample Size_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 433.62pt x 315.83359pt.
 )
-Package svg Info: Last page of `./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf' is 1 on input line 1168.
- (./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf_tex
-<./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf, id=4717, page=1, 433.62pt x 315.81992pt>
+Underfull \hbox (badness 10000) in paragraph at lines 1166--1166
+[]\T1/SourceSansPro-TLF/bold/n/10.95 (+20) Figure 18: []|\T1/SourceSansPro-TLF/regular/n/10.95 (+20) Av-er-age Clas-si-fi-ca-tion Ac-cu-racy
+ []
+
+Package svg Info: Last page of `./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf' is 1 on input line 1173.
+(./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf_tex
+<./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf, id=4718, page=1, 433.62pt x 315.81992pt>
 File: ./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf , page1 used on input line 56.
@@ -1685,108 +1647,127 @@ pdfTeX warning: pdflatex (file ./svg-inkscape/Classification Accuracy vs Sample 
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/Classification_Boundry_v_Samples_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Package svg Info: Last page of `./svg-inkscape/Group_PDFs_LimCases_svg-tex.pdf' is 1 on input line 1191.
+Package svg Info: Last page of `./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf' is 1 on input line 1194.
+ (./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf_tex
+<./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf, id=4868, page=1, 433.62pt x 388.08992pt>
+File: ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 433.62pt x 388.10672pt.
+)
+Package svg Info: Last page of `./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf' is 1 on input line 1202.
+ (./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf_tex
+<./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf, id=4870, page=1, 433.62pt x 388.08992pt>
+File: ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 433.62pt x 388.10672pt.
+) [17 <./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf> <./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/Group_PDFs_LimCases_svg-tex.pdf' is 1 on input line 1242.
  (./svg-inkscape/Group_PDFs_LimCases_svg-tex.pdf_tex
-<./svg-inkscape/Group_PDFs_LimCases_svg-tex.pdf, id=4867, page=1, 433.62pt x 315.81992pt>
+<./svg-inkscape/Group_PDFs_LimCases_svg-tex.pdf, id=5692, page=1, 433.62pt x 315.81992pt>
 File: ./svg-inkscape/Group_PDFs_LimCases_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Group_PDFs_LimCases_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Group_PDFs_LimCases_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 433.62pt x 315.83359pt.
 )
-Package svg Info: Last page of `./svg-inkscape/YM_CI_byGroup_svg-tex.pdf' is 1 on input line 1199.
+Package svg Info: Last page of `./svg-inkscape/YM_CI_byGroup_svg-tex.pdf' is 1 on input line 1250.
  (./svg-inkscape/YM_CI_byGroup_svg-tex.pdf_tex
-<./svg-inkscape/YM_CI_byGroup_svg-tex.pdf, id=4869, page=1, 433.62pt x 315.81992pt>
+<./svg-inkscape/YM_CI_byGroup_svg-tex.pdf, id=5694, page=1, 433.62pt x 315.81992pt>
 File: ./svg-inkscape/YM_CI_byGroup_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/YM_CI_byGroup_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/YM_CI_byGroup_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 433.62pt x 315.83359pt.
 )
-Package svg Info: Last page of `./svg-inkscape/Treated-Cell7_svg-tex.pdf' is 1 on input line 1220.
+Package svg Info: Last page of `./svg-inkscape/Treated-Cell7_svg-tex.pdf' is 1 on input line 1271.
  (./svg-inkscape/Treated-Cell7_svg-tex.pdf_tex
-<./svg-inkscape/Treated-Cell7_svg-tex.pdf, id=4871, page=1, 578.16pt x 361.35pt>
+<./svg-inkscape/Treated-Cell7_svg-tex.pdf, id=5696, page=1, 578.16pt x 361.35pt>
 File: ./svg-inkscape/Treated-Cell7_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Treated-Cell7_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Treated-Cell7_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 361.36566pt.
-) [17 <./svg-inkscape/Group_PDFs_LimCases_svg-tex.pdf> <./svg-inkscape/YM_CI_byGroup_svg-tex.pdf
+) [18 <./svg-inkscape/Group_PDFs_LimCases_svg-tex.pdf> <./svg-inkscape/YM_CI_byGroup_svg-tex.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/YM_CI_byGroup_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Package svg Info: Last page of `./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf' is 1 on input line 1232.
+Package svg Info: Last page of `./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf' is 1 on input line 1283.
  (./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf_tex
-<./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf, id=5100, page=1, 578.16pt x 433.62pt>
+<./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf, id=5925, page=1, 578.16pt x 433.62pt>
 File: ./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 433.63878pt.
 )
-Package svg Info: Last page of `./svg-inkscape/Treated-2011.03.31-22.54.49_svg-tex.pdf' is 1 on input line 1240.
+Package svg Info: Last page of `./svg-inkscape/Treated-2011.03.31-22.54.49_svg-tex.pdf' is 1 on input line 1291.
  (./svg-inkscape/Treated-2011.03.31-22.54.49_svg-tex.pdf_tex
-<./svg-inkscape/Treated-2011.03.31-22.54.49_svg-tex.pdf, id=5102, page=1, 578.16pt x 433.62pt>
+<./svg-inkscape/Treated-2011.03.31-22.54.49_svg-tex.pdf, id=5927, page=1, 578.16pt x 433.62pt>
 File: ./svg-inkscape/Treated-2011.03.31-22.54.49_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Treated-2011.03.31-22.54.49_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Treated-2011.03.31-22.54.49_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 433.63878pt.
 )
-Package svg Info: Last page of `./svg-inkscape/Treated-2011.03.31-22.56.13_svg-tex.pdf' is 1 on input line 1249.
+Package svg Info: Last page of `./svg-inkscape/Treated-2011.03.31-22.56.13_svg-tex.pdf' is 1 on input line 1300.
  (./svg-inkscape/Treated-2011.03.31-22.56.13_svg-tex.pdf_tex
-<./svg-inkscape/Treated-2011.03.31-22.56.13_svg-tex.pdf, id=5104, page=1, 578.16pt x 433.62pt>
+<./svg-inkscape/Treated-2011.03.31-22.56.13_svg-tex.pdf, id=5929, page=1, 578.16pt x 433.62pt>
 File: ./svg-inkscape/Treated-2011.03.31-22.56.13_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Treated-2011.03.31-22.56.13_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Treated-2011.03.31-22.56.13_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 433.63878pt.
 )
-Underfull \hbox (badness 6741) in paragraph at lines 1250--1250
-[]\T1/SourceSansPro-TLF/bold/n/10.95 (+20) Figure 24: []|\T1/SourceSansPro-TLF/regular/n/10.95 (+20) Test 63 Elas-tic-ity
+Underfull \hbox (badness 6741) in paragraph at lines 1301--1301
+[]\T1/SourceSansPro-TLF/bold/n/10.95 (+20) Figure 27: []|\T1/SourceSansPro-TLF/regular/n/10.95 (+20) Test 63 Elas-tic-ity
  []
 
-Package svg Info: Last page of `./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf' is 1 on input line 1257.
+Package svg Info: Last page of `./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf' is 1 on input line 1308.
 (./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf_tex
-<./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf, id=5106, page=1, 578.16pt x 433.62pt>
+<./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf, id=5931, page=1, 578.16pt x 433.62pt>
 File: ./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 433.63878pt.
 )
-Underfull \hbox (badness 6741) in paragraph at lines 1258--1258
-[]\T1/SourceSansPro-TLF/bold/n/10.95 (+20) Figure 25: []|\T1/SourceSansPro-TLF/regular/n/10.95 (+20) Test 64 Elas-tic-ity
+Underfull \hbox (badness 6741) in paragraph at lines 1309--1309
+[]\T1/SourceSansPro-TLF/bold/n/10.95 (+20) Figure 28: []|\T1/SourceSansPro-TLF/regular/n/10.95 (+20) Test 64 Elas-tic-ity
  []
 
-Package svg Info: Last page of `./svg-inkscape/Treated-2011.03.31-22.59.01_svg-tex.pdf' is 1 on input line 1265.
+Package svg Info: Last page of `./svg-inkscape/Treated-2011.03.31-22.59.01_svg-tex.pdf' is 1 on input line 1316.
 (./svg-inkscape/Treated-2011.03.31-22.59.01_svg-tex.pdf_tex
-<./svg-inkscape/Treated-2011.03.31-22.59.01_svg-tex.pdf, id=5108, page=1, 578.16pt x 433.62pt>
+<./svg-inkscape/Treated-2011.03.31-22.59.01_svg-tex.pdf, id=5933, page=1, 578.16pt x 433.62pt>
 File: ./svg-inkscape/Treated-2011.03.31-22.59.01_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Treated-2011.03.31-22.59.01_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Treated-2011.03.31-22.59.01_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 578.15999pt x 433.63878pt.
 )
-Underfull \hbox (badness 6741) in paragraph at lines 1266--1266
-[]\T1/SourceSansPro-TLF/bold/n/10.95 (+20) Figure 26: []|\T1/SourceSansPro-TLF/regular/n/10.95 (+20) Test 65 Elas-tic-ity
+Underfull \hbox (badness 6741) in paragraph at lines 1317--1317
+[]\T1/SourceSansPro-TLF/bold/n/10.95 (+20) Figure 29: []|\T1/SourceSansPro-TLF/regular/n/10.95 (+20) Test 65 Elas-tic-ity
  []
 
-[18 <./svg-inkscape/Treated-Cell7_svg-tex.pdf> <./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf
+[19 <./svg-inkscape/Treated-Cell7_svg-tex.pdf> <./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/Treated-2011.03.31-22.53.24_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./svg-inkscape/Treated-2011.03.31-22.54.49_svg-tex.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/Treated-2011.03.31-22.54.49_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Package svg Info: Last page of `./svg-inkscape/YM_RangeByApparentVal_svg-tex.pdf' is 1 on input line 1289.
+Package svg Info: Last page of `./svg-inkscape/YM_RangeByApparentVal_svg-tex.pdf' is 1 on input line 1340.
  (./svg-inkscape/YM_RangeByApparentVal_svg-tex.pdf_tex
-<./svg-inkscape/YM_RangeByApparentVal_svg-tex.pdf, id=6652, page=1, 433.62pt x 315.81992pt>
+<./svg-inkscape/YM_RangeByApparentVal_svg-tex.pdf, id=7477, page=1, 433.62pt x 315.81992pt>
 File: ./svg-inkscape/YM_RangeByApparentVal_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/YM_RangeByApparentVal_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/YM_RangeByApparentVal_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 433.62pt x 315.83359pt.
 )
-Package svg Info: Last page of `./svg-inkscape/YM_RelRangeByApparentVal_svg-tex.pdf' is 1 on input line 1297.
+Package svg Info: Last page of `./svg-inkscape/YM_RelRangeByApparentVal_svg-tex.pdf' is 1 on input line 1348.
  (./svg-inkscape/YM_RelRangeByApparentVal_svg-tex.pdf_tex
-<./svg-inkscape/YM_RelRangeByApparentVal_svg-tex.pdf, id=6654, page=1, 433.62pt x 315.81992pt>
+<./svg-inkscape/YM_RelRangeByApparentVal_svg-tex.pdf, id=7479, page=1, 433.62pt x 315.81992pt>
 File: ./svg-inkscape/YM_RelRangeByApparentVal_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/YM_RelRangeByApparentVal_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/YM_RelRangeByApparentVal_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 433.62pt x 315.83359pt.
-) [19 <./svg-inkscape/Treated-2011.03.31-22.56.13_svg-tex.pdf> <./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf
+) [20 <./svg-inkscape/Treated-2011.03.31-22.56.13_svg-tex.pdf> <./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/Treated-2011.03.31-22.57.37_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./svg-inkscape/Treated-2011.03.31-22.59.01_svg-tex.pdf
@@ -1800,70 +1781,28 @@ pdfTeX warning: pdflatex (file ./svg-inkscape/YM_RangeByApparentVal_svg-tex.pdf)
 pdfTeX warning: pdflatex (file ./svg-inkscape/YM_RelRangeByApparentVal_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 1326.
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 1377.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
-(Font)              scaled to size 10.95pt on input line 1326.
+(Font)              scaled to size 10.95pt on input line 1377.
 
-
-! LaTeX Error: Unicode character β (U+03B2)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1326 {[}Accessed: Feb. 04, 2025{]}}
-                                     
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Underfull \hbox (badness 2005) in paragraph at lines 1360--1360
+Underfull \hbox (badness 2005) in paragraph at lines 1411--1411
 \T1/SourceSansPro-TLF/regular/it/10.95 (+20) Renal Phys-i-ol-ogy\T1/SourceSansPro-TLF/regular/n/10.95 (+20) , vol. 278, no. 2, pp. F173--F179, Feb. 2000, doi: []10.1152/ajpre-
  []
 
-[20]
-
-! LaTeX Error: Unicode character β (U+03B2)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1426 Jan. 29, 2025{]}}
-                        
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-[21]
-
-! LaTeX Error: Unicode character β (U+03B2)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1561 {[}Accessed: Jan. 29, 2025{]}}
-                                     
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-[22] [23] (./Diss - Main Body.baked.aux) ) 
+[21] [22] [23] [24] (./Diss - Main Body.baked.aux) ) 
 Here is how much of TeX's memory you used:
- 32466 strings out of 478287
- 683682 string characters out of 5849290
- 1117821 words of memory out of 5000000
- 49515 multiletter control sequences out of 15000+600000
- 655009 words of font info for 264 fonts, out of 8000000 for 9000
+ 32497 strings out of 478287
+ 685638 string characters out of 5849290
+ 1120821 words of memory out of 5000000
+ 49531 multiletter control sequences out of 15000+600000
+ 645672 words of font info for 265 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,117p,10647b,777s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc}</usr/share/texlive/texmf-dist/fonts/type1/adobe/sourcecodepro/SourceCodePro-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on "Diss - Main Body.baked.pdf" (27 pages, 5284438 bytes).
+Output written on "Diss - Main Body.baked.pdf" (28 pages, 5500976 bytes).
 PDF statistics:
- 8945 PDF objects out of 10688 (max. 8388607)
- 5994 compressed objects within 60 object streams
- 126 named destinations out of 1000 (max. 500000)
- 59819 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 9771 PDF objects out of 10688 (max. 8388607)
+ 6539 compressed objects within 66 object streams
+ 130 named destinations out of 1000 (max. 500000)
+ 57791 words of extra memory for PDF output out of 61914 (max. 10000000)
 

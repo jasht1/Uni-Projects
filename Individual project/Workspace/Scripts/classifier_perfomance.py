@@ -1,9 +1,16 @@
 import numpy as np
+from scipy import stats
 from matplotlib import pyplot as plt
 from matplotlib.colors import Normalize
 from matplotlib.cm import ScalarMappable
-from classifier import get_group_probability
+from classifier import get_group_probability, sample_from_likelihood
 from import_data import get_results_batch_data
+
+model_colors = {
+"gaussian": 'tab:blue',
+"kde": 'tab:orange',
+"skewnorm": 'tab:brown'
+}
 
 def classification_threshold(mc_resampling=0, pos_only=False, cbg=True):
   YM_vals = np.linspace(0, 2000, 500)
@@ -136,7 +143,8 @@ def compare_likelihood_models(
 ):
 
   # Fetch data
-  batch_data = get_results_batch_data(path="Experiment")
+  # batch_data = get_results_batch_data(path="Experiment")
+  batch_data = get_results_batch_data(path="Cell")
   control_data = batch_data["Control"]["Young's Modulus [Pa]"]
   treated_data = batch_data["Treated"]["Young's Modulus [Pa]"]
 
@@ -150,11 +158,6 @@ def compare_likelihood_models(
   posterior_cmap = plt.get_cmap('RdBu_r')
   accuracy_cmap = plt.get_cmap(cmap)
 
-  model_colors = {
-    "gaussian": 'tab:blue',
-    "kde": 'tab:orange',
-    "skewnorm": 'tab:brown'
-  }
 
   avg_accuracies = []
 
@@ -245,4 +248,100 @@ def compare_likelihood_models(
   plt.tight_layout(rect=[0.00, 0.10, 0.85, 1])
   plt.show()
 
-compare_likelihood_models(mc_resampling=0) 
+# compare_likelihood_models(mc_resampling=0) 
+
+
+def compare_accuracy_vs_sample_size(
+  models=["gaussian", "kde", "skewnorm"],
+  sample_sizes=[1, 3, 6, 12, 30],
+  n_trials=1000,
+  mc_resampling=500,
+  seed=42
+):
+  np.random.seed(seed)
+  batch_data = get_results_batch_data()
+  control = np.array(batch_data["Control"]["Young's Modulus [Pa]"])
+  treated = np.array(batch_data["Treated"]["Young's Modulus [Pa]"])
+
+  model_colors = {
+    "gaussian": 'tab:blue',
+    "kde": 'tab:orange',
+    "skewnorm": 'tab:brown'
+  }
+
+  bar_width = 0.2
+  offsets = np.linspace(-0.25, 0.25, len(models))
+
+  fig, ax = plt.subplots(figsize=(6, 5))
+
+  for i, model in enumerate(models):
+    means_main = []
+    stds_main = []
+    means_mc = []
+    stds_mc = []
+
+    for n in sample_sizes:
+      accs = []
+      accs_mc = []
+
+      for _ in range(n_trials):
+        label = np.random.choice([0, 1])  # 0 = Control, 1 = Treated
+        source = control if label == 0 else treated
+
+        if model == "gaussian":
+          mu, sigma = source.mean(), source.std()
+          sample = np.random.normal(mu, sigma, size=n)
+        elif model == "skewnorm":
+          a_skew = (source.mean() - np.median(source)) / source.std()
+          a_skew = np.clip(a_skew * 10, -20, 20)
+          mu, sigma = source.mean(), source.std()
+          sample = stats.skewnorm.rvs(a=a_skew, loc=mu, scale=sigma, size=n)
+        elif model == "kde":
+          kde = stats.gaussian_kde(source)
+          sample = kde.resample(size=n).flatten()
+        else:
+          raise ValueError("Unsupported model")
+
+        prob = get_group_probability(
+          sample, control, treated, p_of_group="Treated",
+          method=model, n_samples=n, mc_resampling=1
+        ).mean()
+        pred = int(prob > 0.5)
+        accs.append(pred == label)
+
+        if mc_resampling > 0 and model in ["gaussian", "skewnorm"]:
+          prob_mc = get_group_probability(
+            sample, control, treated, p_of_group="Treated",
+            method=model, n_samples=n, mc_resampling=mc_resampling
+          ).mean()
+          pred_mc = int(prob_mc > 0.5)
+          accs_mc.append(pred_mc == label)
+
+      means_main.append(np.mean(accs))
+      stds_main.append(np.std(accs))
+      means_mc.append(np.mean(accs_mc) if accs_mc else None)
+      stds_mc.append(np.std(accs_mc) if accs_mc else None)
+
+    x = np.arange(len(sample_sizes)) + offsets[i]
+    ax.bar(x, means_main, yerr=stds_main, width=bar_width, label=f"{model}",
+           color=model_colors[model], capsize=4)
+
+    if mc_resampling > 0 and model in ["gaussian", "skewnorm"]:
+      x_mc = x + 0.1
+      ax.bar(
+        x_mc, means_mc, width=bar_width * 0.7,
+        color=model_colors[model], alpha=0.4, label=f"{model} + MC",
+      )
+
+  ax.set_xticks(np.arange(len(sample_sizes)))
+  ax.set_xticklabels(sample_sizes)
+  ax.set_ylim(0.4, 1.01)
+  ax.set_ylabel("Classification Accuracy")
+  ax.set_xlabel("Number of Samples Averaged")
+  ax.set_title("Classifier Accuracy vs Sample Size for Different Likelihood Models")
+  ax.legend()
+  plt.tight_layout()
+  plt.show()
+
+compare_accuracy_vs_sample_size(mc_resampling=1000)
+

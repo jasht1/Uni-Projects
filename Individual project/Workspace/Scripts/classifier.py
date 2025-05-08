@@ -30,11 +30,26 @@ def direct_likelihood(data, method, YM, n_samples=1, mean=None, std=None, a_skew
       return stats.norm.pdf(YM, loc=mean, scale=std / np.sqrt(n_samples))
   elif method == "skewnorm":
     if a_skew is None:
-      skew_val = (data.mean() - data.median()) / data.std()
+      skew_val = (data.mean() - np.median(data)) / data.std()
       a_skew = np.clip(skew_val * 10, -20, 20)
     mean = data.mean() if mean is None else mean
     std = data.std() if std is None else std
     return stats.skewnorm.pdf(YM, a=a_skew, loc=mean, scale=std / np.sqrt(n_samples))
+
+def sample_from_likelihood(data, model, size):
+    if model == "gaussian":
+        mu, std = np.mean(data), np.std(data)
+        return np.random.normal(mu, std, size)
+    elif model == "skewnorm":
+        mu, std = np.mean(data), np.std(data)
+        skew_val = (mu - np.median(data)) / std
+        a_skew = np.clip(skew_val * 10, -20, 20)
+        return stats.skewnorm.rvs(a=a_skew, loc=mu, scale=std, size=size)
+    elif model == "kde":
+        kde = stats.gaussian_kde(data)
+        return kde.resample(size).flatten()
+    else:
+        raise ValueError("Unsupported model")
 
 def sample_params(data, mc_resampling=1000, alpha=0.05):
   mean = data.mean()
@@ -50,7 +65,7 @@ def monte_carlo_likelihood(data, method, YM, mc_resampling=1000, n_samples=5, al
   sampled_means, sampled_stds = sample_params(data, mc_resampling=mc_resampling, alpha=alpha)
 
   if method == "skewnorm":
-    data_skew = (data.mean() - data.median()) / data.std()
+    data_skew = (data.mean() - np.median(data)) / data.std()
     a_skew = np.clip(data_skew * 10, -20, 20)
   else:
     a_skew = None

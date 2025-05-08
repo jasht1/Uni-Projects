@@ -1,19 +1,19 @@
 \contentsline {subsection}{\nonumberline Introduction}{1}{subsection*.3}%
 \contentsline {subsection}{\nonumberline Background}{1}{subsection*.5}%
 \contentsline {subsubsection}{\nonumberline Relevant Physiology}{1}{subsubsection*.7}%
-\contentsline {subsubsection}{\nonumberline Diabetic Nephropathy (DN)}{3}{subsubsection*.10}%
-\contentsline {subsubsection}{\nonumberline Atomic Force Microscopy (AFM)}{4}{subsubsection*.12}%
-\contentsline {subsubsection}{\nonumberline Contact Mechanics}{6}{subsubsection*.17}%
-\contentsline {subsection}{\nonumberline Literature Review}{7}{subsection*.19}%
-\contentsline {subsection}{\nonumberline Methodology}{8}{subsection*.21}%
-\contentsline {subsubsection}{\nonumberline Experimental Method}{8}{subsubsection*.23}%
-\contentsline {subsubsection}{\nonumberline Elasticity Modeling}{9}{subsubsection*.25}%
-\contentsline {subsubsection}{\nonumberline Classification Method}{10}{subsubsection*.27}%
-\contentsline {subsection}{\nonumberline Results}{12}{subsection*.29}%
-\contentsline {subsubsection}{\nonumberline Elasticity Modeling}{12}{subsubsection*.31}%
-\contentsline {subsubsection}{\nonumberline Determine Effect Strength}{14}{subsubsection*.41}%
-\contentsline {subsubsection}{\nonumberline Construct Classifiers}{15}{subsubsection*.45}%
-\contentsline {subsection}{\nonumberline Discussion}{17}{subsection*.51}%
-\contentsline {subsection}{\nonumberline Conclusion}{20}{subsection*.63}%
-\contentsline {subsection}{Bibliography}{20}{section*.64}%
+\contentsline {subsubsection}{\nonumberline Diabetic Nephropathy (DN)}{4}{subsubsection*.11}%
+\contentsline {subsubsection}{\nonumberline Atomic Force Microscopy (AFM)}{4}{subsubsection*.13}%
+\contentsline {subsubsection}{\nonumberline Contact Mechanics}{6}{subsubsection*.18}%
+\contentsline {subsection}{\nonumberline Literature Review}{7}{subsection*.20}%
+\contentsline {subsection}{\nonumberline Methodology}{8}{subsection*.22}%
+\contentsline {subsubsection}{\nonumberline Experimental Method}{8}{subsubsection*.24}%
+\contentsline {subsubsection}{\nonumberline Elasticity Modeling}{9}{subsubsection*.26}%
+\contentsline {subsubsection}{\nonumberline Classification Method}{10}{subsubsection*.28}%
+\contentsline {subsection}{\nonumberline Results}{12}{subsection*.30}%
+\contentsline {subsubsection}{\nonumberline Elasticity Modeling}{12}{subsubsection*.32}%
+\contentsline {subsubsection}{\nonumberline Determine Effect Strength}{14}{subsubsection*.42}%
+\contentsline {subsubsection}{\nonumberline Construct Classifiers}{15}{subsubsection*.46}%
+\contentsline {subsection}{\nonumberline Discussion}{17}{subsection*.54}%
+\contentsline {subsection}{\nonumberline Conclusion}{21}{subsection*.66}%
+\contentsline {subsection}{Bibliography}{21}{section*.67}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
