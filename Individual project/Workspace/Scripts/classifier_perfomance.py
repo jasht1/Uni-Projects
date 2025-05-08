@@ -5,7 +5,6 @@ from matplotlib.cm import ScalarMappable
 from classifier import get_group_probability
 from import_data import get_results_batch_data
 
-
 def classification_threshold(mc_resampling=0, pos_only=False, cbg=True):
   YM_vals = np.linspace(0, 2000, 500)
   batch_data = get_results_batch_data(path="Experiment")
@@ -132,80 +131,118 @@ def compare_likelihood_models(
     models=["gaussian", "kde", "skewnorm"],
     ym_range=(0, 2000),
     n_ym_points=300,
-    cmap='summer',
+    cmap='summer_r',
     mc_resampling=1000
 ):
 
-  # Fetch batch data
+  # Fetch data
   batch_data = get_results_batch_data(path="Experiment")
   control_data = batch_data["Control"]["Young's Modulus [Pa]"]
   treated_data = batch_data["Treated"]["Young's Modulus [Pa]"]
 
   YM_vals = np.linspace(*ym_range, n_ym_points)
-  # fig, axes = plt.subplots(1, len(models), figsize=(5 * len(models), 4), sharey=True)
-  fig, axes = plt.subplots(1, len(models), figsize=(6, 4), sharey=True)
+
+  fig, axes = plt.subplots(1, len(models), figsize=(6, 5), sharey=True)
   if len(models) == 1:
     axes = [axes]
 
-  norm = Normalize(vmin=0, vmax=1)
-  deseased_prob_cmap = plt.get_cmap('RdBu_r')
-  err_cmap = plt.get_cmap(cmap)
+  prob_norm = Normalize(vmin=0, vmax=1)
+  posterior_cmap = plt.get_cmap('RdBu_r')
+  accuracy_cmap = plt.get_cmap(cmap)
+
+  model_colors = {
+    "gaussian": 'tab:blue',
+    "kde": 'tab:orange',
+    "skewnorm": 'tab:brown'
+  }
+
+  avg_accuracies = []
 
   for i, model in enumerate(models):
+    ax = axes[i]
+
+    # Posterior probability band
     probs = get_group_probability(
       YM_vals, control_data, treated_data,
       p_of_group="Treated",
       method=model,
       mc_resampling=mc_resampling
     )
-
-    # Draw classifier band
-    color_column = deseased_prob_cmap(norm(probs))[:, :3]  # (n_ym_points, 3)
-    color_column_2D = np.tile(color_column[:, np.newaxis, :], (1, 20, 1))  # (n_ym_points, width, RGB)
-    
-    axes[i].imshow(
+    color_column = posterior_cmap(prob_norm(probs))[:, :3]
+    color_column_2D = np.tile(color_column[:, np.newaxis, :], (1, 20, 1))
+    ax.imshow(
       color_column_2D,
       extent=[0, 1, ym_range[0], ym_range[1]],
       aspect='auto', origin='lower'
     )
 
-    # Scatter treated points 
+    acc_scores = []
+
+    # Treated group
     for val in treated_data:
       score = get_group_probability(
         np.array([val]), control_data, treated_data,
-        p_of_group="Treated",
-        method=model,
+        p_of_group="Treated", method=model,
         mc_resampling=mc_resampling
       )[0]
-      color = err_cmap(1 - score)  # flipped probability 
-      axes[i].scatter(0.5, val, color=color, edgecolor='k', s=20, alpha=0.6)
+      acc = 1 - abs(score - 1)
+      acc_scores.append(acc)
+      color = accuracy_cmap(acc)
+      jitter = 0.5 + np.random.normal(0, 0.07)
+      ax.scatter(jitter, val, color=color, edgecolor='red', linewidth=1.2, s=40, alpha=0.9)
 
-    # Scatter control points 
+    # Control group
     for val in control_data:
       score = get_group_probability(
         np.array([val]), control_data, treated_data,
-        p_of_group="Treated",
-        method=model,
+        p_of_group="Treated", method=model,
         mc_resampling=mc_resampling
       )[0]
-      color = err_cmap(score)  # direct probability
-      axes[i].scatter(0.5, val, color=color, edgecolor='k', s=20, alpha=0.6)
+      acc = 1 - abs(score - 0)
+      acc_scores.append(acc)
+      color = accuracy_cmap(acc)
+      jitter = 0.5 + np.random.normal(0, 0.15)
+      ax.scatter(jitter, val, color=color, edgecolor='blue', linewidth=1.2, s=40, alpha=0.9)
 
-    axes[i].set_title(f"{model} model")
-    axes[i].set_xlim(0, 1)
-    axes[i].set_xlabel("")
+    avg_acc = np.mean(acc_scores)
+    avg_accuracies.append((model, avg_acc))
+
+    ax.set_title(
+        f"{model} model",
+        fontsize=12,
+        color='white',
+        bbox=dict(
+            facecolor=model_colors[model],
+            edgecolor='none',
+            boxstyle='round,pad=0.5'
+        )
+    )
+    ax.set_xlim(0, 1)
+    ax.set_xticks([])
 
   axes[0].set_ylabel("Young's Modulus [Pa]")
   axes[0].set_ylim(*ym_range)
 
-  # Colorbar
-  sm = ScalarMappable(norm=norm, cmap=cmap)
-  sm.set_array([])
-  fig.colorbar(sm, ax=axes, label="P(Diseased | YM)", orientation='vertical', fraction=0.015, pad=0.04)
+  # --- Colorbars ---
+  # Accuracy 
+  cbar_ax_acc = fig.add_axes([0.15, 0.09, 0.7, 0.04])  
+  sm_acc = ScalarMappable(norm=prob_norm, cmap=accuracy_cmap)
+  acc_cbar = fig.colorbar(sm_acc, cax=cbar_ax_acc, orientation='horizontal', label="Classification Accuracy")
 
-  plt.suptitle("Classifier Posterior Probability by Likelihood Model", fontsize=14)
-  plt.tight_layout(rect=[0, 0, 1, 0.95])
+  # notches with color-coded lines
+  for model, acc in avg_accuracies:
+    x_pos = acc
+    color = model_colors[model]
+    cbar_ax_acc.plot([x_pos, x_pos], [-0.05, 1.05], color=color, lw=3)
+
+  # Posterior 
+  cbar_ax_post = fig.add_axes([0.87, 0.135, 0.015, 0.75])
+  sm_post = ScalarMappable(norm=prob_norm, cmap=posterior_cmap)
+  fig.colorbar(sm_post, cax=cbar_ax_post, orientation='vertical', label="P(Diseased | YM)")
+
+  plt.suptitle("Classifier Performance by Likelihood Model", fontsize=14, y=0.96)
+  # plt.tight_layout(rect=[0.05, 0.11, 0.9, 0.95])
+  plt.tight_layout(rect=[0.00, 0.10, 0.85, 1])
   plt.show()
 
-# Run the comparison function
-compare_likelihood_models()
+compare_likelihood_models(mc_resampling=0) 
