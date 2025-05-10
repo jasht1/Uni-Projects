@@ -10,7 +10,7 @@ The single cell classification curves in the figure below show what a classifier
 
 ![Comparison of Distribution Models on Single Cell Classifier Decision Curve](Classification_Threashhold_by_Distribution_Model.svg)
 
-The confidence of the model increases, albeit diminishingly, the more samples are taken, an average of 15 cells, each being an average of 5 tests, from a common unknown group could be classified with an average accuracy of 90%. This largely is due to reducing the uncertainty in the crossover range of $500 \text{Pa} \lt  \text{YM} \lt 1000 \text{Pa}$ where a lage portion of samples are likely to fall and for a single cell might just as well be healthy or diseased.
+The confidence of the model increases, albeit diminishingly, the more samples are taken. An average of 15 cells, each being an average of 5 tests, from a common unknown group could be classified with an average accuracy of 90%. This largely is due to reducing the uncertainty in the crossover range of $500 \text{Pa} < \text{YM} < 1000 \text{Pa}$ where a large portion of samples are likely to fall and for a single cell might just as well be healthy or diseased.
 
 
 --- start-multi-column: ID_j1ca
