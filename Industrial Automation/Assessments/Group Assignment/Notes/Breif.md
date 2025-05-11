@@ -40,3 +40,19 @@ The management team would like to see a detailed operational scheme including de
 ### Format
 
 Your submission should take the form of a **group report**, addressing the requirements set out in the description of the assessment task. There is a **15-page limit** for your report.
+
+###  Mark Scheme
+
+- Correct identification of all input/output element types with specifications. **(20 marks)**
+    
+- Correct PLC circuit diagram showing all input/output connections. **(20 marks)**
+    
+- Addressing of the input/output elements in the PLC software. **(10 marks)**
+    
+- Ladder logic diagram to implement the process control with sub-routines. **(10 marks)**
+    
+- Design of SCADA dashboard for online monitoring of the system. **(20 marks)**
+    
+- Provide alarms where required so that the process may suitably stop in case of an emergency. **(10 marks)**
+    
+- Individual contribution statement. **(10 marks)**

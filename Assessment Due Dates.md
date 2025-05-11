@@ -1,3 +1,4 @@
+
 ```mermaid
 ---
 displayMode: compact
@@ -10,10 +11,10 @@ tickInterval 2week
 section Industrial Automation
 	Pneumatics Due: done, milestone, 2025-03-13, 1d
 	Electro-Pneumatics: done, milestone, 2025-04-17, 1d
-	Report: crit, milestone, 2025-05-22, 1d
+	Group Assignment: crit, milestone, 2025-05-22, 1d
 section Robotics
 	Assignment: done, milestone, 2025-03-27, 1d
-	Project: crit, milestone, 2025-05-22, 1d
+	Group Project: crit, milestone, 2025-05-22, 1d
 section Building Systems
 	SOA: done, milestone, 2025-04-03, 2025-04-10
 	Design Project: crit, milestone, 2025-06-05, 2025-06-05
@@ -35,3 +36,4 @@ FROM "Projects/Uni Projects" AND #Assessment
 WHERE due > date(today)
 SORT due
 ```
+

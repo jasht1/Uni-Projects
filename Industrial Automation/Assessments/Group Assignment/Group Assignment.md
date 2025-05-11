@@ -14,3 +14,5 @@ weight: 40
 
 # Plan
 
+> [!INFO]- [Plan](Plan.md)
+> ![Plan](Plan.md)
