@@ -14,3 +14,4 @@ weight: 10
 
 # Plan
 
+> [!INFO] [Poster Planning](Poster%20Planning.md)
