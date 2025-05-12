@@ -1,4 +1,5 @@
 
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Methodology%20Summary%20Blocks.png)
 ### Experimental Method
 
 %% ![Experimental methodology](Experimental%20methodology.md) %%

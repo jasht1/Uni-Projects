@@ -5,12 +5,21 @@ Diabetes → Changes on the cellular level → Kidney damage
 Cellular changes result in change in elasticity
 %%
 
+This project investigates the predictive power of renal tubular epithelial cell stiffness as a biomarker for the progression of Diabetic Nephropathy (DN). 
+DN is a common and serious complication of diabetes resulting in kidney failure due to progressive damage to the nephrons, the functional units of the kidney responsible for filtering the blood [@metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress].
+This loss of function is due to physical changes at the cellular level induced by cytokine TGF-$\beta$ 1 associated with an observable stiffening of the cytoskeleton [@hillsCE2012-TGFvModulatesCelltocell]. 
+
 %% ### AFM
 How dose it work
 %%
 
-The mechanical properties of cells are finely tuned to their function, especially epithelial cells who's core role is to form active structural surfaces where correct functioning is a direct result of appropriate strength, stiffness, and shape. In patients suffering from diabetic nephropathy the alterations in renal tubule cell properties are directly associated with progression of the disease and further kidney damage. Increased renal tubule cell stiffness has been observed in association with renal disease and may have potential as a biomarker for diagnosis or drug development. This report will investigate a potential method for associating observed cell stiffness with progression of renal disease.  
+A force against indentation curve of a cells can be observed using Atomic Force Microscopy (AFM) where the deflection of a very fine probe on a flexible cantilever is measured to detect contact forces. 
+From the spring constant of the cantilever the indentation and force exerted can be determined as the assembly is advanced into the sample. 
+This curve can then be fitted against an elastic deformation model to determine an apparent Young's Modulus (YM). 
 
-The progress of this project can be broken down into 4 successive objectives:
+![](Projects/Uni%20Projects/Individual%20project/Assesments/Poster/LaTex/images/Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
 
-![](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Methodology%20Summary%20Blocks.png)
+%% #### Classifier %%
+
+A measure of the probability a given cell is healthy or diseased can be predicted based on the 
+To find the 

@@ -57,7 +57,8 @@
 \usepackage{array,booktabs}
 % For creating beautiful plots
 \usepackage{pgfplots}
-
+% For SVG images
+\usepackage{svg}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mathematics
 % http://en.wikibooks.org/wiki/LaTeX/Mathematics
@@ -189,26 +190,25 @@
 }
 %the poster title
 {\color{nustblue}\bf
-  Namkeen Poster Theme
+    Nanomechanical Analysis of Renal Tubular 
+    Cell Cytoskeleton to Measure Renal Disease
 }
 %the author(s)
 {\small
-  \vspace{1em} Prof. Dr. Hasan Ali Khattak\\[0.5em]
-  Dept.\ of Computing, School of Electrical Engineering and Computing,\\
-  National University of Sciences \& Technology (NUST)\\
-  hasan.alikhattak@seecs.edu.pk
+  \vspace{1em} Joseph Ashton \quad SID 27047440 \qquad | \qquad Supervised by Eleftherios Siamantouras\\[0.5em]
+  BEng (Hons) Mechatronics, School of Engineering and Physical Sciences, University of Lincoln\\
 }
 %the logo (the logo on the right)
 {
-  %this can be commented out or replaced by a conference logo
-  \includegraphics[height=0.75\headerheight]{images/UoL_logo.png}
+  % \includegraphics[height=0.95\headerheight]{images/SDG_TARGET_34.png}
+  \includesvg[height=0.95\headerheight]{images/SDG_TARGET_34.svg}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % the actual content of the poster begins here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{posterbox}[name=intro,column=0,row=0]{Abstract}
+\begin{posterbox}[name=abstract,column=0,row=0]{Abstract}
 \begin{justify}
     This project investigates changes in mechanical properties of kidney
     cells when exposed to TGF-\(\beta 1\), which is known to induce
@@ -219,14 +219,7 @@
 \end{justify}
 \end{posterbox}
 
-\begin{posterbox}[name=usage,column=0,below=intro]{Usage}
-\begin{itemize}
-  \item To use this poster theme, place the {\tt namkeenposter.tex} file in your preferred folder and modify the file to your needs.
-  \item You can read more about how you can modify the theme in the documentation for the baposter template which you can find here \url{http://www.brian-amberg.de/uni/poster/}.
-\end{itemize}
-\end{posterbox}
-
-\begin{posterbox}[name=lists,column=0,below=usage]{Lists}
+\begin{posterbox}[name=lists,column=0,below=abstract]{Lists}
 Itemize
 \begin{itemize}
   \item item 1
@@ -287,31 +280,36 @@ Here is an example of an equation
 \end{equation}
 \end{posterbox}
 
-\begin{posterbox}[name=install,span=2,column=1,row=0]{Installation}
-You can either make a local or a global installation of the baposter poster template \cite{baposter}.
-\begin{description}
-  \item[Local:] Place the {\tt baposter.cls} file in the same folder as the poster file {\tt taralliposter.tex}
-  \item[Global:] Place the {\tt baposter.cls} file in your local latex-directory tree. This is by default {\tt <somewhere>/textmf/tex/latex/baposter} where {\tt <somewhere>} is
-  \begin{description}
-    \item[GNU/Linux:] {\tt/home/<username>}
-    \item[Windows XP:] {\tt c:\textbackslash Document and Settings\textbackslash<username>}
-    \item[Windows Vista+:] {\tt c:\textbackslash Users\textbackslash<username>}
-    \item[Mac OSX] {\tt/home/<username>/Library}
-  \end{description}
-  On GNU/Linux and Windows, you have to update the filename database after placing {\tt baposter.cls} in the correct folder. This is done by
-  \begin{description}
-    \item[GNU/Linux:] {\tt \$ texhash \textasciitilde /texmf}
-    \item[Windows with MiKTeX] Open the MiKTeX Settings dialog and click 'Refresh FNDB'.
-    \item[Windows with TeX Live] Open the TeX Live Manager dialog and select 'Update filename database' under 'Actions'.
-  \end{description}
-\end{description}
+\begin{posterbox}[name=intro,span=2,column=1,row=0]{Introduction}
+This project investigates the predictive power of renal tubular epithelial cell stiffness as a biomarker for the progression of Diabetic Nephropathy (DN). 
+DN is a common and serious complication of diabetes resulting in kidney failure due to progressive damage to the nephrons, the functional units of the kidney responsible for filtering the blood [@metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress].
+This loss of function is due to physical changes at the cellular level induced by cytokine TGF-$\beta$ 1 associated with an observable change in cytoskeleton stiffness [@hillsCE2012-TGFvModulatesCelltocell]. 
+
+\begin{minipage}[t]{0.775\linewidth}
+  \vspace{0pt}  % for top alignment
+  A force against indentation curve of a cells can be observed using Atomic Force Microscopy (AFM) where the deflection of a very fine probe on a flexible cantilever is measured to detect contact forces. 
+  From the spring constant of the cantilever the indentation and force exerted can be determined as the assembly is advanced into the sample. 
+  This curve can then be fitted against an elastic deformation model to determine an apparent Young's Modulus (YM). 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\linewidth}
+  \vspace{0pt}  % for top alignment
+  \centering
+  \includegraphics[width=\linewidth]{images/Atomic Force Microscopy - mechanism diagram.png}
+  % \captionof{figure}{AFM Diagram}
+\end{minipage}
+
 \end{posterbox}
 
-\begin{posterbox}[name=figures,column=1,below=install,above=bottom]{Figures and Tables}
+
+\begin{posterbox}[name=method,span=2,column=1,below=intro]{Methodology}
+\includegraphics[width=\linewidth]{images/Methodology Summary Blocks.png}
+
+\end{posterbox}
+
+\begin{posterbox}[name=figures,column=1,below=method,above=bottom]{Figures and Tables}
 You cannot use floats in the baposter template. However, you can use figure captions by using {\tt \textbackslash captionof} instead of {\tt \textbackslash caption}. This is demonstrated in Fig.~\ref{fig:figlabel}. Moreover, you can also use {\tt \textbackslash label} and {\tt \textbackslash ref} to make references to your figures and/or tables.
 \begin{center}
-  \includegraphics[height=0.90\headerheight]{images/emc2}
-  \captionof{figure}{Here is a figure caption}
   \label{fig:figlabel}
 \end{center}
 As you can see, the text background is not white. If your figures do not have a transparent background, this may look too ugly for you. You can of course change the background colour through the {\tt boxColorOne} option. Alternatively, you can make the background transparent. In Matlab, the following example demonstrates how this is done\par
@@ -335,7 +333,7 @@ You can also use {\tt pgfplots} \cite{pgfplots} for plotting your Matlab data. T
 \end{center}
 \end{posterbox}
 
-\begin{posterbox}[name=problems,column=2,below=install]{Known Problems}
+\begin{posterbox}[name=problems,column=2,below=method]{Known Problems}
   \begin{itemize}
     \item The math matrix environment {\tt \textbackslash begin\{matrix\} ... \textbackslash end\{matrix\}} causes an error. I do not know why. Use the array environment until the problem is resolved.
   \end{itemize}

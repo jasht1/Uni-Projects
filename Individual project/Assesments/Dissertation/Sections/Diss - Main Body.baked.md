@@ -96,7 +96,7 @@ Atomic force microscopes use the deflection of a very fine probe on a flexible c
 
 The typically atomic force microscope utilise a laser focused on the free end of the cantilever such that any deflection of the probe produces an amplified deflection of the reflected beam, this is recorded by a position sensitive photodiode [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces]. 
 
-![Atomic force microscope functional diagram](Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
+![Atomic force microscope functional diagram](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/attachments/Atomic%20Force%20Microscopy%20-%20mechanism%20diagram.png)
 
 The sample once mounted to the sample stage can be manoeuvred precisely in relative to the probe by applying voltage to piezoelectric actuators [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @giraudF2019-PiezoelectricActuatorsIntroduction] this is how the sample is advanced into the tip. Once calibrated the voltage at the actuators gives the sample stage position and the voltage at the photodiode gives the deflection of the probe, with this a force displacement curve can be produced by accounting for the stiffness of the cantilever and the relative displacement [@dufreneYF2002-AtomicForceMicroscopy; @buttHJ1995-MeasuringSurfaceForces; @kilpatrickJI2015-NanomechanicsCellsBiomaterials].
 

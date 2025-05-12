@@ -1,0 +1,72 @@
+%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Atomic Force Microscopy - mechanism diagram_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{887.72593689bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.77726691)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Atomic Force Microscopy - mechanism diagram_svg-tex.pdf}}%
+    \put(0.4900161,0.12715073){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Sample\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{Atomic Force Microscopy - mechanism diagram_svg-tex.pdf}}%
+    \put(0.67588427,0.30034607){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Cantilever\end{tabular}}}}%
+    \put(0.38863346,0.23275765){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Probe\end{tabular}}}}%
+    \put(0.32104503,0.33414029){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Reflector\end{tabular}}}}%
+    \put(0.79416402,0.65518532){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Laser\end{tabular}}}}%
+    \put(0.15207396,0.67208242){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Photodiode\end{tabular}}}}%
+    \put(0.16876655,0.07143325){\color[rgb]{0.11764706,0.11764706,0.11764706}\rotatebox{-5.60046676}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sample Stage\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{Atomic Force Microscopy - mechanism diagram_svg-tex.pdf}}%
+    \put(0.90577022,0.46931714){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Piezo \end{tabular}}}}%
+    \put(0.90577022,0.43974721){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Height \end{tabular}}}}%
+    \put(0.89825067,0.41017727){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}actuator\end{tabular}}}}%
+    \put(1.00115508,0.18206633){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Bed Positioning Actuators\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{Atomic Force Microscopy - mechanism diagram_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%
