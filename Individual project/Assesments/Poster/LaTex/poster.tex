@@ -48,7 +48,7 @@
 % We therefore load the caption package which provides
 % the command \captionof
 % Set up how figure and table captions are displayed
-\usepackage{caption}
+\usepackage[skip=2pt]{caption}
 \captionsetup{
   font=small,% set font size to footnotesize
   labelfont=bf % bold label (e.g., Figure 3.2) font
@@ -68,6 +68,8 @@
 \usepackage{amsmath}
 % Adds new math symbols
 \usepackage{amssymb}
+% scaling etc
+\usepackage{graphicx}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Colours
@@ -126,16 +128,10 @@
   \renewcommand{\figurename}{Fig.}
 }
 
-\usepackage[
-  style=ieee,
-  backend=biber,
-]{biblatex}
-\AtEveryBibitem{\clearfield{note}}
+\usepackage[style=ieee,backend=biber]{biblatex}
+\AtEveryBibitem{\clearfield{note}\clearfield{url}}
 \renewcommand{\bibname}{}
 \renewcommand{\refname}{}
-% \addbibresource{../../../../../../.pandoc/ZotLibrary.bib}
-% \addbibresource{../../../../../../.pandoc/ZotLibrary}
-% \addbibresource{ZotLibrary}
 \addbibresource{ZotLibrary.bib}
 
 % create links
@@ -287,10 +283,49 @@ Description
 \end{posterbox}
 
 \begin{posterbox}[name=equation,column=0,below=lists,above=bottom]{Equations}
-Here is an example of an equation
-\begin{equation}
-  f_X(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left\{\frac{1}{2\sigma^2}(x-\mu)^2\right\}
-\end{equation}
+
+\begin{small}
+  \begin{equation}
+    {  
+    \hat{P}(x \mid G) =  
+    \frac{1}{\sigma_{G} \sqrt{2 \pi}}  
+    e^{\tfrac{-1}{2}  
+    \left( \tfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}  
+    }
+  \end{equation}
+  \begin{equation}
+    {
+    \hat{P}(x \mid G) =  
+    \phi\left(x; \mu_G, \sigma_G \right)
+    \cdot  
+    \Phi\left(  
+    \alpha_G \cdot \frac{x - \mu_G}{\sigma_G}  
+    \right)
+    }
+  \end{equation}
+  \begin{equation}
+    {  
+    \hat{P}(x \mid G) =  
+    \frac{1}{n h} \sum_{i=1}^{n} K\left( \frac{x - x_{i_G}}{h} \right)  
+    }  
+  \end{equation}
+  \begin{equation}
+    \begin{align}
+      \hat{P}(x \mid G)     &:: \text{Group Probability Density Function}\\
+      x                     &:: \text{Observation (i.e. Young's Modulus)}\\
+      \sigma_{G}            &:: \text{Group Standard Deviation}\\
+      \mu_{G}               &:: \text{Group Mean}\\
+      \phi(x; \mu, \sigma)  &:: \text{Normal PDF evaluated at } x \\
+      \alpha_G              &:: \text{Group Skew Parameter} \\
+      \Phi(z)               &:: \text{Standard Normal CDF} \\
+      x_{i_G}               &:: \text{Observed Data Points from Group G}\\
+      n                     &:: \text{Number of Observations}\\
+      K(\cdot)              &:: \text{Kernel Function (i.e. Gaussian)}\\
+      h                     &:: \text{Bandwidth (Smoothing Parameter)}\\
+    \end{align}
+  \end{equation}
+\end{small}
+
 \end{posterbox}
 
 \begin{posterbox}[name=intro,span=2,column=1,row=0]{Introduction}
@@ -299,18 +334,19 @@ DN is a common and serious complication of diabetes resulting in kidney failure 
 This loss of function is due to physical changes at the cellular level induced by cytokine TGF-$\beta$ 1 associated with an observable change in cytoskeleton stiffness \cite{hillsCE2012-TGFvModulatesCelltocell}. 
 
 \begin{minipage}[t]{0.775\linewidth}
-  \vspace{0pt}  % for top alignment
+  \vspace{0pt}
   A force against indentation curve of a cells can be observed using Atomic Force Microscopy (AFM) where the deflection of a very fine probe on a flexible cantilever is measured to detect contact forces. 
   From the spring constant of the cantilever the indentation and force exerted can be determined as the assembly is advanced into the sample. 
   This curve can then be fitted against an elastic deformation model to determine an apparent Young's Modulus (YM). 
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.2\linewidth}
-  \vspace{0pt}  % for top alignment
+  \vspace{-10pt}
   \centering
   \includegraphics[width=\linewidth]{images/Atomic Force Microscopy - mechanism diagram.png}
   \captionof{figure}{AFM Diagram}
 \end{minipage}
+\vspace{1em}
 
 The probability a given cell is healthy or diseased can be predicted from the observed distributions of YM of cells that have not been exposed to TGF-$\beta$ (Control) and those that have (Treated) by a Bayesian classifier.
 
@@ -323,67 +359,22 @@ The probability a given cell is healthy or diseased can be predicted from the ob
 \end{posterbox}
 
 \begin{posterbox}[name=figures,column=1,below=method,above=bottom]{Figures and Tables}
-You cannot use floats in the baposter template. However, you can use figure captions by using {\tt \textbackslash captionof} instead of {\tt \textbackslash caption}. This is demonstrated in Fig.~\ref{fig:figlabel}. Moreover, you can also use {\tt \textbackslash label} and {\tt \textbackslash ref} to make references to your figures and/or tables.
+  
 \begin{center}
-  \label{fig:figlabel}
 \end{center}
-As you can see, the text background is not white. If your figures do not have a transparent background, this may look too ugly for you. You can of course change the background colour through the {\tt boxColorOne} option. Alternatively, you can make the background transparent. In Matlab, the following example demonstrates how this is done\par
-{\tt
-f1 = figure(1);\\
-set(f1,'Color','none');
-}\par
-% You can also use {\tt pgfplots} \cite{pgfplots} for plotting your Matlab data. This is not that hard and the resulting plots are much nicer than Matlab plots, so I will strongly recommend that you have a look at {\tt pgfplots} right here \url{http://sourceforge.net/projects/pgfplots/}.
-\begin{center}
-  \begin{tabular}{c c c}
-    \toprule
-    header 1 & header 2 & header 3\\
-    \midrule
-    data (1,1) & data (1,2) & data (1,3)\\
-    data (2,1) & data (2,2) & data (2,3)\\
-    data (3,1) & data (3,2) & data (3,3)\\
-    \bottomrule
-  \end{tabular}
-  \captionof{table}{A very simple table with booktabs}
-  \label{tab:tablabel}
-\end{center}
+
 \end{posterbox}
 
-\begin{posterbox}[name=problems,column=2,below=method]{Known Problems}
-  \begin{itemize}
-    \item The math matrix environment {\tt \textbackslash begin\{matrix\} ... \textbackslash end\{matrix\}} causes an error. I do not know why. Use the array environment until the problem is resolved.
-  \end{itemize}
+\begin{posterbox}[name=recommend,column=2,below=method]{Recommendations}
+  \begin{description}
+    \item [Repeat with larger experimental dataset] Applying the methodology described on larger datasets would allow for a more robust estimate with more extensive testing and validation.
+  \end{description}
 \end{posterbox}
 
-\begin{posterbox}[name=feedback,column=2,below=problems]{Feedback}
-  \begin{itemize}
-    % \item This poster theme has been tested with baposter v. 2.0, and it can be downloaded from my website \cite{namkeen} or my personal website \cite{hasan}.
-    % \item If you find a bug in this theme (and not in the baposter template), please do not hesitate to contact me. There is a FAQ at the baposter website \cite{baposter}, if you should have any problems with it.
-  \end{itemize}
-\end{posterbox}
-
-\begin{posterbox}[name=refs,column=2,below=feedback,above=bottom]{References}
-% In the last box, you will usually have a list of references
-% The bibliography automatically adds the title "References", but
-% this have been removed in the preamble
-
-% use either ......
-% \bibliographystyle{plain}
-% \begin{thebibliography}{1}% Simple bibliography with widest label of 1
-% \itemsep=-0.01em% Save space between the separation
-% \setlength{\baselineskip}{0.4em}% Save space with longer lines
-% \bibitem{baposter} Brian Amberg: \emph{LaTeX Poster Template}, \url{http://www.brian-amberg.de/uni/poster/} 
-% \bibitem{pgfplots} Christian Feuersänger: \emph{PGFPlots - A LaTeX Package to create normal/logarithmic plots in two and three dimensions}, \url{http://pgfplots.sourceforge.net/} 
-% \bibitem{namkeen} NUST SEECS Namkeen Theme: \emph{Official Beamer Theme, Poster Theme, and Report Template}, \url{https://github.com/hasanalikhattak/namkeen}
-% \bibitem{hasan} Hasan ali khattak: \emph{Associate Professor, NUST School of Electrical Engineering and Computer Science (NUST-SEECS)}, \url{https://hasan.khattak.info}
-% \end{thebibliography}
-
-% ...... or
-  % \bibliographystyle{IEEEbib}
-  % \bibliography{../../../../../../.pandoc/ZotLibrary} 
-  \defbibheading{none}{}  % Define an empty heading
-  {\small
-    \printbibliography[heading=none]
-  }
+\begin{posterbox}[name=refs,column=2,below=recommend,above=bottom]{References}
+  \defbibheading{none}{}  % remove redundant heading
+  \renewcommand*{\bibfont}{\scriptsize}
+  \printbibliography[heading=none]
 \end{posterbox}
 
 \end{poster}
