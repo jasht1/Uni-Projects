@@ -11,7 +11,7 @@ You have been engaged as Automation Consultants to provide expertise to the mana
     
 - Cylinder `B` moves the conveyor till bottle is detected by `CP2`.
     
-- Conveyor stops and solenoid at `D` is energized to allow liquid to be filled in the bottle.
+- Conveyor stops and solenoid at `D` is energised to allow liquid to be filled in the bottle.
     
 - Conveyor moves again till bottle is detected by `CP3`. It then stops again.
     

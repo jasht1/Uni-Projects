@@ -38,3 +38,14 @@ section Report
 	Monitoring Description: 2025-05-16, 1d
 	Monitoring Method: 2025-05-16, 2d
 ```
+
+##
+%%[[2025-05-13]] @ 16:49%%
+
+
+
+## 
+%%[[2025-05-13]] @ 16:22%%
+
+Brandon find appropriate components for each part on RS components.
+
