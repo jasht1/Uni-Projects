@@ -1,0 +1,243 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{gentleME2013-EpithelialCellTGFv}{article}{}
+      \name{author}{9}{}{%
+        {{hash=3f1baac01cfb88ac98ab150d880a8d0a}{%
+           family={Gentle},
+           familyi={G\bibinitperiod},
+           given={Madeleine\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c5c7d993a63cb076ae649fd5c0d475d3}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Shaolin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=977cce8180aa0da89b2a7156d2eecc70}{%
+           family={Daehn},
+           familyi={D\bibinitperiod},
+           given={Ilse},
+           giveni={I\bibinitperiod}}}%
+        {{hash=b51a1acfbcf7be063afaed6b230895c9}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Taoran},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e42fdfbe6b09805a9a6d9cad36fcab1c}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Haiying},
+           giveni={H\bibinitperiod}}}%
+        {{hash=caa098cf20a9af60ebff2b29fed26991}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Liping},
+           giveni={L\bibinitperiod}}}%
+        {{hash=30eeebe6a262af80a09c2437b9a5a2e2}{%
+           family={D’Agati},
+           familyi={D\bibinitperiod},
+           given={Vivette\bibnamedelima D.},
+           giveni={V\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a89142260507227a2fbeab5e340e2232}{%
+           family={Schlondorff},
+           familyi={S\bibinitperiod},
+           given={Detlef\bibnamedelima O.},
+           giveni={D\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=f74b9235b845c0d365009821a5d1cbe5}{%
+           family={Bottinger},
+           familyi={B\bibinitperiod},
+           given={Erwin\bibnamedelima P.},
+           giveni={E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3deaf2219119d338f34c617c3bf9029}
+      \strng{fullhash}{7c7c42b0dde1a30de4e343bdccc52e1d}
+      \strng{bibnamehash}{c3deaf2219119d338f34c617c3bf9029}
+      \strng{authorbibnamehash}{c3deaf2219119d338f34c617c3bf9029}
+      \strng{authornamehash}{c3deaf2219119d338f34c617c3bf9029}
+      \strng{authorfullhash}{7c7c42b0dde1a30de4e343bdccc52e1d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{TGFβ signaling plays a central role in the development of acute and chronic kidney diseases. Previous in vivo studies involved systemic alteration of TGFβ signaling, however, limiting conclusions about the direct role of TGFβ in tubular cell injury. Here, we generated a double transgenic mouse that inducibly expresses a ligand-independent constitutively active TGFβ receptor type 1 (TβR1) kinase specifically in tubular epithelial cells, with expression restricted by the Pax8 promoter. In this model, activation of TGFβ signaling in the tubular epithelium alone was sufficient to cause AKI characterized by marked tubular cell apoptosis and necrosis, oxidative stress, dedifferentiation and regenerative cell proliferation, reduced renal function, and interstitial accumulation of inflammatory cells. This tubular injury was associated with mitochondrial-derived generation of reactive oxygen species (ROS), but cell damage and apoptosis were partially independent of mitochondrial-derived ROS. TβR1 signaling-induced tubular injury also associated with significant leukocyte infiltration consisting of F4/80+ macrophages, CD11c+ F4/80+ dendritic cells, CD11c+ F4/80− Ly6Chigh dendritic cells/monocytes, and T cells. Inhibition of mitochondrial-derived ROS significantly reduced accumulation of CD11c+ F4/80+ dendritic cells and T cells, suggesting a role for ROS in the activation and recruitment of the adaptive immune response to tubular injury. Taken together, these results suggest that TGFβ signaling in the tubular epithelium alone is sufficient to cause acute tubular injury and inflammation; therefore, TGFβ may be a mechanistic link between acute injury and chronic progression of kidney disease.}
+      \field{day}{30}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1046-6673}
+      \field{journaltitle}{Journal of the American Society of Nephrology : JASN}
+      \field{month}{4}
+      \field{number}{5}
+      \field{shortjournal}{J Am Soc Nephrol}
+      \field{title}{Epithelial {{Cell TGFβ Signaling Induces Acute Tubular Injury}} and {{Interstitial Inflammation}}}
+      \field{urlday}{4}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{24}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{787\bibrangedash 799}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1681/ASN.2012101024
+      \endverb
+      \verb{eprint}
+      \verb 23539761
+      \endverb
+      \verb{file}
+      \verb /home/joe/Zotero/storage/ZCXIR73H/PMC3636798.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3636798/
+      \endverb
+      \verb{url}
+      \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3636798/
+      \endverb
+      \keyw{👁,🖋}
+    \endentry
+    \entry{metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e4e778f88b79d2c3e56e230c709709bb}{%
+           family={Metcalfe},
+           familyi={M\bibinitperiod},
+           given={Wendy},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4e778f88b79d2c3e56e230c709709bb}
+      \strng{fullhash}{e4e778f88b79d2c3e56e230c709709bb}
+      \strng{bibnamehash}{e4e778f88b79d2c3e56e230c709709bb}
+      \strng{authorbibnamehash}{e4e778f88b79d2c3e56e230c709709bb}
+      \strng{authornamehash}{e4e778f88b79d2c3e56e230c709709bb}
+      \strng{authorfullhash}{e4e778f88b79d2c3e56e230c709709bb}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{day}{1}
+      \field{issn}{0931-0509}
+      \field{issue}{suppl\_9}
+      \field{journaltitle}{Nephrology Dialysis Transplantation}
+      \field{month}{9}
+      \field{note}{\#\# Summary \par Biomarkers of chronic kidney disease are: \par \begin{itemize} \item Systemic hypertension \item declining GFR \item Proteinuria \item \mkbibemph{potentially} Hyperlipidaemia \item Anaemia \end{itemize} \par \#\# Limitations \par \%\%[[2025-01-27]] @ 13:30\%\% \par There is a significant focus on hypertension with the implication that this is largely due to blood pressure with little mention to the role of hyperglycemia induced tubular damage.}
+      \field{shortjournal}{Nephrology Dialysis Transplantation}
+      \field{shorttitle}{How Does Early Chronic Kidney Disease Progress?}
+      \field{title}{How Does Early Chronic Kidney Disease Progress?: {{A Background Paper}} Prepared for the {{UK Consensus Conference}} on {{Early Chronic Kidney Disease}}}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{22}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{ix26\bibrangedash ix30}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/ndt/gfm446
+      \endverb
+      \verb{file}
+      \verb /home/joe/Zotero/storage/XHSHRQUJ/Metcalfe - 2007 - How does early chronic kidney disease progress A Background Paper prepared for the UK Consensus Co.pdf;/home/joe/Zotero/storage/HKZU7XT6/1913530.html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/ndt/gfm446
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/ndt/gfm446
+      \endverb
+      \keyw{👁,🖉}
+    \endentry
+    \entry{hillsCE2012-TGFvModulatesCelltocell}{article}{}
+      \name{author}{6}{}{%
+        {{hash=a09979538da616590c57ce57d7aad5a5}{%
+           family={Hills},
+           familyi={H\bibinitperiod},
+           given={C.\bibnamedelimi E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=426e313b8b8a97c0b6476d34f375bff0}{%
+           family={Siamantouras},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d031505b66ec9558d5ff51815467bab1}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={S.\bibnamedelimi W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=50986076207d357e025945f0b0374b86}{%
+           family={Cockwell},
+           familyi={C\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=723de4b50836d962e276110e0eaacc82}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={K.-K.},
+           giveni={K\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=860d1e24f1118d222ce9d6615d174cb0}{%
+           family={Squires},
+           familyi={S\bibinitperiod},
+           given={P.\bibnamedelimi E.},
+           giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{2260fe1ae5d9e184af3e4146e8c8a0c2}
+      \strng{fullhash}{33764faaf0b38db5630b4dbf84bf6c65}
+      \strng{bibnamehash}{33764faaf0b38db5630b4dbf84bf6c65}
+      \strng{authorbibnamehash}{33764faaf0b38db5630b4dbf84bf6c65}
+      \strng{authornamehash}{2260fe1ae5d9e184af3e4146e8c8a0c2}
+      \strng{authorfullhash}{33764faaf0b38db5630b4dbf84bf6c65}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A key pathology in diabetic nephropathy is tubulointerstitial fibrosis. The condition is characterised by increased deposition of the extracellular matrix, fibrotic scar formation and declining renal function, with the prosclerotic cytokine TGF-β1 mediating many of these catastrophic changes. Here we investigated whether TGF-β1-induced epithelial-to-mesenchymal transition (EMT) plays a role in alterations in cell adhesion, cell coupling and cell communication in the human renal proximal tubule.}
+      \field{day}{1}
+      \field{issn}{1432-0428}
+      \field{journaltitle}{Diabetologia}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{3}
+      \field{shortjournal}{Diabetologia}
+      \field{title}{{{TGFβ}} Modulates Cell-to-Cell Communication in Early Epithelial-to-Mesenchymal Transition}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{55}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{812\bibrangedash 824}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/s00125-011-2409-9
+      \endverb
+      \verb{file}
+      \verb /home/joe/Zotero/storage/6QCHMGIF/Hills et al. - 2012 - TGFβ modulates cell-to-cell communication in early epithelial-to-mesenchymal transition.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00125-011-2409-9
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00125-011-2409-9
+      \endverb
+      \keyw{👁,Cell adhesion,Cell communication,Diabetic nephropathy,Epithelial-to-mesenchymal transition,Fibrosis,Gap junctions,Proximal tubule}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

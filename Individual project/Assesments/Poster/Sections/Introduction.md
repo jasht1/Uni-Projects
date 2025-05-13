@@ -21,5 +21,6 @@ This curve can then be fitted against an elastic deformation model to determine 
 
 %% #### Classifier %%
 
-A measure of the probability a given cell is healthy or diseased can be predicted based on the 
-To find the 
+The probability a given cell is healthy or diseased can be predicted from the observed distributions of YM of cells that have not been exposed to TGF-$\beta$ (Control) and those that have (Treated) by a Bayesian classifier. 
+%% The effectiveness of this method is dependant on the accuracy of the distribution models the careful preparation of the 2 datasets and the use of 
+ %%

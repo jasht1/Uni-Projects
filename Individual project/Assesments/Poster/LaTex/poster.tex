@@ -125,6 +125,19 @@
   %change Figure to Fig. in figure captions
   \renewcommand{\figurename}{Fig.}
 }
+
+\usepackage[
+  style=ieee,
+  backend=biber,
+]{biblatex}
+\AtEveryBibitem{\clearfield{note}}
+\renewcommand{\bibname}{}
+\renewcommand{\refname}{}
+% \addbibresource{../../../../../../.pandoc/ZotLibrary.bib}
+% \addbibresource{../../../../../../.pandoc/ZotLibrary}
+% \addbibresource{ZotLibrary}
+\addbibresource{ZotLibrary.bib}
+
 % create links
 \usepackage{url}
 %note that the hyperref package is currently incompatible with the baposter class
@@ -212,7 +225,7 @@
 \begin{justify}
     This project investigates changes in mechanical properties of kidney
     cells when exposed to TGF-\(\beta 1\), which is known to induce
-    renal disease {[}1{]}. The aim of this project is to provide insight
+    renal disease \cite{gentleME2013-EpithelialCellTGFv}. The aim of this project is to provide insight
     on the progression of diabetic nephropathy from a mechanical
     perspective based on changes in mechanical properties observed in
     single cells using atomic force microscopy.
@@ -282,8 +295,8 @@ Here is an example of an equation
 
 \begin{posterbox}[name=intro,span=2,column=1,row=0]{Introduction}
 This project investigates the predictive power of renal tubular epithelial cell stiffness as a biomarker for the progression of Diabetic Nephropathy (DN). 
-DN is a common and serious complication of diabetes resulting in kidney failure due to progressive damage to the nephrons, the functional units of the kidney responsible for filtering the blood [@metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress].
-This loss of function is due to physical changes at the cellular level induced by cytokine TGF-$\beta$ 1 associated with an observable change in cytoskeleton stiffness [@hillsCE2012-TGFvModulatesCelltocell]. 
+DN is a common and serious complication of diabetes resulting in kidney failure due to progressive damage to the nephrons, the functional units of the kidney responsible for filtering the blood \cite{metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress}.
+This loss of function is due to physical changes at the cellular level induced by cytokine TGF-$\beta$ 1 associated with an observable change in cytoskeleton stiffness \cite{hillsCE2012-TGFvModulatesCelltocell}. 
 
 \begin{minipage}[t]{0.775\linewidth}
   \vspace{0pt}  % for top alignment
@@ -296,8 +309,10 @@ This loss of function is due to physical changes at the cellular level induced b
   \vspace{0pt}  % for top alignment
   \centering
   \includegraphics[width=\linewidth]{images/Atomic Force Microscopy - mechanism diagram.png}
-  % \captionof{figure}{AFM Diagram}
+  \captionof{figure}{AFM Diagram}
 \end{minipage}
+
+The probability a given cell is healthy or diseased can be predicted from the observed distributions of YM of cells that have not been exposed to TGF-$\beta$ (Control) and those that have (Treated) by a Bayesian classifier.
 
 \end{posterbox}
 
@@ -317,7 +332,7 @@ As you can see, the text background is not white. If your figures do not have a 
 f1 = figure(1);\\
 set(f1,'Color','none');
 }\par
-You can also use {\tt pgfplots} \cite{pgfplots} for plotting your Matlab data. This is not that hard and the resulting plots are much nicer than Matlab plots, so I will strongly recommend that you have a look at {\tt pgfplots} right here \url{http://sourceforge.net/projects/pgfplots/}.
+% You can also use {\tt pgfplots} \cite{pgfplots} for plotting your Matlab data. This is not that hard and the resulting plots are much nicer than Matlab plots, so I will strongly recommend that you have a look at {\tt pgfplots} right here \url{http://sourceforge.net/projects/pgfplots/}.
 \begin{center}
   \begin{tabular}{c c c}
     \toprule
@@ -341,8 +356,8 @@ You can also use {\tt pgfplots} \cite{pgfplots} for plotting your Matlab data. T
 
 \begin{posterbox}[name=feedback,column=2,below=problems]{Feedback}
   \begin{itemize}
-    \item This poster theme has been tested with baposter v. 2.0, and it can be downloaded from my website \cite{namkeen} or my personal website \cite{hasan}.
-    \item If you find a bug in this theme (and not in the baposter template), please do not hesitate to contact me. There is a FAQ at the baposter website \cite{baposter}, if you should have any problems with it.
+    % \item This poster theme has been tested with baposter v. 2.0, and it can be downloaded from my website \cite{namkeen} or my personal website \cite{hasan}.
+    % \item If you find a bug in this theme (and not in the baposter template), please do not hesitate to contact me. There is a FAQ at the baposter website \cite{baposter}, if you should have any problems with it.
   \end{itemize}
 \end{posterbox}
 
@@ -352,20 +367,23 @@ You can also use {\tt pgfplots} \cite{pgfplots} for plotting your Matlab data. T
 % this have been removed in the preamble
 
 % use either ......
-\bibliographystyle{plain}
-\begin{thebibliography}{1}% Simple bibliography with widest label of 1
-\itemsep=-0.01em% Save space between the separation
-\setlength{\baselineskip}{0.4em}% Save space with longer lines
-\bibitem{baposter} Brian Amberg: \emph{LaTeX Poster Template}, \url{http://www.brian-amberg.de/uni/poster/} 
-\bibitem{pgfplots} Christian Feuersänger: \emph{PGFPlots - A LaTeX Package to create normal/logarithmic plots in two and three dimensions}, \url{http://pgfplots.sourceforge.net/} 
-\bibitem{namkeen} NUST SEECS Namkeen Theme: \emph{Official Beamer Theme, Poster Theme, and Report Template}, \url{https://github.com/hasanalikhattak/namkeen}
-\bibitem{hasan} Hasan ali khattak: \emph{Associate Professor, NUST School of Electrical Engineering and Computer Science (NUST-SEECS)}, \url{https://hasan.khattak.info}
-\end{thebibliography}
-
+% \bibliographystyle{plain}
+% \begin{thebibliography}{1}% Simple bibliography with widest label of 1
+% \itemsep=-0.01em% Save space between the separation
+% \setlength{\baselineskip}{0.4em}% Save space with longer lines
+% \bibitem{baposter} Brian Amberg: \emph{LaTeX Poster Template}, \url{http://www.brian-amberg.de/uni/poster/} 
+% \bibitem{pgfplots} Christian Feuersänger: \emph{PGFPlots - A LaTeX Package to create normal/logarithmic plots in two and three dimensions}, \url{http://pgfplots.sourceforge.net/} 
+% \bibitem{namkeen} NUST SEECS Namkeen Theme: \emph{Official Beamer Theme, Poster Theme, and Report Template}, \url{https://github.com/hasanalikhattak/namkeen}
+% \bibitem{hasan} Hasan ali khattak: \emph{Associate Professor, NUST School of Electrical Engineering and Computer Science (NUST-SEECS)}, \url{https://hasan.khattak.info}
+% \end{thebibliography}
 
 % ...... or
-%  \bibliographystyle{IEEEbib}
-%  \bibliography{IEEEabrv,mybib,mybib2} 
+  % \bibliographystyle{IEEEbib}
+  % \bibliography{../../../../../../.pandoc/ZotLibrary} 
+  \defbibheading{none}{}  % Define an empty heading
+  {\small
+    \printbibliography[heading=none]
+  }
 \end{posterbox}
 
 \end{poster}
