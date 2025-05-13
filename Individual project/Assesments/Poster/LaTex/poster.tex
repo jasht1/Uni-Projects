@@ -228,8 +228,36 @@
 \end{justify}
 \end{posterbox}
 
-\begin{posterbox}[name=equation,column=0,below=abstract,above=bottom]{Equations}
+\begin{posterbox}[name=equations,column=0,below=abstract,above=recommend]{Equations}
 \begin{small}
+
+\begin{equation}
+  F(\delta) = \frac{4}{3} \cdot \frac{E}{1 - \nu^2} \cdot \sqrt{R} \cdot \delta^{3/2}
+  \label{eq:hertz}
+\end{equation} 
+
+\vspace{5pt}
+
+\begin{minipage}[t]{0.575\linewidth}
+  \vspace{0pt}
+
+\begin{description}
+  The Hertz/Sneddon spherical indentation model (Eq.~\ref{eq:hertz}) is matched to the force indentation curve to find the apparent elasticity of an experiment.
+\end{description}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\linewidth}
+  \vspace{-20pt}
+\begin{align*}
+  F & \text{::Force}\\
+  E & \text{::Young's Modulus}\\
+  v & \text{::Poisson's Ratio}\\
+  R & \text{::Indenter Radius}\\
+  \delta & \text{::Indentation depth}\\
+\end{align*}
+\end{minipage}
+\vspace{-10pt}
 
 \begin{equation}
   \hat{P}(G_2 \mid x) = \frac{P(x \mid G_2) \cdot P(G_2)}{P(x \mid G_1) \cdot P(G_1) + P(x \mid G_2) \cdot P(G_2)}
@@ -302,6 +330,12 @@
 
 \end{posterbox}
 
+\begin{posterbox}[name=recommend,column=0,below=equations,above=bottom]{Recommendations}
+  \begin{description}
+    \item [Repeat with larger experimental dataset] Applying the methodology described on larger datasets would allow for a more robust estimate with more extensive testing and validation.
+  \end{description}
+\end{posterbox}
+
 \begin{posterbox}[name=intro,span=2,column=1,row=0]{Introduction}
 This project investigates the predictive power of renal tubular epithelial cell stiffness as a biomarker for the progression of Diabetic Nephropathy (DN). 
 DN is a common and serious complication of diabetes resulting in kidney failure due to progressive damage to the nephrons, the functional units of the kidney responsible for filtering the blood \cite{metcalfeW2007-HowDoesEarlyChronicKidneyDiseaseProgress}.
@@ -317,7 +351,8 @@ This loss of function is due to physical changes at the cellular level induced b
 \begin{minipage}[t]{0.2\linewidth}
   \vspace{-10pt}
   \centering
-  \includegraphics[width=\linewidth]{images/Atomic Force Microscopy - mechanism diagram.png}
+  % \includegraphics[width=\linewidth]{images/Atomic Force Microscopy - mechanism diagram.png}
+  \includesvg[width=\linewidth,textsize=2pt]{images/Atomic Force Microscopy - mechanism diagram.svg}
   \captionof{figure}{AFM Diagram}
 \end{minipage}
 \vspace{1em}
@@ -339,13 +374,13 @@ The probability a given cell is healthy or diseased can be predicted from the ob
 
 \end{posterbox}
 
-\begin{posterbox}[name=recommend,column=2,below=method]{Recommendations}
-  \begin{description}
-    \item [Repeat with larger experimental dataset] Applying the methodology described on larger datasets would allow for a more robust estimate with more extensive testing and validation.
-  \end{description}
+\begin{posterbox}[name=discuss,column=2,below=method]{Discussion}
+  \begin{items}
+    \item Applying the methodology described on larger datasets would allow for a more robust estimate with more extensive testing and validation.
+  \end{items}
 \end{posterbox}
 
-\begin{posterbox}[name=refs,column=2,below=recommend,above=bottom]{References}
+\begin{posterbox}[name=refs,column=2,below=discuss,above=bottom]{References}
   \defbibheading{none}{}  % remove redundant heading
   \renewcommand*{\bibfont}{\scriptsize}
   \printbibliography[heading=none]

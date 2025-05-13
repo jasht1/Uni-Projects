@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{887.72593689bp}%
+    \setlength{\unitlength}{352.39468804bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,23 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.77726691)%
+  \begin{picture}(1,0.76618635)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{Atomic Force Microscopy - mechanism diagram_svg-tex.pdf}}%
-    \put(0.4900161,0.12715073){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Sample\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{Atomic Force Microscopy - mechanism diagram_svg-tex.pdf}}%
-    \put(0.67588427,0.30034607){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Cantilever\end{tabular}}}}%
-    \put(0.38863346,0.23275765){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Probe\end{tabular}}}}%
-    \put(0.32104503,0.33414029){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Reflector\end{tabular}}}}%
-    \put(0.79416402,0.65518532){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Laser\end{tabular}}}}%
-    \put(0.15207396,0.67208242){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Photodiode\end{tabular}}}}%
-    \put(0.16876655,0.07143325){\color[rgb]{0.11764706,0.11764706,0.11764706}\rotatebox{-5.60046676}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sample Stage\end{tabular}}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{Atomic Force Microscopy - mechanism diagram_svg-tex.pdf}}%
-    \put(0.90577022,0.46931714){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Piezo \end{tabular}}}}%
-    \put(0.90577022,0.43974721){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Height \end{tabular}}}}%
-    \put(0.89825067,0.41017727){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}actuator\end{tabular}}}}%
-    \put(1.00115508,0.18206633){\color[rgb]{0.11764706,0.11764706,0.11764706}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Bed Positioning Actuators\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{Atomic Force Microscopy - mechanism diagram_svg-tex.pdf}}%
+    \put(0.5107909,0.21445377){\color[rgb]{0.09803922,0.44313725,0.76078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Cantilever\end{tabular}}}}%
+    \put(0.12769773,0.28604188){\color[rgb]{0.40392157,0.25490196,0.85098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Probe\end{tabular}}}}%
+    \put(0.34052727,0.49496683){\color[rgb]{0.87843137,0.19215686,0.19215686}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Laser\end{tabular}}}}%
+    \put(0.08513182,0.68461866){\color[rgb]{0.08235294,0.66666667,0.74901961}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Photodiode\end{tabular}}}}%
+    \put(0.44264069,0.13415899){\color[rgb]{0.18431373,0.61960784,0.26666667}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Sample\end{tabular}}}}%
   \end{picture}%
 \endgroup%

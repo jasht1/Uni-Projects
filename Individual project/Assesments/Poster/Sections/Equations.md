@@ -1,4 +1,19 @@
 
+### Elasticity
+
+$$F(\delta) = \frac{4}{3} \cdot \frac{E}{1 - \nu^2} \cdot \sqrt{R} \cdot \delta^{3/2}
+$$
+$$
+\begin{align*}
+  F & \text{::Force}\\
+  E & \text{::Young's Modulus}\\
+  v & \text{::Poisson's Ratio}\\
+  R & \text{::Indenter Radius}\\
+  \delta & \text{::Indentation depth}\\
+\end{align*}
+$$
+  The Hertz/Sneddon spherical indentation model is matched to the force indentation curve to find the apparent elasticity of an experiment.
+  
 ### Classifier
   
 $$\hat{P}(G_2 \mid x) = \frac{P(x \mid G_2) \cdot P(G_2)}{P(x \mid G_1) \cdot P(G_1) + P(x \mid G_2) \cdot P(G_2)}$$

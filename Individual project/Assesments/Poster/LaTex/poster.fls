@@ -1140,11 +1140,26 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
-INPUT ./images/Atomic Force Microscopy - mechanism diagram.png
-INPUT ./images/Atomic Force Microscopy - mechanism diagram.png
-INPUT images/Atomic Force Microscopy - mechanism diagram.png
-INPUT ./images/Atomic Force Microscopy - mechanism diagram.png
-INPUT ./images/Atomic Force Microscopy - mechanism diagram.png
+INPUT ./images/Atomic Force Microscopy - mechanism diagram.svg
+INPUT images/Atomic Force Microscopy - mechanism diagram.svg
+INPUT ./images/Atomic Force Microscopy - mechanism diagram.svg
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf
+INPUT ./svg-inkscape/Atomic Force Microscopy - mechanism diagram_svg-tex.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm
 INPUT ./images/Methodology Summary Blocks.png
 INPUT ./images/Methodology Summary Blocks.png
@@ -1169,9 +1184,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvro7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvro8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvro7t.vf
