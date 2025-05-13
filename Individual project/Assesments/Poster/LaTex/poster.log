@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.5.6)  13 MAY 2025 09:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.5.6)  13 MAY 2025 10:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1233,13 +1233,13 @@ l.408   \end{description}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-Package svg Info: Last page of `./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf' is 1 on input line 412.
-(./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf_tex
-<./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf, id=45, page=1, 433.62pt x 388.08992pt>
-File: ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 217.9342pt x 195.05118pt.
+Package svg Info: Last page of `./svg-inkscape/Classification Accuracy vs Sample Size 50k_svg-tex.pdf' is 1 on input line 412.
+(./svg-inkscape/Classification Accuracy vs Sample Size 50k_svg-tex.pdf_tex
+<./svg-inkscape/Classification Accuracy vs Sample Size 50k_svg-tex.pdf, id=45, page=1, 370.02242pt x 312.92911pt>
+File: ./svg-inkscape/Classification Accuracy vs Sample Size 50k_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Classification Accuracy vs Sample Size 50k_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/Classification Accuracy vs Sample Size 50k_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 217.9342pt x 184.30664pt.
 )
 Overfull \hbox (2.11998pt too wide) in paragraph at lines 403--415
 [][] [] 
@@ -1336,9 +1336,9 @@ pdfTeX warning: pdflatex (file ./svg-inkscape/YM+Residuals_Viol_comparison_byExp
 > <./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/Classifier_Performace_ColourBars_byExperiment_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf
+> <./svg-inkscape/Classification Accuracy vs Sample Size 50k_svg-tex.pdf
 
-pdfTeX warning: pdflatex (file ./svg-inkscape/Classification_Accuracy_v_Samples_byModel_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./svg-inkscape/Classification Accuracy vs Sample Size 50k_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./svg-inkscape/SuccessiveTest_trends_relative_svg-tex.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/SuccessiveTest_trends_relative_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single page
@@ -1352,17 +1352,17 @@ Package logreq Info: Writing requests to 'poster.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  37897 strings out of 478287
- 905421 string characters out of 5849290
+ 905439 string characters out of 5849290
  1720704 words of memory out of 5000000
  55439 multiletter control sequences out of 15000+600000
  522002 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,19n,118p,1844b,1955s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on poster.pdf (1 page, 1892723 bytes).
+Output written on poster.pdf (1 page, 1889478 bytes).
 PDF statistics:
- 2496 PDF objects out of 2984 (max. 8388607)
- 1629 compressed objects within 17 object streams
+ 2547 PDF objects out of 2984 (max. 8388607)
+ 1663 compressed objects within 17 object streams
  0 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
