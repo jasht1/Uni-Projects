@@ -1,12 +1,5 @@
 
-### Elasticity Modeling
+The models achieve high average accuracy with just a few samples but are significantly more reliable with more cells. 
+The skewed normal is the most effective distribution model averaging >99\% accuracy over 50,000 trials with 5 sample cells. 
 
-%% ![Verifying Data](Verifying%20Data.md) %%
-
-### Determine Effect Strength
-
-%% ![YM comparison between groups](YM%20comparison%20between%20groups.md) %%
-
-### Construct Classifiers
-
-%% ![Disease measure](Disease%20measure.md) %%
+%% ![Results](Projects/Uni%20Projects/Individual%20project/Assesments/Dissertation/Sections/Results.md) %%

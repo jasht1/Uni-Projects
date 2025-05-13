@@ -378,27 +378,44 @@ The probability a given cell is healthy or diseased can be predicted from the ob
 
 \begin{posterbox}[name=results,span=2,column=1,below=method]{Results}
   
-\begin{minipage}[t]{0.225\linewidth}
+\begin{minipage}[t]{0.235\linewidth}
+  \vspace{0pt}
   \includesvg[width=\linewidth]{images/Control-2011.03.22-19.18.17.svg}
   \captionof{figure}{Indentation Fit}
 \end{minipage}
-\begin{minipage}[t]{0.275\linewidth}
+\begin{minipage}[t]{0.285\linewidth}
+  \vspace{0pt}
   \includesvg[width=\linewidth]{images/Control-Cell5.svg}
   \captionof{figure}{Cell Elasticity}
 \end{minipage}
-\begin{minipage}[t]{0.225\linewidth}
+\begin{minipage}[t]{0.23\linewidth}
+  \vspace{0pt}
   \includesvg[width=\linewidth]{images/YM+Residuals_Viol_comparison_byExperiment.svg}
   \captionof{figure}{Observed Effect}
 \end{minipage}
-\begin{minipage}[t]{0.26\linewidth}
-  \includesvg[width=\linewidth]{images/Classification_Threashhold_byDistributionModel.svg}
-  \captionof{figure}{Classification Curves}
+\begin{minipage}[t]{0.23\linewidth}
+  \vspace{-5pt}
+  \includesvg[width=\linewidth]{images/Classifier_Performace_ColourBars_byExperiment.svg}
+  \captionof{figure}{Classifiers}
 \end{minipage}
 
 
+\begin{minipage}[t]{0.5\linewidth}
+  \vspace{-2.5pt}
+  \begin{description}
+  The models achieve high average accuracy with just a few samples but are significantly more reliable with more cells. 
+  The skewed normal is the most effective distribution model averaging >99\% accuracy over 50,000 trials with 5 sample cells. 
+  \end{description}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+  \vspace{0pt}
+  \includesvg[width=\linewidth]{images/Classification_Accuracy_v_Samples_byModel.svg}
+  \captionof{figure}{Performance for 1000 simulated trials}
+\end{minipage}
+
 \end{posterbox}
 
-\begin{posterbox}[name=discuss,column=1,below=results,above=bottom]{Discussion}
+\begin{posterbox}[name=discuss,column=1,above=bottom]{Discussion}
   \begin{center}
   \begin{description}
     \item [Cell relaxation observed over sucessive tests]
