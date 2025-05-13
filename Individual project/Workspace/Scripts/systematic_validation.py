@@ -46,6 +46,6 @@ def successive_testing(relative=True):
   plt.grid(True)
   plt.show()
 
-# successive_testing(relative=True)
+successive_testing(relative=True)
 # successive_testing(relative=False)
 

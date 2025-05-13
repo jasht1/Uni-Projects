@@ -335,7 +335,7 @@ def compare_accuracy_vs_sample_size(
 
   ax.set_xticks(np.arange(len(sample_sizes)))
   ax.set_xticklabels(sample_sizes)
-  ax.set_ylim(0.4, 1.01)
+  ax.set_ylim(0.5, 1.01)
   ax.set_ylabel("Classification Accuracy")
   ax.set_xlabel("Number of Samples Averaged")
   ax.set_title("Classifier Accuracy vs Sample Size for Different Likelihood Models")
@@ -343,5 +343,6 @@ def compare_accuracy_vs_sample_size(
   plt.tight_layout()
   plt.show()
 
-compare_accuracy_vs_sample_size(mc_resampling=1000)
+# compare_accuracy_vs_sample_size(mc_resampling=1000)
+compare_accuracy_vs_sample_size(sample_sizes=[1, 2, 3, 4, 5, 6, 7,8,9,10],mc_resampling=0, n_trials=50000)
 
