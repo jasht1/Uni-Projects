@@ -152,7 +152,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % set the background of the poster
 \background{
-  \begin{tikzpicture}[remember picture,overlay]%
+  \begin{tikzpicture}[remember picture,overlay]
     %the poster background color
     \fill[fill=nustblue2] (current page.north west) rectangle (current page.south east);
     %the header
@@ -161,8 +161,8 @@
 }
 % if you want to reduce the space before and after equations, use and adjust
 % the following lines
-%\addtolength{\abovedisplayskip}{-2mm}
-%\addtolength{\belowdisplayskip}{-2mm}
+\addtolength{\abovedisplayskip}{-2mm}
+\addtolength{\belowdisplayskip}{-2mm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % General poster setup
@@ -210,7 +210,7 @@
 %the logo (the logo on the right)
 {
   % \includegraphics[height=0.95\headerheight]{images/SDG_TARGET_34.png}
-  \includesvg[height=0.95\headerheight]{images/SDG_TARGET_34.svg}
+  \includesvg[height=\headerheight]{images/SDG_TARGET_34.svg}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -228,102 +228,76 @@
 \end{justify}
 \end{posterbox}
 
-\begin{posterbox}[name=lists,column=0,below=abstract]{Lists}
-Itemize
-\begin{itemize}
-  \item item 1
-    \begin{itemize}
-      \item subitem 1
-        \begin{itemize}
-          \item subsubitem 1
-            \begin{itemize}
-              \item subsubsubitem 1
-              \item subsubsubitem 2
-            \end{itemize}
-          \item subsubitem 2
-        \end{itemize}
-      \item subitem 2
-    \end{itemize}
-  \item item 2
-\end{itemize}
-Enumerate
-\begin{enumerate}
-  \item item 1
-    \begin{enumerate}
-      \item subitem 1
-        \begin{enumerate}
-          \item subsubitem 1
-            \begin{enumerate}
-              \item subsubsubitem 1
-              \item subsubsubitem 2
-            \end{enumerate}
-          \item subsubitem 2
-        \end{enumerate}
-      \item subitem 2
-    \end{enumerate}
-  \item item 2
-\end{enumerate}
-Description
-\begin{description}
-  \item[desc 1] item 1
-    \begin{description}
-      \item[desc 1] subitem 1
-        \begin{description}
-          \item[desc 1] subsubitem 1
-            \begin{description}
-              \item[desc 1] subsubsubitem 1
-              \item[desc 2] subsubsubitem 2
-            \end{description}
-          \item[desc 2] subsubitem 2
-        \end{description}
-      \item[desc 2] subitem 2
-    \end{description}
-  \item[desc 2] item 2
-\end{description}
-\end{posterbox}
-
-\begin{posterbox}[name=equation,column=0,below=lists,above=bottom]{Equations}
-
+\begin{posterbox}[name=equation,column=0,below=abstract,above=bottom]{Equations}
 \begin{small}
-  \begin{equation}
-    {  
-    \hat{P}(x \mid G) =  
-    \frac{1}{\sigma_{G} \sqrt{2 \pi}}  
-    e^{\tfrac{-1}{2}  
-    \left( \tfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}  
-    }
-  \end{equation}
-  \begin{equation}
-    {
-    \hat{P}(x \mid G) =  
-    \phi\left(x; \mu_G, \sigma_G \right)
-    \cdot  
-    \Phi\left(  
-    \alpha_G \cdot \frac{x - \mu_G}{\sigma_G}  
-    \right)
-    }
-  \end{equation}
-  \begin{equation}
-    {  
-    \hat{P}(x \mid G) =  
-    \frac{1}{n h} \sum_{i=1}^{n} K\left( \frac{x - x_{i_G}}{h} \right)  
-    }  
-  \end{equation}
-  \begin{equation}
-    \begin{align}
-      \hat{P}(x \mid G)     &:: \text{Group Probability Density Function}\\
-      x                     &:: \text{Observation (i.e. Young's Modulus)}\\
-      \sigma_{G}            &:: \text{Group Standard Deviation}\\
-      \mu_{G}               &:: \text{Group Mean}\\
-      \phi(x; \mu, \sigma)  &:: \text{Normal PDF evaluated at } x \\
-      \alpha_G              &:: \text{Group Skew Parameter} \\
-      \Phi(z)               &:: \text{Standard Normal CDF} \\
-      x_{i_G}               &:: \text{Observed Data Points from Group G}\\
-      n                     &:: \text{Number of Observations}\\
-      K(\cdot)              &:: \text{Kernel Function (i.e. Gaussian)}\\
-      h                     &:: \text{Bandwidth (Smoothing Parameter)}\\
-    \end{align}
-  \end{equation}
+
+\begin{equation}
+  \hat{P}(G_2 \mid x) = \frac{P(x \mid G_2) \cdot P(G_2)}{P(x \mid G_1) \cdot P(G_1) + P(x \mid G_2) \cdot P(G_2)}
+  \label{eq:classifier}
+\end{equation} 
+
+\begin{minipage}[t]{0.575\linewidth}
+  \vspace{0pt}
+  \begin{description}
+    The Bayesian classifier is a function based on Bayes theorem that finds a posterior probability (the probability of a precondition given the result).
+  \end{description}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\linewidth}
+  \vspace{-10pt}
+  \begin{align*}  
+  P(G \mid x) & \text{::Posterior}\\
+  P(x \mid G) & \text{::Likleyhood}\\
+  P(G)        & \text{::Prior}\\
+  P(x)        & \text{::Evidence}\\
+  \end{align*}
+\end{minipage}
+
+\begin{description}
+  Where the likelihood of a given group is determined by fitting the observed occurrences to a distribution / Probability Density Function (PDF). 
+  3 distribution models are tested:
+  Gaussian (Eq.~\ref{eq:gaussian}),  
+  Skewed Normal (Eq.~\ref{eq:skewnorm}), and  
+  Kernel Density Estimation (Eq.~\ref{eq:kde}).
+\end{description}
+
+\begin{equation}
+  \hat{P}(x \mid G) =  
+  \frac{1}{\sigma_{G} \sqrt{2 \pi}}  
+  e^{\tfrac{-1}{2}  
+  \left( \tfrac{x-\mu_{G}}{\sigma_{G}}\right)^{2}}  
+  \label{eq:gaussian}
+\end{equation}
+
+\begin{equation}
+  \hat{P}(x \mid G) =  
+  \phi\left(x; \mu_G, \sigma_G \right)
+  \cdot  
+  \Phi\left(  
+  \alpha_G \cdot \frac{x - \mu_G}{\sigma_G}  
+  \right)
+  \label{eq:skewnorm}
+\end{equation}
+
+\begin{equation}
+  \hat{P}(x \mid G) =  
+  \frac{1}{n h} \sum_{i=1}^{n} K\left( \frac{x - x_{i_G}}{h} \right)  
+  \label{eq:kde}
+\end{equation}
+
+\begin{align*}
+  \hat{P}(x \mid G)     &:: \text{Group Probability Density Function}\\
+  x                     &:: \text{Observation (i.e. Young's Modulus)}\\
+  \sigma_{G}            &:: \text{Group Standard Deviation}\\
+  \mu_{G}               &:: \text{Group Mean}\\
+  \phi(x; \mu, \sigma)  &:: \text{Normal PDF evaluated at } x \\
+  \alpha_G              &:: \text{Group Skew Parameter} \\
+  \Phi(z)               &:: \text{Standard Normal CDF} \\
+  x_{i_G}               &:: \text{Observed Data Points from Group G}\\
+  n                     &:: \text{Number of Observations}\\
+  K(\cdot)              &:: \text{Kernel Function (i.e. Gaussian)}\\
+  h                     &:: \text{Bandwidth (Smoothing Parameter)}\\
+\end{align*}
 \end{small}
 
 \end{posterbox}
@@ -358,7 +332,7 @@ The probability a given cell is healthy or diseased can be predicted from the ob
 
 \end{posterbox}
 
-\begin{posterbox}[name=figures,column=1,below=method,above=bottom]{Figures and Tables}
+\begin{posterbox}[name=results,column=1,below=method,above=bottom]{Results}
   
 \begin{center}
 \end{center}
