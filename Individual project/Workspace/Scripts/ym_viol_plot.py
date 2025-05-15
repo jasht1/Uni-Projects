@@ -71,5 +71,5 @@ def viol_plot (by='Cell', dataset='results', with_scatter=False, colour_by="Resi
   YM_viol_plot(batch_data, with_scatter=True, colour_by=colour_by, title=title)
 
 # viol_plot(colour_by="Cell Young's Modulus Range [Pa]", title="Young's Modulus per Cell \n Coloured by Range Across Tests")
-viol_plot(colour_by="Cell Young's Modulus Range Across Tests ±%", title="Young's Modulus per Cell \n Coloured by Range Across Tests")
-# viol_plot(by="experiment", title="Young's Modulus per Experiment \n Coloured by Residual Fit Error")
+# viol_plot(colour_by="Cell Young's Modulus Range Across Tests ±%", title="Young's Modulus per Cell \n Coloured by Range Across Tests")
+viol_plot(by="Experiment", title="Young's Modulus per Experiment \n Coloured by Residual Fit Error")

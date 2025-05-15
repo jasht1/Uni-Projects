@@ -248,7 +248,7 @@ def compare_likelihood_models(
   plt.tight_layout(rect=[0.00, 0.10, 0.85, 1])
   plt.show()
 
-# compare_likelihood_models(mc_resampling=0) 
+compare_likelihood_models(mc_resampling=0) 
 
 
 def compare_accuracy_vs_sample_size(
@@ -344,5 +344,5 @@ def compare_accuracy_vs_sample_size(
   plt.show()
 
 # compare_accuracy_vs_sample_size(mc_resampling=1000)
-compare_accuracy_vs_sample_size(sample_sizes=[1, 2, 3, 4, 5, 6, 7,8,9,10],mc_resampling=0, n_trials=50000)
+# compare_accuracy_vs_sample_size(sample_sizes=[1, 2, 3, 4, 5, 6, 7,8,9,10],mc_resampling=0, n_trials=50000)
 

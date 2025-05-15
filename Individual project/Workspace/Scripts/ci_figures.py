@@ -167,4 +167,4 @@ def ci_figure():
   batch_data = get_results_batch_data()
   batch_ci_notch_whisker_plot(batch_data)
 
-ci_figure()
+# ci_figure()

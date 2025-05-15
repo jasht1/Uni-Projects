@@ -41,8 +41,10 @@ def curve_fit_quality_plot (curve, ym, cp, bl=0, rms=0, R=5e-6, v=0.5, smoothing
     ax1 = fig.add_subplot(gs[0])
     ax1.plot(indentation, actual_force, label='Measured Force', alpha=0.7)
     ax1.plot(indentation, model_force, label=f'{model} Model Fit', linestyle='--')
-    ax1.set_ylabel('Force [N]', fontsize=14)
+    # ax1.set_ylabel('Force [N]', fontsize=14)
+    ax1.set_ylabel('Force [N]', fontsize=16)
     ax1.set_title(f"{filename} {model} Model Fit Quality", fontsize=16)
+    # ax1.set_title(f"Test 20 {model} Model Fit", fontsize=16)
     ax1.legend(title=f"Residual RMS: {residuals_rms:.5e}")
     ax1.grid(True)
 
@@ -65,8 +67,10 @@ def curve_fit_quality_plot (curve, ym, cp, bl=0, rms=0, R=5e-6, v=0.5, smoothing
       norm=norm
     )
 
-    ax2.set_xlabel('Indentation [m]', fontsize=14)
-    ax2.set_ylabel('Residual[N]', fontsize=14)
+    # ax2.set_xlabel('Indentation [m]', fontsize=14)
+    # ax2.set_ylabel('Residual[N]', fontsize=14)
+    ax2.set_xlabel('Indentation [m]', fontsize=16)
+    ax2.set_ylabel('Residual[N]', fontsize=16)
     ax2.grid(True)
     ax2.set_ylim(residuals.min(),residuals.max())
 
@@ -147,7 +151,7 @@ def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='S
       'notchfill': 'blue', 
       'Bars': 'blue',
       }
-    legend_handles = ci_notch_whisker_plot(data,ax=ax2,colors=colors, legend_handles=[])
+    legend_handles = ci_notch_whisker_plot(data,ax=ax2,colors=colors, title="YM Confidence", legend_handles=[])
     ax2.legend(handles=legend_handles, loc='best', fontsize=9.5)
 
   ym = experiments["Young's Modulus [Pa]"].mean()
@@ -160,9 +164,10 @@ def cell_fit_quality_plot (experiments, R=5e-6, v=0.5, smoothing=False, model='S
   ax1.plot(indentation, model_force, label=f'Mean Cell Fit: {ym:.0f} Pa', linewidth=2.5)
   # ax1.legend(title=f"Residual RMS: {rms:.5e}")
 
-  ax1.set_ylabel('Force [N]', fontsize=14)
-  ax1.set_xlabel('Indentation [m]', fontsize=14)
-  ax1.set_title(f"{filename} {model} Model Fit Quality", fontsize=16)
+  ax1.set_xlim(-1e-07,5.5e-07)
+  ax1.set_ylabel('Force [N]', fontsize=16)
+  ax1.set_xlabel('Indentation [m]', fontsize=16)
+  ax1.set_title(f"{filename} {model} Model Fit", fontsize=20)
   ax1.legend()
   ax1.grid(True)
   if zoom:
@@ -183,7 +188,7 @@ def colored_line_between_pts(x, y, c, ax, **lc_kwargs):
     lc.set_array(c)
     return ax.add_collection(lc)
 
-def fit_quality_plot_for_curve(curve_fname, group='Control', save=False):
+def fit_quality_plot_for_curve(curve_fname, group='Control', save=False, model='Sneddon'):
   from import_data import get_jpk_batch_data as get_jpk_batch_data
   from import_data import get_csv_dataset
 
@@ -199,9 +204,9 @@ def fit_quality_plot_for_curve(curve_fname, group='Control', save=False):
   bl = fit_data["Baseline [N]"].max()
   rms = fit_data["ResidualRMS [N]"].max()
 
-  curve_fit_quality_plot(curve, ym, cp, bl,smoothing=True, model='Hertz', filename=f"{group}-{curve_fname[11:-10]}", rms=rms, save=save)
+  curve_fit_quality_plot(curve, ym, cp, bl,smoothing=True, model=model, filename=f"{group}-{curve_fname[11:-10]}", rms=rms, save=save)
   
-# fit_quality_plot_for_curve("force-save-2011.03.22-20.02.34.jpk-force")
+# fit_quality_plot_for_curve("force-save-2011.03.22-19.18.17.jpk-force")
 
 def curve_fit_quality_plot_all(save=False):
   from import_data import get_paths as get_paths
@@ -220,11 +225,14 @@ def curve_fit_quality_plot_all(save=False):
         
 # fit_quality_plot_all(save=False)
 
-def cell_fit_quality_plot_all(save=False):
+def cell_fit_quality_plot_all(for_cell=-1, save=False):
   from import_data import get_results_batch_data, get_csv_dataset
   results = get_results_batch_data(path='Experiment')
   for group, data in results.items():
-    cells = data['Cell'].unique()
+    if for_cell==-1:
+      cells = data['Cell'].unique()
+    else:
+      cells = data[data['Cell']==for_cell]['Cell']
     for cell in cells:
       experiments = data[data["Cell"] == cell]
       # datasets = []
@@ -234,4 +242,4 @@ def cell_fit_quality_plot_all(save=False):
 
       cell_fit_quality_plot(experiments, ci=True, smoothing=True, model='Sneddon', filename=f"{group}-Cell{cell}", save=save)
 
-cell_fit_quality_plot_all(save=True)
+cell_fit_quality_plot_all(for_cell=5,save=False)

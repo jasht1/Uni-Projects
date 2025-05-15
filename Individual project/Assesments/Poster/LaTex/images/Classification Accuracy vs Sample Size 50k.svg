@@ -5,35 +5,12 @@
    viewBox="0 0 368.64 311.76"
    version="1.1"
    id="svg823"
-   sodipodi:docname="Classification Accuracy vs Sample Size 50k.svg"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <sodipodi:namedview
-     id="namedview825"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:document-units="pt"
-     showgrid="false"
-     inkscape:zoom="1.7296959"
-     inkscape:cx="245.997"
-     inkscape:cy="207.84001"
-     inkscape:window-width="1920"
-     inkscape:window-height="1056"
-     inkscape:window-x="0"
-     inkscape:window-y="1224"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg823" />
   <metadata
      id="metadata2">
     <rdf:RDF>
@@ -57,14 +34,8 @@
        id="style4">*{stroke-linejoin: round; stroke-linecap: butt}</style>
   </defs>
   <g
-     id="patch_1">
-    <path
-       d="M 0,311.76 H 368.64 V 0 H 0 Z"
-       style="fill:#ffffff"
-       id="path8" />
-  </g>
-  <g
-     id="patch_2">
+     id="patch_2"
+     style="display:inline">
     <path
        d="M 47.81,262.1188 H 357.84 V 30.097049 H 47.81 Z"
        style="fill:#ffffff"
